@@ -1,0 +1,399 @@
+'use client';
+
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import { PrimaryButton, GhostButton } from './SimpleEnhancedButton';
+
+interface ProgressiveHeroProps {
+  slides: Array<{
+    title: string;
+    subtitle: string;
+    mobileSubtitle?: string;
+    tagline?: string;
+    techStack?: string;
+    gradient: string;
+    cta: string;
+    secondaryCta?: string;
+    details?: {
+      description: string;
+      features: string[];
+      metrics: Array<{
+        value: string;
+        label: string;
+      }>;
+    };
+  }>;
+  currentIndex: number;
+  onSlideChange: (index: number) => void;
+}
+
+export default function ProgressiveHero({ slides, currentIndex, onSlideChange }: ProgressiveHeroProps) {
+  const [showDetails, setShowDetails] = useState(false);
+  const [expandedFeature, setExpandedFeature] = useState<number | null>(null);
+
+  const currentSlide = slides[currentIndex];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: { y: 0, opacity: 1 }
+  };
+
+  const detailsVariants = {
+    hidden: {
+      opacity: 0,
+      height: 0,
+      y: -20
+    },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      y: 0
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      y: -20
+    }
+  };
+
+  return (
+    <motion.div
+      className="text-center relative z-10"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      transition={{
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }}
+    >
+      {/* Main Content */}
+      <motion.h1 
+        className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+        variants={itemVariants}
+        transition={{ type: "spring", stiffness: 100, damping: 15 }}
+      >
+        <motion.span
+          key={currentIndex}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+          className="inline-block bg-gradient-to-r from-white via-gray-100 to-[#00BFA5] bg-clip-text text-transparent drop-shadow-lg"
+        >
+          {currentSlide.title}
+        </motion.span>
+      </motion.h1>
+
+      <motion.div
+        key={`subtitle-${currentIndex}`}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="mb-8 max-w-4xl mx-auto"
+        variants={itemVariants}
+      >
+        <div className="text-sm md:text-lg lg:text-xl leading-relaxed text-gray-100 drop-shadow-md">
+          {/* Use mobile subtitle on small screens, regular subtitle on larger screens */}
+          <div className="block md:hidden">
+            {(currentSlide.mobileSubtitle || currentSlide.subtitle).split('.').map((sentence, index) => {
+              if (sentence.trim() === '') return null;
+              
+              // Check if sentence contains metrics (numbers with symbols)
+              const hasMetrics = /\d+%|\d+ms|\d+TB|\d+GB/.test(sentence);
+              
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.2 }}
+                  className={`${index === 0 ? 'mb-2' : 'mt-1'} ${hasMetrics ? 'font-semibold' : ''}`}
+                >
+                  {hasMetrics ? (
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20 inline-block">
+                      <span className="text-green-300 font-bold text-sm">
+                        {sentence.trim().split(' ').map((word, wordIndex) => {
+                          if (/\d+%|\d+ms|\d+TB|\d+GB|<\d+ms/.test(word)) {
+                            return (
+                              <span key={wordIndex} className="text-green-400 font-bold mx-1">
+                                {word}
+                              </span>
+                            );
+                          }
+                          return <span key={wordIndex} className="mx-1">{word}</span>;
+                        })}
+                      </span>
+                    </div>
+                  ) : (
+                    <span className="block text-sm">
+                      {sentence.trim().split(' ').map((word, wordIndex) => {
+                        // Highlight key terms
+                        if (['ex-Quant', 'Trader', 'high-availability', 'reliability', 'real-time', 'infrastructure'].includes(word.replace(/[,.:]/g, ''))) {
+                          return (
+                            <span key={wordIndex} className="text-white font-semibold mx-1">
+                              {word}
+                            </span>
+                          );
+                        }
+                        return <span key={wordIndex} className="mx-1">{word}</span>;
+                      })}
+                      {index < (currentSlide.mobileSubtitle || currentSlide.subtitle).split('.').length - 2 && '.'}
+                    </span>
+                  )}
+                </motion.div>
+              );
+            })}
+          </div>
+          <div className="hidden md:block">
+            {/* Parse and format the subtitle with better typography */}
+            {currentSlide.subtitle.split('.').map((sentence, index) => {
+            if (sentence.trim() === '') return null;
+            
+            // Check if sentence contains metrics (numbers with symbols)
+            const hasMetrics = /\d+%|\d+ms|\d+TB|\d+GB/.test(sentence);
+            
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className={`${index === 0 ? 'mb-3' : 'mt-2'} ${hasMetrics ? 'font-semibold' : ''}`}
+              >
+                {hasMetrics ? (
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20 inline-block">
+                    <span className="text-green-300 font-bold">
+                      {sentence.trim().split(' ').map((word, wordIndex) => {
+                        if (/\d+%|\d+ms|\d+TB|\d+GB|<\d+ms/.test(word)) {
+                          return (
+                            <span key={wordIndex} className="text-green-400 font-bold text-lg mx-1">
+                              {word}
+                            </span>
+                          );
+                        }
+                        return <span key={wordIndex} className="mx-1">{word}</span>;
+                      })}
+                    </span>
+                  </div>
+                ) : (
+                  <span className="block">
+                    {sentence.trim().split(' ').map((word, wordIndex) => {
+                      // Highlight key terms
+                      if (['ex-Quant', 'Trader', 'high-availability', 'reliability', 'real-time', 'infrastructure'].includes(word.replace(/[,.:]/g, ''))) {
+                        return (
+                          <span key={wordIndex} className="text-white font-semibold mx-1">
+                            {word}
+                          </span>
+                        );
+                      }
+                      return <span key={wordIndex} className="mx-1">{word}</span>;
+                    })}
+                    {index < currentSlide.subtitle.split('.').length - 2 && '.'}
+                  </span>
+                )}
+              </motion.div>
+            );
+          })}
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Enhanced Action Buttons */}
+      <motion.div
+        className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
+        variants={itemVariants}
+      >
+        {/* Primary CTA - More prominent */}
+        <motion.a
+          href="/contact"
+          className="group relative px-6 sm:px-8 py-4 min-h-[48px] bg-gradient-to-r from-[#00BFA5] via-[#42A5F5] to-[#005A9C] text-white font-bold text-base sm:text-lg rounded-xl shadow-2xl hover:shadow-[#00BFA5]/25 transition-all duration-300 overflow-hidden"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          {/* Animated background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#00D4B4] via-[#2196F3] to-[#0066CC] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          
+          {/* Shine effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+          
+          <span className="relative z-10 flex items-center">
+            <i className="fas fa-comments mr-3 text-xl"></i>
+            {currentSlide.cta}
+            <i className="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
+          </span>
+        </motion.a>
+        
+        {/* Secondary CTA - Enhanced */}
+        <motion.a
+          href="/portfolio"
+          className="group px-4 sm:px-6 py-3 min-h-[48px] border-2 border-white/40 backdrop-blur-md bg-white/10 hover:bg-white/20 text-white font-semibold text-base sm:text-lg rounded-xl transition-all duration-300 hover:border-white/60"
+          whileHover={{ scale: 1.02, y: -1 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <span className="flex items-center">
+            <i className="fas fa-briefcase mr-2"></i>
+            View Portfolio
+            <i className="fas fa-external-link-alt ml-2 text-sm opacity-70 group-hover:opacity-100 transition-opacity"></i>
+          </span>
+        </motion.a>
+      </motion.div>
+
+      {/* Progressive Disclosure Details */}
+      <AnimatePresence>
+        {showDetails && currentSlide.details && (
+          <motion.div
+            variants={detailsVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            transition={{ type: "spring", stiffness: 100, damping: 20 }}
+            className="max-w-4xl mx-auto overflow-hidden"
+          >
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20 shadow-2xl">
+              {/* Description */}
+              <motion.p
+                className="text-gray-200 text-lg mb-6 leading-relaxed"
+                variants={itemVariants}
+              >
+                {currentSlide.details.description}
+              </motion.p>
+
+              {/* Features Grid */}
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                {currentSlide.details.features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    className="bg-white/5 rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-colors cursor-pointer"
+                    onClick={() => setExpandedFeature(expandedFeature === index ? null : index)}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-white font-medium">{feature}</span>
+                      <motion.i
+                        className="fas fa-plus text-green-400"
+                        animate={{ rotate: expandedFeature === index ? 45 : 0 }}
+                        transition={{ duration: 0.2 }}
+                      />
+                    </div>
+                    
+                    <AnimatePresence>
+                      {expandedFeature === index && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="mt-3 pt-3 border-t border-white/10"
+                        >
+                          <p className="text-gray-300 text-sm">
+                            Detailed information about {feature.toLowerCase()} and how it benefits your business operations.
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Metrics */}
+              {currentSlide.details.metrics && (
+                <motion.div
+                  className="grid grid-cols-2 md:grid-cols-4 gap-4"
+                  variants={itemVariants}
+                >
+                  {currentSlide.details.metrics.map((metric, index) => (
+                    <motion.div
+                      key={index}
+                      className="text-center p-4 bg-white/5 rounded-lg border border-white/10"
+                      whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <div className="text-2xl font-bold text-green-400 mb-1">
+                        {metric.value}
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        {metric.label}
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              )}
+
+              {/* Close Button */}
+              <motion.button
+                onClick={() => setShowDetails(false)}
+                className="mt-6 text-white/60 hover:text-white text-sm flex items-center gap-2 mx-auto transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>Show Less</span>
+                <i className="fas fa-chevron-up" />
+              </motion.button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Enhanced Slide Indicators */}
+      <motion.div 
+        className="flex justify-center gap-3 mt-12"
+        variants={itemVariants}
+      >
+        {slides.map((_, index) => (
+          <motion.button
+            key={index}
+            onClick={() => onSlideChange(index)}
+            className={`transition-all duration-300 rounded-full relative overflow-hidden ${
+              index === currentIndex 
+                ? 'bg-white w-10 h-3' 
+                : 'bg-white/50 hover:bg-white/70 w-3 h-3'
+            }`}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label={`Go to slide ${index + 1}`}
+          >
+            {index === currentIndex && (
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-400"
+                layoutId="activeSlide"
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              />
+            )}
+          </motion.button>
+        ))}
+      </motion.div>
+
+      {/* Scroll Hint */}
+      <motion.div
+        className="absolute -bottom-24 left-1/2 transform -translate-x-1/2 z-20"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
+      >
+        <motion.div
+          className="flex flex-col items-center text-white/80 hover:text-white transition-colors cursor-pointer bg-black/20 backdrop-blur-sm rounded-full px-4 py-3 border border-white/20"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          onClick={() => {
+            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+          }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <span className="text-sm mb-1 font-medium whitespace-nowrap">Scroll to explore</span>
+          <i className="fas fa-chevron-down text-sm" />
+        </motion.div>
+      </motion.div>
+    </motion.div>
+  );
+}

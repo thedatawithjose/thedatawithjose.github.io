@@ -1,0 +1,79 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Data Stack Layers -->
+  <g transform="translate(200,150)">
+    <!-- Bottom Layer (Darkest) -->
+    <ellipse cx="0" cy="45" rx="50" ry="12" fill="url(#layer3Gradient)" opacity="0.9"/>
+    <rect x="-45" y="30" width="90" height="25" rx="12" fill="url(#layer3Gradient)"/>
+    
+    <!-- Middle Layer -->
+    <ellipse cx="0" cy="15" rx="48" ry="11" fill="url(#layer2Gradient)" opacity="0.9"/>
+    <rect x="-43" y="0" width="86" height="25" rx="12" fill="url(#layer2Gradient)"/>
+    
+    <!-- Top Layer (Lightest) -->
+    <ellipse cx="0" cy="-15" rx="46" ry="10" fill="url(#layer1Gradient)" opacity="0.9"/>
+    <rect x="-41" y="-30" width="82" height="25" rx="12" fill="url(#layer1Gradient)"/>
+    
+    <!-- Data Points on layers -->
+    <circle cx="-20" cy="-20" r="2" fill="white" opacity="0.8" className="animate-pulse"/>
+    <circle cx="15" cy="-18" r="1.5" fill="white" opacity="0.6" className="animate-pulse" style={{animationDelay: '0.5s'}}/>
+    <circle cx="-10" cy="8" r="1.8" fill="white" opacity="0.7" className="animate-pulse" style={{animationDelay: '1s'}}/>
+    <circle cx="25" cy="12" r="1.2" fill="white" opacity="0.5" className="animate-pulse" style={{animationDelay: '1.5s'}}/>
+    <circle cx="-15" cy="38" r="1.6" fill="white" opacity="0.6" className="animate-pulse" style={{animationDelay: '2s'}}/>
+  </g>
+  
+  <!-- Connection Nodes and Lines -->
+  <g stroke="#00BFA5" strokeWidth="2" fill="#00BFA5" opacity="0.7">
+    <!-- Top Right Node -->
+    <circle cx="320" cy="80" r="8" className="animate-pulse"/>
+    <path d="M 250,120 Q 285,100 320,80" fill="none" strokeDasharray="5,5" className="animate-pulse" style={{animationDelay: '0.3s'}}/>
+    
+    <!-- Right Node -->
+    <circle cx="340" cy="150" r="6" fill="#005A9C" className="animate-pulse" style={{animationDelay: '0.8s'}}/>
+    <path d="M 250,150 L 340,150" fill="none" strokeDasharray="3,7" className="animate-pulse" style={{animationDelay: '0.8s'}}/>
+    
+    <!-- Bottom Right Node -->
+    <circle cx="310" cy="220" r="7" fill="#00D4B4" className="animate-pulse" style={{animationDelay: '1.2s'}}/>
+    <path d="M 250,180 Q 280,200 310,220" fill="none" strokeDasharray="4,6" className="animate-pulse" style={{animationDelay: '1.2s'}}/>
+    
+    <!-- Left Nodes -->
+    <circle cx="80" cy="90" r="6" fill="#4A90E2" className="animate-pulse" style={{animationDelay: '0.5s'}}/>
+    <path d="M 150,130 Q 115,110 80,90" fill="none" strokeDasharray="6,4" className="animate-pulse" style={{animationDelay: '0.5s'}}/>
+    
+    <circle cx="60" cy="180" r="5" fill="#00BFA5" className="animate-pulse" style={{animationDelay: '1.5s'}}/>
+    <path d="M 150,170 Q 105,175 60,180" fill="none" strokeDasharray="2,8" className="animate-pulse" style={{animationDelay: '1.5s'}}/>
+  </g>
+  
+  <!-- Small Data Hexagons -->
+  <g fill="#00BFA5" opacity="0.4">
+    <polygon points="360,120 365,117 370,120 365,123" className="animate-pulse" style={{animationDelay: '0.7s'}}/>
+    <polygon points="50,140 55,137 60,140 55,143" fill="#005A9C" className="animate-pulse" style={{animationDelay: '1.3s'}}/>
+    <polygon points="340,200 345,197 350,200 345,203" fill="#00D4B4" className="animate-pulse" style={{animationDelay: '1.8s'}}/>
+  </g>
+  
+  <!-- Floating Data Particles -->
+  <g opacity="0.6">
+    <circle cx="120" cy="60" r="1.5" fill="#00BFA5" className="animate-ping" style={{animationDelay: '0.2s'}}/>
+    <circle cx="280" cy="70" r="1" fill="#005A9C" className="animate-ping" style={{animationDelay: '0.9s'}}/>
+    <circle cx="90" cy="240" r="1.2" fill="#00D4B4" className="animate-ping" style={{animationDelay: '1.4s'}}/>
+    <circle cx="320" cy="250" r="1" fill="#4A90E2" className="animate-ping" style={{animationDelay: '1.9s'}}/>
+  </g>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="layer1Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#00BFA5"/>
+      <stop offset="50%" stopColor="#00D4B4"/>
+      <stop offset="100%" stopColor="#4DD0E1"/>
+    </linearGradient>
+    <linearGradient id="layer2Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#4A90E2"/>
+      <stop offset="50%" stopColor="#005A9C"/>
+      <stop offset="100%" stopColor="#0277BD"/>
+    </linearGradient>
+    <linearGradient id="layer3Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#1565C0"/>
+      <stop offset="50%" stopColor="#003D7A"/>
+      <stop offset="100%" stopColor="#0D47A1"/>
+    </linearGradient>
+  </defs>
+</svg>

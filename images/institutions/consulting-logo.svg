@@ -1,0 +1,5 @@
+<svg width="100" height="40" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="40" fill="#6366f1" rx="4"/>
+  <text x="50" y="16" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="7" font-weight="bold">CONSULTING</text>
+  <text x="50" y="28" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="7" font-weight="bold">GROUP</text>
+</svg>
