@@ -18,7 +18,7 @@ import StructuredData from '../components/StructuredData';
 import { generateReviewSchema } from '../lib/structured-data';
 import ProgressiveHero from '../components/ProgressiveHero';
 import { ToastProvider } from '../components/ToastNotification';
-import MobileTestSuite from '../components/MobileTestSuite';
+
 import AnalyticsProvider from '../components/AnalyticsProvider';
 import { useScrollTracking, useJourneyTracking } from '../hooks/useAnalyticsTracking';
 
@@ -759,9 +759,7 @@ export default function Home() {
       <Footer />
       
 
-      
-      {/* Mobile Test Suite - Only shows on mobile */}
-      <MobileTestSuite />
+
           </div>
         </ToastProvider>
       </AnalyticsProvider>
