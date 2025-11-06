@@ -9,7 +9,7 @@ tags: ["Trading", "Data Engineering", "Real-time", "Performance", "Leadership"]
 featured: true
 ---
 
-**Sub-headline:** In 2026, 'good enough' data is bankrupt. It's time to stop building data libraries and start building data trading floors. I call this the 'Quantification' of our field.
+**In 2026, 'good enough' data is bankrupt** . It's time to stop building data libraries and start building data trading floors. I call this the 'Quantification' of our field.
 
 As we enter 2026, the "modern data stack" is mature. We have powerful warehouses, real-time streaming platforms, and endless tools for transformation. Yet, a vast majority of businesses are still frustrated. Data is slow, data is wrong, and the data teams meant to fix it are often overwhelmed, operating like back-office historians.
 
