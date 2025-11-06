@@ -37,13 +37,13 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
     setHasConsent(existingConsent);
     setIsLoaded(true);
 
-    // Show consent banner if no previous choice
-    if (typeof window !== 'undefined') {
-      const hasChoiceMade = localStorage.getItem('analytics_consent') !== null;
-      if (!hasChoiceMade) {
-        setTimeout(() => setShowConsentBanner(true), 2000); // Show after 2 seconds
-      }
-    }
+    // Consent banner disabled - using CookieConsent component instead
+    // if (typeof window !== 'undefined') {
+    //   const hasChoiceMade = localStorage.getItem('analytics_consent') !== null;
+    //   if (!hasChoiceMade) {
+    //     setTimeout(() => setShowConsentBanner(true), 2000);
+    //   }
+    // }
 
     // Initialize GA if consent exists
     if (existingConsent) {

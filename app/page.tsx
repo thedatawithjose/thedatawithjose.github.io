@@ -19,7 +19,7 @@ import { generateReviewSchema } from '../lib/structured-data';
 import ProgressiveHero from '../components/ProgressiveHero';
 import { ToastProvider } from '../components/ToastNotification';
 
-import AnalyticsProvider from '../components/AnalyticsProvider';
+
 import { useScrollTracking, useJourneyTracking } from '../hooks/useAnalyticsTracking';
 
 import NewsletterForm from '../components/NewsletterForm';
@@ -144,9 +144,8 @@ export default function Home() {
   return (
     <>
       <StructuredData data={generateReviewSchema()} />
-      <AnalyticsProvider>
-        <ToastProvider>
-          <div className="min-h-screen bg-white text-gray-900">
+      <ToastProvider>
+        <div className="min-h-screen bg-white text-gray-900">
       {/* Preloader - Con transición suave */}
       <div id="preloader" className="fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-300">
         <div className="flex space-x-2">
@@ -762,7 +761,6 @@ export default function Home() {
 
           </div>
         </ToastProvider>
-      </AnalyticsProvider>
     </>
   );
 }
