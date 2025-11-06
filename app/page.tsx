@@ -34,9 +34,23 @@ export default function Home() {
   useJourneyTracking();
 
   useEffect(() => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-      preloader.style.display = 'none';
+    // Ocultar preloader después de que todo esté cargado
+    const hidePreloader = () => {
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 300);
+      }
+    };
+
+    // Esperar a que todo esté listo
+    if (document.readyState === 'complete') {
+      hidePreloader();
+    } else {
+      window.addEventListener('load', hidePreloader);
+      return () => window.removeEventListener('load', hidePreloader);
     }
   }, []);
 
@@ -133,11 +147,13 @@ export default function Home() {
       <AnalyticsProvider>
         <ToastProvider>
           <div className="min-h-screen bg-white text-gray-900">
-      {/* Preloader */}
-      <div id="preloader" className="fixed inset-0 bg-white z-50 flex items-center justify-center">
-        <div className="w-4 h-4 bg-[#00BFA5] rounded-full animate-bounce"></div>
-        <div className="w-4 h-4 bg-[#00BFA5] rounded-full animate-bounce"></div>
-        <div className="w-4 h-4 bg-[#00BFA5] rounded-full animate-bounce"></div>
+      {/* Preloader - Con transición suave */}
+      <div id="preloader" className="fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-300">
+        <div className="flex space-x-2">
+          <div className="w-3 h-3 bg-[#00BFA5] rounded-full animate-bounce"></div>
+          <div className="w-3 h-3 bg-[#00BFA5] rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+          <div className="w-3 h-3 bg-[#00BFA5] rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+        </div>
       </div>
 
       <Header />
