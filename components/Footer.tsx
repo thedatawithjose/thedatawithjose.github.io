@@ -195,10 +195,7 @@ export default function Footer() {
               <div className="text-gray-400 text-sm">
                 © {new Date().getFullYear()} Jose Acosta. All rights reserved.
               </div>
-              <div className="hidden md:block w-1 h-1 bg-gray-500 rounded-full"></div>
-              <div className="text-xs text-gray-500 bg-white/5 px-3 py-1 rounded-full border border-white/10">
-                Made with ❤️ in 2026
-              </div>
+
             </div>
             
             <div className="flex items-center space-x-3">
