@@ -71,7 +71,7 @@ export default function Blog() {
           {/* Breadcrumb */}
           <nav className="mb-8">
             <div className="flex items-center justify-center space-x-2 text-sm text-gray-200 md:text-gray-300">
-              <Link href="/" className="hover:text-[#00BFA5] transition-colors">
+              <Link href="/" className="hover:text-[#00BFA5] transition-colors tactile-feedback mobile-focus px-2 py-1 rounded">
                 Home
               </Link>
               <span>/</span>
@@ -122,7 +122,7 @@ export default function Blog() {
           
           {/* Blog Stats */}
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-            <div className="group text-center p-6 bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden">
+            <div className="group text-center p-6 bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden tactile-feedback mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-br from-green-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="text-3xl font-black text-green-400 mb-2 group-hover:scale-110 transition-transform duration-300">{allArticles.length}+</div>
@@ -130,7 +130,7 @@ export default function Blog() {
                 <div className="w-8 h-1 bg-gradient-to-r from-green-400 to-blue-400 rounded-full mx-auto mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
-            <div className="group text-center p-6 bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-blue-400/40 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden">
+            <div className="group text-center p-6 bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-blue-400/40 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden tactile-feedback mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="text-3xl font-black text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">6+</div>
@@ -138,7 +138,7 @@ export default function Blog() {
                 <div className="w-8 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
-            <div className="group text-center p-6 bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden">
+            <div className="group text-center p-6 bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden tactile-feedback mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="text-3xl font-black text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">Real</div>
@@ -150,25 +150,25 @@ export default function Blog() {
 
           {/* Topics */}
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-green-500/20 to-green-600/20 text-green-300 rounded-full text-sm md:text-sm font-semibold border border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center">
+            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-green-500/20 to-green-600/20 text-green-300 rounded-full text-sm md:text-sm font-semibold border border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center badge-tactile mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
                 <i className="fas fa-stream mr-2 group-hover:animate-pulse"></i>Real-time Pipelines
               </span>
             </span>
-            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-500/20 to-blue-600/20 text-blue-300 rounded-full text-sm md:text-sm font-semibold border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center">
+            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-500/20 to-blue-600/20 text-blue-300 rounded-full text-sm md:text-sm font-semibold border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center badge-tactile mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
                 <i className="fas fa-chart-line mr-2 group-hover:animate-pulse"></i>Trading Systems
               </span>
             </span>
-            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-300 rounded-full text-sm md:text-sm font-semibold border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center">
+            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-300 rounded-full text-sm md:text-sm font-semibold border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center badge-tactile mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
                 <i className="fas fa-robot mr-2 group-hover:animate-pulse"></i>ML in Production
               </span>
             </span>
-            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-orange-500/20 to-orange-600/20 text-orange-300 rounded-full text-sm md:text-sm font-semibold border border-orange-500/30 hover:border-orange-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center">
+            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-orange-500/20 to-orange-600/20 text-orange-300 rounded-full text-sm md:text-sm font-semibold border border-orange-500/30 hover:border-orange-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center badge-tactile mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
                 <i className="fas fa-database mr-2 group-hover:animate-pulse"></i>Data Architecture
@@ -184,7 +184,7 @@ export default function Blog() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {allArticles.map(({ id, date, title, excerpt, image, author }) => (
               <Link href={`/blog/${id}`} key={id} className="group">
-                <article className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 border border-gray-100">
+                <article className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 border border-gray-100 card-tactile ripple-effect mobile-focus">
                   <div className="relative h-56 overflow-hidden">
                     <Image
                       src={image}
@@ -251,7 +251,7 @@ export default function Blog() {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                  className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors button-tactile ripple-effect mobile-focus"
                 >
                   <i className="fas fa-arrow-right mr-2"></i>
                   Start Conversation
@@ -278,7 +278,7 @@ export default function Blog() {
                   <button 
                     type="button"
                     aria-label="Subscribe to newsletter"
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2"
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 button-tactile ripple-effect mobile-focus"
                   >
                     Subscribe
                   </button>
@@ -296,7 +296,7 @@ export default function Blog() {
                   rel="noopener noreferrer"
                   title="Follow on LinkedIn"
                   aria-label="Follow Jose Acosta on LinkedIn"
-                  className="w-12 h-12 md:w-12 md:h-12 min-h-[44px] min-w-[44px] bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
+                  className="w-12 h-12 md:w-12 md:h-12 min-h-[44px] min-w-[44px] bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 icon-tactile ripple-effect mobile-focus"
                 >
                   <i className="fab fa-linkedin text-xl"></i>
                 </a>
@@ -306,7 +306,7 @@ export default function Blog() {
                   rel="noopener noreferrer"
                   title="View GitHub Profile"
                   aria-label="View Jose Acosta's GitHub Profile"
-                  className="w-12 h-12 md:w-12 md:h-12 min-h-[44px] min-w-[44px] bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600"
+                  className="w-12 h-12 md:w-12 md:h-12 min-h-[44px] min-w-[44px] bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600 icon-tactile ripple-effect mobile-focus"
                 >
                   <i className="fab fa-github text-xl"></i>
                 </a>
@@ -316,7 +316,7 @@ export default function Blog() {
                   rel="noopener noreferrer"
                   title="Follow on Instagram"
                   aria-label="Follow Jose Acosta on Instagram"
-                  className="w-12 h-12 md:w-12 md:h-12 min-h-[44px] min-w-[44px] bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-pink-600"
+                  className="w-12 h-12 md:w-12 md:h-12 min-h-[44px] min-w-[44px] bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-pink-600 icon-tactile ripple-effect mobile-focus"
                 >
                   <i className="fab fa-instagram text-xl"></i>
                 </a>

@@ -305,6 +305,98 @@ img, video {
   background-size: 50px 50px;
 }
 
+/* Tactile Feedback Effects */
+.tactile-feedback {
+  transition: all 0.1s ease-out;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.tactile-feedback:active {
+  transform: scale(0.98) translateZ(0);
+}
+
+/* Button Tactile Feedback */
+.button-tactile {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+}
+
+.button-tactile:active {
+  transform: scale(0.96) translateY(1px) translateZ(0);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Tactile Feedback */
+.card-tactile {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+}
+
+.card-tactile:active {
+  transform: scale(0.99) translateY(1px) translateZ(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Tactile Feedback */
+.icon-tactile {
+  transition: all 0.1s ease-out;
+  transform: translateZ(0);
+}
+
+.icon-tactile:active {
+  transform: scale(0.9) translateZ(0);
+  opacity: 0.8;
+}
+
+/* Topic Badge Tactile */
+.badge-tactile {
+  transition: all 0.15s ease-out;
+  transform: translateZ(0);
+}
+
+.badge-tactile:active {
+  transform: scale(0.95) translateZ(0);
+  filter: brightness(1.1);
+}
+
+/* Ripple Effect */
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease-out, height 0.3s ease-out;
+  pointer-events: none;
+}
+
+.ripple-effect:active::before {
+  width: 200px;
+  height: 200px;
+}
+
+/* Enhanced Focus States for Mobile */
+@media (max-width: 768px) {
+  .mobile-focus:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 191, 165, 0.3);
+  }
+  
+  .mobile-touch-feedback:active {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
 /* Anima
 ted Gradient Button Effect */
 @keyframes gradient-x {
