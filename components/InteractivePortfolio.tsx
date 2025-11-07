@@ -128,20 +128,21 @@ export default function InteractivePortfolio() {
           layout
         >
           {filteredProjects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
-              whileHover={{ y: -5 }}
-            >
-              {/* Project Image */}
-              <div className="relative h-64 overflow-hidden">
+              <motion.div
+                key={project.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                onMouseEnter={() => setHoveredProject(project.id)}
+                onMouseLeave={() => setHoveredProject(null)}
+                whileHover={{ y: -5 }}
+                onClick={() => window.location.href = project.links.case_study}
+              >
+                {/* Project Image */}
+                <div className="relative h-64 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -221,19 +222,17 @@ export default function InteractivePortfolio() {
 
                 {/* Actions */}
                 <div className="flex justify-between items-center">
-                  <Link 
-                    href={project.links.case_study}
-                    className="text-[#005A9C] hover:text-[#00BFA5] font-medium"
-                  >
+                  <span className="text-[#005A9C] group-hover:text-[#00BFA5] font-medium">
                     Read Case Study →
-                  </Link>
+                  </span>
                   <div className="flex gap-2">
                     <a 
                       href={project.links.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-[#00BFA5] transition-colors"
+                      className="text-gray-400 hover:text-[#00BFA5] transition-colors z-10"
                       title="Live Demo"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <i className="fas fa-external-link-alt"></i>
                     </a>
@@ -241,8 +240,9 @@ export default function InteractivePortfolio() {
                       href={project.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-gray-800 transition-colors"
+                      className="text-gray-400 hover:text-gray-800 transition-colors z-10"
                       title="Source Code"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <i className="fab fa-github"></i>
                     </a>

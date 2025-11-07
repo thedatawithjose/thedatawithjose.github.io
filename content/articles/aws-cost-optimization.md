@@ -1,6 +1,6 @@
 ---
 title: "AWS Cost Optimization: Strategies for Data Engineering"
-date: "2024-03-08"
+date: "2025-09-10"
 author: "Jose Acosta"
 excerpt: "Comprehensive strategies for optimizing AWS costs in data engineering workloads, from storage to compute optimization."
 image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop&crop=center"

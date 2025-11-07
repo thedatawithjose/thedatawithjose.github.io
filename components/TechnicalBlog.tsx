@@ -3,8 +3,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
-import SocialShareButtons from './SocialShareButtons';
-import CompactSocialShare from './CompactSocialShare';
 
 const blogPosts = [
   {
@@ -148,15 +146,15 @@ export default function TechnicalBlog() {
           <h3 className="text-2xl font-bold mb-12 text-gray-900">Featured Articles</h3>
           <div className="grid md:grid-cols-2 gap-10">
             {featuredPosts.map((post, index) => (
-              <motion.article
-                key={post.id}
-                className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+              <Link href={post.url} key={post.id} className="block">
+                <motion.article
+                  className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
                   <img 
                     src={post.image} 
                     alt={post.title}
@@ -204,24 +202,15 @@ export default function TechnicalBlog() {
                     ))}
                   </div>
 
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <Link 
-                      href={post.url}
-                      className="inline-flex items-center text-[#005A9C] hover:text-[#00BFA5] font-medium group-hover:translate-x-1 transition-all"
-                    >
+                  <div className="flex items-center">
+                    <span className="inline-flex items-center text-[#005A9C] group-hover:text-[#00BFA5] font-medium group-hover:translate-x-1 transition-all">
                       Read Full Article
                       <i className="fas fa-arrow-right ml-2 text-sm"></i>
-                    </Link>
-                    
-                    <SocialShareButtons 
-                      url={post.url}
-                      title={post.title}
-                      description={post.excerpt}
-                      className="scale-90 sm:scale-100"
-                    />
+                    </span>
                   </div>
                 </div>
               </motion.article>
+              </Link>
             ))}
           </div>
         </div>
@@ -250,17 +239,17 @@ export default function TechnicalBlog() {
           layout
         >
           {regularPosts.map((post, index) => (
-            <motion.article
-              key={post.id}
-              layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300"
-              whileHover={{ y: -3 }}
-            >
-              <div className="relative h-44 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+            <Link href={post.url} key={post.id} className="block">
+              <motion.article
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+                className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
+                whileHover={{ y: -3 }}
+              >
+                <div className="relative h-44 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
                 <img 
                   src={post.image} 
                   alt={post.title}
@@ -303,23 +292,15 @@ export default function TechnicalBlog() {
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between">
-                  <Link 
-                    href={post.url}
-                    className="inline-flex items-center text-[#005A9C] hover:text-[#00BFA5] font-medium text-sm"
-                  >
+                <div className="flex items-center">
+                  <span className="inline-flex items-center text-[#005A9C] group-hover:text-[#00BFA5] font-medium text-sm">
                     Read More
                     <i className="fas fa-arrow-right ml-1 text-xs"></i>
-                  </Link>
-                  
-                  <CompactSocialShare 
-                    url={post.url}
-                    title={post.title}
-                    description={post.excerpt}
-                  />
+                  </span>
                 </div>
               </div>
             </motion.article>
+            </Link>
           ))}
         </motion.div>
 

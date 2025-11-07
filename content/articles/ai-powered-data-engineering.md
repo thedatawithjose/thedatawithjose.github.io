@@ -1,6 +1,6 @@
 ---
 title: "AI-Powered Data Engineering: Transforming ETL Pipelines in 2024"
-date: "2024-11-10"
+date: "2025-10-05"
 author: "Jose Acosta"
 excerpt: "How AI and LLMs are revolutionizing data engineering workflows, from automated schema detection to intelligent data quality monitoring."
 image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop&crop=center"

@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning in Production: From Model to API"
-date: "2024-02-25"
+date: "2025-04-08"
 author: "Jose Acosta"
 excerpt: "A comprehensive guide to deploying machine learning models in production, covering model serving, monitoring, and scaling strategies."
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&crop=center"

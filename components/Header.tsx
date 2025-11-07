@@ -180,6 +180,7 @@ export default function Header() {
               <nav className="hidden lg:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
               <Link 
                 href="/" 
+                prefetch={false}
                 className={getNavLinkClasses('/', pathname === '/')}
                 aria-current={pathname === '/' ? 'page' : undefined}
               >
@@ -190,6 +191,7 @@ export default function Header() {
               </Link>
               <Link 
                 href="/about" 
+                prefetch={false}
                 className={getNavLinkClasses('/about', pathname === '/about')}
                 aria-current={pathname === '/about' ? 'page' : undefined}
               >
@@ -200,6 +202,7 @@ export default function Header() {
               </Link>
               <Link 
                 href="/services" 
+                prefetch={false}
                 className={getNavLinkClasses('/services', pathname === '/services')}
                 aria-current={pathname === '/services' ? 'page' : undefined}
               >
@@ -210,6 +213,7 @@ export default function Header() {
               </Link>
               <Link 
                 href="/portfolio" 
+                prefetch={false}
                 className={getNavLinkClasses('/portfolio', pathname === '/portfolio')}
                 aria-current={pathname === '/portfolio' ? 'page' : undefined}
               >
@@ -220,6 +224,7 @@ export default function Header() {
               </Link>
               <Link 
                 href="/blog" 
+                prefetch={false}
                 className={getNavLinkClasses('/blog', pathname.startsWith('/blog'))}
                 aria-current={pathname.startsWith('/blog') ? 'page' : undefined}
               >
@@ -250,7 +255,7 @@ export default function Header() {
                 onClick={toggleMenu}
                 className="text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:ring-offset-2 rounded-lg p-2 hover:bg-gray-100 transition-colors duration-200"
                 aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-                aria-expanded={isMenuOpen}
+                aria-expanded={isMenuOpen ? "true" : "false"}
                 aria-controls="mobile-menu"
                 aria-haspopup="true"
               >
@@ -277,6 +282,7 @@ export default function Header() {
               <div className="flex flex-col space-y-2 p-4">
                 <Link 
                   href="/" 
+                  prefetch={false}
                   className={getMobileNavLinkClasses(pathname === '/')}
                   onClick={() => setIsMenuOpen(false)}
                   aria-current={pathname === '/' ? 'page' : undefined}
@@ -286,6 +292,7 @@ export default function Header() {
                 </Link>
                 <Link 
                   href="/about" 
+                  prefetch={false}
                   className={getMobileNavLinkClasses(pathname === '/about')}
                   onClick={() => setIsMenuOpen(false)}
                   aria-current={pathname === '/about' ? 'page' : undefined}
@@ -295,6 +302,7 @@ export default function Header() {
                 </Link>
                 <Link 
                   href="/services" 
+                  prefetch={false}
                   className={getMobileNavLinkClasses(pathname === '/services')}
                   onClick={() => setIsMenuOpen(false)}
                   aria-current={pathname === '/services' ? 'page' : undefined}
@@ -304,6 +312,7 @@ export default function Header() {
                 </Link>
                 <Link 
                   href="/portfolio" 
+                  prefetch={false}
                   className={getMobileNavLinkClasses(pathname === '/portfolio')}
                   onClick={() => setIsMenuOpen(false)}
                   aria-current={pathname === '/portfolio' ? 'page' : undefined}
@@ -313,6 +322,7 @@ export default function Header() {
                 </Link>
                 <Link 
                   href="/blog" 
+                  prefetch={false}
                   className={getMobileNavLinkClasses(pathname.startsWith('/blog'))}
                   onClick={() => setIsMenuOpen(false)}
                   aria-current={pathname.startsWith('/blog') ? 'page' : undefined}
@@ -322,6 +332,7 @@ export default function Header() {
                 </Link>
                 <Link 
                   href="/contact" 
+                  prefetch={false}
                   className="bg-gradient-to-r from-[#00BFA5] to-[#005A9C] text-white px-6 py-3 rounded-lg hover:from-[#00D4B4] hover:to-[#00BFA5] hover:shadow-lg transition-all duration-300 font-semibold text-center mt-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#00BFA5]"
                   onClick={() => setIsMenuOpen(false)}
                   aria-current={pathname === '/contact' ? 'page' : undefined}

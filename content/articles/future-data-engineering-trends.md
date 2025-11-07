@@ -1,6 +1,6 @@
 ---
 title: "The Future of Data Engineering: Predictions and Trends for 2025"
-date: "2024-07-20"
+date: "2025-03-25"
 author: "Jose Acosta"
 excerpt: "Exploring emerging trends in data engineering including real-time ML, edge computing, and the evolving role of data engineers in an AI-first world."
 image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=400&fit=crop&crop=center"

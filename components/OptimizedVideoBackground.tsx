@@ -14,42 +14,62 @@ export default function OptimizedVideoBackground({ videoSrc, gradient, slideInde
   const [videoError, setVideoError] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Background images for mobile/fallback
+  // Background images for mobile/fallback - Unsplash images
   const backgroundImages = [
-    '/images/backgrounds/data-engineering-bg-1.jpg', // Abstract data visualization
-    '/images/backgrounds/data-engineering-bg-2.jpg', // Network connections
-    '/images/backgrounds/data-engineering-bg-3.jpg'  // Code/algorithms
+    '/images/hero/hero-slide-1.jpg', // Data infrastructure
+    '/images/hero/hero-slide-2.jpg', // Trading systems
+    '/images/hero/hero-slide-3.jpg'  // Engineering solutions
   ];
 
   useEffect(() => {
-    // Detectar capacidades del dispositivo
-    const isDesktop = window.innerWidth >= 1024; // Más restrictivo
-    const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
-    const isGoodConnection = !connection || connection.effectiveType === '4g';
-    const hasGoodGPU = window.devicePixelRatio <= 2; // Evitar dispositivos con alta densidad
+    // Desktop = video, Mobile = imagen
+    const isDesktop = window.innerWidth >= 768;
     
-    // Solo cargar video en condiciones óptimas
-    if (isDesktop && isGoodConnection && hasGoodGPU) {
-      setShouldLoadVideo(true);
+    if (isDesktop) {
+      // En desktop, cargar video después de un pequeño delay
+      const timer = setTimeout(() => {
+        setShouldLoadVideo(true);
+      }, 300);
+      
+      return () => clearTimeout(timer);
     }
   }, []);
 
   const handleVideoLoad = () => {
     setIsVideoLoaded(true);
-    // Optimización adicional: pausar video cuando no está visible
+    
     if (videoRef.current) {
+      // Asegurar que el video se reproduce
+      const playPromise = videoRef.current.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log('Video autoplay prevented:', error);
+          // Intentar reproducir de nuevo
+          setTimeout(() => {
+            if (videoRef.current) {
+              videoRef.current.play().catch(() => {});
+            }
+          }, 1000);
+        });
+      }
+      
+      // Pausar video cuando no está visible para ahorrar recursos
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (videoRef.current) {
             if (entry.isIntersecting) {
-              videoRef.current.play();
+              videoRef.current.play().catch(() => {});
             } else {
               videoRef.current.pause();
             }
           }
         });
-      });
+      }, { threshold: 0.1 });
+      
       observer.observe(videoRef.current);
+      
+      return () => observer.disconnect();
     }
   };
 
@@ -60,7 +80,7 @@ export default function OptimizedVideoBackground({ videoSrc, gradient, slideInde
 
   return (
     <>
-      {/* Video para Desktop (solo si las condiciones son óptimas) */}
+      {/* Video para Desktop */}
       {shouldLoadVideo && !videoError ? (
         <video
           ref={videoRef}
@@ -68,51 +88,52 @@ export default function OptimizedVideoBackground({ videoSrc, gradient, slideInde
           loop
           muted
           playsInline
-          preload="none" // Cambio: carga solo cuando es necesario
+          preload="auto"
           onLoadedData={handleVideoLoad}
           onError={handleVideoError}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          onEnded={() => {
+            // Asegurar que el loop funciona
+            if (videoRef.current) {
+              videoRef.current.currentTime = 0;
+              videoRef.current.play().catch(() => {});
+            }
+          }}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 video-background ${
             isVideoLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ 
-            willChange: 'transform',
-            transform: 'translate3d(0,0,0)', // Mejor para GPU
-            backfaceVisibility: 'hidden',
-            filter: 'brightness(0.7)' // Oscurecer para mejor legibilidad
+            filter: 'brightness(0.7)'
           }}
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
       ) : null}
       
-      {/* Background Image para Mobile/Fallback */}
+      {/* Background Image para Mobile */}
       {!shouldLoadVideo || videoError ? (
+        <>
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 hero-bg-optimized"
+            style={{
+              backgroundImage: `url(${backgroundImages[slideIndex % backgroundImages.length]})`
+            }}
+          />
+          {/* Overlay con gradiente para mejor legibilidad en móvil */}
+          <div 
+            className={`absolute inset-0 bg-gradient-to-br ${gradient} transition-opacity duration-1000 opacity-70`}
+          />
+        </>
+      ) : (
+        /* Gradient Overlay para video en desktop */
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
-          style={{
-            backgroundImage: `url(${backgroundImages[slideIndex % backgroundImages.length]})`,
-            filter: 'brightness(0.6) contrast(1.1)'
-          }}
+          className={`absolute inset-0 bg-gradient-to-br ${gradient} transition-opacity duration-1000 ${
+            isVideoLoaded ? 'opacity-50' : 'opacity-70'
+          }`}
         />
-      ) : null}
+      )}
       
-      {/* Gradient Overlay - siempre presente para legibilidad */}
-      <div 
-        className={`absolute inset-0 bg-gradient-to-br ${gradient} transition-opacity duration-1000 ${
-          isVideoLoaded ? 'opacity-60' : 'opacity-80'
-        }`}
-      />
-      
-      {/* Patrón sutil para textura */}
-      <div className="absolute inset-0 opacity-10">
-        <div 
-          className="w-full h-full"
-          style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }}
-        />
-      </div>
+      {/* Patrón sutil para textura - Simplificado */}
+      <div className="absolute inset-0 opacity-5 bg-grid-pattern pointer-events-none"></div>
     </>
   );
 }

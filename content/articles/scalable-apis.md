@@ -1,6 +1,6 @@
 ---
 title: "Building Scalable APIs: From Monolith to Microservices"
-date: "2024-03-05"
+date: "2025-06-22"
 author: "Jose Acosta"
 excerpt: "A comprehensive guide to designing and scaling APIs, from monolithic architectures to microservices, with practical implementation examples."
 image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop&crop=center"

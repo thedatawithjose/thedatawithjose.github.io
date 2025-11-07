@@ -44,23 +44,23 @@ export default function Services() {
       startingPrice: '$800'
     },
     {
-      id: 'trading-algorithms',
-      icon: 'fas fa-chart-line',
-      title: 'Trading Algorithm Development',
-      subtitle: 'Automated trading systems with risk management',
-      description: 'Custom algorithmic trading strategies that execute trades automatically based on market signals. Includes backtesting, risk management, and real-time performance monitoring.',
-      technologies: ['Python', 'NumPy', 'Pandas', 'QuantLib', 'Interactive Brokers API', 'TensorFlow'],
+      id: 'ml-production',
+      icon: 'fas fa-robot',
+      title: 'ML in Production',
+      subtitle: 'Production-ready machine learning systems',
+      description: 'Deploy and maintain machine learning models in production with proper monitoring, versioning, and automated retraining. Build MLOps pipelines that ensure model reliability and performance.',
+      technologies: ['Python', 'TensorFlow', 'PyTorch', 'MLflow', 'Kubernetes', 'Docker'],
       benefits: [
-        'Low-latency execution for optimal fills',
-        'Risk management with position sizing controls',
-        'Backtesting across market cycles',
-        'Performance dashboards and alerts',
-        'Strategies with consistent performance'
+        'Automated model training and deployment',
+        'Model performance monitoring and alerts',
+        'A/B testing frameworks for model comparison',
+        'Feature engineering pipelines',
+        'Model versioning and rollback capabilities'
       ],
       metrics: {
-        performance: 'Low-latency execution',
-        returns: 'Consistent performance',
-        accuracy: '60% win rate'
+        deployment: '3 days deployment time',
+        monitoring: 'Real-time performance tracking',
+        reliability: '98% model uptime'
       },
       startingPrice: '$2,500'
     },
@@ -161,10 +161,10 @@ export default function Services() {
 
   const testimonials = [
     {
-      service: 'Trading Algorithms',
+      service: 'Data Engineering',
       client: 'Daniel Graham, CEO TheTraderDaddy',
-      quote: 'Jose developed a momentum-based trading algorithm that processes multiple crypto pairs with proper risk management. His implementation includes dynamic position sizing using Kelly Criterion, real-time risk monitoring with 3% max drawdown limits, and automated stop-loss mechanisms. The system has maintained consistent performance over 8 months with reasonable risk-adjusted returns. What impressed me most was his integration of social sentiment data from Twitter and Reddit APIs to enhance signal accuracy during volatile market conditions.',
-      result: 'Consistent performance, 3% max drawdown, proper risk management'
+      quote: 'Jose built our real-time market data pipeline that processes WebSocket feeds from multiple exchanges into Snowflake. His implementation includes automated data quality checks, low-latency processing (<500ms), and proper error handling. The system has maintained 98%+ uptime over 8 months while processing millions of market updates daily. What impressed me most was his integration of multiple data sources (market data, social sentiment, on-chain metrics) into a unified analytics platform that powers our research and backtesting infrastructure.',
+      result: '98%+ uptime, <500ms latency, millions of updates processed daily'
     },
     {
       service: 'Data Engineering',

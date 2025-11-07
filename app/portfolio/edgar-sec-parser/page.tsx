@@ -4,12 +4,10 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
-import ThemeProvider from '../../../components/ThemeProvider';
 
 export default function EdgarSecParser() {
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-gray-900">
         <Header />
 
         {/* Hero Section */}
@@ -353,6 +351,5 @@ export default function EdgarSecParser() {
 
         <Footer />
       </div>
-    </ThemeProvider>
   );
 }

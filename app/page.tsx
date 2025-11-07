@@ -86,8 +86,8 @@ export default function Home() {
       subtitle: "4 years putting real capital behind time-series models. When bad data means lost money, you build systems that never fail. <500ms execution, 24/7 monitoring.",
       mobileSubtitle: "4 years trading with real capital. Systems that never fail. <500ms execution, 24/7 monitoring.",
       gradient: "from-[#1A1A1A] via-[#0A192F] to-[#1A3A52]",
-      cta: "View Trading Systems",
-      secondaryCta: "Explore Algorithms",
+      cta: "View Data Solutions",
+      secondaryCta: "See Case Studies",
       details: {
         description: "Quantitative trading taught me that data quality isn't optional - it's survival. I build data systems with the same obsession for accuracy and speed that kept me profitable in live markets.",
         features: [
@@ -136,7 +136,7 @@ export default function Home() {
         setCurrentIndex((prev) => (prev + 1) % heroSlides.length);
         setIsAnimating(false);
       }, 500);
-    }, 4000);
+    }, 6000); // Aumentado de 4s a 6s para mejor legibilidad
 
     return () => clearInterval(interval);
   }, []);
@@ -159,7 +159,7 @@ export default function Home() {
 
       {/* Hero Section with Video Background */}
       <motion.section
-        className="hero relative text-white py-32 md:py-40 overflow-hidden min-h-screen flex items-center"
+        className="hero relative text-white overflow-hidden h-screen flex items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -171,18 +171,8 @@ export default function Home() {
           slideIndex={currentIndex}
         />
         
-        {/* Enhanced gradient overlay with better mobile contrast */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${heroSlides[currentIndex].gradient} transition-all duration-1000 pointer-events-none opacity-90`} />
-        
-        {/* Additional dark overlay for mobile readability */}
-        <div className="absolute inset-0 bg-black/20 md:bg-black/10 pointer-events-none" />
-        
-        {/* Grain texture overlay */}
-        <div className="absolute inset-0 opacity-[0.15] mix-blend-overlay pointer-events-none"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          }}
-        />
+        {/* Simplified overlay - Solo 1 capa para mejor performance */}
+        <div className="absolute inset-0 bg-black/15 md:bg-black/10 pointer-events-none" />
         
         <div className="container mx-auto px-4 relative z-10">
           <ProgressiveHero 
@@ -197,6 +187,28 @@ export default function Home() {
             }}
           />
         </div>
+        
+        {/* Scroll Indicator */}
+        <motion.div 
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+        >
+          <motion.div
+            className="flex flex-col items-center text-white/80 hover:text-white transition-colors cursor-pointer bg-black/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            onClick={() => {
+              window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="text-sm mb-1 font-medium whitespace-nowrap">Scroll to explore</span>
+            <i className="fas fa-chevron-down text-sm" />
+          </motion.div>
+        </motion.div>
       </motion.section>
 
       {/* Services Preview */}
@@ -225,10 +237,8 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.6 }}
             >
-              {/* 2026 Background Effects */}
+              {/* Simplified Background Effect - Solo 1 capa */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#42A5F5]/5 via-transparent to-[#2196F3]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#42A5F5]/10 to-transparent rounded-bl-[60%] blur-sm"></div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#42A5F5]/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
               
               {/* Modern Icon Container */}
               <div className="relative mb-8">
@@ -307,10 +317,8 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              {/* 2026 Background Effects */}
+              {/* Simplified Background Effect - Solo 1 capa */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#00BFA5]/5 via-transparent to-[#00D4B4]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#00BFA5]/10 to-transparent rounded-bl-[60%] blur-sm"></div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#00BFA5]/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
               
               {/* Modern Icon Container */}
               <div className="relative mb-8">
@@ -389,10 +397,8 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              {/* 2026 Background Effects */}
+              {/* Simplified Background Effect - Solo 1 capa */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#005A9C]/5 via-transparent to-[#0066CC]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#005A9C]/10 to-transparent rounded-bl-[60%] blur-sm"></div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#005A9C]/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
               
               {/* Modern Icon Container */}
               <div className="relative mb-8">

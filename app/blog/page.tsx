@@ -203,7 +203,7 @@ export default function Blog() {
                     </div>
                     
                     <div className="p-6">
-                      <div className="flex items-center gap-4 text-sm text-gray-700 md:text-gray-500 mb-3">
+                      <div className="flex items-center gap-4 text-sm text-gray-900 mb-3">
                         <span>{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                         <span>•</span>
                         <span>{author}</span>
@@ -213,7 +213,7 @@ export default function Blog() {
                         {title}
                       </h2>
                       
-                      <p className="text-gray-800 md:text-gray-600 leading-relaxed mb-4 line-clamp-3">
+                      <p className="text-gray-900 leading-relaxed mb-4 line-clamp-3">
                         {excerpt}
                       </p>
 

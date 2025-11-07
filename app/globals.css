@@ -28,6 +28,47 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Custom Scrollbar Styles - Modern & Integrated */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00BFA5, #42A5F5);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00d4b8, #5bb3f7);
+  box-shadow: 0 0 8px rgba(0, 191, 165, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #00a88e, #3a95e3);
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00BFA5 transparent;
+}
+
+/* Scrollbar for dark backgrounds */
+.dark-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00BFA5, #42A5F5);
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00d4b8, #5bb3f7);
+  box-shadow: 0 0 8px rgba(0, 191, 165, 0.5);
+}
+
 /* Performance optimizations */
 * {
   box-sizing: border-box;
@@ -490,6 +531,25 @@ body {
   .bg-image-optimized {
     background-attachment: scroll; /* Mejor performance en móvil */
   }
+}
+
+/* Hero Background Optimized */
+.hero-bg-optimized {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.6) contrast(1.15);
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+/* Optimized Will-Change */
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.will-change-transform {
+  will-change: transform;
 }
 
 /* Preload critical background images */

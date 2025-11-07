@@ -9,6 +9,14 @@ const nextConfig = {
     unoptimized: true, // Requerido para export estático
     qualities: [75, 95],
   },
+  
+  // Mejorar el manejo de navegación en modo estático
+  experimental: {
+    optimizePackageImports: ['framer-motion'],
+  },
+  
+  // Asegurar que las páginas se generen correctamente
+  skipTrailingSlashRedirect: false,
 };
 
 module.exports = nextConfig;

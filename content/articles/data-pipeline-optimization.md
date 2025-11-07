@@ -1,6 +1,6 @@
 ---
 title: "Data Pipeline Optimization: Achieving Better Performance"
-date: "2024-02-20"
+date: "2025-05-12"
 author: "Jose Acosta"
 excerpt: "How we redesigned our ETL pipeline architecture using Apache Spark and Kubernetes to achieve significant performance improvement."
 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&crop=center"

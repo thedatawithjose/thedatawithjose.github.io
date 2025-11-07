@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+// NOTE: This middleware only runs in development mode
+// For static exports (output: 'export'), middleware is not executed in production
+// Security is handled by the hosting platform (GitHub Pages, Vercel, etc.)
+
 // Rate limiting store (in production, use Redis or similar)
 const rateLimitMap = new Map<string, { count: number; lastReset: number }>();
 

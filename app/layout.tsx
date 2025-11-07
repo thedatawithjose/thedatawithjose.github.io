@@ -13,6 +13,8 @@ import ErrorBoundary from "../components/ErrorBoundary";
 import AnalyticsProvider from "../components/AnalyticsProvider";
 import WhatsAppButton from "../components/WhatsAppButton";
 import CookieConsent from "../components/CookieConsent";
+import PageTransition from "../components/PageTransition";
+import NavigationHandler from "../components/NavigationHandler";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -45,10 +47,7 @@ export const metadata: Metadata = generateMetadata({
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0A192F' }
-  ],
+  themeColor: '#ffffff',
 };
 
 export default function RootLayout({
@@ -126,13 +125,18 @@ export default function RootLayout({
         {/* Web Vitals Tracking */}
         <WebVitalsTracker debug={process.env.NODE_ENV === 'development'} />
         
+        {/* Navigation Handler */}
+        <NavigationHandler />
+        
         {/* Development-only components - removed to reduce bundle size */}
         
         {/* Analytics Provider with Consent */}
         <AnalyticsProvider>
           {/* Error Boundary Wrapper */}
           <ErrorBoundary>
-            {children}
+            <PageTransition>
+              {children}
+            </PageTransition>
           </ErrorBoundary>
           
           {/* WhatsApp Floating Button */}

@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
-import ThemeProvider from '../../../components/ThemeProvider';
 
 export default function FinancialDataPipeline() {
   useEffect(() => {
@@ -16,8 +15,7 @@ export default function FinancialDataPipeline() {
   }, []);
 
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-gray-900">
         {/* Preloader */}
         <div id="preloader" className="fixed inset-0 bg-white z-50 flex items-center justify-center">
           <div className="jumper flex space-x-2">
@@ -368,6 +366,5 @@ export default function FinancialDataPipeline() {
 
         <Footer />
       </div>
-    </ThemeProvider>
   );
 }

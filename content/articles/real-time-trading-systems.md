@@ -1,6 +1,6 @@
 ---
 title: "Building Real-Time Trading Systems with Python and WebSockets"
-date: "2024-03-15"
+date: "2025-07-18"
 author: "Jose Acosta"
 excerpt: "A deep dive into architecting low-latency trading systems that can process hundreds of market updates per second with consistent performance."
 image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=400&fit=crop&crop=center"

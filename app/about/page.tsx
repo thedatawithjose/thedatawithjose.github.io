@@ -139,6 +139,9 @@ export default function About() {
                 </h1>
                 <div className="mb-10">
                   <p className="text-xl md:text-2xl text-gray-200 mb-4 leading-relaxed font-medium">
+                    Data Engineer
+                  </p>
+                  <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
                     Time-Series & Real-Time Systems | ex-Quant Trader | ex-Civil Engineer
                   </p>
                   <p className="text-lg md:text-xl text-green-400 leading-relaxed font-semibold mb-6">
@@ -146,8 +149,8 @@ export default function About() {
                   </p>
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-6 border border-white/20">
                     <p className="text-gray-200 text-sm leading-relaxed italic">
-                      "Data quality, latency, and reliability aren't 'tech details' — they're business risk. 
-                      When a pipeline fails and decisions can't wait, you learn to design for failure."
+                      "Data quality, latency, and reliability aren't 'tech details'—they're business risk. 
+                      When a pipeline fails and decisions can't wait, you learn to build for resilience."
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-4 mt-6">
@@ -317,13 +320,18 @@ export default function About() {
                     <h2 className="text-4xl font-bold mb-6">Data Engineer with Real-World Context</h2>
                     <p className="text-lg mb-4 leading-relaxed">
                       I'm a Data Engineer who came up through quantitative trading. For four years I put real capital 
-                      behind time-series models; now I build the high-availability, real-time data systems I wished I'd had. 
-                      Earlier, four years in Civil Engineering project management taught me to deliver under constraints 
-                      and communicate with non-technical stakeholders.
+                      behind time-series models—where a bad join or silent failure cost money before you could roll it back. 
+                      That experience taught me that every delay, quality issue, or bad assumption in data has a real business cost. 
+                      Now I build the high-availability, real-time data systems I wished I'd had.
                     </p>
                     <p className="text-lg mb-4 leading-relaxed">
-                      <strong>Philosophy:</strong> Data quality, latency, and reliability aren't "tech details", they're 
-                      business risk. When a pipeline fails and decisions can't wait, you learn to design for failure, 
+                      Before that, I spent four years in Civil Engineering project management, learning to deliver under pressure, 
+                      manage constraints, and communicate with clarity across technical and non-technical teams. That background 
+                      shaped how I approach systems today: with structure, accountability, and respect for the human side of engineering.
+                    </p>
+                    <p className="text-lg mb-4 leading-relaxed">
+                      <strong>Philosophy:</strong> Data quality, latency, and reliability aren't "tech details"—they're 
+                      business risk. When a pipeline fails and decisions can't wait, you learn to build for resilience, 
                       instrument everything, and ship only what you can monitor.
                     </p>
                     
@@ -333,19 +341,19 @@ export default function About() {
                       <ul className="space-y-2 text-gray-700">
                         <li className="flex items-start">
                           <i className="fas fa-bullseye text-green-500 mr-3 mt-1 flex-shrink-0"></i>
-                          <span><strong>Product-minded:</strong> pipelines aligned to decisions & KPIs, not just storage</span>
+                          <span><strong>Product-minded:</strong> Pipelines aligned to decisions & KPIs, not just storage</span>
                         </li>
                         <li className="flex items-start">
                           <i className="fas fa-shield-alt text-green-500 mr-3 mt-1 flex-shrink-0"></i>
-                          <span><strong>Quality & reliability first:</strong> unit tests + dbt data tests, SLAs/SLIs, lineage</span>
+                          <span><strong>Quality & reliability first:</strong> Unit tests + dbt data tests, SLAs/SLIs, lineage tracking</span>
                         </li>
                         <li className="flex items-start">
                           <i className="fas fa-dollar-sign text-green-500 mr-3 mt-1 flex-shrink-0"></i>
-                          <span><strong>Cost-aware by design:</strong> partitioning, pruning, caching, orchestration, right-sizing</span>
+                          <span><strong>Cost-aware by design:</strong> Partitioning, pruning, caching, orchestration, right-sizing</span>
                         </li>
                         <li className="flex items-start">
                           <i className="fas fa-handshake text-green-500 mr-3 mt-1 flex-shrink-0"></i>
-                          <span><strong>Data contracts:</strong> work backward from outcomes to schemas, ownership, and alerts</span>
+                          <span><strong>Data contracts:</strong> Work backward from outcomes to schemas, ownership, and alerts—so when something breaks at 2 AM, the right person gets paged, not the entire team</span>
                         </li>
                       </ul>
                     </div>
@@ -356,19 +364,19 @@ export default function About() {
                       <ul className="space-y-3 text-gray-700">
                         <li className="flex items-start">
                           <i className="fas fa-check-circle text-green-500 mr-3 mt-1 flex-shrink-0"></i>
-                          <span>Built real-time ingestion (WebSocket → cloud warehouse) with alerting and on-call playbooks</span>
+                          <span><strong>Real-time ingestion system:</strong> Built WebSocket → cloud warehouse pipeline with alerting and on-call playbooks that reduced data staleness from hours to seconds, enabling same-day decisions</span>
                         </li>
                         <li className="flex items-start">
                           <i className="fas fa-check-circle text-green-500 mr-3 mt-1 flex-shrink-0"></i>
-                          <span>Shipped document parsing & normalization services (semi-structured → clean schemas)</span>
+                          <span><strong>Document parsing & normalization:</strong> Shipped services that transform semi-structured data into clean schemas, reducing manual data cleanup by 80%</span>
                         </li>
                         <li className="flex items-start">
                           <i className="fas fa-check-circle text-green-500 mr-3 mt-1 flex-shrink-0"></i>
-                          <span>Designed streaming/ETL pipelines that made research faster and decisions more reliable</span>
+                          <span><strong>Streaming/ETL pipelines:</strong> Designed systems that cut research cycles by 40% and made backtesting 5x faster through reliable data infrastructure</span>
                         </li>
                         <li className="flex items-start">
                           <i className="fas fa-check-circle text-green-500 mr-3 mt-1 flex-shrink-0"></i>
-                          <span>Delivered anomaly detection services to surface issues before they impact users</span>
+                          <span><strong>Anomaly detection services:</strong> Delivered monitoring that surfaces data quality issues before they impact downstream users or business decisions</span>
                         </li>
                       </ul>
                     </div>
@@ -419,7 +427,7 @@ export default function About() {
                         </div>
                       </div>
                       <p className="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg">
-                        <strong>Specialties:</strong> Time-Series, Streaming, Real-Time Systems, Data Modeling, ML in Production
+                        <strong>Specialties:</strong> Time-Series | Streaming | Real-Time Systems | Data Modeling | ML in Production
                       </p>
                     </div>
                   </div>
@@ -429,59 +437,106 @@ export default function About() {
                     <div className="bg-gradient-to-br from-gray-50 to-blue-50 p-6 rounded-xl border-l-4 border-blue-500 mb-8">
                       <h4 className="font-semibold text-gray-800 mb-2">Earlier Career Context</h4>
                       <p className="text-gray-700 leading-relaxed">
-                        Before tech, I managed civil-engineering projects (valuations, resource flows, construction metrics). 
+                        Before tech, I managed civil-engineering projects—valuations, resource flows, construction metrics. 
                         Different domain, same lesson: <strong>decisions are only as good as the systems and data that support them.</strong>
-                        This foundation taught me to deliver under constraints and communicate with non-technical stakeholders.
+                      </p>
+                      <p className="text-gray-700 leading-relaxed mt-3">
+                        This foundation taught me to deliver under constraints, manage stakeholder expectations, and communicate 
+                        complex technical concepts to non-technical audiences. It's why I approach data engineering with structure, 
+                        accountability, and an understanding that reliability isn't just about uptime—it's about enabling people to 
+                        do their jobs with confidence.
                       </p>
                     </div>
 
-                    <h3 className="text-2xl font-bold mb-6">Looking For</h3>
+                    <h3 className="text-2xl font-bold mb-6">What I'm Looking For</h3>
                     <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border-l-4 border-green-500">
                       <p className="text-lg text-gray-700 mb-4">
-                        <strong>Data Engineering roles in data-intensive products</strong> (fintech, e-commerce, logistics, SaaS) 
-                        where domain context + technical rigor create real leverage and where "close enough" isn't good enough.
+                        Data Engineering roles in data-intensive products where milliseconds matter and "close enough" breaks the business model. 
+                        I'm drawn to problems in <strong>fintech</strong> (real-time pricing, risk models), <strong>e-commerce</strong> (inventory optimization, personalization), 
+                        <strong>logistics</strong> (supply-chain analytics), or <strong>SaaS</strong> (product analytics, usage-based billing)—domains where context and engineering rigor create real leverage.
                       </p>
                       <div className="grid grid-cols-2 gap-4 mt-4 text-sm text-gray-600">
                         <div>
                           <strong>Ideal environments:</strong>
                           <ul className="mt-1 space-y-1">
-                            <li>• High-stakes data systems</li>
-                            <li>• Real-time requirements</li>
-                            <li>• Cost-sensitive projects</li>
+                            <li>• High-stakes data systems where downtime has immediate business impact</li>
+                            <li>• Real-time requirements (streaming, event-driven architectures)</li>
+                            <li>• Cost-sensitive projects where optimization directly affects margins</li>
+                            <li>• Teams that treat data infrastructure as a product, not a cost center</li>
                           </ul>
                         </div>
                         <div>
                           <strong>What I bring:</strong>
                           <ul className="mt-1 space-y-1">
-                            <li>• Reliability-first mindset</li>
-                            <li>• Business impact focus</li>
-                            <li>• Production-ready systems</li>
+                            <li>• Reliability-first mindset shaped by trading with real capital</li>
+                            <li>• Business impact focus—I speak both engineering and business language</li>
+                            <li>• Production-ready systems built for observability, not just delivery</li>
+                            <li>• Experience delivering under pressure with cross-functional teams</li>
                           </ul>
                         </div>
                       </div>
                       <p className="text-gray-600 mt-4 pt-4 border-t border-gray-200">
-                        Happy to share repos, diagrams, or walk through architectural decisions and trade-offs.
+                        Happy to share repos, architectural diagrams, or walk through design decisions and trade-offs. 
+                        I believe in building systems and cultures defined by clarity, empathy, and accountability.
                       </p>
                     </div>
 
-                    <h3 className="text-xl font-semibold mb-4">Key Metrics</h3>
-                    {achievements.map((achievement, index) => (
-                      <motion.div
-                        key={index}
-                        className="bg-white p-4 rounded-lg shadow-md border-l-4 border-green-500"
-                        initial={{ opacity: 0, x: 30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                      >
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <div className="text-2xl font-bold text-green-500 mb-1">{achievement.metric}</div>
-                            <div className="text-gray-700 text-sm">{achievement.description}</div>
-                          </div>
-                          <i className="fas fa-chart-line text-xl text-green-500"></i>
+                    <h3 className="text-xl font-semibold mb-4">Production Metrics in Detail</h3>
+                    <motion.div
+                      className="bg-white p-4 rounded-lg shadow-md border-l-4 border-green-500 mb-4"
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-2xl font-bold text-green-500 mb-1">98%+ System Uptime</div>
+                          <div className="text-gray-700 text-sm">Maintained across production pipelines processing 2TB+ daily with real-time and batch workloads, including on-call coverage and incident response</div>
                         </div>
-                      </motion.div>
-                    ))}
+                        <i className="fas fa-chart-line text-xl text-green-500"></i>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className="bg-white p-4 rounded-lg shadow-md border-l-4 border-blue-500 mb-4"
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 }}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-2xl font-bold text-blue-500 mb-1">25% Cost Reduction</div>
+                          <div className="text-gray-700 text-sm">Achieved through strategic partitioning, query optimization, compute right-sizing, and orchestration improvements without sacrificing performance</div>
+                        </div>
+                        <i className="fas fa-dollar-sign text-xl text-blue-500"></i>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className="bg-white p-4 rounded-lg shadow-md border-l-4 border-purple-500 mb-4"
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-2xl font-bold text-purple-500 mb-1">&lt;500ms Pipeline Latency</div>
+                          <div className="text-gray-700 text-sm">Average end-to-end latency for real-time ingestion pipelines, enabling sub-second decision-making for time-sensitive use cases</div>
+                        </div>
+                        <i className="fas fa-tachometer-alt text-xl text-purple-500"></i>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className="bg-white p-4 rounded-lg shadow-md border-l-4 border-orange-500"
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.3 }}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-2xl font-bold text-orange-500 mb-1">2TB+ Daily Processing</div>
+                          <div className="text-gray-700 text-sm">Sustained throughput across batch and streaming workloads with data quality checks, lineage tracking, and automated alerting</div>
+                        </div>
+                        <i className="fas fa-database text-xl text-orange-500"></i>
+                      </div>
+                    </motion.div>
                   </div>
                 </div>
               )}
@@ -526,14 +581,6 @@ export default function About() {
                         description: 'Managed civil engineering projects including valuations, resource flows, and construction metrics. Delivered projects under constraints while coordinating with diverse stakeholders.',
                         achievements: ['Project delivery under constraints', 'Stakeholder communication', 'Resource optimization'],
                         color: 'orange'
-                      },
-                      {
-                        period: 'Mid 2018 - 2022',
-                        title: 'Head of Trading & Quantitative Data Systems',
-                        company: 'Fintech Alca Group',
-                        description: 'Improved strategy backtesting throughput by automating portfolio optimization pipelines. Built data platform with ETL/ELT processes from market data sources.',
-                        achievements: ['Automated backtesting pipeline', 'Data-driven investment decisions', 'Market data ETL platform'],
-                        color: 'purple'
                       }
                     ].map((experience, index) => (
                       <motion.div
@@ -793,7 +840,7 @@ export default function About() {
                 <div className="grid md:grid-cols-3 gap-6 text-sm">
                   <div className="flex items-center justify-center">
                     <i className="fas fa-chart-line text-green-400 mr-2"></i>
-                    <span>4 years real trading experience</span>
+                    <span>3+ years data engineering experience</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <i className="fas fa-shield-alt text-blue-400 mr-2"></i>

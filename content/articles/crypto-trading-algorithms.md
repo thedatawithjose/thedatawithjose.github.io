@@ -1,6 +1,6 @@
 ---
 title: "Cryptocurrency Trading Algorithms: Building Automated Strategies"
-date: "2024-03-01"
+date: "2025-08-15"
 author: "Jose Acosta"
 excerpt: "Design and implementation of automated cryptocurrency trading algorithms using Python, machine learning, and real-time data processing."
 image: "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?w=800&h=400&fit=crop&crop=center"

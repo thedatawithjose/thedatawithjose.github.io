@@ -344,56 +344,6 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
         )}
       </AnimatePresence>
 
-      {/* Enhanced Slide Indicators */}
-      <motion.div 
-        className="flex justify-center gap-3 mt-12"
-        variants={itemVariants}
-      >
-        {slides.map((_, index) => (
-          <motion.button
-            key={index}
-            onClick={() => onSlideChange(index)}
-            className={`transition-all duration-300 rounded-full relative overflow-hidden ${
-              index === currentIndex 
-                ? 'bg-white w-10 h-3' 
-                : 'bg-white/50 hover:bg-white/70 w-3 h-3'
-            }`}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label={`Go to slide ${index + 1}`}
-          >
-            {index === currentIndex && (
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-400"
-                layoutId="activeSlide"
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              />
-            )}
-          </motion.button>
-        ))}
-      </motion.div>
-
-      {/* Scroll Hint */}
-      <motion.div
-        className="absolute -bottom-24 left-1/2 transform -translate-x-1/2 z-20"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.8 }}
-      >
-        <motion.div
-          className="flex flex-col items-center text-white/80 hover:text-white transition-colors cursor-pointer bg-black/20 backdrop-blur-sm rounded-full px-4 py-3 border border-white/20"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          onClick={() => {
-            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
-          }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <span className="text-sm mb-1 font-medium whitespace-nowrap">Scroll to explore</span>
-          <i className="fas fa-chevron-down text-sm" />
-        </motion.div>
-      </motion.div>
     </motion.div>
   );
 }
