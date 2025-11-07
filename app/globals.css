@@ -299,7 +299,13 @@ img, video {
   .enhanced-glass {
     background: rgba(255, 255, 255, 0.1);
   }
-}/* Anima
+}/* Grid Pattern Background */
+.bg-grid-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0);
+  background-size: 50px 50px;
+}
+
+/* Anima
 ted Gradient Button Effect */
 @keyframes gradient-x {
   0%, 100% {

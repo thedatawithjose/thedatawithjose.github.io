@@ -14,25 +14,51 @@ export const metadata: Metadata = {
 export default function Blog() {
   const allArticles: Article[] = getSortedArticlesData();
 
+  // Structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Jose Acosta Technical Blog",
+    "description": "Insights on data engineering, algorithmic trading, and high-performance systems",
+    "url": "https://joseacosta.dev/blog",
+    "author": {
+      "@type": "Person",
+      "name": "Jose Acosta",
+      "url": "https://joseacosta.dev"
+    },
+    "blogPost": allArticles.map(article => ({
+      "@type": "BlogPosting",
+      "headline": article.title,
+      "description": article.excerpt,
+      "datePublished": article.date,
+      "author": {
+        "@type": "Person",
+        "name": article.author
+      },
+      "url": `https://joseacosta.dev/blog/${article.id}`
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white py-16 md:py-24 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           {/* Floating geometric shapes */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-lg animate-bounce"></div>
-          <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-gradient-to-br from-blue-400/10 to-green-400/10 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-green-400/15 to-blue-400/15 rounded-full blur-lg animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-purple-400/15 to-pink-400/15 rounded-full blur-md animate-pulse"></div>
+          <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-gradient-to-br from-blue-400/10 to-green-400/10 rounded-full blur-lg animate-pulse"></div>
           
           {/* Grid pattern */}
           <div className="absolute inset-0 opacity-5">
-            <div className="h-full w-full" style={{
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-              backgroundSize: '50px 50px'
-            }}></div>
+            <div className="h-full w-full bg-grid-pattern"></div>
           </div>
           
           {/* Diagonal shine effect */}
@@ -44,7 +70,7 @@ export default function Blog() {
         <div className="container mx-auto px-4 relative z-10 text-center">
           {/* Breadcrumb */}
           <nav className="mb-8">
-            <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
+            <div className="flex items-center justify-center space-x-2 text-sm text-gray-200 md:text-gray-300">
               <Link href="/" className="hover:text-[#00BFA5] transition-colors">
                 Home
               </Link>
@@ -123,26 +149,26 @@ export default function Blog() {
           </div>
 
           {/* Topics */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <span className="group px-6 py-3 bg-gradient-to-r from-green-500/20 to-green-600/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 backdrop-blur-sm relative overflow-hidden">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-green-500/20 to-green-600/20 text-green-300 rounded-full text-sm md:text-sm font-semibold border border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center">
               <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
                 <i className="fas fa-stream mr-2 group-hover:animate-pulse"></i>Real-time Pipelines
               </span>
             </span>
-            <span className="group px-6 py-3 bg-gradient-to-r from-blue-500/20 to-blue-600/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 backdrop-blur-sm relative overflow-hidden">
+            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-500/20 to-blue-600/20 text-blue-300 rounded-full text-sm md:text-sm font-semibold border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
                 <i className="fas fa-chart-line mr-2 group-hover:animate-pulse"></i>Trading Systems
               </span>
             </span>
-            <span className="group px-6 py-3 bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 backdrop-blur-sm relative overflow-hidden">
+            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-300 rounded-full text-sm md:text-sm font-semibold border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
                 <i className="fas fa-robot mr-2 group-hover:animate-pulse"></i>ML in Production
               </span>
             </span>
-            <span className="group px-6 py-3 bg-gradient-to-r from-orange-500/20 to-orange-600/20 text-orange-300 rounded-full text-sm font-semibold border border-orange-500/30 hover:border-orange-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20 backdrop-blur-sm relative overflow-hidden">
+            <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-orange-500/20 to-orange-600/20 text-orange-300 rounded-full text-sm md:text-sm font-semibold border border-orange-500/30 hover:border-orange-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
                 <i className="fas fa-database mr-2 group-hover:animate-pulse"></i>Data Architecture
@@ -166,6 +192,8 @@ export default function Blog() {
                       fill
                       style={{ objectFit: 'cover' }}
                       className="group-hover:scale-110 transition-transform duration-300"
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
@@ -239,12 +267,19 @@ export default function Blog() {
                   Get notified when I publish new deep-dives into production systems and real-world implementations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
+                  <label htmlFor="newsletter-email" className="sr-only">Email address for newsletter</label>
                   <input 
+                    id="newsletter-email"
                     type="email" 
                     placeholder="your@email.com"
-                    className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+                    aria-label="Enter your email address"
+                    className="flex-1 px-4 py-3 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder:text-gray-600"
                   />
-                  <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap">
+                  <button 
+                    type="button"
+                    aria-label="Subscribe to newsletter"
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2"
+                  >
                     Subscribe
                   </button>
                 </div>
@@ -260,7 +295,8 @@ export default function Blog() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Follow on LinkedIn"
-                  className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="Follow Jose Acosta on LinkedIn"
+                  className="w-12 h-12 md:w-12 md:h-12 min-h-[44px] min-w-[44px] bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
                 >
                   <i className="fab fa-linkedin text-xl"></i>
                 </a>
@@ -269,7 +305,8 @@ export default function Blog() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title="View GitHub Profile"
-                  className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="View Jose Acosta's GitHub Profile"
+                  className="w-12 h-12 md:w-12 md:h-12 min-h-[44px] min-w-[44px] bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-600"
                 >
                   <i className="fab fa-github text-xl"></i>
                 </a>
@@ -278,7 +315,8 @@ export default function Blog() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Follow on Instagram"
-                  className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+                  aria-label="Follow Jose Acosta on Instagram"
+                  className="w-12 h-12 md:w-12 md:h-12 min-h-[44px] min-w-[44px] bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-pink-600"
                 >
                   <i className="fab fa-instagram text-xl"></i>
                 </a>
