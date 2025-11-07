@@ -788,7 +788,7 @@ export default function About() {
                 <div className="grid md:grid-cols-3 gap-6 text-sm">
                   <div className="flex items-center justify-center">
                     <i className="fas fa-chart-line text-green-400 mr-2"></i>
-                    <span>6+ years real trading experience</span>
+                    <span>4 years real trading experience</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <i className="fas fa-shield-alt text-blue-400 mr-2"></i>

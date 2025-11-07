@@ -83,8 +83,8 @@ export default function Home() {
     },
     {
       title: "Real-Money Data Experience",
-      subtitle: "6 years putting real capital behind time-series models. When bad data means lost money, you build systems that never fail. <500ms execution, 24/7 monitoring.",
-      mobileSubtitle: "6 years trading with real capital. Systems that never fail. <500ms execution, 24/7 monitoring.",
+      subtitle: "4 years putting real capital behind time-series models. When bad data means lost money, you build systems that never fail. <500ms execution, 24/7 monitoring.",
+      mobileSubtitle: "4 years trading with real capital. Systems that never fail. <500ms execution, 24/7 monitoring.",
       gradient: "from-[#1A1A1A] via-[#0A192F] to-[#1A3A52]",
       cta: "View Trading Systems",
       secondaryCta: "Explore Algorithms",
@@ -97,7 +97,7 @@ export default function Home() {
           "24/7 Production Monitoring"
         ],
         metrics: [
-          { value: "6", label: "Years Trading" },
+          { value: "4", label: "Years Trading" },
           { value: "<500ms", label: "Execution Speed" },
           { value: "Real-time", label: "Data Processing" },
           { value: "24/7", label: "System Monitoring" }

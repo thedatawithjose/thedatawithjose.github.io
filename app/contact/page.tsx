@@ -94,7 +94,7 @@ export default function Contact() {
                 <div className="text-gray-300 text-sm">Response Time</div>
               </div>
               <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                <div className="text-2xl font-bold text-blue-400 mb-1">6+ Years</div>
+                <div className="text-2xl font-bold text-blue-400 mb-1">4 Years</div>
                 <div className="text-gray-300 text-sm">Real Trading Experience</div>
               </div>
               <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">

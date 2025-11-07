@@ -248,7 +248,7 @@ export default function Services() {
                 </p>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 inline-block">
                   <p className="text-gray-200 text-sm leading-relaxed italic">
-                    "From real-time pipelines to trading algorithms — services built on 6+ years 
+                    "From real-time pipelines to trading algorithms — services built on 10+ years 
                     of experience where downtime means lost capital and reliability isn't optional."
                   </p>
                 </div>

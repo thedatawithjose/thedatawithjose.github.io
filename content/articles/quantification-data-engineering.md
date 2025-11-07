@@ -15,7 +15,7 @@ As we enter 2026, the "modern data stack" is mature. We have powerful warehouses
 
 The problem isn't the technology. It's the mindset.
 
-For six years, I worked as a quantitative trader. On a Wall Street trading desk, data isn't a historical artifact to be reviewed in a BI report tomorrow. Data is the present. It's the alpha, the risk, and the execution, all measured in microseconds. A single bad tick in a data feed or a 50-millisecond delay in calculation isn't an inconvenience; it's a multi-million dollar catastrophe.
+For four years, I worked as a quantitative trader. On a Wall Street trading desk, data isn't a historical artifact to be reviewed in a BI report tomorrow. Data is the present. It's the alpha, the risk, and the execution, all measured in microseconds. A single bad tick in a data feed or a 50-millisecond delay in calculation isn't an inconvenience; it's a multi-million dollar catastrophe.
 
 We didn't just use data; we operated at the speed of it.
 

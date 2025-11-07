@@ -67,7 +67,7 @@ export default function ContactTeaser({ className = '' }: ContactTeaserProps) {
               </div>
               <div className="flex items-center">
                 <i className="fas fa-star mr-2 text-[#005A9C]"></i>
-                <span>5+ years experience</span>
+                <span>10+ years experience</span>
               </div>
             </div>
           </motion.div>
