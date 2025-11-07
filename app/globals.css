@@ -471,6 +471,32 @@ body {
   overscroll-behavior: none;
 }
 
+/* Video Background Optimizations */
+.video-background {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Background Image Optimizations */
+.bg-image-optimized {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .bg-image-optimized {
+    background-attachment: scroll; /* Mejor performance en móvil */
+  }
+}
+
+/* Preload critical background images */
+.preload-bg-1::before { content: url('/images/backgrounds/data-engineering-bg-1.jpg'); display: none; }
+.preload-bg-2::before { content: url('/images/backgrounds/data-engineering-bg-2.jpg'); display: none; }
+.preload-bg-3::before { content: url('/images/backgrounds/data-engineering-bg-3.jpg'); display: none; }
+
 /* Anima
 ted Gradient Button Effect */
 @keyframes gradient-x {

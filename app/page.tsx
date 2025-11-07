@@ -168,6 +168,7 @@ export default function Home() {
         <OptimizedVideoBackground 
           videoSrc="/videos/data-flow.mp4"
           gradient={heroSlides[currentIndex].gradient}
+          slideIndex={currentIndex}
         />
         
         {/* Enhanced gradient overlay with better mobile contrast */}
