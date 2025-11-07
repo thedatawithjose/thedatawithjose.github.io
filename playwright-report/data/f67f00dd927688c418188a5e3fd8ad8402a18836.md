@@ -1,0 +1,670 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - list [ref=e7]:
+      - listitem [ref=e8]:
+        - link "Visit Jose Acosta's LinkedIn profile (opens in new tab)" [ref=e9]:
+          - /url: https://www.linkedin.com/in/datawithjose
+          - generic [ref=e10]: 
+      - listitem [ref=e12]:
+        - link "Visit Jose Acosta's Instagram profile (opens in new tab)" [ref=e13]:
+          - /url: https://www.instagram.com/datawithjose
+          - generic [ref=e14]: 
+      - listitem [ref=e16]:
+        - link "Visit Jose Acosta's GitHub profile (opens in new tab)" [ref=e17]:
+          - /url: https://github.com/thedatawithjose
+          - generic [ref=e18]: 
+    - banner [ref=e20]:
+      - navigation [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - link "Jose Acosta Data Engineer - Go to homepage" [ref=e24]:
+              - /url: /
+              - img "Jose Acosta Data Engineer Logo" [ref=e27]
+            - navigation "Main navigation" [ref=e28]:
+              - link "Home" [ref=e29]:
+                - /url: /
+              - link "About Me" [ref=e30]:
+                - /url: /about/
+              - link "Services" [ref=e31]:
+                - /url: /services/
+              - link "Portfolio" [ref=e32]:
+                - /url: /portfolio/
+              - link "Blog" [ref=e33]:
+                - /url: /blog/
+          - link "Let's Talk " [ref=e34]:
+            - /url: /contact/
+            - generic [ref=e35]:
+              - text: Let's Talk
+              - generic [ref=e36]: 
+          - text: 
+    - generic [ref=e41]:
+      - navigation [ref=e42]:
+        - generic [ref=e43]:
+          - link "Home" [ref=e44]:
+            - /url: /
+          - generic [ref=e45]: /
+          - generic [ref=e46]: About Me
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - heading "I'm Jose Acosta Data Engineer" [level=1] [ref=e49]:
+            - text: I'm Jose Acosta
+            - generic [ref=e50]: Data Engineer
+          - generic [ref=e52]:
+            - paragraph [ref=e53]: Data Engineer
+            - paragraph [ref=e54]: Time-Series & Real-Time Systems | ex-Quant Trader | ex-Civil Engineer
+            - paragraph [ref=e55]: Building high-availability data systems where reliability isn't optional
+            - paragraph [ref=e57]: "\"Data quality, latency, and reliability aren't 'tech details'—they're business risk. When a pipeline fails and decisions can't wait, you learn to build for resilience.\""
+            - generic [ref=e58]:
+              - generic [ref=e59]: Python • PySpark
+              - generic [ref=e60]: dbt • Snowflake
+              - generic [ref=e61]: Airflow • AWS
+              - generic [ref=e62]: 98%+ uptime
+          - generic [ref=e63]:
+            - link " Let's Work Together " [ref=e64]:
+              - /url: "mailto:datawithjose@outlook.com?subject=Data Engineering Consultation - Let's Work Together&body=Hi Jose,%0D%0A%0D%0AI'm interested in discussing a data engineering project with you.%0D%0A%0D%0AProject type:%0D%0A☐ Real-time data pipelines%0D%0A☐ ML in production%0D%0A☐ Data infrastructure%0D%0A☐ Trading algorithms%0D%0A☐ Other: _________%0D%0A%0D%0ATimeline: _________%0D%0ABudget range: _________%0D%0A%0D%0AProject details:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0ABest regards"
+              - generic [ref=e65]: 
+              - text: Let's Work Together
+              - generic [ref=e66]: 
+            - link " View My Work " [ref=e67]:
+              - /url: /portfolio/
+              - generic [ref=e68]: 
+              - text: View My Work
+              - generic [ref=e69]: 
+        - generic [ref=e71]:
+          - img "Jose Acosta - Data Engineer" [ref=e73]
+          - generic [ref=e75]: 
+          - generic [ref=e77]: 
+          - generic [ref=e79]: 
+          - generic [ref=e81]: 
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - generic [ref=e84]: 98%+
+          - generic [ref=e85]: System Uptime Achieved
+        - generic [ref=e86]:
+          - generic [ref=e87]: 25%
+          - generic [ref=e88]: Cost Reduction Achieved
+        - generic [ref=e89]:
+          - generic [ref=e90]: 2TB+
+          - generic [ref=e91]: Daily Data Processing
+        - generic [ref=e92]:
+          - generic [ref=e93]: <500ms
+          - generic [ref=e94]: Average Pipeline Latency
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - button " Overview" [ref=e98]:
+          - generic [ref=e99]: 
+          - text: Overview
+        - button " My Journey" [ref=e100]:
+          - generic [ref=e101]: 
+          - text: My Journey
+        - button " Core Values" [ref=e102]:
+          - generic [ref=e103]: 
+          - text: Core Values
+        - button " Achievements" [ref=e104]:
+          - generic [ref=e105]: 
+          - text: Achievements
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - heading "Data Engineer with Real-World Context" [level=2] [ref=e109]
+          - paragraph [ref=e110]: I'm a Data Engineer who came up through quantitative trading. For four years I put real capital behind time-series models—where a bad join or silent failure cost money before you could roll it back. That experience taught me that every delay, quality issue, or bad assumption in data has a real business cost. Now I build the high-availability, real-time data systems I wished I'd had.
+          - paragraph [ref=e111]: "Before that, I spent four years in Civil Engineering project management, learning to deliver under pressure, manage constraints, and communicate with clarity across technical and non-technical teams. That background shaped how I approach systems today: with structure, accountability, and respect for the human side of engineering."
+          - paragraph [ref=e112]:
+            - strong [ref=e113]: "Philosophy:"
+            - text: Data quality, latency, and reliability aren't "tech details"—they're business risk. When a pipeline fails and decisions can't wait, you learn to build for resilience, instrument everything, and ship only what you can monitor.
+          - generic [ref=e114]:
+            - heading "How I Build" [level=3] [ref=e115]
+            - list [ref=e116]:
+              - listitem [ref=e117]:
+                - generic [ref=e118]: 
+                - generic [ref=e119]:
+                  - strong [ref=e120]: "Product-minded:"
+                  - text: Pipelines aligned to decisions & KPIs, not just storage
+              - listitem [ref=e121]:
+                - generic [ref=e122]: 
+                - generic [ref=e123]:
+                  - strong [ref=e124]: "Quality & reliability first:"
+                  - text: Unit tests + dbt data tests, SLAs/SLIs, lineage tracking
+              - listitem [ref=e125]:
+                - generic [ref=e126]: $
+                - generic [ref=e127]:
+                  - strong [ref=e128]: "Cost-aware by design:"
+                  - text: Partitioning, pruning, caching, orchestration, right-sizing
+              - listitem [ref=e129]:
+                - generic [ref=e130]: 
+                - generic [ref=e131]:
+                  - strong [ref=e132]: "Data contracts:"
+                  - text: Work backward from outcomes to schemas, ownership, and alerts—so when something breaks at 2 AM, the right person gets paged, not the entire team
+          - generic [ref=e133]:
+            - heading "Recent Work:" [level=3] [ref=e134]
+            - list [ref=e135]:
+              - listitem [ref=e136]:
+                - generic [ref=e137]: 
+                - generic [ref=e138]:
+                  - strong [ref=e139]: "Real-time ingestion system:"
+                  - text: Built WebSocket → cloud warehouse pipeline with alerting and on-call playbooks that reduced data staleness from hours to seconds, enabling same-day decisions
+              - listitem [ref=e140]:
+                - generic [ref=e141]: 
+                - generic [ref=e142]:
+                  - strong [ref=e143]: "Document parsing & normalization:"
+                  - text: Shipped services that transform semi-structured data into clean schemas, reducing manual data cleanup by 80%
+              - listitem [ref=e144]:
+                - generic [ref=e145]: 
+                - generic [ref=e146]:
+                  - strong [ref=e147]: "Streaming/ETL pipelines:"
+                  - text: Designed systems that cut research cycles by 40% and made backtesting 5x faster through reliable data infrastructure
+              - listitem [ref=e148]:
+                - generic [ref=e149]: 
+                - generic [ref=e150]:
+                  - strong [ref=e151]: "Anomaly detection services:"
+                  - text: Delivered monitoring that surfaces data quality issues before they impact downstream users or business decisions
+          - generic [ref=e152]:
+            - heading "Core Tech:" [level=3] [ref=e153]
+            - generic [ref=e154]:
+              - generic [ref=e155]:
+                - heading "Data & Processing:" [level=4] [ref=e156]
+                - generic [ref=e157]:
+                  - generic [ref=e158]: Python
+                  - generic [ref=e159]: SQL
+                  - generic [ref=e160]: PySpark
+              - generic [ref=e161]:
+                - heading "Platforms & Tools:" [level=4] [ref=e162]
+                - generic [ref=e163]:
+                  - generic [ref=e164]: Snowflake
+                  - generic [ref=e165]: Databricks
+                  - generic [ref=e166]: dbt
+              - generic [ref=e167]:
+                - heading "Orchestration & Infra:" [level=4] [ref=e168]
+                - generic [ref=e169]:
+                  - generic [ref=e170]: Airflow
+                  - generic [ref=e171]: Docker
+                  - generic [ref=e172]: AWS
+                  - generic [ref=e173]: Kubernetes
+              - generic [ref=e174]:
+                - heading "Quality & Monitoring:" [level=4] [ref=e175]
+                - generic [ref=e176]:
+                  - generic [ref=e177]: MLflow
+                  - generic [ref=e178]: Great Expectations
+                  - generic [ref=e179]: Soda
+            - paragraph [ref=e180]:
+              - strong [ref=e181]: "Specialties:"
+              - text: Time-Series | Streaming | Real-Time Systems | Data Modeling | ML in Production
+        - generic [ref=e182]:
+          - heading "Earlier Career" [level=3] [ref=e183]
+          - generic [ref=e184]:
+            - heading "Earlier Career Context" [level=4] [ref=e185]
+            - paragraph [ref=e186]:
+              - text: "Before tech, I managed civil-engineering projects—valuations, resource flows, construction metrics. Different domain, same lesson:"
+              - strong [ref=e187]: decisions are only as good as the systems and data that support them.
+            - paragraph [ref=e188]: This foundation taught me to deliver under constraints, manage stakeholder expectations, and communicate complex technical concepts to non-technical audiences. It's why I approach data engineering with structure, accountability, and an understanding that reliability isn't just about uptime—it's about enabling people to do their jobs with confidence.
+          - heading "What I'm Looking For" [level=3] [ref=e189]
+          - generic [ref=e190]:
+            - paragraph [ref=e191]:
+              - text: Data Engineering roles in data-intensive products where milliseconds matter and "close enough" breaks the business model. I'm drawn to problems in
+              - strong [ref=e192]: fintech
+              - text: (real-time pricing, risk models),
+              - strong [ref=e193]: e-commerce
+              - text: (inventory optimization, personalization),
+              - strong [ref=e194]: logistics
+              - text: (supply-chain analytics), or
+              - strong [ref=e195]: SaaS
+              - text: (product analytics, usage-based billing)—domains where context and engineering rigor create real leverage.
+            - generic [ref=e196]:
+              - generic [ref=e197]:
+                - strong [ref=e198]: "Ideal environments:"
+                - list [ref=e199]:
+                  - listitem [ref=e200]: • High-stakes data systems where downtime has immediate business impact
+                  - listitem [ref=e201]: • Real-time requirements (streaming, event-driven architectures)
+                  - listitem [ref=e202]: • Cost-sensitive projects where optimization directly affects margins
+                  - listitem [ref=e203]: • Teams that treat data infrastructure as a product, not a cost center
+              - generic [ref=e204]:
+                - strong [ref=e205]: "What I bring:"
+                - list [ref=e206]:
+                  - listitem [ref=e207]: • Reliability-first mindset shaped by trading with real capital
+                  - listitem [ref=e208]: • Business impact focus—I speak both engineering and business language
+                  - listitem [ref=e209]: • Production-ready systems built for observability, not just delivery
+                  - listitem [ref=e210]: • Experience delivering under pressure with cross-functional teams
+            - paragraph [ref=e211]: Happy to share repos, architectural diagrams, or walk through design decisions and trade-offs. I believe in building systems and cultures defined by clarity, empathy, and accountability.
+          - heading "Production Metrics in Detail" [level=3] [ref=e212]
+          - generic [ref=e214]:
+            - generic [ref=e215]:
+              - generic [ref=e216]: 98%+ System Uptime
+              - generic [ref=e217]: Maintained across production pipelines processing 2TB+ daily with real-time and batch workloads, including on-call coverage and incident response
+            - generic [ref=e218]: 
+          - generic [ref=e220]:
+            - generic [ref=e221]:
+              - generic [ref=e222]: 25% Cost Reduction
+              - generic [ref=e223]: Achieved through strategic partitioning, query optimization, compute right-sizing, and orchestration improvements without sacrificing performance
+            - generic [ref=e224]: $
+          - generic [ref=e226]:
+            - generic [ref=e227]:
+              - generic [ref=e228]: <500ms Pipeline Latency
+              - generic [ref=e229]: Average end-to-end latency for real-time ingestion pipelines, enabling sub-second decision-making for time-sensitive use cases
+            - generic [ref=e230]: 
+          - generic [ref=e232]:
+            - generic [ref=e233]:
+              - generic [ref=e234]: 2TB+ Daily Processing
+              - generic [ref=e235]: Sustained throughput across batch and streaming workloads with data quality checks, lineage tracking, and automated alerting
+            - generic [ref=e236]: 
+    - generic [ref=e238]:
+      - generic [ref=e239]:
+        - heading "Professional Certifications" [level=2] [ref=e240]
+        - paragraph [ref=e241]: Continuous learning and professional development through industry-recognized certifications
+      - generic [ref=e242]:
+        - button " All Certifications" [ref=e243]:
+          - generic [ref=e244]: 
+          - generic [ref=e245]: All Certifications
+        - button " Data Engineering" [ref=e246]:
+          - generic [ref=e247]: 
+          - generic [ref=e248]: Data Engineering
+        - button " Data Science" [ref=e249]:
+          - generic [ref=e250]: 
+          - generic [ref=e251]: Data Science
+        - button " Programming" [ref=e252]:
+          - generic [ref=e253]: 
+          - generic [ref=e254]: Programming
+        - button " Business" [ref=e255]:
+          - generic [ref=e256]: 
+          - generic [ref=e257]: Business
+        - button " Languages" [ref=e258]:
+          - generic [ref=e259]: 
+          - generic [ref=e260]: Languages
+      - generic [ref=e261]:
+        - generic [ref=e262]:
+          - generic [ref=e263]: "8"
+          - generic [ref=e264]: Total Certifications
+        - generic [ref=e265]:
+          - generic [ref=e266]: "8"
+          - generic [ref=e267]: Verified
+        - generic [ref=e268]:
+          - generic [ref=e269]: "6"
+          - generic [ref=e270]: Institutions
+        - generic [ref=e271]:
+          - generic [ref=e272]: "1"
+          - generic [ref=e273]: In Progress
+      - generic [ref=e274]:
+        - generic [ref=e275]:
+          - generic [ref=e277]:
+            - generic [ref=e279]:
+              - img "IBM logo"
+            - generic [ref=e280]:
+              - generic [ref=e281]:
+                - heading "IBM Data Engineering Professional Certificate" [level=3] [ref=e282]
+                - generic [ref=e285]: 
+              - paragraph [ref=e286]: IBM
+              - generic [ref=e287]:
+                - generic [ref=e288]: In Progress
+                - generic [ref=e289]: Professional Certificate
+          - generic [ref=e290]:
+            - generic [ref=e291]:
+              - paragraph [ref=e292]:
+                - generic [ref=e293]: 
+                - text: Issued May 2025
+              - paragraph [ref=e294]:
+                - generic [ref=e295]: 
+                - text: "Duration: 11 months"
+            - paragraph [ref=e296]: Comprehensive professional certificate covering data engineering fundamentals, ETL processes, and cloud-based data solutions.
+            - generic [ref=e297]:
+              - paragraph [ref=e298]: "Skills Acquired:"
+              - generic [ref=e299]:
+                - generic [ref=e300]: Apache Kafka
+                - generic [ref=e301]: Apache Spark
+                - generic [ref=e302]: ETL Pipelines
+                - generic [ref=e303]: Cloud Computing
+                - generic [ref=e304]: +5 more
+            - link "View Credential " [ref=e306]:
+              - /url: https://www.coursera.org/professional-certificates/ibm-data-engineer
+              - generic [ref=e307]: View Credential
+              - generic [ref=e308]: 
+        - generic [ref=e309]:
+          - generic [ref=e311]:
+            - generic [ref=e313]:
+              - img "University of Michigan logo"
+            - generic [ref=e314]:
+              - generic [ref=e315]:
+                - heading "Inferential Statistical Analysis with Python" [level=3] [ref=e316]
+                - generic [ref=e319]: 
+              - paragraph [ref=e320]: University of Michigan
+              - generic [ref=e321]:
+                - generic [ref=e322]: Completed
+                - generic [ref=e323]: Specialization Course
+          - generic [ref=e324]:
+            - generic [ref=e325]:
+              - paragraph [ref=e326]:
+                - generic [ref=e327]: 
+                - text: Issued Nov 2024
+              - paragraph [ref=e328]:
+                - generic [ref=e329]: 
+                - text: "ID: R7LPZ5VW13NJ"
+            - paragraph [ref=e330]: Statistical analysis techniques using Python for data-driven decision making.
+            - generic [ref=e331]:
+              - paragraph [ref=e332]: "Skills Acquired:"
+              - generic [ref=e333]:
+                - generic [ref=e334]: Python
+                - generic [ref=e335]: Statistical Analysis
+                - generic [ref=e336]: Hypothesis Testing
+                - generic [ref=e337]: Confidence Intervals
+                - generic [ref=e338]: +1 more
+            - link "View Credential " [ref=e340]:
+              - /url: https://www.coursera.org/learn/inferential-statistical-analysis-python
+              - generic [ref=e341]: View Credential
+              - generic [ref=e342]: 
+        - generic [ref=e343]:
+          - generic [ref=e345]:
+            - generic [ref=e347]:
+              - img "University of Michigan logo"
+            - generic [ref=e348]:
+              - generic [ref=e349]:
+                - heading "Understanding and Visualizing Data with Python" [level=3] [ref=e350]
+                - generic [ref=e353]: 
+              - paragraph [ref=e354]: University of Michigan
+              - generic [ref=e355]:
+                - generic [ref=e356]: Completed
+                - generic [ref=e357]: Specialization Course
+          - generic [ref=e358]:
+            - generic [ref=e359]:
+              - paragraph [ref=e360]:
+                - generic [ref=e361]: 
+                - text: Issued Nov 2024
+              - paragraph [ref=e362]:
+                - generic [ref=e363]: 
+                - text: "ID: OHX0446VDLS8"
+            - paragraph [ref=e364]: Comprehensive course on data analysis and visualization techniques using Python libraries.
+            - generic [ref=e365]:
+              - paragraph [ref=e366]: "Skills Acquired:"
+              - generic [ref=e367]:
+                - generic [ref=e368]: Data Visualization
+                - generic [ref=e369]: Python
+                - generic [ref=e370]: Pandas
+                - generic [ref=e371]: Matplotlib
+                - generic [ref=e372]: +2 more
+            - link "View Credential " [ref=e374]:
+              - /url: https://www.coursera.org/learn/understanding-visualization-data
+              - generic [ref=e375]: View Credential
+              - generic [ref=e376]: 
+        - generic [ref=e377]:
+          - generic [ref=e379]:
+            - generic [ref=e381]:
+              - img "Coursera logo"
+            - generic [ref=e382]:
+              - generic [ref=e383]:
+                - heading "Data Science Orientation" [level=3] [ref=e384]
+                - generic [ref=e387]: 
+              - paragraph [ref=e388]: Coursera
+              - generic [ref=e389]:
+                - generic [ref=e390]: Completed
+                - generic [ref=e391]: Course
+          - generic [ref=e392]:
+            - paragraph [ref=e394]:
+              - generic [ref=e395]: 
+              - text: Issued May 2025
+            - paragraph [ref=e396]: Introduction to data science career paths and industry overview.
+            - generic [ref=e397]:
+              - paragraph [ref=e398]: "Skills Acquired:"
+              - generic [ref=e399]:
+                - generic [ref=e400]: Data Science Fundamentals
+                - generic [ref=e401]: Career Development
+            - link "View Credential " [ref=e403]:
+              - /url: https://www.coursera.org/learn/data-science-course
+              - generic [ref=e404]: View Credential
+              - generic [ref=e405]: 
+        - generic [ref=e406]:
+          - generic [ref=e408]:
+            - generic [ref=e410]:
+              - img "Código Facilito logo"
+            - generic [ref=e411]:
+              - generic [ref=e412]:
+                - heading "Python Profesional" [level=3] [ref=e413]
+                - generic [ref=e416]: 
+              - paragraph [ref=e417]: Código Facilito
+              - generic [ref=e418]:
+                - generic [ref=e419]: Completed
+                - generic [ref=e420]: Professional Course
+          - generic [ref=e421]:
+            - paragraph [ref=e423]:
+              - generic [ref=e424]: 
+              - text: Issued Jun 2023
+            - paragraph [ref=e425]: Curso profesional de Python para el uso en la ciencia de datos
+            - generic [ref=e426]:
+              - paragraph [ref=e427]: "Skills Acquired:"
+              - generic [ref=e428]:
+                - generic [ref=e429]: Python Programming
+                - generic [ref=e430]: Algorithms
+                - generic [ref=e431]: Data Structures
+                - generic [ref=e432]: Object-Oriented Programming
+        - generic [ref=e433]:
+          - generic [ref=e435]:
+            - generic [ref=e437]:
+              - img "IBM logo"
+            - generic [ref=e438]:
+              - generic [ref=e439]:
+                - heading "What is Data Science?" [level=3] [ref=e440]
+                - generic [ref=e443]: 
+              - paragraph [ref=e444]: IBM
+              - generic [ref=e445]:
+                - generic [ref=e446]: Completed
+                - generic [ref=e447]: Course
+          - generic [ref=e448]:
+            - paragraph [ref=e450]:
+              - generic [ref=e451]: 
+              - text: "ID: 8O4B21RURLGO"
+            - paragraph [ref=e452]: Introduction to data science methodologies and applications across industries.
+            - generic [ref=e453]:
+              - paragraph [ref=e454]: "Skills Acquired:"
+              - generic [ref=e455]:
+                - generic [ref=e456]: Data Science Fundamentals
+                - generic [ref=e457]: Industry Overview
+            - link "View Credential " [ref=e459]:
+              - /url: https://www.coursera.org/learn/what-is-datascience
+              - generic [ref=e460]: View Credential
+              - generic [ref=e461]: 
+        - generic [ref=e462]:
+          - generic [ref=e464]:
+            - generic [ref=e467]: 
+            - generic [ref=e468]:
+              - generic [ref=e469]:
+                - heading "Consultor Internacional Certificado" [level=3] [ref=e470]
+                - generic [ref=e473]: 
+              - paragraph [ref=e474]: Espabílate Consulting Group
+              - generic [ref=e475]:
+                - generic [ref=e476]: Completed
+                - generic [ref=e477]: Professional Certification
+          - generic [ref=e478]:
+            - paragraph [ref=e479]: Certification in international consulting practices and methodologies.
+            - generic [ref=e480]:
+              - paragraph [ref=e481]: "Skills Acquired:"
+              - generic [ref=e482]:
+                - generic [ref=e483]: International Consulting
+                - generic [ref=e484]: Business Strategy
+                - generic [ref=e485]: Project Management
+        - generic [ref=e486]:
+          - generic [ref=e488]:
+            - generic [ref=e490]:
+              - img "Kaplan UK logo"
+            - generic [ref=e491]:
+              - generic [ref=e492]:
+                - heading "Inglés Avanzado" [level=3] [ref=e493]
+                - generic [ref=e496]: 
+              - paragraph [ref=e497]: Kaplan UK
+              - generic [ref=e498]:
+                - generic [ref=e499]: Completed
+                - generic [ref=e500]: Language Certification
+          - generic [ref=e501]:
+            - paragraph [ref=e502]: English proficiency certification for professional environments.
+            - generic [ref=e503]:
+              - paragraph [ref=e504]: "Skills Acquired:"
+              - generic [ref=e505]:
+                - generic [ref=e506]: English Proficiency
+                - generic [ref=e507]: Business Communication
+                - generic [ref=e508]: Technical Writing
+      - generic [ref=e510]:
+        - heading "Continuous Learning Journey" [level=3] [ref=e511]
+        - paragraph [ref=e512]: Always expanding knowledge and staying current with industry trends and technologies
+        - link "Let's Collaborate " [ref=e513]:
+          - /url: /contact
+          - generic [ref=e514]: Let's Collaborate
+          - generic [ref=e515]: 
+    - generic [ref=e518]:
+      - generic [ref=e519]:
+        - heading "Ready to Work Together?" [level=2] [ref=e520]:
+          - text: Ready to Work
+          - generic [ref=e521]: Together?
+        - paragraph [ref=e522]: Let's discuss your data challenges and create solutions that drive real business value with production-grade reliability.
+      - generic [ref=e523]:
+        - generic [ref=e524]:
+          - generic [ref=e526]: 
+          - heading "Start a Conversation" [level=3] [ref=e527]
+          - paragraph [ref=e528]: Discuss your specific data engineering challenges and explore how my experience can help solve them.
+          - link " Get In Touch" [ref=e529]:
+            - /url: /contact/
+            - generic [ref=e530]: 
+            - text: Get In Touch
+        - generic [ref=e531]:
+          - generic [ref=e533]: 
+          - heading "Explore Services" [level=3] [ref=e534]
+          - paragraph [ref=e535]: See detailed information about my data engineering services and how they can transform your business.
+          - link " View Services" [ref=e536]:
+            - /url: /services/
+            - generic [ref=e537]: 
+            - text: View Services
+      - generic [ref=e538]:
+        - paragraph [ref=e539]: "What makes me different:"
+        - generic [ref=e540]:
+          - generic [ref=e541]:
+            - generic [ref=e542]: 
+            - generic [ref=e543]: 3+ years data engineering experience
+          - generic [ref=e544]:
+            - generic [ref=e545]: 
+            - generic [ref=e546]: Production-tested reliability
+          - generic [ref=e547]:
+            - generic [ref=e548]: 
+            - generic [ref=e549]: Business impact focus
+      - generic [ref=e550]:
+        - paragraph [ref=e551]: "Connect with me:"
+        - generic [ref=e552]:
+          - link "" [ref=e553]:
+            - /url: https://linkedin.com/in/joseacostar
+            - generic [ref=e554]: 
+          - link "" [ref=e555]:
+            - /url: https://github.com/thedatawithjose
+            - generic [ref=e556]: 
+          - link "" [ref=e557]:
+            - /url: https://instagram.com/datawithjose
+            - generic [ref=e558]: 
+    - contentinfo [ref=e559]:
+      - generic [ref=e565]:
+        - generic [ref=e566]:
+          - generic [ref=e567]:
+            - generic [ref=e568]:
+              - heading "Your Data Solutions Partner" [level=4] [ref=e569]
+              - paragraph [ref=e570]: Data Engineer focused on building robust data pipelines, scalable architectures, and automated workflows. Enabling teams to make smarter, data-driven decisions through reliable systems and practical engineering skills.
+            - generic [ref=e571]:
+              - link "LinkedIn" [ref=e572]:
+                - /url: https://www.linkedin.com/in/datawithjose/
+                - generic [ref=e574]: 
+              - link "GitHub" [ref=e575]:
+                - /url: https://github.com/thedatawithjose
+                - generic [ref=e577]: 
+              - link "Instagram" [ref=e578]:
+                - /url: https://www.instagram.com/datawithjose/
+                - generic [ref=e580]: 
+          - generic [ref=e581]:
+            - heading "Useful Links" [level=4] [ref=e582]
+            - list [ref=e583]:
+              - listitem [ref=e584]:
+                - link "Portfolio" [ref=e585]:
+                  - /url: /portfolio/
+                  - generic [ref=e587]: Portfolio
+              - listitem [ref=e588]:
+                - link "About Me" [ref=e589]:
+                  - /url: /about/
+                  - generic [ref=e591]: About Me
+              - listitem [ref=e592]:
+                - link "LinkedIn" [ref=e593]:
+                  - /url: https://www.linkedin.com/in/datawithjose
+                  - generic [ref=e595]: LinkedIn
+              - listitem [ref=e596]:
+                - link "GitHub" [ref=e597]:
+                  - /url: https://github.com/thedatawithjose
+                  - generic [ref=e599]: GitHub
+              - listitem [ref=e600]:
+                - link "Contact" [ref=e601]:
+                  - /url: /contact/
+                  - generic [ref=e603]: Contact
+          - generic [ref=e604]:
+            - heading "Additional Pages" [level=4] [ref=e605]
+            - list [ref=e606]:
+              - listitem [ref=e607]:
+                - link "Trading Strategies" [ref=e608]:
+                  - /url: /trading-strategies/
+                  - generic [ref=e610]: Trading Strategies
+              - listitem [ref=e611]:
+                - link "Privacy Policy" [ref=e612]:
+                  - /url: /privacy-policy/
+                  - generic [ref=e614]: Privacy Policy
+              - listitem [ref=e615]:
+                - button " Cookie Settings" [ref=e618]:
+                  - generic [ref=e619]: 
+                  - text: Cookie Settings
+              - listitem [ref=e620]:
+                - generic [ref=e623]: Terms of Service (Coming Soon)
+          - generic [ref=e624]:
+            - heading "Contact" [level=4] [ref=e625]
+            - generic [ref=e630]:
+              - textbox "Full name" [ref=e632]
+              - textbox "your@email.com" [ref=e634]
+              - textbox "Your message..." [ref=e636]
+              - button " Send message" [disabled] [ref=e637]:
+                - generic [ref=e638]:
+                  - generic [ref=e639]: 
+                  - generic [ref=e640]: Send message
+        - generic [ref=e643]:
+          - generic [ref=e645]: © 2025 Jose Acosta. All rights reserved.
+          - generic [ref=e646]:
+            - generic [ref=e647]: Design & Development by
+            - generic [ref=e650]: Jose Acosta
+  - alert [ref=e655]
+  - generic [ref=e657]:
+    - generic [ref=e660]:
+      - generic [ref=e662]: 
+      - generic [ref=e663]:
+        - heading "Cookie Preferences" [level=3] [ref=e664]
+        - paragraph [ref=e665]: We value your privacy
+    - generic [ref=e666]:
+      - paragraph [ref=e667]: We use cookies to enhance your browsing experience, provide personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+      - generic [ref=e668]:
+        - generic [ref=e670]:
+          - generic [ref=e671]:
+            - heading "Necessary Cookies" [level=4] [ref=e672]
+            - generic [ref=e673]: Always Active
+          - paragraph [ref=e674]: Essential for the website to function properly. These cannot be disabled.
+        - generic [ref=e678]:
+          - generic [ref=e679]:
+            - heading "Analytics Cookies" [level=4] [ref=e680]
+            - paragraph [ref=e681]: Help us understand how visitors interact with our website by collecting anonymous information.
+          - button [ref=e683]
+        - generic [ref=e685]:
+          - generic [ref=e686]:
+            - heading "Marketing Cookies" [level=4] [ref=e687]
+            - paragraph [ref=e688]: Used to track visitors across websites to display relevant advertisements.
+          - button [ref=e690]
+      - paragraph [ref=e693]:
+        - generic [ref=e694]: 
+        - text: For more information about how we handle your data, please read our
+        - link "Privacy Policy" [ref=e695]:
+          - /url: /privacy-policy/
+        - text: .
+      - generic [ref=e696]:
+        - button " Accept All" [ref=e697]:
+          - generic [ref=e698]: 
+          - text: Accept All
+        - button " Save Preferences" [ref=e699]:
+          - generic [ref=e700]: 
+          - text: Save Preferences
+        - button " Reject All" [ref=e701]:
+          - generic [ref=e702]: 
+          - text: Reject All
+      - paragraph [ref=e704]: You can change your preferences at any time by clicking the cookie settings in the footer.
+```

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Performance Audit - Complete Site', () => {
   // Configuración de timeouts más largos para performance testing
-  test.setTimeout(120000);
+  test.setTimeout(60000); // 60 segundos por test
 
   const pages = [
     { name: 'Home', url: '/' },
@@ -73,7 +73,7 @@ test.describe('Performance Audit - Complete Site', () => {
             observer.disconnect();
             clsObserver.disconnect();
             resolve(vitals);
-          }, 3000);
+          }, 1000); // Reducido de 3s a 1s
         });
       });
 
@@ -107,10 +107,10 @@ test.describe('Performance Audit - Complete Site', () => {
         });
       });
 
-      await page.goto(url, { waitUntil: 'networkidle' });
+      await page.goto(url, { waitUntil: 'load' }); // Cambiado de networkidle a load
 
       // Esperar a que todos los recursos carguen
-      await page.waitForTimeout(2000);
+      await page.waitForTimeout(1000); // Reducido de 2s a 1s
 
       console.log(`\n📦 ${name} - Resource Analysis:`);
 

@@ -1,0 +1,362 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - list [ref=e7]:
+      - listitem [ref=e8]:
+        - link "Visit Jose Acosta's LinkedIn profile (opens in new tab)" [ref=e9]:
+          - /url: https://www.linkedin.com/in/datawithjose
+          - generic [ref=e10]: 
+      - listitem [ref=e12]:
+        - link "Visit Jose Acosta's Instagram profile (opens in new tab)" [ref=e13]:
+          - /url: https://www.instagram.com/datawithjose
+          - generic [ref=e14]: 
+      - listitem [ref=e16]:
+        - link "Visit Jose Acosta's GitHub profile (opens in new tab)" [ref=e17]:
+          - /url: https://github.com/thedatawithjose
+          - generic [ref=e18]: 
+    - banner [ref=e20]:
+      - navigation [ref=e21]:
+        - generic [ref=e22]:
+          - link "Jose Acosta Data Engineer - Go to homepage" [ref=e24]:
+            - /url: /
+            - img "Jose Acosta Data Engineer Logo" [ref=e27]
+          - text: 
+          - button "Open navigation menu" [ref=e29]:
+            - generic [ref=e30]: 
+    - generic [ref=e35]:
+      - heading "Let's Build Something Reliable Together" [level=1] [ref=e37]:
+        - text: Let's Build Something
+        - generic [ref=e38]: Reliable Together
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: Ready to discuss your data engineering challenges?
+        - paragraph [ref=e43]: "\"Whether it's real-time pipelines, trading systems, or ML in production — let's talk about building infrastructure that doesn't fail when it matters most.\""
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: < 24hrs
+          - generic [ref=e47]: Response Time
+        - generic [ref=e48]:
+          - generic [ref=e49]: 3+ Years
+          - generic [ref=e50]: Data Engineering
+        - generic [ref=e51]:
+          - generic [ref=e52]: 98%+
+          - generic [ref=e53]: System Reliability
+      - generic [ref=e54]:
+        - link " Quick WhatsApp Chat " [ref=e55]:
+          - /url: https://wa.me/584123020280?text=Hi%20Jose,%20I'm%20interested%20in%20discussing%20a%20data%20engineering%20project
+          - generic [ref=e56]: 
+          - text: Quick WhatsApp Chat
+          - generic [ref=e57]: 
+        - link " Send Detailed Message " [ref=e58]:
+          - /url: "#contact-form"
+          - generic [ref=e59]: 
+          - text: Send Detailed Message
+          - generic [ref=e60]: 
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - heading "Multiple Ways to Connect" [level=2] [ref=e64]
+        - paragraph [ref=e65]: Choose the communication method that works best for your project timeline and complexity
+      - generic [ref=e66]:
+        - generic [ref=e68]:
+          - generic [ref=e70]: 
+          - heading "WhatsApp" [level=4] [ref=e71]
+          - paragraph [ref=e72]: For urgent projects or quick questions. Available during business hours (UTC-4)
+          - generic [ref=e73]:
+            - link "+58 412 3020280 " [ref=e74]:
+              - /url: https://wa.me/584123020280?text=Hi%20Jose,%20I'm%20interested%20in%20discussing%20a%20data%20engineering%20project
+              - generic [ref=e75]: +58 412 3020280
+              - generic [ref=e76]: 
+            - generic [ref=e77]:
+              - generic [ref=e78]: 
+              - text: "Response: Usually within 2-4 hours"
+        - generic [ref=e80]:
+          - generic [ref=e82]: 
+          - heading "Email" [level=4] [ref=e83]
+          - paragraph [ref=e84]: For detailed project discussions, proposals, and technical specifications
+          - generic [ref=e85]:
+            - link "datawithjose@outlook.com " [ref=e86]:
+              - /url: mailto:datawithjose@outlook.com?subject=Data Engineering Project Inquiry&body=Hi Jose,%0D%0A%0D%0AI'm interested in discussing a data engineering project.%0D%0A%0D%0AProject details:%0D%0A- %0D%0A- %0D%0A%0D%0ABest regards
+              - generic [ref=e87]: datawithjose@outlook.com
+              - generic [ref=e88]: 
+            - generic [ref=e89]:
+              - generic [ref=e90]: 
+              - text: "Response: Within 24 hours"
+        - generic [ref=e92]:
+          - generic [ref=e94]: 
+          - heading "Location & Time" [level=4] [ref=e95]
+          - paragraph [ref=e96]: Based in Caracas, Venezuela. Available for remote collaboration worldwide
+          - generic [ref=e97]:
+            - generic [ref=e98]: UTC-4 (Venezuela Time)
+            - generic [ref=e99]:
+              - generic [ref=e100]:
+                - generic [ref=e101]: 
+                - text: "Mon-Fri: 9AM-6PM"
+              - generic [ref=e102]:
+                - generic [ref=e103]: 
+                - text: Remote projects worldwide
+      - generic [ref=e105]:
+        - heading "Prefer a Different Platform?" [level=3] [ref=e106]
+        - paragraph [ref=e107]: I'm also available on professional networks and can accommodate your preferred communication method
+        - generic [ref=e108]:
+          - link " LinkedIn" [ref=e109]:
+            - /url: https://linkedin.com/in/joseacostar
+            - generic [ref=e110]: 
+            - text: LinkedIn
+          - link " GitHub" [ref=e111]:
+            - /url: https://github.com/joseacostar
+            - generic [ref=e112]: 
+            - text: GitHub
+    - generic [ref=e114]:
+      - generic [ref=e115]:
+        - generic [ref=e116]:
+          - heading "Tell Me About Your Data Challenge" [level=2] [ref=e117]
+          - paragraph [ref=e118]: Whether you need real-time pipelines, trading systems, or ML in production — share your project details and I'll get back to you with insights and next steps.
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - generic [ref=e121]: 
+            - generic [ref=e122]: Real-time Pipelines
+          - generic [ref=e123]:
+            - generic [ref=e124]: 
+            - generic [ref=e125]: Trading Systems
+          - generic [ref=e126]:
+            - generic [ref=e127]: 
+            - generic [ref=e128]: ML in Production
+          - generic [ref=e129]:
+            - generic [ref=e130]: 
+            - generic [ref=e131]: Data Infrastructure
+      - generic [ref=e133]:
+        - generic [ref=e134]:
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - generic [ref=e138]: 0%
+              - generic [ref=e139]:
+                - heading "Form Progress" [level=4] [ref=e140]
+                - paragraph [ref=e141]: 0 of 4 required fields
+            - generic [ref=e142]:
+              - generic [ref=e143]: ~2 min remaining
+              - generic [ref=e144]: Let's get started! 🚀
+          - generic [ref=e153]:
+            - generic [ref=e154]:
+              - generic [ref=e155]: 
+              - generic [ref=e156]: Name
+            - generic [ref=e157]:
+              - generic [ref=e158]: 
+              - generic [ref=e159]: Email
+            - generic [ref=e160]:
+              - generic [ref=e161]: 
+              - generic [ref=e162]: Subject
+            - generic [ref=e163]:
+              - generic [ref=e164]: 
+              - generic [ref=e165]: Message
+        - generic [ref=e166]:
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - generic [ref=e169]: Full Name *(Required)
+              - textbox "Full Name *(Required)" [ref=e170]:
+                - /placeholder: Your full name
+            - generic [ref=e171]:
+              - generic [ref=e172]: Email Address *(Required)
+              - textbox "Email Address *(Required)" [ref=e173]:
+                - /placeholder: your@email.com
+          - generic [ref=e174]:
+            - generic [ref=e175]: Subject *(Required)
+            - textbox "Subject *(Required)" [ref=e176]:
+              - /placeholder: How can I help you?
+          - generic [ref=e177]:
+            - generic [ref=e178]:
+              - generic [ref=e179]: Approximate Budget(Optional)
+              - combobox "Approximate Budget(Optional)" [ref=e180]:
+                - option "Select a range" [selected]
+                - option "$1,000 - $5,000"
+                - option "$5,000 - $10,000"
+                - option "$10,000 - $25,000"
+                - option "$25,000+"
+                - option "Prefer to discuss"
+              - paragraph [ref=e181]: Helps me provide more accurate project estimates
+            - generic [ref=e182]:
+              - generic [ref=e183]: Project Timeline(Optional)
+              - combobox "Project Timeline(Optional)" [ref=e184]:
+                - option "Select a timeline" [selected]
+                - option "Urgent (1-2 weeks)"
+                - option "1 month"
+                - option "2-3 months"
+                - option "3-6 months"
+                - option "6+ months"
+                - option "Flexible"
+              - paragraph [ref=e185]: When would you like to start or complete the project?
+          - generic [ref=e186]:
+            - generic [ref=e187]:
+              - text: Message *(Required)
+              - generic [ref=e188]: (0/1000 characters)
+            - textbox "Message *(Required)(0/1000 characters)" [ref=e189]:
+              - /placeholder: Tell me about your project, current data challenges, objectives, and any specific details you consider important...
+          - button "Send message" [disabled]:
+            - generic:
+              - generic: 
+              - text: Send message
+          - paragraph [ref=e190]: By submitting this form, you agree to be contacted about your project inquiry. Your information is kept confidential and never shared with third parties.
+    - generic [ref=e192]:
+      - heading "Tools & Platforms" [level=2] [ref=e193]
+      - generic [ref=e195]:
+        - generic [ref=e196]:
+          - img "Git" [ref=e199]
+          - img "Jupyter" [ref=e202]
+          - img "pandas" [ref=e205]
+          - img "AWS" [ref=e208]
+          - img "Azure" [ref=e211]
+          - img "Airflow" [ref=e214]
+          - img "dbt" [ref=e217]
+          - img "PySpark" [ref=e220]
+          - img "Snowflake" [ref=e223]
+          - img "PostgreSQL" [ref=e226]
+          - img "Git" [ref=e229]
+          - img "Jupyter" [ref=e232]
+          - img "pandas" [ref=e235]
+          - img "AWS" [ref=e238]
+          - img "Azure" [ref=e241]
+          - img "Airflow" [ref=e244]
+          - img "dbt" [ref=e247]
+          - img "PySpark" [ref=e250]
+          - img "Snowflake" [ref=e253]
+          - img "PostgreSQL" [ref=e256]
+        - generic [ref=e257]:
+          - img "Python" [ref=e260]
+          - img "University of Michigan" [ref=e263]
+          - img "scikit-learn" [ref=e266]
+          - img "Pytest" [ref=e269]
+          - img "PySpark" [ref=e272]
+          - img "AWS" [ref=e275]
+          - img "Azure" [ref=e278]
+          - img "Airflow" [ref=e281]
+          - img "dbt" [ref=e284]
+          - img "Snowflake" [ref=e287]
+          - img "PostgreSQL" [ref=e290]
+          - img "Python" [ref=e293]
+          - img "University of Michigan" [ref=e296]
+          - img "scikit-learn" [ref=e299]
+          - img "Pytest" [ref=e302]
+          - img "PySpark" [ref=e305]
+          - img "AWS" [ref=e308]
+          - img "Azure" [ref=e311]
+          - img "Airflow" [ref=e314]
+          - img "dbt" [ref=e317]
+          - img "Snowflake" [ref=e320]
+          - img "PostgreSQL" [ref=e323]
+    - contentinfo [ref=e324]:
+      - generic [ref=e330]:
+        - generic [ref=e331]:
+          - generic [ref=e332]:
+            - generic [ref=e333]:
+              - heading "Your Data Solutions Partner" [level=4] [ref=e334]
+              - paragraph [ref=e335]: Data Engineer focused on building robust data pipelines, scalable architectures, and automated workflows. Enabling teams to make smarter, data-driven decisions through reliable systems and practical engineering skills.
+            - generic [ref=e336]:
+              - link "LinkedIn" [ref=e337]:
+                - /url: https://www.linkedin.com/in/datawithjose/
+                - generic [ref=e339]: 
+              - link "GitHub" [ref=e340]:
+                - /url: https://github.com/thedatawithjose
+                - generic [ref=e342]: 
+              - link "Instagram" [ref=e343]:
+                - /url: https://www.instagram.com/datawithjose/
+                - generic [ref=e345]: 
+          - generic [ref=e346]:
+            - heading "Useful Links" [level=4] [ref=e347]
+            - list [ref=e348]:
+              - listitem [ref=e349]:
+                - link "Portfolio" [ref=e350]:
+                  - /url: /portfolio/
+                  - generic [ref=e352]: Portfolio
+              - listitem [ref=e353]:
+                - link "About Me" [ref=e354]:
+                  - /url: /about/
+                  - generic [ref=e356]: About Me
+              - listitem [ref=e357]:
+                - link "LinkedIn" [ref=e358]:
+                  - /url: https://www.linkedin.com/in/datawithjose
+                  - generic [ref=e360]: LinkedIn
+              - listitem [ref=e361]:
+                - link "GitHub" [ref=e362]:
+                  - /url: https://github.com/thedatawithjose
+                  - generic [ref=e364]: GitHub
+              - listitem [ref=e365]:
+                - link "Contact" [ref=e366]:
+                  - /url: /contact/
+                  - generic [ref=e368]: Contact
+          - generic [ref=e369]:
+            - heading "Additional Pages" [level=4] [ref=e370]
+            - list [ref=e371]:
+              - listitem [ref=e372]:
+                - link "Trading Strategies" [ref=e373]:
+                  - /url: /trading-strategies/
+                  - generic [ref=e375]: Trading Strategies
+              - listitem [ref=e376]:
+                - link "Privacy Policy" [ref=e377]:
+                  - /url: /privacy-policy/
+                  - generic [ref=e379]: Privacy Policy
+              - listitem [ref=e380]:
+                - button " Cookie Settings" [ref=e383]:
+                  - generic [ref=e384]: 
+                  - text: Cookie Settings
+              - listitem [ref=e385]:
+                - generic [ref=e388]: Terms of Service (Coming Soon)
+          - generic [ref=e389]:
+            - heading "Contact" [level=4] [ref=e390]
+            - generic [ref=e395]:
+              - textbox "Full name" [ref=e397]
+              - textbox "your@email.com" [ref=e399]
+              - textbox "Your message..." [ref=e401]
+              - button " Send message" [disabled] [ref=e402]:
+                - generic [ref=e403]:
+                  - generic [ref=e404]: 
+                  - generic [ref=e405]: Send message
+        - generic [ref=e408]:
+          - generic [ref=e410]: © 2025 Jose Acosta. All rights reserved.
+          - generic [ref=e411]:
+            - generic [ref=e412]: Design & Development by
+            - generic [ref=e415]: Jose Acosta
+  - button "Open Next.js Dev Tools" [ref=e421] [cursor=pointer]:
+    - img [ref=e422]
+  - alert [ref=e427]
+  - generic [ref=e429]:
+    - generic [ref=e432]:
+      - generic [ref=e434]: 
+      - generic [ref=e435]:
+        - heading "Cookie Preferences" [level=3] [ref=e436]
+        - paragraph [ref=e437]: We value your privacy
+    - generic [ref=e438]:
+      - paragraph [ref=e439]: We use cookies to enhance your browsing experience, provide personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+      - generic [ref=e440]:
+        - generic [ref=e442]:
+          - generic [ref=e443]:
+            - heading "Necessary Cookies" [level=4] [ref=e444]
+            - generic [ref=e445]: Always Active
+          - paragraph [ref=e446]: Essential for the website to function properly. These cannot be disabled.
+        - generic [ref=e450]:
+          - generic [ref=e451]:
+            - heading "Analytics Cookies" [level=4] [ref=e452]
+            - paragraph [ref=e453]: Help us understand how visitors interact with our website by collecting anonymous information.
+          - button [ref=e455]
+        - generic [ref=e457]:
+          - generic [ref=e458]:
+            - heading "Marketing Cookies" [level=4] [ref=e459]
+            - paragraph [ref=e460]: Used to track visitors across websites to display relevant advertisements.
+          - button [ref=e462]
+      - paragraph [ref=e465]:
+        - generic [ref=e466]: 
+        - text: For more information about how we handle your data, please read our
+        - link "Privacy Policy" [ref=e467]:
+          - /url: /privacy-policy/
+        - text: .
+      - generic [ref=e468]:
+        - button " Accept All" [ref=e469]:
+          - generic [ref=e470]: 
+          - text: Accept All
+        - button " Save Preferences" [ref=e471]:
+          - generic [ref=e472]: 
+          - text: Save Preferences
+        - button " Reject All" [ref=e473]:
+          - generic [ref=e474]: 
+          - text: Reject All
+      - paragraph [ref=e476]: You can change your preferences at any time by clicking the cookie settings in the footer.
+```

@@ -1,0 +1,602 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - list [ref=e12]:
+    - listitem [ref=e13]:
+      - link "Visit Jose Acosta's LinkedIn profile (opens in new tab)" [ref=e14] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/datawithjose
+        - generic [ref=e15]: 
+    - listitem [ref=e17]:
+      - link "Visit Jose Acosta's Instagram profile (opens in new tab)" [ref=e18] [cursor=pointer]:
+        - /url: https://www.instagram.com/datawithjose
+        - generic [ref=e19]: 
+    - listitem [ref=e21]:
+      - link "Visit Jose Acosta's GitHub profile (opens in new tab)" [ref=e22] [cursor=pointer]:
+        - /url: https://github.com/thedatawithjose
+        - generic [ref=e23]: 
+  - banner [ref=e25]:
+    - navigation [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - link "Jose Acosta Data Engineer - Go to homepage" [ref=e29] [cursor=pointer]:
+            - /url: /
+            - img "Jose Acosta Data Engineer Logo" [ref=e32]
+          - navigation "Main navigation" [ref=e33]:
+            - link "Home" [ref=e34] [cursor=pointer]:
+              - /url: /
+              - text: Home
+            - link "About Me" [ref=e36] [cursor=pointer]:
+              - /url: /about/
+            - link "Services" [ref=e37] [cursor=pointer]:
+              - /url: /services/
+            - link "Portfolio" [ref=e38] [cursor=pointer]:
+              - /url: /portfolio/
+            - link "Blog" [ref=e39] [cursor=pointer]:
+              - /url: /blog/
+        - link "Let's Talk " [ref=e40] [cursor=pointer]:
+          - /url: /contact/
+          - generic [ref=e41]:
+            - text: Let's Talk
+            - generic [ref=e42]: 
+        - text: 
+  - generic [ref=e44]:
+    - generic [ref=e48]:
+      - heading "Data Systems That Don't Fail" [level=1] [ref=e49]:
+        - generic [ref=e50]: Data Systems That Don't Fail
+      - generic [ref=e53]:
+        - generic [ref=e55]: Frombuildingbridgestobuildingdatapipelines.
+        - generic [ref=e57]: Civilengineeringprinciplesappliedtodatainfrastructure.
+        - generic [ref=e60]: 98%+uptime,<500mslatency,2TB+dailyprocessing
+      - generic [ref=e61]:
+        - link " Discuss Your Project " [ref=e62] [cursor=pointer]:
+          - /url: /contact
+          - generic [ref=e65]:
+            - generic [ref=e66]: 
+            - text: Discuss Your Project
+            - generic [ref=e67]: 
+        - link " View Portfolio " [ref=e68] [cursor=pointer]:
+          - /url: /portfolio
+          - generic [ref=e69]:
+            - generic [ref=e70]: 
+            - text: View Portfolio
+            - generic [ref=e71]: 
+    - generic [ref=e73] [cursor=pointer]:
+      - generic [ref=e74]: Scroll to explore
+      - generic [ref=e75]: 
+  - generic [ref=e77]:
+    - generic [ref=e78]:
+      - heading "Data Engineering Solutions" [level=2] [ref=e79]
+      - paragraph [ref=e80]: Building reliable, cost-effective data systems where business decisions depend on them
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - generic [ref=e85]:
+          - generic [ref=e88]: 
+          - generic [ref=e94]: ACTIVE
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - heading "Real-Time Pipelines" [level=3] [ref=e97]
+            - paragraph [ref=e98]: High-Availability Systems
+          - paragraph [ref=e99]: Production-ready data pipelines with 98%+ uptime. From WebSocket ingestion to cloud warehouses, built for when decisions can't wait.
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - generic [ref=e103]: 
+              - generic [ref=e104]: Streaming & batch processing
+            - generic [ref=e105]:
+              - generic [ref=e107]: 
+              - generic [ref=e108]: Fault-tolerant architecture
+            - generic [ref=e109]:
+              - generic [ref=e111]: 
+              - generic [ref=e112]: Cost optimization built-in
+          - generic [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: 98%+
+              - generic [ref=e116]: uptime achieved
+            - generic [ref=e118]: 
+      - generic [ref=e119]:
+        - generic [ref=e122]:
+          - generic [ref=e125]: 
+          - generic [ref=e131]: LIVE
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - heading "Time-Series Analytics" [level=3] [ref=e134]
+            - paragraph [ref=e135]: Financial & IoT Data
+          - paragraph [ref=e136]: Specialized in time-series data processing and analytics. From financial markets to IoT sensors, handling high-frequency data with precision.
+          - generic [ref=e137]:
+            - generic [ref=e138]:
+              - generic [ref=e140]: 
+              - generic [ref=e141]: High-frequency data processing
+            - generic [ref=e142]:
+              - generic [ref=e144]: 
+              - generic [ref=e145]: Anomaly detection systems
+            - generic [ref=e146]:
+              - generic [ref=e148]: 
+              - generic [ref=e149]: Predictive analytics models
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - generic [ref=e152]: <500ms
+              - generic [ref=e153]: avg latency
+            - generic [ref=e155]: 
+      - generic [ref=e156]:
+        - generic [ref=e159]:
+          - generic [ref=e162]: 
+          - generic [ref=e168]: CLOUD
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - heading "Data Architecture" [level=3] [ref=e171]
+            - paragraph [ref=e172]: Cloud-Native Solutions
+          - paragraph [ref=e173]: Modern data stack implementation with dbt, Snowflake, and cloud platforms. Cost-aware design that scales with your business.
+          - generic [ref=e174]:
+            - generic [ref=e175]:
+              - generic [ref=e177]: 
+              - generic [ref=e178]: Modern data stack (dbt, Snowflake)
+            - generic [ref=e179]:
+              - generic [ref=e181]: 
+              - generic [ref=e182]: Data quality frameworks
+            - generic [ref=e183]:
+              - generic [ref=e185]: 
+              - generic [ref=e186]: Cost optimization strategies
+          - generic [ref=e187]:
+            - generic [ref=e188]:
+              - generic [ref=e189]: 25%
+              - generic [ref=e190]: cost reduction
+            - generic [ref=e192]: 
+    - generic [ref=e194]:
+      - generic [ref=e195]:
+        - heading "Why Choose My Data Engineering?" [level=3] [ref=e196]
+        - paragraph [ref=e197]:
+          - strong [ref=e198]: Real-world experience
+          - text: from trading floors taught me that data quality and reliability aren't "tech details" — they're business risk. I build systems that work when decisions can't wait.
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - generic [ref=e201]: 98%+
+            - generic [ref=e202]: System Uptime
+          - generic [ref=e203]:
+            - generic [ref=e204]: 2TB+
+            - generic [ref=e205]: Daily Processing
+      - generic [ref=e206]:
+        - generic [ref=e207]:
+          - generic [ref=e209]: 
+          - generic [ref=e210]:
+            - heading "Reliability First" [level=4] [ref=e211]
+            - paragraph [ref=e212]: Systems designed for failure, instrumented for monitoring
+        - generic [ref=e213]:
+          - generic [ref=e215]: 
+          - generic [ref=e216]:
+            - heading "Business-Aligned" [level=4] [ref=e217]
+            - paragraph [ref=e218]: Pipelines aligned to decisions & KPIs, not just storage
+        - generic [ref=e219]:
+          - generic [ref=e221]: $
+          - generic [ref=e222]:
+            - heading "Cost-Conscious" [level=4] [ref=e223]
+            - paragraph [ref=e224]: Right-sizing and optimization built into every solution
+    - generic [ref=e225]:
+      - generic [ref=e226]:
+        - link " Explore Data Solutions " [ref=e227] [cursor=pointer]:
+          - /url: /services/
+          - generic [ref=e228]: 
+          - text: Explore Data Solutions
+          - generic [ref=e229]: 
+        - link " Let's Build Together" [ref=e230] [cursor=pointer]:
+          - /url: /contact/
+          - generic [ref=e231]: 
+          - text: Let's Build Together
+      - paragraph [ref=e232]: Ready to build data systems that work when business decisions depend on them?
+  - generic [ref=e235]:
+    - generic [ref=e236]:
+      - heading "About Me" [level=2] [ref=e237]
+      - paragraph [ref=e238]: Data Engineer with expertise in building robust data systems. Passionate about enabling teams to make data-driven decisions through reliable engineering.
+      - generic [ref=e239]:
+        - link " Learn More About Me " [ref=e240] [cursor=pointer]:
+          - /url: /about/
+          - generic [ref=e241]: 
+          - text: Learn More About Me
+          - generic [ref=e242]: 
+        - link " Get In Touch" [ref=e243] [cursor=pointer]:
+          - /url: mailto:datawithjose@outlook.com?subject=Let's Connect&body=Hi Jose, I'd like to learn more about your data engineering expertise...
+          - generic [ref=e244]: 
+          - text: Get In Touch
+    - img "Data Engineer Profile" [ref=e247]
+  - generic [ref=e249]:
+    - heading "Proven Results" [level=2] [ref=e250]
+    - paragraph [ref=e251]: Real impact delivered through data engineering excellence
+    - generic [ref=e252]:
+      - generic [ref=e253]:
+        - generic [ref=e255]: 
+        - heading "70%" [level=3] [ref=e256]
+        - paragraph [ref=e257]: Faster Data Processing
+      - generic [ref=e258]:
+        - generic [ref=e260]: $
+        - heading "$120K+" [level=3] [ref=e261]
+        - paragraph [ref=e262]: Cost Savings Generated
+      - generic [ref=e263]:
+        - generic [ref=e265]: 
+        - heading "98%" [level=3] [ref=e266]
+        - paragraph [ref=e267]: System Uptime
+      - generic [ref=e268]:
+        - generic [ref=e270]: 
+        - heading "2TB+" [level=3] [ref=e271]
+        - paragraph [ref=e272]: Data Processed Daily
+    - generic [ref=e273]:
+      - heading "Recent Success Stories" [level=3] [ref=e274]
+      - generic [ref=e275]:
+        - generic [ref=e276]:
+          - heading "Financial Trading Platform" [level=4] [ref=e277]
+          - paragraph [ref=e278]: Rebuilt data pipeline architecture reducing latency from 5s to 500ms, enabling faster trading strategies.
+          - generic [ref=e279]:
+            - generic [ref=e280]: 
+            - generic [ref=e281]: 3 months delivery
+        - generic [ref=e282]:
+          - heading "E-commerce Analytics" [level=4] [ref=e283]
+          - paragraph [ref=e284]: Implemented real-time customer behavior tracking, increasing conversion rates by 18% through data-driven insights.
+          - generic [ref=e285]:
+            - generic [ref=e286]: 
+            - generic [ref=e287]: High daily usage
+      - link " See Full Case Studies " [ref=e289] [cursor=pointer]:
+        - /url: /portfolio/
+        - generic [ref=e290]: 
+        - text: See Full Case Studies
+        - generic [ref=e291]: 
+  - generic [ref=e310]:
+    - generic [ref=e311]:
+      - heading "Free Data Engineering Resources" [level=2] [ref=e312]
+      - paragraph [ref=e313]: Get battle-tested tools and templates that have saved companies $100K+ in development costs
+    - generic [ref=e314]:
+      - generic [ref=e317]:
+        - generic [ref=e319]: 
+        - heading "Data Engineering Production Checklist" [level=3] [ref=e320]
+        - paragraph [ref=e321]: Complete 47-point checklist to ensure your data pipelines are production-ready
+        - list [ref=e322]:
+          - listitem [ref=e323]:
+            - generic [ref=e324]: 
+            - generic [ref=e325]: Avoid common pipeline failures
+          - listitem [ref=e326]:
+            - generic [ref=e327]: 
+            - generic [ref=e328]: Reduce deployment time significantly
+          - listitem [ref=e329]:
+            - generic [ref=e330]: 
+            - generic [ref=e331]: Improve system reliability
+          - listitem [ref=e332]:
+            - generic [ref=e333]: 
+            - generic [ref=e334]: Save debugging time and costs
+        - button " Get Free Resource" [ref=e335]:
+          - generic [ref=e336]: 
+          - text: Get Free Resource
+      - generic [ref=e339]:
+        - generic [ref=e341]: 
+        - heading "Data Pipeline ROI Calculator" [level=3] [ref=e342]
+        - paragraph [ref=e343]: Calculate the exact ROI of your data engineering investments in minutes
+        - list [ref=e344]:
+          - listitem [ref=e345]:
+            - generic [ref=e346]: 
+            - generic [ref=e347]: Estimate cost savings potential
+          - listitem [ref=e348]:
+            - generic [ref=e349]: 
+            - generic [ref=e350]: Help justify data engineering budget
+          - listitem [ref=e351]:
+            - generic [ref=e352]: 
+            - generic [ref=e353]: Compare different solution approaches
+          - listitem [ref=e354]:
+            - generic [ref=e355]: 
+            - generic [ref=e356]: Support stakeholder presentations
+        - button " Get Free Resource" [ref=e357]:
+          - generic [ref=e358]: 
+          - text: Get Free Resource
+      - generic [ref=e361]:
+        - generic [ref=e363]: 
+        - heading "Modern Data Stack Templates" [level=3] [ref=e364]
+        - paragraph [ref=e365]: 5 proven architecture templates for different use cases and scales
+        - list [ref=e366]:
+          - listitem [ref=e367]:
+            - generic [ref=e368]: 
+            - generic [ref=e369]: Accelerate architecture planning
+          - listitem [ref=e370]:
+            - generic [ref=e371]: 
+            - generic [ref=e372]: Proven patterns and approaches
+          - listitem [ref=e373]:
+            - generic [ref=e374]: 
+            - generic [ref=e375]: Cost-conscious configurations
+          - listitem [ref=e376]:
+            - generic [ref=e377]: 
+            - generic [ref=e378]: Implementation guidance included
+        - button " Get Free Resource" [ref=e379]:
+          - generic [ref=e380]: 
+          - text: Get Free Resource
+    - generic [ref=e382]:
+      - generic [ref=e383]:
+        - generic [ref=e384]: 
+        - generic [ref=e385]: Popular resources
+      - generic [ref=e386]:
+        - generic [ref=e387]: 
+        - generic [ref=e388]: Used by data teams
+      - generic [ref=e389]:
+        - generic [ref=e390]: 
+        - generic [ref=e391]: No spam guarantee
+  - generic [ref=e393]:
+    - generic [ref=e394]:
+      - heading "Calculate Your Data Engineering ROI" [level=2] [ref=e395]
+      - paragraph [ref=e396]: See exactly how much you could save with optimized data infrastructure
+    - generic [ref=e397]:
+      - generic [ref=e398]:
+        - heading "Your Current Situation" [level=3] [ref=e399]
+        - generic [ref=e400]:
+          - generic [ref=e401]:
+            - generic [ref=e402]: Monthly Data Processing Costs
+            - generic [ref=e403]:
+              - generic [ref=e404]: $
+              - spinbutton [ref=e405]: "10000"
+          - generic [ref=e406]:
+            - generic [ref=e407]: Data Volume (GB per month)
+            - spinbutton [ref=e408]: "1000"
+          - generic [ref=e409]:
+            - generic [ref=e410]: Engineer Hours per Month on Data Issues
+            - spinbutton [ref=e411]: "40"
+          - generic [ref=e412]:
+            - generic [ref=e413]: Downtime Hours per Month
+            - spinbutton [ref=e414]: "8"
+          - generic [ref=e415]:
+            - generic [ref=e416]: Revenue per Hour
+            - generic [ref=e417]:
+              - generic [ref=e418]: $
+              - spinbutton [ref=e419]: "5000"
+      - generic [ref=e420]:
+        - heading "Your Potential Savings" [level=3] [ref=e421]
+        - generic [ref=e422]:
+          - generic [ref=e423]:
+            - generic [ref=e424]:
+              - generic [ref=e425]: Monthly Cost Savings
+              - generic [ref=e426]: $
+            - generic [ref=e427]: $0
+            - generic [ref=e428]: 25% infrastructure cost reduction
+          - generic [ref=e429]:
+            - generic [ref=e430]:
+              - generic [ref=e431]: Time Savings Value
+              - generic [ref=e432]: 
+            - generic [ref=e433]: $0
+            - generic [ref=e434]: 50% reduction in maintenance time
+          - generic [ref=e435]:
+            - generic [ref=e436]:
+              - generic [ref=e437]: Downtime Cost Avoided
+              - generic [ref=e438]: 
+            - generic [ref=e439]: $0
+            - generic [ref=e440]: 80% downtime reduction
+          - generic [ref=e441]:
+            - generic [ref=e442]: TOTAL ANNUAL ROI
+            - generic [ref=e443]: $0
+            - generic [ref=e444]: Payback in 0.0 months
+        - link " Schedule ROI Discussion" [ref=e446] [cursor=pointer]:
+          - /url: "mailto:datawithjose@outlook.com?subject=ROI Discussion - Let's Optimize Our Data Infrastructure&body=Hi Jose,%0D%0A%0D%0AI used your ROI calculator and I'm interested in discussing how we can achieve these savings:%0D%0A%0D%0AProjected Annual ROI: $0%0D%0APayback Period: 0.0 months%0D%0A%0D%0ACurrent Situation:%0D%0A- Monthly processing costs: $10000%0D%0A- Data volume: 1000GB/month%0D%0A- Engineer hours on data issues: 40h/month%0D%0A- Downtime: 8h/month%0D%0A%0D%0AWhen can we schedule a call to discuss implementation?%0D%0A%0D%0ABest regards"
+          - generic [ref=e447]: 
+          - text: Schedule ROI Discussion
+    - paragraph [ref=e449]: "* Results are estimates based on typical improvements seen in similar projects. Actual results may vary depending on your specific infrastructure and requirements."
+  - generic [ref=e454]:
+    - heading "Ready to Build Reliable Data Systems?" [level=2] [ref=e455]
+    - paragraph [ref=e456]: Let's discuss your specific needs and create a custom solution
+    - generic [ref=e457]:
+      - generic [ref=e458]:
+        - generic [ref=e459]: 
+        - heading "Efficient Delivery" [level=3] [ref=e460]
+        - paragraph [ref=e461]: Most projects completed in 6-10 weeks
+      - generic [ref=e462]:
+        - generic [ref=e463]: 
+        - heading "Quality Focus" [level=3] [ref=e464]
+        - paragraph [ref=e465]: High uptime and reliable systems
+      - generic [ref=e466]:
+        - generic [ref=e467]: 
+        - heading "Ongoing Support" [level=3] [ref=e468]
+        - paragraph [ref=e469]: Post-launch support and documentation
+    - generic [ref=e470]:
+      - link " Start Your Project " [ref=e471] [cursor=pointer]:
+        - /url: "mailto:datawithjose@outlook.com?subject=Data Engineering Project Discussion&body=Hi Jose,%0D%0A%0D%0AI'm interested in discussing a data engineering project.%0D%0A%0D%0AProject type:%0D%0A☐ Real-time data pipelines%0D%0A☐ ML in production%0D%0A☐ Data infrastructure optimization%0D%0A☐ Trading algorithms%0D%0A☐ Other: _________%0D%0A%0D%0ATimeline: _________%0D%0ABudget range: _________%0D%0A%0D%0AProject details:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0ABest regards"
+        - generic [ref=e472]: 
+        - text: Start Your Project
+        - generic [ref=e473]: 
+      - link " View Case Studies" [ref=e474] [cursor=pointer]:
+        - /url: /portfolio
+        - generic [ref=e475]: 
+        - text: View Case Studies
+    - generic [ref=e476]:
+      - generic [ref=e477]:
+        - generic [ref=e478]: 
+        - generic [ref=e479]: 10+ satisfied clients
+      - generic [ref=e480]:
+        - generic [ref=e481]: 
+        - generic [ref=e482]: Professional service
+      - generic [ref=e483]:
+        - generic [ref=e484]: 
+        - generic [ref=e485]: Usually responds within 4 hours
+  - generic [ref=e489]:
+    - generic [ref=e490]:
+      - generic [ref=e491]:
+        - heading "Stay Ahead in Data Engineering" [level=3] [ref=e492]
+        - paragraph [ref=e493]: Get weekly insights, case studies, and industry trends delivered to your inbox
+      - generic [ref=e494]:
+        - generic [ref=e495]:
+          - generic [ref=e497]: 
+          - generic [ref=e498]: Industry Insights
+        - generic [ref=e499]:
+          - generic [ref=e501]: 
+          - generic [ref=e502]: Technical Tips
+        - generic [ref=e503]:
+          - generic [ref=e505]: 
+          - generic [ref=e506]: Case Studies
+    - generic [ref=e508]:
+      - textbox "Enter your email address" [ref=e510]
+      - button "Subscribe " [disabled] [ref=e511]:
+        - generic [ref=e513]:
+          - generic [ref=e514]: Subscribe
+          - generic [ref=e515]: 
+    - paragraph [ref=e517]:
+      - generic [ref=e518]: 
+      - generic [ref=e519]: No spam, unsubscribe at any time.
+      - generic [ref=e520]: •
+      - link "Privacy Policy" [ref=e521] [cursor=pointer]:
+        - /url: /privacy
+  - generic [ref=e523]:
+    - heading "Technologies I Work With" [level=2] [ref=e524]
+    - generic [ref=e526]:
+      - generic [ref=e527]:
+        - img "Git" [ref=e530]
+        - img "Jupyter" [ref=e533]
+        - img "pandas" [ref=e536]
+        - img "AWS" [ref=e539]
+        - img "Azure" [ref=e542]
+        - img "Airflow" [ref=e545]
+        - img "dbt" [ref=e548]
+        - img "PySpark" [ref=e551]
+        - img "Snowflake" [ref=e554]
+        - generic [ref=e556]:
+          - img "PostgreSQL"
+        - img "Git" [ref=e559]
+        - img "Jupyter" [ref=e562]
+        - img "pandas" [ref=e565]
+        - img "AWS" [ref=e568]
+        - img "Azure" [ref=e571]
+        - img "Airflow" [ref=e574]
+        - img "dbt" [ref=e577]
+        - img "PySpark" [ref=e580]
+        - img "Snowflake" [ref=e583]
+        - generic [ref=e585]:
+          - img "PostgreSQL"
+      - generic [ref=e586]:
+        - img "Python" [ref=e589]
+        - img "University of Michigan" [ref=e592]
+        - img "scikit-learn" [ref=e595]
+        - img "Pytest" [ref=e598]
+        - img "PySpark" [ref=e601]
+        - img "AWS" [ref=e604]
+        - img "Azure" [ref=e607]
+        - img "Airflow" [ref=e610]
+        - img "dbt" [ref=e613]
+        - img "Snowflake" [ref=e616]
+        - generic [ref=e618]:
+          - img "PostgreSQL"
+        - img "Python" [ref=e621]
+        - img "University of Michigan" [ref=e624]
+        - img "scikit-learn" [ref=e627]
+        - img "Pytest" [ref=e630]
+        - img "PySpark" [ref=e633]
+        - img "AWS" [ref=e636]
+        - img "Azure" [ref=e639]
+        - img "Airflow" [ref=e642]
+        - img "dbt" [ref=e645]
+        - img "Snowflake" [ref=e648]
+        - generic [ref=e650]:
+          - img "PostgreSQL"
+  - generic [ref=e653]:
+    - generic [ref=e654]:
+      - heading "Ready to Transform Your Data?" [level=2] [ref=e655]
+      - paragraph [ref=e656]: Let's discuss how I can help you build scalable data systems that drive real business value.
+      - generic [ref=e657]:
+        - generic [ref=e658]:
+          - generic [ref=e659]: 
+          - generic [ref=e660]: Usually responds within 24 hours
+        - generic [ref=e661]:
+          - generic [ref=e662]: 
+          - generic [ref=e663]: Free initial consultation
+        - generic [ref=e664]:
+          - generic [ref=e665]: 
+          - generic [ref=e666]: 10+ years experience
+    - generic [ref=e667]:
+      - link " Email Me Quick response" [ref=e669] [cursor=pointer]:
+        - /url: mailto:datawithjose@outlook.com
+        - generic [ref=e670]:
+          - generic [ref=e672]: 
+          - heading "Email Me" [level=3] [ref=e673]
+          - paragraph [ref=e674]: Quick response
+      - link " Let's Talk Direct message" [ref=e676] [cursor=pointer]:
+        - /url: mailto:datawithjose@outlook.com
+        - generic [ref=e677]:
+          - generic [ref=e679]: 
+          - heading "Let's Talk" [level=3] [ref=e680]
+          - paragraph [ref=e681]: Direct message
+      - link " Connect Professional network" [ref=e683] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/datawithjose/
+        - generic [ref=e684]:
+          - generic [ref=e686]: 
+          - heading "Connect" [level=3] [ref=e687]
+          - paragraph [ref=e688]: Professional network
+    - generic [ref=e689]:
+      - paragraph [ref=e690]: Prefer to see my work first?
+      - generic [ref=e691]:
+        - link " View Portfolio" [ref=e692] [cursor=pointer]:
+          - /url: /portfolio/
+          - generic [ref=e693]: 
+          - text: View Portfolio
+        - link " Explore Services" [ref=e694] [cursor=pointer]:
+          - /url: /services/
+          - generic [ref=e695]: 
+          - text: Explore Services
+  - contentinfo [ref=e696]:
+    - generic [ref=e702]:
+      - generic [ref=e703]:
+        - generic [ref=e704]:
+          - generic [ref=e705]:
+            - heading "Your Data Solutions Partner" [level=4] [ref=e706]
+            - paragraph [ref=e707]: Data Engineer focused on building robust data pipelines, scalable architectures, and automated workflows. Enabling teams to make smarter, data-driven decisions through reliable systems and practical engineering skills.
+          - generic [ref=e708]:
+            - link "LinkedIn" [ref=e709] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/datawithjose/
+              - generic [ref=e711]: 
+            - link "GitHub" [ref=e712] [cursor=pointer]:
+              - /url: https://github.com/thedatawithjose
+              - generic [ref=e714]: 
+            - link "Instagram" [ref=e715] [cursor=pointer]:
+              - /url: https://www.instagram.com/datawithjose/
+              - generic [ref=e717]: 
+        - generic [ref=e718]:
+          - heading "Useful Links" [level=4] [ref=e719]
+          - list [ref=e720]:
+            - listitem [ref=e721]:
+              - link "Portfolio" [ref=e722] [cursor=pointer]:
+                - /url: /portfolio/
+                - generic [ref=e724]: Portfolio
+            - listitem [ref=e725]:
+              - link "About Me" [ref=e726] [cursor=pointer]:
+                - /url: /about/
+                - generic [ref=e728]: About Me
+            - listitem [ref=e729]:
+              - link "LinkedIn" [ref=e730] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/datawithjose
+                - generic [ref=e732]: LinkedIn
+            - listitem [ref=e733]:
+              - link "GitHub" [ref=e734] [cursor=pointer]:
+                - /url: https://github.com/thedatawithjose
+                - generic [ref=e736]: GitHub
+            - listitem [ref=e737]:
+              - link "Contact" [ref=e738] [cursor=pointer]:
+                - /url: /contact/
+                - generic [ref=e740]: Contact
+        - generic [ref=e741]:
+          - heading "Additional Pages" [level=4] [ref=e742]
+          - list [ref=e743]:
+            - listitem [ref=e744]:
+              - link "Trading Strategies" [ref=e745] [cursor=pointer]:
+                - /url: /trading-strategies/
+                - generic [ref=e747]: Trading Strategies
+            - listitem [ref=e748]:
+              - link "Privacy Policy" [ref=e749] [cursor=pointer]:
+                - /url: /privacy-policy/
+                - generic [ref=e751]: Privacy Policy
+            - listitem [ref=e752]:
+              - button " Cookie Settings" [ref=e755]:
+                - generic [ref=e756]: 
+                - text: Cookie Settings
+            - listitem [ref=e757]:
+              - generic [ref=e760]: Terms of Service (Coming Soon)
+        - generic [ref=e761]:
+          - heading "Contact" [level=4] [ref=e762]
+          - generic [ref=e767]:
+            - textbox "Full name" [ref=e769]
+            - textbox "your@email.com" [ref=e771]
+            - textbox "Your message..." [ref=e773]
+            - button " Send message" [disabled] [ref=e774]:
+              - generic [ref=e775]:
+                - generic [ref=e776]: 
+                - generic [ref=e777]: Send message
+      - generic [ref=e780]:
+        - generic [ref=e782]: © 2025 Jose Acosta. All rights reserved.
+        - generic [ref=e783]:
+          - generic [ref=e784]: Design & Development by
+          - generic [ref=e787]: Jose Acosta
+```

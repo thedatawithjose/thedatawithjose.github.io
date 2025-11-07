@@ -1,0 +1,608 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - list [ref=e12]:
+      - listitem [ref=e13]:
+        - link "Visit Jose Acosta's LinkedIn profile (opens in new tab)" [ref=e14] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/datawithjose
+          - generic [ref=e15]: 
+      - listitem [ref=e17]:
+        - link "Visit Jose Acosta's Instagram profile (opens in new tab)" [ref=e18] [cursor=pointer]:
+          - /url: https://www.instagram.com/datawithjose
+          - generic [ref=e19]: 
+      - listitem [ref=e21]:
+        - link "Visit Jose Acosta's GitHub profile (opens in new tab)" [ref=e22] [cursor=pointer]:
+          - /url: https://github.com/thedatawithjose
+          - generic [ref=e23]: 
+    - banner [ref=e25]:
+      - navigation [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - link "Jose Acosta Data Engineer - Go to homepage" [ref=e29] [cursor=pointer]:
+              - /url: /
+              - img "Jose Acosta Data Engineer Logo" [ref=e32]
+            - navigation "Main navigation" [ref=e33]:
+              - link "Home" [ref=e34] [cursor=pointer]:
+                - /url: /
+              - link "About Me" [ref=e35] [cursor=pointer]:
+                - /url: /about/
+              - link "Services" [ref=e36] [cursor=pointer]:
+                - /url: /services/
+              - link "Portfolio" [ref=e37] [cursor=pointer]:
+                - /url: /portfolio/
+              - link "Blog" [ref=e38] [cursor=pointer]:
+                - /url: /blog/
+          - link "Let's Talk " [ref=e39] [cursor=pointer]:
+            - /url: /contact/
+            - generic [ref=e40]:
+              - text: Let's Talk
+              - generic [ref=e41]: 
+          - text: 
+    - generic [ref=e46]:
+      - navigation [ref=e47]:
+        - generic [ref=e48]:
+          - link "Home" [ref=e49] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e50]: /
+          - generic [ref=e51]: Portfolio
+      - generic [ref=e52]:
+        - heading "Portfolio Showcase" [level=1] [ref=e54]:
+          - text: Portfolio
+          - generic [ref=e55]: Showcase
+        - generic [ref=e57]:
+          - paragraph [ref=e58]: Real-world data engineering and trading systems that solve actual business problems
+          - paragraph [ref=e60]: "\"From high-frequency trading systems to enterprise data pipelines — each project represents production-grade solutions with measurable impact.\""
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e63]: 
+            - text: Trading Systems
+          - generic [ref=e64]:
+            - generic [ref=e65]: 
+            - text: Data Engineering
+          - generic [ref=e66]:
+            - generic [ref=e67]: 
+            - text: ML Systems
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: 20+
+          - generic [ref=e71]: Projects Completed
+          - generic [ref=e72]: Production Systems
+        - generic [ref=e73]:
+          - generic [ref=e74]: 25K+
+          - generic [ref=e75]: Lines of Code
+          - generic [ref=e76]: Python, SQL, Scala
+        - generic [ref=e77]:
+          - generic [ref=e78]: 12+
+          - generic [ref=e79]: Clients Satisfied
+          - generic [ref=e80]: Global Projects
+        - generic [ref=e81]:
+          - generic [ref=e82]: 120%
+          - generic [ref=e83]: Average ROI
+          - generic [ref=e84]: Measured Impact
+      - generic [ref=e86]:
+        - link " Discuss Your Project " [ref=e87] [cursor=pointer]:
+          - /url: /contact/
+          - generic [ref=e88]: 
+          - text: Discuss Your Project
+          - generic [ref=e89]: 
+        - link " View Projects " [ref=e90] [cursor=pointer]:
+          - /url: "#featured-projects"
+          - generic [ref=e91]: 
+          - text: View Projects
+          - generic [ref=e92]: 
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - heading "Featured Production Systems" [level=2] [ref=e96]
+        - paragraph [ref=e97]: Real-world implementations that demonstrate expertise in high-stakes environments where reliability, performance, and business impact are non-negotiable.
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]: 
+            - text: High-Frequency Trading
+          - generic [ref=e101]:
+            - generic [ref=e102]: 
+            - text: Real-time Data Pipelines
+          - generic [ref=e103]:
+            - generic [ref=e104]: 
+            - text: ML in Production
+          - generic [ref=e105]:
+            - generic [ref=e106]: 
+            - text: Risk Management
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - generic [ref=e111]: 
+              - generic [ref=e112]: Algorithmic Trading
+            - generic [ref=e113]: FEATURED
+          - generic [ref=e114]:
+            - heading "Mean Reversion OU Trading Bot" [level=3] [ref=e115]
+            - paragraph [ref=e116]: Ornstein-Uhlenbeck process-based mean reversion strategy with machine learning optimization. Features real-time execution, risk management, and performance analytics.
+            - generic [ref=e117]:
+              - generic [ref=e118]:
+                - generic [ref=e119]: 15%
+                - generic [ref=e120]: Annual Return
+              - generic [ref=e121]:
+                - generic [ref=e122]: "1.8"
+                - generic [ref=e123]: Sharpe Ratio
+              - generic [ref=e124]:
+                - generic [ref=e125]: "-15%"
+                - generic [ref=e126]: Max Drawdown
+              - generic [ref=e127]:
+                - generic [ref=e128]: 67%
+                - generic [ref=e129]: Win Rate
+            - generic [ref=e131]:
+              - generic [ref=e132]: Python
+              - generic [ref=e133]: Pandas
+              - generic [ref=e134]: NumPy
+              - generic [ref=e135]: SciPy
+              - generic [ref=e136]: +4 more
+            - generic [ref=e137]:
+              - generic [ref=e138]: Impact
+              - generic [ref=e139]: Delivered consistent trading performance with good risk controls
+            - link "Explore Project →" [ref=e140] [cursor=pointer]:
+              - /url: /portfolio/mean-reversion-ou/
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - generic [ref=e143]:
+              - generic [ref=e144]: 
+              - generic [ref=e145]: Data Engineering
+            - generic [ref=e146]: FEATURED
+          - generic [ref=e147]:
+            - heading "Edgar SEC Parser" [level=3] [ref=e148]
+            - paragraph [ref=e149]: High-performance SEC filing extraction system with SGML and XBRL parsing. Processes complex regulatory documents with intelligent content detection.
+            - generic [ref=e150]:
+              - generic [ref=e151]:
+                - generic [ref=e152]: High throughput
+                - generic [ref=e153]: Processing Speed
+              - generic [ref=e154]:
+                - generic [ref=e155]: 98%
+                - generic [ref=e156]: Accuracy Rate
+              - generic [ref=e157]:
+                - generic [ref=e158]: Excellent
+                - generic [ref=e159]: Error Recovery
+              - generic [ref=e160]:
+                - generic [ref=e161]: 50K+
+                - generic [ref=e162]: Documents Processed
+            - generic [ref=e164]:
+              - generic [ref=e165]: Python
+              - generic [ref=e166]: SQLAlchemy
+              - generic [ref=e167]: PostgreSQL
+              - generic [ref=e168]: Docker
+              - generic [ref=e169]: +2 more
+            - generic [ref=e170]:
+              - generic [ref=e171]: Impact
+              - generic [ref=e172]: Improved compliance processing efficiency
+            - link "Explore Project →" [ref=e173] [cursor=pointer]:
+              - /url: /portfolio/edgar-sec-parser/
+        - generic [ref=e174]:
+          - generic [ref=e175]:
+            - generic [ref=e176]:
+              - generic [ref=e177]: 
+              - generic [ref=e178]: Data Engineering
+            - generic [ref=e179]: FEATURED
+          - generic [ref=e180]:
+            - heading "Financial Data Pipeline" [level=3] [ref=e181]
+            - paragraph [ref=e182]: Scalable ETL pipeline for real-time market data ingestion, transformation, and analysis. Handles multiple data sources with automated quality checks.
+            - generic [ref=e183]:
+              - generic [ref=e184]:
+                - generic [ref=e185]: 100K+
+                - generic [ref=e186]: Daily Records
+              - generic [ref=e187]:
+                - generic [ref=e188]: 98%
+                - generic [ref=e189]: System Uptime
+              - generic [ref=e190]:
+                - generic [ref=e191]: <500ms
+                - generic [ref=e192]: Processing Latency
+              - generic [ref=e193]:
+                - generic [ref=e194]: 8+
+                - generic [ref=e195]: Data Sources
+            - generic [ref=e197]:
+              - generic [ref=e198]: Python
+              - generic [ref=e199]: Apache Spark
+              - generic [ref=e200]: Kafka
+              - generic [ref=e201]: PostgreSQL
+              - generic [ref=e202]: +3 more
+            - generic [ref=e203]:
+              - generic [ref=e204]: Impact
+              - generic [ref=e205]: Enabled real-time analytics for investment portfolio
+            - link "Explore Project →" [ref=e206] [cursor=pointer]:
+              - /url: /portfolio/financial-data-pipeline/
+    - generic [ref=e208]:
+      - generic [ref=e209]:
+        - heading "All Projects" [level=2] [ref=e210]
+        - paragraph [ref=e211]: Browse through my complete portfolio of data engineering, trading, and machine learning solutions.
+        - generic [ref=e213]:
+          - generic [ref=e214]: 
+          - textbox "Search projects" [ref=e215]:
+            - /placeholder: Search projects, technologies...
+      - group "Project category filters" [ref=e216]:
+        - button "Show All Projects projects (6 projects)" [pressed] [ref=e217]: All Projects6
+        - button "Show Data Engineering projects (2 projects)" [ref=e218]: Data Engineering2
+        - button "Show Algorithmic Trading projects (2 projects)" [ref=e219]: Algorithmic Trading2
+        - button "Show Data Science & ML projects (2 projects)" [ref=e220]: Data Science & ML2
+      - paragraph [ref=e222]: Showing 6 of 6 projects
+      - region "All projects" [ref=e223]:
+        - generic [ref=e224]:
+          - generic [ref=e225]:
+            - generic [ref=e226]:
+              - generic [ref=e227]: 
+              - generic [ref=e228]: Algorithmic Trading
+            - generic [ref=e229]: ⭐ FEATURED
+          - generic [ref=e230]:
+            - heading "Mean Reversion OU Trading Bot" [level=3] [ref=e231]
+            - paragraph [ref=e232]: Ornstein-Uhlenbeck process-based mean reversion strategy with machine learning optimization. Features real-time execution, risk management, and performance analytics.
+            - generic [ref=e233]:
+              - generic [ref=e234]:
+                - generic [ref=e235]: 15%
+                - generic [ref=e236]: Annual Return
+              - generic [ref=e237]:
+                - generic [ref=e238]: "1.8"
+                - generic [ref=e239]: Sharpe Ratio
+              - generic [ref=e240]:
+                - generic [ref=e241]: "-15%"
+                - generic [ref=e242]: Max Drawdown
+              - generic [ref=e243]:
+                - generic [ref=e244]: 67%
+                - generic [ref=e245]: Win Rate
+            - generic [ref=e247]:
+              - generic [ref=e248]: Python
+              - generic [ref=e249]: Pandas
+              - generic [ref=e250]: NumPy
+              - generic [ref=e251]: +5 more
+            - generic [ref=e252]:
+              - generic [ref=e253]: "\"The trading bot delivered solid performance with good risk management.\""
+              - generic [ref=e254]: — TradeFlow Capital
+            - link "View Details →" [ref=e255] [cursor=pointer]:
+              - /url: /portfolio/mean-reversion-ou/
+        - generic [ref=e256]:
+          - generic [ref=e257]:
+            - generic [ref=e258]:
+              - generic [ref=e259]: 
+              - generic [ref=e260]: Data Engineering
+            - generic [ref=e261]: ⭐ FEATURED
+          - generic [ref=e262]:
+            - heading "Edgar SEC Parser" [level=3] [ref=e263]
+            - paragraph [ref=e264]: High-performance SEC filing extraction system with SGML and XBRL parsing. Processes complex regulatory documents with intelligent content detection.
+            - generic [ref=e265]:
+              - generic [ref=e266]:
+                - generic [ref=e267]: High throughput
+                - generic [ref=e268]: Processing Speed
+              - generic [ref=e269]:
+                - generic [ref=e270]: 98%
+                - generic [ref=e271]: Accuracy Rate
+              - generic [ref=e272]:
+                - generic [ref=e273]: Excellent
+                - generic [ref=e274]: Error Recovery
+              - generic [ref=e275]:
+                - generic [ref=e276]: 50K+
+                - generic [ref=e277]: Documents Processed
+            - generic [ref=e279]:
+              - generic [ref=e280]: Python
+              - generic [ref=e281]: SQLAlchemy
+              - generic [ref=e282]: PostgreSQL
+              - generic [ref=e283]: +3 more
+            - generic [ref=e284]:
+              - generic [ref=e285]: "\"This parser significantly improved our regulatory compliance workflow.\""
+              - generic [ref=e286]: — FinData Analytics
+            - link "View Details →" [ref=e287] [cursor=pointer]:
+              - /url: /portfolio/edgar-sec-parser/
+        - generic [ref=e288]:
+          - generic [ref=e289]:
+            - generic [ref=e290]:
+              - generic [ref=e291]: 
+              - generic [ref=e292]: Data Engineering
+            - generic [ref=e293]: ⭐ FEATURED
+          - generic [ref=e294]:
+            - heading "Financial Data Pipeline" [level=3] [ref=e295]
+            - paragraph [ref=e296]: Scalable ETL pipeline for real-time market data ingestion, transformation, and analysis. Handles multiple data sources with automated quality checks.
+            - generic [ref=e297]:
+              - generic [ref=e298]:
+                - generic [ref=e299]: 100K+
+                - generic [ref=e300]: Daily Records
+              - generic [ref=e301]:
+                - generic [ref=e302]: 98%
+                - generic [ref=e303]: System Uptime
+              - generic [ref=e304]:
+                - generic [ref=e305]: <500ms
+                - generic [ref=e306]: Processing Latency
+              - generic [ref=e307]:
+                - generic [ref=e308]: 8+
+                - generic [ref=e309]: Data Sources
+            - generic [ref=e311]:
+              - generic [ref=e312]: Python
+              - generic [ref=e313]: Apache Spark
+              - generic [ref=e314]: Kafka
+              - generic [ref=e315]: +4 more
+            - generic [ref=e316]:
+              - generic [ref=e317]: "\"The pipeline enhanced our data infrastructure capabilities.\""
+              - generic [ref=e318]: — MarketScope Inc
+            - link "View Details →" [ref=e319] [cursor=pointer]:
+              - /url: /portfolio/financial-data-pipeline/
+        - generic [ref=e320]:
+          - generic [ref=e322]:
+            - generic [ref=e323]: 
+            - generic [ref=e324]: Algorithmic Trading
+          - generic [ref=e325]:
+            - heading "Moving Average Trading Bot" [level=3] [ref=e326]
+            - paragraph [ref=e327]: Dual moving average crossover strategy with dynamic position sizing and comprehensive risk management protocols.
+            - generic [ref=e328]:
+              - generic [ref=e329]:
+                - generic [ref=e330]: 12%
+                - generic [ref=e331]: Annual Return
+              - generic [ref=e332]:
+                - generic [ref=e333]: "1.5"
+                - generic [ref=e334]: Sharpe Ratio
+              - generic [ref=e335]:
+                - generic [ref=e336]: "-18%"
+                - generic [ref=e337]: Max Drawdown
+              - generic [ref=e338]:
+                - generic [ref=e339]: 62%
+                - generic [ref=e340]: Win Rate
+            - generic [ref=e342]:
+              - generic [ref=e343]: Python
+              - generic [ref=e344]: Pandas
+              - generic [ref=e345]: Backtrader
+              - generic [ref=e346]: +3 more
+            - generic [ref=e347]:
+              - generic [ref=e348]: "\"Consistent performance with excellent risk-adjusted returns.\""
+              - generic [ref=e349]: — Algo Capital
+            - link "View Details →" [ref=e350] [cursor=pointer]:
+              - /url: /portfolio/moving-average-bot/
+        - generic [ref=e351]:
+          - generic [ref=e353]:
+            - generic [ref=e354]: 
+            - generic [ref=e355]: Data Science
+          - generic [ref=e356]:
+            - heading "Risk Management Dashboard" [level=3] [ref=e357]
+            - paragraph [ref=e358]: Real-time risk monitoring system with VaR calculations, position tracking, and automated alert mechanisms.
+            - generic [ref=e359]:
+              - generic [ref=e360]:
+                - generic [ref=e361]: 15+
+                - generic [ref=e362]: Risk Metrics
+              - generic [ref=e363]:
+                - generic [ref=e364]: <100ms
+                - generic [ref=e365]: Response Time
+              - generic [ref=e366]:
+                - generic [ref=e367]: 90%
+                - generic [ref=e368]: Alert Accuracy
+              - generic [ref=e369]:
+                - generic [ref=e370]: 15+
+                - generic [ref=e371]: Portfolios Monitored
+            - generic [ref=e373]:
+              - generic [ref=e374]: Python
+              - generic [ref=e375]: Vue.js
+              - generic [ref=e376]: Redis
+              - generic [ref=e377]: +3 more
+            - generic [ref=e378]:
+              - generic [ref=e379]: "\"Essential tool for our daily risk management operations.\""
+              - generic [ref=e380]: — RiskPro Holdings
+            - link "View Details →" [ref=e381] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=e382]:
+          - generic [ref=e384]:
+            - generic [ref=e385]: 
+            - generic [ref=e386]: Machine Learning
+          - generic [ref=e387]:
+            - heading "ML Prediction Engine" [level=3] [ref=e388]
+            - paragraph [ref=e389]: Machine learning system for market prediction using ensemble methods, feature engineering, and real-time inference.
+            - generic [ref=e390]:
+              - generic [ref=e391]:
+                - generic [ref=e392]: 68%
+                - generic [ref=e393]: Prediction Accuracy
+              - generic [ref=e394]:
+                - generic [ref=e395]: 66%
+                - generic [ref=e396]: Precision
+              - generic [ref=e397]:
+                - generic [ref=e398]: 70%
+                - generic [ref=e399]: Recall
+              - generic [ref=e400]:
+                - generic [ref=e401]: 68%
+                - generic [ref=e402]: F1 Score
+            - generic [ref=e404]:
+              - generic [ref=e405]: Python
+              - generic [ref=e406]: TensorFlow
+              - generic [ref=e407]: XGBoost
+              - generic [ref=e408]: +3 more
+            - generic [ref=e409]:
+              - generic [ref=e410]: "\"The prediction accuracy met our expectations with solid performance.\""
+              - generic [ref=e411]: — Alpha Strategies
+            - link "View Details →" [ref=e412] [cursor=pointer]:
+              - /url: "#"
+    - generic [ref=e414]:
+      - generic [ref=e415]:
+        - heading "Technical Expertise" [level=2] [ref=e416]
+        - paragraph [ref=e417]: Technologies and methodologies that power these innovative solutions.
+      - generic [ref=e418]:
+        - generic [ref=e419]:
+          - generic [ref=e421]: 
+          - heading "Data Engineering" [level=3] [ref=e422]
+          - generic [ref=e423]:
+            - generic [ref=e424]: Python
+            - generic [ref=e425]: SQL
+            - generic [ref=e426]: Apache Spark
+            - generic [ref=e427]: PostgreSQL
+            - generic [ref=e428]: Docker
+            - generic [ref=e429]: Kubernetes
+            - generic [ref=e430]: Airflow
+        - generic [ref=e431]:
+          - generic [ref=e433]: 
+          - heading "Machine Learning" [level=3] [ref=e434]
+          - generic [ref=e435]:
+            - generic [ref=e436]: TensorFlow
+            - generic [ref=e437]: XGBoost
+            - generic [ref=e438]: Scikit-learn
+            - generic [ref=e439]: MLflow
+            - generic [ref=e440]: PyTorch
+            - generic [ref=e441]: Pandas
+        - generic [ref=e442]:
+          - generic [ref=e444]: 
+          - heading "Trading Systems" [level=3] [ref=e445]
+          - generic [ref=e446]:
+            - generic [ref=e447]: Backtrader
+            - generic [ref=e448]: QuantLib
+            - generic [ref=e449]: NumPy
+            - generic [ref=e450]: SciPy
+            - generic [ref=e451]: Redis
+            - generic [ref=e452]: WebSocket
+        - generic [ref=e453]:
+          - generic [ref=e455]: 
+          - heading "Cloud & DevOps" [level=3] [ref=e456]
+          - generic [ref=e457]:
+            - generic [ref=e458]: AWS
+            - generic [ref=e459]: Azure
+            - generic [ref=e460]: Git
+            - generic [ref=e461]: CI/CD
+            - generic [ref=e462]: Terraform
+            - generic [ref=e463]: Monitoring
+    - generic [ref=e465]:
+      - generic [ref=e466]:
+        - heading "Measurable Impact" [level=2] [ref=e467]
+        - paragraph [ref=e468]: Real results delivered across multiple projects and industries.
+      - generic [ref=e469]:
+        - generic [ref=e470]:
+          - generic [ref=e472]: $
+          - generic [ref=e473]: $120K+
+          - generic [ref=e474]: Revenue Generated
+        - generic [ref=e475]:
+          - generic [ref=e477]: 45%
+          - generic [ref=e478]: Average Cost Reduction
+        - generic [ref=e479]:
+          - generic [ref=e481]: 
+          - generic [ref=e482]: 98%
+          - generic [ref=e483]: System Uptime
+        - generic [ref=e484]:
+          - generic [ref=e486]: 
+          - generic [ref=e487]: 120%
+          - generic [ref=e488]: Performance Improvement
+    - generic [ref=e490]:
+      - heading "Ready to Build Something Amazing?" [level=2] [ref=e491]
+      - paragraph [ref=e492]: Let's discuss your project requirements and create data solutions that drive real business value.
+      - generic [ref=e493]:
+        - link "Start Your Project" [ref=e494] [cursor=pointer]:
+          - /url: /contact/
+        - link "View Services" [ref=e495] [cursor=pointer]:
+          - /url: /services/
+    - generic [ref=e498]:
+      - generic [ref=e499]:
+        - heading "Ready to Build Something Production-Ready?" [level=2] [ref=e500]:
+          - text: Ready to Build Something
+          - generic [ref=e501]: Production-Ready?
+        - paragraph [ref=e502]: Whether you need real-time data pipelines, trading systems, or ML in production — let's discuss how these approaches can solve your specific challenges.
+      - generic [ref=e503]:
+        - generic [ref=e504]:
+          - generic [ref=e506]: 
+          - heading "Discuss Your Project" [level=3] [ref=e507]
+          - paragraph [ref=e508]: Have a specific data engineering or trading system challenge? Let's explore how these proven approaches apply to your situation.
+          - link " Start Conversation" [ref=e509] [cursor=pointer]:
+            - /url: /contact/
+            - generic [ref=e510]: 
+            - text: Start Conversation
+        - generic [ref=e511]:
+          - generic [ref=e513]: 
+          - heading "Technical Deep-Dives" [level=3] [ref=e514]
+          - paragraph [ref=e515]: Want to understand the technical details behind these implementations? Read detailed case studies and insights.
+          - link " Read Articles" [ref=e516] [cursor=pointer]:
+            - /url: /blog/
+            - generic [ref=e517]: 
+            - text: Read Articles
+      - generic [ref=e518]:
+        - paragraph [ref=e519]: "Why work with me:"
+        - generic [ref=e520]:
+          - generic [ref=e521]:
+            - generic [ref=e522]: 
+            - generic [ref=e523]: Production-tested reliability
+          - generic [ref=e524]:
+            - generic [ref=e525]: 
+            - generic [ref=e526]: Real trading experience
+          - generic [ref=e527]:
+            - generic [ref=e528]: 
+            - generic [ref=e529]: Fast response times
+      - generic [ref=e530]:
+        - paragraph [ref=e531]: "Connect with me:"
+        - generic [ref=e532]:
+          - link "" [ref=e533] [cursor=pointer]:
+            - /url: https://linkedin.com/in/joseacostar
+            - generic [ref=e534]: 
+          - link "" [ref=e535] [cursor=pointer]:
+            - /url: https://github.com/thedatawithjose
+            - generic [ref=e536]: 
+          - link "" [ref=e537] [cursor=pointer]:
+            - /url: https://instagram.com/datawithjose
+            - generic [ref=e538]: 
+    - contentinfo [ref=e539]:
+      - generic [ref=e545]:
+        - generic [ref=e546]:
+          - generic [ref=e547]:
+            - generic [ref=e548]:
+              - heading "Your Data Solutions Partner" [level=4] [ref=e549]
+              - paragraph [ref=e550]: Data Engineer focused on building robust data pipelines, scalable architectures, and automated workflows. Enabling teams to make smarter, data-driven decisions through reliable systems and practical engineering skills.
+            - generic [ref=e551]:
+              - link "LinkedIn" [ref=e552] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/datawithjose/
+                - generic [ref=e554]: 
+              - link "GitHub" [ref=e555] [cursor=pointer]:
+                - /url: https://github.com/thedatawithjose
+                - generic [ref=e557]: 
+              - link "Instagram" [ref=e558] [cursor=pointer]:
+                - /url: https://www.instagram.com/datawithjose/
+                - generic [ref=e560]: 
+          - generic [ref=e561]:
+            - heading "Useful Links" [level=4] [ref=e562]
+            - list [ref=e563]:
+              - listitem [ref=e564]:
+                - link "Portfolio" [ref=e565] [cursor=pointer]:
+                  - /url: /portfolio/
+                  - generic [ref=e567]: Portfolio
+              - listitem [ref=e568]:
+                - link "About Me" [ref=e569] [cursor=pointer]:
+                  - /url: /about/
+                  - generic [ref=e571]: About Me
+              - listitem [ref=e572]:
+                - link "LinkedIn" [ref=e573] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/datawithjose
+                  - generic [ref=e575]: LinkedIn
+              - listitem [ref=e576]:
+                - link "GitHub" [ref=e577] [cursor=pointer]:
+                  - /url: https://github.com/thedatawithjose
+                  - generic [ref=e579]: GitHub
+              - listitem [ref=e580]:
+                - link "Contact" [ref=e581] [cursor=pointer]:
+                  - /url: /contact/
+                  - generic [ref=e583]: Contact
+          - generic [ref=e584]:
+            - heading "Additional Pages" [level=4] [ref=e585]
+            - list [ref=e586]:
+              - listitem [ref=e587]:
+                - link "Trading Strategies" [ref=e588] [cursor=pointer]:
+                  - /url: /trading-strategies/
+                  - generic [ref=e590]: Trading Strategies
+              - listitem [ref=e591]:
+                - link "Privacy Policy" [ref=e592] [cursor=pointer]:
+                  - /url: /privacy-policy/
+                  - generic [ref=e594]: Privacy Policy
+              - listitem [ref=e595]:
+                - button " Cookie Settings" [ref=e598]:
+                  - generic [ref=e599]: 
+                  - text: Cookie Settings
+              - listitem [ref=e600]:
+                - generic [ref=e603]: Terms of Service (Coming Soon)
+          - generic [ref=e604]:
+            - heading "Contact" [level=4] [ref=e605]
+            - generic [ref=e610]:
+              - textbox "Full name" [ref=e612]
+              - textbox "your@email.com" [ref=e614]
+              - textbox "Your message..." [ref=e616]
+              - button " Send message" [disabled] [ref=e617]:
+                - generic [ref=e618]:
+                  - generic [ref=e619]: 
+                  - generic [ref=e620]: Send message
+        - generic [ref=e623]:
+          - generic [ref=e625]: © 2025 Jose Acosta. All rights reserved.
+          - generic [ref=e626]:
+            - generic [ref=e627]: Design & Development by
+            - generic [ref=e630]: Jose Acosta
+  - button "Open Next.js Dev Tools" [ref=e636] [cursor=pointer]:
+    - img [ref=e637]
+```
