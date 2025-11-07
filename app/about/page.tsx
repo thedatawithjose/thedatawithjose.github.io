@@ -14,7 +14,7 @@ export default function About() {
 
   // Personal metrics and achievements
   const metrics = {
-    experience: '6+',
+    experience: '10+',
     projects: '15+',
     clients: '8+',
     countries: '4+'
@@ -139,7 +139,7 @@ export default function About() {
                 </h1>
                 <div className="mb-10">
                   <p className="text-xl md:text-2xl text-gray-200 mb-4 leading-relaxed font-medium">
-                    Time-Series & Real-Time Systems | ex-Quant Trader
+                    Time-Series & Real-Time Systems | ex-Quant Trader | ex-Civil Engineer
                   </p>
                   <p className="text-lg md:text-xl text-green-400 leading-relaxed font-semibold mb-6">
                     Building high-availability data systems where reliability isn't optional
@@ -316,9 +316,9 @@ export default function About() {
                   <div>
                     <h2 className="text-4xl font-bold mb-6">Data Engineer with Real-World Context</h2>
                     <p className="text-lg mb-4 leading-relaxed">
-                      I'm a Data Engineer who came up through quantitative trading. For six years I put real capital 
+                      I'm a Data Engineer who came up through quantitative trading. For four years I put real capital 
                       behind time-series models; now I build the high-availability, real-time data systems I wished I'd had. 
-                      Earlier, five years in Civil Engineering project management taught me to deliver under constraints 
+                      Earlier, four years in Civil Engineering project management taught me to deliver under constraints 
                       and communicate with non-technical stakeholders.
                     </p>
                     <p className="text-lg mb-4 leading-relaxed">
@@ -504,7 +504,7 @@ export default function About() {
                         color: 'green'
                       },
                       {
-                        period: 'Sep 2022 - Jul 2024',
+                        period: '2023 - Jul 2024',
                         title: 'Data Engineering Consultant',
                         company: 'International Clients',
                         description: 'Built end-to-end data platforms on AWS and Snowflake with dbt for analytics and ML. Developed real-time fraud/risk APIs using FastAPI and Kubernetes.',
@@ -512,10 +512,21 @@ export default function About() {
                         color: 'blue'
                       },
                       {
-                        period: 'Feb 2019 - Jul 2022',
+                        period: 'Mid 2018 - 2022',
                         title: 'Head of Trading & Quantitative Data Systems',
                         company: 'Fintech Alca Group',
                         description: 'Improved strategy backtesting throughput by automating portfolio optimization pipelines. Built data platform with ETL/ELT processes from market data sources.',
+                        achievements: ['Automated backtesting pipeline', 'Data-driven investment decisions', 'Market data ETL platform'],
+                        color: 'purple'
+                      },
+                      {
+                        period: '2014 - 2018',
+                        title: 'Civil Engineering Project Manager',
+                        company: 'Construction & Infrastructure',
+                        description: 'Managed civil engineering projects including valuations, resource flows, and construction metrics. Delivered projects under constraints while coordinating with diverse stakeholders.',
+                        achievements: ['Project delivery under constraints', 'Stakeholder communication', 'Resource optimization'],
+                        color: 'orange'
+                      }ata sources.',
                         achievements: ['Automated backtesting pipeline', 'Data-driven investment decisions', 'Market data ETL platform'],
                         color: 'purple'
                       }

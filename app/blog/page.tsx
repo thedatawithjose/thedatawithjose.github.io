@@ -284,7 +284,7 @@ export default function Blog() {
               
               <p className="text-gray-200 leading-relaxed italic relative z-10 max-w-2xl">
                 Learn from real-world implementations, production challenges, and lessons learned 
-                from <span className="text-green-400 font-semibold">6+ years</span> of putting capital behind time-series models.
+                from <span className="text-green-400 font-semibold">4 years</span> of putting capital behind time-series models.
               </p>
               
               {/* Subtle glow effect */}
@@ -305,7 +305,7 @@ export default function Blog() {
             <div className="group text-center p-6 bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-blue-400/40 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden tactile-feedback mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
-                <div className="text-3xl font-black text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">6+</div>
+                <div className="text-3xl font-black text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">10+</div>
                 <div className="text-gray-300 font-medium">Years Experience</div>
                 <div className="w-8 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
