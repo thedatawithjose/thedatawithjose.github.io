@@ -397,6 +397,80 @@ img, video {
   }
 }
 
+/* Gesture Recognition Styles */
+.swipe-container {
+  touch-action: pan-x;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pull-to-refresh-container {
+  touch-action: pan-y;
+  overscroll-behavior-y: none;
+}
+
+/* Swipe Navigation Animations */
+.swipe-transition {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swipe-left {
+  transform: translateX(-100%);
+}
+
+.swipe-right {
+  transform: translateX(100%);
+}
+
+/* Pull-to-Refresh Animations */
+@keyframes pull-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.pull-indicator {
+  animation: pull-bounce 1s ease-in-out infinite;
+}
+
+/* Pagination Dots */
+.pagination-dot {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pagination-dot:hover {
+  transform: scale(1.2);
+}
+
+.pagination-dot.active {
+  box-shadow: 0 0 0 3px rgba(0, 191, 165, 0.3);
+}
+
+/* Swipe Hint Animation */
+@keyframes swipe-hint {
+  0%, 100% { transform: translateX(0); opacity: 1; }
+  50% { transform: translateX(10px); opacity: 0.7; }
+}
+
+.swipe-hint {
+  animation: swipe-hint 2s ease-in-out infinite;
+}
+
+/* Gesture Feedback */
+.gesture-active {
+  cursor: grabbing;
+  user-select: none;
+}
+
+/* Smooth scrolling for gesture navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent overscroll on mobile */
+body {
+  overscroll-behavior: none;
+}
+
 /* Anima
 ted Gradient Button Effect */
 @keyframes gradient-x {
