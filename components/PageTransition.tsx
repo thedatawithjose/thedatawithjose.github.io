@@ -7,8 +7,8 @@ export default function PageTransition({ children }: { children: React.ReactNode
   const pathname = usePathname();
   const [isLoading, setIsLoading] = useState(false);
   const [showContent, setShowContent] = useState(true);
-  const timeoutRef = useRef<NodeJS.Timeout>();
-  const loadingTimeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
+  const loadingTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   useEffect(() => {
     // Clear any existing timeouts
