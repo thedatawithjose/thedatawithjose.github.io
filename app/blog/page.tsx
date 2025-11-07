@@ -50,8 +50,6 @@ export default function Blog() {
       />
       <Header />
       
-      <BlogClientFeatures allArticles={allArticles}>
-      
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white py-16 md:py-24 overflow-hidden">
         {/* Animated Background Elements */}
