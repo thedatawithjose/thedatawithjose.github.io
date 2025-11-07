@@ -107,7 +107,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </div>
             
             {/* 2026 Variable Typography with Enhanced Gradient */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-10 leading-[1.05] tracking-[-0.02em] font-display">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-10 leading-[1.05] tracking-[-0.02em] font-display">
               <span className="bg-gradient-to-br from-white via-gray-50 via-[#E0F2FE] to-[#00BFA5] bg-clip-text text-transparent animate-gradient bg-[length:200%_200%]">
                 {articleData.title}
               </span>

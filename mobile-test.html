@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Test - Blog Articles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Simular los estilos del blog */
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* Forzar vista móvil */
+        @media (min-width: 768px) {
+            .force-mobile {
+                max-width: 375px !important;
+                margin: 0 auto;
+                border: 2px solid #ccc;
+                border-radius: 20px;
+                padding: 20px;
+                background: #f9f9f9;
+            }
+        }
+        
+        .contrast-test {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="force-mobile">
+        <h1 class="text-2xl font-bold mb-6 text-center">📱 Mobile Blog Test</h1>
+        
+        <!-- Test de Contraste Original vs Mejorado -->
+        <div class="space-y-6">
+            <div class="contrast-test">
+                <h3 class="text-lg font-bold mb-4 text-red-600">❌ ANTES (Problema)</h3>
+                <div class="space-y-2">
+                    <div class="text-sm text-gray-500">Fecha y autor (text-gray-500)</div>
+                    <h4 class="text-xl font-bold text-gray-900">Título del Artículo</h4>
+                    <p class="text-gray-600 line-clamp-3">
+                        Este es el excerpt del artículo que se veía muy claro en móvil. 
+                        El texto era difícil de leer especialmente bajo luz solar o en 
+                        pantallas con brillo bajo.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="contrast-test">
+                <h3 class="text-lg font-bold mb-4 text-green-600">✅ DESPUÉS (Arreglado)</h3>
+                <div class="space-y-2">
+                    <div class="text-sm text-gray-700 md:text-gray-500">Fecha y autor (text-gray-700 en móvil)</div>
+                    <h4 class="text-xl font-bold text-gray-900">Título del Artículo</h4>
+                    <p class="text-gray-800 md:text-gray-600 line-clamp-3">
+                        Este es el excerpt del artículo con mejor contraste en móvil. 
+                        El texto ahora es mucho más legible y fácil de leer en cualquier 
+                        condición de luz.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Comparación de Colores -->
+        <div class="mt-8 space-y-4">
+            <h3 class="text-lg font-bold">🎨 Comparación de Colores</h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="text-center">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <div class="text-gray-500 text-sm mb-2">Antes</div>
+                        <div class="text-gray-500">text-gray-500</div>
+                        <div class="text-gray-600">text-gray-600</div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <div class="text-green-600 text-sm mb-2">Después</div>
+                        <div class="text-gray-700">text-gray-700</div>
+                        <div class="text-gray-800">text-gray-800</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Instrucciones -->
+        <div class="mt-8 bg-blue-50 p-4 rounded-lg">
+            <h4 class="font-bold text-blue-800 mb-2">📋 Cómo probar:</h4>
+            <ol class="text-sm text-blue-700 space-y-1">
+                <li>1. Abre este archivo en tu móvil</li>
+                <li>2. Compara el contraste "ANTES" vs "DESPUÉS"</li>
+                <li>3. El texto "DESPUÉS" debe verse más oscuro y legible</li>
+                <li>4. Prueba bajo diferentes condiciones de luz</li>
+            </ol>
+        </div>
+        
+        <!-- Simulación de Artículo Real -->
+        <div class="mt-8">
+            <h3 class="text-lg font-bold mb-4">📄 Simulación de Artículo Real</h3>
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="h-32 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+                <div class="p-6">
+                    <div class="flex items-center gap-4 text-sm text-gray-700 md:text-gray-500 mb-3">
+                        <span>November 6, 2024</span>
+                        <span>•</span>
+                        <span>Jose Acosta</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">
+                        Building Real-time Data Pipelines with Apache Kafka
+                    </h2>
+                    <p class="text-gray-800 md:text-gray-600 leading-relaxed mb-4 line-clamp-3">
+                        Learn how to build scalable, real-time data pipelines using Apache Kafka. 
+                        This comprehensive guide covers everything from basic setup to advanced 
+                        production configurations for high-throughput systems.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-semibold text-green-500">Read Article</span>
+                        <i class="fas fa-arrow-right text-green-500"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    
+    <script>
+        // Detectar si es móvil real
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            document.body.style.background = '#e5f3ff';
+            const title = document.querySelector('h1');
+            title.innerHTML = '📱 MÓVIL REAL DETECTADO - Test Activo';
+            title.className += ' text-green-600';
+        }
+        
+        // Mostrar información del dispositivo
+        const info = document.createElement('div');
+        info.className = 'mt-4 p-4 bg-gray-800 text-white rounded-lg text-sm';
+        info.innerHTML = `
+            <strong>Información del Dispositivo:</strong><br>
+            User Agent: ${navigator.userAgent}<br>
+            Ancho de pantalla: ${window.innerWidth}px<br>
+            Es móvil: ${isMobile ? 'SÍ' : 'NO'}<br>
+            Pixel Ratio: ${window.devicePixelRatio}
+        `;
+        document.querySelector('.force-mobile').appendChild(info);
+    </script>
+</body>
+</html>

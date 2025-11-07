@@ -526,7 +526,12 @@ export default function About() {
                         description: 'Managed civil engineering projects including valuations, resource flows, and construction metrics. Delivered projects under constraints while coordinating with diverse stakeholders.',
                         achievements: ['Project delivery under constraints', 'Stakeholder communication', 'Resource optimization'],
                         color: 'orange'
-                      }ata sources.',
+                      },
+                      {
+                        period: 'Mid 2018 - 2022',
+                        title: 'Head of Trading & Quantitative Data Systems',
+                        company: 'Fintech Alca Group',
+                        description: 'Improved strategy backtesting throughput by automating portfolio optimization pipelines. Built data platform with ETL/ELT processes from market data sources.',
                         achievements: ['Automated backtesting pipeline', 'Data-driven investment decisions', 'Market data ETL platform'],
                         color: 'purple'
                       }
