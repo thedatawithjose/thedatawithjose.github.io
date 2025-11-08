@@ -85,7 +85,7 @@ export default function PrivacyPolicy() {
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p><strong>Email:</strong> datawithjose@outlook.com</p>
-                  <p><strong>Website:</strong> thedatawithjose.github.io</p>
+                  <p><strong>Website:</strong> datawithjose.tech</p>
                 </div>
               </section>
 

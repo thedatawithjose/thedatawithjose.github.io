@@ -154,10 +154,10 @@ export default function Footer() {
                 </div>
               </li>
               <li>
-                <div className="flex items-center text-gray-500">
-                  <div className="w-1.5 h-1.5 bg-gray-500 rounded-full mr-3 opacity-50"></div>
-                  <span className="italic text-sm">Terms of Service (Coming Soon)</span>
-                </div>
+                <Link href="/terms-of-service" className="group flex items-center text-gray-300 hover:text-[#42A5F5] transition-all duration-300">
+                  <div className="w-1.5 h-1.5 bg-[#42A5F5] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">Terms of Service</span>
+                </Link>
               </li>
             </ul>
           </motion.div>
