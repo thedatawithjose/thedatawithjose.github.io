@@ -572,7 +572,7 @@ export default function Home() {
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">About Me</h2>
               <p className="text-base sm:text-lg mb-6 sm:mb-8">
-                Data Engineer with expertise in building robust data systems. Passionate about enabling teams to make data-driven decisions through reliable engineering.
+                Data Engineer specializing in high-availability systems and real-time data pipelines. Former quant trader who builds the infrastructure that powers data-driven decisions. I bring construction project management discipline to data engineering—delivering systems that work under pressure, at scale, when it matters most.
               </p>
               <div className="flex flex-col sm:flex-row gap-6">
                 <Link 
