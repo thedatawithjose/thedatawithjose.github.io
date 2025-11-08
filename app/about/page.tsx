@@ -332,16 +332,10 @@ export default function About() {
                       manage constraints, and communicate with clarity across technical and non-technical teams. That background 
                       shaped how I approach systems today: with structure, accountability, and respect for the human side of engineering.
                     </p>
-                    <p className="text-lg mb-4 leading-relaxed">
+                    <p className="text-lg mb-6 leading-relaxed">
                       <strong>Philosophy:</strong> Data quality, latency, and reliability aren't "tech details"—they're 
                       business risk. When a pipeline fails and decisions can't wait, you learn to build for resilience, 
                       instrument everything, and ship only what you can monitor.
-                    </p>
-
-                    <p className="text-lg mb-6 leading-relaxed">
-                      <strong>Currently:</strong> I'm seeking full-time Data Engineering opportunities with teams building 
-                      mission-critical data systems. I also take on select consulting projects for startups and small businesses 
-                      that need hands-on help establishing reliable data infrastructure.
                     </p>
                     
                     {/* How I Build Section */}
@@ -459,6 +453,15 @@ export default function About() {
 
                     <h3 className="text-2xl font-bold mb-6">What I'm Looking For</h3>
                     
+                    {/* Currently Statement */}
+                    <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border-l-4 border-blue-500 mb-6">
+                      <p className="text-lg text-gray-800 leading-relaxed">
+                        <strong className="text-blue-700">Currently:</strong> I'm seeking full-time Data Engineering opportunities with teams building 
+                        mission-critical data systems. I also take on select consulting projects for startups and small businesses 
+                        that need hands-on help establishing reliable data infrastructure.
+                      </p>
+                    </div>
+                    
                     {/* Full-Time Opportunities */}
                     <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border-l-4 border-green-500 mb-6">
                       <h4 className="text-xl font-bold text-green-700 mb-3">
@@ -466,7 +469,7 @@ export default function About() {
                         Full-Time Data Engineering Roles
                       </h4>
                       <p className="text-lg text-gray-700 mb-4">
-                        I'm seeking positions with teams building mission-critical data systems in data-intensive products—where milliseconds matter and "close enough" breaks the business model.
+                        Positions with teams building mission-critical data systems in data-intensive products—where milliseconds matter and "close enough" breaks the business model.
                       </p>
                       <p className="text-gray-700 mb-4">
                         <strong>Domains that interest me:</strong> <strong className="text-green-700">Fintech</strong> (real-time pricing, risk models, trading infrastructure), 
