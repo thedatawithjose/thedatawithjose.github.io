@@ -142,7 +142,7 @@ export default function About() {
                     Data Engineer
                   </p>
                   <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
-                    Time-Series & Real-Time Systems | ex-Quant Trader | ex-Civil Engineer
+                    Time-Series & Real-Time Systems | ex-Quant Trader | ex-Construction Project Manager
                   </p>
                   <p className="text-lg md:text-xl text-green-400 leading-relaxed font-semibold mb-6">
                     Building high-availability data systems where reliability isn't optional
@@ -325,7 +325,7 @@ export default function About() {
                       Now I build the high-availability, real-time data systems I wished I'd had.
                     </p>
                     <p className="text-lg mb-4 leading-relaxed">
-                      Before that, I spent four years in Civil Engineering project management, learning to deliver under pressure, 
+                      Before that, I spent four years in construction project management, learning to deliver under pressure, 
                       manage constraints, and communicate with clarity across technical and non-technical teams. That background 
                       shaped how I approach systems today: with structure, accountability, and respect for the human side of engineering.
                     </p>
@@ -576,9 +576,9 @@ export default function About() {
                       },
                       {
                         period: '2014 - 2018',
-                        title: 'Civil Engineering Project Manager',
+                        title: 'Construction Project Manager',
                         company: 'Construction & Infrastructure',
-                        description: 'Managed civil engineering projects including valuations, resource flows, and construction metrics. Delivered projects under constraints while coordinating with diverse stakeholders.',
+                        description: 'Managed construction projects including valuations, resource flows, and project metrics. Delivered projects under constraints while coordinating with diverse stakeholders.',
                         achievements: ['Project delivery under constraints', 'Stakeholder communication', 'Resource optimization'],
                         color: 'orange'
                       }

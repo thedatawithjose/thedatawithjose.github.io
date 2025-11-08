@@ -60,13 +60,13 @@ export default function Home() {
   const heroSlides = [
     {
       title: "Data Systems That Don't Fail",
-      subtitle: "From building bridges to building data pipelines. Civil engineering principles applied to data infrastructure. 98%+ uptime, <500ms latency, 2TB+ daily processing.",
-      mobileSubtitle: "Civil engineering principles for data infrastructure. 98%+ uptime, <500ms latency.",
+      subtitle: "From managing construction projects to building data pipelines. Engineering principles applied to data infrastructure. 98%+ uptime, <500ms latency, 2TB+ daily processing.",
+      mobileSubtitle: "Engineering principles for data infrastructure. 98%+ uptime, <500ms latency.",
       gradient: "from-[#0A192F] via-[#1A3A52] to-[#005A9C]",
       cta: "Discuss Your Project",
       secondaryCta: "View Case Studies",
       details: {
-        description: "Civil Engineer turned Data Engineer. I bring the same rigor used for critical infrastructure to data systems - because your business depends on reliable, well-engineered solutions.",
+        description: "Construction Project Manager turned Data Engineer. I bring the same rigor used for critical infrastructure to data systems - because your business depends on reliable, well-engineered solutions.",
         features: [
           "Infrastructure Risk Assessment",
           "Load Testing & Capacity Planning",
@@ -106,7 +106,7 @@ export default function Home() {
     },
     {
       title: "Engineering-Grade Data Solutions",
-      subtitle: "Civil engineer precision meets trading floor urgency. Data systems with critical infrastructure rigor. 100K+ records/day, 98% quality, production-grade.",
+      subtitle: "Project management precision meets trading floor urgency. Data systems with critical infrastructure rigor. 100K+ records/day, 98% quality, production-grade.",
       mobileSubtitle: "Engineering precision meets trading urgency. 100K+ records/day, 98% quality, production-grade.",
       gradient: "from-[#0A192F] via-[#005A9C] to-[#003D7A]",
       cta: "View Solutions",
