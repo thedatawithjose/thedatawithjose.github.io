@@ -559,7 +559,7 @@ export default function About() {
                         color: 'green'
                       },
                       {
-                        period: '2023 - Jul 2024',
+                        period: 'Sep 2022 - Jul 2024',
                         title: 'Data Engineering Consultant',
                         company: 'International Clients',
                         description: 'Built end-to-end data platforms on AWS and Snowflake with dbt for analytics and ML. Developed real-time fraud/risk APIs using FastAPI and Kubernetes.',
@@ -567,7 +567,7 @@ export default function About() {
                         color: 'blue'
                       },
                       {
-                        period: 'Mid 2018 - 2022',
+                        period: 'Feb 2019 - Jul 2022',
                         title: 'Head of Trading & Quantitative Data Systems',
                         company: 'Fintech Alca Group',
                         description: 'Improved strategy backtesting throughput by automating portfolio optimization pipelines. Built data platform with ETL/ELT processes from market data sources.',
@@ -575,10 +575,10 @@ export default function About() {
                         color: 'purple'
                       },
                       {
-                        period: '2014 - 2018',
-                        title: 'Construction Project Manager',
-                        company: 'Construction & Infrastructure',
-                        description: 'Managed construction projects including valuations, resource flows, and project metrics. Delivered projects under constraints while coordinating with diverse stakeholders.',
+                        period: 'May 2014 - Dec 2017',
+                        title: 'Senior Construction Project Manager',
+                        company: 'Constructora Azurra, SA',
+                        description: 'Managed construction projects from planning through execution. Developed systems thinking and risk management approach through load calculations, structural risk assessment, and resource optimization under tight constraints.',
                         achievements: ['Project delivery under constraints', 'Stakeholder communication', 'Resource optimization'],
                         color: 'orange'
                       }
