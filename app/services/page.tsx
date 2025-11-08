@@ -124,6 +124,15 @@ export default function Services() {
         '100% Money-Back if Not Satisfied',
         'Delivered Within Timeline or Free Revisions',
         'No Hidden Fees - Fixed Price'
+      ],
+      paymentOptions: [
+        'Pay in Full: Save 5% ($1,425)',
+        '50% Upfront / 50% on Delivery'
+      ],
+      notIncluded: [
+        'Implementation or development work',
+        'Cloud infrastructure costs',
+        'Ongoing support beyond delivery'
       ]
     },
     implementation: {
@@ -145,6 +154,20 @@ export default function Services() {
         '30-Day Bug-Fix Guarantee',
         'Code Quality Assurance',
         'No Hidden Fees - Fixed Price'
+      ],
+      paymentOptions: [
+        'Pay in Full: Save 5% ($3,800)',
+        '50% Upfront / 50% on Delivery'
+      ],
+      notIncluded: [
+        'Cloud infrastructure costs (AWS/GCP/Azure)',
+        'Third-party software licenses',
+        'Ongoing maintenance beyond 30 days'
+      ],
+      addOns: [
+        { name: 'Additional Data Source', price: '$500', description: 'Integrate one more data source beyond the included 2-3' },
+        { name: 'Extra Dashboard', price: '$800', description: 'Additional custom dashboard with 5+ KPIs' },
+        { name: 'Documentation Workshop', price: '$400', description: '2-hour hands-on session explaining the system' }
       ]
     },
     complete: {
@@ -159,7 +182,7 @@ export default function Services() {
         'Advanced data quality monitoring with automated alerts',
         'Performance tuning and cloud cost optimization',
         '30 days of priority support & proactive maintenance (valued at $2,000)',
-        'Team training session (2 hours)',
+        'Hands-on walkthrough session (2 hours)',
         'Priority communication via Slack/Email with same-day response (business hours)'
       ],
       note: 'Maximum value package. Complete solution from strategic planning through production deployment. Individual components total $7,500.',
@@ -169,6 +192,19 @@ export default function Services() {
         '30-Day Bug-Fix Guarantee',
         'Priority Support Included',
         'No Hidden Fees - Fixed Price'
+      ],
+      paymentOptions: [
+        'Pay in Full: Save 5% ($6,175)',
+        '50% Upfront / 50% on Delivery'
+      ],
+      notIncluded: [
+        'Cloud infrastructure costs (AWS/GCP/Azure)',
+        'Third-party software licenses',
+        'Ongoing maintenance beyond 30 days'
+      ],
+      addOns: [
+        { name: 'Performance Audit', price: '$1,200', description: 'Deep-dive optimization: latency, cost, and throughput analysis' },
+        { name: 'Additional Walkthrough', price: '$400', description: 'Extra 2-hour session for knowledge transfer' }
       ]
     }
   };
@@ -607,6 +643,60 @@ export default function Services() {
                       </div>
                     )}
 
+                    {pkg.paymentOptions && (
+                      <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-xl p-4 mb-4">
+                        <h5 className="text-sm font-bold text-blue-800 mb-3 flex items-center">
+                          <i className="fas fa-credit-card mr-2"></i>
+                          Payment Options
+                        </h5>
+                        <ul className="space-y-2">
+                          {pkg.paymentOptions.map((option, idx) => (
+                            <li key={idx} className="flex items-start text-xs text-blue-700">
+                              <i className="fas fa-check-circle mr-2 mt-0.5 flex-shrink-0"></i>
+                              <span>{option}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {pkg.notIncluded && (
+                      <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-4 mb-4">
+                        <h5 className="text-sm font-bold text-yellow-800 mb-3 flex items-center">
+                          <i className="fas fa-exclamation-triangle mr-2"></i>
+                          Not Included
+                        </h5>
+                        <ul className="space-y-2">
+                          {pkg.notIncluded.map((item, idx) => (
+                            <li key={idx} className="flex items-start text-xs text-yellow-700">
+                              <i className="fas fa-times-circle mr-2 mt-0.5 flex-shrink-0"></i>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {pkg.addOns && pkg.addOns.length > 0 && (
+                      <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-4 mb-4">
+                        <h5 className="text-sm font-bold text-purple-800 mb-3 flex items-center">
+                          <i className="fas fa-plus-circle mr-2"></i>
+                          Available Add-Ons
+                        </h5>
+                        <ul className="space-y-3">
+                          {pkg.addOns.map((addon, idx) => (
+                            <li key={idx} className="text-xs text-purple-700">
+                              <div className="flex items-start justify-between mb-1">
+                                <span className="font-semibold">{addon.name}</span>
+                                <span className="font-bold text-purple-900">{addon.price}</span>
+                              </div>
+                              <p className="text-purple-600 leading-relaxed">{addon.description}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
                     {pkg.guarantees && (
                       <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-4 mb-8">
                         <h5 className="text-sm font-bold text-green-800 mb-3 flex items-center">
@@ -641,6 +731,104 @@ export default function Services() {
                 </motion.div>
               ))}
             </div>
+
+            {/* Comparison Table */}
+            <motion.div
+              className="mt-20 max-w-6xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h3 className="text-3xl font-bold text-center mb-12">Compare Packages</h3>
+              
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-gradient-to-r from-gray-50 to-gray-100">
+                        <th className="px-6 py-4 text-left text-sm font-bold text-gray-900">Feature</th>
+                        <th className="px-6 py-4 text-center text-sm font-bold text-blue-600">Strategy<br/><span className="text-xs font-normal text-gray-600">$1,500</span></th>
+                        <th className="px-6 py-4 text-center text-sm font-bold text-green-600">MVP Pipeline<br/><span className="text-xs font-normal text-gray-600">$4,000</span></th>
+                        <th className="px-6 py-4 text-center text-sm font-bold text-purple-600">Complete<br/><span className="text-xs font-normal text-gray-600">$6,500</span></th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-700">Discovery & Analysis</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-blue-500 text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-700">Architecture Roadmap</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-blue-500 text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-700">Data Pipeline Implementation</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-green-500 text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-700">Cloud Warehouse Setup</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-green-500 text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-700">BI Dashboard (5 KPIs)</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-green-500 text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-700">Data Quality Monitoring</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-700">Performance Optimization</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-700">Hands-on Walkthrough</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-700">Priority Support (30 days)</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
+                        <td className="px-6 py-4 text-center text-xs text-gray-600">Standard</td>
+                        <td className="px-6 py-4 text-center text-xs text-purple-600 font-semibold">Priority</td>
+                      </tr>
+                      <tr className="bg-gray-50 font-semibold">
+                        <td className="px-6 py-4 text-sm text-gray-900">Timeline</td>
+                        <td className="px-6 py-4 text-center text-sm text-blue-600">1-2 weeks</td>
+                        <td className="px-6 py-4 text-center text-sm text-green-600">4-6 weeks</td>
+                        <td className="px-6 py-4 text-center text-sm text-purple-600">8-10 weeks</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div className="text-center mt-8">
+                <p className="text-gray-600 mb-4">Not sure which package is right for you?</p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <i className="fas fa-comments mr-2"></i>
+                  Schedule Free Consultation
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </div>
 
