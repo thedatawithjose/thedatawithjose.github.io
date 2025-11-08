@@ -312,8 +312,9 @@ export default function Services() {
                 </p>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 inline-block">
                   <p className="text-gray-200 text-sm leading-relaxed italic">
-                    "10+ years building data systems in high-stakes environments where reliability 
-                    directly impacts revenue. From real-time trading pipelines to scalable data platforms."
+                    "Data Engineer with unique background: 3+ years building production data infrastructure, 
+                    backed by 4 years as Quantitative Trader working with high-frequency data systems. 
+                    Specialized in reliable, performance-critical pipelines where uptime and latency matter."
                   </p>
                 </div>
               </motion.div>
