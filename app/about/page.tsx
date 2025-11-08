@@ -144,8 +144,11 @@ export default function About() {
                   <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
                     Time-Series & Real-Time Systems | ex-Quant Trader | ex-Construction Project Manager
                   </p>
-                  <p className="text-lg md:text-xl text-green-400 leading-relaxed font-semibold mb-6">
+                  <p className="text-lg md:text-xl text-green-400 leading-relaxed font-semibold mb-2">
                     Building high-availability data systems where reliability isn't optional
+                  </p>
+                  <p className="text-base md:text-lg text-blue-300 leading-relaxed font-medium mb-6">
+                    Open to Full-Time Data Engineering Opportunities
                   </p>
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-6 border border-white/20">
                     <p className="text-gray-200 text-sm leading-relaxed italic">
@@ -334,6 +337,12 @@ export default function About() {
                       business risk. When a pipeline fails and decisions can't wait, you learn to build for resilience, 
                       instrument everything, and ship only what you can monitor.
                     </p>
+
+                    <p className="text-lg mb-6 leading-relaxed">
+                      <strong>Currently:</strong> I'm seeking full-time Data Engineering opportunities with teams building 
+                      mission-critical data systems. I also take on select consulting projects for startups and small businesses 
+                      that need hands-on help establishing reliable data infrastructure.
+                    </p>
                     
                     {/* How I Build Section */}
                     <div className="bg-gradient-to-br from-blue-50 to-green-50 p-6 rounded-xl border-l-4 border-green-500 mb-6">
@@ -449,33 +458,62 @@ export default function About() {
                     </div>
 
                     <h3 className="text-2xl font-bold mb-6">What I'm Looking For</h3>
-                    <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border-l-4 border-green-500">
+                    
+                    {/* Full-Time Opportunities */}
+                    <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border-l-4 border-green-500 mb-6">
+                      <h4 className="text-xl font-bold text-green-700 mb-3">
+                        <i className="fas fa-briefcase mr-2"></i>
+                        Full-Time Data Engineering Roles
+                      </h4>
                       <p className="text-lg text-gray-700 mb-4">
-                        Data Engineering roles in data-intensive products where milliseconds matter and "close enough" breaks the business model. 
-                        I'm drawn to problems in <strong>fintech</strong> (real-time pricing, risk models), <strong>e-commerce</strong> (inventory optimization, personalization), 
-                        <strong>logistics</strong> (supply-chain analytics), or <strong>SaaS</strong> (product analytics, usage-based billing)—domains where context and engineering rigor create real leverage.
+                        I'm seeking positions with teams building mission-critical data systems in data-intensive products—where milliseconds matter and "close enough" breaks the business model.
                       </p>
-                      <div className="grid grid-cols-2 gap-4 mt-4 text-sm text-gray-600">
+                      <p className="text-gray-700 mb-4">
+                        <strong>Domains that interest me:</strong> <strong className="text-green-700">Fintech</strong> (real-time pricing, risk models, trading infrastructure), 
+                        <strong className="text-green-700"> E-commerce</strong> (inventory optimization, recommendation engines), 
+                        <strong className="text-green-700"> Logistics</strong> (supply-chain analytics), 
+                        <strong className="text-green-700"> SaaS</strong> (product analytics, usage-based billing)
+                      </p>
+                      <div className="grid md:grid-cols-2 gap-4 mt-4 text-sm text-gray-600">
                         <div>
-                          <strong>Ideal environments:</strong>
+                          <strong>Ideal team environments:</strong>
                           <ul className="mt-1 space-y-1">
-                            <li>• High-stakes data systems where downtime has immediate business impact</li>
+                            <li>• High-stakes systems where downtime has immediate business impact</li>
                             <li>• Real-time requirements (streaming, event-driven architectures)</li>
-                            <li>• Cost-sensitive projects where optimization directly affects margins</li>
-                            <li>• Teams that treat data infrastructure as a product, not a cost center</li>
+                            <li>• Cost-sensitive projects where optimization affects margins</li>
+                            <li>• Culture that treats data infrastructure as a product, not a cost center</li>
                           </ul>
                         </div>
                         <div>
-                          <strong>What I bring:</strong>
+                          <strong>What I bring to both contexts:</strong>
                           <ul className="mt-1 space-y-1">
-                            <li>• Reliability-first mindset shaped by trading with real capital</li>
-                            <li>• Business impact focus—I speak both engineering and business language</li>
-                            <li>• Production-ready systems built for observability, not just delivery</li>
-                            <li>• Experience delivering under pressure with cross-functional teams</li>
+                            <li>• Reliability-first mindset shaped by years in high-stakes environments</li>
+                            <li>• Business impact focus—I translate between engineering and business language</li>
+                            <li>• Production-ready systems built for observability and long-term maintenance</li>
+                            <li>• Proven ability to deliver under pressure with cross-functional teams</li>
                           </ul>
                         </div>
                       </div>
-                      <p className="text-gray-600 mt-4 pt-4 border-t border-gray-200">
+                    </div>
+
+                    {/* Consulting & Project Work */}
+                    <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-l-4 border-purple-500 mb-6">
+                      <h4 className="text-xl font-bold text-purple-700 mb-3">
+                        <i className="fas fa-handshake mr-2"></i>
+                        Consulting & Project Work
+                      </h4>
+                      <p className="text-gray-700 mb-3">
+                        I also partner with select startups and growing businesses that need production-grade data infrastructure 
+                        but aren't ready for a full-time hire. For consulting services and project-based work, 
+                        <Link href="/services" className="text-purple-700 font-semibold hover:underline ml-1">
+                          view my services page →
+                        </Link>
+                      </p>
+                    </div>
+
+                    {/* Footer */}
+                    <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <p className="text-gray-600 leading-relaxed">
                         Happy to share repos, architectural diagrams, or walk through design decisions and trade-offs. 
                         I believe in building systems and cultures defined by clarity, empathy, and accountability.
                       </p>
