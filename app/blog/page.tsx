@@ -278,7 +278,7 @@ export default function Blog() {
                     type="email" 
                     placeholder="your@email.com"
                     aria-label="Enter your email address"
-                    className="flex-1 px-4 py-3 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder:text-gray-600"
+                    className="flex-1 px-4 py-3 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder:text-gray-400"
                   />
                   <button 
                     type="button"
