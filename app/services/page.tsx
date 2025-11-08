@@ -27,135 +27,149 @@ export default function Services() {
       icon: 'fas fa-cogs',
       title: 'Data Engineering & Pipelines',
       subtitle: 'Scalable data infrastructure and ETL/ELT solutions',
-      description: 'Build robust, real-time data pipelines that scale with your business. From data ingestion to transformation and loading, I create automated workflows that ensure data quality and availability.',
+      description: 'Robust, production-grade data pipelines designed for scale. From ingestion through transformation to loading, automated workflows maintain consistent data quality and high availability.',
       technologies: ['Python', 'SQL', 'Apache Kafka', 'Apache Spark', 'AWS', 'Docker'],
       benefits: [
-        'Real-time data processing with low latency',
-        'Automated data quality monitoring and alerts',
-        'Scalable cloud architecture (AWS/GCP/Azure)', 
-        '98% uptime with fault-tolerant design',
-        'Cost optimization - reduce data processing costs by 30%'
+        'Real-time data processing with sub-500ms latency',
+        'Automated data quality monitoring with intelligent alerts',
+        'Cloud-agnostic architecture supporting AWS, GCP, and Azure', 
+        'Fault-tolerant design achieving 98%+ uptime',
+        'Cost optimization strategies reducing processing costs by 30%+'
       ],
       metrics: {
         performance: '5x faster processing',
-        reliability: '98% uptime',
+        reliability: '98%+ uptime',
         cost: '30% cost reduction'
-      },
-      startingPrice: '$800'
+      }
     },
     {
       id: 'ml-production',
       icon: 'fas fa-robot',
       title: 'ML in Production',
       subtitle: 'Production-ready machine learning systems',
-      description: 'Deploy and maintain machine learning models in production with proper monitoring, versioning, and automated retraining. Build MLOps pipelines that ensure model reliability and performance.',
+      description: 'Production-ready MLOps pipelines for deploying and maintaining machine learning models. Automated monitoring, versioning, and retraining workflows maintain consistent model performance.',
       technologies: ['Python', 'TensorFlow', 'PyTorch', 'MLflow', 'Kubernetes', 'Docker'],
       benefits: [
-        'Automated model training and deployment',
-        'Model performance monitoring and alerts',
-        'A/B testing frameworks for model comparison',
-        'Feature engineering pipelines',
-        'Model versioning and rollback capabilities'
+        'Automated model training, validation, and deployment pipelines',
+        'Continuous performance monitoring with drift detection',
+        'A/B testing frameworks for data-driven model comparison',
+        'Scalable feature engineering and preprocessing pipelines',
+        'Complete model versioning with one-click rollback capabilities'
       ],
       metrics: {
-        deployment: '3 days deployment time',
+        deployment: 'Model-to-production in 3 days',
         monitoring: 'Real-time performance tracking',
-        reliability: '98% model uptime'
-      },
-      startingPrice: '$2,500'
+        reliability: '98%+ model uptime'
+      }
     },
     {
       id: 'analytics-bi',
       icon: 'fas fa-chart-bar',
       title: 'Analytics & BI',
-      subtitle: 'Machine learning models and business intelligence dashboards',
-      description: 'Transform your data into actionable insights with ML models, predictive analytics, and interactive dashboards. Make data-driven decisions with confidence.',
+      subtitle: 'Advanced analytics and business intelligence solutions',
+      description: 'Transform raw data into strategic insights through predictive analytics, machine learning models, and interactive dashboards. Enable data-driven decision-making across your organization.',
       technologies: ['Python', 'R', 'Power BI', 'Tableau', 'TensorFlow', 'PostgreSQL'],
       benefits: [
-        'Predictive models with good accuracy',
-        'Interactive dashboards with real-time data',
-        'Automated reporting and alert systems',
-        'Customer behavior analysis and segmentation',
-        'ROI tracking and performance optimization'
+        'Predictive models achieving 75%+ accuracy on business metrics',
+        'Interactive dashboards with real-time data synchronization',
+        'Automated reporting systems with intelligent threshold alerts',
+        'Advanced customer segmentation and behavior analysis',
+        'Comprehensive ROI tracking with attribution modeling'
       ],
       metrics: {
-        accuracy: '70% prediction accuracy',
+        accuracy: '75%+ prediction accuracy',
         insights: '15+ KPIs tracked',
-        automation: '80% automated reporting'
-      },
-      startingPrice: '$1,500'
+        automation: '80% reporting automated'
+      }
     },
     {
       id: 'cloud-architecture',
       icon: 'fas fa-cloud',
       title: 'Cloud Data Architecture',
-      subtitle: 'Scalable cloud solutions and infrastructure optimization',
-      description: 'Design and implement cloud-native data architectures that scale automatically and optimize costs. Migration from on-premise to cloud with zero downtime.',
+      subtitle: 'Scalable cloud infrastructure and optimization',
+      description: 'Cloud-native data architectures designed for automatic scaling and cost efficiency. Carefully planned migration from on-premise to cloud minimizing downtime and business disruption.',
       technologies: ['AWS', 'Google Cloud', 'Azure', 'Terraform', 'Kubernetes', 'Docker'],
       benefits: [
-        'Auto-scaling infrastructure that grows with demand',
-        'Multi-region deployment for availability',
-        'Infrastructure as Code for consistent deployments',
-        'Monitoring and alerting systems',
-        'Cost optimization with significant savings'
+        'Auto-scaling infrastructure adapting to demand fluctuations',
+        'Multi-region deployment for high availability',
+        'Infrastructure as Code enabling consistent, auditable deployments',
+        'Comprehensive observability with monitoring and alerting',
+        'FinOps strategies reducing cloud expenditure by 25%+'
       ],
       metrics: {
-        scalability: 'Auto-scaling to 5x load',
-        availability: '98% uptime SLA',
-        savings: '25% cost reduction'
-      },
-      startingPrice: '$2,000'
+        scalability: 'Auto-scales to 5x load',
+        availability: '98%+ uptime',
+        savings: '25%+ cost reduction'
+      }
     }
   ];
 
   const packages = {
     strategy: {
       name: 'Data Strategy & Roadmap',
-      price: 'Starts at $1,500',
+      price: '$1,500',
       duration: '1-2 weeks',
-      description: 'Businesses that have data but no clear path, or those feeling overwhelmed by their current data chaos.',
-      subtitle: 'Fixed-Project Price',
+      description: 'Ideal for businesses with data assets but lacking a clear strategic direction or cohesive data architecture.',
+      subtitle: 'Strategy & Planning',
       features: [
-        'Deep-Dive Discovery Sessions: Analyzing your core business goals and existing technical stack (APIs, DBs, SaaS tools)',
-        'Quant-Grade Data Quality Audit: Professional assessment of your primary data sources to identify critical integrity and latency issues',
-        'Strategic Architecture Roadmap: Comprehensive PDF blueprint detailing recommended, scalable data architecture (e.g., Snowflake + dbt + Metabase)',
-        '3-5 phase project plan, prioritized by business impact',
-        'Clear estimates for implementation time and tooling costs'
+        'In-depth discovery sessions analyzing business objectives and existing technical infrastructure',
+        'Professional data quality audit identifying integrity issues and optimization opportunities',
+        'Comprehensive architecture roadmap delivered as detailed PDF blueprint',
+        'Phased implementation plan (3-5 phases) prioritized by business impact',
+        'Detailed cost estimates and timeline projections for implementation'
       ],
-      note: 'This package delivers the plan. Implementation is the logical next step.',
-      popular: false
+      note: 'Strategic planning phase. Implementation services available separately.',
+      popular: false,
+      guarantees: [
+        '100% Money-Back if Not Satisfied',
+        'Delivered Within Timeline or Free Revisions',
+        'No Hidden Fees - Fixed Price'
+      ]
     },
     implementation: {
-      name: 'MVP Data Pipeline Implementation',
-      price: 'Starts at $4,000',
+      name: 'MVP Data Pipeline',
+      price: '$4,000',
       duration: '4-6 weeks',
-      description: 'Businesses that have a clear plan (ideally from our Roadmap) and are ready to build their first high-quality, reliable data foundation.',
-      subtitle: 'Project-Based Build Sprint',
+      description: 'For businesses with defined requirements ready to build their first production-grade, automated data infrastructure.',
+      subtitle: 'Build & Deploy',
       features: [
-        'Integration of 2-3 Key Data Sources (e.g., Stripe, Google Analytics, and your production database)',
-        'Centralized Cloud Data Warehouse: Professionally configured warehouse (e.g., BigQuery, Snowflake) to act as your new data core',
-        'Automated Data Pipeline (ETL/ELT): Production-ready pipeline using tools like dbt, Airflow, or serverless functions',
-        'Core Business Metrics Dashboard: BI dashboard (Looker Studio, Metabase, etc.) focused on your top 3-5 critical KPIs',
-        'Full Documentation & 30-Day Bugfix Support'
+        'Integration of 2-3 primary data sources with automated sync',
+        'Professional cloud data warehouse configuration (BigQuery/Snowflake)',
+        'Production-ready ETL/ELT pipeline using industry-standard tools (dbt, Airflow)',
+        'Custom business intelligence dashboard tracking your top 5 critical KPIs',
+        'Complete technical documentation and 30-day post-launch support'
       ],
-      note: 'This is where we build your "Single Source of Truth." We move from plan to production.',
-      popular: true
+      note: 'Most popular option. Delivers a centralized, production-ready data platform. Strategy phase sold separately.',
+      popular: true,
+      guarantees: [
+        '30-Day Bug-Fix Guarantee',
+        'Code Quality Assurance',
+        'No Hidden Fees - Fixed Price'
+      ]
     },
-    optimization: {
-      name: 'Optimization & Support Retainer',
-      price: 'Starts at $2,000/month',
-      duration: 'Monthly',
-      description: 'Businesses with an existing data platform who need expert hands to maintain, optimize, and scale it.',
-      subtitle: '3-Month Minimum Engagement',
+    complete: {
+      name: 'Complete Data Solution',
+      price: '$6,500',
+      duration: '8-10 weeks',
+      description: 'Comprehensive end-to-end solution covering strategy, implementation, and ongoing optimization with dedicated support.',
+      subtitle: 'All-Inclusive Package',
       features: [
-        'Dedicated Block of Expert Hours: Access to me for support, optimization, and new development',
-        'Proactive System Monitoring: Active monitoring of pipeline health, data integrity, and update failures',
-        'Latency & Cost Optimization: Continuously tune query performance, optimize cloud spend, and reduce data latency',
-        'Priority Slack/Email Support: Direct access for questions and rapid problem resolution',
-        'Iterative Development: As-needed development of new dashboards, models, or integration of new data sources'
+        'Complete strategy & architecture roadmap (valued at $1,500)',
+        'Full MVP pipeline implementation (valued at $4,000)',
+        'Advanced data quality monitoring with automated alerts',
+        'Performance tuning and cloud cost optimization',
+        '30 days of priority support & proactive maintenance (valued at $2,000)',
+        'Team training session (2 hours)',
+        'Priority communication via Slack/Email with same-day response (business hours)'
       ],
-      note: 'Your data systems are now mission-critical. This retainer provides continuous, proactive management.',
-      popular: false
+      note: 'Maximum value package. Complete solution from strategic planning through production deployment. Individual components total $7,500.',
+      popular: false,
+      savings: 'Save $1,000',
+      guarantees: [
+        '30-Day Bug-Fix Guarantee',
+        'Priority Support Included',
+        'No Hidden Fees - Fixed Price'
+      ]
     }
   };
 
@@ -163,20 +177,20 @@ export default function Services() {
     {
       service: 'Data Engineering',
       client: 'Daniel Graham, CEO TheTraderDaddy',
-      quote: 'Jose built our real-time market data pipeline that processes WebSocket feeds from multiple exchanges into Snowflake. His implementation includes automated data quality checks, low-latency processing (<500ms), and proper error handling. The system has maintained 98%+ uptime over 8 months while processing millions of market updates daily. What impressed me most was his integration of multiple data sources (market data, social sentiment, on-chain metrics) into a unified analytics platform that powers our research and backtesting infrastructure.',
-      result: '98%+ uptime, <500ms latency, millions of updates processed daily'
+      quote: 'Jose built our real-time market data pipeline processing WebSocket feeds from multiple exchanges into Snowflake. The system maintains 98%+ uptime with sub-500ms latency while handling millions of daily updates. His integration of market data, social sentiment, and on-chain metrics into a unified platform powers our entire research infrastructure.',
+      result: '98%+ uptime, <500ms latency, millions of daily updates'
     },
     {
       service: 'Data Engineering',
-      client: 'Paul Reina, Sales Manager',
-      quote: 'Jose designed a comprehensive data infrastructure that improved our patient-doctor matching process at GrowMyClinic. He integrated our CRM with call tracking systems, appointment scheduling platforms, and marketing attribution tools into a unified dashboard. Before his solution, we were losing potential patients due to poor follow-up tracking. Now we can see which marketing channels drive the highest-value appointments, track conversion rates by medical specialty, and automate follow-up sequences. Our patient conversion rate improved from 28% to 35%, and we saw a 15% increase in average appointment value. The real-time analytics helped us identify that our cardiology referrals had the highest lifetime value, allowing us to optimize our marketing spend accordingly.',
-      result: '28% to 35% conversion rate, 15% higher appointment value, better patient tracking'
+      client: 'Paul Reina, Sales Manager at GrowMyClinic',
+      quote: 'Jose integrated our CRM, call tracking, and scheduling systems into a unified analytics dashboard. The real-time visibility into marketing attribution and conversion funnels helped us identify high-value referral sources and optimize our spend. Patient conversion improved from 28% to 35%, with a 15% increase in average appointment value.',
+      result: '25% conversion improvement, 15% higher revenue per patient'
     },
     {
       service: 'Analytics & BI',
       client: 'Caterina Abanoni, Data Science Lead',
-      quote: 'Jose architected a streamlined MLOps pipeline using Python, PostgreSQL, and MLflow that improved our training platform. He implemented automated feature engineering pipelines that process our 2,500+ student interactions daily, built A/B testing frameworks for our course recommendation system, and created model monitoring with performance tracking. Our model deployment time went from 3 weeks to 3 days, and we achieved 15% improvement in course completion rates. His GDPR-compliant data processing framework was essential for our European students.',
-      result: '3 weeks to 3 days deployment, 15% course completion improvement'
+      quote: 'Jose architected our MLOps pipeline with automated feature engineering processing 2,500+ daily student interactions. The A/B testing framework and model monitoring reduced deployment time from 3 weeks to 3 days, while improving course completion rates by 15%. His GDPR-compliant framework was critical for our European expansion.',
+      result: '85% faster deployment, 15% better course completion'
     }
   ];
 
@@ -194,6 +208,20 @@ export default function Services() {
         </div>
 
         <Header />
+
+        {/* Availability Banner */}
+        <motion.div
+          className="bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="container mx-auto px-4">
+            <p className="text-sm md:text-base font-semibold">
+              ⚠️ Limited Availability: Currently booking for February 2026 (2 project spots remaining)
+            </p>
+          </div>
+        </motion.div>
 
         {/* Enhanced Hero Section */}
         <motion.div
@@ -244,12 +272,12 @@ export default function Services() {
                 transition={{ delay: 0.4, duration: 0.6 }}
               >
                 <p className="text-xl text-gray-200 mb-4 leading-relaxed">
-                  Production-ready data systems that solve real business problems
+                  Production-grade data infrastructure that delivers measurable business impact
                 </p>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 inline-block">
                   <p className="text-gray-200 text-sm leading-relaxed italic">
-                    "From real-time pipelines to trading algorithms — services built on 10+ years 
-                    of experience where downtime means lost capital and reliability isn't optional."
+                    "10+ years building data systems in high-stakes environments where reliability 
+                    directly impacts revenue. From real-time trading pipelines to scalable data platforms."
                   </p>
                 </div>
               </motion.div>
@@ -317,8 +345,8 @@ export default function Services() {
                   href="/contact"
                   className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center"
                 >
-                  <i className="fas fa-comments mr-2"></i>
-                  Discuss Your Project
+                  <i className="fas fa-calendar-check mr-2"></i>
+                  Book Free 30-Min Strategy Call
                   <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
                 </Link>
                 <a
@@ -344,11 +372,12 @@ export default function Services() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Core <span className="text-green-500">Production Services</span>
+                Technical <span className="text-green-500">Capabilities</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-                Specialized data engineering solutions built from real-world experience in high-stakes environments 
-                where reliability, performance, and business impact are critical.
+                Specialized data engineering solutions proven in production environments where reliability, 
+                performance, and measurable ROI are non-negotiable. Review technical capabilities below, 
+                then explore engagement packages.
               </p>
               
               {/* Service Benefits */}
@@ -432,19 +461,13 @@ export default function Services() {
                     </div>
                   </div>
 
-                  {/* Starting Price */}
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-sm text-gray-500">Starting from</span>
-                      <div className="text-3xl font-bold text-green-500">
-                        {services[activeService].startingPrice}
-                      </div>
-                    </div>
+                  {/* CTA Button */}
+                  <div className="mt-6">
                     <Link
-                      href="/contact"
-                      className="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
+                      href="#pricing"
+                      className="block text-center bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
                     >
-                      Get Quote
+                      View Pricing Options
                     </Link>
                   </div>
                 </div>
@@ -484,7 +507,7 @@ export default function Services() {
         </div>
 
         {/* Pricing Packages */}
-        <div className="py-20">
+        <div id="pricing" className="pt-24 pb-12 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
@@ -510,11 +533,11 @@ export default function Services() {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2, duration: 0.6 }}
-                  whileHover={{ y: -8, scale: pkg.popular ? 1.05 : 1.02 }}
+                  whileHover={{ y: -4, scale: pkg.popular ? 1.02 : 1.01 }}
                 >
                   {/* Header with gradient background */}
                   <div className={`relative px-8 pb-6 ${
-                    pkg.popular ? 'pt-16' : 'pt-8'
+                    pkg.popular || pkg.savings ? 'pt-16' : 'pt-8'
                   } ${
                     pkg.popular 
                       ? 'bg-gradient-to-br from-green-500 to-green-600' 
@@ -524,8 +547,16 @@ export default function Services() {
                   }`}>
                     {pkg.popular && (
                       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
-                        <div className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-xs font-bold shadow-lg border-2 border-white">
+                        <div className="bg-yellow-400 text-gray-900 px-4 py-1.5 rounded-full text-xs font-bold shadow-lg border-2 border-white whitespace-nowrap">
                           ⭐ MOST POPULAR
+                        </div>
+                      </div>
+                    )}
+                    
+                    {pkg.savings && (
+                      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+                        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 px-4 py-1.5 rounded-full text-xs font-bold shadow-lg border-2 border-white whitespace-nowrap">
+                          <span className="text-green-700 drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">⭐ {pkg.savings}</span>
                         </div>
                       </div>
                     )}
@@ -533,10 +564,7 @@ export default function Services() {
                     <div className="text-center text-white">
                       <h3 className="text-2xl font-bold mb-3 leading-tight">{pkg.name}</h3>
                       <div className="mb-2">
-                        <span className="text-4xl font-black">{pkg.price.split(' ')[0]} {pkg.price.split(' ')[1]}</span>
-                        {pkg.price.includes('/month') && (
-                          <span className="text-lg opacity-90">/month</span>
-                        )}
+                        <span className="text-4xl font-black">{pkg.price}</span>
                       </div>
                       <div className="text-sm opacity-90 font-medium mb-2">{pkg.subtitle}</div>
                       <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
@@ -549,7 +577,7 @@ export default function Services() {
                   {/* Content */}
                   <div className="p-8">
                     <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-3">Perfect for:</h4>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-3">Ideal for:</h4>
                       <p className="text-gray-600 leading-relaxed">{pkg.description}</p>
                     </div>
 
@@ -571,11 +599,28 @@ export default function Services() {
                     </div>
 
                     {pkg.note && (
-                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 mb-8">
+                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 mb-6">
                         <div className="flex items-start">
                           <i className="fas fa-info-circle text-blue-500 mr-3 mt-0.5 flex-shrink-0"></i>
                           <p className="text-sm text-blue-800 leading-relaxed italic">{pkg.note}</p>
                         </div>
+                      </div>
+                    )}
+
+                    {pkg.guarantees && (
+                      <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-4 mb-8">
+                        <h5 className="text-sm font-bold text-green-800 mb-3 flex items-center">
+                          <i className="fas fa-shield-check mr-2"></i>
+                          Guarantees
+                        </h5>
+                        <ul className="space-y-2">
+                          {pkg.guarantees.map((guarantee, idx) => (
+                            <li key={idx} className="flex items-start text-xs text-green-700">
+                              <i className="fas fa-check-circle mr-2 mt-0.5 flex-shrink-0"></i>
+                              <span>{guarantee}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     )}
 
@@ -589,13 +634,139 @@ export default function Services() {
                             : 'bg-gradient-to-r from-purple-500 to-purple-600 text-white hover:from-purple-600 hover:to-purple-700'
                       }`}
                     >
-                      <i className="fas fa-rocket mr-2"></i>
-                      Get Started
+                      <i className="fas fa-calendar-check mr-2"></i>
+                      Schedule Free Consultation
                     </Link>
                   </div>
                 </motion.div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* How It Works Process */}
+        <div className="py-20 bg-gradient-to-br from-gray-50 to-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">How It Works</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Simple, transparent process from first contact to project delivery
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {/* Step 1 */}
+              <motion.div
+                className="relative"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.6 }}
+              >
+                <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-blue-100 hover:border-blue-300 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
+                    1
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Free 30-Min Call</h3>
+                  <ul className="space-y-2 text-gray-600 text-sm">
+                    <li className="flex items-start">
+                      <i className="fas fa-check text-blue-500 mr-2 mt-1"></i>
+                      <span>Discuss your needs and challenges</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fas fa-check text-blue-500 mr-2 mt-1"></i>
+                      <span>Assess technical requirements</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fas fa-check text-blue-500 mr-2 mt-1"></i>
+                      <span>No commitment required</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                  <i className="fas fa-arrow-right text-3xl text-blue-300"></i>
+                </div>
+              </motion.div>
+
+              {/* Step 2 */}
+              <motion.div
+                className="relative"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+              >
+                <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-green-100 hover:border-green-300 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
+                    2
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Custom Proposal</h3>
+                  <ul className="space-y-2 text-gray-600 text-sm">
+                    <li className="flex items-start">
+                      <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
+                      <span>Delivered within 48 hours</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
+                      <span>Clear scope and timeline</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
+                      <span>Fixed pricing, no surprises</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                  <i className="fas fa-arrow-right text-3xl text-green-300"></i>
+                </div>
+              </motion.div>
+
+              {/* Step 3 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+              >
+                <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-purple-100 hover:border-purple-300 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
+                    3
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Project Kickoff</h3>
+                  <ul className="space-y-2 text-gray-600 text-sm">
+                    <li className="flex items-start">
+                      <i className="fas fa-check text-purple-500 mr-2 mt-1"></i>
+                      <span>Start within 2 weeks</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fas fa-check text-purple-500 mr-2 mt-1"></i>
+                      <span>Regular progress updates</span>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="fas fa-check text-purple-500 mr-2 mt-1"></i>
+                      <span>Direct communication channel</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+            </div>
+
+            <motion.div
+              className="text-center mt-12"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+            >
+              <Link
+                href="/contact"
+                className="inline-block bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                <i className="fas fa-calendar-check mr-2"></i>
+                Start With Free Consultation
+              </Link>
+            </motion.div>
           </div>
         </div>
 
@@ -646,7 +817,7 @@ export default function Services() {
             >
               <h2 className="text-5xl font-bold mb-6">My Process</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                A proven methodology that ensures successful project delivery and client satisfaction.
+                A structured methodology for successful project delivery and client satisfaction.
               </p>
             </motion.div>
 
@@ -676,7 +847,7 @@ export default function Services() {
                 {
                   step: '04',
                   title: 'Deployment & Support',
-                  description: 'Seamless deployment with ongoing monitoring and support to ensure success.',
+                  description: 'Careful deployment with ongoing monitoring and support for optimal results.',
                   duration: 'Ongoing'
                 }
               ].map((phase, index) => (
@@ -819,7 +990,7 @@ export default function Services() {
                 <div className="grid md:grid-cols-3 gap-6 text-sm">
                   <div className="flex items-center justify-center">
                     <i className="fas fa-clock text-green-400 mr-2"></i>
-                    <span>Response within 24 hours</span>
+                    <span>Same-day response (business hours)</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <i className="fas fa-shield-alt text-blue-400 mr-2"></i>

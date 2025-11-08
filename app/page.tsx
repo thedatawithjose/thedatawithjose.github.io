@@ -66,7 +66,7 @@ export default function Home() {
       cta: "Discuss Your Project",
       secondaryCta: "View Case Studies",
       details: {
-        description: "Civil Engineer turned Data Engineer. I bring the same rigor used for critical infrastructure to data systems - because your business depends on it working, always.",
+        description: "Civil Engineer turned Data Engineer. I bring the same rigor used for critical infrastructure to data systems - because your business depends on reliable, well-engineered solutions.",
         features: [
           "Infrastructure Risk Assessment",
           "Load Testing & Capacity Planning",
@@ -83,8 +83,8 @@ export default function Home() {
     },
     {
       title: "Real-Money Data Experience",
-      subtitle: "4 years putting real capital behind time-series models. When bad data means lost money, you build systems that never fail. <500ms execution, 24/7 monitoring.",
-      mobileSubtitle: "4 years trading with real capital. Systems that never fail. <500ms execution, 24/7 monitoring.",
+      subtitle: "4 years putting real capital behind time-series models. When bad data means lost money, you build highly reliable systems. <500ms execution, automated monitoring.",
+      mobileSubtitle: "4 years trading with real capital. Highly reliable systems. <500ms execution, automated monitoring.",
       gradient: "from-[#1A1A1A] via-[#0A192F] to-[#1A3A52]",
       cta: "View Data Solutions",
       secondaryCta: "See Case Studies",
@@ -94,20 +94,20 @@ export default function Home() {
           "Real-time Market Data Processing",
           "Risk Management Systems",
           "High-Frequency Data Validation",
-          "24/7 Production Monitoring"
+          "Automated Production Monitoring"
         ],
         metrics: [
           { value: "4", label: "Years Trading" },
           { value: "<500ms", label: "Execution Speed" },
           { value: "Real-time", label: "Data Processing" },
-          { value: "24/7", label: "System Monitoring" }
+          { value: "Automated", label: "System Monitoring" }
         ]
       }
     },
     {
       title: "Engineering-Grade Data Solutions",
-      subtitle: "Civil engineer precision meets trading floor urgency. Data systems with critical infrastructure rigor. 100K+ records/day, 98% quality, enterprise-grade.",
-      mobileSubtitle: "Engineering precision meets trading urgency. 100K+ records/day, 98% quality, enterprise-grade.",
+      subtitle: "Civil engineer precision meets trading floor urgency. Data systems with critical infrastructure rigor. 100K+ records/day, 98% quality, production-grade.",
+      mobileSubtitle: "Engineering precision meets trading urgency. 100K+ records/day, 98% quality, production-grade.",
       gradient: "from-[#0A192F] via-[#005A9C] to-[#003D7A]",
       cta: "View Solutions",
       secondaryCta: "Case Studies",
@@ -115,7 +115,7 @@ export default function Home() {
         description: "Combining structural engineering discipline with financial markets experience. I build data systems that don't just work - they work under pressure, at scale, when it matters most.",
         features: [
           "Production-Ready ML Systems",
-          "Enterprise Data Quality Standards",
+          "Professional Data Quality Standards",
           "Scalable Architecture Design",
           "Business-Critical Reliability"
         ],
@@ -230,8 +230,9 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 mb-16">
             {/* 2026 Modern Service Card 1 */}
+            <Link href="/services#real-time-pipelines">
             <motion.div
-              className="group relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 overflow-hidden"
+              className="group relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 overflow-hidden cursor-pointer"
               whileHover={{ scale: 1.03, y: -8, rotateY: 2 }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -308,10 +309,12 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
+            </Link>
 
             {/* 2026 Modern Service Card 2 */}
+            <Link href="/services#time-series-analytics">
             <motion.div
-              className="group relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 overflow-hidden"
+              className="group relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 overflow-hidden cursor-pointer"
               whileHover={{ scale: 1.03, y: -8, rotateY: -2 }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -388,10 +391,12 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
+            </Link>
 
             {/* 2026 Modern Service Card 3 */}
+            <Link href="/services#data-architecture">
             <motion.div
-              className="group relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 overflow-hidden"
+              className="group relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 overflow-hidden cursor-pointer"
               whileHover={{ scale: 1.03, y: -8, rotateY: 2 }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -468,6 +473,7 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
+            </Link>
           </div>
 
           {/* Value Proposition */}
@@ -636,7 +642,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-[#00BFA5] to-[#42A5F5] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-tachometer-alt text-2xl text-white"></i>
               </div>
-              <h3 className="text-3xl font-bold text-[#00BFA5] mb-2">70%</h3>
+              <h3 className="text-3xl font-bold text-[#00BFA5] mb-2">5x</h3>
               <p className="text-gray-300">Faster Data Processing</p>
             </motion.div>
             

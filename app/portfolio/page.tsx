@@ -45,7 +45,7 @@ export default function Portfolio() {
         'Total Trades': '1,247',
         'Avg Trade Duration': '3 days'
       },
-      image: '/images/projects/mean-reversion.jpg',
+      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop',
       link: '/portfolio/mean-reversion-ou',
       featured: true,
       clientTestimonial: "The trading bot delivered solid performance with good risk management.",
@@ -76,7 +76,7 @@ export default function Portfolio() {
         'Data Points Extracted': '10M+',
         'Uptime': '98%'
       },
-      image: '/images/projects/edgar-parser.jpg',
+      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop',
       link: '/portfolio/edgar-sec-parser',
       featured: true,
       clientTestimonial: "This parser significantly improved our regulatory compliance workflow.",
@@ -107,7 +107,7 @@ export default function Portfolio() {
         'Data Quality': '98%',
         'Cost Reduction': '25%'
       },
-      image: '/images/projects/data-pipeline.jpg',
+      image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&h=600&fit=crop',
       link: '/portfolio/financial-data-pipeline',
       featured: true,
       clientTestimonial: "The pipeline enhanced our data infrastructure capabilities.",
@@ -138,7 +138,7 @@ export default function Portfolio() {
         'Total Trades': '892',
         'Profit Factor': '1.4'
       },
-      image: '/images/projects/moving-average.jpg',
+      image: 'https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&h=600&fit=crop',
       link: '/portfolio/moving-average-bot',
       featured: false,
       clientTestimonial: "Consistent performance with excellent risk-adjusted returns.",
@@ -169,7 +169,7 @@ export default function Portfolio() {
         'Data Points/Second': '2K+',
         'User Satisfaction': '85%'
       },
-      image: '/images/projects/risk-dashboard.jpg',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
       link: '#',
       featured: false,
       clientTestimonial: "Essential tool for our daily risk management operations.",
@@ -200,7 +200,7 @@ export default function Portfolio() {
         'Models Deployed': '8+',
         'Training Time': '4 hours'
       },
-      image: '/images/projects/ml-engine.jpg',
+      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop',
       link: '#',
       featured: false,
       clientTestimonial: "The prediction accuracy met our expectations with solid performance.",
@@ -446,17 +446,17 @@ export default function Portfolio() {
                     damping: 30 
                   }}
                 >
-                  <div className={`relative h-48 bg-gradient-to-br ${
-                    project.category === 'trading' ? 'from-purple-500 to-pink-600' :
-                    project.category === 'data-engineering' ? 'from-green-500 to-blue-600' :
-                    'from-blue-500 to-indigo-600'
-                  } flex items-center justify-center`}>
-                    <div className="text-center">
-                      <i className={`fas ${project.category === 'trading' ? 'fa-chart-line' : project.category === 'data-engineering' ? 'fa-database' : 'fa-brain'} text-4xl text-white mb-4`}></i>
-                      <div className="text-white font-semibold">{project.type}</div>
-                    </div>
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
                       FEATURED
+                    </div>
+                    <div className="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-lg text-sm font-semibold">
+                      {project.type}
                     </div>
                   </div>
 
@@ -621,24 +621,21 @@ export default function Portfolio() {
                   layout
                 >
                   {/* Project Header */}
-                  <div className={`h-32 bg-gradient-to-br ${
-                    project.category === 'trading' ? 'from-purple-500 to-pink-600' :
-                    project.category === 'data-engineering' ? 'from-green-500 to-blue-600' :
-                    'from-blue-500 to-indigo-600'
-                  } flex items-center justify-center relative`}>
-                    <div className="text-center">
-                      <i className={`fas ${
-                        project.category === 'trading' ? 'fa-chart-line' :
-                        project.category === 'data-engineering' ? 'fa-database' :
-                        'fa-brain'
-                      } text-3xl text-white mb-2`}></i>
-                      <div className="text-white text-sm font-semibold">{project.type}</div>
-                    </div>
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     {project.featured && (
                       <div className="absolute top-2 right-2 bg-yellow-400 text-gray-900 px-2 py-1 rounded text-xs font-bold">
                         ⭐ FEATURED
                       </div>
                     )}
+                    <div className="absolute bottom-2 left-2 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-lg text-sm font-semibold">
+                      {project.type}
+                    </div>
                   </div>
 
                   <div className="p-6">

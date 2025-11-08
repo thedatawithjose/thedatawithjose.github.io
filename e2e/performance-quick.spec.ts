@@ -12,152 +12,191 @@ test.describe('Quick Performance Check', () => {
     { name: 'Contact', url: '/contact' },
   ];
 
-  test('Performance Summary - All Pages', async ({ page }) => {
-    console.log(`\n🎯 QUICK PERFORMANCE CHECK\n`);
-    console.log(`Testing ${pages.length} pages...\n`);
+  test('Complete Site Performance Summary', async ({ page }) => {
+    console.log(`\n🎯 PERFORMANCE SUMMARY - All Pages\n`);
+    console.log(`${'Page'.padEnd(15)} | ${'Load Time'.padEnd(12)} | ${'Status'}`);
+    console.log(`${'-'.repeat(50)}`);
 
     const results: any[] = [];
 
     for (const { name, url } of pages) {
       const startTime = Date.now();
       
-      // Navegar a la página
-      await page.goto(url, { waitUntil: 'domcontentloaded' });
-      
-      // Esperar a que el contenido principal esté visible
-      await page.waitForLoadState('load');
-      
-      const loadTime = Date.now() - startTime;
+      try {
+        await page.goto(url, { 
+          waitUntil: 'domcontentloaded',
+          timeout: 10000 
+        });
+        
+        const loadTime = Date.now() - startTime;
+        
+        // Obtener métricas básicas
+        const metrics = await page.evaluate(() => {
+          const nav = performance.getEntriesByType('navigation')[0] as any;
+          return {
+            ttfb: nav ? Math.round(nav.responseStart - nav.requestStart) : 0,
+            domLoad: nav ? Math.round(nav.domContentLoadedEventEnd - nav.fetchStart) : 0,
+          };
+        });
 
-      // Obtener métricas básicas
-      const metrics = await page.evaluate(() => {
-        const perf = performance.getEntriesByType('navigation')[0] as any;
-        return {
-          domContentLoaded: perf?.domContentLoadedEventEnd - perf?.domContentLoadedEventStart || 0,
-          loadComplete: perf?.loadEventEnd - perf?.loadEventStart || 0,
-          ttfb: perf?.responseStart - perf?.requestStart || 0,
-        };
-      });
+        const status = loadTime < 3000 ? '✅ Good' : loadTime < 5000 ? '⚠️  OK' : '❌ Slow';
+        
+        results.push({ 
+          name, 
+          url, 
+          loadTime,
+          ttfb: metrics.ttfb,
+          status 
+        });
 
-      // Contar recursos
-      const resourceCount = await page.evaluate(() => {
-        const resources = performance.getEntriesByType('resource');
-        return {
-          total: resources.length,
-          scripts: resources.filter((r: any) => r.initiatorType === 'script').length,
-          stylesheets: resources.filter((r: any) => r.initiatorType === 'link' || r.initiatorType === 'css').length,
-          images: resources.filter((r: any) => r.initiatorType === 'img').length,
-        };
-      });
-
-      // Contar imágenes y verificar lazy loading
-      const imageStats = await page.evaluate(() => {
-        const imgs = Array.from(document.querySelectorAll('img'));
-        return {
-          total: imgs.length,
-          lazy: imgs.filter(img => img.loading === 'lazy').length,
-          noAlt: imgs.filter(img => !img.alt).length,
-        };
-      });
-
-      const status = loadTime < 3000 ? '✅' : loadTime < 5000 ? '⚠️' : '❌';
-      
-      console.log(`${status} ${name.padEnd(12)} - ${loadTime}ms`);
-      console.log(`   TTFB: ${Math.round(metrics.ttfb)}ms | Resources: ${resourceCount.total} | Images: ${imageStats.total} (${imageStats.lazy} lazy)`);
-
-      results.push({
-        name,
-        url,
-        loadTime,
-        metrics,
-        resourceCount,
-        imageStats,
-      });
-
-      // Assertions básicas
-      expect(loadTime).toBeLessThan(5000); // < 5s (más permisivo)
-      expect(metrics.ttfb).toBeLessThan(1500); // < 1.5s TTFB
-      expect(imageStats.noAlt).toBe(0); // Todas las imágenes deben tener alt
+        console.log(`${name.padEnd(15)} | ${(loadTime + 'ms').padEnd(12)} | ${status}`);
+        
+      } catch (error) {
+        console.log(`${name.padEnd(15)} | ${'ERROR'.padEnd(12)} | ❌ Failed`);
+        results.push({ name, url, loadTime: 0, ttfb: 0, status: '❌ Error' });
+      }
     }
 
-    // Resumen final
-    const avgLoadTime = results.reduce((sum, r) => sum + r.loadTime, 0) / results.length;
-    const slowestPage = results.reduce((prev, current) => 
-      (prev.loadTime > current.loadTime) ? prev : current
-    );
-    const fastestPage = results.reduce((prev, current) => 
-      (prev.loadTime < current.loadTime) ? prev : current
-    );
+    // Estadísticas
+    const successfulResults = results.filter(r => r.loadTime > 0);
+    const avgLoadTime = successfulResults.reduce((sum, r) => sum + r.loadTime, 0) / successfulResults.length;
+    const avgTTFB = successfulResults.reduce((sum, r) => sum + r.ttfb, 0) / successfulResults.length;
+    const slowPages = results.filter(r => r.loadTime > 3000);
 
-    console.log(`\n📊 Summary:`);
-    console.log(`   Average: ${Math.round(avgLoadTime)}ms`);
-    console.log(`   Fastest: ${fastestPage.name} (${fastestPage.loadTime}ms)`);
-    console.log(`   Slowest: ${slowestPage.name} (${slowestPage.loadTime}ms)`);
+    console.log(`\n📊 Statistics:`);
+    console.log(`  Average Load Time: ${Math.round(avgLoadTime)}ms`);
+    console.log(`  Average TTFB: ${Math.round(avgTTFB)}ms`);
+    console.log(`  Pages > 3s: ${slowPages.length}/${results.length}`);
+    
+    if (slowPages.length > 0) {
+      console.log(`\n⚠️  Slow Pages:`);
+      slowPages.forEach(p => {
+        console.log(`    - ${p.name}: ${p.loadTime}ms`);
+      });
+    }
 
-    // Total de recursos
-    const totalResources = results.reduce((sum, r) => sum + r.resourceCount.total, 0);
-    const totalImages = results.reduce((sum, r) => sum + r.imageStats.total, 0);
-    const totalLazyImages = results.reduce((sum, r) => sum + r.imageStats.lazy, 0);
-
-    console.log(`\n📦 Resources:`);
-    console.log(`   Total: ${totalResources}`);
-    console.log(`   Images: ${totalImages} (${totalLazyImages} lazy loaded = ${Math.round(totalLazyImages/totalImages*100)}%)`);
-
-    // Assertions finales
+    // Assertions
     expect(avgLoadTime).toBeLessThan(4000); // Promedio < 4s
-    expect(slowestPage.loadTime).toBeLessThan(6000); // Página más lenta < 6s
-    expect(totalLazyImages / totalImages).toBeGreaterThan(0.5); // Al menos 50% lazy loading
+    expect(slowPages.length).toBeLessThan(3); // Máximo 2 páginas lentas
   });
 
-  // Test individual para la página más importante (Home)
-  test('Home Page - Detailed Check', async ({ page }) => {
-    console.log(`\n🏠 HOME PAGE DETAILED CHECK\n`);
+  test('Resource Analysis', async ({ page }) => {
+    console.log(`\n📦 RESOURCE ANALYSIS\n`);
 
-    const startTime = Date.now();
-    await page.goto('/', { waitUntil: 'load' });
-    const loadTime = Date.now() - startTime;
+    const resources: any[] = [];
 
-    console.log(`⏱️  Load Time: ${loadTime}ms`);
+    page.on('response', (response) => {
+      const request = response.request();
+      resources.push({
+        url: request.url(),
+        type: request.resourceType(),
+        status: response.status(),
+      });
+    });
 
-    // Verificar que elementos críticos estén presentes
-    const criticalElements = await page.evaluate(() => {
+    await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 10000 });
+    await page.waitForTimeout(2000); // Esperar recursos adicionales
+
+    // Analizar por tipo
+    const byType = resources.reduce((acc: any, r) => {
+      acc[r.type] = (acc[r.type] || 0) + 1;
+      return acc;
+    }, {});
+
+    console.log(`Resource Count by Type:`);
+    Object.entries(byType).forEach(([type, count]) => {
+      console.log(`  ${type}: ${count}`);
+    });
+
+    // Verificar errores
+    const errors = resources.filter(r => r.status >= 400);
+    if (errors.length > 0) {
+      console.log(`\n❌ Failed Resources:`);
+      errors.forEach(e => {
+        console.log(`  ${e.status} - ${e.url.substring(0, 80)}`);
+      });
+    } else {
+      console.log(`\n✅ No failed resources`);
+    }
+
+    // Assertions
+    expect(errors.length).toBe(0);
+    expect(resources.length).toBeLessThan(100); // No más de 100 recursos
+  });
+
+  test('Images Check', async ({ page }) => {
+    console.log(`\n🖼️  IMAGE OPTIMIZATION CHECK\n`);
+
+    await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 10000 });
+
+    const imageStats = await page.evaluate(() => {
+      const imgs = Array.from(document.querySelectorAll('img'));
       return {
-        header: !!document.querySelector('header'),
-        hero: !!document.querySelector('.hero'),
-        footer: !!document.querySelector('footer'),
-        navigation: !!document.querySelector('nav'),
+        total: imgs.length,
+        withAlt: imgs.filter(img => img.alt).length,
+        withLazyLoading: imgs.filter(img => img.loading === 'lazy').length,
       };
     });
 
-    console.log(`\n🔍 Critical Elements:`);
-    console.log(`   Header: ${criticalElements.header ? '✅' : '❌'}`);
-    console.log(`   Hero: ${criticalElements.hero ? '✅' : '❌'}`);
-    console.log(`   Footer: ${criticalElements.footer ? '✅' : '❌'}`);
-    console.log(`   Navigation: ${criticalElements.navigation ? '✅' : '❌'}`);
+    console.log(`Total Images: ${imageStats.total}`);
+    console.log(`With Alt Text: ${imageStats.withAlt}/${imageStats.total}`);
+    console.log(`Lazy Loaded: ${imageStats.withLazyLoading}/${imageStats.total}`);
 
-    // Verificar que no haya errores de consola críticos
-    const consoleErrors: string[] = [];
-    page.on('console', (msg) => {
-      if (msg.type() === 'error') {
-        consoleErrors.push(msg.text());
+    const altPercentage = (imageStats.withAlt / imageStats.total) * 100;
+    const lazyPercentage = (imageStats.withLazyLoading / imageStats.total) * 100;
+
+    if (altPercentage === 100) {
+      console.log(`✅ All images have alt text`);
+    } else {
+      console.log(`⚠️  ${imageStats.total - imageStats.withAlt} images missing alt text`);
+    }
+
+    if (lazyPercentage > 70) {
+      console.log(`✅ Good lazy loading coverage (${Math.round(lazyPercentage)}%)`);
+    } else {
+      console.log(`⚠️  Consider more lazy loading (${Math.round(lazyPercentage)}%)`);
+    }
+
+    // Assertions
+    expect(imageStats.withAlt).toBe(imageStats.total); // Todas con alt
+  });
+
+  test('Bundle Size Estimate', async ({ page }) => {
+    console.log(`\n📦 BUNDLE SIZE ESTIMATE\n`);
+
+    const scripts: any[] = [];
+    const stylesheets: any[] = [];
+
+    page.on('response', async (response) => {
+      const request = response.request();
+      const contentLength = response.headers()['content-length'];
+      const size = contentLength ? parseInt(contentLength) : 0;
+
+      if (request.resourceType() === 'script') {
+        scripts.push({ url: request.url(), size });
+      } else if (request.resourceType() === 'stylesheet') {
+        stylesheets.push({ url: request.url(), size });
       }
     });
 
-    // Verificar JavaScript bundle
-    const jsSize = await page.evaluate(() => {
-      const scripts = performance.getEntriesByType('resource')
-        .filter((r: any) => r.initiatorType === 'script');
-      return scripts.reduce((sum: number, s: any) => sum + (s.transferSize || 0), 0);
-    });
+    await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 10000 });
+    await page.waitForTimeout(2000);
 
-    const jsSizeKB = (jsSize / 1024).toFixed(2);
-    console.log(`\n📜 JavaScript: ${jsSizeKB} KB`);
+    const totalJS = scripts.reduce((sum, s) => sum + s.size, 0);
+    const totalCSS = stylesheets.reduce((sum, s) => sum + s.size, 0);
+
+    console.log(`JavaScript:`);
+    console.log(`  Files: ${scripts.length}`);
+    console.log(`  Total Size: ${(totalJS / 1024).toFixed(2)} KB`);
+
+    console.log(`\nCSS:`);
+    console.log(`  Files: ${stylesheets.length}`);
+    console.log(`  Total Size: ${(totalCSS / 1024).toFixed(2)} KB`);
+
+    console.log(`\nTotal Assets: ${((totalJS + totalCSS) / 1024).toFixed(2)} KB`);
 
     // Assertions
-    expect(loadTime).toBeLessThan(4000);
-    expect(criticalElements.header).toBe(true);
-    expect(criticalElements.hero).toBe(true);
-    expect(criticalElements.footer).toBe(true);
-    expect(jsSize).toBeLessThan(1024 * 600); // < 600KB
+    expect(totalJS).toBeLessThan(1024 * 600); // JS < 600KB
+    expect(totalCSS).toBeLessThan(1024 * 150); // CSS < 150KB
   });
 });

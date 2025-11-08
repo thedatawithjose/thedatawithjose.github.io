@@ -8,7 +8,7 @@ const projects = [
     title: "Edgar SEC Parser",
     description: "Advanced Financial Document Processing System with 16.51 MB/s peak throughput and 100% error recovery rate.",
     category: "Data Engineering",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop",
     tech: ["Python", "SQLAlchemy", "PostgreSQL", "secsgml", "secxbrl"],
     metrics: {
       throughput: "16.51 MB/s",
@@ -27,7 +27,7 @@ const projects = [
     title: "Financial Data Pipeline",
     description: "Production-ready ETL pipeline for financial market data with 98%+ uptime and comprehensive data quality validation.",
     category: "Data Engineering",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&h=600&fit=crop",
     tech: ["Python", "Pandas", "PostgreSQL", "TimescaleDB", "Docker"],
     metrics: {
       records: "1M+/day",
@@ -46,7 +46,7 @@ const projects = [
     title: "Mean Reversion OU Bot",
     description: "Automated trading bot using Ornstein-Uhlenbeck process with 17.89% CAGR and 2.34 Sharpe ratio.",
     category: "Data Engineering",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop",
     tech: ["Python", "Pandas", "NumPy", "SciPy", "Matplotlib"],
     metrics: {
       cagr: "17.89%",
@@ -65,7 +65,7 @@ const projects = [
     title: "Moving Average Bot",
     description: "Algorithmic trading bot with moving average crossover strategy, operating profitably 24/7 with 15.67% CAGR.",
     category: "Data Engineering",
-    image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=400&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&h=600&fit=crop",
     tech: ["Python", "Pandas", "Backtrader", "REST API", "Docker"],
     metrics: {
       cagr: "15.67%",
@@ -175,6 +175,7 @@ export default function InteractivePortfolio() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-[#00BFA5] text-white px-4 py-2 rounded-lg hover:bg-[#00D4B4] transition-colors"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <i className="fas fa-external-link-alt mr-2"></i>
                       Live Demo
@@ -184,6 +185,7 @@ export default function InteractivePortfolio() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <i className="fab fa-github mr-2"></i>
                       Code
