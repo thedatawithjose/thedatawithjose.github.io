@@ -648,7 +648,7 @@ export default function Services() {
                 >
                   {/* Header with gradient background */}
                   <div className={`relative px-8 pb-6 ${
-                    pkg.popular || pkg.savings ? 'pt-16' : 'pt-8'
+                    pkg.popular || ('savings' in pkg && pkg.savings) ? 'pt-16' : 'pt-8'
                   } ${
                     pkg.popular 
                       ? 'bg-gradient-to-br from-green-500 to-green-600' 

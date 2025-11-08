@@ -59,14 +59,14 @@ export default function Home() {
 
   const heroSlides = [
     {
-      title: "Data Systems That Don't Fail",
-      subtitle: "From managing construction projects to building data pipelines. Engineering principles applied to data infrastructure. 98%+ uptime, <500ms latency, 2TB+ daily processing.",
-      mobileSubtitle: "Engineering principles for data infrastructure. 98%+ uptime, <500ms latency.",
+      title: "Data Engineer | Open to Full-Time Opportunities",
+      subtitle: "10+ years professional experience: Construction PM → Quant Trader → Data Engineer. I've seen bridges fail and trading systems crash. Now I build data infrastructure that survives both. 98%+ uptime, <500ms latency, 2TB+ daily processing.",
+      mobileSubtitle: "10+ years experience. Infrastructure that survives failure. 98%+ uptime, <500ms latency.",
       gradient: "from-[#0A192F] via-[#1A3A52] to-[#005A9C]",
-      cta: "Discuss Your Project",
-      secondaryCta: "View Case Studies",
+      cta: "Available for Full-Time",
+      secondaryCta: "View Consulting Services",
       details: {
-        description: "Construction Project Manager turned Data Engineer. I bring the same rigor used for critical infrastructure to data systems - because your business depends on reliable, well-engineered solutions.",
+        description: "Most data engineers haven't managed projects where failure means lawsuits, or traded with real capital where downtime costs thousands per minute. I have. That's the difference.",
         features: [
           "Infrastructure Risk Assessment",
           "Load Testing & Capacity Planning",
@@ -74,22 +74,22 @@ export default function Home() {
           "Mission-Critical Reliability"
         ],
         metrics: [
-          { value: "98%+", label: "System Uptime" },
-          { value: "2TB+", label: "Daily Processing" },
-          { value: "<500ms", label: "Pipeline Latency" },
+          { value: "3 Years", label: "DE Experience" },
+          { value: "10+", label: "Projects Delivered" },
+          { value: "Real-time", label: "Data Processing" },
           { value: "25%", label: "Cost Reduction" }
         ]
       }
     },
     {
       title: "Real-Money Data Experience",
-      subtitle: "Four years putting real capital behind time-series models. When bad data means lost money, you build highly reliable systems. <500ms execution, automated monitoring.",
-      mobileSubtitle: "Four years trading with real capital. Highly reliable systems. <500ms execution, automated monitoring.",
+      subtitle: "Four years putting real capital behind time-series models. When bad data means lost money, you build systems that don't fail. Period. <500ms execution, automated monitoring.",
+      mobileSubtitle: "Four years trading with real capital. Systems that don't fail. <500ms execution.",
       gradient: "from-[#1A1A1A] via-[#0A192F] to-[#1A3A52]",
-      cta: "View Data Solutions",
-      secondaryCta: "See Case Studies",
+      cta: "Let's Connect",
+      secondaryCta: "View Services",
       details: {
-        description: "Four years of quantitative trading taught me that data quality isn't optional—it's survival. Every millisecond mattered, every data point had to be right. I build data systems with the same obsession for accuracy and speed that kept me profitable in live markets.",
+        description: "Four years of quantitative trading where every millisecond mattered and every data point had to be right. I build data systems with the same obsession for accuracy and speed that kept me profitable in live markets. No excuses, no downtime.",
         features: [
           "Real-time Market Data Processing",
           "Risk Management Systems",
@@ -106,13 +106,13 @@ export default function Home() {
     },
     {
       title: "Engineering-Grade Data Solutions",
-      subtitle: "Project management precision meets trading floor urgency. Data systems with critical infrastructure rigor. 100K+ records/day, 98% quality, production-grade.",
-      mobileSubtitle: "Engineering precision meets trading urgency. 100K+ records/day, 98% quality, production-grade.",
+      subtitle: "Construction projects fail when you ignore load calculations. Trading systems fail when you ignore latency. Data pipelines fail when you ignore data quality. I don't ignore any of it. 100K+ records/day, 98% quality, battle-tested.",
+      mobileSubtitle: "Data pipelines that don't fail. 100K+ records/day, 98% quality, battle-tested.",
       gradient: "from-[#0A192F] via-[#005A9C] to-[#003D7A]",
-      cta: "View Solutions",
-      secondaryCta: "Case Studies",
+      cta: "Discuss Opportunities",
+      secondaryCta: "View Background",
       details: {
-        description: "Combining structural engineering discipline with financial markets experience. I build data systems that don't just work - they work under pressure, at scale, when it matters most.",
+        description: "Construction taught me: bad architecture is expensive to fix later. Trading taught me: systems that can't handle volatility don't survive. Data engineering taught me: most teams learn these lessons the hard way. You don't have to.",
         features: [
           "Production-Ready ML Systems",
           "Professional Data Quality Standards",
@@ -254,8 +254,7 @@ export default function Home() {
                   </div>
                   <div className="text-right">
                     <div className="inline-flex items-center px-3 py-1 bg-[#42A5F5]/10 rounded-full border border-[#42A5F5]/20">
-                      <div className="w-2 h-2 bg-[#42A5F5] rounded-full mr-2 animate-pulse"></div>
-                      <span className="text-xs font-semibold text-[#42A5F5] tracking-wide">ACTIVE</span>
+                      <span className="text-xs font-bold text-[#42A5F5] tracking-wide">98%+ Uptime</span>
                     </div>
                   </div>
                 </div>
@@ -269,7 +268,7 @@ export default function Home() {
                 </div>
                 
                 <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                  Four years trading taught me: when your pipeline goes down at market open, you lose money every second. 
+                  Trading experience taught me: when your pipeline goes down at market open, you lose money every second. 
                   I build systems that stay up—98%+ uptime, automatic recovery, monitored obsessively.
                 </p>
                 
@@ -296,13 +295,7 @@ export default function Home() {
                 </div>
                 
                 {/* Enhanced Footer */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <div className="flex items-center space-x-2">
-                    <div className="px-3 py-1 bg-gradient-to-r from-[#42A5F5]/10 to-[#2196F3]/10 rounded-full">
-                      <span className="text-sm font-bold text-[#42A5F5]">98%+</span>
-                    </div>
-                    <span className="text-xs text-gray-500 font-medium">uptime achieved</span>
-                  </div>
+                <div className="flex items-center justify-end pt-4 border-t border-gray-100">
                   <div className="w-10 h-10 bg-[#42A5F5]/5 rounded-full flex items-center justify-center group-hover:bg-[#42A5F5] group-hover:scale-110 transition-all duration-300">
                     <i className="fas fa-arrow-right text-[#42A5F5] group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
                   </div>
@@ -336,8 +329,7 @@ export default function Home() {
                   </div>
                   <div className="text-right">
                     <div className="inline-flex items-center px-3 py-1 bg-[#00BFA5]/10 rounded-full border border-[#00BFA5]/20">
-                      <div className="w-2 h-2 bg-[#00BFA5] rounded-full mr-2 animate-pulse"></div>
-                      <span className="text-xs font-semibold text-[#00BFA5] tracking-wide">LIVE</span>
+                      <span className="text-xs font-bold text-[#00BFA5] tracking-wide">&lt;500ms Latency</span>
                     </div>
                   </div>
                 </div>
@@ -378,13 +370,7 @@ export default function Home() {
                 </div>
                 
                 {/* Enhanced Footer */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <div className="flex items-center space-x-2">
-                    <div className="px-3 py-1 bg-gradient-to-r from-[#00BFA5]/10 to-[#00D4B4]/10 rounded-full">
-                      <span className="text-sm font-bold text-[#00BFA5]">&lt;500ms</span>
-                    </div>
-                    <span className="text-xs text-gray-500 font-medium">avg latency</span>
-                  </div>
+                <div className="flex items-center justify-end pt-4 border-t border-gray-100">
                   <div className="w-10 h-10 bg-[#00BFA5]/5 rounded-full flex items-center justify-center group-hover:bg-[#00BFA5] group-hover:scale-110 transition-all duration-300">
                     <i className="fas fa-arrow-right text-[#00BFA5] group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
                   </div>
@@ -418,8 +404,7 @@ export default function Home() {
                   </div>
                   <div className="text-right">
                     <div className="inline-flex items-center px-3 py-1 bg-[#005A9C]/10 rounded-full border border-[#005A9C]/20">
-                      <div className="w-2 h-2 bg-[#005A9C] rounded-full mr-2 animate-pulse"></div>
-                      <span className="text-xs font-semibold text-[#005A9C] tracking-wide">CLOUD</span>
+                      <span className="text-xs font-bold text-[#005A9C] tracking-wide">25% Cost Savings</span>
                     </div>
                   </div>
                 </div>
@@ -433,7 +418,7 @@ export default function Home() {
                 </div>
                 
                 <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                  Construction projects taught me: bad architecture is expensive to fix later. I design data systems 
+                  Engineering discipline from construction: bad architecture is expensive to fix later. I design data systems 
                   the same way—thinking about failure modes, maintenance costs, and what happens at 3x scale.
                 </p>
                 
@@ -460,13 +445,7 @@ export default function Home() {
                 </div>
                 
                 {/* Enhanced Footer */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <div className="flex items-center space-x-2">
-                    <div className="px-3 py-1 bg-gradient-to-r from-[#005A9C]/10 to-[#0066CC]/10 rounded-full">
-                      <span className="text-sm font-bold text-[#005A9C]">25%</span>
-                    </div>
-                    <span className="text-xs text-gray-500 font-medium">cost reduction</span>
-                  </div>
+                <div className="flex items-center justify-end pt-4 border-t border-gray-100">
                   <div className="w-10 h-10 bg-[#005A9C]/5 rounded-full flex items-center justify-center group-hover:bg-[#005A9C] group-hover:scale-110 transition-all duration-300">
                     <i className="fas fa-arrow-right text-[#005A9C] group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
                   </div>
@@ -487,7 +466,7 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Why Choose My Data Engineering?</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  <strong>Eight years of real-world pressure:</strong> Four years managing construction projects taught me to plan for failure modes and deliver under constraints. Four years trading with real capital taught me that data quality isn't optional—it's survival. I build data systems with both disciplines.
+                  <strong>10+ years of professional experience across high-stakes environments:</strong> Four years managing construction projects taught me to plan for failure modes and deliver under constraints. Four years as quantitative trader taught me that data quality isn't optional—it's survival. Now, three years as Data Engineer, I build infrastructure combining both disciplines—engineered for reliability, tested under pressure.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg">
@@ -546,13 +525,13 @@ export default function Home() {
                 Explore Data Solutions
                 <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
               </Link>
-              <Link 
-                href="/contact" 
+              <a 
+                href="mailto:datawithjose@outlook.com?subject=Introduction Call&body=Hi Jose, I'd like to schedule an introduction call..."
                 className="group border-2 border-[#005A9C] text-[#005A9C] hover:bg-[#005A9C] hover:text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center"
               >
-                <i className="fas fa-handshake mr-2"></i>
-                Let's Build Together
-              </Link>
+                <i className="fas fa-calendar mr-2"></i>
+                Schedule Introduction Call
+              </a>
             </div>
             <p className="text-gray-600 mt-4 text-sm">
               Ready to build data systems that work when business decisions depend on them?
@@ -571,24 +550,30 @@ export default function Home() {
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">About Me</h2>
               <p className="text-base sm:text-lg mb-6 sm:mb-8">
-                Data Engineer specializing in high-availability systems and real-time data pipelines. Former quant trader who builds the infrastructure that powers data-driven decisions. I bring construction project management discipline to data engineering—delivering systems that work under pressure, at scale, when it matters most.
+                Data Engineer with 10+ years of professional experience across high-pressure environments. Spent four years managing construction projects (learning to plan for failure modes), four years as quantitative trader (where data quality directly impacted P&L), and three years building production data infrastructure.
+              </p>
+              <p className="text-base sm:text-lg mb-6 sm:mb-8 font-semibold text-[#005A9C]">
+                Currently seeking full-time Data Engineering opportunities where I can apply my unique background to solve complex data challenges. I specialize in high-availability systems, real-time pipelines, and cost-conscious architecture.
+              </p>
+              <p className="text-base sm:text-lg mb-6 sm:mb-8 text-gray-600">
+                I also partner with select startups and businesses through consulting engagements focused on establishing reliable data foundations.
               </p>
               <div className="flex flex-col sm:flex-row gap-6">
-                <Link 
-                  href="/about" 
+                <a 
+                  href="mailto:datawithjose@outlook.com?subject=Full-Time Opportunity&body=Hi Jose, I'd like to discuss a full-time Data Engineering opportunity..."
                   className="group bg-gradient-to-r from-[#42A5F5] to-[#005A9C] hover:from-[#2196F3] hover:to-[#0066CC] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
                 >
-                  <i className="fas fa-user mr-2"></i>
-                  Learn More About Me
+                  <i className="fas fa-briefcase mr-2"></i>
+                  I'm Hiring / Let's Connect
                   <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                </Link>
-                <a 
-                  href="mailto:datawithjose@outlook.com?subject=Let's Connect&body=Hi Jose, I'd like to learn more about your data engineering expertise..."
+                </a>
+                <Link 
+                  href="/services"
                   className="group border-2 border-[#42A5F5] text-[#42A5F5] hover:bg-[#42A5F5] hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center"
                 >
-                  <i className="fas fa-envelope mr-2"></i>
-                  Get In Touch
-                </a>
+                  <i className="fas fa-handshake mr-2"></i>
+                  Consulting Services
+                </Link>
               </div>
             </motion.div>
             <motion.div
@@ -621,15 +606,24 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
           >
-            From Construction Sites to Trading Floors to Data Systems
+            Proven Results Across Real-World Projects
           </motion.h2>
-          <motion.p
-            className="text-lg sm:text-xl text-center mb-12 sm:mb-16 text-gray-300 max-w-3xl mx-auto"
+          <motion.div
+            className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
           >
-            Four years managing construction projects taught me to plan for failure modes and deliver under constraints. Four years trading with real capital taught me that when systems fail, money disappears. Now I build data infrastructure with both disciplines—engineered for reliability, tested under pressure.
-          </motion.p>
+            <div className="inline-block bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] text-white px-8 py-4 rounded-xl shadow-lg">
+              <p className="text-lg font-bold mb-2">
+                <i className="fas fa-search mr-2"></i>
+                Currently Seeking Full-Time Data Engineering Roles
+              </p>
+              <p className="text-sm opacity-90">
+                Interested in fintech, e-commerce, logistics, or SaaS companies with real-time data challenges
+              </p>
+            </div>
+          </motion.div>
           
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
             <motion.div
@@ -693,7 +687,7 @@ export default function Home() {
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 whileHover={{ scale: 1.02 }}
               >
-                <h4 className="text-xl font-semibold mb-3 text-[#FF9800]">Construction Project Foundations</h4>
+                <h4 className="text-xl font-semibold mb-3 text-[#64B5F6]">Construction Project Foundations</h4>
                 <p className="text-gray-300 mb-4">Four years managing construction projects taught me to think in systems: load calculations, failure modes, resource constraints. When a bridge design fails, people get hurt. That mindset shapes how I architect data systems today.</p>
                 <div className="flex items-center text-sm text-gray-400">
                   <i className="fas fa-hard-hat mr-2"></i>
@@ -717,7 +711,7 @@ export default function Home() {
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 whileHover={{ scale: 1.02 }}
               >
-                <h4 className="text-xl font-semibold mb-3 text-[#00BFA5]">SEC Financial Parser</h4>
+                <h4 className="text-xl font-semibold mb-3 text-[#26C6DA]">SEC Financial Parser</h4>
                 <p className="text-gray-300 mb-4">Production-grade parser processing SEC filings at 16.51 MB/s peak throughput. Automatic recovery when parsing fails mid-document—because in financial data, partial results are worse than no results.</p>
                 <div className="flex items-center text-sm text-gray-400">
                   <i className="fas fa-code mr-2"></i>
