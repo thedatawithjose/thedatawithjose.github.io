@@ -5,77 +5,77 @@ import { useState } from 'react';
 const projects = [
   {
     id: 1,
-    title: "Real-Time Trading Dashboard",
-    description: "Live cryptocurrency trading dashboard with real-time price feeds, technical indicators, and algorithmic trading signals.",
-    category: "Trading",
+    title: "Edgar SEC Parser",
+    description: "Advanced Financial Document Processing System with 16.51 MB/s peak throughput and 100% error recovery rate.",
+    category: "Data Engineering",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop&crop=center",
-    tech: ["Python", "React", "WebSockets", "AWS", "Redis"],
+    tech: ["Python", "SQLAlchemy", "PostgreSQL", "secsgml", "secxbrl"],
     metrics: {
-      performance: "Low latency",
-      uptime: "98%",
-      volume: "High daily volume"
+      throughput: "16.51 MB/s",
+      recovery: "100%",
+      parsers: "3 Engines"
     },
     links: {
-      demo: "https://trading-demo.datawithjose.com",
-      github: "https://github.com/thedatawithjose/trading-dashboard",
-      case_study: "/case-studies/trading-dashboard"
+      demo: "#",
+      github: "https://github.com/josetraderx/edgar-sec-parser",
+      case_study: "/portfolio/edgar-sec-parser"
     },
     status: "live"
   },
   {
     id: 2,
-    title: "ML-Powered ETL Pipeline",
-    description: "Scalable data pipeline with automated data quality checks and anomaly detection.",
+    title: "Financial Data Pipeline",
+    description: "Production-ready ETL pipeline for financial market data with 98%+ uptime and comprehensive data quality validation.",
     category: "Data Engineering",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center",
-    tech: ["Apache Spark", "Airflow", "Docker", "Kubernetes", "MLflow"],
+    tech: ["Python", "Pandas", "PostgreSQL", "TimescaleDB", "Docker"],
     metrics: {
-      throughput: "High throughput",
-      accuracy: "98%",
-      cost_reduction: "30%"
+      records: "1M+/day",
+      uptime: "98.2%",
+      sources: "Multiple"
     },
     links: {
-      demo: "https://pipeline-demo.datawithjose.com",
-      github: "https://github.com/thedatawithjose/ml-etl-pipeline",
-      case_study: "/case-studies/ml-etl"
+      demo: "#",
+      github: "https://github.com/josetraderx/Financial-Data-Pipeline",
+      case_study: "/portfolio/financial-data-pipeline"
     },
     status: "live"
   },
   {
     id: 3,
-    title: "Predictive Analytics Platform",
-    description: "End-to-end ML platform for customer behavior prediction with automated model training and deployment.",
-    category: "Machine Learning",
+    title: "Mean Reversion OU Bot",
+    description: "Automated trading bot using Ornstein-Uhlenbeck process with 17.89% CAGR and 2.34 Sharpe ratio.",
+    category: "Data Engineering",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center",
-    tech: ["TensorFlow", "FastAPI", "PostgreSQL", "Grafana", "Terraform"],
+    tech: ["Python", "Pandas", "NumPy", "SciPy", "Matplotlib"],
     metrics: {
-      accuracy: "70%",
-      predictions: "High volume",
-      roi: "120%"
+      cagr: "17.89%",
+      sharpe: "2.34",
+      drawdown: "-12.45%"
     },
     links: {
-      demo: "https://ml-platform.datawithjose.com",
-      github: "https://github.com/thedatawithjose/predictive-analytics",
-      case_study: "/case-studies/predictive-analytics"
+      demo: "#",
+      github: "https://github.com/thedatawithjose/Mean_Reversion_OU",
+      case_study: "/portfolio/mean-reversion-ou"
     },
-    status: "development"
+    status: "live"
   },
   {
     id: 4,
-    title: "Crypto Market Analysis Bot",
-    description: "Automated cryptocurrency market analysis with sentiment analysis, social media monitoring, and price predictions.",
-    category: "Trading",
+    title: "Moving Average Bot",
+    description: "Algorithmic trading bot with moving average crossover strategy, operating profitably 24/7 with 15.67% CAGR.",
+    category: "Data Engineering",
     image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=400&fit=crop&crop=center",
-    tech: ["Python", "NLTK", "Twitter API", "Binance API", "MongoDB"],
+    tech: ["Python", "Pandas", "Backtrader", "REST API", "Docker"],
     metrics: {
-      signals: "Daily signals",
-      accuracy: "65%",
-      profit: "Positive returns"
+      cagr: "15.67%",
+      sharpe: "1.89",
+      status: "Live"
     },
     links: {
-      demo: "https://crypto-bot.datawithjose.com",
-      github: "https://github.com/thedatawithjose/crypto-analysis-bot",
-      case_study: "/case-studies/crypto-bot"
+      demo: "#",
+      github: "https://github.com/thedatawithjose/Algorithmic-Trading-Bot-Moving-Average-Crossover-Strategy",
+      case_study: "/portfolio/moving-average-bot"
     },
     status: "live"
   }
@@ -128,8 +128,8 @@ export default function InteractivePortfolio() {
           layout
         >
           {filteredProjects.map((project, index) => (
+            <Link href={project.links.case_study} key={project.id}>
               <motion.div
-                key={project.id}
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -139,7 +139,6 @@ export default function InteractivePortfolio() {
                 onMouseEnter={() => setHoveredProject(project.id)}
                 onMouseLeave={() => setHoveredProject(null)}
                 whileHover={{ y: -5 }}
-                onClick={() => window.location.href = project.links.case_study}
               >
                 {/* Project Image */}
                 <div className="relative h-64 overflow-hidden">
@@ -250,6 +249,7 @@ export default function InteractivePortfolio() {
                 </div>
               </div>
             </motion.div>
+            </Link>
           ))}
         </motion.div>
 
