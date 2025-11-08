@@ -110,6 +110,7 @@ export default function InteractivePortfolio() {
           {categories.map((category) => (
             <button
               key={category}
+              type="button"
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category
@@ -128,20 +129,20 @@ export default function InteractivePortfolio() {
           layout
         >
           {filteredProjects.map((project, index) => (
-            <Link href={project.links.case_study} key={project.id}>
-              <motion.div
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer"
-                onMouseEnter={() => setHoveredProject(project.id)}
-                onMouseLeave={() => setHoveredProject(null)}
-                whileHover={{ y: -5 }}
-              >
-                {/* Project Image */}
-                <div className="relative h-64 overflow-hidden">
+            <motion.div
+              key={project.id}
+              layout
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+              onMouseEnter={() => setHoveredProject(project.id)}
+              onMouseLeave={() => setHoveredProject(null)}
+              whileHover={{ y: -5 }}
+            >
+              {/* Project Image */}
+              <div className="relative h-64 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -175,7 +176,6 @@ export default function InteractivePortfolio() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-[#00BFA5] text-white px-4 py-2 rounded-lg hover:bg-[#00D4B4] transition-colors"
-                      onClick={(e) => e.stopPropagation()}
                     >
                       <i className="fas fa-external-link-alt mr-2"></i>
                       Live Demo
@@ -185,7 +185,6 @@ export default function InteractivePortfolio() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-                      onClick={(e) => e.stopPropagation()}
                     >
                       <i className="fab fa-github mr-2"></i>
                       Code
@@ -223,17 +222,19 @@ export default function InteractivePortfolio() {
 
                 {/* Actions */}
                 <div className="flex justify-between items-center">
-                  <span className="text-[#005A9C] group-hover:text-[#00BFA5] font-medium">
+                  <Link 
+                    href={project.links.case_study}
+                    className="text-[#005A9C] hover:text-[#00BFA5] font-medium transition-colors"
+                  >
                     Read Case Study →
-                  </span>
+                  </Link>
                   <div className="flex gap-2">
                     <a 
                       href={project.links.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-[#00BFA5] transition-colors z-10"
+                      className="text-gray-400 hover:text-[#00BFA5] transition-colors"
                       title="Live Demo"
-                      onClick={(e) => e.stopPropagation()}
                     >
                       <i className="fas fa-external-link-alt"></i>
                     </a>
@@ -241,9 +242,8 @@ export default function InteractivePortfolio() {
                       href={project.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-gray-800 transition-colors z-10"
+                      className="text-gray-400 hover:text-gray-800 transition-colors"
                       title="Source Code"
-                      onClick={(e) => e.stopPropagation()}
                     >
                       <i className="fab fa-github"></i>
                     </a>
@@ -251,7 +251,6 @@ export default function InteractivePortfolio() {
                 </div>
               </div>
             </motion.div>
-            </Link>
           ))}
         </motion.div>
 
