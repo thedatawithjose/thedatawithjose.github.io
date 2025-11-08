@@ -221,10 +221,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-[#005A9C] to-[#00BFA5] bg-clip-text text-transparent leading-tight py-2">
-              Data Engineering Solutions
+              What I Build
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Building reliable, cost-effective data systems where business decisions depend on them
+              Systems that don't just process data—they survive production chaos, scale under pressure, and recover from failures you didn't plan for
             </p>
           </motion.div>
 
@@ -269,8 +269,8 @@ export default function Home() {
                 </div>
                 
                 <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                  Production-ready data pipelines with 98%+ uptime. From WebSocket ingestion to cloud warehouses, 
-                  built for when decisions can't wait.
+                  Six years trading taught me: when your pipeline goes down at market open, you lose money every second. 
+                  I build systems that stay up—98%+ uptime, automatic recovery, monitored obsessively.
                 </p>
                 
                 {/* Modern Feature List */}
@@ -351,8 +351,8 @@ export default function Home() {
                 </div>
                 
                 <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                  Specialized in time-series data processing and analytics. From financial markets to IoT sensors, 
-                  handling high-frequency data with precision.
+                  Built trading bots that processed tick data in real-time for six years. When milliseconds matter and 
+                  bad data costs money, you learn to handle time-series right—or you don't survive.
                 </p>
                 
                 {/* Modern Feature List */}
@@ -433,8 +433,8 @@ export default function Home() {
                 </div>
                 
                 <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                  Modern data stack implementation with dbt, Snowflake, and cloud platforms. 
-                  Cost-aware design that scales with your business.
+                  Construction projects taught me: bad architecture is expensive to fix later. I design data systems 
+                  the same way—thinking about failure modes, maintenance costs, and what happens at 3x scale.
                 </p>
                 
                 {/* Modern Feature List */}
@@ -622,14 +622,14 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
           >
-            Proven Results
+            From Trading Floors to Production Systems
           </motion.h2>
           <motion.p
             className="text-lg sm:text-xl text-center mb-12 sm:mb-16 text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-            Real impact delivered through data engineering excellence
+            Six years managing real capital taught me: when systems fail, money disappears. Now I build the infrastructure that keeps businesses running.
           </motion.p>
           
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
@@ -640,10 +640,10 @@ export default function Home() {
               transition={{ delay: 0.1 }}
             >
               <div className="bg-gradient-to-br from-[#00BFA5] to-[#42A5F5] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-tachometer-alt text-2xl text-white"></i>
+                <i className="fas fa-bolt text-2xl text-white"></i>
               </div>
-              <h3 className="text-3xl font-bold text-[#00BFA5] mb-2">5x</h3>
-              <p className="text-gray-300">Faster Data Processing</p>
+              <h3 className="text-3xl font-bold text-[#00BFA5] mb-2">16.5 MB/s</h3>
+              <p className="text-gray-300">SEC Parser Peak Throughput</p>
             </motion.div>
             
             <motion.div
@@ -653,10 +653,10 @@ export default function Home() {
               transition={{ delay: 0.2 }}
             >
               <div className="bg-gradient-to-br from-[#42A5F5] to-[#005A9C] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-dollar-sign text-2xl text-white"></i>
+                <i className="fas fa-shield-alt text-2xl text-white"></i>
               </div>
-              <h3 className="text-3xl font-bold text-[#42A5F5] mb-2">$120K+</h3>
-              <p className="text-gray-300">Cost Savings Generated</p>
+              <h3 className="text-3xl font-bold text-[#42A5F5] mb-2">100%</h3>
+              <p className="text-gray-300">Error Recovery Rate</p>
             </motion.div>
             
             <motion.div
@@ -668,8 +668,8 @@ export default function Home() {
               <div className="bg-gradient-to-br from-[#005A9C] to-[#00BFA5] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-chart-line text-2xl text-white"></i>
               </div>
-              <h3 className="text-3xl font-bold text-[#005A9C] mb-2">98%</h3>
-              <p className="text-gray-300">System Uptime</p>
+              <h3 className="text-3xl font-bold text-[#005A9C] mb-2">17.89%</h3>
+              <p className="text-gray-300">Trading Bot CAGR</p>
             </motion.div>
             
             <motion.div
@@ -679,26 +679,26 @@ export default function Home() {
               transition={{ delay: 0.4 }}
             >
               <div className="bg-gradient-to-br from-[#00BFA5] to-[#005A9C] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-database text-2xl text-white"></i>
+                <i className="fas fa-clock text-2xl text-white"></i>
               </div>
-              <h3 className="text-3xl font-bold text-[#00BFA5] mb-2">2TB+</h3>
-              <p className="text-gray-300">Data Processed Daily</p>
+              <h3 className="text-3xl font-bold text-[#00BFA5] mb-2">&lt;500ms</h3>
+              <p className="text-gray-300">Pipeline Latency Target</p>
             </motion.div>
           </div>
           
           {/* Case Studies Preview */}
           <div className="mt-20">
-            <h3 className="text-2xl font-bold text-center mb-12">Recent Success Stories</h3>
+            <h3 className="text-2xl font-bold text-center mb-12">What I've Built</h3>
             <div className="grid md:grid-cols-2 gap-10 mb-12">
               <motion.div
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 whileHover={{ scale: 1.02 }}
               >
-                <h4 className="text-xl font-semibold mb-3 text-[#00BFA5]">Financial Trading Platform</h4>
-                <p className="text-gray-300 mb-4">Rebuilt data pipeline architecture reducing latency from 5s to 500ms, enabling faster trading strategies.</p>
+                <h4 className="text-xl font-semibold mb-3 text-[#00BFA5]">SEC Financial Parser</h4>
+                <p className="text-gray-300 mb-4">Built a production-grade parser that processes SEC filings at 16.51 MB/s peak throughput. When parsing fails mid-document, the system recovers automatically—because in financial data, partial results are worse than no results.</p>
                 <div className="flex items-center text-sm text-gray-400">
-                  <i className="fas fa-clock mr-2"></i>
-                  <span>3 months delivery</span>
+                  <i className="fas fa-code mr-2"></i>
+                  <span>Python • PostgreSQL • 3 parsing engines</span>
                 </div>
               </motion.div>
               
@@ -706,11 +706,11 @@ export default function Home() {
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 whileHover={{ scale: 1.02 }}
               >
-                <h4 className="text-xl font-semibold mb-3 text-[#42A5F5]">E-commerce Analytics</h4>
-                <p className="text-gray-300 mb-4">Implemented real-time customer behavior tracking, increasing conversion rates by 18% through data-driven insights.</p>
+                <h4 className="text-xl font-semibold mb-3 text-[#42A5F5]">Mean Reversion Trading Bot</h4>
+                <p className="text-gray-300 mb-4">Algorithmic trading system using Ornstein-Uhlenbeck process that delivered 17.89% CAGR with 2.34 Sharpe ratio. Six years of trading taught me: systems that can't handle market volatility don't survive.</p>
                 <div className="flex items-center text-sm text-gray-400">
-                  <i className="fas fa-users mr-2"></i>
-                  <span>High daily usage</span>
+                  <i className="fas fa-chart-line mr-2"></i>
+                  <span>Real capital • Live trading • Proven returns</span>
                 </div>
               </motion.div>
             </div>
