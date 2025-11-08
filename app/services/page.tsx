@@ -10,6 +10,35 @@ import { generateFAQSchema } from '../../lib/structured-data';
 import CalendlyBooking from '../../components/CalendlyBooking';
 import EnhancedCTAs from '../../components/EnhancedCTAs';
 
+// Type definitions for service packages
+interface AddOn {
+  name: string;
+  price: string;
+  description: string;
+}
+
+interface ServicePackage {
+  name: string;
+  price: string;
+  duration: string;
+  description: string;
+  subtitle: string;
+  features: string[];
+  note: string;
+  popular: boolean;
+  guarantees: string[];
+  paymentOptions: string[];
+  notIncluded: string[];
+  savings?: string;
+  addOns?: AddOn[];
+}
+
+type PackagesCollection = {
+  strategy: ServicePackage;
+  implementation: ServicePackage;
+  complete: ServicePackage;
+};
+
 export default function Services() {
   const [activeService, setActiveService] = useState(0);
   const [selectedPackage, setSelectedPackage] = useState('professional');
@@ -104,10 +133,10 @@ export default function Services() {
     }
   ];
 
-  const packages = {
+  const packages: PackagesCollection = {
     strategy: {
-      name: 'Data Strategy & Roadmap',
-      price: '$1,500',
+      name: 'Data Strategy Assessment',
+      price: '$1,000',
       duration: '1-2 weeks',
       description: 'Ideal for businesses with data assets but lacking a clear strategic direction or cohesive data architecture.',
       subtitle: 'Strategy & Planning',
@@ -126,7 +155,7 @@ export default function Services() {
         'No Hidden Fees - Fixed Price'
       ],
       paymentOptions: [
-        'Pay in Full: Save 5% ($1,425)',
+        'Pay in Full: Save 5% ($950)',
         '50% Upfront / 50% on Delivery'
       ],
       notIncluded: [
@@ -137,8 +166,8 @@ export default function Services() {
     },
     implementation: {
       name: 'MVP Data Pipeline',
-      price: '$4,000',
-      duration: '4-6 weeks',
+      price: '$2,800',
+      duration: '3-4 weeks',
       description: 'For businesses with defined requirements ready to build their first production-grade, automated data infrastructure.',
       subtitle: 'Build & Deploy',
       features: [
@@ -146,7 +175,7 @@ export default function Services() {
         'Professional cloud data warehouse configuration (BigQuery/Snowflake)',
         'Production-ready ETL/ELT pipeline using industry-standard tools (dbt, Airflow)',
         'Custom business intelligence dashboard tracking your top 5 critical KPIs',
-        'Complete technical documentation and 30-day post-launch support'
+        'Complete technical documentation and 2 weeks post-launch support'
       ],
       note: 'Most popular option. Delivers a centralized, production-ready data platform. Strategy phase sold separately.',
       popular: true,
@@ -156,13 +185,13 @@ export default function Services() {
         'No Hidden Fees - Fixed Price'
       ],
       paymentOptions: [
-        'Pay in Full: Save 5% ($3,800)',
+        'Pay in Full: Save 5% ($2,660)',
         '50% Upfront / 50% on Delivery'
       ],
       notIncluded: [
         'Cloud infrastructure costs (AWS/GCP/Azure)',
         'Third-party software licenses',
-        'Ongoing maintenance beyond 30 days'
+        'Ongoing maintenance beyond 2 weeks'
       ],
       addOns: [
         { name: 'Additional Data Source', price: '$500', description: 'Integrate one more data source beyond the included 2-3' },
@@ -172,29 +201,29 @@ export default function Services() {
     },
     complete: {
       name: 'Complete Data Solution',
-      price: '$6,500',
-      duration: '8-10 weeks',
+      price: '$4,500',
+      duration: '6-8 weeks',
       description: 'Comprehensive end-to-end solution covering strategy, implementation, and ongoing optimization with dedicated support.',
       subtitle: 'All-Inclusive Package',
       features: [
-        'Complete strategy & architecture roadmap (valued at $1,500)',
-        'Full MVP pipeline implementation (valued at $4,000)',
+        'Complete strategy & architecture assessment (valued at $1,000)',
+        'Full MVP pipeline implementation (valued at $2,800)',
         'Advanced data quality monitoring with automated alerts',
         'Performance tuning and cloud cost optimization',
-        '30 days of priority support & proactive maintenance (valued at $2,000)',
-        'Hands-on walkthrough session (2 hours)',
-        'Priority communication via Slack/Email with same-day response (business hours)'
+        '3 weeks of post-launch support & proactive maintenance',
+        'Hands-on walkthrough session (1.5 hours)',
+        'Email/Slack support with 24-hour response time (business hours)'
       ],
-      note: 'Maximum value package. Complete solution from strategic planning through production deployment. Individual components total $7,500.',
+      note: 'Comprehensive package. Complete solution from strategic planning through production deployment. Individual components valued at $5,100 - save $600.',
       popular: false,
-      savings: 'Save $1,000',
+      savings: 'Best Value',
       guarantees: [
-        '30-Day Bug-Fix Guarantee',
+        '3-Week Bug-Fix Guarantee',
         'Priority Support Included',
         'No Hidden Fees - Fixed Price'
       ],
       paymentOptions: [
-        'Pay in Full: Save 5% ($6,175)',
+        'Pay in Full: Save 5% ($4,275)',
         '50% Upfront / 50% on Delivery'
       ],
       notIncluded: [
@@ -245,17 +274,62 @@ export default function Services() {
 
         <Header />
 
-        {/* Availability Banner */}
+        {/* Open to Full-Time & Consulting Disclaimer */}
         <motion.div
-          className="bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 text-center"
+          className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 border-l-4 border-blue-600 py-10 overflow-hidden"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="container mx-auto px-4">
-            <p className="text-sm md:text-base font-semibold">
-              ⚠️ Limited Availability: Currently booking for February 2026 (2 project spots remaining)
-            </p>
+          {/* Modern background pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-600 to-transparent transform -skew-x-12"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 max-w-5xl relative z-10">
+            <div className="flex flex-col md:flex-row items-start md:space-x-6 space-y-4 md:space-y-0">
+              <div className="flex-shrink-0">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
+                  <i className="fas fa-briefcase text-2xl text-white"></i>
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="inline-flex items-center px-3 py-1 bg-blue-600/10 rounded-full border border-blue-600/20 mb-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2 animate-pulse"></div>
+                  <span className="text-xs font-semibold text-blue-800 tracking-wide uppercase">Available Now</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 bg-gradient-to-r from-blue-900 to-indigo-900 bg-clip-text text-transparent">
+                  Open to Full-Time & Consulting Opportunities
+                </h3>
+                <p className="text-gray-700 mb-3 leading-relaxed">
+                  I'm actively seeking full-time Data Engineering positions with teams building mission-critical systems. 
+                  I also take on select consulting projects for startups and growing businesses that need production-grade data infrastructure.
+                </p>
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                  These packages below are for project-based consulting engagements. For full-time roles, contract-to-hire opportunities, 
+                  or to discuss how I can contribute to your team long-term, let's connect.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a 
+                    href="https://calendly.com/datawithjose/consultation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                  >
+                    <i className="fas fa-calendar-check mr-2"></i>
+                    Schedule Free Call
+                    <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                  </a>
+                  <a 
+                    href="mailto:datawithjose@outlook.com?subject=Full-Time Opportunity&body=Hi Jose, I'd like to discuss a full-time Data Engineering opportunity..."
+                    className="group inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                  >
+                    <i className="fas fa-envelope mr-2"></i>
+                    Email Me
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
 
@@ -748,9 +822,9 @@ export default function Services() {
                     <thead>
                       <tr className="bg-gradient-to-r from-gray-50 to-gray-100">
                         <th className="px-6 py-4 text-left text-sm font-bold text-gray-900">Feature</th>
-                        <th className="px-6 py-4 text-center text-sm font-bold text-blue-600">Strategy<br/><span className="text-xs font-normal text-gray-600">$1,500</span></th>
-                        <th className="px-6 py-4 text-center text-sm font-bold text-green-600">MVP Pipeline<br/><span className="text-xs font-normal text-gray-600">$4,000</span></th>
-                        <th className="px-6 py-4 text-center text-sm font-bold text-purple-600">Complete<br/><span className="text-xs font-normal text-gray-600">$6,500</span></th>
+                        <th className="px-6 py-4 text-center text-sm font-bold text-blue-600">Strategy<br/><span className="text-xs font-normal text-gray-600">$1,000</span></th>
+                        <th className="px-6 py-4 text-center text-sm font-bold text-green-600">MVP Pipeline<br/><span className="text-xs font-normal text-gray-600">$2,800</span></th>
+                        <th className="px-6 py-4 text-center text-sm font-bold text-purple-600">Complete<br/><span className="text-xs font-normal text-gray-600">$4,500</span></th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
@@ -811,8 +885,8 @@ export default function Services() {
                       <tr className="bg-gray-50 font-semibold">
                         <td className="px-6 py-4 text-sm text-gray-900">Timeline</td>
                         <td className="px-6 py-4 text-center text-sm text-blue-600">1-2 weeks</td>
-                        <td className="px-6 py-4 text-center text-sm text-green-600">4-6 weeks</td>
-                        <td className="px-6 py-4 text-center text-sm text-purple-600">8-10 weeks</td>
+                        <td className="px-6 py-4 text-center text-sm text-green-600">3-4 weeks</td>
+                        <td className="px-6 py-4 text-center text-sm text-purple-600">6-8 weeks</td>
                       </tr>
                     </tbody>
                   </table>
