@@ -83,13 +83,13 @@ export default function Home() {
     },
     {
       title: "Real-Money Data Experience",
-      subtitle: "4 years putting real capital behind time-series models. When bad data means lost money, you build highly reliable systems. <500ms execution, automated monitoring.",
-      mobileSubtitle: "4 years trading with real capital. Highly reliable systems. <500ms execution, automated monitoring.",
+      subtitle: "Four years putting real capital behind time-series models. When bad data means lost money, you build highly reliable systems. <500ms execution, automated monitoring.",
+      mobileSubtitle: "Four years trading with real capital. Highly reliable systems. <500ms execution, automated monitoring.",
       gradient: "from-[#1A1A1A] via-[#0A192F] to-[#1A3A52]",
       cta: "View Data Solutions",
       secondaryCta: "See Case Studies",
       details: {
-        description: "Quantitative trading taught me that data quality isn't optional - it's survival. I build data systems with the same obsession for accuracy and speed that kept me profitable in live markets.",
+        description: "Four years of quantitative trading taught me that data quality isn't optional—it's survival. Every millisecond mattered, every data point had to be right. I build data systems with the same obsession for accuracy and speed that kept me profitable in live markets.",
         features: [
           "Real-time Market Data Processing",
           "Risk Management Systems",
@@ -100,7 +100,7 @@ export default function Home() {
           { value: "4", label: "Years Trading" },
           { value: "<500ms", label: "Execution Speed" },
           { value: "Real-time", label: "Data Processing" },
-          { value: "Automated", label: "System Monitoring" }
+          { value: "17.89%", label: "CAGR Achieved" }
         ]
       }
     },
@@ -269,7 +269,7 @@ export default function Home() {
                 </div>
                 
                 <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                  Six years trading taught me: when your pipeline goes down at market open, you lose money every second. 
+                  Four years trading taught me: when your pipeline goes down at market open, you lose money every second. 
                   I build systems that stay up—98%+ uptime, automatic recovery, monitored obsessively.
                 </p>
                 
@@ -351,7 +351,7 @@ export default function Home() {
                 </div>
                 
                 <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                  Built trading bots that processed tick data in real-time for six years. When milliseconds matter and 
+                  Built trading bots that processed tick data in real-time for four years. When milliseconds matter and 
                   bad data costs money, you learn to handle time-series right—or you don't survive.
                 </p>
                 
@@ -487,8 +487,7 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Why Choose My Data Engineering?</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  <strong>Real-world experience</strong> from trading floors taught me that data quality and reliability 
-                  aren't "tech details" — they're business risk. I build systems that work when decisions can't wait.
+                  <strong>Eight years of real-world pressure:</strong> Four years managing construction projects taught me to plan for failure modes and deliver under constraints. Four years trading with real capital taught me that data quality isn't optional—it's survival. I build data systems with both disciplines.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg">
@@ -622,14 +621,14 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
           >
-            From Trading Floors to Production Systems
+            From Construction Sites to Trading Floors to Data Systems
           </motion.h2>
           <motion.p
             className="text-lg sm:text-xl text-center mb-12 sm:mb-16 text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-            Six years managing real capital taught me: when systems fail, money disappears. Now I build the infrastructure that keeps businesses running.
+            Four years managing construction projects taught me to plan for failure modes and deliver under constraints. Four years trading with real capital taught me that when systems fail, money disappears. Now I build data infrastructure with both disciplines—engineered for reliability, tested under pressure.
           </motion.p>
           
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
@@ -653,10 +652,10 @@ export default function Home() {
               transition={{ delay: 0.2 }}
             >
               <div className="bg-gradient-to-br from-[#42A5F5] to-[#005A9C] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-shield-alt text-2xl text-white"></i>
+                <i className="fas fa-hard-hat text-2xl text-white"></i>
               </div>
-              <h3 className="text-3xl font-bold text-[#42A5F5] mb-2">100%</h3>
-              <p className="text-gray-300">Error Recovery Rate</p>
+              <h3 className="text-3xl font-bold text-[#42A5F5] mb-2">4 Years</h3>
+              <p className="text-gray-300">Construction Project Management</p>
             </motion.div>
             
             <motion.div
@@ -689,16 +688,16 @@ export default function Home() {
           {/* Case Studies Preview */}
           <div className="mt-20">
             <h3 className="text-2xl font-bold text-center mb-12">What I've Built</h3>
-            <div className="grid md:grid-cols-2 gap-10 mb-12">
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
               <motion.div
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 whileHover={{ scale: 1.02 }}
               >
-                <h4 className="text-xl font-semibold mb-3 text-[#00BFA5]">SEC Financial Parser</h4>
-                <p className="text-gray-300 mb-4">Built a production-grade parser that processes SEC filings at 16.51 MB/s peak throughput. When parsing fails mid-document, the system recovers automatically—because in financial data, partial results are worse than no results.</p>
+                <h4 className="text-xl font-semibold mb-3 text-[#FF9800]">Construction Project Foundations</h4>
+                <p className="text-gray-300 mb-4">Four years managing construction projects taught me to think in systems: load calculations, failure modes, resource constraints. When a bridge design fails, people get hurt. That mindset shapes how I architect data systems today.</p>
                 <div className="flex items-center text-sm text-gray-400">
-                  <i className="fas fa-code mr-2"></i>
-                  <span>Python • PostgreSQL • 3 parsing engines</span>
+                  <i className="fas fa-hard-hat mr-2"></i>
+                  <span>Risk assessment • Constraint management • System thinking</span>
                 </div>
               </motion.div>
               
@@ -706,11 +705,23 @@ export default function Home() {
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 whileHover={{ scale: 1.02 }}
               >
-                <h4 className="text-xl font-semibold mb-3 text-[#42A5F5]">Mean Reversion Trading Bot</h4>
-                <p className="text-gray-300 mb-4">Algorithmic trading system using Ornstein-Uhlenbeck process that delivered 17.89% CAGR with 2.34 Sharpe ratio. Six years of trading taught me: systems that can't handle market volatility don't survive.</p>
+                <h4 className="text-xl font-semibold mb-3 text-[#42A5F5]">Trading Bot Under Fire</h4>
+                <p className="text-gray-300 mb-4">Algorithmic trading system using Ornstein-Uhlenbeck process that delivered 17.89% CAGR with 2.34 Sharpe ratio. Four years of trading taught me: systems that can't handle market volatility don't survive.</p>
                 <div className="flex items-center text-sm text-gray-400">
                   <i className="fas fa-chart-line mr-2"></i>
                   <span>Real capital • Live trading • Proven returns</span>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
+                whileHover={{ scale: 1.02 }}
+              >
+                <h4 className="text-xl font-semibold mb-3 text-[#00BFA5]">SEC Financial Parser</h4>
+                <p className="text-gray-300 mb-4">Production-grade parser processing SEC filings at 16.51 MB/s peak throughput. Automatic recovery when parsing fails mid-document—because in financial data, partial results are worse than no results.</p>
+                <div className="flex items-center text-sm text-gray-400">
+                  <i className="fas fa-code mr-2"></i>
+                  <span>Python • PostgreSQL • 3 parsing engines</span>
                 </div>
               </motion.div>
             </div>
