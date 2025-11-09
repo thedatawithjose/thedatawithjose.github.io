@@ -13,7 +13,7 @@ Disallow: /admin/
 Disallow: /private/
 
 # Host
-Host: https://thedatawithjose.github.io
+Host: https://datawithjose.tech
 
 # Sitemaps
-Sitemap: https://thedatawithjose.github.io/sitemap.xml
+Sitemap: https://datawithjose.tech/sitemap.xml

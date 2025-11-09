@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://thedatawithjose.github.io';
+  const baseUrl = 'https://datawithjose.tech';
   const currentDate = new Date().toISOString();
 
   return [

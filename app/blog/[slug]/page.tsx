@@ -12,8 +12,8 @@ import '../blog.css';
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const articleData = await getArticleData(slug);
-  const fullUrl = `https://thedatawithjose.github.io/blog/${slug}`;
-  const imageUrl = articleData.image?.startsWith('http') ? articleData.image : `https://thedatawithjose.github.io${articleData.image}`;
+  const fullUrl = `https://datawithjose.tech/blog/${slug}`;
+  const imageUrl = articleData.image?.startsWith('http') ? articleData.image : `https://datawithjose.tech${articleData.image}`;
   
   return {
     title: `${articleData.title} | Jose Acosta - Data Engineer`,

@@ -21,6 +21,8 @@ const SECURITY_CONFIG = {
     /scraper/i,
   ],
   allowedOrigins: [
+    'https://datawithjose.tech',
+    'https://www.datawithjose.tech',
     'https://thedatawithjose.github.io',
     'https://www.thedatawithjose.github.io',
     'http://localhost:3000',

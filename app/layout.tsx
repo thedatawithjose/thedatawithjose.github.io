@@ -41,7 +41,7 @@ export const metadata: Metadata = generateMetadata({
     "Business Intelligence"
   ],
   ogType: "profile",
-  canonical: "https://thedatawithjose.github.io"
+  canonical: "https://datawithjose.tech"
 });
 
 export const viewport = {

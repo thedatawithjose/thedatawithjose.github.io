@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://thedatawithjose.github.io',
+  siteUrl: 'https://datawithjose.tech',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   changefreq: 'monthly',
@@ -39,7 +39,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://thedatawithjose.github.io/sitemap.xml',
+      'https://datawithjose.tech/sitemap.xml',
     ],
   },
   

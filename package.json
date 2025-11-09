@@ -21,7 +21,7 @@
     "deploy:check": "node scripts/deploy-check.js",
     "deploy:check:pre": "node scripts/deploy-check.js pre",
     "deploy:check:post": "node scripts/deploy-check.js post",
-    "deploy:health": "curl -f https://thedatawithjose.github.io/health",
+    "deploy:health": "curl -f https://datawithjose.tech/health",
     "deploy:validate": "npm run deploy:check:pre && npm run build:production && npm run deploy:check:post",
     "test": "vitest",
     "test:run": "vitest run",

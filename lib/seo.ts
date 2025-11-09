@@ -16,7 +16,7 @@ export interface SEOConfig {
 const siteConfig = {
   name: 'Jose Acosta - Data Engineer & Analytics Specialist',
   description: 'Data Engineer specializing in real-time data pipelines, trading algorithms, and scalable analytics solutions. Skilled in Python, SQL, AWS, and financial data systems.',
-  url: 'https://thedatawithjose.github.io',
+  url: 'https://datawithjose.tech',
   ogImage: '/images/jose.png',
   author: 'Jose Acosta',
   keywords: [
