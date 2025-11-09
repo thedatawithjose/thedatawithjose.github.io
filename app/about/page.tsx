@@ -21,10 +21,10 @@ export default function About() {
   };
 
   const achievements = [
-    { metric: '98%+', description: 'System uptime achieved in production' },
-    { metric: '25%', description: 'Average cost reduction through optimization' },
-    { metric: '<500ms', description: 'Average pipeline latency' },
-    { metric: '2TB+', description: 'Daily data processing capacity' }
+    { metric: 'High-Availability', description: 'Fault-tolerant systems in production' },
+    { metric: 'Cost-Optimized', description: 'Infrastructure through strategic optimization' },
+    { metric: 'Low-Latency', description: 'Real-time pipeline processing' },
+    { metric: 'Production-Scale', description: 'Data processing capacity' }
   ];
 
   const coreValues = [
@@ -167,7 +167,7 @@ export default function About() {
                       Airflow • AWS
                     </span>
                     <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium border border-orange-500/30">
-                      98%+ uptime
+                      High-availability
                     </span>
                   </div>
                 </div>
@@ -253,29 +253,29 @@ export default function About() {
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="text-4xl font-bold text-green-400 mb-2">98%+</div>
-                <div className="text-gray-300 text-sm">System Uptime Achieved</div>
+                <div className="text-2xl font-bold text-green-400 mb-2">High-Availability</div>
+                <div className="text-gray-300 text-sm">Fault-Tolerant Systems</div>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="text-4xl font-bold text-blue-400 mb-2">25%</div>
-                <div className="text-gray-300 text-sm">Cost Reduction Achieved</div>
+                <div className="text-2xl font-bold text-blue-400 mb-2">Cost-Optimized</div>
+                <div className="text-gray-300 text-sm">Infrastructure Design</div>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="text-4xl font-bold text-purple-400 mb-2">2TB+</div>
-                <div className="text-gray-300 text-sm">Daily Data Processing</div>
+                <div className="text-2xl font-bold text-purple-400 mb-2">Production-Scale</div>
+                <div className="text-gray-300 text-sm">Data Processing</div>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="text-4xl font-bold text-orange-400 mb-2">&lt;500ms</div>
-                <div className="text-gray-300 text-sm">Average Pipeline Latency</div>
+                <div className="text-2xl font-bold text-orange-400 mb-2">Low-Latency</div>
+                <div className="text-gray-300 text-sm">Real-Time Processing</div>
               </motion.div>
             </motion.div>
           </div>
@@ -530,8 +530,8 @@ export default function About() {
                     >
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-2xl font-bold text-green-500 mb-1">98%+ System Uptime</div>
-                          <div className="text-gray-700 text-sm">Maintained across production pipelines processing 2TB+ daily with real-time and batch workloads, including on-call coverage and incident response</div>
+                          <div className="text-2xl font-bold text-green-500 mb-1">High-Availability Systems</div>
+                          <div className="text-gray-700 text-sm">Built fault-tolerant production pipelines with automatic failover, processing production-scale data with real-time and batch workloads, including on-call coverage and incident response</div>
                         </div>
                         <i className="fas fa-chart-line text-xl text-green-500"></i>
                       </div>
@@ -544,7 +544,7 @@ export default function About() {
                     >
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-2xl font-bold text-blue-500 mb-1">25% Cost Reduction</div>
+                          <div className="text-2xl font-bold text-blue-500 mb-1">Cost-Optimized Infrastructure</div>
                           <div className="text-gray-700 text-sm">Achieved through strategic partitioning, query optimization, compute right-sizing, and orchestration improvements without sacrificing performance</div>
                         </div>
                         <i className="fas fa-dollar-sign text-xl text-blue-500"></i>
@@ -558,8 +558,8 @@ export default function About() {
                     >
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-2xl font-bold text-purple-500 mb-1">&lt;500ms Pipeline Latency</div>
-                          <div className="text-gray-700 text-sm">Average end-to-end latency for real-time ingestion pipelines, enabling sub-second decision-making for time-sensitive use cases</div>
+                          <div className="text-2xl font-bold text-purple-500 mb-1">Low-Latency Processing</div>
+                          <div className="text-gray-700 text-sm">Optimized end-to-end latency for real-time ingestion pipelines, enabling rapid decision-making for time-sensitive use cases</div>
                         </div>
                         <i className="fas fa-tachometer-alt text-xl text-purple-500"></i>
                       </div>
@@ -572,7 +572,7 @@ export default function About() {
                     >
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-2xl font-bold text-orange-500 mb-1">2TB+ Daily Processing</div>
+                          <div className="text-2xl font-bold text-orange-500 mb-1">Production-Scale Processing</div>
                           <div className="text-gray-700 text-sm">Sustained throughput across batch and streaming workloads with data quality checks, lineage tracking, and automated alerting</div>
                         </div>
                         <i className="fas fa-database text-xl text-orange-500"></i>
@@ -743,11 +743,11 @@ export default function About() {
                       <h3 className="text-xl font-bold mb-4">Reliability</h3>
                       <div className="space-y-3">
                         <div>
-                          <div className="text-2xl font-bold text-blue-500">98%</div>
-                          <div className="text-sm text-gray-600">System Uptime</div>
+                          <div className="text-lg font-bold text-blue-500">High-Availability</div>
+                          <div className="text-sm text-gray-600">Fault-Tolerant Design</div>
                         </div>
                         <div>
-                          <div className="text-2xl font-bold text-blue-500">85%</div>
+                          <div className="text-lg font-bold text-blue-500">Comprehensive</div>
                           <div className="text-sm text-gray-600">Test Coverage</div>
                         </div>
                       </div>
