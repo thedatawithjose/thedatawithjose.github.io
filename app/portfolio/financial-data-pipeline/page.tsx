@@ -72,12 +72,12 @@ export default function FinancialDataPipeline() {
               transition={{ duration: 0.6 }}
             >
               <div className="metric-card bg-blue-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">1M+</div>
-                <div className="text-sm text-gray-600">Records/Day Processing</div>
+                <div className="text-2xl font-bold text-blue-600 mb-2">Production-Scale</div>
+                <div className="text-sm text-gray-600">Records Processing</div>
               </div>
               <div className="metric-card bg-green-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">98.2%</div>
-                <div className="text-sm text-gray-600">Uptime Reliability</div>
+                <div className="text-2xl font-bold text-green-600 mb-2">High-Availability</div>
+                <div className="text-sm text-gray-600">System Reliability</div>
               </div>
               <div className="metric-card bg-purple-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-purple-600 mb-2">Multiple</div>
@@ -185,7 +185,7 @@ export default function FinancialDataPipeline() {
                   <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                     <p className="text-lg font-semibold text-blue-700">
                       <i className="fas fa-tachometer-alt mr-2"></i>
-                      Processing 1M+ records daily with 98%+ uptime
+                      Production-scale processing with high-availability architecture
                     </p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
