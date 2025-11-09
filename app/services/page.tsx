@@ -1181,68 +1181,10 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Enhanced CTA Section */}
+        {/* Service Guarantees Section */}
         <section className="py-20 bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Ready to Transform Your
-                  <span className="block text-green-400 mt-2">Data Infrastructure?</span>
-                </h2>
-                <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Let's discuss your specific challenges and design a solution that delivers 
-                  measurable business impact with production-grade reliability.
-                </p>
-              </motion.div>
-
-              {/* Action Options */}
-              <motion.div
-                className="grid md:grid-cols-2 gap-8 mb-12"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-              >
-                <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-comments text-2xl text-white"></i>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">Free Consultation</h3>
-                  <p className="text-gray-300 mb-4 text-sm">
-                    30-minute call to understand your challenges, discuss solutions, and provide initial recommendations.
-                  </p>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-                  >
-                    <i className="fas fa-calendar mr-2"></i>
-                    Schedule Call
-                  </Link>
-                </div>
-
-                <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-file-alt text-2xl text-white"></i>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">Project Examples</h3>
-                  <p className="text-gray-300 mb-4 text-sm">
-                    See detailed case studies of similar projects with technical implementations and business outcomes.
-                  </p>
-                  <Link
-                    href="/portfolio"
-                    className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-                  >
-                    <i className="fas fa-eye mr-2"></i>
-                    View Portfolio
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Service Guarantees */}
               <motion.div
                 className="border-t border-white/20 pt-8"
                 initial={{ opacity: 0, y: 20 }}
