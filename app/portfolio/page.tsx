@@ -64,17 +64,17 @@ export default function Portfolio() {
       technologies: ['Python', 'SQLAlchemy', 'PostgreSQL', 'Docker', 'Apache Airflow', 'Redis'],
       results: {
         throughput: 'High throughput',
-        accuracy: '98%',
+        accuracy: 'Validated',
         errorRecovery: 'Excellent',
-        documentsProcessed: '50K+'
+        documentsProcessed: 'Production-scale'
       },
       metrics: {
         'Processing Speed': 'High throughput',
-        'Accuracy Rate': '98%',
+        'Accuracy Rate': 'Validated',
         'Error Recovery': 'Excellent',
-        'Documents Processed': '50K+',
-        'Data Points Extracted': '10M+',
-        'Uptime': '98%'
+        'Documents Processed': 'Production-scale',
+        'Data Points Extracted': 'Large-scale',
+        'Uptime': 'High-availability'
       },
       image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop',
       link: '/portfolio/edgar-sec-parser',
@@ -94,18 +94,18 @@ export default function Portfolio() {
       detailedDescription: 'A robust data pipeline architecture that processes real-time market data from multiple sources, performs complex transformations, and delivers clean, analysis-ready data to downstream systems.',
       technologies: ['Python', 'Apache Spark', 'Kafka', 'PostgreSQL', 'TimescaleDB', 'Docker', 'Kubernetes'],
       results: {
-        recordsDaily: '100K+',
-        uptime: '98%',
-        latency: '<500ms',
+        recordsDaily: 'Production-scale',
+        uptime: 'High-availability',
+        latency: 'Low-latency',
         dataSources: '8+'
       },
       metrics: {
-        'Daily Records': '100K+',
-        'System Uptime': '98%',
-        'Processing Latency': '<500ms',
+        'Daily Records': 'Production-scale',
+        'System Uptime': 'High-availability',
+        'Processing Latency': 'Low-latency',
         'Data Sources': '8+',
-        'Data Quality': '98%',
-        'Cost Reduction': '25%'
+        'Data Quality': 'Validated',
+        'Cost Reduction': 'Optimized'
       },
       image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&h=600&fit=crop',
       link: '/portfolio/financial-data-pipeline',
@@ -824,10 +824,10 @@ export default function Portfolio() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { metric: '$120K+', description: 'Revenue Generated', icon: 'fas fa-dollar-sign', color: 'green' },
-                { metric: '45%', description: 'Average Cost Reduction', icon: 'fas fa-chart-down', color: 'blue' },
-                { metric: '98%', description: 'System Uptime', icon: 'fas fa-shield-alt', color: 'purple' },
-                { metric: '120%', description: 'Performance Improvement', icon: 'fas fa-rocket', color: 'orange' }
+                { metric: 'Revenue', description: 'Generated for Clients', icon: 'fas fa-dollar-sign', color: 'green' },
+                { metric: 'Cost-Optimized', description: 'Infrastructure Design', icon: 'fas fa-chart-down', color: 'blue' },
+                { metric: 'High-Availability', description: 'System Architecture', icon: 'fas fa-shield-alt', color: 'purple' },
+                { metric: 'Performance', description: 'Optimized Systems', icon: 'fas fa-rocket', color: 'orange' }
               ].map((impact, index) => (
                 <motion.div
                   key={index}
