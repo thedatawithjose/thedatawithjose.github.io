@@ -550,13 +550,22 @@ export default function Home() {
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">About Me</h2>
               <p className="text-base sm:text-lg mb-6 sm:mb-8">
-                Data Engineer with 10+ years of professional experience across high-pressure environments. Spent four years managing construction projects (learning to plan for failure modes), four years as quantitative trader (where data quality directly impacted P&L), and three years building production data infrastructure.
+                Data Engineer with a non-traditional path that makes me better at the job.
+              </p>
+              <p className="text-base sm:text-lg mb-6 sm:mb-8">
+                I spent four years in construction project management learning how systems fail under pressure. Four years as a quantitative trader where bad data meant real money lost. Now three years building production data infrastructure where those lessons matter every day.
+              </p>
+              <p className="text-base sm:text-lg mb-6 sm:mb-8">
+                The pattern is clear: I've always worked where reliability isn't optional and data drives decisions. Construction taught me to design for failure modes. Trading taught me that data quality is non-negotiable. Data engineering is where both disciplines converge.
+              </p>
+              <p className="text-base sm:text-lg mb-6 sm:mb-8">
+                I specialize in high-availability systems, real-time pipelines, and cost-conscious architecture—because I've seen what happens when any of those fail.
               </p>
               <p className="text-base sm:text-lg mb-6 sm:mb-8 font-semibold text-[#005A9C]">
-                Currently seeking full-time Data Engineering opportunities where I can apply my unique background to solve complex data challenges. I specialize in high-availability systems, real-time pipelines, and cost-conscious architecture.
+                Currently seeking full-time Data Engineering roles where complex data challenges need someone who thinks like an engineer, plans like a project manager, and measures impact like a trader.
               </p>
               <p className="text-base sm:text-lg mb-6 sm:mb-8 text-gray-600">
-                I also partner with select startups and businesses through consulting engagements focused on establishing reliable data foundations.
+                I also take on select consulting engagements helping startups build data foundations that won't collapse at scale.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
