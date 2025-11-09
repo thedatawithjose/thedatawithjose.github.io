@@ -224,7 +224,7 @@ export default function Home() {
               What I Build
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Systems that don't just process data—they survive production chaos, scale under pressure, and recover from failures you didn't plan for
+              Data infrastructure engineered for real-world conditions—not just the happy path. I specialize in building systems that handle failures gracefully, recover automatically, and provide the observability needed to debug issues when they inevitably occur.
             </p>
           </motion.div>
 
