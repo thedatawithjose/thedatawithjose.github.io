@@ -666,8 +666,8 @@ export default function Services() {
                     
                     {pkg.savings && (
                       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
-                        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 px-4 py-1.5 rounded-full text-xs font-bold shadow-lg border-2 border-white whitespace-nowrap">
-                          <span className="text-green-700 drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">⭐ {pkg.savings}</span>
+                        <div className="bg-yellow-400 text-gray-900 px-4 py-1.5 rounded-full text-xs font-bold shadow-lg border-2 border-white whitespace-nowrap">
+                          ⭐ {pkg.savings}
                         </div>
                       </div>
                     )}
