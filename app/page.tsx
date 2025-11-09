@@ -60,8 +60,8 @@ export default function Home() {
   const heroSlides = [
     {
       title: "Data Engineer | Open to Full-Time Opportunities",
-      subtitle: "10+ years professional experience: Construction PM → Quant Trader → Data Engineer. I've seen bridges fail and trading systems crash. Now I build data infrastructure that survives both. 98%+ uptime, <500ms latency, 2TB+ daily processing.",
-      mobileSubtitle: "10+ years experience. Infrastructure that survives failure. 98%+ uptime, <500ms latency.",
+      subtitle: "10+ years professional experience: Construction PM → Quant Trader → Data Engineer. I've seen bridges fail and trading systems crash. Now I build data infrastructure that survives both. High-availability systems with automatic failover and production-scale processing.",
+      mobileSubtitle: "10+ years experience. Infrastructure that survives failure. High-availability with automatic failover.",
       gradient: "from-[#0A192F] via-[#1A3A52] to-[#005A9C]",
       cta: "Available for Full-Time",
       secondaryCta: "View Consulting Services",
@@ -77,14 +77,14 @@ export default function Home() {
           { value: "3 Years", label: "DE Experience" },
           { value: "10+", label: "Projects Delivered" },
           { value: "Real-time", label: "Data Processing" },
-          { value: "25%", label: "Cost Reduction" }
+          { value: "Cost-Optimized", label: "Architecture" }
         ]
       }
     },
     {
       title: "Real-Money Data Experience",
-      subtitle: "Four years putting real capital behind time-series models. When bad data means lost money, you build systems that don't fail. Period. <500ms execution, automated monitoring.",
-      mobileSubtitle: "Four years trading with real capital. Systems that don't fail. <500ms execution.",
+      subtitle: "Four years putting real capital behind time-series models. When bad data means lost money, you build systems that don't fail. Period. Low-latency execution, automated monitoring.",
+      mobileSubtitle: "Four years trading with real capital. Systems that don't fail. Low-latency execution.",
       gradient: "from-[#1A1A1A] via-[#0A192F] to-[#1A3A52]",
       cta: "Available for Full-Time",
       secondaryCta: "View Services",
@@ -98,16 +98,16 @@ export default function Home() {
         ],
         metrics: [
           { value: "4", label: "Years Trading" },
-          { value: "<500ms", label: "Execution Speed" },
-          { value: "Real-time", label: "Data Processing" },
+          { value: "Low-Latency", label: "Processing" },
+          { value: "Real-time", label: "Data Streams" },
           { value: "17.89%", label: "CAGR Achieved" }
         ]
       }
     },
     {
       title: "Engineering-Grade Data Solutions",
-      subtitle: "Construction projects fail when you ignore load calculations. Trading systems fail when you ignore latency. Data pipelines fail when you ignore data quality. I don't ignore any of it. 100K+ records/day, 98% quality, battle-tested.",
-      mobileSubtitle: "Data pipelines that don't fail. 100K+ records/day, 98% quality, battle-tested.",
+      subtitle: "Construction projects fail when you ignore load calculations. Trading systems fail when you ignore latency. Data pipelines fail when you ignore data quality. I don't ignore any of it. Production-scale processing, validated data quality, battle-tested.",
+      mobileSubtitle: "Data pipelines that don't fail. Production-scale processing, validated quality, battle-tested.",
       gradient: "from-[#0A192F] via-[#005A9C] to-[#003D7A]",
       cta: "Available for Full-Time",
       secondaryCta: "View Services",
@@ -120,9 +120,9 @@ export default function Home() {
           "Business-Critical Reliability"
         ],
         metrics: [
-          { value: "100K+", label: "Records/Day" },
+          { value: "Production", label: "Scale Processing" },
           { value: "8+", label: "Data Sources" },
-          { value: "98%", label: "Data Quality" },
+          { value: "Validated", label: "Data Quality" },
           { value: "Hours→Minutes", label: "Analysis Time" }
         ]
       }
@@ -254,7 +254,7 @@ export default function Home() {
                   </div>
                   <div className="text-right">
                     <div className="inline-flex items-center px-3 py-1 bg-[#42A5F5]/10 rounded-full border border-[#42A5F5]/20">
-                      <span className="text-xs font-bold text-[#42A5F5] tracking-wide">98%+ Uptime</span>
+                      <span className="text-xs font-bold text-[#42A5F5] tracking-wide">High-Availability</span>
                     </div>
                   </div>
                 </div>
@@ -269,7 +269,7 @@ export default function Home() {
                 
                 <p className="text-gray-600 mb-8 leading-relaxed text-base">
                   Trading experience taught me: when your pipeline goes down at market open, you lose money every second. 
-                  I build systems that stay up—98%+ uptime, automatic recovery, monitored obsessively.
+                  I build fault-tolerant systems with automatic failover—health checks, retry logic, and dead letter queues. When something breaks, the system recovers without manual intervention.
                 </p>
                 
                 {/* Modern Feature List */}
@@ -343,8 +343,8 @@ export default function Home() {
                 </div>
                 
                 <p className="text-gray-600 mb-8 leading-relaxed text-base">
-                  Built trading bots that processed tick data in real-time for four years. When milliseconds matter and 
-                  bad data costs money, you learn to handle time-series right—or you don't survive.
+                  Built trading bots processing tick data in real-time for four years. When latency matters and 
+                  bad data costs money, you learn fast: validate early, handle out-of-order events, and design for idempotency.
                 </p>
                 
                 {/* Modern Feature List */}
@@ -404,7 +404,7 @@ export default function Home() {
                   </div>
                   <div className="text-right">
                     <div className="inline-flex items-center px-3 py-1 bg-[#005A9C]/10 rounded-full border border-[#005A9C]/20">
-                      <span className="text-xs font-bold text-[#005A9C] tracking-wide">25% Cost Savings</span>
+                      <span className="text-xs font-bold text-[#005A9C] tracking-wide">Cost-Optimized</span>
                     </div>
                   </div>
                 </div>
@@ -470,12 +470,12 @@ export default function Home() {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg">
-                    <div className="text-2xl font-bold text-[#42A5F5] mb-1">98%+</div>
-                    <div className="text-sm text-gray-600">System Uptime</div>
+                    <div className="text-2xl font-bold text-[#42A5F5] mb-1">High-Availability</div>
+                    <div className="text-sm text-gray-600">Fault-Tolerant Systems</div>
                   </div>
                   <div className="text-center p-4 bg-gradient-to-br from-green-50 to-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-[#00BFA5] mb-1">2TB+</div>
-                    <div className="text-sm text-gray-600">Daily Processing</div>
+                    <div className="text-2xl font-bold text-[#00BFA5] mb-1">Production-Scale</div>
+                    <div className="text-sm text-gray-600">Data Processing</div>
                   </div>
                 </div>
               </div>
