@@ -634,72 +634,27 @@ export default function Home() {
             </div>
           </motion.div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-            <motion.div
-              className="text-center"
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.1 }}
-            >
-              <div className="bg-gradient-to-br from-[#00BFA5] to-[#42A5F5] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-bolt text-2xl text-white"></i>
-              </div>
-              <h3 className="text-3xl font-bold text-[#00BFA5] mb-2">16.5 MB/s</h3>
-              <p className="text-gray-300">SEC Parser Peak Throughput</p>
-            </motion.div>
-            
-            <motion.div
-              className="text-center"
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              <div className="bg-gradient-to-br from-[#42A5F5] to-[#005A9C] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-hard-hat text-2xl text-white"></i>
-              </div>
-              <h3 className="text-3xl font-bold text-[#42A5F5] mb-2">4 Years</h3>
-              <p className="text-gray-300">Construction Project Management</p>
-            </motion.div>
-            
-            <motion.div
-              className="text-center"
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <div className="bg-gradient-to-br from-[#005A9C] to-[#00BFA5] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-chart-line text-2xl text-white"></i>
-              </div>
-              <h3 className="text-3xl font-bold text-[#005A9C] mb-2">17.89%</h3>
-              <p className="text-gray-300">Trading Bot CAGR</p>
-            </motion.div>
-            
-            <motion.div
-              className="text-center"
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              <div className="bg-gradient-to-br from-[#00BFA5] to-[#005A9C] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-clock text-2xl text-white"></i>
-              </div>
-              <h3 className="text-3xl font-bold text-[#00BFA5] mb-2">&lt;500ms</h3>
-              <p className="text-gray-300">Pipeline Latency Target</p>
-            </motion.div>
-          </div>
-          
           {/* Case Studies Preview */}
-          <div className="mt-20">
+          <div className="mt-12">
             <h3 className="text-2xl font-bold text-center mb-12">What I've Built</h3>
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <motion.div
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 whileHover={{ scale: 1.02 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
               >
-                <h4 className="text-xl font-semibold mb-3 text-[#64B5F6]">Construction Project Foundations</h4>
-                <p className="text-gray-300 mb-4">Four years managing construction projects taught me to think in systems: load calculations, failure modes, resource constraints. When a bridge design fails, people get hurt. That mindset shapes how I architect data systems today.</p>
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="text-xl font-semibold text-[#64B5F6]">Construction Project Management</h4>
+                  <div className="bg-gradient-to-br from-[#42A5F5] to-[#005A9C] w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-hard-hat text-lg text-white"></i>
+                  </div>
+                </div>
+                <div className="text-3xl font-bold text-[#42A5F5] mb-3">4 Years</div>
+                <p className="text-gray-300 mb-4">Four years managing construction projects taught me to think in systems: load calculations, failure modes, resource constraints. In construction, failure isn't an option—stakes are physical, not just computational. That mindset shapes my approach to data reliability.</p>
                 <div className="flex items-center text-sm text-gray-400">
-                  <i className="fas fa-hard-hat mr-2"></i>
+                  <i className="fas fa-tools mr-2"></i>
                   <span>Risk assessment • Constraint management • System thinking</span>
                 </div>
               </motion.div>
@@ -707,11 +662,21 @@ export default function Home() {
               <motion.div
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 whileHover={{ scale: 1.02 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
               >
-                <h4 className="text-xl font-semibold mb-3 text-[#42A5F5]">Trading Bot Under Fire</h4>
-                <p className="text-gray-300 mb-4">Algorithmic trading system using Ornstein-Uhlenbeck process that delivered 17.89% CAGR with 2.34 Sharpe ratio. Four years of trading taught me: systems that can't handle market volatility don't survive.</p>
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="text-xl font-semibold text-[#42A5F5]">Trading Bot</h4>
+                  <div className="bg-gradient-to-br from-[#005A9C] to-[#00BFA5] w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-chart-line text-lg text-white"></i>
+                  </div>
+                </div>
+                <div className="text-3xl font-bold text-[#005A9C] mb-1">17.89% CAGR</div>
+                <div className="text-lg text-gray-400 mb-3">2.34 Sharpe Ratio</div>
+                <p className="text-gray-300 mb-4">Algorithmic trading system using Ornstein-Uhlenbeck process. Four years of live trading taught me: systems that can't handle market volatility don't survive. Bad data meant real money lost.</p>
                 <div className="flex items-center text-sm text-gray-400">
-                  <i className="fas fa-chart-line mr-2"></i>
+                  <i className="fas fa-dollar-sign mr-2"></i>
                   <span>Real capital • Live trading • Proven returns</span>
                 </div>
               </motion.div>
@@ -719,9 +684,18 @@ export default function Home() {
               <motion.div
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 whileHover={{ scale: 1.02 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
               >
-                <h4 className="text-xl font-semibold mb-3 text-[#26C6DA]">SEC Financial Parser</h4>
-                <p className="text-gray-300 mb-4">Production-grade parser processing SEC filings at 16.51 MB/s peak throughput. Automatic recovery when parsing fails mid-document—because in financial data, partial results are worse than no results.</p>
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="text-xl font-semibold text-[#26C6DA]">SEC Financial Parser</h4>
+                  <div className="bg-gradient-to-br from-[#00BFA5] to-[#42A5F5] w-12 h-12 rounded-full flex items-center justify-center">
+                    <i className="fas fa-bolt text-lg text-white"></i>
+                  </div>
+                </div>
+                <div className="text-3xl font-bold text-[#00BFA5] mb-3">16.5 MB/s</div>
+                <p className="text-gray-300 mb-4">Production-grade parser processing SEC filings at peak throughput. Automatic recovery when parsing fails mid-document—because in financial data, partial results are worse than no results.</p>
                 <div className="flex items-center text-sm text-gray-400">
                   <i className="fas fa-code mr-2"></i>
                   <span>Python • PostgreSQL • 3 parsing engines</span>
