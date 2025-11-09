@@ -564,7 +564,7 @@ export default function Home() {
                   className="group bg-gradient-to-r from-[#42A5F5] to-[#005A9C] hover:from-[#2196F3] hover:to-[#0066CC] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
                 >
                   <i className="fas fa-briefcase mr-2"></i>
-                  I'm Hiring / Let's Connect
+                  Available for Full-Time
                   <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
                 </a>
                 <Link 
