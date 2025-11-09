@@ -86,7 +86,7 @@ export default function Home() {
       subtitle: "Four years putting real capital behind time-series models. When bad data means lost money, you build systems that don't fail. Period. <500ms execution, automated monitoring.",
       mobileSubtitle: "Four years trading with real capital. Systems that don't fail. <500ms execution.",
       gradient: "from-[#1A1A1A] via-[#0A192F] to-[#1A3A52]",
-      cta: "Let's Connect",
+      cta: "Available for Full-Time",
       secondaryCta: "View Services",
       details: {
         description: "Four years of quantitative trading where every millisecond mattered and every data point had to be right. I build data systems with the same obsession for accuracy and speed that kept me profitable in live markets. No excuses, no downtime.",
@@ -109,8 +109,8 @@ export default function Home() {
       subtitle: "Construction projects fail when you ignore load calculations. Trading systems fail when you ignore latency. Data pipelines fail when you ignore data quality. I don't ignore any of it. 100K+ records/day, 98% quality, battle-tested.",
       mobileSubtitle: "Data pipelines that don't fail. 100K+ records/day, 98% quality, battle-tested.",
       gradient: "from-[#0A192F] via-[#005A9C] to-[#003D7A]",
-      cta: "Discuss Opportunities",
-      secondaryCta: "View Background",
+      cta: "Available for Full-Time",
+      secondaryCta: "View Services",
       details: {
         description: "Construction taught me: bad architecture is expensive to fix later. Trading taught me: systems that can't handle volatility don't survive. Data engineering taught me: most teams learn these lessons the hard way. You don't have to.",
         features: [

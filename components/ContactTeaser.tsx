@@ -10,22 +10,22 @@ interface ContactTeaserProps {
 export default function ContactTeaser({ className = '' }: ContactTeaserProps) {
   const contactMethods = [
     {
-      icon: 'fas fa-envelope',
-      label: 'Email Me',
-      description: 'Quick response',
-      href: 'mailto:datawithjose@outlook.com',
+      icon: 'fas fa-calendar-check',
+      label: 'Schedule Call',
+      description: 'Free 30-min consultation',
+      href: 'mailto:datawithjose@outlook.com?subject=Schedule Consultation&body=Hi Jose,%0D%0A%0D%0AI\'d like to schedule a consultation to discuss:%0D%0A%0D%0A- %0D%0A- %0D%0A%0D%0APreferred times:%0D%0A- %0D%0A- %0D%0A%0D%0ABest regards',
       color: 'from-[#00BFA5] to-[#42A5F5]'
     },
     {
-      icon: 'fas fa-comments',
-      label: 'Let\'s Talk',
-      description: 'Direct message',
-      href: 'mailto:datawithjose@outlook.com',
+      icon: 'fas fa-briefcase',
+      label: 'View Portfolio',
+      description: 'See my work',
+      href: '/portfolio',
       color: 'from-[#42A5F5] to-[#005A9C]'
     },
     {
       icon: 'fab fa-linkedin',
-      label: 'Connect',
+      label: 'Connect on LinkedIn',
       description: 'Professional network',
       href: 'https://www.linkedin.com/in/datawithjose/',
       color: 'from-[#005A9C] to-[#00BFA5]'
@@ -106,7 +106,7 @@ export default function ContactTeaser({ className = '' }: ContactTeaserProps) {
             ))}
           </div>
 
-          {/* Alternative CTA */}
+          {/* Alternative CTA - Simplified */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -114,16 +114,9 @@ export default function ContactTeaser({ className = '' }: ContactTeaserProps) {
             className="bg-white rounded-lg p-6 shadow-md border border-gray-200"
           >
             <p className="text-gray-600 mb-4">
-              Prefer to see my work first?
+              Want to learn more about my services?
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded-lg transition-colors"
-              >
-                <i className="fas fa-folder-open mr-2"></i>
-                View Portfolio
-              </Link>
+            <div className="flex justify-center">
               <Link
                 href="/services"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] hover:from-[#00D4B4] hover:to-[#2196F3] text-white font-medium rounded-lg transition-all duration-300"
