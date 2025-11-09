@@ -73,12 +73,11 @@ export default function RootLayout({
           rel="stylesheet" 
         />
         
-        {/* Preload video for faster loading on desktop */}
+        {/* Preload poster image instead of video for better LCP */}
         <link
           rel="preload"
-          href="/videos/data-flow.mp4"
-          as="video"
-          type="video/mp4"
+          href="/images/video-poster.jpg"
+          as="image"
           media="(min-width: 768px)"
         />
         

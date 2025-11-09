@@ -24,12 +24,15 @@ export default function OptimizedVideoBackground({ videoSrc, gradient, slideInde
   useEffect(() => {
     // Desktop = video, Mobile = imagen
     const isDesktop = window.innerWidth >= 768;
+    const hasGoodConnection = !('connection' in navigator) || 
+      (navigator as any).connection?.effectiveType === '4g' ||
+      (navigator as any).connection?.effectiveType === 'wifi';
     
-    if (isDesktop) {
-      // En desktop, cargar video después de un pequeño delay
+    if (isDesktop && hasGoodConnection) {
+      // En desktop con buena conexión, cargar video después de un delay
       const timer = setTimeout(() => {
         setShouldLoadVideo(true);
-      }, 300);
+      }, 500);
       
       return () => clearTimeout(timer);
     }
@@ -88,7 +91,8 @@ export default function OptimizedVideoBackground({ videoSrc, gradient, slideInde
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
+          poster="/images/video-poster.jpg"
           onLoadedData={handleVideoLoad}
           onError={handleVideoError}
           onEnded={() => {
