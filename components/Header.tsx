@@ -236,17 +236,29 @@ export default function Header() {
               </nav>
             </div>
 
-            {/* CTA Button */}
-            <Link 
-              href="/contact" 
-              className="relative bg-gradient-to-r from-[#00BFA5] via-[#00D4B4] to-[#005A9C] text-white px-6 py-2.5 rounded-xl hover:from-[#00D4B4] hover:via-[#00BFA5] hover:to-[#0066CC] hover:shadow-xl hover:shadow-[#00BFA5]/25 hover:scale-105 transition-all duration-300 font-semibold group overflow-hidden border border-white/20 hidden lg:block"
-            >
-              <span className="relative z-10 flex items-center">
-                Let's Talk
-                <i className="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-all duration-300"></i>
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </Link>
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center gap-3">
+              <a 
+                href="/Jose_Acosta_Resume.pdf" 
+                download
+                className="relative bg-white text-[#005A9C] px-5 py-2.5 rounded-xl hover:bg-gray-50 hover:shadow-lg transition-all duration-300 font-semibold group overflow-hidden border-2 border-[#005A9C]/20"
+              >
+                <span className="relative z-10 flex items-center">
+                  <i className="fas fa-download mr-2 text-sm"></i>
+                  Resume
+                </span>
+              </a>
+              <Link 
+                href="/contact" 
+                className="relative bg-gradient-to-r from-[#00BFA5] via-[#00D4B4] to-[#005A9C] text-white px-6 py-2.5 rounded-xl hover:from-[#00D4B4] hover:via-[#00BFA5] hover:to-[#0066CC] hover:shadow-xl hover:shadow-[#00BFA5]/25 hover:scale-105 transition-all duration-300 font-semibold group overflow-hidden border border-white/20"
+              >
+                <span className="relative z-10 flex items-center">
+                  Let's Talk
+                  <i className="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-all duration-300"></i>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </Link>
+            </div>
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center space-x-4">
@@ -330,6 +342,15 @@ export default function Header() {
                   <i className="fas fa-newspaper mr-3 text-sm" aria-hidden="true"></i>
                   Blog
                 </Link>
+                <a 
+                  href="/Jose_Acosta_Resume.pdf" 
+                  download
+                  className="bg-white text-[#005A9C] border-2 border-[#005A9C] px-6 py-3 rounded-lg hover:bg-gray-50 hover:shadow-lg transition-all duration-300 font-semibold text-center mt-2 focus:outline-none focus:ring-2 focus:ring-[#005A9C] focus:ring-offset-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <i className="fas fa-download mr-2" aria-hidden="true"></i>
+                  Download Resume
+                </a>
                 <Link 
                   href="/contact" 
                   prefetch={false}
