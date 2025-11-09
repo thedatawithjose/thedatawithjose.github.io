@@ -59,16 +59,16 @@ export default function Services() {
       description: 'Robust, production-grade data pipelines designed for scale. From ingestion through transformation to loading, automated workflows maintain consistent data quality and high availability.',
       technologies: ['Python', 'SQL', 'Apache Kafka', 'Apache Spark', 'AWS', 'Docker'],
       benefits: [
-        'Real-time data processing with sub-500ms latency',
+        'Real-time data processing with low-latency architecture',
         'Automated data quality monitoring with intelligent alerts',
         'Cloud-agnostic architecture supporting AWS, GCP, and Azure', 
-        'Fault-tolerant design achieving 98%+ uptime',
-        'Cost optimization strategies reducing processing costs by 30%+'
+        'Fault-tolerant design with automatic failover and recovery',
+        'Cost optimization strategies through partitioning and compute right-sizing'
       ],
       metrics: {
-        performance: '5x faster processing',
-        reliability: '98%+ uptime',
-        cost: '30% cost reduction'
+        performance: 'Optimized processing',
+        reliability: 'High-availability',
+        cost: 'Cost-optimized'
       }
     },
     {
@@ -86,9 +86,9 @@ export default function Services() {
         'Complete model versioning with one-click rollback capabilities'
       ],
       metrics: {
-        deployment: 'Model-to-production in 3 days',
+        deployment: 'Rapid deployment',
         monitoring: 'Real-time performance tracking',
-        reliability: '98%+ model uptime'
+        reliability: 'Production-ready'
       }
     },
     {
@@ -126,9 +126,9 @@ export default function Services() {
         'FinOps strategies reducing cloud expenditure by 25%+'
       ],
       metrics: {
-        scalability: 'Auto-scales to 5x load',
-        availability: '98%+ uptime',
-        savings: '25%+ cost reduction'
+        scalability: 'Auto-scaling architecture',
+        availability: 'High-availability',
+        savings: 'Cost-optimized'
       }
     }
   ];
