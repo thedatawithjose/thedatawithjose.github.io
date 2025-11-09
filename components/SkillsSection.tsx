@@ -33,28 +33,42 @@ export default function SkillsSection() {
           Technical Expertise
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.category}
-              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: categoryIndex * 0.1 }}
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ y: -5 }}
             >
-              <div className="flex items-center mb-6">
+              <div className="flex items-center gap-4 mb-6 pb-4 border-b border-gray-100">
                 <div 
-                  className="w-14 h-14 rounded-full flex items-center justify-center text-white mr-4"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-md"
                   style={{ backgroundColor: category.color }}
                 >
-                  <i className={`${category.icon} text-xl`}></i>
+                  <i className={`${category.icon} text-lg`}></i>
                 </div>
-                <h3 className="font-bold text-xl text-gray-800">{category.category}</h3>
+                <h3 className="font-bold text-lg text-gray-800">{category.category}</h3>
               </div>
               
-              <div className="text-gray-700 leading-relaxed">
-                {category.skills.join(" • ")}
+              <div className="space-y-3">
+                {category.skills.map((skill, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center text-gray-700 text-sm"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: categoryIndex * 0.1 + index * 0.05 }}
+                  >
+                    <div 
+                      className="w-1.5 h-1.5 rounded-full mr-3 flex-shrink-0"
+                      style={{ backgroundColor: category.color }}
+                    />
+                    {skill}
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           ))}
