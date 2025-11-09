@@ -180,9 +180,43 @@ export default function Footer() {
           </motion.div>
         </div>
         
+        {/* Ready to Connect CTA Section */}
+        <motion.div 
+          className="relative mt-16 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+        >
+          <div className="text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#00BFA5] via-[#42A5F5] to-[#8B5CF6] bg-clip-text text-transparent">
+              Ready to Connect?
+            </h3>
+            <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
+              For full-time Data Engineering opportunities or consulting projects, let's discuss how I can help build reliable data infrastructure.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center justify-center bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] hover:from-[#00D4B4] hover:to-[#5AB3F5] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                <i className="fas fa-calendar-check mr-2"></i>
+                Schedule Call
+                <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+              </Link>
+              <Link
+                href="/services"
+                className="group inline-flex items-center justify-center border-2 border-white/30 hover:border-white/60 text-white hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm"
+              >
+                <i className="fas fa-briefcase mr-2"></i>
+                View Services
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+        
         {/* Enhanced Copyright Section */}
         <motion.div 
-          className="relative mt-16 pt-8"
+          className="relative mt-8 pt-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
