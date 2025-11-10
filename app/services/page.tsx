@@ -482,8 +482,8 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Technical <span className="text-green-500">Capabilities</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0097A7] mb-4">
+                Technical Capabilities
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
                 Specialized data engineering solutions proven in production environments where reliability, 
@@ -626,7 +626,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-5xl font-bold mb-6">Choose Your Package</h2>
+              <h2 className="text-5xl font-bold mb-6 text-[#0097A7]">Choose Your Package</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Flexible pricing options to match your project scope and budget requirements.
               </p>
@@ -916,7 +916,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">How It Works</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#0097A7]">How It Works</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Simple, transparent process from first contact to project delivery
               </p>
@@ -1042,7 +1042,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-5xl font-bold mb-6">Client Success Stories</h2>
+              <h2 className="text-5xl font-bold mb-6 text-[#0097A7]">Client Success Stories</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Real results from real clients across different industries and use cases.
               </p>
@@ -1078,7 +1078,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-5xl font-bold mb-6">My Process</h2>
+              <h2 className="text-5xl font-bold mb-6 text-[#0097A7]">My Process</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 A structured methodology for successful project delivery and client satisfaction.
               </p>

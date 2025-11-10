@@ -61,7 +61,7 @@ export default function TestimonialsSection() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#005A9C] to-[#00BFA5] bg-clip-text text-transparent">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#0097A7]">
             What Clients Really Say
           </h2>
           <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto">
@@ -211,7 +211,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#005A9C] to-[#00BFA5] bg-clip-text text-transparent">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#0097A7]">
             Ready to Solve Your Data Challenges?
           </h3>
           <p className="text-lg md:text-xl font-semibold text-gray-700 mb-6">

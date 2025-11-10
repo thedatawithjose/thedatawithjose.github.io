@@ -220,7 +220,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-[#005A9C] to-[#00BFA5] bg-clip-text text-transparent leading-tight py-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#0097A7] leading-tight py-2">
               What I Build
             </h2>
             <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -621,7 +621,7 @@ export default function Home() {
               initial={{ x: -50 }}
               whileInView={{ x: 0 }}
             >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-[#0097A7]">About Me</h2>
               <p className="text-base sm:text-lg mb-6 sm:mb-8">
                 Data Engineer with a non-traditional path that makes me better at the job.
               </p>

@@ -33,7 +33,7 @@ export default function SkillsSection() {
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.h2
-          className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-[#005A9C] to-[#00BFA5] bg-clip-text text-transparent"
+          className="text-4xl font-bold text-center mb-4 text-[#0097A7]"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >

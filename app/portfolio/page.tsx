@@ -399,8 +399,8 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Featured <span className="text-green-500">Production Systems</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0097A7] mb-4">
+                Featured Production Systems
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
                 Real-world implementations that demonstrate expertise in high-stakes environments 
@@ -521,7 +521,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-5xl font-bold mb-6">All Projects</h2>
+              <h2 className="text-5xl font-bold mb-6 text-[#0097A7]">All Projects</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
                 Browse through my complete portfolio of data engineering, trading, and machine learning solutions.
               </p>
@@ -749,7 +749,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold mb-6">Technical Expertise</h2>
+              <h2 className="text-4xl font-bold mb-6 text-[#0097A7]">Technical Expertise</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Technologies and methodologies that power these innovative solutions.
               </p>
@@ -816,7 +816,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold mb-6">Measurable Impact</h2>
+              <h2 className="text-4xl font-bold mb-6 text-[#0097A7]">Measurable Impact</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Real results delivered across multiple projects and industries.
               </p>
@@ -898,9 +898,8 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Ready to Build Something
-                  <span className="block text-green-400 mt-2">Production-Ready?</span>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0097A7]">
+                  Ready to Build Something Production-Ready?
                 </h2>
                 <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
                   Whether you need real-time data pipelines, trading systems, or ML in production — 

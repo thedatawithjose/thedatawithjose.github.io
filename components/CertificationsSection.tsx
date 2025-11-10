@@ -301,7 +301,7 @@ export default function CertificationsSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-[#005A9C] to-[#00BFA5] bg-clip-text text-transparent">
+            <span className="text-[#0097A7]">
               Professional Certifications
             </span>
           </h2>

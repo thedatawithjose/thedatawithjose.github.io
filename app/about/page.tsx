@@ -127,20 +127,12 @@ export default function About() {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight relative">
-                  <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent drop-shadow-2xl relative">
-                    I'm Jose Acosta
-                  </span>
-                  <span className="block text-2xl md:text-3xl bg-gradient-to-r from-green-400 via-green-300 to-blue-400 bg-clip-text text-transparent drop-shadow-2xl mt-3 font-medium relative">
-                    Data Engineer
-                    {/* Shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-pulse opacity-30"></div>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight relative">
+                  <span className="text-white drop-shadow-2xl relative">
+                    I'm Jose Acosta, Data Engineer
                   </span>
                 </h1>
                 <div className="mb-10">
-                  <p className="text-xl md:text-2xl text-gray-200 mb-4 leading-relaxed font-medium">
-                    Data Engineer
-                  </p>
                   <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
                     Time-Series & Real-Time Systems | ex-Quant Trader | ex-Construction Project Manager
                   </p>
