@@ -535,51 +535,44 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Why Choose My Data Engineering?</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  <strong>10+ years of professional experience across high-stakes environments:</strong> Four years managing construction projects taught me to plan for failure modes and deliver under constraints. Four years as quantitative trader taught me that data quality isn't optional—it's survival. Now, three years as Data Engineer, I build infrastructure combining both disciplines—engineered for reliability, tested under pressure.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg">
-                    <div className="text-2xl font-bold text-[#42A5F5] mb-1">High-Availability</div>
-                    <div className="text-sm text-gray-600">Fault-Tolerant Systems</div>
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-3xl font-bold text-[#0097A7] mb-6 text-center">Why Work With Me?</h3>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed text-center font-semibold">
+                I build data systems where failure has consequences:
+              </p>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-[#42A5F5] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <i className="fas fa-shield-alt text-white"></i>
                   </div>
-                  <div className="text-center p-4 bg-gradient-to-br from-green-50 to-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-[#00BFA5] mb-1">Production-Scale</div>
-                    <div className="text-sm text-gray-600">Data Processing</div>
+                  <div>
+                    <h4 className="font-bold text-gray-800 mb-2 text-lg">Reliability First</h4>
+                    <p className="text-gray-600 font-medium">Systems that recover automatically, not manually</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-[#00BFA5] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <i className="fas fa-bullseye text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800 mb-2 text-lg">Business-Aligned</h4>
+                    <p className="text-gray-600 font-medium">Data quality tied to actual business impact</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-10 h-10 bg-[#005A9C] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <i className="fas fa-dollar-sign text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800 mb-2 text-lg">Cost-Conscious</h4>
+                    <p className="text-gray-600 font-medium">Right-sizing and optimization from day one</p>
                   </div>
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="w-8 h-8 bg-[#42A5F5] rounded-full flex items-center justify-center mr-4 mt-1">
-                    <i className="fas fa-shield-alt text-white text-sm"></i>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Reliability First</h4>
-                    <p className="text-gray-600 text-sm">Systems designed for failure, instrumented for monitoring</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-8 h-8 bg-[#00BFA5] rounded-full flex items-center justify-center mr-4 mt-1">
-                    <i className="fas fa-bullseye text-white text-sm"></i>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Business-Aligned</h4>
-                    <p className="text-gray-600 text-sm">Pipelines aligned to decisions & KPIs, not just storage</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-8 h-8 bg-[#005A9C] rounded-full flex items-center justify-center mr-4 mt-1">
-                    <i className="fas fa-dollar-sign text-white text-sm"></i>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">Cost-Conscious</h4>
-                    <p className="text-gray-600 text-sm">Right-sizing and optimization built into every solution</p>
-                  </div>
-                </div>
+              <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl border-l-4 border-[#00BFA5]">
+                <p className="text-gray-800 font-semibold text-lg italic">
+                  The difference: I've lost real money to bad pipelines. Now I build so you don't have to.
+                </p>
               </div>
             </div>
           </motion.div>
