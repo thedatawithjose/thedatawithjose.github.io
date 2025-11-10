@@ -13,7 +13,7 @@ export const heroCardHover = {
   rotateY: prefersReducedMotion ? 0 : 1,
   transition: { 
     duration: prefersReducedMotion ? 0 : 0.4, 
-    ease: 'easeOut' 
+    ease: [0.4, 0, 0.2, 1] as const
   }
 };
 
@@ -23,7 +23,7 @@ export const supportingCardHover = {
   y: prefersReducedMotion ? 0 : -8,
   transition: { 
     duration: prefersReducedMotion ? 0 : 0.3, 
-    ease: 'easeOut' 
+    ease: [0.4, 0, 0.2, 1] as const
   }
 };
 
@@ -40,7 +40,7 @@ export const cardEntranceVariants: Variants = {
     scale: 1,
     transition: { 
       duration: prefersReducedMotion ? 0 : 0.7, 
-      ease: 'easeOut' 
+      ease: [0.4, 0, 0.2, 1] as const
     }
   }
 };
@@ -58,7 +58,7 @@ export const heroEntranceVariants: Variants = {
     scale: 1,
     transition: { 
       duration: prefersReducedMotion ? 0 : 0.7, 
-      ease: 'easeOut',
+      ease: [0.4, 0, 0.2, 1] as const,
       delay: 0.1
     }
   }
@@ -76,7 +76,7 @@ export const supportingEntranceVariants = (index: number): Variants => ({
     transition: { 
       duration: prefersReducedMotion ? 0 : 0.6, 
       delay: prefersReducedMotion ? 0 : (0.2 + index * 0.15),
-      ease: 'easeOut' 
+      ease: [0.4, 0, 0.2, 1] as const
     }
   }
 });
@@ -92,7 +92,7 @@ export const headerVariants: Variants = {
     y: 0,
     transition: { 
       duration: prefersReducedMotion ? 0 : 0.6,
-      ease: 'easeOut'
+      ease: [0.4, 0, 0.2, 1] as const
     }
   }
 };
