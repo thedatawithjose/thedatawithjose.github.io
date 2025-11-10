@@ -40,10 +40,10 @@ export default function SkillsSection() {
           Technical Expertise
         </motion.h2>
         <motion.p
-          className="text-center text-gray-600 mb-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
+          className="text-center text-lg md:text-xl font-semibold text-gray-700 mb-16 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
         >
           Production-tested tools and technologies
         </motion.p>

@@ -225,26 +225,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     [&>*:first-child]:mt-0 [&>*:last-child]:mb-0"
                   dangerouslySetInnerHTML={{ __html: articleData.contentHtml as string }} 
                 />
-                
-                {/* Article End - Social Share */}
-                <div className="mt-16 pt-8 border-t border-gray-200">
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      Did you find this article helpful?
-                    </h3>
-                    <p className="text-gray-600 text-lg">
-                      Share it with your professional network and help others discover these insights
-                    </p>
-                  </div>
-                  
-                  <div className="flex justify-center">
-                    <SocialShareButtons
-                      url={`/blog/${slug}`}
-                      title={articleData.title}
-                      description={articleData.excerpt}
-                    />
-                  </div>
-                </div>
+
               </div>
 
               {/* Sidebar */}

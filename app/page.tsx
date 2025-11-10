@@ -223,7 +223,7 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-[#005A9C] to-[#00BFA5] bg-clip-text text-transparent leading-tight py-2">
               What I Build
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Data infrastructure engineered for real-world conditions—not just the happy path. I specialize in building systems that handle failures gracefully, recover automatically, and provide the observability needed to debug issues when they inevitably occur.
             </p>
           </motion.div>
@@ -255,10 +255,10 @@ export default function Home() {
                           <div className="w-2 h-2 bg-[#00BFA5] rounded-full animate-pulse"></div>
                           <span className="text-xs font-bold bg-gradient-to-r from-[#005A9C] to-[#00BFA5] bg-clip-text text-transparent tracking-wide uppercase">Real-Time Systems | 4 Years Production</span>
                         </div>
-                        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-[#005A9C] group-hover:to-[#00BFA5] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-[#005A9C] group-hover:to-[#00BFA5] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
                           Trading Data Infrastructure
                         </h3>
-                        <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 max-w-3xl">
+                        <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 max-w-3xl">
                           Built end-to-end data platform powering algorithmic trading with real capital. When your pipeline fails at market open, you lose money every second—taught me to build systems that stay up.
                         </p>
                       </div>

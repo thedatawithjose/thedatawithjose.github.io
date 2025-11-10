@@ -135,8 +135,10 @@ export default function TechnicalBlog() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h2 className="text-4xl font-bold mb-6 text-gray-900">Technical Articles & Insights</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#005A9C] to-[#00BFA5] bg-clip-text text-transparent">
+            Technical Articles & Insights
+          </h2>
+          <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto">
             Deep dives into data engineering, algorithmic trading, and production ML systems
           </p>
         </motion.div>
