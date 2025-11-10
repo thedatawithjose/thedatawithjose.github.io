@@ -4,10 +4,20 @@ import Script from 'next/script';
 
 interface GoogleAnalyticsProps {
   measurementId: string;
+  hasConsent?: boolean;
 }
 
-export default function GoogleAnalytics({ measurementId }: GoogleAnalyticsProps) {
-  if (!measurementId) {
+/**
+ * GoogleAnalytics component - DEPRECATED
+ * 
+ * This component is no longer used as GA loading is now handled by ConsentManager.
+ * ConsentManager loads GA dynamically only after user consent is obtained.
+ * 
+ * Keeping this file for backward compatibility but it should not be used in new code.
+ */
+export default function GoogleAnalytics({ measurementId, hasConsent = false }: GoogleAnalyticsProps) {
+  // Don't load if no consent
+  if (!hasConsent || !measurementId) {
     return null;
   }
 

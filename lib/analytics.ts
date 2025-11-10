@@ -246,23 +246,43 @@ export const privacyAnalytics = {
   // Check if user has consented to analytics
   hasConsent: (): boolean => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('analytics_consent') === 'true';
+      try {
+        const stored = localStorage.getItem('cookie-preferences');
+        if (stored) {
+          const prefs = JSON.parse(stored);
+          return prefs.analytics === true;
+        }
+      } catch (error) {
+        console.error('[privacyAnalytics] Error reading consent:', error);
+      }
     }
     return false;
   },
 
-  // Set analytics consent
+  // Set analytics consent - DEPRECATED: Use ConsentManager instead
   setConsent: (consent: boolean) => {
+    console.warn('[privacyAnalytics] setConsent is deprecated. Use ConsentManager.updateConsent instead.');
     if (typeof window !== 'undefined') {
-      localStorage.setItem('analytics_consent', consent.toString());
-      
-      if (consent) {
-        initGA();
-      } else {
-        // Disable analytics
-        window.gtag?.('consent', 'update', {
-          analytics_storage: 'denied'
-        });
+      try {
+        const prefs = {
+          necessary: true,
+          analytics: consent,
+          marketing: false,
+          timestamp: new Date().toISOString(),
+          version: '1.0'
+        };
+        localStorage.setItem('cookie-preferences', JSON.stringify(prefs));
+        
+        if (consent) {
+          initGA();
+        } else {
+          // Disable analytics
+          window.gtag?.('consent', 'update', {
+            analytics_storage: 'denied'
+          });
+        }
+      } catch (error) {
+        console.error('[privacyAnalytics] Error setting consent:', error);
       }
     }
   },

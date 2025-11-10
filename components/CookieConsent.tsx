@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useConsent } from './ConsentManager';
 
 interface CookiePreferences {
   necessary: boolean;
@@ -11,83 +12,34 @@ interface CookiePreferences {
 }
 
 export default function CookieConsent() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
+  const { shouldShowBanner, updateConsent } = useConsent();
   const [preferences, setPreferences] = useState<CookiePreferences>({
     necessary: true, // Always true, can't be disabled
     analytics: false,
     marketing: false,
   });
 
-  useEffect(() => {
-    // Check if user has already made a choice
-    const consent = localStorage.getItem('cookie-consent');
-    if (!consent) {
-      // Show banner after a short delay
-      const timer = setTimeout(() => setIsVisible(true), 1000);
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
   const acceptAll = () => {
-    const allAccepted = {
+    updateConsent({
       necessary: true,
       analytics: true,
       marketing: true,
-      timestamp: new Date().toISOString(),
-    };
-    
-    localStorage.setItem('cookie-consent', JSON.stringify(allAccepted));
-    setIsVisible(false);
-    
-    // Enable analytics if accepted
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('consent', 'update', {
-        analytics_storage: 'granted',
-        ad_storage: 'granted',
-      });
-    }
+    });
   };
 
   const acceptSelected = () => {
-    const selectedPreferences = {
-      ...preferences,
-      timestamp: new Date().toISOString(),
-    };
-    
-    localStorage.setItem('cookie-consent', JSON.stringify(selectedPreferences));
-    setIsVisible(false);
-    
-    // Update consent based on preferences
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('consent', 'update', {
-        analytics_storage: preferences.analytics ? 'granted' : 'denied',
-        ad_storage: preferences.marketing ? 'granted' : 'denied',
-      });
-    }
+    updateConsent(preferences);
   };
 
   const rejectAll = () => {
-    const rejected = {
+    updateConsent({
       necessary: true,
       analytics: false,
       marketing: false,
-      timestamp: new Date().toISOString(),
-    };
-    
-    localStorage.setItem('cookie-consent', JSON.stringify(rejected));
-    setIsVisible(false);
-    
-    // Deny all non-necessary cookies
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('consent', 'update', {
-        analytics_storage: 'denied',
-        ad_storage: 'denied',
-      });
-    }
+    });
   };
 
-  if (!isVisible) return null;
+  if (!shouldShowBanner) return null;
 
   return (
     <AnimatePresence>
@@ -159,10 +111,12 @@ export default function CookieConsent() {
                 </div>
                 <div className="ml-4">
                   <button
+                    type="button"
                     onClick={() => setPreferences(prev => ({ ...prev, analytics: !prev.analytics }))}
                     className={`w-12 h-6 rounded-full flex items-center transition-colors duration-300 ${
                       preferences.analytics ? 'bg-blue-500 justify-end' : 'bg-gray-300 justify-start'
                     }`}
+                    aria-label={`Toggle analytics cookies ${preferences.analytics ? 'off' : 'on'}`}
                   >
                     <div className="w-4 h-4 bg-white rounded-full mx-1 transition-transform duration-300"></div>
                   </button>
@@ -179,10 +133,12 @@ export default function CookieConsent() {
                 </div>
                 <div className="ml-4">
                   <button
+                    type="button"
                     onClick={() => setPreferences(prev => ({ ...prev, marketing: !prev.marketing }))}
                     className={`w-12 h-6 rounded-full flex items-center transition-colors duration-300 ${
                       preferences.marketing ? 'bg-blue-500 justify-end' : 'bg-gray-300 justify-start'
                     }`}
+                    aria-label={`Toggle marketing cookies ${preferences.marketing ? 'off' : 'on'}`}
                   >
                     <div className="w-4 h-4 bg-white rounded-full mx-1 transition-transform duration-300"></div>
                   </button>
@@ -205,6 +161,7 @@ export default function CookieConsent() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
               <button
+                type="button"
                 onClick={acceptAll}
                 className="flex-1 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
               >
@@ -212,6 +169,7 @@ export default function CookieConsent() {
                 Accept All
               </button>
               <button
+                type="button"
                 onClick={acceptSelected}
                 className="flex-1 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
               >
@@ -219,6 +177,7 @@ export default function CookieConsent() {
                 Save Preferences
               </button>
               <button
+                type="button"
                 onClick={rejectAll}
                 className="flex-1 border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
               >

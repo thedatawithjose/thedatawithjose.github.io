@@ -6,11 +6,10 @@ import { generateMetadata } from "../lib/seo";
 import { generatePersonSchema, generateWebsiteSchema } from "../lib/structured-data";
 import StructuredData from "../components/StructuredData";
 import WebVitalsTracker from "../components/WebVitalsTracker";
-import GoogleAnalytics from "../components/GoogleAnalytics";
 import dynamic from "next/dynamic";
 
 import ErrorBoundary from "../components/ErrorBoundary";
-import AnalyticsProvider from "../components/AnalyticsProvider";
+import ConsentManager from "../components/ConsentManager";
 import WhatsAppButton from "../components/WhatsAppButton";
 import CookieConsent from "../components/CookieConsent";
 import PageTransition from "../components/PageTransition";
@@ -105,10 +104,7 @@ export default function RootLayout({
         {/* Structured Data */}
         <StructuredData data={[generatePersonSchema(), generateWebsiteSchema()]} />
         
-        {/* Google Analytics */}
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-          <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
-        )}
+        {/* Google Analytics - Now loaded by ConsentManager after user consent */}
         
         {/* Vercel Analytics */}
         {process.env.NODE_ENV === 'production' && (
@@ -129,8 +125,8 @@ export default function RootLayout({
         
         {/* Development-only components - removed to reduce bundle size */}
         
-        {/* Analytics Provider with Consent */}
-        <AnalyticsProvider>
+        {/* Consent Manager - Handles cookie consent and GA loading */}
+        <ConsentManager>
           {/* Error Boundary Wrapper */}
           <ErrorBoundary>
             <PageTransition>
@@ -141,9 +137,9 @@ export default function RootLayout({
           {/* WhatsApp Floating Button */}
           <WhatsAppButton />
           
-          {/* Cookie Consent */}
+          {/* Cookie Consent Banner */}
           <CookieConsent />
-        </AnalyticsProvider>
+        </ConsentManager>
         
         {/* Service Worker Registration */}
         <Script
