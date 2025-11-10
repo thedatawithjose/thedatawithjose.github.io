@@ -75,7 +75,7 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
     >
       {/* Main Content */}
       <motion.h1 
-        className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+        className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black mb-6 leading-tight"
         variants={itemVariants}
         transition={{ type: "spring", stiffness: 100, damping: 15 }}
       >
@@ -85,7 +85,7 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="inline-block text-[#0097A7] drop-shadow-lg"
+          className="inline-block bg-gradient-to-r from-[#00BFA5] via-[#4DD0E1] to-[#00BFA5] bg-clip-text text-transparent drop-shadow-lg"
         >
           {currentSlide.title}
         </motion.span>
