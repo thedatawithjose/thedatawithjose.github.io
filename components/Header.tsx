@@ -14,8 +14,8 @@ export default function Header() {
   const getNavLinkClasses = (href: string, isActive: boolean) => {
     return `relative px-4 py-2 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:ring-offset-2 ${
       isActive 
-        ? 'text-gray-900 font-semibold' 
-        : 'text-gray-600 font-medium hover:text-gray-900'
+        ? 'text-[#0097A7] font-semibold' 
+        : 'text-gray-600 font-medium hover:text-[#0097A7]'
     }`;
   };
 

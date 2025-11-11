@@ -155,6 +155,7 @@
   hyphens: auto;
   margin-bottom: 2.5rem;
   line-height: 1.8;
+  color: #1f2937;
 }
 
 /* First paragraph styling */
@@ -188,15 +189,26 @@
   
   .prose h2 {
     font-size: 1.8em;
+    color: #111827;
   }
   
   .prose h3 {
     font-size: 1.4em;
+    color: #1f2937;
   }
   
   .prose p {
     font-size: 1em;
     line-height: 1.7;
+    color: #1f2937 !important;
+  }
+  
+  .prose li {
+    color: #1f2937;
+  }
+  
+  .prose strong {
+    color: #111827;
   }
 }
 
