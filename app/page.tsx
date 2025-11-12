@@ -323,9 +323,13 @@ export default function Home() {
                       <div className="absolute inset-0 bg-gradient-to-br from-[#005A9C]/5 via-transparent to-[#00BFA5]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       
                       <div className="relative z-10">
-                        <div className="w-20 h-20 bg-gradient-to-br from-[#005A9C] via-[#0077CC] to-[#00BFA5] rounded-3xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-[#00BFA5]/30">
+                        <div className="w-20 h-20 bg-gradient-to-br from-[#005A9C] via-[#0077CC] to-[#00BFA5] rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-[#00BFA5]/30">
                           <i className="fas fa-chart-line text-3xl text-white"></i>
                         </div>
+                        
+                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center group-hover:bg-gradient-to-r group-hover:from-[#005A9C] group-hover:to-[#00BFA5] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
+                          Key Features
+                        </h3>
                         
                         <div className="space-y-4 mb-8">
                           <div className="flex items-start group/feature hover:translate-x-1 transition-transform duration-300">
