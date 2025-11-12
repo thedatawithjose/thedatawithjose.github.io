@@ -85,7 +85,7 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="inline-block bg-gradient-to-r from-[#00D084] via-[#00BFA5] to-[#26C6DA] bg-clip-text text-transparent drop-shadow-lg"
+          className="inline-block bg-gradient-to-r from-[#0077B6] via-[#0096C7] to-[#00B4D8] bg-clip-text text-transparent drop-shadow-lg"
         >
           {currentSlide.title}
         </motion.span>
