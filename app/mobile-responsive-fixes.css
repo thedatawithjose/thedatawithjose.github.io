@@ -1,0 +1,378 @@
+/* Mobile Responsive Fixes for All Pages */
+/* Optimized for screens < 768px */
+
+@media (max-width: 767px) {
+  /* ===== HOMEPAGE FIXES ===== */
+  
+  /* Trading Data Infrastructure Card - Right Column Fix */
+  .md\:col-span-1 {
+    /* Ensure the right column with icon, features, and metrics displays properly */
+    min-height: unset !important;
+  }
+  
+  /* Icon container in feature cards */
+  .w-20.h-20.bg-gradient-to-br {
+    width: 64px !important;
+    height: 64px !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Feature list items spacing */
+  .space-y-4 > div {
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Metrics grid in cards */
+  .grid.grid-cols-2.gap-4 {
+    gap: 0.75rem !important;
+  }
+  
+  /* Metric values - ensure readable size */
+  .text-4xl.font-bold {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Metric labels */
+  .text-xs.font-semibold {
+    font-size: 0.7rem !important;
+  }
+  
+  /* Card padding adjustments */
+  .p-8 {
+    padding: 1.5rem !important;
+  }
+  
+  .p-12 {
+    padding: 1.5rem !important;
+  }
+  
+  /* Rounded corners - reduce on mobile for more space */
+  .rounded-\[2rem\] {
+    border-radius: 1.5rem !important;
+  }
+  
+  .rounded-3xl {
+    border-radius: 1.5rem !important;
+  }
+  
+  /* ===== GRID LAYOUTS ===== */
+  
+  /* Force single column on mobile for all grids */
+  .grid.md\:grid-cols-2,
+  .grid.md\:grid-cols-3,
+  .grid.md\:grid-cols-4,
+  .grid.lg\:grid-cols-2,
+  .grid.lg\:grid-cols-3,
+  .grid.lg\:grid-cols-4,
+  .grid.lg\:grid-cols-5 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Ensure proper spacing between grid items */
+  .gap-8,
+  .gap-6,
+  .gap-12 {
+    gap: 1.5rem !important;
+  }
+  
+  /* ===== TEXT SIZING ===== */
+  
+  /* Hero titles */
+  .text-4xl,
+  .text-5xl,
+  .text-6xl,
+  .text-7xl {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Section titles */
+  .text-3xl {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Body text */
+  .text-xl {
+    font-size: 1.125rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .text-lg {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* ===== SPACING FIXES ===== */
+  
+  /* Section padding */
+  .py-24,
+  .py-20 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  .py-16 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  
+  /* Container padding */
+  .px-8 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Margin adjustments */
+  .mb-20,
+  .mb-16 {
+    margin-bottom: 2.5rem !important;
+  }
+  
+  .mb-12 {
+    margin-bottom: 2rem !important;
+  }
+  
+  /* ===== BUTTON & CTA FIXES ===== */
+  
+  /* Ensure buttons are touch-friendly (min 44px height) */
+  button,
+  .btn,
+  a[class*="px-"] {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Button text sizing */
+  button,
+  .btn {
+    font-size: 1rem !important;
+  }
+  
+  /* ===== IMAGE & MEDIA FIXES ===== */
+  
+  /* Profile images */
+  .w-72,
+  .w-80,
+  .w-96 {
+    width: 16rem !important;
+    height: 16rem !important;
+  }
+  
+  /* Icon sizes */
+  .w-16.h-16 {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+  }
+  
+  .w-14.h-14 {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .w-12.h-12 {
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+  }
+  
+  /* ===== CARD FIXES ===== */
+  
+  /* Feature cards */
+  .bg-white\/70,
+  .bg-white\/80 {
+    -webkit-backdrop-filter: blur(12px) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+  
+  /* Card shadows - reduce on mobile */
+  .shadow-2xl {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .shadow-xl {
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* ===== FLEX LAYOUTS ===== */
+  
+  /* Force column direction on mobile */
+  .flex.flex-col.sm\:flex-row,
+  .flex.md\:flex-row {
+    flex-direction: column !important;
+  }
+  
+  /* ===== ABOUT PAGE FIXES ===== */
+  
+  /* Profile section */
+  .lg\:grid-cols-5 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Tech badges */
+  .flex-wrap.gap-4 {
+    gap: 0.5rem !important;
+  }
+  
+  /* ===== SERVICES PAGE FIXES ===== */
+  
+  /* Service cards */
+  .lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Package cards */
+  .grid.md\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* ===== PORTFOLIO PAGE FIXES ===== */
+  
+  /* Project cards */
+  .grid.lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Project images */
+  .h-48 {
+    height: 12rem !important;
+  }
+  
+  /* ===== BLOG PAGE FIXES ===== */
+  
+  /* Article grid */
+  .grid.md\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Article images */
+  .h-56 {
+    height: 14rem !important;
+  }
+  
+  /* ===== CONTACT PAGE FIXES ===== */
+  
+  /* Contact methods grid */
+  .grid.md\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Form inputs */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    min-height: 44px !important;
+  }
+  
+  /* ===== NAVIGATION FIXES ===== */
+  
+  /* Header adjustments */
+  header {
+    padding: 1rem !important;
+  }
+  
+  /* Mobile menu */
+  .mobile-menu {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* ===== OVERFLOW FIXES ===== */
+  
+  /* Prevent horizontal scroll */
+  body,
+  html {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+  
+  /* Container max width */
+  .container {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* ===== SPECIFIC COMPONENT FIXES ===== */
+  
+  /* Metrics in feature cards - the main issue from the screenshot */
+  .border-t-2.border-gray-200\/50 {
+    margin-top: 1.5rem !important;
+    padding-top: 1.5rem !important;
+  }
+  
+  /* Feature checkmarks */
+  .w-6.h-6.bg-gradient-to-br {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Feature text */
+  .text-sm.text-gray-700 {
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* ===== ANIMATION ADJUSTMENTS ===== */
+  
+  /* Reduce motion on mobile for better performance */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* ===== ACCESSIBILITY ===== */
+  
+  /* Ensure focus states are visible */
+  *:focus-visible {
+    outline: 2px solid #00BFA5 !important;
+    outline-offset: 2px !important;
+  }
+  
+  /* Touch target sizing */
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+}
+
+/* Tablet adjustments (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Reduce grid columns on tablet */
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Adjust padding */
+  .p-12 {
+    padding: 2rem !important;
+  }
+  
+  /* Text sizing */
+  .text-6xl,
+  .text-7xl {
+    font-size: 3rem !important;
+  }
+}

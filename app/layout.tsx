@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./mobile-responsive-fixes.css";
 import Script from "next/script";
 import { generateMetadata } from "../lib/seo";
 import { generatePersonSchema, generateWebsiteSchema } from "../lib/structured-data";
