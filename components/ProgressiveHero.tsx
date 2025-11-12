@@ -81,11 +81,11 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
       >
         <motion.span
           key={currentIndex}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.5 }}
-          className="inline-block text-[#00BFA5] drop-shadow-lg"
+          transition={{ duration: 0.3 }}
+          className="inline-block text-[#7FFFD4] drop-shadow-lg"
         >
           {currentSlide.title}
         </motion.span>
