@@ -873,12 +873,16 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <Link
-                href="/contact"
-                className="bg-white text-green-500 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+              <a
+                href="https://calendly.com/datawithjose/consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-green-500 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg inline-flex items-center justify-center"
               >
-                Start Your Project
-              </Link>
+                <i className="fas fa-calendar-check mr-2"></i>
+                Get a Free Quote
+                <i className="fas fa-external-link-alt ml-2 text-sm"></i>
+              </a>
               <Link
                 href="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-500 transition-colors text-lg"

@@ -895,13 +895,16 @@ export default function Services() {
 
               <div className="text-center mt-8">
                 <p className="text-gray-600 mb-4">Not sure which package is right for you?</p>
-                <Link
-                  href="/contact"
+                <a
+                  href="https://calendly.com/datawithjose/consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  <i className="fas fa-comments mr-2"></i>
+                  <i className="fas fa-calendar-check mr-2"></i>
                   Schedule Free Consultation
-                </Link>
+                  <i className="fas fa-external-link-alt ml-2 text-sm"></i>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -1165,16 +1168,18 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <Link
-                href="/contact"
-                className="bg-white text-green-500 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+              <a
+                href="mailto:datawithjose@outlook.com?subject=Service Inquiry&body=Hi Jose,%0D%0A%0D%0AI'm interested in your data engineering services.%0D%0A%0D%0AService interested in:%0D%0A%0D%0AProject details:%0D%0A%0D%0ABest regards"
+                className="bg-white text-green-500 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg inline-flex items-center justify-center"
               >
-                Get Free Consultation
-              </Link>
+                <i className="fas fa-envelope mr-2"></i>
+                Email Me Directly
+              </a>
               <Link
                 href="/portfolio"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-500 transition-colors text-lg"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-500 transition-colors text-lg inline-flex items-center justify-center"
               >
+                <i className="fas fa-briefcase mr-2"></i>
                 View My Work
               </Link>
             </motion.div>
