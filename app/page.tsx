@@ -190,7 +190,7 @@ export default function Home() {
         
         {/* Scroll Indicator */}
         <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+          className="absolute bottom-16 md:bottom-20 left-1/2 transform -translate-x-1/2 z-20"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
