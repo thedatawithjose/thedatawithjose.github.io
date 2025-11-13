@@ -99,7 +99,6 @@ export const supportingProjects: SupportingProjectCardProps[] = [
       'TimescaleDB',
       'PostgreSQL',
       'Airflow'
-    ],
-    link: '/portfolio#trading-bot'
+    ]
   }
 ];
