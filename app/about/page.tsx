@@ -139,8 +139,11 @@ export default function About() {
                   <p className="text-lg md:text-xl text-green-400 leading-relaxed font-semibold mb-2">
                     Building high-availability data systems where reliability isn't optional
                   </p>
-                  <p className="text-base md:text-lg text-blue-300 leading-relaxed font-medium mb-6">
+                  <p className="text-base md:text-lg text-blue-300 leading-relaxed font-medium mb-2">
                     Open to Full-Time Data Engineering Opportunities
+                  </p>
+                  <p className="text-sm md:text-base text-gray-400 leading-relaxed mb-6">
+                    📍 Based in Caracas, Venezuela | Available for remote work worldwide
                   </p>
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-6 border border-white/20">
                     <p className="text-gray-200 text-sm leading-relaxed italic">
@@ -584,27 +587,27 @@ export default function About() {
 
                     {[
                       {
-                        period: 'Aug 2024 - Present',
+                        period: 'Aug 2024 - Jun 2025',
                         title: 'Data Engineering Consultant',
-                        company: 'TraderDaddy (NYC)',
-                        description: 'Improved research cycle efficiency and backtesting throughput with production-grade Python/SQL frameworks. Built real-time market-data pipeline (WebSocket → Snowflake) and orchestrated Airflow on AWS.',
-                        achievements: ['Faster research cycles', 'Enhanced backtesting performance', 'Real-time market data pipeline'],
+                        company: 'TraderDaddy (NYC) - Remote',
+                        description: 'Reduced research iteration time 40% and increased backtesting throughput 5x with Python/SQL frameworks and CI/CD. Built real-time WebSocket → Snowflake pipeline eliminating manual fixes and enabling same-day feature engineering.',
+                        achievements: ['40% faster research cycles', '5x backtesting throughput', 'Real-time market data pipeline', 'Automated Airflow workflows on AWS'],
                         color: 'green'
                       },
                       {
                         period: 'Sep 2022 - Jul 2024',
                         title: 'Data Engineering Consultant',
-                        company: 'International Clients',
-                        description: 'Built end-to-end data platforms on AWS and Snowflake with dbt for analytics and ML. Developed real-time fraud/risk APIs using FastAPI and Kubernetes.',
-                        achievements: ['High test coverage', 'AWS/Snowflake platforms', 'Real-time fraud detection'],
+                        company: 'Self-Employed - Remote',
+                        description: 'Automated batch/streaming pipelines with Airflow, SLA monitoring, and data quality gates. Shipped end-to-end data platform on AWS + Snowflake with dbt, cutting time-to-insight from weeks to hours. Built fraud detection APIs (FastAPI) on Kubernetes with sub-100ms response times.',
+                        achievements: ['Self-recovering pipelines', 'AWS/Snowflake platforms', 'Sub-100ms fraud detection APIs', 'Weeks → hours time-to-insight'],
                         color: 'blue'
                       },
                       {
                         period: 'Feb 2019 - Jul 2022',
                         title: 'Head of Trading & Quantitative Data Systems',
-                        company: 'Fintech Alca Group',
-                        description: 'Improved strategy backtesting throughput by automating portfolio optimization pipelines. Built data platform with ETL/ELT processes from market data sources.',
-                        achievements: ['Automated backtesting pipeline', 'Data-driven investment decisions', 'Market data ETL platform'],
+                        company: 'Fintech Alca Group - Caracas, VE',
+                        description: 'Reduced backtesting time from weeks to hours with parallelized Python/SQL pipelines (5x throughput). Built real-time dashboards with PostgreSQL/TimescaleDB. Engineered production ETL/ELT ingesting real-time + historical market data with quality gates and 24/7 monitoring.',
+                        achievements: ['5x backtesting throughput', 'Real-time trading dashboards', 'Production market data platform', 'Supported $100k+ capital allocation'],
                         color: 'purple'
                       },
                       {

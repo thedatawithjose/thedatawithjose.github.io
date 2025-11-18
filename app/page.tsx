@@ -33,27 +33,6 @@ export default function Home() {
   useScrollTracking('homepage');
   useJourneyTracking();
 
-  useEffect(() => {
-    // Ocultar preloader después de que todo esté cargado
-    const hidePreloader = () => {
-      const preloader = document.getElementById('preloader');
-      if (preloader) {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 300);
-      }
-    };
-
-    // Esperar a que todo esté listo
-    if (document.readyState === 'complete') {
-      hidePreloader();
-    } else {
-      window.addEventListener('load', hidePreloader);
-      return () => window.removeEventListener('load', hidePreloader);
-    }
-  }, []);
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -63,8 +42,8 @@ export default function Home() {
       subtitle: "10+ years professional experience: Construction PM → Quant Trader → Data Engineer. I've seen bridges fail and trading systems crash. Now I build data infrastructure that survives both. High-availability systems with automatic failover and production-scale processing.",
       mobileSubtitle: "10+ years experience. Infrastructure that survives failure. High-availability with automatic failover.",
       gradient: "from-[#0A192F] via-[#1A3A52] to-[#005A9C]",
-      cta: "Available for Full-Time",
-      secondaryCta: "View Consulting Services",
+      cta: "Apply for Full-Time",
+      secondaryCta: "Hire for Project",
       details: {
         description: "Most data engineers haven't managed projects where failure means lawsuits, or traded with real capital where downtime costs thousands per minute. I have. That's the difference.",
         features: [
@@ -86,8 +65,8 @@ export default function Home() {
       subtitle: "Four years putting real capital behind time-series models. When bad data means lost money, you build systems that don't fail. Period. Low-latency execution, automated monitoring.",
       mobileSubtitle: "Four years trading with real capital. Systems that don't fail. Low-latency execution.",
       gradient: "from-[#1A1A1A] via-[#0A192F] to-[#1A3A52]",
-      cta: "Available for Full-Time",
-      secondaryCta: "View Services",
+      cta: "Apply for Full-Time",
+      secondaryCta: "Hire for Project",
       details: {
         description: "Four years of quantitative trading where every millisecond mattered and every data point had to be right. I build data systems with the same obsession for accuracy and speed that kept me profitable in live markets. No excuses, no downtime.",
         features: [
@@ -109,8 +88,8 @@ export default function Home() {
       subtitle: "Construction projects fail when you ignore load calculations. Trading systems fail when you ignore latency. Data pipelines fail when you ignore data quality. I don't ignore any of it. Production-scale processing, validated data quality, battle-tested.",
       mobileSubtitle: "Data pipelines that don't fail. Production-scale processing, validated quality, battle-tested.",
       gradient: "from-[#0A192F] via-[#005A9C] to-[#003D7A]",
-      cta: "Available for Full-Time",
-      secondaryCta: "View Services",
+      cta: "Apply for Full-Time",
+      secondaryCta: "Hire for Project",
       details: {
         description: "Construction taught me: bad architecture is expensive to fix later. Trading taught me: systems that can't handle volatility don't survive. Data engineering taught me: most teams learn these lessons the hard way. You don't have to.",
         features: [
@@ -146,15 +125,6 @@ export default function Home() {
       <StructuredData data={generateReviewSchema()} />
       <ToastProvider>
         <div className="min-h-screen bg-white text-gray-900">
-      {/* Preloader - Con transición suave */}
-      <div id="preloader" className="fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-300">
-        <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-[#00BFA5] rounded-full animate-bounce"></div>
-          <div className="w-3 h-3 bg-[#00BFA5] rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-          <div className="w-3 h-3 bg-[#00BFA5] rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-        </div>
-      </div>
-
       <Header />
 
       {/* Hero Section with Video Background */}
@@ -171,8 +141,8 @@ export default function Home() {
           slideIndex={currentIndex}
         />
         
-        {/* Simplified overlay - Solo 1 capa para mejor performance */}
-        <div className="absolute inset-0 bg-black/15 md:bg-black/10 pointer-events-none" />
+        {/* Simplified overlay - Mejorado para mejor contraste WCAG AA */}
+        <div className="absolute inset-0 bg-black/15 pointer-events-none" />
         
         <div className="container mx-auto px-4 relative z-10">
           <ProgressiveHero 
@@ -236,8 +206,8 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             whileHover={{ y: -8 }}
           >
-            <Link href="/portfolio#trading-bot">
-              <div className="group relative bg-gradient-to-br from-white via-blue-50/40 to-green-50/40 backdrop-blur-xl p-8 md:p-12 rounded-[2rem] shadow-2xl hover:shadow-[0_20px_60px_-15px_rgba(0,191,165,0.3)] transition-all duration-500 border-2 border-white/60 hover:border-[#00BFA5]/30 overflow-hidden cursor-pointer">
+            <Link href="/portfolio/edgar-sec-parser">
+              <div className="group relative bg-gradient-to-br from-white via-blue-50/40 to-green-50/40 backdrop-blur-xl p-4 sm:p-6 md:p-8 lg:p-12 rounded-xl sm:rounded-2xl md:rounded-[2rem] shadow-2xl hover:shadow-[0_20px_60px_-15px_rgba(0,191,165,0.3)] transition-all duration-500 border-2 border-white/60 hover:border-[#00BFA5]/30 overflow-hidden cursor-pointer">
                 {/* Animated Background Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#005A9C]/10 via-[#00BFA5]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 
@@ -246,20 +216,20 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-[#005A9C]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 group-hover:animate-pulse"></div>
                 
                 {/* Content Grid */}
-                <div className="relative z-10 grid md:grid-cols-3 gap-8">
+                <div className="relative z-10 grid gap-4 sm:gap-6 md:gap-8 md:grid-cols-3">
                   {/* Left Column - Main Info */}
                   <div className="md:col-span-2">
                     <div className="flex items-start justify-between mb-6">
                       <div>
-                        <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#005A9C]/15 via-[#0077CC]/10 to-[#00BFA5]/15 rounded-full border border-[#005A9C]/30 mb-5 group-hover:border-[#00BFA5]/50 transition-all duration-300 shadow-sm">
-                          <div className="w-2 h-2 bg-[#00BFA5] rounded-full animate-pulse"></div>
-                          <span className="text-xs font-bold bg-gradient-to-r from-[#005A9C] to-[#00BFA5] bg-clip-text text-transparent tracking-wide uppercase">Real-Time Systems | 4 Years Production</span>
+                        <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#42A5F5]/15 via-[#2196F3]/10 to-[#1976D2]/15 rounded-full border border-[#42A5F5]/30 mb-5 group-hover:border-[#42A5F5]/50 transition-all duration-300 shadow-sm">
+                          <div className="w-2 h-2 bg-[#42A5F5] rounded-full animate-pulse"></div>
+                          <span className="text-xs font-bold bg-gradient-to-r from-[#42A5F5] to-[#2196F3] bg-clip-text text-transparent tracking-wide uppercase">16.5 MB/s Peak Throughput | Production-Grade</span>
                         </div>
-                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-[#005A9C] group-hover:to-[#00BFA5] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
-                          Trading Data Infrastructure
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-[#42A5F5] group-hover:to-[#2196F3] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
+                          SEC Financial Data Platform
                         </h3>
                         <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 max-w-3xl">
-                          Built end-to-end data platform powering algorithmic trading with real capital. When your pipeline fails at market open, you lose money every second—taught me to build systems that stay up.
+                          Production-grade parser processing SEC filings with automatic recovery when parsing fails mid-document. In financial data, partial results are worse than no results—built with fault-tolerant design and data quality validation.
                         </p>
                       </div>
                     </div>
@@ -274,35 +244,35 @@ export default function Home() {
                       </h4>
                       <div className="space-y-4">
                         <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
-                          <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
+                          <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
                             <i className="fas fa-bolt text-white text-xs"></i>
                           </div>
-                          <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">Real-time ingestion:</strong> WebSocket → Kafka → TimescaleDB (sub-second latency for tick data)</p>
+                          <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">Multi-engine parsing:</strong> 3 parsing engines (SGML, XBRL, HTML) with automatic fallback for maximum coverage</p>
                         </div>
                         <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
-                          <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
+                          <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
                             <i className="fas fa-rocket text-white text-xs"></i>
                           </div>
-                          <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">Backtesting infrastructure:</strong> 5x throughput improvement (weeks → hours through parallelization)</p>
+                          <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">High throughput:</strong> 16.5 MB/s peak processing speed with parallel document handling</p>
                         </div>
                         <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
-                          <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
+                          <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
                             <i className="fas fa-shield-alt text-white text-xs"></i>
                           </div>
-                          <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">Fault-tolerant design:</strong> Automatic failover, health checks, retry logic with dead letter queues</p>
+                          <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">Fault-tolerant parsing:</strong> Automatic recovery from mid-document failures with comprehensive error handling</p>
                         </div>
                         <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
-                          <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
-                            <i className="fas fa-chart-line text-white text-xs"></i>
+                          <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
+                            <i className="fas fa-check-circle text-white text-xs"></i>
                           </div>
-                          <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">Production results:</strong> 17.89% CAGR, 2.34 Sharpe ratio over 4 years</p>
+                          <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">Data quality validation:</strong> Built-in validation ensuring financial data accuracy and completeness</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Tech Stack */}
                     <div className="flex flex-wrap gap-3 mb-4">
-                      {['Python', 'SQL', 'Kafka', 'TimescaleDB', 'PostgreSQL', 'Airflow'].map((tech, index) => (
+                      {['Python', 'PostgreSQL', 'SQLAlchemy', 'Docker', 'Apache Airflow', 'Redis'].map((tech, index) => (
                         <motion.span 
                           key={tech} 
                           className="px-4 py-2 bg-gradient-to-r from-[#005A9C]/10 to-[#00BFA5]/10 hover:from-[#005A9C]/20 hover:to-[#00BFA5]/20 text-[#005A9C] rounded-full text-sm font-semibold border border-[#005A9C]/20 hover:border-[#00BFA5]/40 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-default"
@@ -323,11 +293,11 @@ export default function Home() {
                       <div className="absolute inset-0 bg-gradient-to-br from-[#005A9C]/5 via-transparent to-[#00BFA5]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       
                       <div className="relative z-10">
-                        <div className="w-20 h-20 bg-gradient-to-br from-[#005A9C] via-[#0077CC] to-[#00BFA5] rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-[#00BFA5]/30">
-                          <i className="fas fa-chart-line text-3xl text-white"></i>
+                        <div className="w-20 h-20 bg-gradient-to-br from-[#42A5F5] via-[#2196F3] to-[#1976D2] rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-[#42A5F5]/30">
+                          <i className="fas fa-file-invoice-dollar text-3xl text-white"></i>
                         </div>
                         
-                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center group-hover:bg-gradient-to-r group-hover:from-[#005A9C] group-hover:to-[#00BFA5] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
+                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center group-hover:bg-gradient-to-r group-hover:from-[#42A5F5] group-hover:to-[#2196F3] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
                           Key Features
                         </h3>
                         
@@ -336,32 +306,32 @@ export default function Home() {
                             <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm">
                               <i className="fas fa-check text-white text-xs"></i>
                             </div>
-                            <span className="text-sm text-gray-700 leading-relaxed font-medium">High-frequency data processing & anomaly detection</span>
+                            <span className="text-sm text-gray-700 leading-relaxed font-medium">Python, PostgreSQL, 3 parsing engines</span>
                           </div>
                           <div className="flex items-start group/feature hover:translate-x-1 transition-transform duration-300">
-                            <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm">
+                            <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm">
                               <i className="fas fa-check text-white text-xs"></i>
                             </div>
-                            <span className="text-sm text-gray-700 leading-relaxed font-medium">Comprehensive monitoring, SLA-aware alerting</span>
+                            <span className="text-sm text-gray-700 leading-relaxed font-medium">Fault-tolerant parsing with auto-recovery</span>
                           </div>
                           <div className="flex items-start group/feature hover:translate-x-1 transition-transform duration-300">
-                            <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm">
+                            <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm">
                               <i className="fas fa-check text-white text-xs"></i>
                             </div>
-                            <span className="text-sm text-gray-700 leading-relaxed font-medium">Production-tested with real capital</span>
+                            <span className="text-sm text-gray-700 leading-relaxed font-medium">Data quality validation & monitoring</span>
                           </div>
                         </div>
 
                         {/* Metrics */}
                         <div className="mt-8 pt-6 border-t-2 border-gray-200/50">
-                          <div className="grid grid-cols-2 gap-4">
-                            <div className="text-center p-4 bg-gradient-to-br from-[#005A9C]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                              <div className="text-4xl font-bold bg-gradient-to-r from-[#005A9C] to-[#0077CC] bg-clip-text text-transparent mb-1">17.89%</div>
-                              <div className="text-xs font-semibold text-gray-600 uppercase tracking-wide">CAGR</div>
+                          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                            <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-[#005A9C]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
+                              <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#005A9C] to-[#0077CC] bg-clip-text text-transparent mb-2">16.5</div>
+                              <div className="text-xs font-semibold text-gray-600 uppercase tracking-wide">MB/s Speed</div>
                             </div>
-                            <div className="text-center p-4 bg-gradient-to-br from-[#00BFA5]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                              <div className="text-4xl font-bold bg-gradient-to-r from-[#00BFA5] to-[#26C6DA] bg-clip-text text-transparent mb-1">2.34</div>
-                              <div className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Sharpe Ratio</div>
+                            <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-[#00BFA5]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
+                              <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#00BFA5] to-[#26C6DA] bg-clip-text text-transparent mb-2">Prod</div>
+                              <div className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Grade</div>
                             </div>
                           </div>
                         </div>
@@ -384,89 +354,16 @@ export default function Home() {
           </motion.div>
 
           {/* Two Medium Cards Side by Side */}
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-16">
-            {/* Card 1 - SEC Financial Data Platform */}
+          <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-1 md:grid-cols-2 mb-12 sm:mb-16">
+            {/* Card 1 - Data Architecture Principles */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.6 }}
               whileHover={{ y: -8, scale: 1.02 }}
             >
-              <Link href="/portfolio#sec-parser">
-                <div className="group relative bg-white/80 backdrop-blur-xl p-8 rounded-[2rem] shadow-xl hover:shadow-[0_20px_50px_-15px_rgba(66,165,245,0.3)] transition-all duration-500 border-2 border-white/60 hover:border-[#42A5F5]/30 overflow-hidden cursor-pointer h-full">
-                  {/* Animated Background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#42A5F5]/10 via-transparent to-[#2196F3]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  
-                  {/* Floating Orb */}
-                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-[#42A5F5]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  
-                  {/* Icon */}
-                  <div className="relative mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#42A5F5] via-[#2196F3] to-[#1976D2] rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-[#42A5F5]/40 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                      <i className="fas fa-file-invoice-dollar text-3xl text-white"></i>
-                    </div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="relative z-10">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#42A5F5]/15 to-[#2196F3]/10 rounded-full border border-[#42A5F5]/30 mb-4 group-hover:border-[#42A5F5]/50 transition-all duration-300">
-                      <div className="w-2 h-2 bg-[#42A5F5] rounded-full animate-pulse"></div>
-                      <span className="text-xs font-bold bg-gradient-to-r from-[#42A5F5] to-[#2196F3] bg-clip-text text-transparent tracking-wide uppercase">16.5 MB/s Peak Throughput</span>
-                    </div>
-                    
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-[#42A5F5] group-hover:to-[#2196F3] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
-                      SEC Financial Data Platform
-                    </h3>
-                    
-                    <p className="text-gray-700 mb-6 leading-relaxed">
-                      Production-grade parser processing SEC filings with automatic recovery when parsing fails mid-document. In financial data, partial results are worse than no results.
-                    </p>
-                    
-                    {/* Features */}
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
-                        <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
-                          <i className="fas fa-check text-white text-xs"></i>
-                        </div>
-                        <span className="text-sm text-gray-700 font-medium">Python, PostgreSQL, 3 engines</span>
-                      </div>
-                      <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
-                        <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
-                          <i className="fas fa-check text-white text-xs"></i>
-                        </div>
-                        <span className="text-sm text-gray-700 font-medium">Fault-tolerant parsing</span>
-                      </div>
-                      <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
-                        <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
-                          <i className="fas fa-check text-white text-xs"></i>
-                        </div>
-                        <span className="text-sm text-gray-700 font-medium">Data quality validation</span>
-                      </div>
-                    </div>
-                    
-                    {/* Arrow */}
-                    <div className="flex items-center justify-end pt-4 border-t-2 border-gray-100">
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#42A5F5] to-[#2196F3] rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
-                        <div className="relative w-12 h-12 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-45 transition-all duration-500 shadow-md">
-                          <i className="fas fa-arrow-right text-white group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-
-            {/* Card 2 - Data Architecture Principles */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-            >
-              <Link href="/services#data-architecture">
-                <div className="group relative bg-white/80 backdrop-blur-xl p-8 rounded-[2rem] shadow-xl hover:shadow-[0_20px_50px_-15px_rgba(0,90,156,0.3)] transition-all duration-500 border-2 border-white/60 hover:border-[#005A9C]/30 overflow-hidden cursor-pointer h-full">
+              <Link href="/services">
+                <div className="group relative bg-white/80 backdrop-blur-xl p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-[2rem] shadow-xl hover:shadow-[0_20px_50px_-15px_rgba(0,90,156,0.3)] transition-all duration-500 border-2 border-white/60 hover:border-[#005A9C]/30 overflow-hidden cursor-pointer h-full">
                   {/* Animated Background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#005A9C]/10 via-transparent to-[#0066CC]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   
@@ -522,6 +419,79 @@ export default function Home() {
                       <div className="relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-[#005A9C] to-[#0066CC] rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
                         <div className="relative w-12 h-12 bg-gradient-to-br from-[#005A9C] to-[#0066CC] rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-45 transition-all duration-500 shadow-md">
+                          <i className="fas fa-arrow-right text-white group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Card 2 - Trading Data Infrastructure */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              whileHover={{ y: -8, scale: 1.02 }}
+            >
+              <Link href="/portfolio/mean-reversion-ou">
+                <div className="group relative bg-white/80 backdrop-blur-xl p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-[2rem] shadow-xl hover:shadow-[0_20px_50px_-15px_rgba(0,191,165,0.3)] transition-all duration-500 border-2 border-white/60 hover:border-[#00BFA5]/30 overflow-hidden cursor-pointer h-full">
+                  {/* Animated Background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#00BFA5]/10 via-transparent to-[#26C6DA]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  
+                  {/* Floating Orb */}
+                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-[#00BFA5]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  
+                  {/* Icon */}
+                  <div className="relative mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#00BFA5] via-[#26C6DA] to-[#00ACC1] rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-[#00BFA5]/40 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                      <i className="fas fa-chart-line text-3xl text-white"></i>
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00BFA5]/15 to-[#26C6DA]/10 rounded-full border border-[#00BFA5]/30 mb-4 group-hover:border-[#00BFA5]/50 transition-all duration-300">
+                      <div className="w-2 h-2 bg-[#00BFA5] rounded-full animate-pulse"></div>
+                      <span className="text-xs font-bold bg-gradient-to-r from-[#00BFA5] to-[#26C6DA] bg-clip-text text-transparent tracking-wide uppercase">Real-Money Trading Systems</span>
+                    </div>
+                    
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-[#00BFA5] group-hover:to-[#26C6DA] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
+                      Trading Data Infrastructure
+                    </h3>
+                    
+                    <p className="text-gray-700 mb-6 leading-relaxed">
+                      Built end-to-end data platform powering algorithmic trading with real capital. When your pipeline fails at market open, you lose money every second—taught me to build systems that stay up.
+                    </p>
+                    
+                    {/* Features */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
+                        <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
+                          <i className="fas fa-check text-white text-xs"></i>
+                        </div>
+                        <span className="text-sm text-gray-700 font-medium">WebSocket, Kafka, TimeScaleDB</span>
+                      </div>
+                      <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
+                        <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
+                          <i className="fas fa-check text-white text-xs"></i>
+                        </div>
+                        <span className="text-sm text-gray-700 font-medium">Low-latency data ingestion</span>
+                      </div>
+                      <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
+                        <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
+                          <i className="fas fa-check text-white text-xs"></i>
+                        </div>
+                        <span className="text-sm text-gray-700 font-medium">Production-tested with real capital</span>
+                      </div>
+                    </div>
+                    
+                    {/* Arrow */}
+                    <div className="flex items-center justify-end pt-4 border-t-2 border-gray-100">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#00BFA5] to-[#26C6DA] rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+                        <div className="relative w-12 h-12 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-45 transition-all duration-500 shadow-md">
                           <i className="fas fa-arrow-right text-white group-hover:translate-x-1 transition-transform duration-300"></i>
                         </div>
                       </div>
