@@ -62,7 +62,7 @@ export default function Home() {
         ],
         metrics: [
           { value: "3 Years", label: "DE Experience" },
-          { value: "12+ Projects Delivered" },
+          { value: "12+", label: "Projects Delivered" },
           { value: "Real-time", label: "Data Processing" },
           { value: "Cost-Optimized", label: "Architecture" }
         ]

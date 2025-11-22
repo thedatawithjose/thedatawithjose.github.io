@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
 
 interface ToastProps {
@@ -38,12 +38,12 @@ const toastConfig = {
   }
 };
 
-export default function Toast({ 
-  type, 
-  message, 
-  isVisible, 
-  onClose, 
-  autoHideDelay = 5000 
+export default function Toast({
+  type,
+  message,
+  isVisible,
+  onClose,
+  autoHideDelay = 5000
 }: ToastProps) {
   const config = toastConfig[type];
 
@@ -90,7 +90,7 @@ export default function Toast({
                 </button>
               </div>
             </div>
-            
+
             {/* Progress bar para mostrar tiempo restante */}
             {autoHideDelay > 0 && (
               <m.div
@@ -136,7 +136,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   const showToast = (toast: Omit<ToastItem, 'id'>) => {
     const id = generateId();
     const newToast = { ...toast, id };
-    
+
     setToasts(prev => [...prev, newToast]);
   };
 
@@ -170,7 +170,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
       hideToast
     }}>
       {children}
-      
+
       {/* Renderizar todos los toasts */}
       <div className="fixed top-4 right-4 z-50 space-y-2 max-w-sm w-full">
         {toasts.map((toast, index) => (

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useConsent } from './ConsentManager';
@@ -75,7 +75,7 @@ export default function CookieConsent() {
           {/* Content */}
           <div className="p-6">
             <p className="text-gray-700 mb-6 leading-relaxed">
-              We use cookies to enhance your browsing experience, provide personalized content, 
+              We use cookies to enhance your browsing experience, provide personalized content,
               and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
             </p>
 
@@ -113,9 +113,8 @@ export default function CookieConsent() {
                   <button
                     type="button"
                     onClick={() => setPreferences(prev => ({ ...prev, analytics: !prev.analytics }))}
-                    className={`w-12 h-6 rounded-full flex items-center transition-colors duration-300 ${
-                      preferences.analytics ? 'bg-blue-500 justify-end' : 'bg-gray-300 justify-start'
-                    }`}
+                    className={`w-12 h-6 rounded-full flex items-center transition-colors duration-300 ${preferences.analytics ? 'bg-blue-500 justify-end' : 'bg-gray-300 justify-start'
+                      }`}
                     aria-label={`Toggle analytics cookies ${preferences.analytics ? 'off' : 'on'}`}
                   >
                     <div className="w-4 h-4 bg-white rounded-full mx-1 transition-transform duration-300"></div>
@@ -135,9 +134,8 @@ export default function CookieConsent() {
                   <button
                     type="button"
                     onClick={() => setPreferences(prev => ({ ...prev, marketing: !prev.marketing }))}
-                    className={`w-12 h-6 rounded-full flex items-center transition-colors duration-300 ${
-                      preferences.marketing ? 'bg-blue-500 justify-end' : 'bg-gray-300 justify-start'
-                    }`}
+                    className={`w-12 h-6 rounded-full flex items-center transition-colors duration-300 ${preferences.marketing ? 'bg-blue-500 justify-end' : 'bg-gray-300 justify-start'
+                      }`}
                     aria-label={`Toggle marketing cookies ${preferences.marketing ? 'off' : 'on'}`}
                   >
                     <div className="w-4 h-4 bg-white rounded-full mx-1 transition-transform duration-300"></div>

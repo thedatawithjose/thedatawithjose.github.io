@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { m, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ReactNode, useRef, MouseEvent } from 'react';
 
 interface EnhancedButtonProps {
@@ -33,13 +33,13 @@ export default function EnhancedButton({
   haptic = true,
 }: EnhancedButtonProps) {
   const ref = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
-  
+
   // Motion values for advanced interactions
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useTransform(y, [-100, 100], [30, -30]);
   const rotateY = useTransform(x, [-100, 100], [-30, 30]);
-  
+
   // Spring animations for smooth interactions
   const springConfig = { stiffness: 300, damping: 30 };
   const springX = useSpring(x, springConfig);
@@ -50,11 +50,11 @@ export default function EnhancedButton({
   // Handle mouse move for 3D effect
   const handleMouseMove = (event: MouseEvent) => {
     if (!ref.current || disabled) return;
-    
+
     const rect = ref.current.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
-    
+
     x.set((event.clientX - centerX) / 5);
     y.set((event.clientY - centerY) / 5);
   };
@@ -81,7 +81,7 @@ export default function EnhancedButton({
   // Variant styles
   const getVariantStyles = () => {
     const baseStyles = "relative overflow-hidden font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg";
-    
+
     switch (variant) {
       case 'primary':
         return `${baseStyles} bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600 focus:ring-green-500 shadow-lg hover:shadow-xl`;
@@ -122,10 +122,10 @@ export default function EnhancedButton({
   // Animation variants
   const buttonVariants = {
     initial: { scale: 1 },
-    hover: { 
+    hover: {
       scale: 1.02,
     },
-    tap: { 
+    tap: {
       scale: 0.98,
     }
   };
@@ -133,13 +133,13 @@ export default function EnhancedButton({
   // Ripple effect
   const createRipple = (event: MouseEvent) => {
     if (!ref.current || disabled) return;
-    
+
     const button = ref.current;
     const rect = button.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
     const x = event.clientX - rect.left - size / 2;
     const y = event.clientY - rect.top - size / 2;
-    
+
     const ripple = document.createElement('span');
     ripple.style.cssText = `
       position: absolute;
@@ -153,9 +153,9 @@ export default function EnhancedButton({
       animation: ripple 0.6s ease-out;
       pointer-events: none;
     `;
-    
+
     button.appendChild(ripple);
-    
+
     setTimeout(() => {
       ripple.remove();
     }, 600);

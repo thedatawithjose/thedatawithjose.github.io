@@ -9,7 +9,7 @@ import { heroProject, supportingProjects } from '../../lib/data/projects';
 
 export default function WhatIBuildSection() {
   return (
-    <section 
+    <section
       className="services py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50"
       data-section="what-i-build"
     >
@@ -24,9 +24,9 @@ export default function WhatIBuildSection() {
 
           {/* Supporting Project Cards */}
           {supportingProjects.map((project, index) => (
-            <SupportingProjectCard 
-              key={project.id} 
-              {...project} 
+            <SupportingProjectCard
+              key={project.id}
+              {...project}
               index={index}
             />
           ))}
@@ -44,7 +44,7 @@ export default function WhatIBuildSection() {
             <div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Why Choose My Data Engineering?</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                <strong>12+ Projects taught me to plan for failure modes and deliver under constraints. Four years as quantitative trader taught me that data quality isn't optional—it's survival. Now, three years as Data Engineer, I build infrastructure combining both disciplines—engineered for reliability, tested under pressure.
+                <strong>12+ years of professional experience across high-stakes environments:</strong> Four years managing construction projects taught me to plan for failure modes and deliver under constraints. Four years as quantitative trader taught me that data quality isn't optional—it's survival. Now, three years as Data Engineer, I build infrastructure combining both disciplines—engineered for reliability, tested under pressure.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg">
@@ -98,15 +98,15 @@ export default function WhatIBuildSection() {
           transition={{ delay: 0.5, duration: 0.6 }}
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/services" 
+            <Link
+              href="/services"
               className="group bg-gradient-to-r from-[#005A9C] to-[#00BFA5] hover:from-[#0066CC] hover:to-[#00D4B4] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center"
             >
               <i className="fas fa-database mr-2"></i>
               Explore Data Solutions
               <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
             </Link>
-            <a 
+            <a
               href="mailto:datawithjose@outlook.com?subject=Introduction Call&body=Hi Jose, I'd like to schedule an introduction call..."
               className="group border-2 border-[#005A9C] text-[#005A9C] hover:bg-[#005A9C] hover:text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center"
             >

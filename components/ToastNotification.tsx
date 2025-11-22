@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 
 interface Toast {
   id: string;
@@ -164,22 +164,22 @@ function ToastItem({ toast, index, onRemove }: ToastItemProps) {
     <m.div
       layout
       initial={{ opacity: 0, x: 300, scale: 0.8 }}
-      animate={{ 
-        opacity: 1, 
-        x: 0, 
+      animate={{
+        opacity: 1,
+        x: 0,
         scale: 1,
         y: index * -8 // Slight stacking effect
       }}
-      exit={{ 
-        opacity: 0, 
-        x: 300, 
+      exit={{
+        opacity: 0,
+        x: 300,
         scale: 0.8,
         transition: { duration: 0.2 }
       }}
-      transition={{ 
-        type: "spring", 
-        stiffness: 300, 
-        damping: 30 
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        damping: 30
       }}
       className={`relative overflow-hidden rounded-lg border shadow-lg backdrop-blur-sm ${styles.bg}`}
       whileHover={{ scale: 1.02 }}
@@ -202,7 +202,7 @@ function ToastItem({ toast, index, onRemove }: ToastItemProps) {
           <div className="flex-shrink-0">
             <i className={`${styles.icon} text-xl`} aria-hidden="true"></i>
           </div>
-          
+
           <div className="ml-3 flex-1">
             <h3 className="text-sm font-semibold text-gray-900">
               {toast.title}
@@ -212,7 +212,7 @@ function ToastItem({ toast, index, onRemove }: ToastItemProps) {
                 {toast.message}
               </p>
             )}
-            
+
             {toast.action && (
               <div className="mt-3">
                 <button
@@ -243,24 +243,24 @@ function ToastItem({ toast, index, onRemove }: ToastItemProps) {
 // Convenience hooks for different toast types
 export const useSuccessToast = () => {
   const { showToast } = useToast();
-  return (title: string, message?: string) => 
+  return (title: string, message?: string) =>
     showToast({ type: 'success', title, message });
 };
 
 export const useErrorToast = () => {
   const { showToast } = useToast();
-  return (title: string, message?: string) => 
+  return (title: string, message?: string) =>
     showToast({ type: 'error', title, message });
 };
 
 export const useInfoToast = () => {
   const { showToast } = useToast();
-  return (title: string, message?: string) => 
+  return (title: string, message?: string) =>
     showToast({ type: 'info', title, message });
 };
 
 export const useWarningToast = () => {
   const { showToast } = useToast();
-  return (title: string, message?: string) => 
+  return (title: string, message?: string) =>
     showToast({ type: 'warning', title, message });
 };

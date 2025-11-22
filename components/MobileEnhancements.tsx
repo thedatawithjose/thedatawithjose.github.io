@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, ReactNode } from 'react';
-import { motion, useMotionValue, useTransform, PanInfo, AnimatePresence } from 'framer-motion';
+import { m, useMotionValue, useTransform, PanInfo, AnimatePresence } from 'framer-motion';
 
 // Hook para detectar gestos de swipe
 export function useSwipeGesture(
@@ -15,7 +15,7 @@ export function useSwipeGesture(
 
   const handlePanEnd = (event: any, info: PanInfo) => {
     const { offset, velocity } = info;
-    
+
     // Determinar dirección del swipe basado en offset y velocidad
     if (Math.abs(offset.x) > Math.abs(offset.y)) {
       // Swipe horizontal
@@ -32,7 +32,7 @@ export function useSwipeGesture(
         onSwipeUp?.();
       }
     }
-    
+
     setIsGestureActive(false);
   };
 
@@ -51,11 +51,11 @@ interface SwipeableCarouselProps {
   className?: string;
 }
 
-export function SwipeableCarousel({ 
-  children, 
-  currentIndex, 
-  onIndexChange, 
-  className = '' 
+export function SwipeableCarousel({
+  children,
+  currentIndex,
+  onIndexChange,
+  className = ''
 }: SwipeableCarouselProps) {
   const x = useMotionValue(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -90,16 +90,15 @@ export function SwipeableCarousel({
           </div>
         ))}
       </m.div>
-      
+
       {/* Indicadores de swipe */}
       <div className="flex justify-center mt-4 gap-2">
         {children.map((_, index) => (
           <button
             key={index}
             onClick={() => onIndexChange(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              index === currentIndex ? 'bg-green-500 w-6' : 'bg-gray-300'
-            }`}
+            className={`w-2 h-2 rounded-full transition-all ${index === currentIndex ? 'bg-green-500 w-6' : 'bg-gray-300'
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
@@ -115,15 +114,15 @@ interface PullToRefreshProps {
   threshold?: number;
 }
 
-export function PullToRefresh({ 
-  onRefresh, 
-  children, 
-  threshold = 80 
+export function PullToRefresh({
+  onRefresh,
+  children,
+  threshold = 80
 }: PullToRefreshProps) {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [pullDistance, setPullDistance] = useState(0);
   const y = useMotionValue(0);
-  
+
   const opacity = useTransform(y, [0, threshold], [0, 1]);
   const scale = useTransform(y, [0, threshold], [0.8, 1]);
 
@@ -202,7 +201,7 @@ export function useDeviceOrientation() {
 
     handleOrientationChange();
     window.addEventListener('resize', handleOrientationChange);
-    
+
     return () => window.removeEventListener('resize', handleOrientationChange);
   }, []);
 
@@ -239,11 +238,10 @@ export function TouchNavigation({ items, activeId, onItemSelect }: TouchNavigati
           onClick={() => onItemSelect(item.id)}
           onTouchStart={() => handleTouchStart(item.id)}
           onTouchEnd={handleTouchEnd}
-          className={`flex flex-col items-center py-2 px-3 rounded-lg transition-colors min-w-0 flex-1 ${
-            activeId === item.id 
-              ? 'text-green-500 bg-green-50' 
+          className={`flex flex-col items-center py-2 px-3 rounded-lg transition-colors min-w-0 flex-1 ${activeId === item.id
+              ? 'text-green-500 bg-green-50'
               : 'text-gray-600 hover:text-green-500'
-          }`}
+            }`}
           whileTap={{ scale: 0.95 }}
           animate={{
             scale: pressedItem === item.id ? 0.95 : 1,
@@ -257,7 +255,7 @@ export function TouchNavigation({ items, activeId, onItemSelect }: TouchNavigati
           <span className="text-xs font-medium truncate w-full text-center">
             {item.label}
           </span>
-          
+
           {/* Active indicator */}
           {activeId === item.id && (
             <m.div
@@ -283,7 +281,7 @@ export function useIsMobile() {
 
     checkIsMobile();
     window.addEventListener('resize', checkIsMobile);
-    
+
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
 
@@ -316,11 +314,10 @@ export function TouchOptimizedInput({
   return (
     <div className="relative">
       <m.div
-        className={`relative border-2 rounded-lg transition-all duration-200 ${
-          error ? 'border-red-500' : 
-          isFocused ? 'border-green-500' : 
-          'border-gray-300'
-        }`}
+        className={`relative border-2 rounded-lg transition-all duration-200 ${error ? 'border-red-500' :
+            isFocused ? 'border-green-500' :
+              'border-gray-300'
+          }`}
         whileTap={{ scale: 0.995 }}
       >
         <input
@@ -334,16 +331,14 @@ export function TouchOptimizedInput({
           }}
           placeholder={placeholder}
           required={required}
-          className={`w-full px-4 py-4 text-lg bg-transparent focus:outline-none ${
-            value ? 'pt-6 pb-2' : 'py-4'
-          }`}
+          className={`w-full px-4 py-4 text-lg bg-transparent focus:outline-none ${value ? 'pt-6 pb-2' : 'py-4'
+            }`}
         />
-        
+
         {/* Floating label */}
         <m.label
-          className={`absolute left-4 pointer-events-none transition-all duration-200 ${
-            isFocused || value ? 'text-xs top-2 text-green-500' : 'text-lg top-4 text-gray-500'
-          }`}
+          className={`absolute left-4 pointer-events-none transition-all duration-200 ${isFocused || value ? 'text-xs top-2 text-green-500' : 'text-lg top-4 text-gray-500'
+            }`}
           animate={{
             fontSize: isFocused || value ? '0.75rem' : '1rem',
             y: isFocused || value ? -8 : 0,

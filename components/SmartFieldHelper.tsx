@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 interface SmartFieldHelperProps {
@@ -24,7 +24,7 @@ export default function SmartFieldHelper({
   // Smart suggestions based on field type
   const getSmartSuggestions = (type: string, currentValue: string): string[] => {
     const val = currentValue.toLowerCase().trim();
-    
+
     switch (type) {
       case 'name':
         if (val.length > 0 && val.length < 3) {
@@ -171,34 +171,31 @@ export default function SmartFieldHelper({
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className={`flex items-center justify-between p-2 rounded-lg text-xs ${
-                characterFeedback.status === 'error' 
-                  ? 'bg-red-50 text-red-600' 
+              className={`flex items-center justify-between p-2 rounded-lg text-xs ${characterFeedback.status === 'error'
+                  ? 'bg-red-50 text-red-600'
                   : characterFeedback.status === 'warning'
-                  ? 'bg-yellow-50 text-yellow-600'
-                  : 'bg-green-50 text-green-600'
-              }`}
+                    ? 'bg-yellow-50 text-yellow-600'
+                    : 'bg-green-50 text-green-600'
+                }`}
             >
               <div className="flex items-center">
-                <i className={`${
-                  characterFeedback.status === 'error' 
-                    ? 'fas fa-times-circle' 
+                <i className={`${characterFeedback.status === 'error'
+                    ? 'fas fa-times-circle'
                     : characterFeedback.status === 'warning'
-                    ? 'fas fa-exclamation-circle'
-                    : 'fas fa-check-circle'
-                } mr-1`} />
+                      ? 'fas fa-exclamation-circle'
+                      : 'fas fa-check-circle'
+                  } mr-1`} />
                 <span>{characterFeedback.message}</span>
               </div>
-              
+
               <div className="flex items-center">
                 <span className="mr-2">{value.length} characters</span>
                 {fieldType === 'message' && (
                   <div className="w-16 bg-gray-200 rounded-full h-1">
                     <m.div
-                      className={`h-1 rounded-full ${
-                        value.length < 50 ? 'bg-red-400' :
-                        value.length < 200 ? 'bg-yellow-400' : 'bg-green-400'
-                      }`}
+                      className={`h-1 rounded-full ${value.length < 50 ? 'bg-red-400' :
+                          value.length < 200 ? 'bg-yellow-400' : 'bg-green-400'
+                        }`}
                       initial={{ width: 0 }}
                       animate={{ width: `${Math.min((value.length / 500) * 100, 100)}%` }}
                       transition={{ duration: 0.3 }}

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Header from '../../components/Header';
@@ -96,7 +96,7 @@ export default function About() {
         <Header />
 
         {/* Enhanced Hero Section */}
-        <motion.div
+        <m.div
           className="relative bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white pt-16 pb-24 overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -121,7 +121,7 @@ export default function About() {
 
             <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
               {/* Text Content */}
-              <motion.div
+              <m.div
                 className="lg:col-span-3"
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -184,10 +184,10 @@ export default function About() {
                     <i className="fas fa-external-link-alt ml-2 text-sm group-hover:translate-x-1 transition-transform duration-300"></i>
                   </Link>
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Profile Image */}
-              <motion.div
+              <m.div
                 className="lg:col-span-2 flex justify-center lg:justify-end"
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -205,76 +205,76 @@ export default function About() {
                     />
                   </div>
                   {/* Floating tech elements */}
-                  <motion.div
+                  <m.div
                     className="absolute -top-4 -right-4 w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-110"
                     animate={{ y: [0, -8, 0] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                   >
                     <i className="fab fa-python text-white text-xl"></i>
-                  </motion.div>
-                  <motion.div
+                  </m.div>
+                  <m.div
                     className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-green-500/25 transition-all duration-300 hover:scale-110"
                     animate={{ y: [0, 8, 0] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                   >
                     <i className="fas fa-chart-line text-white text-xl"></i>
-                  </motion.div>
-                  <motion.div
+                  </m.div>
+                  <m.div
                     className="absolute top-1/2 -left-6 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-110"
                     animate={{ x: [-4, 4, -4] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
                   >
                     <i className="fas fa-database text-white text-sm"></i>
-                  </motion.div>
-                  <motion.div
+                  </m.div>
+                  <m.div
                     className="absolute top-8 -right-8 w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-orange-500/25 transition-all duration-300 hover:scale-110"
                     animate={{ rotate: [0, 360] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                   >
                     <i className="fas fa-cogs text-white text-sm"></i>
-                  </motion.div>
+                  </m.div>
                 </div>
-              </motion.div>
+              </m.div>
             </div>
 
             {/* Key Impact Metrics */}
-            <motion.div
+            <m.div
               className="grid md:grid-cols-4 gap-8 mt-16"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              <motion.div
+              <m.div
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-2xl font-bold text-green-400 mb-2">High-Availability</div>
                 <div className="text-gray-300 text-sm">Fault-Tolerant Systems</div>
-              </motion.div>
-              <motion.div
+              </m.div>
+              <m.div
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-2xl font-bold text-blue-400 mb-2">Cost-Optimized</div>
                 <div className="text-gray-300 text-sm">Infrastructure Design</div>
-              </motion.div>
-              <motion.div
+              </m.div>
+              <m.div
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-2xl font-bold text-purple-400 mb-2">Production-Scale</div>
                 <div className="text-gray-300 text-sm">Data Processing</div>
-              </motion.div>
-              <motion.div
+              </m.div>
+              <m.div
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-2xl font-bold text-orange-400 mb-2">Low-Latency</div>
                 <div className="text-gray-300 text-sm">Real-Time Processing</div>
-              </motion.div>
-            </motion.div>
+              </m.div>
+            </m.div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Interactive Content Tabs */}
         <div className="py-24">
@@ -287,7 +287,7 @@ export default function About() {
                 { id: 'values', label: 'Core Values', icon: 'fas fa-heart' },
                 { id: 'achievements', label: 'Achievements', icon: 'fas fa-trophy' }
               ].map((tab) => (
-                <motion.button
+                <m.button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${activeTab === tab.id
@@ -299,12 +299,12 @@ export default function About() {
                 >
                   <i className={`${tab.icon} mr-2`}></i>
                   {tab.label}
-                </motion.button>
+                </m.button>
               ))}
             </div>
 
             {/* Tab Content */}
-            <motion.div
+            <m.div
               key={activeTab}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -517,7 +517,7 @@ export default function About() {
                     </div>
 
                     <h3 className="text-xl font-semibold mb-4">Production Metrics in Detail</h3>
-                    <motion.div
+                    <m.div
                       className="bg-white p-4 rounded-lg shadow-md border-l-4 border-green-500 mb-4"
                       initial={{ opacity: 0, x: 30 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -529,8 +529,8 @@ export default function About() {
                         </div>
                         <i className="fas fa-chart-line text-xl text-green-500"></i>
                       </div>
-                    </motion.div>
-                    <motion.div
+                    </m.div>
+                    <m.div
                       className="bg-white p-4 rounded-lg shadow-md border-l-4 border-blue-500 mb-4"
                       initial={{ opacity: 0, x: 30 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -543,8 +543,8 @@ export default function About() {
                         </div>
                         <i className="fas fa-dollar-sign text-xl text-blue-500"></i>
                       </div>
-                    </motion.div>
-                    <motion.div
+                    </m.div>
+                    <m.div
                       className="bg-white p-4 rounded-lg shadow-md border-l-4 border-purple-500 mb-4"
                       initial={{ opacity: 0, x: 30 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -557,8 +557,8 @@ export default function About() {
                         </div>
                         <i className="fas fa-tachometer-alt text-xl text-purple-500"></i>
                       </div>
-                    </motion.div>
-                    <motion.div
+                    </m.div>
+                    <m.div
                       className="bg-white p-4 rounded-lg shadow-md border-l-4 border-orange-500"
                       initial={{ opacity: 0, x: 30 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -571,7 +571,7 @@ export default function About() {
                         </div>
                         <i className="fas fa-database text-xl text-orange-500"></i>
                       </div>
-                    </motion.div>
+                    </m.div>
                   </div>
                 </div>
               )}
@@ -618,7 +618,7 @@ export default function About() {
                         color: 'orange'
                       }
                     ].map((experience, index) => (
-                      <motion.div
+                      <m.div
                         key={index}
                         className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                           }`}
@@ -645,7 +645,7 @@ export default function About() {
 
                         {/* Timeline Dot */}
                         <div className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-${experience.color}-500 rounded-full border-4 border-white shadow-lg`}></div>
-                      </motion.div>
+                      </m.div>
                     ))}
                   </div>
                 </div>
@@ -657,7 +657,7 @@ export default function About() {
                   <h2 className="text-4xl font-bold text-center mb-12">Core Values & Philosophy</h2>
                   <div className="grid md:grid-cols-2 gap-8 mb-12">
                     {coreValues.map((value, index) => (
-                      <motion.div
+                      <m.div
                         key={index}
                         className="bg-white p-8 rounded-2xl shadow-lg text-center"
                         initial={{ opacity: 0, y: 50 }}
@@ -670,12 +670,12 @@ export default function About() {
                         </div>
                         <h3 className="text-2xl font-bold mb-4">{value.title}</h3>
                         <p className="text-gray-600 leading-relaxed">{value.description}</p>
-                      </motion.div>
+                      </m.div>
                     ))}
                   </div>
 
                   {/* Philosophy Statement */}
-                  <motion.div
+                  <m.div
                     className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -691,7 +691,7 @@ export default function About() {
                     <div className="text-center mt-4">
                       <span className="text-green-500 font-semibold">— Jose Acosta</span>
                     </div>
-                  </motion.div>
+                  </m.div>
                 </div>
               )}
 
@@ -702,7 +702,7 @@ export default function About() {
 
                   {/* Achievement Categories */}
                   <div className="grid md:grid-cols-3 gap-8 mb-12">
-                    <motion.div
+                    <m.div
                       className="text-center"
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -722,9 +722,9 @@ export default function About() {
                           <div className="text-sm text-gray-600">Throughput Enhancement</div>
                         </div>
                       </div>
-                    </motion.div>
+                    </m.div>
 
-                    <motion.div
+                    <m.div
                       className="text-center"
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -744,9 +744,9 @@ export default function About() {
                           <div className="text-sm text-gray-600">Test Coverage</div>
                         </div>
                       </div>
-                    </motion.div>
+                    </m.div>
 
-                    <motion.div
+                    <m.div
                       className="text-center"
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -766,7 +766,7 @@ export default function About() {
                           <div className="text-sm text-gray-600">Satisfied Clients</div>
                         </div>
                       </div>
-                    </motion.div>
+                    </m.div>
                   </div>
 
                   {/* Client Testimonials */}
@@ -774,7 +774,7 @@ export default function About() {
                     <h3 className="text-2xl font-bold text-center mb-8">What Clients Say</h3>
                     <div className="grid md:grid-cols-3 gap-8">
                       {testimonials.map((testimonial, index) => (
-                        <motion.div
+                        <m.div
                           key={index}
                           className="bg-white p-6 rounded-2xl shadow-lg"
                           initial={{ opacity: 0, y: 50 }}
@@ -789,13 +789,13 @@ export default function About() {
                             <div className="font-semibold">{testimonial.author}</div>
                             <div className="text-sm text-gray-600">{testimonial.position}</div>
                           </div>
-                        </motion.div>
+                        </m.div>
                       ))}
                     </div>
                   </div>
                 </div>
               )}
-            </motion.div>
+            </m.div>
           </div>
         </div>
 
@@ -806,7 +806,7 @@ export default function About() {
         <section className="py-20 bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -819,10 +819,10 @@ export default function About() {
                   Let's discuss your data challenges and create solutions that drive real business value
                   with production-grade reliability.
                 </p>
-              </motion.div>
+              </m.div>
 
               {/* Action Options */}
-              <motion.div
+              <m.div
                 className="grid md:grid-cols-2 gap-8 mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -861,10 +861,10 @@ export default function About() {
                     View Services
                   </Link>
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Key Differentiators */}
-              <motion.div
+              <m.div
                 className="border-t border-white/20 pt-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -885,10 +885,10 @@ export default function About() {
                     <span>Business impact focus</span>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Social Links */}
-              <motion.div
+              <m.div
                 className="mt-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -924,7 +924,7 @@ export default function About() {
                     <i className="fab fa-instagram text-xl"></i>
                   </a>
                 </div>
-              </motion.div>
+              </m.div>
             </div>
           </div>
         </section>

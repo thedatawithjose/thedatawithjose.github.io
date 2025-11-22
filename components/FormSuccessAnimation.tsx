@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 interface FormSuccessAnimationProps {
@@ -13,10 +13,10 @@ interface FormSuccessAnimationProps {
   };
 }
 
-export default function FormSuccessAnimation({ 
-  isVisible, 
+export default function FormSuccessAnimation({
+  isVisible,
   onComplete,
-  formData 
+  formData
 }: FormSuccessAnimationProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
@@ -51,7 +51,7 @@ export default function FormSuccessAnimation({
 
     // Trigger confetti
     setShowConfetti(true);
-    
+
     // Haptic feedback
     if (navigator.vibrate) {
       navigator.vibrate([100, 50, 100]);
@@ -106,12 +106,12 @@ export default function FormSuccessAnimation({
                     left: `${particle.x}%`,
                     top: '-10px'
                   }}
-                  initial={{ 
-                    y: -20, 
+                  initial={{
+                    y: -20,
                     rotate: 0,
                     scale: 0
                   }}
-                  animate={{ 
+                  animate={{
                     y: window.innerHeight + 20,
                     rotate: particle.rotation,
                     scale: [0, 1, 1, 0]
@@ -136,7 +136,7 @@ export default function FormSuccessAnimation({
           >
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 opacity-50" />
-            
+
             {/* Content */}
             <div className="relative z-10">
               {/* Personalized greeting */}
@@ -164,44 +164,40 @@ export default function FormSuccessAnimation({
                   <m.div
                     key={index}
                     initial={{ opacity: 0.3, scale: 0.9 }}
-                    animate={{ 
+                    animate={{
                       opacity: index <= currentStep ? 1 : 0.3,
                       scale: index === currentStep ? 1.1 : index < currentStep ? 1 : 0.9
                     }}
                     transition={{ duration: 0.5 }}
-                    className={`flex items-center space-x-4 p-4 rounded-lg ${
-                      index <= currentStep ? 'bg-white shadow-md' : 'bg-gray-50'
-                    }`}
+                    className={`flex items-center space-x-4 p-4 rounded-lg ${index <= currentStep ? 'bg-white shadow-md' : 'bg-gray-50'
+                      }`}
                   >
                     {/* Icon */}
                     <m.div
-                      animate={{ 
+                      animate={{
                         rotate: index === currentStep ? [0, 10, -10, 0] : 0,
                         scale: index === currentStep ? [1, 1.2, 1] : 1
                       }}
-                      transition={{ 
+                      transition={{
                         duration: 0.6,
                         repeat: index === currentStep ? 2 : 0
                       }}
-                      className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                        index <= currentStep 
-                          ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white' 
+                      className={`w-12 h-12 rounded-full flex items-center justify-center ${index <= currentStep
+                          ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white'
                           : 'bg-gray-200 text-gray-400'
-                      }`}
+                        }`}
                     >
                       <i className={`${step.icon} text-lg`} />
                     </m.div>
 
                     {/* Content */}
                     <div className="flex-1 text-left">
-                      <h4 className={`font-semibold ${
-                        index <= currentStep ? 'text-gray-800' : 'text-gray-400'
-                      }`}>
+                      <h4 className={`font-semibold ${index <= currentStep ? 'text-gray-800' : 'text-gray-400'
+                        }`}>
                         {step.title}
                       </h4>
-                      <p className={`text-sm ${
-                        index <= currentStep ? 'text-gray-600' : 'text-gray-400'
-                      }`}>
+                      <p className={`text-sm ${index <= currentStep ? 'text-gray-600' : 'text-gray-400'
+                        }`}>
                         {step.description}
                       </p>
                     </div>

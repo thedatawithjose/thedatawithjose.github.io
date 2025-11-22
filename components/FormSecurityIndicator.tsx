@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 
 interface SecurityCheck {
   id: string;
@@ -17,11 +17,11 @@ interface FormSecurityIndicatorProps {
   className?: string;
 }
 
-export default function FormSecurityIndicator({ 
-  formData, 
-  interactionCount, 
-  formStartTime, 
-  className = '' 
+export default function FormSecurityIndicator({
+  formData,
+  interactionCount,
+  formStartTime,
+  className = ''
 }: FormSecurityIndicatorProps) {
   const [securityChecks, setSecurityChecks] = useState<SecurityCheck[]>([
     { id: 'honeypot', label: 'Bot Detection', status: 'pending' },
@@ -80,7 +80,7 @@ export default function FormSecurityIndicator({
     // Calculate overall security level
     const validCount = updatedChecks.filter(c => c.status === 'valid').length;
     const invalidCount = updatedChecks.filter(c => c.status === 'invalid').length;
-    
+
     if (invalidCount > 0) {
       setOverallSecurity('low');
     } else if (validCount >= 3) {
@@ -122,11 +122,10 @@ export default function FormSecurityIndicator({
     >
       <div className="flex items-center justify-between mb-3">
         <h4 className="font-semibold text-sm">Security Status</h4>
-        <span className={`px-2 py-1 rounded text-xs font-medium ${
-          overallSecurity === 'high' ? 'bg-green-100 text-green-800' :
-          overallSecurity === 'medium' ? 'bg-yellow-100 text-yellow-800' :
-          'bg-red-100 text-red-800'
-        }`}>
+        <span className={`px-2 py-1 rounded text-xs font-medium ${overallSecurity === 'high' ? 'bg-green-100 text-green-800' :
+            overallSecurity === 'medium' ? 'bg-yellow-100 text-yellow-800' :
+              'bg-red-100 text-red-800'
+          }`}>
           {overallSecurity.toUpperCase()}
         </span>
       </div>
