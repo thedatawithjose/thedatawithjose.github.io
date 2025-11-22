@@ -1,20 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Configuración para GitHub Pages con dominio personalizado
-  // output: 'export', // Habilitar export estático
+  output: 'export', // Habilitar export estático para GitHub Pages
   trailingSlash: true,
-  
+
   // Image optimization settings
   images: {
     unoptimized: true, // Requerido para export estático
     qualities: [75, 95],
   },
-  
+
   // Mejorar el manejo de navegación en modo estático
   experimental: {
     optimizePackageImports: ['framer-motion'],
   },
-  
+
   // Asegurar que las páginas se generen correctamente
   skipTrailingSlashRedirect: false,
 };
