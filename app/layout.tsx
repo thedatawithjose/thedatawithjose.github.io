@@ -16,6 +16,7 @@ import CookieConsent from "../components/CookieConsent";
 import PageTransition from "../components/PageTransition";
 import NavigationHandler from "../components/NavigationHandler";
 import LazyMotionProvider from "../components/LazyMotionProvider";
+import KalyptoChat from "../components/KalyptoChat";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -137,8 +138,12 @@ export default function RootLayout({
               </PageTransition>
             </ErrorBoundary>
 
+
             {/* WhatsApp Floating Button */}
             <WhatsAppButton />
+
+            {/* Kalypto AI Chatbot */}
+            <KalyptoChat />
 
             {/* Cookie Consent Banner */}
             <CookieConsent />

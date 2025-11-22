@@ -37,10 +37,10 @@
     "test:performance:report": "playwright test e2e/performance-audit.spec.ts --reporter=html",
     "test:performance:quick": "playwright test e2e/performance-quick.spec.ts",
     "test:perf": "playwright test e2e/performance-quick.spec.ts",
-    "test:performance:quick": "playwright test e2e/performance-quick.spec.ts",
     "test:performance:quick:headed": "playwright test e2e/performance-quick.spec.ts --headed"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.2",
     "@sentry/nextjs": "^10.22.0",
     "@sentry/tracing": "^7.120.4",

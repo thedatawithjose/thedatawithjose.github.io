@@ -17,7 +17,7 @@ export default function WhatsAppButton() {
       const docHeight = document.documentElement.scrollHeight;
       const winHeight = window.innerHeight;
       const scrollPercent = scrollTop / (docHeight - winHeight);
-      
+
       // Show button when user has scrolled 70% of the page
       setIsVisible(scrollPercent > 0.7);
     };
@@ -30,7 +30,7 @@ export default function WhatsAppButton() {
 
   return (
     <m.div
-      className="fixed bottom-4 right-4 z-40"
+      className="fixed bottom-24 right-6 z-40"
       initial={{ scale: 0, opacity: 0, y: 100 }}
       animate={{ scale: 1, opacity: 1, y: 0 }}
       exit={{ scale: 0, opacity: 0, y: 100 }}
@@ -56,9 +56,9 @@ export default function WhatsAppButton() {
         <m.div
           className="overflow-hidden whitespace-nowrap hidden lg:block"
           initial={{ width: 0, opacity: 0 }}
-          animate={{ 
-            width: isHovered ? "auto" : 0, 
-            opacity: isHovered ? 1 : 0 
+          animate={{
+            width: isHovered ? "auto" : 0,
+            opacity: isHovered ? 1 : 0
           }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >

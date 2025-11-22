@@ -149,11 +149,11 @@ export default function ServicesSection() {
                                             <div className="mt-8 pt-6 border-t-2 border-gray-200/50">
                                                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
                                                     <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-[#005A9C]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                                                        <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#005A9C] to-[#0077CC] bg-clip-text text-transparent mb-2">16.5</div>
+                                                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#005A9C] to-[#0077CC] bg-clip-text text-transparent mb-2">16.5</div>
                                                         <div className="text-xs font-semibold text-gray-600 uppercase tracking-wide">MB/s Speed</div>
                                                     </div>
                                                     <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-[#00BFA5]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                                                        <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#00BFA5] to-[#26C6DA] bg-clip-text text-transparent mb-2">Prod</div>
+                                                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#00BFA5] to-[#26C6DA] bg-clip-text text-transparent mb-2">Prod</div>
                                                         <div className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Grade</div>
                                                     </div>
                                                 </div>
