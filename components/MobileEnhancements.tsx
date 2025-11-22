@@ -77,7 +77,7 @@ export function SwipeableCarousel({
 
   return (
     <div className={`overflow-hidden ${className}`} ref={containerRef}>
-      <motion.div
+      <m.div
         className="flex"
         style={{ x }}
         animate={{ x: -currentIndex * 100 + '%' }}
@@ -89,7 +89,7 @@ export function SwipeableCarousel({
             {child}
           </div>
         ))}
-      </motion.div>
+      </m.div>
       
       {/* Indicadores de swipe */}
       <div className="flex justify-center mt-4 gap-2">
@@ -152,16 +152,16 @@ export function PullToRefresh({
   };
 
   return (
-    <motion.div style={{ y }}>
+    <m.div style={{ y }}>
       {/* Pull indicator */}
-      <motion.div
+      <m.div
         className="flex justify-center py-4"
         style={{ opacity, scale }}
       >
         <div className="flex items-center gap-2 text-gray-500">
           {isRefreshing ? (
             <>
-              <motion.div
+              <m.div
                 className="w-5 h-5 border-2 border-green-500 border-t-transparent rounded-full"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
@@ -170,7 +170,7 @@ export function PullToRefresh({
             </>
           ) : (
             <>
-              <motion.i
+              <m.i
                 className="fas fa-arrow-down"
                 animate={{ y: [0, 5, 0] }}
                 transition={{ duration: 1, repeat: Infinity }}
@@ -179,15 +179,15 @@ export function PullToRefresh({
             </>
           )}
         </div>
-      </motion.div>
+      </m.div>
 
-      <motion.div
+      <m.div
         onPan={handlePan}
         onPanEnd={handlePanEnd}
       >
         {children}
-      </motion.div>
-    </motion.div>
+      </m.div>
+    </m.div>
   );
 }
 
@@ -234,7 +234,7 @@ export function TouchNavigation({ items, activeId, onItemSelect }: TouchNavigati
   return (
     <div className="flex justify-around bg-white border-t border-gray-200 py-2 px-4 safe-area-pb">
       {items.map((item) => (
-        <motion.button
+        <m.button
           key={item.id}
           onClick={() => onItemSelect(item.id)}
           onTouchStart={() => handleTouchStart(item.id)}
@@ -260,13 +260,13 @@ export function TouchNavigation({ items, activeId, onItemSelect }: TouchNavigati
           
           {/* Active indicator */}
           {activeId === item.id && (
-            <motion.div
+            <m.div
               className="absolute bottom-0 left-1/2 w-1 h-1 bg-green-500 rounded-full"
               layoutId="activeIndicator"
               style={{ x: '-50%' }}
             />
           )}
-        </motion.button>
+        </m.button>
       ))}
     </div>
   );
@@ -315,7 +315,7 @@ export function TouchOptimizedInput({
 
   return (
     <div className="relative">
-      <motion.div
+      <m.div
         className={`relative border-2 rounded-lg transition-all duration-200 ${
           error ? 'border-red-500' : 
           isFocused ? 'border-green-500' : 
@@ -340,7 +340,7 @@ export function TouchOptimizedInput({
         />
         
         {/* Floating label */}
-        <motion.label
+        <m.label
           className={`absolute left-4 pointer-events-none transition-all duration-200 ${
             isFocused || value ? 'text-xs top-2 text-green-500' : 'text-lg top-4 text-gray-500'
           }`}
@@ -350,13 +350,13 @@ export function TouchOptimizedInput({
           }}
         >
           {label} {required && <span className="text-red-500">*</span>}
-        </motion.label>
-      </motion.div>
+        </m.label>
+      </m.div>
 
       {/* Error message */}
       <AnimatePresence>
         {error && isTouched && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -364,7 +364,7 @@ export function TouchOptimizedInput({
           >
             <i className="fas fa-exclamation-triangle mr-1" />
             {error}
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </div>

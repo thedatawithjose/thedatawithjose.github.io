@@ -60,7 +60,7 @@ export default function Toast({
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: -50, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: -50, scale: 0.95 }}
@@ -93,7 +93,7 @@ export default function Toast({
             
             {/* Progress bar para mostrar tiempo restante */}
             {autoHideDelay > 0 && (
-              <motion.div
+              <m.div
                 className="mt-2 h-1 bg-white bg-opacity-30 rounded-full overflow-hidden"
                 initial={{ width: '100%' }}
                 animate={{ width: '0%' }}
@@ -101,7 +101,7 @@ export default function Toast({
               />
             )}
           </div>
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   );
@@ -174,7 +174,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
       {/* Renderizar todos los toasts */}
       <div className="fixed top-4 right-4 z-50 space-y-2 max-w-sm w-full">
         {toasts.map((toast, index) => (
-          <motion.div
+          <m.div
             key={toast.id}
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
@@ -188,7 +188,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
               onClose={() => hideToast(toast.id)}
               autoHideDelay={toast.autoHideDelay}
             />
-          </motion.div>
+          </m.div>
         ))}
       </div>
     </ToastContext.Provider>

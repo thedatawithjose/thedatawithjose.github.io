@@ -166,7 +166,7 @@ export default function EnhancedButton({
     <span className="relative z-10 flex items-center justify-center">
       {loading ? (
         <>
-          <motion.div
+          <m.div
             className="w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-2"
             animate={{ rotate: 360 }}
             transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
@@ -201,7 +201,7 @@ export default function EnhancedButton({
     return (
       <>
         <style>{rippleStyles}</style>
-        <motion.a
+        <m.a
           ref={ref as any}
           href={href}
           className={buttonClasses}
@@ -221,7 +221,7 @@ export default function EnhancedButton({
           onClick={handleClick}
         >
           {renderContent()}
-        </motion.a>
+        </m.a>
       </>
     );
   }
@@ -229,7 +229,7 @@ export default function EnhancedButton({
   return (
     <>
       <style>{rippleStyles}</style>
-      <motion.button
+      <m.button
         ref={ref as any}
         type={type}
         className={buttonClasses}
@@ -250,7 +250,7 @@ export default function EnhancedButton({
         disabled={disabled || loading}
       >
         {renderContent()}
-      </motion.button>
+      </m.button>
     </>
   );
 }

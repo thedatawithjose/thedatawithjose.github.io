@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
+import Link from 'next/link';
 import { useFormPerformance } from '../hooks/usePerformance';
 import { SecurityValidator } from '../lib/security-utils';
 
@@ -297,7 +298,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
   };
 
   return (
-    <motion.div 
+    <m.div 
       className={`max-w-2xl mx-auto ${className}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -305,7 +306,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
     >
       {/* Draft Restoration Prompt */}
       {showDraftPrompt && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg"
@@ -338,7 +339,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
               </button>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       )}
 
       {/* Progress Indicator */}
@@ -350,7 +351,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
       {/* Auto-save Status */}
       {autoSave.lastSaved && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="mb-4 flex items-center justify-between text-xs text-gray-500"
@@ -358,7 +359,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           <div className="flex items-center">
             {autoSave.isSaving ? (
               <>
-                <motion.i 
+                <m.i 
                   className="fas fa-spinner mr-1"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
@@ -379,11 +380,11 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           >
             <i className="fas fa-trash text-xs"></i>
           </button>
-        </motion.div>
+        </m.div>
       )}
       {/* Status Messages */}
       {submitStatus === 'success' && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg"
@@ -396,11 +397,11 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
             <span id="success-title" className="font-medium">Message sent successfully!</span>
           </div>
           <p className="mt-1 text-sm">I'll get back to you as soon as possible.</p>
-        </motion.div>
+        </m.div>
       )}
 
       {submitStatus === 'error' && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg"
@@ -413,7 +414,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
             <span id="error-title" className="font-medium">Error sending message</span>
           </div>
           <p className="mt-1 text-sm">{errorMessage}</p>
-        </motion.div>
+        </m.div>
       )}
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -669,7 +670,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
         {/* Form validation summary */}
         {Object.keys(errors).length > 0 && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             className="p-3 bg-red-50 border border-red-200 rounded-lg"
@@ -682,13 +683,22 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
                 <li key={field}>{error?.message}</li>
               ))}
             </ul>
-          </motion.div>
+          </m.div>
         )}
 
-        {/* Submit Help Text */}
+        {/* Submit Help Text with Privacy Policy */}
         <p id="submit-help" className="text-xs text-gray-500 text-center mt-2">
           By submitting this form, you agree to be contacted about your project inquiry.
           Your information is kept confidential and never shared with third parties.
+          {' '}
+          <Link 
+            href="/privacy-policy" 
+            className="text-[#00BFA5] hover:text-[#00D4B4] underline transition-colors duration-200"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Privacy Policy
+          </Link>
         </p>
 
 
@@ -704,6 +714,6 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           subject: watch('subject')
         }}
       />
-    </motion.div>
+    </m.div>
   );
 }

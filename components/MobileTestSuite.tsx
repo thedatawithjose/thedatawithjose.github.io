@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useIsMobile, useDeviceOrientation, SwipeableCarousel } from './MobileEnhancements';
 
 interface MobileTestResult {
@@ -185,7 +185,7 @@ export default function MobileTestSuite() {
   }
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       className="fixed bottom-4 left-4 right-4 bg-white rounded-lg shadow-2xl border border-gray-200 max-h-96 overflow-hidden z-50"
@@ -236,7 +236,7 @@ export default function MobileTestSuite() {
             <h4 className="font-semibold mb-3">Test Results</h4>
             <div className="space-y-2">
               {testResults.map((result, index) => (
-                <motion.div
+                <m.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -250,7 +250,7 @@ export default function MobileTestSuite() {
                     </div>
                   </div>
                   <p className="text-xs text-gray-600 mt-1">{result.message}</p>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>
@@ -268,6 +268,6 @@ export default function MobileTestSuite() {
           </div>
         )}
       </div>
-    </motion.div>
+    </m.div>
   );
 }

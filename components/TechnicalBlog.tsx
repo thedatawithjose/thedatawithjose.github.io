@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -130,7 +130,7 @@ export default function TechnicalBlog() {
   return (
     <section className="technical-blog py-24 bg-white">
       <div className="container mx-auto px-4">
-        <motion.div
+        <m.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -141,7 +141,7 @@ export default function TechnicalBlog() {
           <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto">
             Deep dives into data engineering, algorithmic trading, and production ML systems
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Featured Articles */}
         <div className="mb-20">
@@ -149,7 +149,7 @@ export default function TechnicalBlog() {
           <div className="grid md:grid-cols-2 gap-10">
             {featuredPosts.map((post, index) => (
               <Link href={post.url} key={post.id} className="block">
-                <motion.article
+                <m.article
                   className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -211,7 +211,7 @@ export default function TechnicalBlog() {
                     </span>
                   </div>
                 </div>
-              </motion.article>
+              </m.article>
               </Link>
             ))}
           </div>
@@ -236,13 +236,13 @@ export default function TechnicalBlog() {
         </div>
 
         {/* Regular Articles Grid */}
-        <motion.div 
+        <m.div 
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           layout
         >
           {regularPosts.map((post, index) => (
             <Link href={post.url} key={post.id} className="block">
-              <motion.article
+              <m.article
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -301,13 +301,13 @@ export default function TechnicalBlog() {
                   </span>
                 </div>
               </div>
-            </motion.article>
+            </m.article>
             </Link>
           ))}
-        </motion.div>
+        </m.div>
 
         {/* CTA */}
-        <motion.div
+        <m.div
           className="text-center mt-20"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -319,7 +319,7 @@ export default function TechnicalBlog() {
           >
             View All Articles
           </Link>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

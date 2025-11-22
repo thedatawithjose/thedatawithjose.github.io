@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
@@ -11,7 +11,7 @@ export default function EdgarSecParser() {
         <Header />
 
         {/* Hero Section */}
-        <motion.div
+        <m.div
           className="page-heading header-text bg-gradient-to-r from-blue-600 to-purple-600 text-white py-32"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,40 +25,40 @@ export default function EdgarSecParser() {
               ← Back to Portfolio
             </Link>
             <div className="max-w-4xl">
-              <motion.div
+              <m.div
                 className="inline-block px-4 py-2 bg-white/20 rounded-full mb-4"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.3 }}
               >
                 <span className="text-sm font-semibold">Data Engineering</span>
-              </motion.div>
-              <motion.h1
+              </m.div>
+              <m.h1
                 className="text-5xl font-bold mb-6"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
                 Edgar SEC Parser
-              </motion.h1>
-              <motion.p
+              </m.h1>
+              <m.p
                 className="text-xl mb-8"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
                 Advanced Financial Document Processing System
-              </motion.p>
+              </m.p>
               
               {/* Metrics */}
-              <motion.div
+              <m.div
                 className="grid grid-cols-1 md:grid-cols-3 gap-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
               >
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-3xl font-bold">16.51 MB/s</div>
+                  <div className="text-3xl font-bold">16.5 MB/s</div>
                   <div className="text-sm">Peak Throughput</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -69,10 +69,10 @@ export default function EdgarSecParser() {
                   <div className="text-3xl font-bold">3 Engines</div>
                   <div className="text-sm">Parser Coverage</div>
                 </div>
-              </motion.div>
+              </m.div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Content Section */}
         <div className="py-16">
@@ -80,7 +80,7 @@ export default function EdgarSecParser() {
             <div className="max-w-4xl mx-auto">
               
               {/* Objective */}
-              <motion.section
+              <m.section
                 className="mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -95,10 +95,10 @@ export default function EdgarSecParser() {
                   robust, scalable financial document processing capabilities for extracting structured metadata and 
                   financial facts from complex regulatory filings.
                 </p>
-              </motion.section>
+              </m.section>
 
               {/* Architecture */}
-              <motion.section
+              <m.section
                 className="mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -135,10 +135,10 @@ export default function EdgarSecParser() {
                     <p>SEC feed discovery for automated filing identification and retrieval</p>
                   </div>
                 </div>
-              </motion.section>
+              </m.section>
 
               {/* Key Features */}
-              <motion.section
+              <m.section
                 className="mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -153,7 +153,7 @@ export default function EdgarSecParser() {
                       High-Performance Processing
                     </h3>
                     <ul className="space-y-2 ml-6">
-                      <li>• Peak throughput of 16.51 MB/s with intelligent content detection</li>
+                      <li>• Peak throughput of 16.5 MB/s with intelligent content detection</li>
                       <li>• Realistic performance of 1.77 MB/s with actual SEC documents</li>
                       <li>• Memory-efficient parsing for large-scale document processing</li>
                       <li>• Optimized database operations with batch inserts</li>
@@ -199,10 +199,10 @@ export default function EdgarSecParser() {
                     </ul>
                   </div>
                 </div>
-              </motion.section>
+              </m.section>
 
               {/* Performance Metrics */}
-              <motion.section
+              <m.section
                 className="mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -212,7 +212,7 @@ export default function EdgarSecParser() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-lg">
                     <h3 className="text-xl font-semibold mb-2">Processing Speed</h3>
-                    <p className="text-3xl font-bold mb-2">16.51 MB/s</p>
+                    <p className="text-3xl font-bold mb-2">16.5 MB/s</p>
                     <p className="text-sm opacity-90">Peak document throughput achieved</p>
                   </div>
                   <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-lg">
@@ -231,10 +231,10 @@ export default function EdgarSecParser() {
                     <p className="text-sm opacity-90">Full metadata and facts storage</p>
                   </div>
                 </div>
-              </motion.section>
+              </m.section>
 
               {/* Technical Challenges */}
-              <motion.section
+              <m.section
                 className="mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -259,7 +259,7 @@ export default function EdgarSecParser() {
                   <div className="border-l-4 border-green-500 pl-4 py-2">
                     <h3 className="font-semibold mb-1">Performance Optimization</h3>
                     <p className="text-gray-700">
-                      Achieved 16.51 MB/s peak throughput through memory-efficient parsing, batch database operations, 
+                      Achieved 16.5 MB/s peak throughput through memory-efficient parsing, batch database operations, 
                       and optimized content detection algorithms.
                     </p>
                   </div>
@@ -278,10 +278,10 @@ export default function EdgarSecParser() {
                     </p>
                   </div>
                 </div>
-              </motion.section>
+              </m.section>
 
               {/* Technologies */}
-              <motion.section
+              <m.section
                 className="mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -311,10 +311,10 @@ export default function EdgarSecParser() {
                     pytest
                   </span>
                 </div>
-              </motion.section>
+              </m.section>
 
               {/* CTA Section */}
-              <motion.section
+              <m.section
                 className="text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -343,7 +343,7 @@ export default function EdgarSecParser() {
                     </Link>
                   </div>
                 </div>
-              </motion.section>
+              </m.section>
 
             </div>
           </div>

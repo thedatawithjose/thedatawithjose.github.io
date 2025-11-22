@@ -161,7 +161,7 @@ function ToastItem({ toast, index, onRemove }: ToastItemProps) {
   const styles = getToastStyles();
 
   return (
-    <motion.div
+    <m.div
       layout
       initial={{ opacity: 0, x: 300, scale: 0.8 }}
       animate={{ 
@@ -188,7 +188,7 @@ function ToastItem({ toast, index, onRemove }: ToastItemProps) {
       {/* Progress bar */}
       {toast.duration && toast.duration > 0 && (
         <div className="absolute top-0 left-0 h-1 bg-gray-200 w-full">
-          <motion.div
+          <m.div
             className={`h-full ${styles.progress}`}
             initial={{ width: '100%' }}
             animate={{ width: `${progress}%` }}
@@ -236,7 +236,7 @@ function ToastItem({ toast, index, onRemove }: ToastItemProps) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 

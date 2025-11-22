@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 interface CompactSocialShareProps {
   url: string;
@@ -72,7 +72,7 @@ export default function CompactSocialShare({
   return (
     <div className={`relative ${className}`}>
       {/* Share Button */}
-      <motion.button
+      <m.button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-1 text-gray-500 hover:text-[#00BFA5] transition-colors text-sm"
         whileHover={{ scale: 1.05 }}
@@ -80,7 +80,7 @@ export default function CompactSocialShare({
       >
         <i className="fas fa-share-alt text-xs"></i>
         <span className="hidden sm:inline">Share</span>
-      </motion.button>
+      </m.button>
 
       {/* Dropdown Menu */}
       {isOpen && (
@@ -92,7 +92,7 @@ export default function CompactSocialShare({
           />
           
           {/* Menu */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.95, y: -10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
@@ -129,7 +129,7 @@ export default function CompactSocialShare({
                 </span>
               </button>
             </div>
-          </motion.div>
+          </m.div>
         </>
       )}
     </div>

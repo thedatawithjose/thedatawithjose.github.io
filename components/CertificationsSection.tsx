@@ -1,6 +1,6 @@
     'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useState } from 'react';
 
 // Institution branding with real logos from CDNs and fallback icons
@@ -294,7 +294,7 @@ export default function CertificationsSection() {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
+        <m.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -308,10 +308,10 @@ export default function CertificationsSection() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Continuous learning and professional development through industry-recognized certifications
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Category Filters */}
-        <motion.div
+        <m.div
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -332,10 +332,10 @@ export default function CertificationsSection() {
               <span>{category.name}</span>
             </button>
           ))}
-        </motion.div>
+        </m.div>
 
         {/* Statistics */}
-        <motion.div
+        <m.div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -363,12 +363,12 @@ export default function CertificationsSection() {
             </div>
             <div className="text-gray-600">In Progress</div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Certifications Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredCertifications.map((cert, index) => (
-            <motion.div
+            <m.div
               key={index}
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
               initial={{ opacity: 0, y: 20 }}
@@ -482,12 +482,12 @@ export default function CertificationsSection() {
                   </div>
                 )}
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 
         {/* CTA Section */}
-        <motion.div
+        <m.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -506,7 +506,7 @@ export default function CertificationsSection() {
               <i className="fas fa-arrow-right"></i>
             </a>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

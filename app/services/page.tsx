@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Header from '../../components/Header';
@@ -275,7 +275,7 @@ export default function Services() {
         <Header />
 
         {/* Open to Full-Time & Consulting Disclaimer */}
-        <motion.div
+        <m.div
           className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 border-l-4 border-blue-600 py-10 overflow-hidden"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -331,10 +331,10 @@ export default function Services() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Enhanced Hero Section */}
-        <motion.div
+        <m.div
           className="relative bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white py-24 overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -358,7 +358,7 @@ export default function Services() {
             </nav>
 
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <motion.div
+              <m.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -373,9 +373,9 @@ export default function Services() {
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-pulse opacity-30"></div>
                   </span>
                 </h1>
-              </motion.div>
+              </m.div>
               
-              <motion.div
+              <m.div
                 className="mb-8"
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -391,10 +391,10 @@ export default function Services() {
                     Specialized in reliable, performance-critical pipelines where uptime and latency matter."
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Service Categories */}
-              <motion.div
+              <m.div
                 className="flex flex-wrap justify-center gap-3 mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -412,18 +412,18 @@ export default function Services() {
                 <span className="px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium border border-orange-500/30">
                   <i className="fas fa-chart-bar mr-2"></i>Analytics & BI
                 </span>
-              </motion.div>
+              </m.div>
             </div>
 
             {/* Enhanced Stats Grid */}
-            <motion.div
+            <m.div
               className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-green-400 mb-2">20+</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">10+</div>
                 <div className="text-gray-300 text-sm">Projects Delivered</div>
                 <div className="text-xs text-gray-400 mt-1">Production Systems</div>
               </div>
@@ -442,10 +442,10 @@ export default function Services() {
                 <div className="text-gray-300 text-sm">Cost Reduction</div>
                 <div className="text-xs text-gray-400 mt-1">Optimized Infrastructure</div>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* CTA Section */}
-            <motion.div
+            <m.div
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -469,14 +469,14 @@ export default function Services() {
                   <i className="fas fa-arrow-down ml-2 group-hover:translate-y-1 transition-transform duration-300"></i>
                 </a>
               </div>
-            </motion.div>
+            </m.div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Enhanced Services Section */}
         <div id="services-details" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
+            <m.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -510,12 +510,12 @@ export default function Services() {
                   End-to-End Support
                 </div>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Service Selector */}
             <div className="flex flex-wrap justify-center mb-12 gap-4">
               {services.map((service, index) => (
-                <motion.button
+                <m.button
                   key={service.id}
                   onClick={() => setActiveService(index)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
@@ -528,12 +528,12 @@ export default function Services() {
                 >
                   <i className={`${service.icon} mr-2`}></i>
                   {service.title.split(' &')[0]}
-                </motion.button>
+                </m.button>
               ))}
             </div>
 
             {/* Active Service Details */}
-            <motion.div
+            <m.div
               key={activeService}
               className="bg-white rounded-2xl shadow-xl overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
@@ -588,7 +588,7 @@ export default function Services() {
                   <h4 className="text-2xl font-bold mb-6">Key Benefits</h4>
                   <div className="space-y-4 mb-8">
                     {services[activeService].benefits.map((benefit, index) => (
-                      <motion.div
+                      <m.div
                         key={index}
                         className="flex items-start"
                         initial={{ opacity: 0, x: 20 }}
@@ -597,7 +597,7 @@ export default function Services() {
                       >
                         <i className="fas fa-check-circle text-green-500 mr-3 mt-1 flex-shrink-0"></i>
                         <span dangerouslySetInnerHTML={{ __html: benefit }}></span>
-                      </motion.div>
+                      </m.div>
                     ))}
                   </div>
 
@@ -613,14 +613,14 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
 
         {/* Pricing Packages */}
         <div id="pricing" className="pt-24 pb-12 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
+            <m.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -630,11 +630,11 @@ export default function Services() {
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Flexible pricing options to match your project scope and budget requirements.
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {Object.entries(packages).map(([key, pkg], index) => (
-                <motion.div
+                <m.div
                   key={key}
                   className={`relative bg-white rounded-3xl shadow-2xl overflow-hidden border-2 transition-all duration-300 ${
                     pkg.popular 
@@ -803,12 +803,12 @@ export default function Services() {
                       Schedule Free Consultation
                     </Link>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
 
             {/* Comparison Table */}
-            <motion.div
+            <m.div
               className="mt-20 max-w-6xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -906,14 +906,14 @@ export default function Services() {
                   <i className="fas fa-external-link-alt ml-2 text-sm"></i>
                 </a>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
 
         {/* How It Works Process */}
         <div className="py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="container mx-auto px-4">
-            <motion.div
+            <m.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -923,11 +923,11 @@ export default function Services() {
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Simple, transparent process from first contact to project delivery
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {/* Step 1 */}
-              <motion.div
+              <m.div
                 className="relative"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -956,10 +956,10 @@ export default function Services() {
                 <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
                   <i className="fas fa-arrow-right text-3xl text-blue-300"></i>
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Step 2 */}
-              <motion.div
+              <m.div
                 className="relative"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -988,10 +988,10 @@ export default function Services() {
                 <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
                   <i className="fas fa-arrow-right text-3xl text-green-300"></i>
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Step 3 */}
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -1016,10 +1016,10 @@ export default function Services() {
                     </li>
                   </ul>
                 </div>
-              </motion.div>
+              </m.div>
             </div>
 
-            <motion.div
+            <m.div
               className="text-center mt-12"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -1032,14 +1032,14 @@ export default function Services() {
                 <i className="fas fa-calendar-check mr-2"></i>
                 Start With Free Consultation
               </Link>
-            </motion.div>
+            </m.div>
           </div>
         </div>
 
         {/* Client Results */}
         <div className="py-20 bg-gray-900 text-white">
           <div className="container mx-auto px-4">
-            <motion.div
+            <m.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1049,11 +1049,11 @@ export default function Services() {
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Real results from real clients across different industries and use cases.
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <motion.div
+                <m.div
                   key={index}
                   className="bg-gray-800 p-8 rounded-2xl"
                   initial={{ opacity: 0, y: 50 }}
@@ -1066,7 +1066,7 @@ export default function Services() {
                     <div className="font-semibold">{testimonial.client}</div>
                     <div className="text-green-400 text-sm mt-2">{testimonial.result}</div>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>
@@ -1075,7 +1075,7 @@ export default function Services() {
         {/* Process Timeline */}
         <div className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div
+            <m.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1085,7 +1085,7 @@ export default function Services() {
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 A structured methodology for successful project delivery and client satisfaction.
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="relative max-w-4xl mx-auto">
               {/* Timeline Line */}
@@ -1117,7 +1117,7 @@ export default function Services() {
                   duration: 'Ongoing'
                 }
               ].map((phase, index) => (
-                <motion.div
+                <m.div
                   key={index}
                   className={`relative flex items-center mb-12 ${
                     index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
@@ -1137,7 +1137,7 @@ export default function Services() {
                   
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>
@@ -1146,23 +1146,23 @@ export default function Services() {
         {/* CTA Section */}
         <div className="py-20 bg-gradient-to-br from-green-500 to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.h2
+            <m.h2
               className="text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
               Ready to Transform Your Data Infrastructure?
-            </motion.h2>
-            <motion.p
+            </m.h2>
+            <m.p
               className="text-xl mb-8 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               Let's discuss your specific requirements and create a custom solution that drives real business value.
-            </motion.p>
-            <motion.div
+            </m.p>
+            <m.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1182,7 +1182,7 @@ export default function Services() {
                 <i className="fas fa-briefcase mr-2"></i>
                 View My Work
               </Link>
-            </motion.div>
+            </m.div>
           </div>
         </div>
 
@@ -1190,7 +1190,7 @@ export default function Services() {
         <section className="py-20 bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div
+              <m.div
                 className="border-t border-white/20 pt-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1211,10 +1211,10 @@ export default function Services() {
                     <span>End-to-end support</span>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Social Links */}
-              <motion.div
+              <m.div
                 className="mt-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1250,7 +1250,7 @@ export default function Services() {
                     <i className="fab fa-instagram text-xl"></i>
                   </a>
                 </div>
-              </motion.div>
+              </m.div>
             </div>
           </div>
         </section>

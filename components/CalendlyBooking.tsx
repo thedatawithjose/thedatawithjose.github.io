@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 interface CalendlyBookingProps {
@@ -41,7 +41,7 @@ export default function CalendlyBooking({
 
   if (variant === 'popup') {
     return (
-      <motion.button
+      <m.button
         onClick={openCalendlyPopup}
         className={`group bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] hover:from-[#00D4B4] hover:to-[#2196F3] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center ${className}`}
         whileHover={{ scale: 1.05, y: -2 }}
@@ -51,7 +51,7 @@ export default function CalendlyBooking({
         <i className="fas fa-calendar-alt mr-3"></i>
         Schedule Free Consultation
         <i className="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
-      </motion.button>
+      </m.button>
     );
   }
 
@@ -59,7 +59,7 @@ export default function CalendlyBooking({
     return (
       <section className={`py-24 bg-gradient-to-br from-[#0A192F] to-[#1A3A52] text-white ${className}`}>
         <div className="container mx-auto px-4">
-          <motion.div
+          <m.div
             className="text-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export default function CalendlyBooking({
 
             {/* Benefits */}
             <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <motion.div
+              <m.div
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -82,8 +82,8 @@ export default function CalendlyBooking({
                 <i className="fas fa-comments text-3xl text-[#00BFA5] mb-4"></i>
                 <h3 className="font-bold mb-2">Free Consultation</h3>
                 <p className="text-sm text-gray-300">30 minutes of expert advice at no cost</p>
-              </motion.div>
-              <motion.div
+              </m.div>
+              <m.div
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -92,8 +92,8 @@ export default function CalendlyBooking({
                 <i className="fas fa-lightbulb text-3xl text-[#42A5F5] mb-4"></i>
                 <h3 className="font-bold mb-2">Custom Strategy</h3>
                 <p className="text-sm text-gray-300">Tailored approach for your specific needs</p>
-              </motion.div>
-              <motion.div
+              </m.div>
+              <m.div
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -102,10 +102,10 @@ export default function CalendlyBooking({
                 <i className="fas fa-clock text-3xl text-[#005A9C] mb-4"></i>
                 <h3 className="font-bold mb-2">Quick Response</h3>
                 <p className="text-sm text-gray-300">Usually responds within 2 hours</p>
-              </motion.div>
+              </m.div>
             </div>
 
-            <motion.div
+            <m.div
               className="flex flex-col sm:flex-row gap-6 justify-center items-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -128,10 +128,10 @@ export default function CalendlyBooking({
                 <i className="fas fa-envelope mr-3"></i>
                 Send Quick Email
               </a>
-            </motion.div>
+            </m.div>
 
             {/* What to Expect */}
-            <motion.div
+            <m.div
               className="mt-16 bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -182,8 +182,8 @@ export default function CalendlyBooking({
                   </ul>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         </div>
       </section>
     );
@@ -191,7 +191,7 @@ export default function CalendlyBooking({
 
   // Inline variant
   return (
-    <motion.div
+    <m.div
       className={`bg-white rounded-2xl shadow-lg overflow-hidden ${className}`}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -215,6 +215,6 @@ export default function CalendlyBooking({
           </div>
         </div>
       )}
-    </motion.div>
+    </m.div>
   );
 }

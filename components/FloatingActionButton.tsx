@@ -54,14 +54,14 @@ export default function FloatingActionButton({ className = '' }: FloatingActionB
           {/* Quick Actions Menu */}
           <AnimatePresence>
             {isExpanded && (
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.8, y: 20 }}
                 className="mb-4 space-y-3"
               >
                 {quickActions.map((action, index) => (
-                  <motion.div
+                  <m.div
                     key={action.label}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -80,14 +80,14 @@ export default function FloatingActionButton({ className = '' }: FloatingActionB
                       </div>
                       <span className="font-medium text-sm">{action.label}</span>
                     </a>
-                  </motion.div>
+                  </m.div>
                 ))}
-              </motion.div>
+              </m.div>
             )}
           </AnimatePresence>
 
           {/* Main FAB Button */}
-          <motion.button
+          <m.button
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
@@ -97,16 +97,16 @@ export default function FloatingActionButton({ className = '' }: FloatingActionB
             className="w-14 h-14 bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
             aria-label="Quick contact options"
           >
-            <motion.i
+            <m.i
               animate={{ rotate: isExpanded ? 45 : 0 }}
               transition={{ duration: 0.3 }}
               className={`fas ${isExpanded ? 'fa-times' : 'fa-comments'} text-xl`}
-            ></motion.i>
-          </motion.button>
+            ></m.i>
+          </m.button>
 
           {/* Tooltip for first-time users */}
           {!isExpanded && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1 }}
@@ -114,7 +114,7 @@ export default function FloatingActionButton({ className = '' }: FloatingActionB
             >
               Quick Contact
               <div className="absolute left-full top-1/2 transform -translate-y-1/2 border-4 border-transparent border-l-gray-900"></div>
-            </motion.div>
+            </m.div>
           )}
         </div>
       )}

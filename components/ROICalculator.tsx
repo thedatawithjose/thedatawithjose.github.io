@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 interface ROICalculatorProps {
@@ -62,7 +62,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
   return (
     <section className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#0A192F] to-[#1A3A52] text-white ${className}`}>
       <div className="container mx-auto px-4">
-        <motion.div
+        <m.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,11 +74,11 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
             See exactly how much you could save with optimized data infrastructure
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Input Section */}
-          <motion.div
+          <m.div
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -158,10 +158,10 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Results Section */}
-          <motion.div
+          <m.div
             className="bg-gradient-to-br from-[#00BFA5]/20 to-[#42A5F5]/20 backdrop-blur-sm rounded-2xl p-8 border border-[#00BFA5]/30"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -170,7 +170,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
             <h3 className="text-2xl font-bold mb-8 text-center text-[#00BFA5]">Your Potential Savings</h3>
             
             <div className="space-y-6">
-              <motion.div
+              <m.div
                 className="bg-white/10 rounded-xl p-6 border border-white/20"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={isVisible ? { scale: 1, opacity: 1 } : {}}
@@ -184,9 +184,9 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                   {formatCurrency(results.costSavings)}
                 </div>
                 <div className="text-sm text-gray-400">25% infrastructure cost reduction</div>
-              </motion.div>
+              </m.div>
 
-              <motion.div
+              <m.div
                 className="bg-white/10 rounded-xl p-6 border border-white/20"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={isVisible ? { scale: 1, opacity: 1 } : {}}
@@ -200,9 +200,9 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                   {formatCurrency(results.timeSavings)}
                 </div>
                 <div className="text-sm text-gray-400">50% reduction in maintenance time</div>
-              </motion.div>
+              </m.div>
 
-              <motion.div
+              <m.div
                 className="bg-white/10 rounded-xl p-6 border border-white/20"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={isVisible ? { scale: 1, opacity: 1 } : {}}
@@ -216,9 +216,9 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                   {formatCurrency(results.downtimeReduction)}
                 </div>
                 <div className="text-sm text-gray-400">80% downtime reduction</div>
-              </motion.div>
+              </m.div>
 
-              <motion.div
+              <m.div
                 className="bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] rounded-xl p-6 text-center"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={isVisible ? { scale: 1, opacity: 1 } : {}}
@@ -231,10 +231,10 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                 <div className="text-sm opacity-90">
                   Payback in {results.paybackMonths.toFixed(1)} months
                 </div>
-              </motion.div>
+              </m.div>
             </div>
 
-            <motion.div
+            <m.div
               className="mt-8 text-center"
               initial={{ opacity: 0 }}
               animate={isVisible ? { opacity: 1 } : {}}
@@ -247,12 +247,12 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                 <i className="fas fa-calendar-alt mr-2"></i>
                 Schedule ROI Discussion
               </a>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         </div>
 
         {/* Disclaimer */}
-        <motion.div
+        <m.div
           className="text-center mt-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -262,7 +262,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
             * Results are estimates based on typical improvements seen in similar projects. 
             Actual results may vary depending on your specific infrastructure and requirements.
           </p>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

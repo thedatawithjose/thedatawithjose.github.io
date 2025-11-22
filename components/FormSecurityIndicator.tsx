@@ -114,7 +114,7 @@ export default function FormSecurityIndicator({
   }
 
   return (
-    <motion.div
+    <m.div
       className={`mt-4 p-4 border rounded-lg ${getSecurityColor(overallSecurity)} ${className}`}
       initial={{ opacity: 0, height: 0 }}
       animate={{ opacity: 1, height: 'auto' }}
@@ -134,7 +134,7 @@ export default function FormSecurityIndicator({
       <div className="space-y-2">
         <AnimatePresence>
           {securityChecks.map((check) => (
-            <motion.div
+            <m.div
               key={check.id}
               className="flex items-center justify-between text-xs"
               initial={{ opacity: 0, x: -10 }}
@@ -149,7 +149,7 @@ export default function FormSecurityIndicator({
               {check.message && (
                 <span className="text-gray-600 text-xs">{check.message}</span>
               )}
-            </motion.div>
+            </m.div>
           ))}
         </AnimatePresence>
       </div>
@@ -160,6 +160,6 @@ export default function FormSecurityIndicator({
           <span>Interactions: {interactionCount}</span>
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 }

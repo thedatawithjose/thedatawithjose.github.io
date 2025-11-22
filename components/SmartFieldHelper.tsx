@@ -122,7 +122,7 @@ export default function SmartFieldHelper({
   return (
     <AnimatePresence>
       {(showHelper || error) && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: -10, height: 0 }}
           animate={{ opacity: 1, y: 0, height: 'auto' }}
           exit={{ opacity: 0, y: -10, height: 0 }}
@@ -131,19 +131,19 @@ export default function SmartFieldHelper({
         >
           {/* Error Message */}
           {error && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center p-3 bg-red-50 border border-red-200 rounded-lg mb-2"
             >
               <i className="fas fa-exclamation-triangle text-red-500 mr-2" />
               <span className="text-sm text-red-700">{error}</span>
-            </motion.div>
+            </m.div>
           )}
 
           {/* Smart Suggestions */}
           {suggestions.length > 0 && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.1 }}
@@ -162,12 +162,12 @@ export default function SmartFieldHelper({
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           )}
 
           {/* Character Count & Feedback */}
           {isFocused && value.length > 0 && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
@@ -194,7 +194,7 @@ export default function SmartFieldHelper({
                 <span className="mr-2">{value.length} characters</span>
                 {fieldType === 'message' && (
                   <div className="w-16 bg-gray-200 rounded-full h-1">
-                    <motion.div
+                    <m.div
                       className={`h-1 rounded-full ${
                         value.length < 50 ? 'bg-red-400' :
                         value.length < 200 ? 'bg-yellow-400' : 'bg-green-400'
@@ -206,12 +206,12 @@ export default function SmartFieldHelper({
                   </div>
                 )}
               </div>
-            </motion.div>
+            </m.div>
           )}
 
           {/* Field-specific tips */}
           {isFocused && !error && suggestions.length === 0 && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
@@ -224,9 +224,9 @@ export default function SmartFieldHelper({
                 {fieldType === 'subject' && 'A clear subject helps me understand your needs quickly'}
                 {fieldType === 'message' && 'Share your project goals, timeline, and any specific requirements'}
               </div>
-            </motion.div>
+            </m.div>
           )}
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   );

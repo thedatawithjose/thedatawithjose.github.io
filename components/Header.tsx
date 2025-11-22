@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
@@ -282,7 +282,7 @@ export default function Header() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <motion.div
+            <m.div
               id="mobile-menu"
               initial={{ opacity: 0, y: -20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -362,7 +362,7 @@ export default function Header() {
                   Contact
                 </Link>
               </div>
-            </motion.div>
+            </m.div>
           )}
         </nav>
       </header>

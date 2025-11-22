@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const coreStackSkills = [
   { name: "Python", description: "Production ETL pipelines, async processing, performance optimization" },
@@ -32,25 +32,25 @@ export default function SkillsSection() {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-100/30 rounded-full blur-3xl -z-0"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <motion.h2
+        <m.h2
           className="text-4xl font-bold text-center mb-4 text-[#0097A7]"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
           Technical Expertise
-        </motion.h2>
-        <motion.p
+        </m.h2>
+        <m.p
           className="text-center text-lg md:text-xl font-semibold text-gray-700 mb-16 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           Production-tested tools and technologies
-        </motion.p>
+        </m.p>
 
         <div className="max-w-7xl mx-auto">
           {/* Core Stack - Large Featured Card */}
-          <motion.div
+          <m.div
             className="relative bg-gradient-to-br from-white to-blue-50/50 rounded-3xl shadow-2xl p-10 mb-8 border border-[#005A9C]/10 overflow-hidden group"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export default function SkillsSection() {
               
               <div className="grid md:grid-cols-2 gap-6">
                 {coreStackSkills.map((skill, index) => (
-                  <motion.div
+                  <m.div
                     key={index}
                     className="group/item flex items-start gap-3 p-4 rounded-xl hover:bg-white/80 hover:shadow-md transition-all duration-300 border border-transparent hover:border-[#005A9C]/10"
                     initial={{ opacity: 0, x: -10 }}
@@ -85,16 +85,16 @@ export default function SkillsSection() {
                       <div className="font-bold text-gray-900 mb-1 group-hover/item:text-[#005A9C] transition-colors">{skill.name}</div>
                       <div className="text-sm text-gray-600 leading-relaxed">{skill.description}</div>
                     </div>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Cloud & Trading - Smaller Cards Side by Side */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Cloud & Infrastructure */}
-            <motion.div
+            <m.div
               className="relative bg-gradient-to-br from-white to-blue-50/30 rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-blue-100 overflow-hidden group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +113,7 @@ export default function SkillsSection() {
                 
                 <div className="space-y-4">
                   {cloudSkills.map((skill, index) => (
-                    <motion.div
+                    <m.div
                       key={index}
                       className="group/item flex items-start gap-3 p-3 rounded-lg hover:bg-white/60 transition-all"
                       initial={{ opacity: 0, x: -10 }}
@@ -125,14 +125,14 @@ export default function SkillsSection() {
                         <div className="font-bold text-gray-900 text-sm mb-0.5 group-hover/item:text-[#42A5F5] transition-colors">{skill.name}</div>
                         <div className="text-xs text-gray-600">{skill.description}</div>
                       </div>
-                    </motion.div>
+                    </m.div>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Trading & Finance */}
-            <motion.div
+            <m.div
               className="relative bg-gradient-to-br from-white to-teal-50/30 rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-teal-100 overflow-hidden group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ export default function SkillsSection() {
                 
                 <div className="space-y-3">
                   {tradingSkills.map((skill, index) => (
-                    <motion.div
+                    <m.div
                       key={index}
                       className="group/item flex items-start gap-3 text-gray-700 text-sm p-3 rounded-lg hover:bg-white/60 transition-all"
                       initial={{ opacity: 0, x: -10 }}
@@ -160,11 +160,11 @@ export default function SkillsSection() {
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-br from-[#00BFA5] to-[#00897B] mt-2 flex-shrink-0 group-hover/item:scale-150 transition-transform" />
                       <span className="group-hover/item:text-[#00BFA5] transition-colors font-medium">{skill}</span>
-                    </motion.div>
+                    </m.div>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </div>

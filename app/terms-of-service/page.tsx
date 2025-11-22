@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -10,7 +10,7 @@ export default function TermsOfService() {
     <div className="min-h-screen bg-white text-gray-900">
       <Header />
 
-      <motion.div
+      <m.div
         className="relative bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white pt-16 pb-12"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -26,27 +26,27 @@ export default function TermsOfService() {
             </div>
           </nav>
 
-          <motion.h1
+          <m.h1
             className="text-4xl md:text-5xl font-bold text-center mb-4"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
             Terms of Service
-          </motion.h1>
-          <motion.p
+          </m.h1>
+          <m.p
             className="text-center text-gray-300 text-lg"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
             Last Updated: November 8, 2025
-          </motion.p>
+          </m.p>
         </div>
-      </motion.div>
+      </m.div>
 
       <div className="container mx-auto px-4 py-16 max-w-4xl">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
@@ -381,7 +381,7 @@ export default function TermsOfService() {
               Back to Home
             </Link>
           </div>
-        </motion.div>
+        </m.div>
       </div>
 
       <Footer />

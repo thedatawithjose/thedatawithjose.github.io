@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { HeroProjectCardProps } from './types';
 import { heroCardHover, heroEntranceVariants, gradientOverlayVariants } from './animations';
 
@@ -17,7 +17,7 @@ export default function HeroProjectCard(props: HeroProjectCardProps) {
   };
 
   return (
-    <motion.div
+    <m.div
       className="group relative bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 overflow-hidden cursor-pointer col-span-1 lg:col-span-2 min-h-[500px] md:min-h-[600px]"
       style={{
         willChange: 'transform',
@@ -34,7 +34,7 @@ export default function HeroProjectCard(props: HeroProjectCardProps) {
       aria-label={`${title} - Hero project showcasing data engineering infrastructure`}
     >
       {/* Gradient Background Effect */}
-      <motion.div 
+      <m.div 
         className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         style={{
           backgroundImage: `linear-gradient(to bottom right, ${gradient.from}0D, transparent, ${gradient.to}0D)`
@@ -137,6 +137,6 @@ export default function HeroProjectCard(props: HeroProjectCardProps) {
           ))}
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 }

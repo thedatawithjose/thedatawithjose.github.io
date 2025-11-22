@@ -15,7 +15,7 @@ export default function About() {
   // Personal metrics and achievements
   const metrics = {
     experience: '10+',
-    projects: '15+',
+    projects: '12+',
     clients: '8+',
     countries: '4+'
   };
@@ -60,7 +60,7 @@ export default function About() {
     },
     {
       quote: "Solid data engineering skills and reliable delivery. Jose built key components of our analytics platform with good performance.",
-      author: "Sarah Williams", 
+      author: "Sarah Williams",
       position: "Head of Data, FinTech Startup",
       image: "/images/testimonials/sarah.jpg",
       impact: "Enhanced data throughput"
@@ -69,7 +69,7 @@ export default function About() {
       quote: "Professional and skilled developer. Jose delivered our AWS data pipeline on time with good documentation and testing.",
       author: "Carlos Rodriguez",
       position: "Data Director, E-commerce",
-      image: "/images/testimonials/carlos.jpg", 
+      image: "/images/testimonials/carlos.jpg",
       impact: "Reliable data pipeline"
     }
   ];
@@ -106,7 +106,7 @@ export default function About() {
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12"></div>
           </div>
-          
+
           <div className="container mx-auto px-4 relative z-10">
             {/* Breadcrumb */}
             <nav className="mb-8 text-center">
@@ -147,7 +147,7 @@ export default function About() {
                   </p>
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-6 border border-white/20">
                     <p className="text-gray-200 text-sm leading-relaxed italic">
-                      "Data quality, latency, and reliability aren't 'tech details'—they're business risk. 
+                      "Data quality, latency, and reliability aren't 'tech details'—they're business risk.
                       When a pipeline fails and decisions can't wait, you learn to build for resilience."
                     </p>
                   </div>
@@ -195,8 +195,8 @@ export default function About() {
               >
                 <div className="relative inline-block">
                   <div className="w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden border-4 border-green-500 shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:border-green-400 hover:scale-105">
-                    <img 
-                      src="/images/profile-about.jpg" 
+                    <img
+                      src="/images/profile-about.jpg"
                       alt="Jose Acosta - Data Engineer"
                       width={384}
                       height={384}
@@ -205,28 +205,28 @@ export default function About() {
                     />
                   </div>
                   {/* Floating tech elements */}
-                  <motion.div 
+                  <motion.div
                     className="absolute -top-4 -right-4 w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-110"
                     animate={{ y: [0, -8, 0] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                   >
                     <i className="fab fa-python text-white text-xl"></i>
                   </motion.div>
-                  <motion.div 
+                  <motion.div
                     className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-green-500/25 transition-all duration-300 hover:scale-110"
                     animate={{ y: [0, 8, 0] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                   >
                     <i className="fas fa-chart-line text-white text-xl"></i>
                   </motion.div>
-                  <motion.div 
+                  <motion.div
                     className="absolute top-1/2 -left-6 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-110"
                     animate={{ x: [-4, 4, -4] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
                   >
                     <i className="fas fa-database text-white text-sm"></i>
                   </motion.div>
-                  <motion.div 
+                  <motion.div
                     className="absolute top-8 -right-8 w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-orange-500/25 transition-all duration-300 hover:scale-110"
                     animate={{ rotate: [0, 360] }}
                     transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
@@ -244,28 +244,28 @@ export default function About() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              <motion.div 
+              <motion.div
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-2xl font-bold text-green-400 mb-2">High-Availability</div>
                 <div className="text-gray-300 text-sm">Fault-Tolerant Systems</div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-2xl font-bold text-blue-400 mb-2">Cost-Optimized</div>
                 <div className="text-gray-300 text-sm">Infrastructure Design</div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-2xl font-bold text-purple-400 mb-2">Production-Scale</div>
                 <div className="text-gray-300 text-sm">Data Processing</div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
@@ -290,11 +290,10 @@ export default function About() {
                 <motion.button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                    activeTab === tab.id
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${activeTab === tab.id
                       ? 'bg-green-500 text-white shadow-lg'
                       : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
-                  }`}
+                    }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -317,22 +316,22 @@ export default function About() {
                   <div>
                     <h2 className="text-4xl font-bold mb-6">Data Engineer with Real-World Context</h2>
                     <p className="text-lg mb-4 leading-relaxed">
-                      I'm a Data Engineer who came up through quantitative trading. For four years I put real capital 
-                      behind time-series models—where a bad join or silent failure cost money before you could roll it back. 
-                      That experience taught me that every delay, quality issue, or bad assumption in data has a real business cost. 
+                      I'm a Data Engineer who came up through quantitative trading. For four years I put real capital
+                      behind time-series models—where a bad join or silent failure cost money before you could roll it back.
+                      That experience taught me that every delay, quality issue, or bad assumption in data has a real business cost.
                       Now I build the high-availability, real-time data systems I wished I'd had.
                     </p>
                     <p className="text-lg mb-4 leading-relaxed">
-                      Before that, I spent four years in construction project management, learning to deliver under pressure, 
-                      manage constraints, and communicate with clarity across technical and non-technical teams. That background 
+                      Before that, I spent four years in construction project management, learning to deliver under pressure,
+                      manage constraints, and communicate with clarity across technical and non-technical teams. That background
                       shaped how I approach systems today: with structure, accountability, and respect for the human side of engineering.
                     </p>
                     <p className="text-lg mb-6 leading-relaxed">
-                      <strong>Philosophy:</strong> Data quality, latency, and reliability aren't "tech details"—they're 
-                      business risk. When a pipeline fails and decisions can't wait, you learn to build for resilience, 
+                      <strong>Philosophy:</strong> Data quality, latency, and reliability aren't "tech details"—they're
+                      business risk. When a pipeline fails and decisions can't wait, you learn to build for resilience,
                       instrument everything, and ship only what you can monitor.
                     </p>
-                    
+
                     {/* How I Build Section */}
                     <div className="bg-gradient-to-br from-blue-50 to-green-50 p-6 rounded-xl border-l-4 border-green-500 mb-6">
                       <h3 className="text-xl font-semibold mb-4 text-gray-800">How I Build</h3>
@@ -355,7 +354,7 @@ export default function About() {
                         </li>
                       </ul>
                     </div>
-                    
+
                     {/* Recent Work */}
                     <div className="mb-8">
                       <h3 className="text-xl font-semibold mb-4">Recent Work:</h3>
@@ -435,28 +434,28 @@ export default function About() {
                     <div className="bg-gradient-to-br from-gray-50 to-blue-50 p-6 rounded-xl border-l-4 border-blue-500 mb-8">
                       <h4 className="font-semibold text-gray-800 mb-2">Earlier Career Context</h4>
                       <p className="text-gray-700 leading-relaxed">
-                        Before tech, I managed civil-engineering projects—valuations, resource flows, construction metrics. 
+                        Before tech, I managed civil-engineering projects—valuations, resource flows, construction metrics.
                         Different domain, same lesson: <strong>decisions are only as good as the systems and data that support them.</strong>
                       </p>
                       <p className="text-gray-700 leading-relaxed mt-3">
-                        This foundation taught me to deliver under constraints, manage stakeholder expectations, and communicate 
-                        complex technical concepts to non-technical audiences. It's why I approach data engineering with structure, 
-                        accountability, and an understanding that reliability isn't just about uptime—it's about enabling people to 
+                        This foundation taught me to deliver under constraints, manage stakeholder expectations, and communicate
+                        complex technical concepts to non-technical audiences. It's why I approach data engineering with structure,
+                        accountability, and an understanding that reliability isn't just about uptime—it's about enabling people to
                         do their jobs with confidence.
                       </p>
                     </div>
 
                     <h3 className="text-2xl font-bold mb-6">What I'm Looking For</h3>
-                    
+
                     {/* Currently Statement */}
                     <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border-l-4 border-blue-500 mb-6">
                       <p className="text-lg text-gray-800 leading-relaxed">
-                        <strong className="text-blue-700">Currently:</strong> I'm seeking full-time Data Engineering opportunities with teams building 
-                        mission-critical data systems. I also take on select consulting projects for startups and small businesses 
+                        <strong className="text-blue-700">Currently:</strong> I'm seeking full-time Data Engineering opportunities with teams building
+                        mission-critical data systems. I also take on select consulting projects for startups and small businesses
                         that need hands-on help establishing reliable data infrastructure.
                       </p>
                     </div>
-                    
+
                     {/* Full-Time Opportunities */}
                     <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border-l-4 border-green-500 mb-6">
                       <h4 className="text-xl font-bold text-green-700 mb-3">
@@ -467,9 +466,9 @@ export default function About() {
                         Positions with teams building mission-critical data systems in data-intensive products—where milliseconds matter and "close enough" breaks the business model.
                       </p>
                       <p className="text-gray-700 mb-4">
-                        <strong>Domains that interest me:</strong> <strong className="text-green-700">Fintech</strong> (real-time pricing, risk models, trading infrastructure), 
-                        <strong className="text-green-700"> E-commerce</strong> (inventory optimization, recommendation engines), 
-                        <strong className="text-green-700"> Logistics</strong> (supply-chain analytics), 
+                        <strong>Domains that interest me:</strong> <strong className="text-green-700">Fintech</strong> (real-time pricing, risk models, trading infrastructure),
+                        <strong className="text-green-700"> E-commerce</strong> (inventory optimization, recommendation engines),
+                        <strong className="text-green-700"> Logistics</strong> (supply-chain analytics),
                         <strong className="text-green-700"> SaaS</strong> (product analytics, usage-based billing)
                       </p>
                       <div className="grid md:grid-cols-2 gap-4 mt-4 text-sm text-gray-600">
@@ -501,8 +500,8 @@ export default function About() {
                         Consulting & Project Work
                       </h4>
                       <p className="text-gray-700 mb-3">
-                        I also partner with select startups and growing businesses that need production-grade data infrastructure 
-                        but aren't ready for a full-time hire. For consulting services and project-based work, 
+                        I also partner with select startups and growing businesses that need production-grade data infrastructure
+                        but aren't ready for a full-time hire. For consulting services and project-based work,
                         <Link href="/services" className="text-purple-700 font-semibold hover:underline ml-1">
                           view my services page →
                         </Link>
@@ -512,7 +511,7 @@ export default function About() {
                     {/* Footer */}
                     <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
                       <p className="text-gray-600 leading-relaxed">
-                        Happy to share repos, architectural diagrams, or walk through design decisions and trade-offs. 
+                        Happy to share repos, architectural diagrams, or walk through design decisions and trade-offs.
                         I believe in building systems and cultures defined by clarity, empathy, and accountability.
                       </p>
                     </div>
@@ -621,9 +620,8 @@ export default function About() {
                     ].map((experience, index) => (
                       <motion.div
                         key={index}
-                        className={`relative flex items-center mb-12 ${
-                          index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                        }`}
+                        className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                          }`}
                         initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.2, duration: 0.6 }}
@@ -644,7 +642,7 @@ export default function About() {
                             </div>
                           </div>
                         </div>
-                        
+
                         {/* Timeline Dot */}
                         <div className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-${experience.color}-500 rounded-full border-4 border-white shadow-lg`}></div>
                       </motion.div>
@@ -685,9 +683,9 @@ export default function About() {
                   >
                     <h3 className="text-2xl font-bold text-center mb-6">My Philosophy</h3>
                     <blockquote className="text-lg italic text-center text-gray-700 leading-relaxed">
-                      "Data engineering is not just about moving data from point A to point B. It's about creating 
-                      systems that empower businesses to make better decisions, faster. Every pipeline should tell 
-                      a story, every algorithm should solve a real problem, and every solution should be built 
+                      "Data engineering is not just about moving data from point A to point B. It's about creating
+                      systems that empower businesses to make better decisions, faster. Every pipeline should tell
+                      a story, every algorithm should solve a real problem, and every solution should be built
                       with the end user in mind. That's what drives me every day."
                     </blockquote>
                     <div className="text-center mt-4">
@@ -701,7 +699,7 @@ export default function About() {
               {activeTab === 'achievements' && (
                 <div>
                   <h2 className="text-4xl font-bold text-center mb-12">Recognition & Impact</h2>
-                  
+
                   {/* Achievement Categories */}
                   <div className="grid md:grid-cols-3 gap-8 mb-12">
                     <motion.div
@@ -818,7 +816,7 @@ export default function About() {
                   <span className="block text-green-400 mt-2">Together?</span>
                 </h2>
                 <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Let's discuss your data challenges and create solutions that drive real business value 
+                  Let's discuss your data challenges and create solutions that drive real business value
                   with production-grade reliability.
                 </p>
               </motion.div>

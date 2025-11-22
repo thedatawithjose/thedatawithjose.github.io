@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { SupportingProjectCardProps } from './types';
 import { supportingCardHover, supportingEntranceVariants } from './animations';
 
@@ -21,7 +21,7 @@ export default function SupportingProjectCard(props: Props) {
   };
 
   return (
-    <motion.div
+    <m.div
       className="group relative bg-white/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 overflow-hidden cursor-pointer min-h-[500px]"
       style={{
         willChange: 'transform',
@@ -149,6 +149,6 @@ export default function SupportingProjectCard(props: Props) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 }

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const logosRow1 = [
   { src: 'https://brandlogos.net/wp-content/uploads/2021/11/git-logo-512x512.png', alt: 'Git' },
@@ -32,7 +32,7 @@ export default function LogosScroll() {
     <div className="logos-scroll-container overflow-hidden py-8 bg-white">
       <div className="relative">
         {/* Primera fila */}
-        <motion.div
+        <m.div
           className="flex space-x-8 mb-8"
           animate={{ x: [0, -1600] }}
           transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
@@ -48,9 +48,9 @@ export default function LogosScroll() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </m.div>
         {/* Segunda fila - dirección opuesta */}
-        <motion.div
+        <m.div
           className="flex space-x-8"
           animate={{ x: [-1600, 0] }}
           transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
@@ -66,7 +66,7 @@ export default function LogosScroll() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </div>
   );

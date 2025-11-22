@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 export default function WhatsAppButton() {
@@ -29,14 +29,14 @@ export default function WhatsAppButton() {
   if (!isVisible) return null;
 
   return (
-    <motion.div
+    <m.div
       className="fixed bottom-4 right-4 z-40"
       initial={{ scale: 0, opacity: 0, y: 100 }}
       animate={{ scale: 1, opacity: 1, y: 0 }}
       exit={{ scale: 0, opacity: 0, y: 100 }}
       transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
     >
-      <motion.a
+      <m.a
         href={`https://wa.me/584123020280?text=${whatsappMessage}`}
         target="_blank"
         rel="noopener noreferrer"
@@ -53,7 +53,7 @@ export default function WhatsAppButton() {
         </div>
 
         {/* Expandable Text - Only on desktop and only on hover */}
-        <motion.div
+        <m.div
           className="overflow-hidden whitespace-nowrap hidden lg:block"
           initial={{ width: 0, opacity: 0 }}
           animate={{ 
@@ -65,16 +65,16 @@ export default function WhatsAppButton() {
           <span className="px-2 py-1 text-xs font-medium">
             WhatsApp
           </span>
-        </motion.div>
+        </m.div>
 
         {/* Very subtle pulse */}
-        <motion.div
+        <m.div
           className="absolute inset-0 bg-green-400 rounded-full -z-10"
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           style={{ opacity: 0.15 }}
         />
-      </motion.a>
-    </motion.div>
+      </m.a>
+    </m.div>
   );
 }

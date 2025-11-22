@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 interface SocialShareButtonsProps {
   url: string;
@@ -99,7 +99,7 @@ export default function SocialShareButtons({
       {/* Social Media Buttons - Grid Layout */}
       <div className="grid grid-cols-3 gap-2 mb-4">
         {socialButtons.map((social) => (
-          <motion.a
+          <m.a
             key={social.name}
             href={social.url}
             target="_blank"
@@ -110,12 +110,12 @@ export default function SocialShareButtons({
             title={`Share on ${social.name}`}
           >
             <i className={`${social.icon} text-lg`}></i>
-          </motion.a>
+          </m.a>
         ))}
       </div>
 
       {/* Copy Link Button - Full Width */}
-      <motion.button
+      <m.button
         onClick={copyToClipboard}
         className={`w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border-2 transition-all duration-300 min-h-[48px] ${
           copied 
@@ -130,7 +130,7 @@ export default function SocialShareButtons({
         <span className="text-base font-medium">
           {copied ? 'Copied!' : 'Copy'}
         </span>
-      </motion.button>
+      </m.button>
     </div>
   );
 }

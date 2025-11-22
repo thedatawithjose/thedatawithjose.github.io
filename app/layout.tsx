@@ -15,6 +15,7 @@ import WhatsAppButton from "../components/WhatsAppButton";
 import CookieConsent from "../components/CookieConsent";
 import PageTransition from "../components/PageTransition";
 import NavigationHandler from "../components/NavigationHandler";
+import LazyMotionProvider from "../components/LazyMotionProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,7 +30,7 @@ export const metadata: Metadata = generateMetadata({
   keywords: [
     "Data Engineer",
     "Algorithmic Trading",
-    "Real-time Data Processing", 
+    "Real-time Data Processing",
     "Python Developer",
     "AWS Data Engineer",
     "Apache Kafka",
@@ -61,18 +62,18 @@ export default function RootLayout({
         {/* Critical CSS and performance optimizations */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+
         {/* Inter font preload for better performance */}
-        <link 
-          rel="preload" 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" 
-          as="style" 
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+          as="style"
         />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" 
-          rel="stylesheet" 
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+          rel="stylesheet"
         />
-        
+
         {/* Preload poster image instead of video for better LCP */}
         <link
           rel="preload"
@@ -80,33 +81,33 @@ export default function RootLayout({
           as="image"
           media="(min-width: 768px)"
         />
-        
+
         {/* Preload critical images */}
         <link rel="preload" href="/images/profile-jose.png" as="image" />
         <link rel="preload" href="/images/logo_v2.svg" as="image" />
-        
+
         {/* DNS Prefetch for external resources */}
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
         <link rel="dns-prefetch" href="https://formsubmit.co" />
-        
+
         {/* FontAwesome CSS with optimized loading */}
-        <link 
+        <link
           rel="preload"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           as="style"
           crossOrigin="anonymous"
         />
-        <link 
-          rel="stylesheet" 
+        <link
+          rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           crossOrigin="anonymous"
         />
-        
+
         {/* Structured Data */}
         <StructuredData data={[generatePersonSchema(), generateWebsiteSchema()]} />
-        
+
         {/* Google Analytics - Now loaded by ConsentManager after user consent */}
-        
+
         {/* Vercel Analytics */}
         {process.env.NODE_ENV === 'production' && (
           <Script
@@ -120,28 +121,30 @@ export default function RootLayout({
       >
         {/* Web Vitals Tracking */}
         <WebVitalsTracker debug={process.env.NODE_ENV === 'development'} />
-        
+
         {/* Navigation Handler */}
         <NavigationHandler />
-        
+
         {/* Development-only components - removed to reduce bundle size */}
-        
+
         {/* Consent Manager - Handles cookie consent and GA loading */}
         <ConsentManager>
-          {/* Error Boundary Wrapper */}
-          <ErrorBoundary>
-            <PageTransition>
-              {children}
-            </PageTransition>
-          </ErrorBoundary>
-          
-          {/* WhatsApp Floating Button */}
-          <WhatsAppButton />
-          
-          {/* Cookie Consent Banner */}
-          <CookieConsent />
+          <LazyMotionProvider>
+            {/* Error Boundary Wrapper */}
+            <ErrorBoundary>
+              <PageTransition>
+                {children}
+              </PageTransition>
+            </ErrorBoundary>
+
+            {/* WhatsApp Floating Button */}
+            <WhatsAppButton />
+
+            {/* Cookie Consent Banner */}
+            <CookieConsent />
+          </LazyMotionProvider>
         </ConsentManager>
-        
+
         {/* Service Worker Registration */}
         <Script
           id="sw-registration"
@@ -162,7 +165,7 @@ export default function RootLayout({
             `,
           }}
         />
-        
+
         {/* Intersection Observer polyfill for older browsers */}
         <Script
           src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"

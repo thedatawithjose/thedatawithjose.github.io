@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 interface NewsletterFormProps {
   className?: string;
@@ -58,56 +58,56 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
 
   if (isSuccess) {
     return (
-      <motion.div
+      <m.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
         className={`bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 text-center shadow-xl ${className}`}
       >
-        <motion.div 
+        <m.div 
           className="flex items-center justify-center mb-4"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring", stiffness: 400 }}
         >
           <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center shadow-lg">
-            <motion.i 
+            <m.i 
               className="fas fa-check text-white text-2xl"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.4, type: "spring", stiffness: 600 }}
-            ></motion.i>
+            ></m.i>
           </div>
-        </motion.div>
-        <motion.h3 
+        </m.div>
+        <m.h3 
           className="text-2xl font-bold text-green-800 mb-3 bg-gradient-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
           Welcome aboard! 🚀
-        </motion.h3>
-        <motion.p 
+        </m.h3>
+        <m.p 
           className="text-green-700 font-medium text-lg leading-relaxed"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
           You'll receive valuable data engineering insights weekly.
-        </motion.p>
-      </motion.div>
+        </m.p>
+      </m.div>
     );
   }
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className={`bg-gradient-to-br from-[#0A192F] to-[#1A3A52] rounded-lg p-10 text-white ${className}`}
     >
       <div className="text-center mb-10">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -118,9 +118,9 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 font-medium leading-relaxed max-w-2xl mx-auto">
             Get weekly insights, case studies, and industry trends delivered to your inbox
           </p>
-        </motion.div>
+        </m.div>
         
-        <motion.div 
+        <m.div 
           className="flex flex-wrap justify-center gap-6 text-sm"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -144,10 +144,10 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
             </div>
             <span className="text-gray-200 font-medium">Case Studies</span>
           </div>
-        </motion.div>
+        </m.div>
       </div>
 
-      <motion.form 
+      <m.form 
         onSubmit={handleSubmit} 
         className="space-y-6"
         initial={{ opacity: 0, y: 10 }}
@@ -169,7 +169,7 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
             />
             <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#00BFA5]/10 to-[#42A5F5]/10 opacity-0 focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
           </div>
-          <motion.button
+          <m.button
             type="submit"
             disabled={isSubmitting || !email}
             whileHover={{ scale: 1.05, y: -2 }}
@@ -185,18 +185,18 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
             ) : (
               <div className="flex items-center relative z-10">
                 <span className="font-semibold">Subscribe</span>
-                <motion.i 
+                <m.i 
                   className="fas fa-arrow-right ml-3"
                   animate={{ x: [0, 4, 0] }}
                   transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                ></motion.i>
+                ></m.i>
               </div>
             )}
-          </motion.button>
+          </m.button>
         </div>
         
         {error && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             className="bg-red-500/10 border border-red-500/20 rounded-lg p-3 backdrop-blur-sm"
@@ -205,11 +205,11 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
               <i className="fas fa-exclamation-triangle mr-2 text-red-400"></i>
               {error}
             </p>
-          </motion.div>
+          </m.div>
         )}
-      </motion.form>
+      </m.form>
 
-      <motion.div 
+      <m.div 
         className="mt-8 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -223,7 +223,7 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
             Privacy Policy
           </a>
         </p>
-      </motion.div>
-    </motion.div>
+      </m.div>
+    </m.div>
   );
 }

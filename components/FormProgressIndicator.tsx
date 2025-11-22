@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 interface FormProgressIndicatorProps {
@@ -60,7 +60,7 @@ export default function FormProgressIndicator({
       {/* Progress Header */}
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center">
-          <motion.div
+          <m.div
             className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center mr-3"
             animate={{ rotate: progress === 100 ? 360 : 0 }}
             transition={{ duration: 0.5 }}
@@ -72,7 +72,7 @@ export default function FormProgressIndicator({
                 {Math.round(progress)}%
               </span>
             )}
-          </motion.div>
+          </m.div>
           <div>
             <h4 className="font-semibold text-gray-800 text-sm">
               Form Progress
@@ -96,25 +96,25 @@ export default function FormProgressIndicator({
       {/* Progress Bar */}
       <div className="relative">
         <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-          <motion.div
+          <m.div
             className={`h-full bg-gradient-to-r ${getProgressColor()} rounded-full relative`}
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             {/* Shimmer effect */}
-            <motion.div
+            <m.div
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
               animate={{ x: ['-100%', '100%'] }}
               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
             />
-          </motion.div>
+          </m.div>
         </div>
         
         {/* Progress milestones */}
         <div className="flex justify-between mt-1">
           {[25, 50, 75, 100].map((milestone) => (
-            <motion.div
+            <m.div
               key={milestone}
               className={`w-2 h-2 rounded-full ${
                 progress >= milestone ? 'bg-green-500' : 'bg-gray-300'
@@ -130,7 +130,7 @@ export default function FormProgressIndicator({
       </div>
 
       {/* Field Checklist (collapsed by default) */}
-      <motion.div
+      <m.div
         className="mt-3 pt-3 border-t border-blue-200"
         initial={{ height: 0, opacity: 0 }}
         animate={{ 
@@ -145,7 +145,7 @@ export default function FormProgressIndicator({
             const fieldLabel = field.charAt(0).toUpperCase() + field.slice(1);
             
             return (
-              <motion.div
+              <m.div
                 key={field}
                 className={`flex items-center ${
                   isCompleted ? 'text-green-600' : 'text-gray-500'
@@ -160,11 +160,11 @@ export default function FormProgressIndicator({
                   isCompleted ? 'fas fa-check-circle' : 'far fa-circle'
                 } mr-1 text-xs`} />
                 <span>{fieldLabel}</span>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>
-      </motion.div>
+      </m.div>
     </div>
   );
 }

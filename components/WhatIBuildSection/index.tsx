@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 import SectionHeader from './SectionHeader';
 import HeroProjectCard from './HeroProjectCard';
@@ -33,7 +33,7 @@ export default function WhatIBuildSection() {
         </div>
 
         {/* Value Proposition */}
-        <motion.div
+        <m.div
           className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function WhatIBuildSection() {
             <div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Why Choose My Data Engineering?</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                <strong>10+ years of professional experience across high-stakes environments:</strong> Four years managing construction projects taught me to plan for failure modes and deliver under constraints. Four years as quantitative trader taught me that data quality isn't optional—it's survival. Now, three years as Data Engineer, I build infrastructure combining both disciplines—engineered for reliability, tested under pressure.
+                <strong>12+ Projects taught me to plan for failure modes and deliver under constraints. Four years as quantitative trader taught me that data quality isn't optional—it's survival. Now, three years as Data Engineer, I build infrastructure combining both disciplines—engineered for reliability, tested under pressure.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg">
@@ -87,10 +87,10 @@ export default function WhatIBuildSection() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* CTA Section */}
-        <motion.div
+        <m.div
           className="text-center mt-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ export default function WhatIBuildSection() {
           <p className="text-gray-600 mt-4 text-sm">
             Ready to build data systems that work when business decisions depend on them?
           </p>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

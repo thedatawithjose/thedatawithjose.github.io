@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect, useState, useMemo } from 'react';
 import Header from '../../components/Header';
@@ -15,9 +15,9 @@ export default function Portfolio() {
 
   // Portfolio statistics
   const portfolioStats = {
-    totalProjects: '20+',
+    totalProjects: '12+',
     linesOfCode: '25K+',
-    clientsSatisfied: '12+',
+    clientsSatisfied: '8+',
     averageROI: '120%'
   };
 
@@ -219,12 +219,12 @@ export default function Portfolio() {
   ];
 
   const featuredProjects = projects.filter(project => project.featured);
-  
+
   // Enhanced filtering with search
   const filteredProjects = useMemo(() => {
     return projects.filter(project => {
       const matchesCategory = filter === 'all' || project.category === filter;
-      const matchesSearch = searchTerm === '' || 
+      const matchesSearch = searchTerm === '' ||
         project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         project.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -255,7 +255,7 @@ export default function Portfolio() {
         <Header />
 
         {/* Enhanced Hero Section */}
-        <motion.div
+        <m.div
           className="relative bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white py-24 overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -265,7 +265,7 @@ export default function Portfolio() {
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12"></div>
           </div>
-          
+
           <div className="container mx-auto px-4 relative z-10">
             {/* Breadcrumb */}
             <nav className="mb-8 text-center">
@@ -279,7 +279,7 @@ export default function Portfolio() {
             </nav>
 
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <motion.div
+              <m.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -294,9 +294,9 @@ export default function Portfolio() {
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-pulse opacity-30"></div>
                   </span>
                 </h1>
-              </motion.div>
-              
-              <motion.div
+              </m.div>
+
+              <m.div
                 className="mb-8"
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -307,14 +307,14 @@ export default function Portfolio() {
                 </p>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 inline-block">
                   <p className="text-gray-200 text-sm leading-relaxed italic">
-                    "From high-frequency trading systems to enterprise data pipelines — 
+                    "From high-frequency trading systems to enterprise data pipelines —
                     each project represents production-grade solutions with measurable impact."
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Quick Navigation */}
-              <motion.div
+              <m.div
                 className="flex flex-wrap justify-center gap-3 mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -329,11 +329,11 @@ export default function Portfolio() {
                 <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30">
                   <i className="fas fa-robot mr-2"></i>ML Systems
                 </span>
-              </motion.div>
+              </m.div>
             </div>
 
             {/* Enhanced Portfolio Statistics */}
-            <motion.div
+            <m.div
               className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -359,10 +359,10 @@ export default function Portfolio() {
                 <div className="text-gray-300 text-sm">Average ROI</div>
                 <div className="text-xs text-gray-400 mt-1">Measured Impact</div>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* CTA Section */}
-            <motion.div
+            <m.div
               className="text-center mt-12"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -386,14 +386,14 @@ export default function Portfolio() {
                   <i className="fas fa-arrow-down ml-2 group-hover:translate-y-1 transition-transform duration-300"></i>
                 </a>
               </div>
-            </motion.div>
+            </m.div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Enhanced Featured Projects Section */}
         <div id="featured-projects" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
+            <m.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -403,10 +403,10 @@ export default function Portfolio() {
                 Featured Production Systems
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-                Real-world implementations that demonstrate expertise in high-stakes environments 
+                Real-world implementations that demonstrate expertise in high-stakes environments
                 where reliability, performance, and business impact are non-negotiable.
               </p>
-              
+
               {/* Project Categories */}
               <div className="flex flex-wrap justify-center gap-4">
                 <div className="px-4 py-2 bg-green-100 text-green-800 rounded-lg text-sm font-medium">
@@ -426,29 +426,29 @@ export default function Portfolio() {
                   Risk Management
                 </div>
               </div>
-            </motion.div>
+            </m.div>
 
             <div className="grid lg:grid-cols-3 gap-8 mb-16">
               {featuredProjects.map((project, index) => (
-                <motion.div
+                <m.div
                   key={project.id}
                   className="bg-white rounded-2xl shadow-xl overflow-hidden"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   whileHover={{ y: -10, scale: 1.03 }}
-                  transition={{ 
-                    delay: index * 0.1, 
-                    duration: 0.4, 
+                  transition={{
+                    delay: index * 0.1,
+                    duration: 0.4,
                     ease: "easeOut",
-                    type: "spring", 
-                    stiffness: 300, 
-                    damping: 30 
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 30
                   }}
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover"
                     />
@@ -463,7 +463,7 @@ export default function Portfolio() {
                   <div className="p-6">
                     <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
-                    
+
                     {/* Key Metrics */}
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       {Object.entries(project.metrics).slice(0, 4).map(([key, value]) => (
@@ -506,7 +506,7 @@ export default function Portfolio() {
                       Explore Project →
                     </Link>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>
@@ -515,7 +515,7 @@ export default function Portfolio() {
         {/* All Projects Section */}
         <div className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div
+            <m.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -525,7 +525,7 @@ export default function Portfolio() {
               <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
                 Browse through my complete portfolio of data engineering, trading, and machine learning solutions.
               </p>
-              
+
               {/* Search Bar */}
               <div className="max-w-md mx-auto">
                 <div className="relative">
@@ -549,40 +549,38 @@ export default function Portfolio() {
                   )}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center mb-12 gap-4" role="group" aria-label="Project category filters">
               {categories.map((category) => (
-                <motion.button
+                <m.button
                   key={category.id}
                   onClick={() => setFilter(category.id)}
                   role="button"
                   aria-pressed={filter === category.id}
                   aria-label={`Show ${category.name} projects (${category.count} projects)`}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
-                    filter === category.id
-                      ? category.color === 'gray' 
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${filter === category.id
+                      ? category.color === 'gray'
                         ? 'bg-gray-600 text-white shadow-lg'
                         : category.color === 'green'
-                        ? 'bg-green-500 text-white shadow-lg'
-                        : category.color === 'purple'
-                        ? 'bg-purple-500 text-white shadow-lg'
-                        : 'bg-blue-500 text-white shadow-lg'
+                          ? 'bg-green-500 text-white shadow-lg'
+                          : category.color === 'purple'
+                            ? 'bg-purple-500 text-white shadow-lg'
+                            : 'bg-blue-500 text-white shadow-lg'
                       : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md hover:shadow-lg'
-                  }`}
+                    }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   {category.name}
-                  <span className={`ml-2 px-2 py-1 rounded-full text-xs ${
-                    filter === category.id 
-                      ? 'bg-white/20 text-white' 
+                  <span className={`ml-2 px-2 py-1 rounded-full text-xs ${filter === category.id
+                      ? 'bg-white/20 text-white'
                       : 'bg-gray-100 text-gray-600'
-                  }`}>
+                    }`}>
                     {category.count}
                   </span>
-                </motion.button>
+                </m.button>
               ))}
             </div>
 
@@ -597,33 +595,33 @@ export default function Portfolio() {
             )}
 
             {/* Projects Grid */}
-            <motion.div
+            <m.div
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
               role="region"
               aria-label={`${filter === 'all' ? 'All' : categories.find(c => c.id === filter)?.name} projects`}
               layout
             >
               {filteredProjects.map((project, index) => (
-                <motion.div
+                <m.div
                   key={project.id}
                   className="bg-white rounded-xl shadow-lg overflow-hidden group"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   whileHover={{ y: -8, scale: 1.02 }}
-                  transition={{ 
-                    duration: 0.4, 
-                    delay: index * 0.05, 
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.05,
                     ease: "easeOut",
-                    type: "spring", 
-                    stiffness: 300, 
-                    damping: 25 
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 25
                   }}
                   layout
                 >
                   {/* Project Header */}
                   <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
@@ -694,13 +692,13 @@ export default function Portfolio() {
                       View Details →
                     </Link>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
-            </motion.div>
+            </m.div>
 
             {/* Enhanced Empty State */}
             {filteredProjects.length === 0 && (
-              <motion.div
+              <m.div
                 className="text-center py-20"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -711,7 +709,7 @@ export default function Portfolio() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-700 mb-2">No projects found</h3>
                 <p className="text-gray-500 mb-6 max-w-md mx-auto">
-                  {searchTerm 
+                  {searchTerm
                     ? `No projects match "${searchTerm}". Try adjusting your search terms.`
                     : `No projects found in the ${filter} category.`
                   }
@@ -735,7 +733,7 @@ export default function Portfolio() {
                     Show All Projects
                   </button>
                 </div>
-              </motion.div>
+              </m.div>
             )}
           </div>
         </div>
@@ -743,7 +741,7 @@ export default function Portfolio() {
         {/* Technical Expertise Section */}
         <div className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
+            <m.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -753,7 +751,7 @@ export default function Portfolio() {
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Technologies and methodologies that power these innovative solutions.
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="grid md:grid-cols-4 gap-8">
               {[
@@ -782,7 +780,7 @@ export default function Portfolio() {
                   color: 'orange'
                 }
               ].map((expertise, index) => (
-                <motion.div
+                <m.div
                   key={index}
                   className="bg-white p-6 rounded-xl shadow-lg text-center"
                   initial={{ opacity: 0, y: 50 }}
@@ -801,7 +799,7 @@ export default function Portfolio() {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>
@@ -810,7 +808,7 @@ export default function Portfolio() {
         {/* Project Impact Metrics */}
         <div className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div
+            <m.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -820,7 +818,7 @@ export default function Portfolio() {
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Real results delivered across multiple projects and industries.
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
@@ -829,7 +827,7 @@ export default function Portfolio() {
                 { metric: 'High-Availability', description: 'System Architecture', icon: 'fas fa-shield-alt', color: 'purple' },
                 { metric: 'Performance', description: 'Optimized Systems', icon: 'fas fa-rocket', color: 'orange' }
               ].map((impact, index) => (
-                <motion.div
+                <m.div
                   key={index}
                   className="text-center p-6 bg-white rounded-xl shadow-lg"
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -842,7 +840,7 @@ export default function Portfolio() {
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{impact.metric}</div>
                   <div className="text-gray-600">{impact.description}</div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>
@@ -851,23 +849,23 @@ export default function Portfolio() {
         {/* Call to Action */}
         <div className="py-20 bg-gradient-to-br from-green-500 to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.h2
+            <m.h2
               className="text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
               Ready to Build Something Amazing?
-            </motion.h2>
-            <motion.p
+            </m.h2>
+            <m.p
               className="text-xl mb-8 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               Let's discuss your project requirements and create data solutions that drive real business value.
-            </motion.p>
-            <motion.div
+            </m.p>
+            <m.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -889,7 +887,7 @@ export default function Portfolio() {
               >
                 View Services
               </Link>
-            </motion.div>
+            </m.div>
           </div>
         </div>
 
@@ -897,7 +895,7 @@ export default function Portfolio() {
         <section className="py-20 bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -906,13 +904,13 @@ export default function Portfolio() {
                   Ready to Build Something Production-Ready?
                 </h2>
                 <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Whether you need real-time data pipelines, trading systems, or ML in production — 
+                  Whether you need real-time data pipelines, trading systems, or ML in production —
                   let's discuss how these approaches can solve your specific challenges.
                 </p>
-              </motion.div>
+              </m.div>
 
               {/* Action Options */}
-              <motion.div
+              <m.div
                 className="grid md:grid-cols-2 gap-8 mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -951,10 +949,10 @@ export default function Portfolio() {
                     Read Articles
                   </Link>
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Key Differentiators */}
-              <motion.div
+              <m.div
                 className="border-t border-white/20 pt-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -975,10 +973,10 @@ export default function Portfolio() {
                     <span>Fast response times</span>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Social Links */}
-              <motion.div
+              <m.div
                 className="mt-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1014,7 +1012,7 @@ export default function Portfolio() {
                     <i className="fab fa-instagram text-xl"></i>
                   </a>
                 </div>
-              </motion.div>
+              </m.div>
             </div>
           </div>
         </section>

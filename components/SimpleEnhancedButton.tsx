@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { ReactNode, MouseEvent } from 'react';
 
 interface SimpleEnhancedButtonProps {
@@ -89,7 +89,7 @@ export default function SimpleEnhancedButton({
     <span className="relative z-10 flex items-center justify-center">
       {loading ? (
         <>
-          <motion.div
+          <m.div
             className="w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-2"
             animate={{ rotate: 360 }}
             transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
@@ -109,7 +109,7 @@ export default function SimpleEnhancedButton({
 
   if (href) {
     return (
-      <motion.a
+      <m.a
         href={href}
         className={buttonClasses}
         whileHover={{ scale: 1.02 }}
@@ -117,12 +117,12 @@ export default function SimpleEnhancedButton({
         onClick={handleClick}
       >
         {renderContent()}
-      </motion.a>
+      </m.a>
     );
   }
 
   return (
-    <motion.button
+    <m.button
       type={type}
       className={buttonClasses}
       whileHover={{ scale: disabled ? 1 : 1.02 }}
@@ -131,7 +131,7 @@ export default function SimpleEnhancedButton({
       disabled={disabled || loading}
     >
       {renderContent()}
-    </motion.button>
+    </m.button>
   );
 }
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import Header from '../../../components/Header';
@@ -28,7 +28,7 @@ export default function MeanReversionOU() {
         <Header />
 
         {/* Hero Section */}
-        <motion.div
+        <m.div
           className="page-heading header-text bg-gradient-to-r from-purple-500 to-blue-500 text-white py-32"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function MeanReversionOU() {
         >
           <div className="container mx-auto px-4">
             <div className="text-center">
-              <motion.div
+              <m.div
                 className="mb-4"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
@@ -46,26 +46,26 @@ export default function MeanReversionOU() {
                   <i className="fas fa-arrow-left mr-2"></i>
                   Back to Portfolio
                 </Link>
-              </motion.div>
-              <motion.h1
+              </m.div>
+              <m.h1
                 className="text-5xl font-bold mb-4"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
                 Mean Reversion OU Trading Bot
-              </motion.h1>
+              </m.h1>
               <span className="text-xl">Algorithmic Trading • Quantitative Finance • Automated Systems</span>
             </div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Project Content */}
         <div className="project-content py-16">
           <div className="container mx-auto px-4 max-w-4xl">
             
             {/* Performance Metrics */}
-            <motion.div
+            <m.div
               className="metrics-section mb-12 grid md:grid-cols-3 gap-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -83,10 +83,10 @@ export default function MeanReversionOU() {
                 <div className="text-3xl font-bold text-purple-600 mb-2">-12.45%</div>
                 <div className="text-sm text-gray-600">Max Drawdown</div>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Objective Section */}
-            <motion.section
+            <m.section
               className="mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -101,10 +101,10 @@ export default function MeanReversionOU() {
                   Develop an automated trading bot that identifies and exploits mean-reversion opportunities in financial markets using the Ornstein-Uhlenbeck (OU) process.
                 </p>
               </div>
-            </motion.section>
+            </m.section>
 
             {/* Methodology Section */}
-            <motion.section
+            <m.section
               className="mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -133,10 +133,10 @@ export default function MeanReversionOU() {
                   </li>
                 </ul>
               </div>
-            </motion.section>
+            </m.section>
 
             {/* Results Section */}
-            <motion.section
+            <m.section
               className="mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -157,10 +157,10 @@ export default function MeanReversionOU() {
                   </p>
                 </div>
               </div>
-            </motion.section>
+            </m.section>
 
             {/* Challenges Section */}
-            <motion.section
+            <m.section
               className="mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -189,10 +189,10 @@ export default function MeanReversionOU() {
                   </li>
                 </ul>
               </div>
-            </motion.section>
+            </m.section>
 
             {/* Technologies Section */}
-            <motion.section
+            <m.section
               className="mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -214,10 +214,10 @@ export default function MeanReversionOU() {
                   ))}
                 </div>
               </div>
-            </motion.section>
+            </m.section>
 
             {/* CTA Buttons */}
-            <motion.div
+            <m.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -239,7 +239,7 @@ export default function MeanReversionOU() {
                 <i className="fas fa-arrow-left mr-2"></i>
                 Back to Portfolio
               </Link>
-            </motion.div>
+            </m.div>
           </div>
         </div>
 

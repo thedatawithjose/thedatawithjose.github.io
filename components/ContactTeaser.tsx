@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 
 interface ContactTeaserProps {
@@ -33,7 +33,7 @@ export default function ContactTeaser({ className = '' }: ContactTeaserProps) {
   ];
 
   return (
-    <motion.section
+    <m.section
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -42,7 +42,7 @@ export default function ContactTeaser({ className = '' }: ContactTeaserProps) {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Header */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -70,12 +70,12 @@ export default function ContactTeaser({ className = '' }: ContactTeaserProps) {
                 <span>10+ years experience</span>
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Contact Methods */}
           <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
             {contactMethods.map((method, index) => (
-              <motion.div
+              <m.div
                 key={method.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -102,12 +102,12 @@ export default function ContactTeaser({ className = '' }: ContactTeaserProps) {
                     </p>
                   </div>
                 </a>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
           {/* Alternative CTA - Simplified */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -125,9 +125,9 @@ export default function ContactTeaser({ className = '' }: ContactTeaserProps) {
                 Explore Services
               </Link>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
-    </motion.section>
+    </m.section>
   );
 }

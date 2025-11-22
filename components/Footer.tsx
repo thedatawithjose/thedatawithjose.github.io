@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import FooterContactForm from './FooterContactForm';
 import CookieSettings from './CookieSettings';
 
@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Enhanced Company Section */}
-          <motion.div 
+          <m.div 
             className="footer-item"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function Footer() {
             
             {/* Modern Social Icons */}
             <div className="flex space-x-4">
-              <motion.a 
+              <m.a 
                 href="https://www.linkedin.com/in/datawithjose/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
@@ -52,9 +52,9 @@ export default function Footer() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-[#0077B5]/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <i className="fab fa-linkedin text-xl text-gray-300 group-hover:text-[#0077B5] transition-colors duration-300 relative z-10"></i>
-              </motion.a>
+              </m.a>
               
-              <motion.a 
+              <m.a 
                 href="https://github.com/thedatawithjose" 
                 target="_blank" 
                 rel="noopener noreferrer" 
@@ -65,9 +65,9 @@ export default function Footer() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-400/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <i className="fab fa-github text-xl text-gray-300 group-hover:text-gray-100 transition-colors duration-300 relative z-10"></i>
-              </motion.a>
+              </m.a>
               
-              <motion.a 
+              <m.a 
                 href="https://www.instagram.com/datawithjose/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
@@ -78,11 +78,11 @@ export default function Footer() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-pink-400/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <i className="fab fa-instagram text-xl text-gray-300 group-hover:text-pink-400 transition-colors duration-300 relative z-10"></i>
-              </motion.a>
+              </m.a>
             </div>
-          </motion.div>
+          </m.div>
           {/* Enhanced Useful Links */}
-          <motion.div 
+          <m.div 
             className="footer-item"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -123,9 +123,9 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </motion.div>
+          </m.div>
           {/* Enhanced Additional Pages */}
-          <motion.div 
+          <m.div 
             className="footer-item"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -160,9 +160,9 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </motion.div>
+          </m.div>
           {/* Enhanced Contact Section */}
-          <motion.div 
+          <m.div 
             className="footer-item"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -177,11 +177,11 @@ export default function Footer() {
                 <FooterContactForm />
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
         
         {/* Ready to Connect CTA Section */}
-        <motion.div 
+        <m.div 
           className="relative mt-16 mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -212,10 +212,10 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-        </motion.div>
+        </m.div>
         
         {/* Enhanced Copyright Section */}
-        <motion.div 
+        <m.div 
           className="relative mt-8 pt-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -244,7 +244,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </footer>
   );

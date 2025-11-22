@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
       
       <div className="py-20">
         <div className="container mx-auto px-4 max-w-4xl">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -97,7 +97,7 @@ export default function PrivacyPolicy() {
                 </p>
               </section>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
       

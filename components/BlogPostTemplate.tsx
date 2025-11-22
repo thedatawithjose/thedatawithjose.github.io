@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import SocialShareButtons from './SocialShareButtons';
 import SocialMetaTags from './SocialMetaTags';
 
@@ -40,7 +40,7 @@ export default function BlogPostTemplate({
       
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}
-        <motion.header
+        <m.header
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,11 +70,11 @@ export default function BlogPostTemplate({
               description={excerpt}
             />
           </div>
-        </motion.header>
+        </m.header>
 
         {/* Featured Image */}
         {image && (
-          <motion.div
+          <m.div
             className="mb-12"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -85,11 +85,11 @@ export default function BlogPostTemplate({
               alt={title}
               className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-lg"
             />
-          </motion.div>
+          </m.div>
         )}
 
         {/* Content */}
-        <motion.div
+        <m.div
           className="prose prose-lg max-w-none mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -98,7 +98,7 @@ export default function BlogPostTemplate({
         />
 
         {/* Tags */}
-        <motion.div
+        <m.div
           className="mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -115,10 +115,10 @@ export default function BlogPostTemplate({
               </span>
             ))}
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Social Share - Bottom */}
-        <motion.div
+        <m.div
           className="border-t border-gray-200 pt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -140,10 +140,10 @@ export default function BlogPostTemplate({
               description={excerpt}
             />
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Author Bio */}
-        <motion.div
+        <m.div
           className="mt-12 p-6 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -183,7 +183,7 @@ export default function BlogPostTemplate({
               </div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       </article>
     </>
   );

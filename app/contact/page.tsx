@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useEffect } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -34,7 +34,7 @@ export default function Contact() {
       <Header />
 
       {/* Enhanced Hero Section */}
-      <motion.div
+      <m.div
         className="relative bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white py-24 overflow-hidden"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function Contact() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <m.div
               className="mb-6"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
@@ -63,9 +63,9 @@ export default function Contact() {
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-pulse opacity-30"></div>
                 </span>
               </h1>
-            </motion.div>
+            </m.div>
             
-            <motion.div
+            <m.div
               className="mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -80,10 +80,10 @@ export default function Contact() {
                   let's talk about building infrastructure that doesn't fail when it matters most."
                 </p>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Quick Stats */}
-            <motion.div
+            <m.div
               className="grid md:grid-cols-3 gap-6 mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -101,17 +101,17 @@ export default function Contact() {
                 <div className="text-2xl font-bold text-purple-400 mb-1">98%+</div>
                 <div className="text-gray-300 text-sm">System Reliability</div>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* CTA Buttons */}
-            <motion.div
+            <m.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               <a
-                href="https://wa.me/584123020280?text=Hi%20Jose,%20I'm%20interested%20in%20discussing%20a%20data%20engineering%20project"
+                href="https://wa.me/584123020280?text=Hi%20Jose,%20I'm%20interested%20in%20discussing%20a%20data%20engineering%12 projects"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center"
@@ -128,15 +128,15 @@ export default function Contact() {
                 Send Detailed Message
                 <i className="fas fa-arrow-down ml-2 text-sm group-hover:translate-y-1 transition-transform duration-300"></i>
               </a>
-            </motion.div>
+            </m.div>
           </div>
         </div>
-      </motion.div>
+      </m.div>
 
       {/* Enhanced Contact Information */}
       <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <m.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -148,10 +148,10 @@ export default function Contact() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Choose the communication method that works best for your project timeline and complexity
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <motion.div
+            <m.div
               className="group relative p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-green-500"
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -169,7 +169,7 @@ export default function Contact() {
                 </p>
                 <div className="space-y-3">
                   <a 
-                    href="https://wa.me/584123020280?text=Hi%20Jose,%20I'm%20interested%20in%20discussing%20a%20data%20engineering%20project"
+                    href="https://wa.me/584123020280?text=Hi%20Jose,%20I'm%20interested%20in%20discussing%20a%20data%20engineering%12 projects"
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors group"
@@ -183,9 +183,9 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               className="group relative p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-blue-500"
               whileHover={{ y: -8 }}
               initial={{ opacity: 0, y: 30 }}
@@ -215,9 +215,9 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               className="group relative p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-500"
               whileHover={{ y: -8 }}
               initial={{ opacity: 0, y: 30 }}
@@ -243,11 +243,11 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
 
           {/* Additional Contact Options */}
-          <motion.div
+          <m.div
             className="mt-16 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -281,7 +281,7 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
 
@@ -289,7 +289,7 @@ export default function Contact() {
       <div id="contact-form" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -301,10 +301,10 @@ export default function Contact() {
                 Whether you need real-time pipelines, trading systems, or ML in production — 
                 share your project details and I'll get back to you with insights and next steps.
               </p>
-            </motion.div>
+            </m.div>
             
             {/* Project Types */}
-            <motion.div
+            <m.div
               className="grid md:grid-cols-4 gap-4 mt-8 max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -326,30 +326,30 @@ export default function Contact() {
                 <i className="fas fa-database text-orange-600 text-xl mb-2"></i>
                 <div className="text-sm font-semibold text-orange-800">Data Infrastructure</div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
           
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
             <ContactForm />
-          </motion.div>
+          </m.div>
         </div>
       </div>
 
       {/* Partners Section */}
       <div className="partners py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <motion.h2
+          <m.h2
             className="text-3xl font-bold text-center mb-8 text-gray-900"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
             Tools & Platforms
-          </motion.h2>
+          </m.h2>
           <LazyLogosScroll />
         </div>
       </div>

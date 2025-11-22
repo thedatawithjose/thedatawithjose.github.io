@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
@@ -102,14 +102,14 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div
+        <m.div
           className="text-center max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
           {/* Urgency Timer */}
           {currentVariant.urgency && (
-            <motion.div
+            <m.div
               className="inline-flex items-center bg-[#FF6B35]/20 border border-[#FF6B35]/30 rounded-full px-6 py-3 mb-6"
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -131,29 +131,29 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
                   <div className="text-xs">MIN</div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           )}
 
-          <motion.h2
+          <m.h2
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
             {currentVariant.title}
-          </motion.h2>
+          </m.h2>
 
-          <motion.p
+          <m.p
             className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
             {currentVariant.subtitle}
-          </motion.p>
+          </m.p>
 
           {/* Value Props */}
-          <motion.div
+          <m.div
             className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -174,16 +174,16 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
               <h3 className="font-bold mb-2">Ongoing Support</h3>
               <p className="text-sm text-gray-300">Post-launch support and documentation</p>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* CTAs */}
-          <motion.div
+          <m.div
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <motion.a
+            <m.a
               href={currentVariant.mainCTA.href}
               className={`group bg-gradient-to-r ${currentVariant.mainCTA.color} text-white px-6 sm:px-8 py-4 min-h-[48px] rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center justify-center`}
               whileHover={{ scale: 1.05, y: -2 }}
@@ -192,9 +192,9 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
               <i className={`${currentVariant.mainCTA.icon} mr-3`}></i>
               {currentVariant.mainCTA.text}
               <i className="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
-            </motion.a>
+            </m.a>
 
-            <motion.a
+            <m.a
               href={currentVariant.secondaryCTA.href}
               className="group border-2 border-white/60 hover:border-white text-white hover:bg-white/10 px-6 sm:px-8 py-4 min-h-[48px] rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 backdrop-blur-sm flex items-center justify-center"
               whileHover={{ scale: 1.05, y: -2 }}
@@ -202,11 +202,11 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
             >
               <i className={`${currentVariant.secondaryCTA.icon} mr-3`}></i>
               {currentVariant.secondaryCTA.text}
-            </motion.a>
-          </motion.div>
+            </m.a>
+          </m.div>
 
           {/* Social Proof */}
-          <motion.div
+          <m.div
             className="mt-12 flex flex-wrap justify-center items-center gap-8 text-sm text-gray-400"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -214,7 +214,7 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
           >
             <div className="flex items-center">
               <i className="fas fa-users text-[#00BFA5] mr-2"></i>
-              <span>10+ satisfied clients</span>
+              <span>8+ satisfied clients</span>
             </div>
             <div className="flex items-center">
               <i className="fas fa-handshake text-yellow-400 mr-2"></i>
@@ -224,8 +224,8 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
               <i className="fas fa-clock text-[#42A5F5] mr-2"></i>
               <span>Usually responds within 4 hours</span>
             </div>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </div>
     </section>
   );

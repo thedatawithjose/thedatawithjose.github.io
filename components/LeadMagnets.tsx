@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useState } from 'react';
 
 interface LeadMagnetProps {
@@ -104,29 +104,29 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
 
   if (isSuccess) {
     return (
-      <motion.div
+      <m.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         className={`bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 text-center ${className}`}
       >
-        <motion.div 
+        <m.div 
           className="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring" }}
         >
           <i className="fas fa-download text-white text-2xl"></i>
-        </motion.div>
+        </m.div>
         <h3 className="text-2xl font-bold text-green-800 mb-3">Download Started! 📥</h3>
         <p className="text-green-700">Check your downloads folder and email for the resource.</p>
-      </motion.div>
+      </m.div>
     );
   }
 
   return (
     <section className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50 ${className}`}>
       <div className="container mx-auto px-4">
-        <motion.div
+        <m.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -137,11 +137,11 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
           <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto">
             Get battle-tested tools and templates that have saved companies $100K+ in development costs
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {leadMagnets.map((magnet, index) => (
-            <motion.div
+            <m.div
               key={magnet.id}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
@@ -221,12 +221,12 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
                   </button>
                 )}
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 
         {/* Social Proof */}
-        <motion.div
+        <m.div
           className="text-center mt-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -246,7 +246,7 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
               <span>No spam guarantee</span>
             </div>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

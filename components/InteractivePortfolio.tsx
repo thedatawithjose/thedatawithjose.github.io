@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -94,7 +94,7 @@ export default function InteractivePortfolio() {
   return (
     <section className="portfolio py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <motion.div
+        <m.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export default function InteractivePortfolio() {
           <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto">
             Real-world solutions delivering measurable impact through data engineering and algorithmic trading
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-16">
@@ -126,12 +126,12 @@ export default function InteractivePortfolio() {
         </div>
 
         {/* Projects Grid */}
-        <motion.div 
+        <m.div 
           className="grid md:grid-cols-2 gap-10"
           layout
         >
           {filteredProjects.map((project, index) => (
-            <motion.div
+            <m.div
               key={project.id}
               layout
               initial={{ opacity: 0, scale: 0.9 }}
@@ -166,7 +166,7 @@ export default function InteractivePortfolio() {
                 </div>
                 
                 {/* Hover Overlay */}
-                <motion.div
+                <m.div
                   className="absolute inset-0 bg-black/60 flex items-center justify-center"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: hoveredProject === project.id ? 1 : 0 }}
@@ -192,7 +192,7 @@ export default function InteractivePortfolio() {
                       Code
                     </a>
                   </div>
-                </motion.div>
+                </m.div>
               </div>
 
               {/* Project Content */}
@@ -252,12 +252,12 @@ export default function InteractivePortfolio() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
 
         {/* CTA */}
-        <motion.div
+        <m.div
           className="text-center mt-20"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -269,7 +269,7 @@ export default function InteractivePortfolio() {
           >
             View Complete Portfolio
           </Link>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

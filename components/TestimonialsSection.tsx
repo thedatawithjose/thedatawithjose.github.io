@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useState } from 'react';
 
 const testimonials = [
@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
   return (
     <section className="testimonials py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        <motion.div
+        <m.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,11 +67,11 @@ export default function TestimonialsSection() {
           <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto">
             Real feedback from engineers, CTOs, and data teams who've worked with me
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Main Testimonial */}
         <div className="max-w-4xl mx-auto mb-20">
-          <motion.div
+          <m.div
             key={activeTestimonial}
             className="bg-white rounded-2xl shadow-xl p-8 md:p-12"
             initial={{ opacity: 0, y: 20 }}
@@ -119,7 +119,7 @@ export default function TestimonialsSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* Testimonial Navigation */}
@@ -142,7 +142,7 @@ export default function TestimonialsSection() {
         {/* Testimonial Cards Grid */}
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16 sm:mb-24">
           {testimonials.map((testimonial, index) => (
-            <motion.div
+            <m.div
               key={testimonial.id}
               className={`bg-white rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 ${
                 index === activeTestimonial 
@@ -174,12 +174,12 @@ export default function TestimonialsSection() {
                   <i key={i} className="fas fa-star text-yellow-400 text-sm mr-1"></i>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 
         {/* Stats Section */}
-        <motion.div
+        <m.div
           className="mt-20 bg-gradient-to-r from-[#005A9C] to-[#00BFA5] rounded-2xl p-8 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -202,10 +202,10 @@ export default function TestimonialsSection() {
               <div className="text-lg opacity-90">Average Client Relationship</div>
             </div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* CTA */}
-        <motion.div
+        <m.div
           className="text-center mt-20"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -231,7 +231,7 @@ export default function TestimonialsSection() {
               See More Projects
             </a>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

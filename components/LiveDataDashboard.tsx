@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 // Simulación de datos en tiempo real
@@ -50,7 +50,7 @@ export default function LiveDataDashboard() {
   return (
     <section className="live-dashboard py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       <div className="container mx-auto px-4">
-        <motion.div
+        <m.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,11 +65,11 @@ export default function LiveDataDashboard() {
           <div className="text-sm text-gray-400 mt-2">
             Last updated: {currentTime.toLocaleTimeString()}
           </div>
-        </motion.div>
+        </m.div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Crypto Prices */}
-          <motion.div
+          <m.div
             className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -80,7 +80,7 @@ export default function LiveDataDashboard() {
             </h3>
             <div className="space-y-4">
               {cryptoData.map((crypto, index) => (
-                <motion.div
+                <m.div
                   key={crypto.symbol}
                   className="flex items-center justify-between p-3 bg-gray-700/30 rounded-lg"
                   initial={{ opacity: 0, y: 20 }}
@@ -104,13 +104,13 @@ export default function LiveDataDashboard() {
                       {Math.abs(crypto.change).toFixed(2)}%
                     </div>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Trading Signals */}
-          <motion.div
+          <m.div
             className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ export default function LiveDataDashboard() {
             </h3>
             <div className="space-y-4">
               {tradingSignals.map((signal, index) => (
-                <motion.div
+                <m.div
                   key={signal.pair}
                   className="p-4 bg-gray-700/30 rounded-lg"
                   initial={{ opacity: 0, x: 20 }}
@@ -147,13 +147,13 @@ export default function LiveDataDashboard() {
                       <div className="font-bold text-[#00BFA5]">{signal.confidence}%</div>
                     </div>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
 
           {/* System Metrics */}
-          <motion.div
+          <m.div
             className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -207,11 +207,11 @@ export default function LiveDataDashboard() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* Control Panel */}
-        <motion.div
+        <m.div
           className="mt-8 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -230,7 +230,7 @@ export default function LiveDataDashboard() {
           <div className="mt-2 text-sm text-gray-400">
             Data refreshes every 2 seconds when live
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

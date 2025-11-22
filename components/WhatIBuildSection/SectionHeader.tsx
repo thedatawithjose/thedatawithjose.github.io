@@ -1,11 +1,11 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { headerVariants } from './animations';
 
 export default function SectionHeader() {
   return (
-    <motion.div
+    <m.div
       className="text-center mb-20"
       variants={headerVariants}
       initial="hidden"
@@ -20,6 +20,6 @@ export default function SectionHeader() {
         I specialize in building systems that handle failures gracefully, recover automatically, 
         and provide the observability needed to debug issues when they inevitably occur.
       </p>
-    </motion.div>
+    </m.div>
   );
 }

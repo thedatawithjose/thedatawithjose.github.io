@@ -88,7 +88,7 @@ export default function FormSuccessAnimation({
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -98,7 +98,7 @@ export default function FormSuccessAnimation({
           {showConfetti && (
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
               {confettiParticles.map((particle) => (
-                <motion.div
+                <m.div
                   key={particle.id}
                   className="absolute w-2 h-2 rounded"
                   style={{
@@ -127,7 +127,7 @@ export default function FormSuccessAnimation({
           )}
 
           {/* Main Success Card */}
-          <motion.div
+          <m.div
             initial={{ scale: 0.8, opacity: 0, y: 50 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.8, opacity: 0, y: 50 }}
@@ -141,7 +141,7 @@ export default function FormSuccessAnimation({
             <div className="relative z-10">
               {/* Personalized greeting */}
               {formData?.name && (
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
@@ -155,13 +155,13 @@ export default function FormSuccessAnimation({
                       Re: {formData.subject}
                     </p>
                   )}
-                </motion.div>
+                </m.div>
               )}
 
               {/* Step Animation */}
               <div className="space-y-6">
                 {steps.map((step, index) => (
-                  <motion.div
+                  <m.div
                     key={index}
                     initial={{ opacity: 0.3, scale: 0.9 }}
                     animate={{ 
@@ -174,7 +174,7 @@ export default function FormSuccessAnimation({
                     }`}
                   >
                     {/* Icon */}
-                    <motion.div
+                    <m.div
                       animate={{ 
                         rotate: index === currentStep ? [0, 10, -10, 0] : 0,
                         scale: index === currentStep ? [1, 1.2, 1] : 1
@@ -190,7 +190,7 @@ export default function FormSuccessAnimation({
                       }`}
                     >
                       <i className={`${step.icon} text-lg`} />
-                    </motion.div>
+                    </m.div>
 
                     {/* Content */}
                     <div className="flex-1 text-left">
@@ -209,22 +209,22 @@ export default function FormSuccessAnimation({
                     {/* Check mark */}
                     <AnimatePresence>
                       {index < currentStep && (
-                        <motion.div
+                        <m.div
                           initial={{ scale: 0, rotate: -180 }}
                           animate={{ scale: 1, rotate: 0 }}
                           exit={{ scale: 0, rotate: 180 }}
                           className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"
                         >
                           <i className="fas fa-check text-white text-xs" />
-                        </motion.div>
+                        </m.div>
                       )}
                     </AnimatePresence>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
 
               {/* Next Steps */}
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 4 }}
@@ -247,22 +247,22 @@ export default function FormSuccessAnimation({
                     <span>Start your project journey</span>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Contact info reminder */}
               {formData?.email && (
-                <motion.div
+                <m.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 5 }}
                   className="mt-4 text-xs text-gray-500"
                 >
                   I'll reach out to you at: <strong>{formData.email}</strong>
-                </motion.div>
+                </m.div>
               )}
             </div>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       )}
     </AnimatePresence>
   );

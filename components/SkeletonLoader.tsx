@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 interface SkeletonLoaderProps {
   type: 'card' | 'text' | 'avatar' | 'project' | 'form';
@@ -126,7 +126,7 @@ export default function SkeletonLoader({ type, count = 1, className = '' }: Skel
   return (
     <>
       {Array.from({ length: count }, (_, index) => (
-        <motion.div
+        <m.div
           key={index}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -134,7 +134,7 @@ export default function SkeletonLoader({ type, count = 1, className = '' }: Skel
           transition={{ duration: 0.3, delay: index * 0.1 }}
         >
           {renderSkeleton()}
-        </motion.div>
+        </m.div>
       ))}
     </>
   );
