@@ -22,6 +22,7 @@ export default function KalyptoChat() {
     };
 
     useEffect(() => {
+        console.log('KalyptoChat mounted');
         scrollToBottom();
     }, [messages]);
 
@@ -58,7 +59,7 @@ export default function KalyptoChat() {
         <>
             {/* Floating Action Button */}
             <m.button
-                className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-[#005A9C] to-[#00BFA5] text-white shadow-lg flex items-center justify-center hover:shadow-xl hover:scale-105 transition-all duration-300"
+                className="fixed bottom-6 right-6 z-[9999] w-14 h-14 rounded-full bg-gradient-to-r from-[#005A9C] to-[#00BFA5] text-white shadow-lg flex items-center justify-center hover:shadow-xl hover:scale-105 transition-all duration-300"
                 onClick={() => setIsOpen(!isOpen)}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -84,7 +85,7 @@ export default function KalyptoChat() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="fixed bottom-24 right-6 z-50 w-[90vw] md:w-[400px] h-[500px] max-h-[80vh] bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 flex flex-col overflow-hidden"
+                        className="fixed bottom-24 right-6 z-[9999] w-[90vw] md:w-[400px] h-[500px] max-h-[80vh] bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 flex flex-col overflow-hidden"
                     >
                         {/* Header */}
                         <div className="p-4 bg-gradient-to-r from-[#005A9C] to-[#00BFA5] text-white flex items-center justify-between">
