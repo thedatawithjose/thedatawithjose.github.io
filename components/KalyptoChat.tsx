@@ -34,7 +34,9 @@ export default function KalyptoChat() {
         setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
         setIsLoading(true);
         try {
-            const response = await fetch('/api/chat', {
+            // Use proxy API endpoint (configured via environment variable or default)
+            const apiUrl = process.env.NEXT_PUBLIC_KALYPTO_API_URL || 'https://kalypto-api-proxy.vercel.app/api/chat';
+            const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
