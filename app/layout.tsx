@@ -142,7 +142,7 @@ export default function RootLayout({
             {/* WhatsApp Floating Button */}
             <WhatsAppButton />
 
-            {/* Kalypto AI Chatbot */}
+            {/* Cami AI Chatbot - Virtual Assistant */}
             <KalyptoChat />
 
             {/* Cookie Consent Banner */}
