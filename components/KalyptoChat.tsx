@@ -22,7 +22,6 @@ export default function KalyptoChat() {
     };
 
     useEffect(() => {
-        console.log('KalyptoChat mounted');
         scrollToBottom();
     }, [messages]);
 
