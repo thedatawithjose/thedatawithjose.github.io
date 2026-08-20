@@ -6,9 +6,17 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 env:
   NODE_VERSION: '20'
-  CACHE_KEY: 'node-modules'
 
 jobs:
   # Security and Quality Checks
@@ -79,8 +87,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
     
     environment:
-      name: production
-      url: https://thedatawithjose.github.io
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
     - name: Checkout
@@ -92,20 +100,14 @@ jobs:
         name: build-files
         path: ./out
         
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./out
-        cname: datawithjose.tech
-        force_orphan: true
+        path: ./out
         
-    - name: Health check after deployment
-      run: |
-        echo "Waiting for deployment to be available..."
-        sleep 30
-        curl -f https://thedatawithjose.github.io/health || echo "Health check failed, but deployment completed"
-      continue-on-error: true
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
 
   # Post-deployment monitoring
   post-deploy-check:
@@ -117,12 +119,12 @@ jobs:
     - name: Check site availability
       run: |
         echo "Checking site availability..."
-        curl -f -s -o /dev/null https://thedatawithjose.github.io || exit 1
+        curl -f -s -o /dev/null https://datawithjose.tech || exit 1
         echo "Site is available"
         
     - name: Performance check
       run: |
         echo "Basic performance check..."
-        time curl -s -o /dev/null https://thedatawithjose.github.io
+        time curl -s -o /dev/null https://datawithjose.tech
         echo "Performance check completed"
       continue-on-error: true
