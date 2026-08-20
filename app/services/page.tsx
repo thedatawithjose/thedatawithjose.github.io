@@ -151,7 +151,7 @@ export default function Services() {
       note: 'The cheapest insurance you can buy: a rigorous no before you commit capital to a build.',
       popular: false,
       guarantees: [
-        'Honest results - even when they say "don't build it"',
+        "Honest results - even when they say 'don't build it'",
         'Clear documentation of every assumption',
         'Fixed scope, agreed before we start'
       ],
