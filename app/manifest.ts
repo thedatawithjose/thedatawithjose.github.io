@@ -4,13 +4,13 @@ export const dynamic = 'force-static'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Jose Acosta - Data Engineer Portfolio',
+    name: 'Jose Acosta - Quantitative Developer',
     short_name: 'Jose Acosta',
-    description: 'Data Engineer specializing in real-time data pipelines, algorithmic trading systems, and scalable analytics solutions.',
+    description: 'Quantitative Developer building robust algorithmic trading systems — from research to execution.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#ffffff',
-    theme_color: '#0A192F',
+    background_color: '#050B14',
+    theme_color: '#050B14',
     orientation: 'portrait-primary',
     categories: ['business', 'productivity', 'portfolio'],
     lang: 'en-US',

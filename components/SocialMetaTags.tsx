@@ -33,7 +33,7 @@ export default function SocialMetaTags({
       <meta property="og:image" content={fullImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Jose Acosta - Data Engineer" />
+      <meta property="og:site_name" content="Jose Acosta - Quantitative Developer" />
       <meta property="og:locale" content="en_US" />
       
       {author && <meta property="article:author" content={author} />}

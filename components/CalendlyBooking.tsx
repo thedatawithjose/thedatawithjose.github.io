@@ -68,7 +68,7 @@ export default function CalendlyBooking({
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-              Book a free 30-minute consultation to discuss your data engineering needs
+              Book a free 30-minute consultation to discuss your strategy or trading infrastructure
             </p>
 
             {/* Benefits */}
@@ -122,7 +122,7 @@ export default function CalendlyBooking({
               </button>
 
               <a
-                href="mailto:datawithjose@outlook.com?subject=Quick Question About Data Engineering Services&body=Hi Jose,%0D%0A%0D%0AI have a quick question about your data engineering services:%0D%0A%0D%0A[Your question here]%0D%0A%0D%0ABest regards"
+                href="mailto:datawithjose@outlook.com?subject=Quick Question About Quantitative Development Services&body=Hi Jose,%0D%0A%0D%0AI have a quick question about your quantitative development services:%0D%0A%0D%0A[Your question here]%0D%0A%0D%0ABest regards"
                 className="group border-2 border-white/60 hover:border-white text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 backdrop-blur-sm flex items-center"
               >
                 <i className="fas fa-envelope mr-3"></i>

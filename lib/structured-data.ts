@@ -6,8 +6,8 @@ export function generatePersonSchema() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Jose Acosta',
-    jobTitle: 'Data Engineer',
-    description: 'Data Engineer specializing in real-time data pipelines, trading algorithms, and scalable analytics solutions.',
+    jobTitle: 'Quantitative Developer',
+    description: 'Quantitative Developer building robust algorithmic trading systems — from research to execution. Backtesting infrastructure, live trading systems, and risk management backed by real-market experience.',
     url: siteConfig.url,
     image: `${siteConfig.url}/images/profile-jose.png`,
     email: siteConfig.social.email,
@@ -18,7 +18,7 @@ export function generatePersonSchema() {
     ],
     worksFor: {
       '@type': 'Organization',
-      name: 'Freelance Data Engineering Consultant'
+      name: 'Independent Quantitative Development & Consulting'
     },
     alumniOf: [
       {
@@ -28,17 +28,18 @@ export function generatePersonSchema() {
       }
     ],
     knowsAbout: [
-      'Data Engineering',
+      'Quantitative Development',
+      'Algorithmic Trading Systems',
+      'Backtesting Infrastructure',
+      'Live Trading Execution',
+      'Trading Risk Management',
       'Python Programming',
-      'SQL Database Management',
-      'AWS Cloud Services',
-      'Apache Kafka',
+      'Time-Series Analysis',
+      'Statistical Modeling',
+      'Market Data Pipelines',
       'Real-time Data Processing',
-      'Trading Algorithms',
-      'Financial Data Analysis',
-      'ETL/ELT Pipelines',
-      'Machine Learning',
-      'Business Intelligence'
+      'Financial Engineering',
+      'Systematic Trading'
     ],
     hasCredential: [
       {
@@ -77,31 +78,31 @@ export function generateWebsiteSchema() {
       '@type': 'Person',
       name: 'Jose Acosta'
     },
-    serviceType: 'Data Engineering and Analytics Consulting',
+    serviceType: 'Quantitative Development and Algorithmic Trading Systems',
     areaServed: 'Worldwide',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Data Engineering Services',
+      name: 'Quantitative Development Services',
       itemListElement: [
         {
           '@type': 'Offer',
-          name: 'Real-time Data Pipeline Development',
-          description: 'Design and implementation of scalable real-time data processing systems using Apache Kafka, Spark, and cloud technologies.'
+          name: 'Algorithmic Trading System Development',
+          description: 'End-to-end design and implementation of robust algorithmic trading systems — from research and backtesting to live execution and monitoring.'
         },
         {
           '@type': 'Offer',
-          name: 'Trading Algorithm Development',
-          description: 'Custom algorithmic trading strategies with backtesting, risk management, and performance optimization.'
+          name: 'Backtesting Infrastructure',
+          description: 'High-performance backtesting frameworks with market data pipelines, quality gates, and reproducible research workflows.'
         },
         {
           '@type': 'Offer',
-          name: 'Data Analytics and BI Solutions',
-          description: 'End-to-end analytics solutions including data modeling, dashboard development, and business intelligence implementation.'
+          name: 'Live Execution & Risk Systems',
+          description: 'Production trading infrastructure with real-time execution, position management, risk controls, and 24/7 monitoring.'
         },
         {
           '@type': 'Offer',
-          name: 'Cloud Data Architecture',
-          description: 'AWS-based data architecture design and implementation for scalable, cost-effective data solutions.'
+          name: 'Quantitative Research Support',
+          description: 'Time-series analysis, signal research, and data-driven strategy development with rigorous validation.'
         }
       ]
     },
@@ -193,27 +194,27 @@ export function generatePortfolioSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
-    name: 'Data Engineering Portfolio',
+    name: 'Quantitative Development Portfolio',
     author: {
       '@type': 'Person',
       name: 'Jose Acosta'
     },
-    description: 'Portfolio showcasing data engineering projects including real-time trading systems, ETL pipelines, and analytics platforms.',
+    description: 'Portfolio showcasing quantitative development work including algorithmic trading systems, backtesting infrastructure, and market data pipelines.',
     url: `${siteConfig.url}/portfolio`,
     workExample: [
       {
         '@type': 'SoftwareApplication',
-        name: 'High-Frequency Trading System',
-        description: 'Real-time trading system processing market data with low latency for cryptocurrency markets.',
+        name: 'Algorithmic Trading System',
+        description: 'Real-time trading system processing market data with low latency for systematic strategies.',
         applicationCategory: 'Financial Technology',
         operatingSystem: 'Linux',
         programmingLanguage: 'Python'
       },
       {
         '@type': 'SoftwareApplication',
-        name: 'Real-time Data Pipeline',
-        description: 'Scalable data processing pipeline using Apache Kafka and Spark for financial market data.',
-        applicationCategory: 'Data Processing',
+        name: 'Backtesting & Research Infrastructure',
+        description: 'Scalable backtesting and research platform using Python, Kafka, and time-series databases for financial market data.',
+        applicationCategory: 'Financial Technology',
         operatingSystem: 'Cloud',
         programmingLanguage: ['Python', 'SQL']
       }
@@ -267,10 +268,10 @@ export function generateFAQSchema() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What data engineering services do you offer?',
+        name: 'What quantitative development services do you offer?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'I offer comprehensive data engineering services including real-time data pipeline development, trading algorithm creation, cloud data architecture, ETL/ELT implementation, and business intelligence solutions.'
+          text: 'I offer end-to-end quantitative development services: algorithmic trading system design, backtesting infrastructure, live execution and risk systems, market data pipelines, and quantitative research support — from research to execution.'
         }
       },
       {
@@ -278,15 +279,15 @@ export function generateFAQSchema() {
         name: 'What technologies do you specialize in?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'I specialize in Python, SQL, Apache Kafka, Apache Spark, AWS cloud services, PostgreSQL, Docker, Kubernetes, and various data processing frameworks for building scalable data solutions.'
+          text: 'I specialize in Python, NumPy, pandas, statistical time-series modeling, PostgreSQL/TimescaleDB, Redis, Docker, and real-time market data processing for building robust algorithmic trading systems.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Do you work with financial data and trading systems?',
+        name: 'Do you build complete trading systems, not just strategies?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I have solid experience developing trading algorithms, processing financial market data in real-time, and building trading systems with good performance.'
+          text: 'Yes. I build the full stack: research and backtesting infrastructure, live execution systems, risk controls, and monitoring. I have years of experience trading with real capital, so robustness is designed in from day one.'
         }
       },
       {
@@ -294,7 +295,7 @@ export function generateFAQSchema() {
         name: 'What is your typical project timeline?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Project timelines vary based on complexity, ranging from 2-4 weeks for simple integrations to 3-6 months for comprehensive data platform implementations. I provide detailed estimates during initial consultations.'
+          text: 'Project timelines vary based on complexity, ranging from 2-4 weeks for a research/backtesting engagement to 3-6 months for complete live trading infrastructure. I provide detailed estimates during initial consultations.'
         }
       }
     ]

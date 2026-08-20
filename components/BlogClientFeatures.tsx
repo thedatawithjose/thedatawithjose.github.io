@@ -147,10 +147,10 @@ export default function BlogClientFeatures({ allArticles, children }: BlogClient
 
   // Add metadata to head
   useEffect(() => {
-    document.title = 'Technical Blog | Jose Acosta - Data Engineer';
+    document.title = 'Technical Blog | Jose Acosta - Quantitative Developer';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Insights on data engineering, algorithmic trading, and high-performance systems by Jose Acosta.');
+      metaDescription.setAttribute('content', 'Insights on algorithmic trading systems, backtesting and validation, and automated execution by Jose Acosta.');
     }
   }, []);
 

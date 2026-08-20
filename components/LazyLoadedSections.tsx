@@ -6,9 +6,9 @@ import dynamic from 'next/dynamic';
 // Lazy load heavy sections with intersection observer
 const SkillsSection = dynamic(() => import('./SkillsSection'), {
   loading: () => (
-    <div className="py-16 bg-gray-50">
+    <div className="py-16 bg-[#0A1526]">
       <div className="container mx-auto px-4">
-        <div className="h-96 bg-gray-200 animate-pulse rounded-lg"></div>
+        <div className="h-96 bg-[#1E2D45] animate-pulse rounded-lg"></div>
       </div>
     </div>
   ),
@@ -18,7 +18,7 @@ const InteractivePortfolio = dynamic(() => import('./InteractivePortfolio'), {
   loading: () => (
     <div className="py-16">
       <div className="container mx-auto px-4">
-        <div className="h-96 bg-gray-200 animate-pulse rounded-lg"></div>
+        <div className="h-96 bg-[#1E2D45] animate-pulse rounded-lg"></div>
       </div>
     </div>
   ),
@@ -26,9 +26,9 @@ const InteractivePortfolio = dynamic(() => import('./InteractivePortfolio'), {
 
 const TechnicalBlog = dynamic(() => import('./TechnicalBlog'), {
   loading: () => (
-    <div className="py-16 bg-gray-50">
+    <div className="py-16 bg-[#0A1526]">
       <div className="container mx-auto px-4">
-        <div className="h-96 bg-gray-200 animate-pulse rounded-lg"></div>
+        <div className="h-96 bg-[#1E2D45] animate-pulse rounded-lg"></div>
       </div>
     </div>
   ),
@@ -38,7 +38,7 @@ const TestimonialsSection = dynamic(() => import('./TestimonialsSection'), {
   loading: () => (
     <div className="py-16">
       <div className="container mx-auto px-4">
-        <div className="h-96 bg-gray-200 animate-pulse rounded-lg"></div>
+        <div className="h-96 bg-[#1E2D45] animate-pulse rounded-lg"></div>
       </div>
     </div>
   ),
@@ -93,9 +93,9 @@ export default function LazyLoadedSections({ className = '' }: LazyLoadedSection
         {visibleSections.skills ? (
           <SkillsSection />
         ) : (
-          <div className="py-16 bg-gray-50">
+          <div className="py-16 bg-[#0A1526]">
             <div className="container mx-auto px-4">
-              <div className="h-96 bg-gray-200 animate-pulse rounded-lg"></div>
+              <div className="h-96 bg-[#1E2D45] animate-pulse rounded-lg"></div>
             </div>
           </div>
         )}
@@ -108,7 +108,7 @@ export default function LazyLoadedSections({ className = '' }: LazyLoadedSection
         ) : (
           <div className="py-16">
             <div className="container mx-auto px-4">
-              <div className="h-96 bg-gray-200 animate-pulse rounded-lg"></div>
+              <div className="h-96 bg-[#1E2D45] animate-pulse rounded-lg"></div>
             </div>
           </div>
         )}
@@ -119,9 +119,9 @@ export default function LazyLoadedSections({ className = '' }: LazyLoadedSection
         {visibleSections.blog ? (
           <TechnicalBlog />
         ) : (
-          <div className="py-16 bg-gray-50">
+          <div className="py-16 bg-[#0A1526]">
             <div className="container mx-auto px-4">
-              <div className="h-96 bg-gray-200 animate-pulse rounded-lg"></div>
+              <div className="h-96 bg-[#1E2D45] animate-pulse rounded-lg"></div>
             </div>
           </div>
         )}
@@ -134,7 +134,7 @@ export default function LazyLoadedSections({ className = '' }: LazyLoadedSection
         ) : (
           <div className="py-16">
             <div className="container mx-auto px-4">
-              <div className="h-96 bg-gray-200 animate-pulse rounded-lg"></div>
+              <div className="h-96 bg-[#1E2D45] animate-pulse rounded-lg"></div>
             </div>
           </div>
         )}

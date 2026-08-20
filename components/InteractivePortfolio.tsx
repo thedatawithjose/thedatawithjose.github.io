@@ -7,7 +7,7 @@ const projects = [
     id: 1,
     title: "Edgar SEC Parser",
     description: "Advanced Financial Document Processing System with 16.51 MB/s peak throughput and 100% error recovery rate.",
-    category: "Data Engineering",
+    category: "Research & Data",
     image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop",
     tech: ["Python", "SQLAlchemy", "PostgreSQL", "secsgml", "secxbrl"],
     metrics: {
@@ -26,7 +26,7 @@ const projects = [
     id: 2,
     title: "Financial Data Pipeline",
     description: "Production-ready ETL pipeline for financial market data with 98%+ uptime and comprehensive data quality validation.",
-    category: "Data Engineering",
+    category: "Research & Data",
     image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&h=600&fit=crop",
     tech: ["Python", "Pandas", "PostgreSQL", "TimescaleDB", "Docker"],
     metrics: {
@@ -44,14 +44,14 @@ const projects = [
   {
     id: 3,
     title: "Mean Reversion OU Bot",
-    description: "Automated trading bot using Ornstein-Uhlenbeck process with 17.89% CAGR and 2.34 Sharpe ratio.",
-    category: "Data Engineering",
+    description: "Automated trading bot using the Ornstein-Uhlenbeck process with walk-forward validation and dynamic risk management.",
+    category: "Trading",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop",
     tech: ["Python", "Pandas", "NumPy", "SciPy", "Matplotlib"],
     metrics: {
-      cagr: "17.89%",
-      sharpe: "2.34",
-      drawdown: "-12.45%"
+      validation: "Walk-Forward",
+      testing: "Out-of-Sample",
+      risk: "Dynamic Sizing"
     },
     links: {
       demo: "#",
@@ -63,13 +63,13 @@ const projects = [
   {
     id: 4,
     title: "Moving Average Bot",
-    description: "Algorithmic trading bot with moving average crossover strategy, operating profitably 24/7 with 15.67% CAGR.",
-    category: "Data Engineering",
+    description: "Algorithmic trading bot with moving average crossover strategy, containerized and operating 24/7 with risk controls.",
+    category: "Trading",
     image: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&h=600&fit=crop",
     tech: ["Python", "Pandas", "Backtrader", "REST API", "Docker"],
     metrics: {
-      cagr: "15.67%",
-      sharpe: "1.89",
+      operation: "24/7",
+      container: "Dockerized",
       status: "Live"
     },
     links: {
@@ -81,7 +81,7 @@ const projects = [
   }
 ];
 
-const categories = ["All", "Trading", "Data Engineering", "Machine Learning"];
+const categories = ["All", "Trading", "Research & Data", "Infrastructure"];
 
 export default function InteractivePortfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -92,18 +92,18 @@ export default function InteractivePortfolio() {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section className="portfolio py-24 bg-gray-50">
+    <section className="portfolio py-24 bg-[#050B14]">
       <div className="container mx-auto px-4">
         <m.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h2 className="text-4xl font-bold mb-4 text-[#0097A7]">
+          <h2 className="text-4xl font-bold mb-4 text-[#00E5A0]">
             Portfolio Showcase
           </h2>
-          <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto">
-            Real-world solutions delivering measurable impact through data engineering and algorithmic trading
+          <p className="text-lg md:text-xl font-semibold text-gray-400 max-w-3xl mx-auto">
+            Trading systems and research infrastructure with measurable results — from backtests to live capital
           </p>
         </m.div>
 
@@ -116,8 +116,8 @@ export default function InteractivePortfolio() {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category
-                  ? 'bg-[#00BFA5] text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                  ? 'bg-[#00E5A0] text-[#050B14] shadow-lg'
+                  : 'bg-[#0D1B30] text-gray-300 hover:bg-[#1E2D45] border border-[#1E2D45]'
               }`}
             >
               {category}
@@ -138,7 +138,7 @@ export default function InteractivePortfolio() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+              className="bg-[#0D1B30] border border-[#1E2D45] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
               whileHover={{ y: -5 }}
@@ -177,7 +177,7 @@ export default function InteractivePortfolio() {
                       href={project.links.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#00BFA5] text-white px-4 py-2 rounded-lg hover:bg-[#00D4B4] transition-colors"
+                      className="bg-[#00E5A0] text-[#050B14] px-4 py-2 rounded-lg hover:bg-[#00FFB3] transition-colors"
                     >
                       <i className="fas fa-external-link-alt mr-2"></i>
                       Live Demo
@@ -197,15 +197,15 @@ export default function InteractivePortfolio() {
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">{project.title}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-white">{project.title}</h3>
+                <p className="text-gray-400 mb-4 line-clamp-3">{project.description}</p>
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                      className="px-3 py-1 bg-white/5 text-gray-300 text-sm rounded-full"
                     >
                       {tech}
                     </span>
@@ -213,10 +213,10 @@ export default function InteractivePortfolio() {
                 </div>
 
                 {/* Metrics */}
-                <div className="grid grid-cols-3 gap-4 mb-4 p-4 bg-gray-50 rounded-lg">
+                <div className="grid grid-cols-3 gap-4 mb-4 p-4 bg-[#0A1526] rounded-lg">
                   {Object.entries(project.metrics).map(([key, value]) => (
                     <div key={key} className="text-center">
-                      <div className="text-sm font-semibold text-[#00BFA5]">{value}</div>
+                      <div className="text-sm font-semibold text-[#00E5A0] font-mono">{value}</div>
                       <div className="text-xs text-gray-500 capitalize">{key.replace('_', ' ')}</div>
                     </div>
                   ))}
@@ -226,7 +226,7 @@ export default function InteractivePortfolio() {
                 <div className="flex justify-between items-center">
                   <Link 
                     href={project.links.case_study}
-                    className="text-[#005A9C] hover:text-[#00BFA5] font-medium transition-colors"
+                    className="text-[#42A5F5] hover:text-[#00E5A0] font-medium transition-colors"
                   >
                     Read Case Study →
                   </Link>
@@ -235,7 +235,7 @@ export default function InteractivePortfolio() {
                       href={project.links.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-[#00BFA5] transition-colors"
+                      className="text-gray-400 hover:text-[#00E5A0] transition-colors"
                       title="Live Demo"
                     >
                       <i className="fas fa-external-link-alt"></i>
@@ -244,7 +244,7 @@ export default function InteractivePortfolio() {
                       href={project.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-gray-800 transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors"
                       title="Source Code"
                     >
                       <i className="fab fa-github"></i>
@@ -265,7 +265,7 @@ export default function InteractivePortfolio() {
         >
           <Link 
             href="/portfolio" 
-            className="bg-[#005A9C] hover:bg-[#003D7A] text-white px-8 py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl text-lg font-semibold"
+            className="bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] hover:from-[#00FFB3] hover:to-[#5AB3F5] text-[#050B14] px-8 py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl text-lg font-bold"
           >
             View Complete Portfolio
           </Link>

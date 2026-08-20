@@ -8,7 +8,7 @@ export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
   const whatsappMessage = encodeURIComponent(
-    "Hi Jose! I'm interested in your data engineering services. Could we schedule a call to discuss my project?"
+    "Hi Jose! I'm interested in your quantitative development services. Could we schedule a call to discuss my project?"
   );
 
   useEffect(() => {

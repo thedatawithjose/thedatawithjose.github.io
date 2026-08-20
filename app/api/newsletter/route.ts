@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     // Send to FormSubmit (free service)
     const formData = new FormData();
     formData.append('email', email);
-    formData.append('_subject', 'New Newsletter Subscription - Data Engineering');
+    formData.append('_subject', 'New Newsletter Subscription - Quant Trading Insights');
     formData.append('message', `New newsletter subscription from: ${email}`);
     formData.append('source', 'website_newsletter');
     formData.append('_captcha', 'false');

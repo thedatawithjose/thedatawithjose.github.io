@@ -60,7 +60,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
   };
 
   return (
-    <section className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#0A192F] to-[#1A3A52] text-white ${className}`}>
+    <section className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#0D1B30] to-[#0A1526] text-white ${className}`}>
       <div className="container mx-auto px-4">
         <m.div
           className="text-center mb-16"
@@ -69,10 +69,10 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
           onViewportEnter={() => setIsVisible(true)}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-            Calculate Your Data Engineering ROI
+            Quantify the Cost of Unreliable Trading Infrastructure
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            See exactly how much you could save with optimized data infrastructure
+            See exactly how much downtime and bad data could be costing your trading operation
           </p>
         </m.div>
 
@@ -97,7 +97,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                     type="number"
                     value={inputs.currentDataProcessingCost}
                     onChange={(e) => handleInputChange('currentDataProcessingCost', Number(e.target.value))}
-                    className="w-full pl-8 pr-4 py-3 bg-white/5 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:border-transparent"
+                    className="w-full pl-8 pr-4 py-3 bg-white/5 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:border-transparent"
                     placeholder="10000"
                   />
                 </div>
@@ -111,7 +111,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                   type="number"
                   value={inputs.dataVolumeGB}
                   onChange={(e) => handleInputChange('dataVolumeGB', Number(e.target.value))}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:border-transparent"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:border-transparent"
                   placeholder="1000"
                 />
               </div>
@@ -124,7 +124,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                   type="number"
                   value={inputs.engineersTime}
                   onChange={(e) => handleInputChange('engineersTime', Number(e.target.value))}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:border-transparent"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:border-transparent"
                   placeholder="40"
                 />
               </div>
@@ -137,7 +137,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                   type="number"
                   value={inputs.downtimeHours}
                   onChange={(e) => handleInputChange('downtimeHours', Number(e.target.value))}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:border-transparent"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:border-transparent"
                   placeholder="8"
                 />
               </div>
@@ -152,7 +152,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                     type="number"
                     value={inputs.revenuePerHour}
                     onChange={(e) => handleInputChange('revenuePerHour', Number(e.target.value))}
-                    className="w-full pl-8 pr-4 py-3 bg-white/5 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:border-transparent"
+                    className="w-full pl-8 pr-4 py-3 bg-white/5 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:border-transparent"
                     placeholder="5000"
                   />
                 </div>
@@ -162,12 +162,12 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
 
           {/* Results Section */}
           <m.div
-            className="bg-gradient-to-br from-[#00BFA5]/20 to-[#42A5F5]/20 backdrop-blur-sm rounded-2xl p-8 border border-[#00BFA5]/30"
+            className="bg-gradient-to-br from-[#00E5A0]/20 to-[#42A5F5]/20 backdrop-blur-sm rounded-2xl p-8 border border-[#00E5A0]/30"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <h3 className="text-2xl font-bold mb-8 text-center text-[#00BFA5]">Your Potential Savings</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center text-[#00E5A0]">Your Potential Savings</h3>
             
             <div className="space-y-6">
               <m.div
@@ -178,9 +178,9 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
               >
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-gray-300">Monthly Cost Savings</span>
-                  <i className="fas fa-dollar-sign text-[#00BFA5]"></i>
+                  <i className="fas fa-dollar-sign text-[#00E5A0]"></i>
                 </div>
-                <div className="text-3xl font-bold text-[#00BFA5]">
+                <div className="text-3xl font-bold text-[#00E5A0]">
                   {formatCurrency(results.costSavings)}
                 </div>
                 <div className="text-sm text-gray-400">25% infrastructure cost reduction</div>
@@ -210,16 +210,16 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
               >
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-gray-300">Downtime Cost Avoided</span>
-                  <i className="fas fa-shield-alt text-[#005A9C]"></i>
+                  <i className="fas fa-shield-alt text-[#42A5F5]"></i>
                 </div>
-                <div className="text-3xl font-bold text-[#005A9C]">
+                <div className="text-3xl font-bold text-[#42A5F5]">
                   {formatCurrency(results.downtimeReduction)}
                 </div>
                 <div className="text-sm text-gray-400">80% downtime reduction</div>
               </m.div>
 
               <m.div
-                className="bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] rounded-xl p-6 text-center"
+                className="bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] rounded-xl p-6 text-center"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={isVisible ? { scale: 1, opacity: 1 } : {}}
                 transition={{ delay: 1.2 }}
@@ -242,7 +242,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
             >
               <a
                 href={`mailto:datawithjose@outlook.com?subject=ROI Discussion - Let's Optimize Our Data Infrastructure&body=Hi Jose,%0D%0A%0D%0AI used your ROI calculator and I'm interested in discussing how we can achieve these savings:%0D%0A%0D%0AProjected Annual ROI: ${formatCurrency(results.totalROI * 12)}%0D%0APayback Period: ${results.paybackMonths.toFixed(1)} months%0D%0A%0D%0ACurrent Situation:%0D%0A- Monthly processing costs: $${inputs.currentDataProcessingCost}%0D%0A- Data volume: ${inputs.dataVolumeGB}GB/month%0D%0A- Engineer hours on data issues: ${inputs.engineersTime}h/month%0D%0A- Downtime: ${inputs.downtimeHours}h/month%0D%0A%0D%0AWhen can we schedule a call to discuss implementation?%0D%0A%0D%0ABest regards`}
-                className="bg-white text-[#005A9C] px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg inline-flex items-center"
+                className="bg-white text-[#42A5F5] px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg inline-flex items-center"
               >
                 <i className="fas fa-calendar-alt mr-2"></i>
                 Schedule ROI Discussion

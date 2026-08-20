@@ -14,26 +14,27 @@ export interface SEOConfig {
 }
 
 const siteConfig = {
-  name: 'Jose Acosta - Data Engineer & Analytics Specialist',
-  description: 'Data Engineer specializing in real-time data pipelines, trading algorithms, and scalable analytics solutions. Skilled in Python, SQL, AWS, and financial data systems.',
+  name: 'Jose Acosta - Quantitative Developer',
+  description: 'Quantitative Developer building robust algorithmic trading systems — from research to execution. Python, backtesting infrastructure, live trading systems, and risk management with real-market experience.',
   url: 'https://datawithjose.tech',
   ogImage: '/images/jose.png',
   author: 'Jose Acosta',
   keywords: [
-    'Data Engineer',
-    'Data Analytics',
+    'Quantitative Developer',
+    'Algorithmic Trading Systems',
+    'Quant Developer',
+    'Backtesting Infrastructure',
+    'Trading System Development',
+    'Python Quantitative Finance',
+    'Live Trading Execution',
+    'Trading Risk Management',
+    'Time-Series Analysis',
+    'Market Data Pipelines',
+    'Quantitative Research',
+    'Systematic Trading',
     'Trading Algorithms',
-    'Python Developer',
-    'SQL Developer',
-    'AWS',
-    'Real-time Data Processing',
-    'Financial Data',
-    'ETL Pipelines',
-    'Data Architecture',
-    'Machine Learning',
-    'Business Intelligence',
-    'Freelance Data Engineer',
-    'Data Consultant'
+    'Financial Engineering',
+    'Python Developer'
   ],
   social: {
     linkedin: 'https://www.linkedin.com/in/datawithjose',
@@ -122,7 +123,7 @@ export function generateMetadata(config: SEOConfig): Metadata {
 
     // Additional metadata
     category: 'Technology',
-    classification: 'Data Engineering and Analytics Services',
+    classification: 'Quantitative Development and Algorithmic Trading Systems',
     
     // Verification and analytics
     verification: {

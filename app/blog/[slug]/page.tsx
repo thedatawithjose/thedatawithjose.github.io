@@ -16,13 +16,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const imageUrl = articleData.image?.startsWith('http') ? articleData.image : `https://datawithjose.tech${articleData.image}`;
   
   return {
-    title: `${articleData.title} | Jose Acosta - Data Engineer`,
+    title: `${articleData.title} | Jose Acosta - Quantitative Developer`,
     description: articleData.excerpt,
     openGraph: {
       title: articleData.title,
       description: articleData.excerpt,
       url: fullUrl,
-      siteName: 'Jose Acosta - Data Engineer',
+      siteName: 'Jose Acosta - Quantitative Developer',
       images: [
         {
           url: imageUrl,
@@ -52,7 +52,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const articleData = await getArticleData(slug);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#050B14]">
       <Header />
       
       {/* 2026 Hero Section */}
@@ -99,7 +99,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   <div className="relative flex items-center space-x-2">
                     <div className="w-2 h-2 bg-[#00BFA5] rounded-full animate-pulse"></div>
                     <span className="text-sm font-semibold text-[#00BFA5] tracking-wide">
-                      {articleData.category || 'Data Engineering'}
+                      {articleData.category || 'Quantitative Development'}
                     </span>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </div>
                 <div>
                   <span className="font-semibold text-white text-sm">{articleData.author}</span>
-                  <div className="text-xs text-gray-400">Data Engineer</div>
+                  <div className="text-xs text-gray-400">Quantitative Developer</div>
                 </div>
               </div>
               
@@ -201,27 +201,27 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 <div 
                   className="prose prose-xl max-w-none
                     prose-headings:font-bold prose-headings:tracking-tight
-                    prose-h1:text-5xl prose-h1:text-gray-900 prose-h1:mb-12 prose-h1:mt-0 prose-h1:leading-tight
-                    prose-h2:text-4xl prose-h2:text-[#005A9C] prose-h2:mt-20 prose-h2:mb-12 prose-h2:pb-6 prose-h2:border-b prose-h2:border-gray-200 prose-h2:leading-tight
-                    prose-h3:text-3xl prose-h3:text-[#00BFA5] prose-h3:mt-16 prose-h3:mb-8 prose-h3:font-semibold prose-h3:leading-tight
-                    prose-h4:text-2xl prose-h4:text-gray-800 prose-h4:mt-12 prose-h4:mb-6 prose-h4:font-medium
-                    prose-p:text-gray-700 prose-p:text-xl prose-p:leading-9 prose-p:mb-10 prose-p:font-normal
-                    prose-a:text-[#005A9C] prose-a:font-medium prose-a:no-underline hover:prose-a:text-[#00BFA5] hover:prose-a:underline prose-a:transition-colors
-                    prose-strong:text-gray-900 prose-strong:font-semibold
-                    prose-em:text-gray-600 prose-em:italic
-                    prose-code:bg-blue-50 prose-code:text-[#005A9C] prose-code:px-4 prose-code:py-2 prose-code:rounded-lg prose-code:font-mono prose-code:text-base prose-code:font-medium
-                    prose-pre:bg-gradient-to-br prose-pre:from-gray-900 prose-pre:to-gray-800 prose-pre:text-gray-100 prose-pre:rounded-2xl prose-pre:p-10 prose-pre:shadow-2xl prose-pre:border prose-pre:border-gray-700 prose-pre:overflow-x-auto prose-pre:my-12
-                    prose-pre:code:bg-transparent prose-pre:code:text-gray-100 prose-pre:code:p-0 prose-pre:code:text-base prose-pre:code:leading-7
-                    prose-blockquote:border-l-4 prose-blockquote:border-[#00BFA5] prose-blockquote:bg-gradient-to-r prose-blockquote:from-blue-50 prose-blockquote:to-teal-50 prose-blockquote:p-10 prose-blockquote:rounded-r-2xl prose-blockquote:shadow-lg prose-blockquote:my-12
-                    prose-blockquote:text-gray-700 prose-blockquote:italic prose-blockquote:text-xl prose-blockquote:leading-8
-                    prose-ul:space-y-4 prose-ul:my-12 prose-li:text-gray-700 prose-li:text-xl prose-li:leading-8 prose-li:pl-2
+                    prose-h1:text-5xl prose-h1:text-white prose-h1:mb-12 prose-h1:mt-0 prose-h1:leading-tight
+                    prose-h2:text-4xl prose-h2:text-[#42A5F5] prose-h2:mt-20 prose-h2:mb-12 prose-h2:pb-6 prose-h2:border-b prose-h2:border-[#1E2D45] prose-h2:leading-tight
+                    prose-h3:text-3xl prose-h3:text-[#00E5A0] prose-h3:mt-16 prose-h3:mb-8 prose-h3:font-semibold prose-h3:leading-tight
+                    prose-h4:text-2xl prose-h4:text-gray-200 prose-h4:mt-12 prose-h4:mb-6 prose-h4:font-medium
+                    prose-p:text-gray-300 prose-p:text-xl prose-p:leading-9 prose-p:mb-10 prose-p:font-normal
+                    prose-a:text-[#42A5F5] prose-a:font-medium prose-a:no-underline hover:prose-a:text-[#00E5A0] hover:prose-a:underline prose-a:transition-colors
+                    prose-strong:text-white prose-strong:font-semibold
+                    prose-em:text-gray-400 prose-em:italic
+                    prose-code:bg-[#0A1526] prose-code:text-[#00E5A0] prose-code:px-4 prose-code:py-2 prose-code:rounded-lg prose-code:font-mono prose-code:text-base prose-code:font-medium
+                    prose-pre:bg-gradient-to-br prose-pre:from-[#0A1526] prose-pre:to-[#071020] prose-pre:text-gray-200 prose-pre:rounded-2xl prose-pre:p-10 prose-pre:shadow-2xl prose-pre:border prose-pre:border-[#1E2D45] prose-pre:overflow-x-auto prose-pre:my-12
+                    prose-pre:code:bg-transparent prose-pre:code:text-gray-200 prose-pre:code:p-0 prose-pre:code:text-base prose-pre:code:leading-7
+                    prose-blockquote:border-l-4 prose-blockquote:border-[#00E5A0] prose-blockquote:bg-gradient-to-r prose-blockquote:from-[#00E5A0]/10 prose-blockquote:to-[#42A5F5]/10 prose-blockquote:p-10 prose-blockquote:rounded-r-2xl prose-blockquote:shadow-lg prose-blockquote:my-12
+                    prose-blockquote:text-gray-300 prose-blockquote:italic prose-blockquote:text-xl prose-blockquote:leading-8
+                    prose-ul:space-y-4 prose-ul:my-12 prose-li:text-gray-300 prose-li:text-xl prose-li:leading-8 prose-li:pl-2
                     prose-ol:space-y-4 prose-ol:my-12
-                    prose-li:marker:text-[#00BFA5] prose-li:marker:font-bold
-                    prose-img:rounded-2xl prose-img:shadow-2xl prose-img:my-16 prose-img:border prose-img:border-gray-200
-                    prose-hr:border-gray-300 prose-hr:my-20
+                    prose-li:marker:text-[#00E5A0] prose-li:marker:font-bold
+                    prose-img:rounded-2xl prose-img:shadow-2xl prose-img:my-16 prose-img:border prose-img:border-[#1E2D45]
+                    prose-hr:border-[#1E2D45] prose-hr:my-20
                     prose-table:shadow-lg prose-table:rounded-xl prose-table:overflow-hidden prose-table:my-12
-                    prose-thead:bg-gray-50 prose-th:text-gray-900 prose-th:font-semibold prose-th:p-6 prose-th:text-lg
-                    prose-td:p-6 prose-td:border-gray-200 prose-td:text-lg
+                    prose-thead:bg-[#0A1526] prose-th:text-white prose-th:font-semibold prose-th:p-6 prose-th:text-lg
+                    prose-td:p-6 prose-td:border-[#1E2D45] prose-td:text-lg
                     [&>*:first-child]:mt-0 [&>*:last-child]:mb-0"
                   dangerouslySetInnerHTML={{ __html: articleData.contentHtml as string }} 
                 />
@@ -232,22 +232,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <div className="lg:col-span-1">
                 <div className="sticky top-8 space-y-8">
                   {/* Author Card */}
-                  <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg">
+                  <div className="bg-gradient-to-br from-[#0D1B30] to-[#0A1526] p-6 rounded-xl shadow-lg border border-[#1E2D45]">
                     <div className="text-center">
                       <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#00BFA5] shadow-lg">
                         <Image
                           src="/images/profile-jose.png"
-                          alt="Jose Acosta - Data Engineer"
+                          alt="Jose Acosta - Quantitative Developer"
                           width={80}
                           height={80}
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <h3 className="font-bold text-gray-900 mb-2">{articleData.author}</h3>
-                      <p className="text-sm text-gray-600 mb-4">Data Engineer & Algorithmic Trading Specialist</p>
+                      <h3 className="font-bold text-white mb-2">{articleData.author}</h3>
+                      <p className="text-sm text-gray-400 mb-4">Quantitative Developer | From Research to Execution</p>
                       <Link 
                         href="/about"
-                        className="inline-flex items-center text-[#005A9C] hover:text-[#00BFA5] font-medium text-sm transition-colors"
+                        className="inline-flex items-center text-[#42A5F5] hover:text-[#00E5A0] font-medium text-sm transition-colors"
                       >
                         Learn More
                         <i className="fas fa-arrow-right ml-2"></i>
@@ -256,9 +256,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   </div>
 
                   {/* Share This Article */}
-                  <div className="bg-gradient-to-br from-[#00BFA5]/10 to-[#42A5F5]/10 p-6 rounded-xl border border-[#00BFA5]/20">
-                    <h3 className="font-bold text-gray-900 mb-4 flex items-center">
-                      <i className="fas fa-share-alt text-[#00BFA5] mr-2"></i>
+                  <div className="bg-gradient-to-br from-[#00E5A0]/10 to-[#42A5F5]/10 p-6 rounded-xl border border-[#00E5A0]/20">
+                    <h3 className="font-bold text-white mb-4 flex items-center">
+                      <i className="fas fa-share-alt text-[#00E5A0] mr-2"></i>
                       Share Article
                     </h3>
                     <SocialShareButtons
@@ -269,8 +269,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   </div>
 
                   {/* Social Links */}
-                  <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                    <h3 className="font-bold text-gray-900 mb-4">Connect with Me</h3>
+                  <div className="bg-[#0D1B30] p-6 rounded-xl shadow-lg border border-[#1E2D45]">
+                    <h3 className="font-bold text-white mb-4">Connect with Me</h3>
                     <div className="flex space-x-3">
                       <a 
                         href="https://www.linkedin.com/in/datawithjose" 
@@ -303,12 +303,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   </div>
 
                   {/* Back to Blog */}
-                  <div className="bg-gradient-to-br from-[#005A9C] to-[#00BFA5] p-6 rounded-xl text-white text-center">
+                  <div className="bg-gradient-to-br from-[#42A5F5] to-[#00E5A0] p-6 rounded-xl text-[#050B14] text-center">
                     <h3 className="font-bold mb-2">More Articles</h3>
-                    <p className="text-sm opacity-90 mb-4">Explore more insights on data engineering and trading</p>
+                    <p className="text-sm opacity-90 mb-4">Explore more insights on algorithmic trading and validation</p>
                     <Link 
                       href="/blog"
-                      className="inline-flex items-center bg-white text-[#005A9C] px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+                      className="inline-flex items-center bg-[#050B14]/20 text-[#050B14] px-4 py-2 rounded-lg font-bold hover:bg-[#050B14]/30 transition-colors"
                     >
                       <i className="fas fa-arrow-left mr-2"></i>
                       All Articles
@@ -322,15 +322,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       </article>
 
       {/* Related Articles CTA */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="py-16 bg-[#0A1526]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Continue Reading</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Discover more insights on data engineering, algorithmic trading, and high-performance systems
+          <h2 className="text-3xl font-bold text-white mb-4">Continue Reading</h2>
+          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+            Discover more insights on algorithmic trading, validation, and building robust execution systems
           </p>
           <Link 
             href="/blog"
-            className="bg-[#005A9C] hover:bg-[#003D7A] text-white px-8 py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl text-lg font-semibold inline-flex items-center"
+            className="bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] hover:from-[#00FFB3] hover:to-[#5AB3F5] text-[#050B14] px-8 py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl text-lg font-bold inline-flex items-center"
           >
             <i className="fas fa-book-open mr-3"></i>
             Explore All Articles

@@ -160,7 +160,7 @@ export default function BlogPostTemplate({
                 Jose Acosta
               </h4>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Data Engineer con experiencia en sistemas de trading y pipelines de datos de alta disponibilidad. 
+                Quantitative Developer con 8 años de experiencia en mercados, construyendo sistemas de trading algorítmico — desde research hasta ejecución. 
                 Especializado en arquitecturas escalables y optimización de performance.
               </p>
               <div className="flex gap-4 mt-3">

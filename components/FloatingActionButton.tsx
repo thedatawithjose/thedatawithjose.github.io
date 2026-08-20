@@ -36,7 +36,7 @@ export default function FloatingActionButton({ className = '' }: FloatingActionB
     {
       icon: 'fas fa-comments',
       label: 'Let\'s Talk',
-      href: 'mailto:datawithjose@outlook.com?subject=Data Engineering Project&body=Hi Jose, I\'d like to discuss...',
+      href: 'mailto:datawithjose@outlook.com?subject=Quantitative Development Project&body=Hi Jose, I\'d like to discuss...',
       color: 'bg-[#42A5F5] hover:bg-[#2196F3]'
     },
     {

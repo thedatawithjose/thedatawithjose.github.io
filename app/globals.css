@@ -1,22 +1,28 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Dark Terminal / Trading Design System
+   Quantitative Developer — From Research to Execution
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050B14;
+  --foreground: #E6EDF3;
+  --surface: #0A1526;
+  --surface-2: #0D1B30;
+  --border-subtle: rgba(148, 163, 184, 0.14);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: #0A1526;
+  --color-surface-2: #0D1B30;
+  --color-terminal: #00E5A0;
+  --color-terminal-bright: #00FFB3;
+  --color-amber: #F5B544;
+  --color-quant-blue: #42A5F5;
   --font-sans: var(--font-inter);
   --font-mono: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -39,34 +45,34 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00BFA5, #42A5F5);
+  background: linear-gradient(180deg, #00E5A0, #42A5F5);
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #00d4b8, #5bb3f7);
-  box-shadow: 0 0 8px rgba(0, 191, 165, 0.4);
+  background: linear-gradient(180deg, #00FFB3, #5bb3f7);
+  box-shadow: 0 0 8px rgba(0, 229, 160, 0.4);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(180deg, #00a88e, #3a95e3);
+  background: linear-gradient(180deg, #00c98c, #3a95e3);
 }
 
 /* Firefox Scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #00BFA5 transparent;
+  scrollbar-color: #00E5A0 transparent;
 }
 
 /* Scrollbar for dark backgrounds */
 .dark-scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00BFA5, #42A5F5);
+  background: linear-gradient(180deg, #00E5A0, #42A5F5);
 }
 
 .dark-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #00d4b8, #5bb3f7);
-  box-shadow: 0 0 8px rgba(0, 191, 165, 0.5);
+  background: linear-gradient(180deg, #00FFB3, #5bb3f7);
+  box-shadow: 0 0 8px rgba(0, 229, 160, 0.5);
 }
 
 /* Performance optimizations */
@@ -683,4 +689,48 @@ Enhanced Button Effects for Send Message */
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
   animation: mega-shine 2s ease-in-out infinite;
+}
+/* ============================================================
+   Terminal / Trading Utilities
+   ============================================================ */
+
+/* Terminal badge — mono, uppercase, green dot marker */
+.terminal-badge {
+  font-family: var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Neon terminal glow for metrics */
+.text-glow-terminal {
+  text-shadow: 0 0 12px rgba(0, 229, 160, 0.45);
+}
+
+/* Terminal card: subtle grid + border */
+.terminal-card {
+  background: rgba(10, 21, 38, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Blinking cursor effect for hero tagline */
+@keyframes terminal-cursor {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.terminal-cursor::after {
+  content: '▌';
+  color: #00E5A0;
+  animation: terminal-cursor 1.1s steps(1) infinite;
+  margin-left: 2px;
+}
+
+/* Subtle background grid for dark sections */
+.bg-quant-grid {
+  background-image:
+    linear-gradient(rgba(0, 229, 160, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 160, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
 }

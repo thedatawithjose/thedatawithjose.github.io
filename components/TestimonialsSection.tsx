@@ -54,18 +54,18 @@ export default function TestimonialsSection() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   return (
-    <section className="testimonials py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-white">
+    <section className="testimonials py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#0A1526] to-[#050B14]">
       <div className="container mx-auto px-4">
         <m.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#0097A7]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#00E5A0]">
             What Clients Really Say
           </h2>
-          <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto">
-            Real feedback from engineers, CTOs, and data teams who've worked with me
+          <p className="text-lg md:text-xl font-semibold text-gray-400 max-w-3xl mx-auto">
+            Real feedback from funds, founders, and quant teams who've worked with me
           </p>
         </m.div>
 
@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
         <div className="max-w-4xl mx-auto mb-20">
           <m.div
             key={activeTestimonial}
-            className="bg-white rounded-2xl shadow-xl p-8 md:p-12"
+            className="bg-[#0D1B30] border border-[#1E2D45] rounded-2xl shadow-xl p-8 md:p-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -86,12 +86,12 @@ export default function TestimonialsSection() {
                     <i key={i} className="fas fa-star text-yellow-400 text-xl mr-1"></i>
                   ))}
                 </div>
-                <blockquote className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6 italic">
+                <blockquote className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-6 italic">
                   "{testimonials[activeTestimonial].content}"
                 </blockquote>
-                <div className="bg-[#00BFA5]/10 rounded-lg p-4 mb-6">
-                  <div className="text-sm font-semibold text-[#005A9C] mb-1">Project Results:</div>
-                  <div className="text-[#00BFA5] font-bold">{testimonials[activeTestimonial].results}</div>
+                <div className="bg-[#00E5A0]/10 rounded-lg p-4 mb-6">
+                  <div className="text-sm font-semibold text-[#42A5F5] mb-1">Project Results:</div>
+                  <div className="text-[#00E5A0] font-bold">{testimonials[activeTestimonial].results}</div>
                 </div>
               </div>
               
@@ -105,16 +105,16 @@ export default function TestimonialsSection() {
                     e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonials[activeTestimonial].name)}&background=005A9C&color=fff&size=80`;
                   }}
                 />
-                <h4 className="text-xl font-bold text-gray-900 mb-1">
+                <h4 className="text-xl font-bold text-white mb-1">
                   {testimonials[activeTestimonial].name}
                 </h4>
-                <p className="text-[#005A9C] font-semibold mb-1">
+                <p className="text-[#42A5F5] font-semibold mb-1">
                   {testimonials[activeTestimonial].position}
                 </p>
-                <p className="text-gray-600 mb-3">
+                <p className="text-gray-400 mb-3">
                   {testimonials[activeTestimonial].company}
                 </p>
-                <div className="inline-block bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-600">
+                <div className="inline-block bg-white/5 px-3 py-1 rounded-full text-sm text-gray-400">
                   {testimonials[activeTestimonial].project}
                 </div>
               </div>
@@ -131,8 +131,8 @@ export default function TestimonialsSection() {
               onClick={() => setActiveTestimonial(index)}
               className={`w-4 h-4 rounded-full transition-all duration-300 ${
                 index === activeTestimonial 
-                  ? 'bg-[#00BFA5] w-8' 
-                  : 'bg-gray-300 hover:bg-gray-400'
+                  ? 'bg-[#00E5A0] w-8' 
+                  : 'bg-[#1E2D45] hover:bg-[#2A3D5C]'
               }`}
               aria-label={`View testimonial ${index + 1}`}
             />
@@ -144,9 +144,9 @@ export default function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <m.div
               key={testimonial.id}
-              className={`bg-white rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 ${
+              className={`bg-[#0D1B30] border border-[#1E2D45] rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 ${
                 index === activeTestimonial 
-                  ? 'ring-2 ring-[#00BFA5] shadow-xl scale-105' 
+                  ? 'ring-2 ring-[#00E5A0] shadow-xl scale-105' 
                   : 'hover:shadow-xl hover:scale-102'
               }`}
               onClick={() => setActiveTestimonial(index)}
@@ -162,11 +162,11 @@ export default function TestimonialsSection() {
                   className="w-12 h-12 rounded-full"
                 />
                 <div>
-                  <h5 className="font-semibold text-gray-900 text-sm">{testimonial.name}</h5>
-                  <p className="text-xs text-gray-600">{testimonial.company}</p>
+                  <h5 className="font-semibold text-white text-sm">{testimonial.name}</h5>
+                  <p className="text-xs text-gray-400">{testimonial.company}</p>
                 </div>
               </div>
-              <p className="text-sm text-gray-700 line-clamp-3">
+              <p className="text-sm text-gray-400 line-clamp-3">
                 "{testimonial.content}"
               </p>
               <div className="flex items-center mt-3">
@@ -180,14 +180,14 @@ export default function TestimonialsSection() {
 
         {/* Stats Section */}
         <m.div
-          className="mt-20 bg-gradient-to-r from-[#005A9C] to-[#00BFA5] rounded-2xl p-8 text-white"
+          className="mt-20 bg-gradient-to-r from-[#42A5F5] to-[#00E5A0] rounded-2xl p-8 text-[#050B14]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold mb-2">15+</div>
-              <div className="text-lg opacity-90">Data Projects Completed</div>
+              <div className="text-lg opacity-90">Systems Delivered</div>
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">8</div>
@@ -195,7 +195,7 @@ export default function TestimonialsSection() {
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">2TB+</div>
-              <div className="text-lg opacity-90">Daily Data Processed</div>
+              <div className="text-lg opacity-90">Market Data Processed</div>
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">2+ Years</div>
@@ -211,22 +211,22 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#0097A7]">
-            Ready to Solve Your Data Challenges?
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#00E5A0]">
+            Ready to Build Your Trading System?
           </h3>
-          <p className="text-lg md:text-xl font-semibold text-gray-700 mb-6">
-            Let's discuss your specific needs and build something that actually works
+          <p className="text-lg md:text-xl font-semibold text-gray-400 mb-6">
+            Let's discuss your strategy and build something that survives real money
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contact" 
-              className="bg-[#005A9C] hover:bg-[#003D7A] text-white px-8 py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl text-lg font-semibold"
+              className="bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] hover:from-[#00FFB3] hover:to-[#5AB3F5] text-[#050B14] px-8 py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl text-lg font-bold"
             >
-              Let's Talk Technical Details
+              Let's Talk Systems
             </a>
             <a 
               href="/portfolio" 
-              className="border-2 border-[#005A9C] text-[#005A9C] hover:bg-[#005A9C] hover:text-white px-8 py-4 rounded-lg transition-all shadow-lg text-lg font-semibold"
+              className="border-2 border-[#00E5A0] text-[#00E5A0] hover:bg-[#00E5A0] hover:text-[#050B14] px-8 py-4 rounded-lg transition-all shadow-lg text-lg font-semibold"
             >
               See More Projects
             </a>

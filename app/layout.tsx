@@ -26,21 +26,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = generateMetadata({
-  title: "Jose Acosta - Data Engineer & Trading Algorithm Specialist",
-  description: "Data Engineer specializing in real-time data pipelines, algorithmic trading systems, and scalable analytics solutions. Expert in Python, SQL, AWS, Kafka, and financial data processing.",
+  title: "Jose Acosta - Quantitative Developer | From Research to Execution",
+  description: "Quantitative Developer building robust algorithmic trading systems — from research to execution. Backtesting infrastructure, live trading systems, and risk management backed by real-market experience. Python, time-series models, and low-latency pipelines.",
   keywords: [
-    "Data Engineer",
-    "Algorithmic Trading",
-    "Real-time Data Processing",
-    "Python Developer",
-    "AWS Data Engineer",
-    "Apache Kafka",
-    "Financial Data Systems",
-    "ETL Pipelines",
+    "Quantitative Developer",
+    "Algorithmic Trading Systems",
+    "Quant Developer",
+    "Backtesting Infrastructure",
+    "Live Trading Systems",
+    "Trading Risk Management",
+    "Python Quantitative Finance",
+    "Time-Series Analysis",
+    "Market Data Pipelines",
+    "Systematic Trading",
     "Trading Algorithms",
-    "Data Analytics Consultant",
-    "Freelance Data Engineer",
-    "Business Intelligence"
+    "Quantitative Research"
   ],
   ogType: "profile",
   canonical: "https://datawithjose.tech"
@@ -49,7 +49,7 @@ export const metadata: Metadata = generateMetadata({
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#ffffff',
+  themeColor: '#050B14',
 };
 
 export default function RootLayout({

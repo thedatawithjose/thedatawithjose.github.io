@@ -2,18 +2,18 @@ import { Metadata } from 'next';
 import { generateMetadata } from '../../lib/seo';
 
 export const metadata: Metadata = generateMetadata({
-  title: "About Jose Acosta - Data Engineer",
-  description: "Learn about Jose Acosta, a skilled Data Engineer with expertise in Python, SQL, AWS, and real-time data processing. Discover my experience building scalable data pipelines and trading algorithms.",
+  title: "About Jose Acosta - Quantitative Developer",
+  description: "Learn about Jose Acosta, a Quantitative Developer with 8 years of active market experience building algorithmic trading systems — from research to execution. Systematic strategy development, backtesting workflows, and automated execution across futures, FX, crypto, and equities.",
   keywords: [
     "Jose Acosta",
-    "Data Engineer Experience", 
-    "Python Developer",
-    "SQL Database Expert",
-    "AWS Cloud Engineer",
-    "Data Pipeline Developer",
-    "Trading Algorithm Developer",
-    "ETL Developer",
-    "About Data Engineer"
+    "Quantitative Developer Experience",
+    "Algorithmic Trading Systems",
+    "Backtesting & Validation",
+    "Systematic Strategy Development",
+    "Automated Execution Systems",
+    "Trading Risk Management",
+    "Python Quant Developer",
+    "About Quantitative Developer"
   ],
   canonical: "/about"
 });

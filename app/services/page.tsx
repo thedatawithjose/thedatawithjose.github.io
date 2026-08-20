@@ -52,207 +52,213 @@ export default function Services() {
 
   const services = [
     {
-      id: 'data-engineering',
-      icon: 'fas fa-cogs',
-      title: 'Data Engineering & Pipelines',
-      subtitle: 'Scalable data infrastructure and ETL/ELT solutions',
-      description: 'Robust, production-grade data pipelines designed for scale. From ingestion through transformation to loading, automated workflows maintain consistent data quality and high availability.',
-      technologies: ['Python', 'SQL', 'Apache Kafka', 'Apache Spark', 'AWS', 'Docker'],
+      id: 'strategy-development',
+      icon: 'fas fa-lightbulb',
+      title: 'Systematic Strategy Development',
+      subtitle: 'From trading idea to explicit, testable rules',
+      description: 'Turning discretionary trading logic and research hypotheses into explicit, testable rules and automated strategies. Every idea gets formalized so it can be validated — not just discussed.',
+      technologies: ['Python', 'Pandas', 'NumPy', 'Pine Script', 'NinjaScript'],
       benefits: [
-        'Real-time data processing with low-latency architecture',
-        'Automated data quality monitoring with intelligent alerts',
-        'Cloud-agnostic architecture supporting AWS, GCP, and Azure', 
-        'Fault-tolerant design with automatic failover and recovery',
-        'Cost optimization strategies through partitioning and compute right-sizing'
+        'Ideas translated into explicit, testable rule sets',
+        'Parameter spaces defined for systematic exploration',
+        'Strategy documentation for reproducibility',
+        'Hypothesis-first framing to avoid curve-fitting',
+        'Cross-market applicability: futures, FX, crypto, equities'
       ],
       metrics: {
-        performance: 'Optimized processing',
-        reliability: 'High-availability',
-        cost: 'Cost-optimized'
+        validation: 'Out-of-sample tested',
+        robustness: 'Walk-forward validated',
+        clarity: 'Explicit rules'
       }
     },
     {
-      id: 'ml-production',
-      icon: 'fas fa-robot',
-      title: 'ML in Production',
-      subtitle: 'Production-ready machine learning systems',
-      description: 'Production-ready MLOps pipelines for deploying and maintaining machine learning models. Automated monitoring, versioning, and retraining workflows maintain consistent model performance.',
-      technologies: ['Python', 'TensorFlow', 'PyTorch', 'MLflow', 'Kubernetes', 'Docker'],
+      id: 'research-backtesting',
+      icon: 'fas fa-flask',
+      title: 'Quantitative Research & Backtesting',
+      subtitle: 'Honest evaluation before real capital',
+      description: 'Research workflows that evaluate strategy behavior under realistic market and execution assumptions — testing strategies against data they were not developed on.',
+      technologies: ['Python', 'Backtrader', 'Statsmodels', 'TimescaleDB', 'Docker'],
       benefits: [
-        'Automated model training, validation, and deployment pipelines',
-        'Continuous performance monitoring with drift detection',
-        'A/B testing frameworks for data-driven model comparison',
-        'Scalable feature engineering and preprocessing pipelines',
-        'Complete model versioning with one-click rollback capabilities'
+        'Out-of-sample and walk-forward validation',
+        'Sensitivity analysis under changing assumptions',
+        'Realistic transaction costs and slippage modeling',
+        'Execution constraints included from day one',
+        'Reproducible research environment for your team'
       ],
       metrics: {
-        deployment: 'Rapid deployment',
-        monitoring: 'Real-time performance tracking',
-        reliability: 'Production-ready'
+        validation: 'Walk-forward',
+        testing: 'Out-of-sample',
+        realism: 'Costs modeled'
       }
     },
     {
-      id: 'analytics-bi',
-      icon: 'fas fa-chart-bar',
-      title: 'Analytics & BI',
-      subtitle: 'Advanced analytics and business intelligence solutions',
-      description: 'Transform raw data into strategic insights through predictive analytics, machine learning models, and interactive dashboards. Enable data-driven decision-making across your organization.',
-      technologies: ['Python', 'R', 'Power BI', 'Tableau', 'TensorFlow', 'PostgreSQL'],
+      id: 'automated-execution',
+      icon: 'fas fa-bolt',
+      title: 'Automated Execution Systems',
+      subtitle: 'From validated logic to reliable live execution',
+      description: 'Trading systems designed to translate validated strategy logic into reliable live execution — resilient, low-latency, and engineered to prevent silent failures.',
+      technologies: ['Python', 'WebSockets', 'REST APIs', 'Redis', 'Docker'],
       benefits: [
-        'Predictive models achieving 75%+ accuracy on business metrics',
-        'Interactive dashboards with real-time data synchronization',
-        'Automated reporting systems with intelligent threshold alerts',
-        'Advanced customer segmentation and behavior analysis',
-        'Comprehensive ROI tracking with attribution modeling'
+        'Robust error handling and payload validation layers',
+        'Real-time alerting to prevent silent failures',
+        'Containerized, high-availability deployments',
+        'Broker API integration (e.g., Binance, Tradovate)',
+        'Observability and operational best practices'
       ],
       metrics: {
-        accuracy: '75%+ prediction accuracy',
-        insights: '15+ KPIs tracked',
-        automation: '80% reporting automated'
-      }
-    },
-    {
-      id: 'cloud-architecture',
-      icon: 'fas fa-cloud',
-      title: 'Cloud Data Architecture',
-      subtitle: 'Scalable cloud infrastructure and optimization',
-      description: 'Cloud-native data architectures designed for automatic scaling and cost efficiency. Carefully planned migration from on-premise to cloud minimizing downtime and business disruption.',
-      technologies: ['AWS', 'Google Cloud', 'Azure', 'Terraform', 'Kubernetes', 'Docker'],
-      benefits: [
-        'Auto-scaling infrastructure adapting to demand fluctuations',
-        'Multi-region deployment for high availability',
-        'Infrastructure as Code enabling consistent, auditable deployments',
-        'Comprehensive observability with monitoring and alerting',
-        'FinOps strategies reducing cloud expenditure by 25%+'
-      ],
-      metrics: {
-        scalability: 'Auto-scaling architecture',
         availability: 'High-availability',
-        savings: 'Cost-optimized'
+        latency: 'Low-latency',
+        monitoring: '24/7 alerting'
+      }
+    },
+    {
+      id: 'risk-management',
+      icon: 'fas fa-shield-alt',
+      title: 'Risk & Capital Protection',
+      subtitle: 'Risk controls built in, not bolted on',
+      description: 'Position sizing, drawdown controls, execution safeguards, and failure conditions integrated directly into the system — because robustness is engineering, not a feature.',
+      technologies: ['Python', 'NumPy', 'Pandas', 'PostgreSQL', 'TimescaleDB'],
+      benefits: [
+        'Dynamic position sizing (e.g., signal-strength, Kelly-based)',
+        'Drawdown limits and stop-loss automation',
+        'Execution safeguards and kill-switch conditions',
+        'Real-time risk dashboards and alerts',
+        'Failure conditions defined and tested before go-live'
+      ],
+      metrics: {
+        protection: 'Capital-first',
+        controls: 'Built-in safeguards',
+        monitoring: 'Real-time risk'
       }
     }
   ];
 
   const packages: PackagesCollection = {
     strategy: {
-      name: 'Data Strategy Assessment',
-      price: '$1,000',
-      duration: '1-2 weeks',
-      description: 'Ideal for businesses with data assets but lacking a clear strategic direction or cohesive data architecture.',
-      subtitle: 'Strategy & Planning',
+      name: 'Strategy Research Sprint',
+      price: 'Custom Quote',
+      duration: '2-3 weeks',
+      description: 'For traders with an idea that needs rigorous validation before anything gets built. Turns your hypothesis into an honest verdict: worth building, or not.',
+      subtitle: 'Validate Before You Build',
       features: [
-        'In-depth discovery sessions analyzing business objectives and existing technical infrastructure',
-        'Professional data quality audit identifying integrity issues and optimization opportunities',
-        'Comprehensive architecture roadmap delivered as detailed PDF blueprint',
-        'Phased implementation plan (3-5 phases) prioritized by business impact',
-        'Detailed cost estimates and timeline projections for implementation'
+        'Discovery sessions to formalize your trading logic into explicit rules',
+        'Research pipeline with clean, validated market data',
+        'Backtesting with realistic costs, slippage, and execution constraints',
+        'Out-of-sample and walk-forward validation report',
+        'Sensitivity analysis: how performance changes when assumptions do',
+        'Written verdict with next-step recommendations'
       ],
-      note: 'Strategic planning phase. Implementation services available separately.',
+      note: 'The cheapest insurance you can buy: a rigorous no before you commit capital to a build.',
       popular: false,
       guarantees: [
-        '100% Money-Back if Not Satisfied',
-        'Delivered Within Timeline or Free Revisions',
-        'No Hidden Fees - Fixed Price'
+        'Honest results - even when they say "don't build it"',
+        'Clear documentation of every assumption',
+        'Fixed scope, agreed before we start'
       ],
       paymentOptions: [
-        'Pay in Full: Save 5% ($950)',
-        '50% Upfront / 50% on Delivery'
+        'Milestone-based billing',
+        'Weekly progress demos',
+        'IP transfer on completion'
       ],
       notIncluded: [
-        'Implementation or development work',
-        'Cloud infrastructure costs',
-        'Ongoing support beyond delivery'
+        'Broker or exchange fees',
+        'Market data feed subscriptions',
+        'Live deployment (separate engagement)'
       ]
     },
     implementation: {
-      name: 'MVP Data Pipeline',
-      price: '$2,800',
-      duration: '3-4 weeks',
-      description: 'For businesses with defined requirements ready to build their first production-grade, automated data infrastructure.',
+      name: 'Backtest-to-Execution Build',
+      price: 'Custom Quote',
+      duration: '4-6 weeks',
+      description: 'For teams with a validated strategy ready to become a system. The full pipeline from research and backtesting through automated execution.',
       subtitle: 'Build & Deploy',
       features: [
-        'Integration of 2-3 primary data sources with automated sync',
-        'Professional cloud data warehouse configuration (BigQuery/Snowflake)',
-        'Production-ready ETL/ELT pipeline using industry-standard tools (dbt, Airflow)',
-        'Custom business intelligence dashboard tracking your top 5 critical KPIs',
-        'Complete technical documentation and 2 weeks post-launch support'
+        'Production backtesting infrastructure for your strategy',
+        'Automated execution system with broker API integration',
+        'Error handling, payload validation, and real-time alerting',
+        'Risk controls: position sizing, drawdown limits, safeguards',
+        'Containerized deployment for high availability',
+        'Complete documentation and 2 weeks post-launch support'
       ],
-      note: 'Most popular option. Delivers a centralized, production-ready data platform. Strategy phase sold separately.',
+      note: 'Most popular option. Takes a validated strategy and engineers it into a system that survives live markets.',
       popular: true,
       guarantees: [
         '30-Day Bug-Fix Guarantee',
-        'Code Quality Assurance',
-        'No Hidden Fees - Fixed Price'
+        'Code quality assurance',
+        'Fixed scope - no surprises'
       ],
       paymentOptions: [
-        'Pay in Full: Save 5% ($2,660)',
-        '50% Upfront / 50% on Delivery'
+        'Milestone-based billing',
+        'Weekly progress demos',
+        'IP transfer on completion'
       ],
       notIncluded: [
-        'Cloud infrastructure costs (AWS/GCP/Azure)',
-        'Third-party software licenses',
-        'Ongoing maintenance beyond 2 weeks'
+        'Broker or exchange fees',
+        'Market data feed subscriptions',
+        'Ongoing maintenance beyond support window'
       ],
       addOns: [
-        { name: 'Additional Data Source', price: '$500', description: 'Integrate one more data source beyond the included 2-3' },
-        { name: 'Extra Dashboard', price: '$800', description: 'Additional custom dashboard with 5+ KPIs' },
-        { name: 'Documentation Workshop', price: '$400', description: '2-hour hands-on session explaining the system' }
+        { name: 'Additional Asset Class', price: 'Quote', description: 'Extend the system to trade another market' },
+        { name: 'Monitoring Dashboards', price: 'Quote', description: 'Real-time performance and risk dashboards' },
+        { name: 'Knowledge Transfer', price: 'Quote', description: '2-hour hands-on session explaining the system' }
       ]
     },
     complete: {
-      name: 'Complete Data Solution',
-      price: '$4,500',
-      duration: '6-8 weeks',
-      description: 'Comprehensive end-to-end solution covering strategy, implementation, and ongoing optimization with dedicated support.',
-      subtitle: 'All-Inclusive Package',
+      name: 'Complete Trading System',
+      price: 'Custom Quote',
+      duration: '8-12 weeks',
+      description: 'End-to-end engagement: research, validation, execution, and risk — the entire journey from trading idea to live system.',
+      subtitle: 'Research → Execution',
       features: [
-        'Complete strategy & architecture assessment (valued at $1,000)',
-        'Full MVP pipeline implementation (valued at $2,800)',
-        'Advanced data quality monitoring with automated alerts',
-        'Performance tuning and cloud cost optimization',
-        '3 weeks of post-launch support & proactive maintenance',
+        'Systematic strategy development from your trading logic',
+        'Research & backtesting workflow with walk-forward validation',
+        'Automated execution system with broker integration',
+        'Integrated risk management and capital protection controls',
+        'Monitoring, alerting, and observability from day one',
+        '3 weeks of post-launch support and tuning',
         'Hands-on walkthrough session (1.5 hours)',
-        'Email/Slack support with 24-hour response time (business hours)'
+        'Email/Slack support with 24-hour response time'
       ],
-      note: 'Comprehensive package. Complete solution from strategic planning through production deployment. Individual components valued at $5,100 - save $600.',
+      note: 'Comprehensive engagement. From hypothesis to live trading with risk controls — the complete research-to-execution lifecycle.',
       popular: false,
       savings: 'Best Value',
       guarantees: [
         '3-Week Bug-Fix Guarantee',
         'Priority Support Included',
-        'No Hidden Fees - Fixed Price'
+        'Fixed scope - no surprises'
       ],
       paymentOptions: [
-        'Pay in Full: Save 5% ($4,275)',
-        '50% Upfront / 50% on Delivery'
+        'Milestone-based billing',
+        'Weekly progress demos',
+        'IP transfer on completion'
       ],
       notIncluded: [
-        'Cloud infrastructure costs (AWS/GCP/Azure)',
-        'Third-party software licenses',
-        'Ongoing maintenance beyond 30 days'
+        'Broker or exchange fees',
+        'Market data feed subscriptions',
+        'Ongoing maintenance beyond support window'
       ],
       addOns: [
-        { name: 'Performance Audit', price: '$1,200', description: 'Deep-dive optimization: latency, cost, and throughput analysis' },
-        { name: 'Additional Walkthrough', price: '$400', description: 'Extra 2-hour session for knowledge transfer' }
+        { name: 'Performance Audit', price: 'Quote', description: 'Deep-dive optimization: latency, cost, and robustness analysis' },
+        { name: 'Additional Walkthrough', price: 'Quote', description: 'Extra 2-hour session for knowledge transfer' }
       ]
     }
   };
 
   const testimonials = [
     {
-      service: 'Data Engineering',
+      service: 'Trading Infrastructure',
       client: 'Daniel Graham, CEO TheTraderDaddy',
-      quote: 'Jose built our real-time market data pipeline processing WebSocket feeds from multiple exchanges into Snowflake. The system maintains 98%+ uptime with sub-500ms latency while handling millions of daily updates. His integration of market data, social sentiment, and on-chain metrics into a unified platform powers our entire research infrastructure.',
-      result: '98%+ uptime, <500ms latency, millions of daily updates'
+      quote: 'Jose built our real-time market data pipeline processing WebSocket feeds from multiple exchanges. The system maintains high availability with low-latency ingestion while handling millions of daily updates. His integration of market data, social sentiment, and on-chain metrics into a unified platform powers our entire research infrastructure.',
+      result: 'High availability, low-latency ingestion, millions of daily updates'
     },
     {
-      service: 'Data Engineering',
+      service: 'Automated Execution',
       client: 'Paul Reina, Sales Manager at GrowMyClinic',
       quote: 'Jose integrated our CRM, call tracking, and scheduling systems into a unified analytics dashboard. The real-time visibility into marketing attribution and conversion funnels helped us identify high-value referral sources and optimize our spend. Patient conversion improved from 28% to 35%, with a 15% increase in average appointment value.',
       result: '25% conversion improvement, 15% higher revenue per patient'
     },
     {
-      service: 'Analytics & BI',
+      service: 'ML Systems',
       client: 'Caterina Abanoni, Data Science Lead',
       quote: 'Jose architected our MLOps pipeline with automated feature engineering processing 2,500+ daily student interactions. The A/B testing framework and model monitoring reduced deployment time from 3 weeks to 3 days, while improving course completion rates by 15%. His GDPR-compliant framework was critical for our European expansion.',
       result: '85% faster deployment, 15% better course completion'
@@ -262,9 +268,9 @@ export default function Services() {
   return (
     <>
       <StructuredData data={generateFAQSchema()} />
-      <div className="min-h-screen bg-white text-gray-900">
+      <div className="min-h-screen bg-[#050B14] text-[#E6EDF3]">
         {/* Preloader */}
-        <div id="preloader" className="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div id="preloader" className="fixed inset-0 bg-[#050B14] z-50 flex items-center justify-center">
           <div className="jumper flex space-x-2">
             <div className="w-4 h-4 bg-green-500 rounded-full animate-bounce"></div>
             <div className="w-4 h-4 bg-green-500 rounded-full animate-bounce"></div>
@@ -276,7 +282,7 @@ export default function Services() {
 
         {/* Open to Full-Time & Consulting Disclaimer */}
         <m.div
-          className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 border-l-4 border-blue-600 py-10 overflow-hidden"
+          className="relative bg-gradient-to-br from-[#0A1526] via-[#0D1B30] to-[#0A1526] border-l-4 border-[#00E5A0] py-10 overflow-hidden"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -289,24 +295,25 @@ export default function Services() {
           <div className="container mx-auto px-4 max-w-5xl relative z-10">
             <div className="flex flex-col md:flex-row items-start md:space-x-6 space-y-4 md:space-y-0">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
-                  <i className="fas fa-briefcase text-2xl text-white"></i>
+                <div className="w-16 h-16 bg-gradient-to-br from-[#00E5A0] to-[#42A5F5] rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
+                  <i className="fas fa-briefcase text-2xl text-[#050B14]"></i>
                 </div>
               </div>
               <div className="flex-1">
-                <div className="inline-flex items-center px-3 py-1 bg-blue-600/10 rounded-full border border-blue-600/20 mb-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2 animate-pulse"></div>
-                  <span className="text-xs font-semibold text-blue-800 tracking-wide uppercase">Available Now</span>
+                <div className="inline-flex items-center px-3 py-1 bg-[#00E5A0]/10 rounded-full border border-[#00E5A0]/20 mb-3">
+                  <div className="w-2 h-2 bg-[#00E5A0] rounded-full mr-2 animate-pulse"></div>
+                  <span className="text-xs font-semibold text-[#00E5A0] tracking-wide uppercase">Available Now</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 bg-gradient-to-r from-blue-900 to-indigo-900 bg-clip-text text-transparent">
+                <h3 className="text-2xl font-bold text-white mb-3">
                   Open to Full-Time & Consulting Opportunities
                 </h3>
-                <p className="text-gray-700 mb-3 leading-relaxed">
-                  I'm actively seeking full-time Data Engineering positions with teams building mission-critical systems. 
-                  I also take on select consulting projects for startups and growing businesses that need production-grade data infrastructure.
+                <p className="text-gray-300 mb-3 leading-relaxed">
+                  I'm seeking full-time Quantitative Developer roles with prop trading firms, systematic trading teams,
+                  and trading technology companies. I also take on select consulting engagements where practical market
+                  knowledge and software engineering can create value.
                 </p>
-                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                  These packages below are for project-based consulting engagements. For full-time roles, contract-to-hire opportunities, 
+                <p className="text-gray-400 mb-6 leading-relaxed text-sm">
+                  These engagements below are for project-based consulting work. For full-time roles, contract-to-hire opportunities,
                   or to discuss how I can contribute to your team long-term, let's connect.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -314,15 +321,15 @@ export default function Services() {
                     href="https://calendly.com/datawithjose/consultation"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                    className="group inline-flex items-center justify-center bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] hover:from-[#00FFB3] hover:to-[#5AB3F5] text-[#050B14] px-6 py-3 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                   >
                     <i className="fas fa-calendar-check mr-2"></i>
                     Schedule Free Call
                     <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
                   </a>
                   <a 
-                    href="mailto:datawithjose@outlook.com?subject=Full-Time Opportunity&body=Hi Jose, I'd like to discuss a full-time Data Engineering opportunity..."
-                    className="group inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                    href="mailto:datawithjose@outlook.com?subject=Full-Time Opportunity&body=Hi Jose, I'd like to discuss a full-time Quantitative Developer opportunity..."
+                    className="group inline-flex items-center justify-center border-2 border-[#1E2D45] text-gray-300 hover:bg-white/5 hover:text-[#00E5A0] px-6 py-3 rounded-xl font-semibold transition-all duration-300"
                   >
                     <i className="fas fa-envelope mr-2"></i>
                     Email Me
@@ -335,7 +342,7 @@ export default function Services() {
 
         {/* Enhanced Hero Section */}
         <m.div
-          className="relative bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white py-24 overflow-hidden"
+          className="relative bg-gradient-to-br from-[#050B14] via-[#0A1526] to-[#0D1B30] text-white py-24 overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -365,9 +372,9 @@ export default function Services() {
               >
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight relative">
                   <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent drop-shadow-2xl relative">
-                    Data Engineering
+                    Quantitative Development
                   </span>
-                  <span className="block bg-gradient-to-r from-green-400 via-green-300 to-blue-400 bg-clip-text text-transparent drop-shadow-2xl mt-2 relative">
+                  <span className="block bg-gradient-to-r from-[#00E5A0] via-[#00C98C] to-[#42A5F5] bg-clip-text text-transparent drop-shadow-2xl mt-2 relative">
                     Services
                     {/* Shine effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-pulse opacity-30"></div>
@@ -382,13 +389,13 @@ export default function Services() {
                 transition={{ delay: 0.4, duration: 0.6 }}
               >
                 <p className="text-xl text-gray-200 mb-4 leading-relaxed">
-                  Production-grade data infrastructure that delivers measurable business impact
+                  Robust algorithmic trading systems — engineered from research to execution
                 </p>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 inline-block">
                   <p className="text-gray-200 text-sm leading-relaxed italic">
-                    "Data Engineer with unique background: 3+ years building production data infrastructure, 
-                    backed by 4 years as Quantitative Trader working with high-frequency data systems. 
-                    Specialized in reliable, performance-critical pipelines where uptime and latency matter."
+                    "Quantitative Developer with 8 years of active market experience. A strategy is not considered
+                    robust simply because it produces an attractive backtest — systems are researched rigorously,
+                    tested honestly, and engineered to operate in the real world."
                   </p>
                 </div>
               </m.div>
@@ -401,16 +408,16 @@ export default function Services() {
                 transition={{ delay: 0.6, duration: 0.6 }}
               >
                 <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-medium border border-green-500/30">
-                  <i className="fas fa-stream mr-2"></i>Real-time Pipelines
+                  <i className="fas fa-lightbulb mr-2"></i>Strategy Development
                 </span>
                 <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-500/30">
-                  <i className="fas fa-chart-line mr-2"></i>Trading Systems
+                  <i className="fas fa-flask mr-2"></i>Research & Backtesting
                 </span>
                 <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30">
-                  <i className="fas fa-cloud mr-2"></i>Cloud Architecture
+                  <i className="fas fa-bolt mr-2"></i>Automated Execution
                 </span>
                 <span className="px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium border border-orange-500/30">
-                  <i className="fas fa-chart-bar mr-2"></i>Analytics & BI
+                  <i className="fas fa-shield-alt mr-2"></i>Risk & Capital Protection
                 </span>
               </m.div>
             </div>
@@ -423,24 +430,24 @@ export default function Services() {
               transition={{ delay: 0.8, duration: 0.8 }}
             >
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-green-400 mb-2">10+</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">8+</div>
+                <div className="text-gray-300 text-sm">Years Market Experience</div>
+                <div className="text-xs text-gray-400 mt-1">Futures · FX · Crypto · Equities</div>
+              </div>
+              <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div className="text-3xl font-bold text-blue-400 mb-2">12+</div>
                 <div className="text-gray-300 text-sm">Projects Delivered</div>
                 <div className="text-xs text-gray-400 mt-1">Production Systems</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-blue-400 mb-2">98%+</div>
-                <div className="text-gray-300 text-sm">Uptime Achieved</div>
-                <div className="text-xs text-gray-400 mt-1">High Availability</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">Walk-Forward</div>
+                <div className="text-gray-300 text-sm">Validation Standard</div>
+                <div className="text-xs text-gray-400 mt-1">Out-of-Sample Tested</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-purple-400 mb-2">5x</div>
-                <div className="text-gray-300 text-sm">Performance Boost</div>
-                <div className="text-xs text-gray-400 mt-1">Faster Processing</div>
-              </div>
-              <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-orange-400 mb-2">30%</div>
-                <div className="text-gray-300 text-sm">Cost Reduction</div>
-                <div className="text-xs text-gray-400 mt-1">Optimized Infrastructure</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+                <div className="text-gray-300 text-sm">System Operation</div>
+                <div className="text-xs text-gray-400 mt-1">Monitoring & Alerting</div>
               </div>
             </m.div>
 
@@ -454,7 +461,7 @@ export default function Services() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center"
+                  className="group bg-gradient-to-r from-[#00E5A0] to-[#00C98C] hover:from-[#00FFB3] hover:to-[#00E5A0] text-[#050B14] px-8 py-4 rounded-xl font-bold transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center"
                 >
                   <i className="fas fa-calendar-check mr-2"></i>
                   Book Free 30-Min Strategy Call
@@ -474,7 +481,7 @@ export default function Services() {
         </m.div>
 
         {/* Enhanced Services Section */}
-        <div id="services-details" className="py-20 bg-gray-50">
+        <div id="services-details" className="py-20 bg-[#0A1526]">
           <div className="container mx-auto px-4">
             <m.div
               className="text-center mb-16"
@@ -482,30 +489,29 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0097A7] mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#00E5A0] mb-4">
                 Technical Capabilities
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-                Specialized data engineering solutions proven in production environments where reliability, 
-                performance, and measurable ROI are non-negotiable. Review technical capabilities below, 
-                then explore engagement packages.
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+                Quantitative development solutions built around one principle: validation before capital.
+                Review the capabilities below, then explore engagement options.
               </p>
               
               {/* Service Benefits */}
               <div className="flex flex-wrap justify-center gap-4">
-                <div className="px-4 py-2 bg-green-100 text-green-800 rounded-lg text-sm font-medium">
+                <div className="px-4 py-2 bg-[#00E5A0]/15 text-[#00E5A0] rounded-lg text-sm font-medium border border-[#00E5A0]/30">
                   <i className="fas fa-shield-alt mr-2"></i>
-                  Production-Tested
+                  Validation-First
                 </div>
-                <div className="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg text-sm font-medium">
+                <div className="px-4 py-2 bg-blue-500/15 text-blue-300 rounded-lg text-sm font-medium border border-blue-500/30">
                   <i className="fas fa-clock mr-2"></i>
-                  Real-time Processing
+                  Low-Latency Execution
                 </div>
-                <div className="px-4 py-2 bg-purple-100 text-purple-800 rounded-lg text-sm font-medium">
+                <div className="px-4 py-2 bg-purple-500/15 text-purple-300 rounded-lg text-sm font-medium border border-purple-500/30">
                   <i className="fas fa-chart-line mr-2"></i>
-                  Measurable ROI
+                  Robustness by Design
                 </div>
-                <div className="px-4 py-2 bg-orange-100 text-orange-800 rounded-lg text-sm font-medium">
+                <div className="px-4 py-2 bg-orange-500/15 text-orange-300 rounded-lg text-sm font-medium border border-orange-500/30">
                   <i className="fas fa-handshake mr-2"></i>
                   End-to-End Support
                 </div>
@@ -520,8 +526,8 @@ export default function Services() {
                   onClick={() => setActiveService(index)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                     activeService === index
-                      ? 'bg-green-500 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-gray-100'
+                      ? 'bg-[#00E5A0] text-[#050B14] shadow-lg'
+                      : 'bg-[#0D1B30] text-gray-300 hover:bg-[#1E2D45] border border-[#1E2D45]'
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -535,7 +541,7 @@ export default function Services() {
             {/* Active Service Details */}
             <m.div
               key={activeService}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden"
+              className="bg-[#0D1B30] border border-[#1E2D45] rounded-2xl shadow-xl overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -544,27 +550,27 @@ export default function Services() {
                 {/* Service Info */}
                 <div className="p-12">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mr-4">
-                      <i className={`${services[activeService].icon} text-2xl text-white`}></i>
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#00E5A0] to-[#42A5F5] rounded-full flex items-center justify-center mr-4">
+                      <i className={`${services[activeService].icon} text-2xl text-[#050B14]`}></i>
                     </div>
                     <div>
-                      <h3 className="text-3xl font-bold">{services[activeService].title}</h3>
-                      <p className="text-gray-600">{services[activeService].subtitle}</p>
+                      <h3 className="text-3xl font-bold text-white">{services[activeService].title}</h3>
+                      <p className="text-gray-400">{services[activeService].subtitle}</p>
                     </div>
                   </div>
 
-                  <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                  <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                     {services[activeService].description}
                   </p>
 
                   {/* Technologies */}
                   <div className="mb-8">
-                    <h4 className="text-lg font-semibold mb-4">Technologies Used:</h4>
+                    <h4 className="text-lg font-semibold mb-4 text-white">Technologies Used:</h4>
                     <div className="flex flex-wrap gap-2">
                       {services[activeService].technologies.map((tech, index) => (
                         <span
                           key={index}
-                          className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
+                          className="px-3 py-1 bg-white/5 border border-[#1E2D45] text-gray-300 rounded-full text-sm font-medium"
                         >
                           {tech}
                         </span>
@@ -576,16 +582,16 @@ export default function Services() {
                   <div className="mt-6">
                     <Link
                       href="#pricing"
-                      className="block text-center bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
+                      className="block text-center bg-[#00E5A0] text-[#050B14] px-8 py-3 rounded-lg font-bold hover:bg-[#00FFB3] transition-colors"
                     >
-                      View Pricing Options
+                      View Engagement Options
                     </Link>
                   </div>
                 </div>
 
                 {/* Benefits & Metrics */}
-                <div className="bg-gradient-to-br from-green-50 to-blue-50 p-12">
-                  <h4 className="text-2xl font-bold mb-6">Key Benefits</h4>
+                <div className="bg-gradient-to-br from-[#0A1526] to-[#071020] p-12">
+                  <h4 className="text-2xl font-bold mb-6 text-white">Key Benefits</h4>
                   <div className="space-y-4 mb-8">
                     {services[activeService].benefits.map((benefit, index) => (
                       <m.div
@@ -595,7 +601,7 @@ export default function Services() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
                       >
-                        <i className="fas fa-check-circle text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <i className="fas fa-check-circle text-[#00E5A0] mr-3 mt-1 flex-shrink-0"></i>
                         <span dangerouslySetInnerHTML={{ __html: benefit }}></span>
                       </m.div>
                     ))}
@@ -603,11 +609,11 @@ export default function Services() {
 
                   {/* Metrics */}
                   <div className="grid grid-cols-1 gap-4">
-                    <h4 className="text-xl font-bold mb-4">Proven Results</h4>
+                    <h4 className="text-xl font-bold mb-4 text-white">Standards Applied</h4>
                     {Object.entries(services[activeService].metrics).map(([key, value], index) => (
-                      <div key={key} className="bg-white p-4 rounded-lg shadow-sm">
-                        <div className="text-2xl font-bold text-green-500">{value}</div>
-                        <div className="text-sm text-gray-600 capitalize">{key}</div>
+                      <div key={key} className="bg-[#0D1B30] border border-[#1E2D45] p-4 rounded-lg shadow-sm">
+                        <div className="text-2xl font-bold text-[#00E5A0] font-mono">{value}</div>
+                        <div className="text-sm text-gray-400 capitalize">{key}</div>
                       </div>
                     ))}
                   </div>
@@ -618,7 +624,7 @@ export default function Services() {
         </div>
 
         {/* Pricing Packages */}
-        <div id="pricing" className="pt-24 pb-12 bg-white">
+        <div id="pricing" className="pt-24 pb-12 bg-[#050B14]">
           <div className="container mx-auto px-4">
             <m.div
               className="text-center mb-16"
@@ -626,9 +632,10 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-5xl font-bold mb-6 text-[#0097A7]">Choose Your Package</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Flexible pricing options to match your project scope and budget requirements.
+              <h2 className="text-5xl font-bold mb-6 text-[#00E5A0]">Engagement Options</h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                From validating a single idea to a complete research-to-execution system.
+                Every engagement starts with a free strategy call — quotes are scoped to your project.
               </p>
             </m.div>
 
@@ -636,10 +643,10 @@ export default function Services() {
               {Object.entries(packages).map(([key, pkg], index) => (
                 <m.div
                   key={key}
-                  className={`relative bg-white rounded-3xl shadow-2xl overflow-hidden border-2 transition-all duration-300 ${
+                  className={`relative bg-[#0D1B30] rounded-3xl shadow-2xl overflow-hidden border-2 transition-all duration-300 ${
                     pkg.popular 
-                      ? 'border-green-500 transform scale-105 shadow-green-500/20' 
-                      : 'border-gray-100 hover:border-gray-200 hover:shadow-xl'
+                      ? 'border-[#00E5A0] transform scale-105 shadow-[#00E5A0]/20' 
+                      : 'border-[#1E2D45] hover:border-[#00E5A0]/40 hover:shadow-xl'
                   }`}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -651,10 +658,10 @@ export default function Services() {
                     pkg.popular || ('savings' in pkg && pkg.savings) ? 'pt-16' : 'pt-8'
                   } ${
                     pkg.popular 
-                      ? 'bg-gradient-to-br from-green-500 to-green-600' 
+                      ? 'bg-gradient-to-br from-[#00C98C] to-[#00E5A0]' 
                       : index === 0 
-                        ? 'bg-gradient-to-br from-blue-500 to-blue-600'
-                        : 'bg-gradient-to-br from-purple-500 to-purple-600'
+                        ? 'bg-gradient-to-br from-[#42A5F5] to-[#2196F3]'
+                        : 'bg-gradient-to-br from-[#8B5CF6] to-[#6D4FD8]'
                   }`}>
                     {pkg.popular && (
                       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
@@ -672,15 +679,15 @@ export default function Services() {
                       </div>
                     )}
                     
-                    <div className="text-center text-white">
+                    <div className="text-center text-[#050B14]">
                       <h3 className="text-2xl font-bold mb-3 leading-tight">{pkg.name}</h3>
                       <div className="mb-2">
                         <span className="text-4xl font-black">{pkg.price}</span>
                       </div>
-                      <div className="text-sm opacity-90 font-medium mb-2">{pkg.subtitle}</div>
-                      <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                      <div className="text-sm opacity-90 font-semibold mb-2">{pkg.subtitle}</div>
+                      <div className="inline-flex items-center bg-black/10 backdrop-blur-sm rounded-full px-3 py-1">
                         <i className="fas fa-clock mr-2 text-sm"></i>
-                        <span className="text-sm font-medium">{pkg.duration}</span>
+                        <span className="text-sm font-semibold">{pkg.duration}</span>
                       </div>
                     </div>
                   </div>
@@ -688,46 +695,46 @@ export default function Services() {
                   {/* Content */}
                   <div className="p-8">
                     <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-3">Ideal for:</h4>
-                      <p className="text-gray-600 leading-relaxed">{pkg.description}</p>
+                      <h4 className="text-lg font-semibold text-white mb-3">Ideal for:</h4>
+                      <p className="text-gray-400 leading-relaxed">{pkg.description}</p>
                     </div>
 
                     <div className="mb-8">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                        <i className="fas fa-list-check mr-2 text-green-500"></i>
+                      <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                        <i className="fas fa-list-check mr-2 text-[#00E5A0]"></i>
                         Key Deliverables
                       </h4>
                       <ul className="space-y-4">
                         {pkg.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start group">
-                            <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-0.5 group-hover:bg-green-200 transition-colors">
-                              <i className="fas fa-check text-green-600 text-xs"></i>
+                            <div className="flex-shrink-0 w-6 h-6 bg-[#00E5A0]/15 rounded-full flex items-center justify-center mr-3 mt-0.5 group-hover:bg-[#00E5A0]/25 transition-colors">
+                              <i className="fas fa-check text-[#00E5A0] text-xs"></i>
                             </div>
-                            <span className="text-gray-700 leading-relaxed text-sm">{feature}</span>
+                            <span className="text-gray-300 leading-relaxed text-sm">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     {pkg.note && (
-                      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 mb-6">
+                      <div className="bg-gradient-to-r from-[#42A5F5]/10 to-[#8B5CF6]/10 border border-[#1E2D45] rounded-xl p-4 mb-6">
                         <div className="flex items-start">
-                          <i className="fas fa-info-circle text-blue-500 mr-3 mt-0.5 flex-shrink-0"></i>
-                          <p className="text-sm text-blue-800 leading-relaxed italic">{pkg.note}</p>
+                          <i className="fas fa-info-circle text-[#42A5F5] mr-3 mt-0.5 flex-shrink-0"></i>
+                          <p className="text-sm text-gray-300 leading-relaxed italic">{pkg.note}</p>
                         </div>
                       </div>
                     )}
 
                     {pkg.paymentOptions && (
-                      <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-xl p-4 mb-4">
-                        <h5 className="text-sm font-bold text-blue-800 mb-3 flex items-center">
+                      <div className="bg-gradient-to-r from-[#0A1526] to-[#0D1B30] border border-[#1E2D45] rounded-xl p-4 mb-4">
+                        <h5 className="text-sm font-bold text-gray-200 mb-3 flex items-center">
                           <i className="fas fa-credit-card mr-2"></i>
-                          Payment Options
+                          Engagement Terms
                         </h5>
                         <ul className="space-y-2">
                           {pkg.paymentOptions.map((option, idx) => (
-                            <li key={idx} className="flex items-start text-xs text-blue-700">
-                              <i className="fas fa-check-circle mr-2 mt-0.5 flex-shrink-0"></i>
+                            <li key={idx} className="flex items-start text-xs text-gray-400">
+                              <i className="fas fa-check-circle mr-2 mt-0.5 flex-shrink-0 text-[#00E5A0]"></i>
                               <span>{option}</span>
                             </li>
                           ))}
@@ -736,15 +743,15 @@ export default function Services() {
                     )}
 
                     {pkg.notIncluded && (
-                      <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-4 mb-4">
-                        <h5 className="text-sm font-bold text-yellow-800 mb-3 flex items-center">
+                      <div className="bg-gradient-to-r from-[#F5B544]/10 to-[#FF8E53]/10 border border-[#1E2D45] rounded-xl p-4 mb-4">
+                        <h5 className="text-sm font-bold text-[#F5B544] mb-3 flex items-center">
                           <i className="fas fa-exclamation-triangle mr-2"></i>
                           Not Included
                         </h5>
                         <ul className="space-y-2">
                           {pkg.notIncluded.map((item, idx) => (
-                            <li key={idx} className="flex items-start text-xs text-yellow-700">
-                              <i className="fas fa-times-circle mr-2 mt-0.5 flex-shrink-0"></i>
+                            <li key={idx} className="flex items-start text-xs text-gray-400">
+                              <i className="fas fa-times-circle mr-2 mt-0.5 flex-shrink-0 text-[#F5B544]"></i>
                               <span>{item}</span>
                             </li>
                           ))}
@@ -753,19 +760,19 @@ export default function Services() {
                     )}
 
                     {pkg.addOns && pkg.addOns.length > 0 && (
-                      <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-4 mb-4">
-                        <h5 className="text-sm font-bold text-purple-800 mb-3 flex items-center">
+                      <div className="bg-gradient-to-r from-[#8B5CF6]/10 to-[#00E5A0]/10 border border-[#1E2D45] rounded-xl p-4 mb-4">
+                        <h5 className="text-sm font-bold text-[#8B5CF6] mb-3 flex items-center">
                           <i className="fas fa-plus-circle mr-2"></i>
                           Available Add-Ons
                         </h5>
                         <ul className="space-y-3">
                           {pkg.addOns.map((addon, idx) => (
-                            <li key={idx} className="text-xs text-purple-700">
+                            <li key={idx} className="text-xs text-gray-400">
                               <div className="flex items-start justify-between mb-1">
-                                <span className="font-semibold">{addon.name}</span>
-                                <span className="font-bold text-purple-900">{addon.price}</span>
+                                <span className="font-semibold text-gray-200">{addon.name}</span>
+                                <span className="font-bold text-[#00E5A0]">{addon.price}</span>
                               </div>
-                              <p className="text-purple-600 leading-relaxed">{addon.description}</p>
+                              <p className="text-gray-400 leading-relaxed">{addon.description}</p>
                             </li>
                           ))}
                         </ul>
@@ -773,15 +780,15 @@ export default function Services() {
                     )}
 
                     {pkg.guarantees && (
-                      <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-4 mb-8">
-                        <h5 className="text-sm font-bold text-green-800 mb-3 flex items-center">
+                      <div className="bg-gradient-to-r from-[#00E5A0]/10 to-[#00C98C]/10 border border-[#1E2D45] rounded-xl p-4 mb-8">
+                        <h5 className="text-sm font-bold text-[#00E5A0] mb-3 flex items-center">
                           <i className="fas fa-shield-check mr-2"></i>
                           Guarantees
                         </h5>
                         <ul className="space-y-2">
                           {pkg.guarantees.map((guarantee, idx) => (
-                            <li key={idx} className="flex items-start text-xs text-green-700">
-                              <i className="fas fa-check-circle mr-2 mt-0.5 flex-shrink-0"></i>
+                            <li key={idx} className="flex items-start text-xs text-gray-300">
+                              <i className="fas fa-check-circle mr-2 mt-0.5 flex-shrink-0 text-[#00E5A0]"></i>
                               <span>{guarantee}</span>
                             </li>
                           ))}
@@ -793,10 +800,10 @@ export default function Services() {
                       href="/contact"
                       className={`block text-center py-4 px-6 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${
                         pkg.popular
-                          ? 'bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700'
+                          ? 'bg-gradient-to-r from-[#00E5A0] to-[#00C98C] text-[#050B14] hover:from-[#00FFB3] hover:to-[#00E5A0]'
                           : index === 0
-                            ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700'
-                            : 'bg-gradient-to-r from-purple-500 to-purple-600 text-white hover:from-purple-600 hover:to-purple-700'
+                            ? 'bg-gradient-to-r from-[#42A5F5] to-[#2196F3] text-[#050B14] hover:from-[#5AB3F5] hover:to-[#42A5F5]'
+                            : 'bg-gradient-to-r from-[#8B5CF6] to-[#6D4FD8] text-[#050B14] hover:from-[#9B7CF6] hover:to-[#8B5CF6]'
                       }`}
                     >
                       <i className="fas fa-calendar-check mr-2"></i>
@@ -814,79 +821,79 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-3xl font-bold text-center mb-12">Compare Packages</h3>
-              
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+              <h3 className="text-3xl font-bold text-center mb-12 text-white">Compare Engagements</h3>
+
+              <div className="bg-[#0D1B30] rounded-2xl shadow-xl overflow-hidden border border-[#1E2D45]">
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
-                      <tr className="bg-gradient-to-r from-gray-50 to-gray-100">
-                        <th className="px-6 py-4 text-left text-sm font-bold text-gray-900">Feature</th>
-                        <th className="px-6 py-4 text-center text-sm font-bold text-blue-600">Strategy<br/><span className="text-xs font-normal text-gray-600">$1,000</span></th>
-                        <th className="px-6 py-4 text-center text-sm font-bold text-green-600">MVP Pipeline<br/><span className="text-xs font-normal text-gray-600">$2,800</span></th>
-                        <th className="px-6 py-4 text-center text-sm font-bold text-purple-600">Complete<br/><span className="text-xs font-normal text-gray-600">$4,500</span></th>
+                      <tr className="bg-[#0A1526]">
+                        <th className="px-6 py-4 text-left text-sm font-bold text-gray-200">Capability</th>
+                        <th className="px-6 py-4 text-center text-sm font-bold text-[#42A5F5]">Research Sprint<br/><span className="text-xs font-normal text-gray-500">2-3 weeks</span></th>
+                        <th className="px-6 py-4 text-center text-sm font-bold text-[#00E5A0]">Backtest-to-Execution<br/><span className="text-xs font-normal text-gray-500">4-6 weeks</span></th>
+                        <th className="px-6 py-4 text-center text-sm font-bold text-[#8B5CF6]">Complete System<br/><span className="text-xs font-normal text-gray-500">8-12 weeks</span></th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-gray-200">
-                      <tr className="hover:bg-gray-50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Discovery & Analysis</td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-blue-500 text-lg"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                    <tbody className="divide-y divide-[#1E2D45]">
+                      <tr className="hover:bg-white/5 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-300">Strategy formalization</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#42A5F5] text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#00E5A0] text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#8B5CF6] text-lg"></i></td>
                       </tr>
-                      <tr className="hover:bg-gray-50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Architecture Roadmap</td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-blue-500 text-lg"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      <tr className="hover:bg-white/5 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-300">Backtesting with realistic costs</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#42A5F5] text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#00E5A0] text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#8B5CF6] text-lg"></i></td>
                       </tr>
-                      <tr className="hover:bg-gray-50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Data Pipeline Implementation</td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-green-500 text-lg"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      <tr className="hover:bg-white/5 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-300">Walk-forward & out-of-sample validation</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#42A5F5] text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#00E5A0] text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#8B5CF6] text-lg"></i></td>
                       </tr>
-                      <tr className="hover:bg-gray-50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Cloud Warehouse Setup</td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-green-500 text-lg"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      <tr className="hover:bg-white/5 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-300">Automated execution system</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-600"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#00E5A0] text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#8B5CF6] text-lg"></i></td>
                       </tr>
-                      <tr className="hover:bg-gray-50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">BI Dashboard (5 KPIs)</td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-green-500 text-lg"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      <tr className="hover:bg-white/5 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-300">Broker API integration</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-600"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#00E5A0] text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#8B5CF6] text-lg"></i></td>
                       </tr>
-                      <tr className="hover:bg-gray-50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Data Quality Monitoring</td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      <tr className="hover:bg-white/5 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-300">Risk & capital protection controls</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-600"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#00E5A0] text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#8B5CF6] text-lg"></i></td>
                       </tr>
-                      <tr className="hover:bg-gray-50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Performance Optimization</td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      <tr className="hover:bg-white/5 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-300">Monitoring & alerting</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-600"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#00E5A0] text-lg"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#8B5CF6] text-lg"></i></td>
                       </tr>
-                      <tr className="hover:bg-gray-50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Hands-on Walkthrough</td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-purple-500 text-lg"></i></td>
+                      <tr className="hover:bg-white/5 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-300">Hands-on walkthrough</td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-600"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-600"></i></td>
+                        <td className="px-6 py-4 text-center"><i className="fas fa-check text-[#8B5CF6] text-lg"></i></td>
                       </tr>
-                      <tr className="hover:bg-gray-50 transition-colors">
-                        <td className="px-6 py-4 text-sm text-gray-700">Priority Support (30 days)</td>
-                        <td className="px-6 py-4 text-center"><i className="fas fa-minus text-gray-300"></i></td>
-                        <td className="px-6 py-4 text-center text-xs text-gray-600">Standard</td>
-                        <td className="px-6 py-4 text-center text-xs text-purple-600 font-semibold">Priority</td>
+                      <tr className="hover:bg-white/5 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-300">Post-launch support</td>
+                        <td className="px-6 py-4 text-center text-xs text-gray-500">—</td>
+                        <td className="px-6 py-4 text-center text-xs text-gray-400">2 weeks</td>
+                        <td className="px-6 py-4 text-center text-xs text-[#8B5CF6] font-semibold">3 weeks + priority</td>
                       </tr>
-                      <tr className="bg-gray-50 font-semibold">
-                        <td className="px-6 py-4 text-sm text-gray-900">Timeline</td>
-                        <td className="px-6 py-4 text-center text-sm text-blue-600">1-2 weeks</td>
-                        <td className="px-6 py-4 text-center text-sm text-green-600">3-4 weeks</td>
-                        <td className="px-6 py-4 text-center text-sm text-purple-600">6-8 weeks</td>
+                      <tr className="bg-[#0A1526] font-semibold">
+                        <td className="px-6 py-4 text-sm text-gray-200">Investment</td>
+                        <td className="px-6 py-4 text-center text-sm text-[#42A5F5]">Custom Quote</td>
+                        <td className="px-6 py-4 text-center text-sm text-[#00E5A0]">Custom Quote</td>
+                        <td className="px-6 py-4 text-center text-sm text-[#8B5CF6]">Custom Quote</td>
                       </tr>
                     </tbody>
                   </table>
@@ -894,12 +901,12 @@ export default function Services() {
               </div>
 
               <div className="text-center mt-8">
-                <p className="text-gray-600 mb-4">Not sure which package is right for you?</p>
+                <p className="text-gray-400 mb-4">Not sure which engagement fits your idea?</p>
                 <a
                   href="https://calendly.com/datawithjose/consultation"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center bg-gradient-to-r from-[#00E5A0] to-[#00C98C] hover:from-[#00FFB3] hover:to-[#00E5A0] text-[#050B14] px-6 py-3 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <i className="fas fa-calendar-check mr-2"></i>
                   Schedule Free Consultation
@@ -911,7 +918,7 @@ export default function Services() {
         </div>
 
         {/* How It Works Process */}
-        <div className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="py-20 bg-gradient-to-br from-[#0A1526] to-[#050B14]">
           <div className="container mx-auto px-4">
             <m.div
               className="text-center mb-16"
@@ -919,9 +926,9 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#0097A7]">How It Works</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Simple, transparent process from first contact to project delivery
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#00E5A0]">How It Works</h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                Simple, transparent process from first contact to system delivery
               </p>
             </m.div>
 
@@ -933,19 +940,19 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.6 }}
               >
-                <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-blue-100 hover:border-blue-300 transition-all duration-300">
+                <div className="bg-[#0D1B30] rounded-2xl p-8 shadow-lg border-2 border-[#1E2D45] hover:border-[#42A5F5]/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
                     1
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Free 30-Min Call</h3>
-                  <ul className="space-y-2 text-gray-600 text-sm">
+                  <h3 className="text-xl font-bold text-white mb-3 text-center">Free 30-Min Call</h3>
+                  <ul className="space-y-2 text-gray-400 text-sm">
                     <li className="flex items-start">
-                      <i className="fas fa-check text-blue-500 mr-2 mt-1"></i>
-                      <span>Discuss your needs and challenges</span>
+                      <i className="fas fa-check text-[#42A5F5] mr-2 mt-1"></i>
+                      <span>Discuss your strategy or trading idea</span>
                     </li>
                     <li className="flex items-start">
-                      <i className="fas fa-check text-blue-500 mr-2 mt-1"></i>
-                      <span>Assess technical requirements</span>
+                      <i className="fas fa-check text-[#42A5F5] mr-2 mt-1"></i>
+                      <span>Assess research and infrastructure needs</span>
                     </li>
                     <li className="flex items-start">
                       <i className="fas fa-check text-blue-500 mr-2 mt-1"></i>
@@ -954,7 +961,7 @@ export default function Services() {
                   </ul>
                 </div>
                 <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <i className="fas fa-arrow-right text-3xl text-blue-300"></i>
+                  <i className="fas fa-arrow-right text-3xl text-[#1E2D45]"></i>
                 </div>
               </m.div>
 
@@ -965,28 +972,28 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
-                <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-green-100 hover:border-green-300 transition-all duration-300">
+                <div className="bg-[#0D1B30] rounded-2xl p-8 shadow-lg border-2 border-[#1E2D45] hover:border-[#00E5A0]/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
                     2
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Custom Proposal</h3>
-                  <ul className="space-y-2 text-gray-600 text-sm">
+                  <h3 className="text-xl font-bold text-white mb-3 text-center">Custom Proposal</h3>
+                  <ul className="space-y-2 text-gray-400 text-sm">
                     <li className="flex items-start">
-                      <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
+                      <i className="fas fa-check text-[#00E5A0] mr-2 mt-1"></i>
                       <span>Delivered within 48 hours</span>
                     </li>
                     <li className="flex items-start">
-                      <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                      <span>Clear scope and timeline</span>
+                      <i className="fas fa-check text-[#00E5A0] mr-2 mt-1"></i>
+                      <span>Clear scope, timeline, and validation plan</span>
                     </li>
                     <li className="flex items-start">
-                      <i className="fas fa-check text-green-500 mr-2 mt-1"></i>
-                      <span>Fixed pricing, no surprises</span>
+                      <i className="fas fa-check text-[#00E5A0] mr-2 mt-1"></i>
+                      <span>Fixed scope, no surprises</span>
                     </li>
                   </ul>
                 </div>
                 <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <i className="fas fa-arrow-right text-3xl text-green-300"></i>
+                  <i className="fas fa-arrow-right text-3xl text-[#1E2D45]"></i>
                 </div>
               </m.div>
 
@@ -996,22 +1003,22 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
               >
-                <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-purple-100 hover:border-purple-300 transition-all duration-300">
+                <div className="bg-[#0D1B30] rounded-2xl p-8 shadow-lg border-2 border-[#1E2D45] hover:border-[#8B5CF6]/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
                     3
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Project Kickoff</h3>
-                  <ul className="space-y-2 text-gray-600 text-sm">
+                  <h3 className="text-xl font-bold text-white mb-3 text-center">Project Kickoff</h3>
+                  <ul className="space-y-2 text-gray-400 text-sm">
                     <li className="flex items-start">
-                      <i className="fas fa-check text-purple-500 mr-2 mt-1"></i>
+                      <i className="fas fa-check text-[#8B5CF6] mr-2 mt-1"></i>
                       <span>Start within 2 weeks</span>
                     </li>
                     <li className="flex items-start">
-                      <i className="fas fa-check text-purple-500 mr-2 mt-1"></i>
-                      <span>Regular progress updates</span>
+                      <i className="fas fa-check text-[#8B5CF6] mr-2 mt-1"></i>
+                      <span>Weekly progress demos</span>
                     </li>
                     <li className="flex items-start">
-                      <i className="fas fa-check text-purple-500 mr-2 mt-1"></i>
+                      <i className="fas fa-check text-[#8B5CF6] mr-2 mt-1"></i>
                       <span>Direct communication channel</span>
                     </li>
                   </ul>
@@ -1027,7 +1034,7 @@ export default function Services() {
             >
               <Link
                 href="/contact"
-                className="inline-block bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                className="inline-block bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] hover:from-[#00FFB3] hover:to-[#5AB3F5] text-[#050B14] px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               >
                 <i className="fas fa-calendar-check mr-2"></i>
                 Start With Free Consultation
@@ -1037,7 +1044,7 @@ export default function Services() {
         </div>
 
         {/* Client Results */}
-        <div className="py-20 bg-gray-900 text-white">
+        <div className="py-20 bg-[#0A1526] text-white">
           <div className="container mx-auto px-4">
             <m.div
               className="text-center mb-16"
@@ -1045,9 +1052,9 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-5xl font-bold mb-6 text-[#0097A7]">Client Success Stories</h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Real results from real clients across different industries and use cases.
+              <h2 className="text-5xl font-bold mb-6 text-[#00E5A0]">Client Success Stories</h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                Real feedback from teams I've worked with.
               </p>
             </m.div>
 
@@ -1055,7 +1062,7 @@ export default function Services() {
               {testimonials.map((testimonial, index) => (
                 <m.div
                   key={index}
-                  className="bg-gray-800 p-8 rounded-2xl"
+                  className="bg-[#0D1B30] border border-[#1E2D45] p-8 rounded-2xl"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2, duration: 0.6 }}
@@ -1081,39 +1088,39 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-5xl font-bold mb-6 text-[#0097A7]">My Process</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                A structured methodology for successful project delivery and client satisfaction.
+              <h2 className="text-5xl font-bold mb-6 text-[#00E5A0]">My Process</h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                A structured methodology — from research to execution.
               </p>
             </m.div>
 
             <div className="relative max-w-4xl mx-auto">
               {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-green-500"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#1E2D45]"></div>
 
               {[
                 {
                   step: '01',
-                  title: 'Discovery & Analysis',
-                  description: 'Understanding your current data landscape, pain points, and business objectives.',
+                  title: 'Research & Formalization',
+                  description: 'Turning your trading logic into explicit, testable rules — before a line of system code is written.',
                   duration: '1-2 weeks'
                 },
                 {
                   step: '02',
-                  title: 'Architecture Design',
-                  description: 'Creating the optimal solution architecture with scalability and performance in mind.',
-                  duration: '1 week'
+                  title: 'Backtesting & Validation',
+                  description: 'Walk-forward, out-of-sample, and sensitivity testing with realistic costs and execution constraints.',
+                  duration: '1-3 weeks'
                 },
                 {
                   step: '03',
-                  title: 'Development & Testing',
-                  description: 'Building robust solutions with comprehensive testing and quality assurance.',
-                  duration: '2-8 weeks'
+                  title: 'Execution Engineering',
+                  description: 'Building the execution layer: broker integration, error handling, alerting, and risk controls.',
+                  duration: '2-6 weeks'
                 },
                 {
                   step: '04',
-                  title: 'Deployment & Support',
-                  description: 'Careful deployment with ongoing monitoring and support for optimal results.',
+                  title: 'Deployment & Monitoring',
+                  description: 'Containerized deployment with observability, alerting, and ongoing support.',
                   duration: 'Ongoing'
                 }
               ].map((phase, index) => (
@@ -1127,16 +1134,16 @@ export default function Services() {
                   transition={{ delay: index * 0.2, duration: 0.6 }}
                 >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
-                    <div className="bg-white p-6 rounded-2xl shadow-lg">
-                      <div className="text-green-500 font-bold text-lg mb-2">{phase.step}</div>
-                      <h3 className="text-2xl font-bold mb-3">{phase.title}</h3>
-                      <p className="text-gray-600 mb-3">{phase.description}</p>
-                      <div className="text-sm text-green-500 font-semibold">{phase.duration}</div>
+                    <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-2xl shadow-lg">
+                      <div className="text-[#00E5A0] font-bold text-lg mb-2 font-mono">{phase.step}</div>
+                      <h3 className="text-2xl font-bold mb-3 text-white">{phase.title}</h3>
+                      <p className="text-gray-400 mb-3">{phase.description}</p>
+                      <div className="text-sm text-[#00E5A0] font-semibold">{phase.duration}</div>
                     </div>
                   </div>
                   
                   {/* Timeline Dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#00E5A0] rounded-full border-4 border-[#050B14] shadow-lg"></div>
                 </m.div>
               ))}
             </div>
@@ -1144,7 +1151,7 @@ export default function Services() {
         </div>
 
         {/* CTA Section */}
-        <div className="py-20 bg-gradient-to-br from-green-500 to-blue-600 text-white">
+        <div className="py-20 bg-gradient-to-br from-[#0D1B30] to-[#071020] text-white border-t border-[#1E2D45]">
           <div className="container mx-auto px-4 text-center">
             <m.h2
               className="text-5xl font-bold mb-6"
@@ -1152,15 +1159,15 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              Ready to Transform Your Data Infrastructure?
+              Ready to Build Your Trading System?
             </m.h2>
             <m.p
-              className="text-xl mb-8 max-w-2xl mx-auto"
+              className="text-xl mb-8 max-w-2xl mx-auto text-gray-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              Let's discuss your specific requirements and create a custom solution that drives real business value.
+              Let's discuss your strategy — researched rigorously, tested honestly, and engineered for the real world.
             </m.p>
             <m.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -1169,15 +1176,15 @@ export default function Services() {
               transition={{ delay: 0.4, duration: 0.6 }}
             >
               <a
-                href="mailto:datawithjose@outlook.com?subject=Service Inquiry&body=Hi Jose,%0D%0A%0D%0AI'm interested in your data engineering services.%0D%0A%0D%0AService interested in:%0D%0A%0D%0AProject details:%0D%0A%0D%0ABest regards"
-                className="bg-white text-green-500 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg inline-flex items-center justify-center"
+                href="mailto:datawithjose@outlook.com?subject=Service Inquiry&body=Hi Jose,%0D%0A%0D%0AI'm interested in your quantitative development services.%0D%0A%0D%0AService interested in:%0D%0A☐ Strategy research & validation%0D%0A☐ Backtesting infrastructure%0D%0A☐ Automated execution%0D%0A☐ Risk management%0D%0A%0D%0AProject details:%0D%0A%0D%0ABest regards"
+                className="bg-[#00E5A0] text-[#050B14] px-8 py-4 rounded-lg font-bold hover:bg-[#00FFB3] transition-colors text-lg inline-flex items-center justify-center"
               >
                 <i className="fas fa-envelope mr-2"></i>
                 Email Me Directly
               </a>
               <Link
                 href="/portfolio"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-500 transition-colors text-lg inline-flex items-center justify-center"
+                className="border-2 border-[#1E2D45] text-gray-200 px-8 py-4 rounded-lg font-semibold hover:bg-white/5 hover:text-[#00E5A0] transition-colors text-lg inline-flex items-center justify-center"
               >
                 <i className="fas fa-briefcase mr-2"></i>
                 View My Work
@@ -1187,7 +1194,7 @@ export default function Services() {
         </div>
 
         {/* Service Guarantees Section */}
-        <section className="py-20 bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white">
+        <section className="py-20 bg-gradient-to-br from-[#050B14] via-[#0A1526] to-[#0D1B30] text-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <m.div
@@ -1204,7 +1211,7 @@ export default function Services() {
                   </div>
                   <div className="flex items-center justify-center">
                     <i className="fas fa-shield-alt text-blue-400 mr-2"></i>
-                    <span>Production-ready solutions</span>
+                    <span>Validation-first methodology</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <i className="fas fa-handshake text-purple-400 mr-2"></i>
@@ -1223,7 +1230,7 @@ export default function Services() {
                 <p className="text-gray-300 mb-4 text-sm">Connect with me:</p>
                 <div className="flex justify-center gap-4">
                   <a
-                    href="https://linkedin.com/in/joseacostar"
+                    href="https://www.linkedin.com/in/datawithjose"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Follow on LinkedIn"

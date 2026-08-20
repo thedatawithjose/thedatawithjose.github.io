@@ -15,9 +15,9 @@ export default function MovingAverageBot() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[#050B14] text-[#E6EDF3]">
         {/* Preloader */}
-        <div id="preloader" className="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div id="preloader" className="fixed inset-0 bg-[#050B14] z-50 flex items-center justify-center">
           <div className="jumper flex space-x-2">
             <div className="w-4 h-4 bg-green-500 rounded-full animate-bounce"></div>
             <div className="w-4 h-4 bg-green-500 rounded-full animate-bounce"></div>
@@ -29,7 +29,7 @@ export default function MovingAverageBot() {
 
         {/* Hero Section */}
         <m.div
-          className="page-heading header-text bg-gradient-to-r from-green-500 to-teal-500 text-white py-32"
+          className="page-heading header-text bg-gradient-to-r from-[#0D1B30] via-[#0A1526] to-[#071020] text-white py-32 border-b border-[#1E2D45]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -71,17 +71,17 @@ export default function MovingAverageBot() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="metric-card bg-green-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">15.67%</div>
-                <div className="text-sm text-gray-600">CAGR</div>
+              <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
+                <div className="text-3xl font-bold text-[#00E5A0] mb-2 font-mono">24/7</div>
+                <div className="text-sm text-gray-400">Autonomous Operation</div>
               </div>
-              <div className="metric-card bg-blue-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">1.89</div>
-                <div className="text-sm text-gray-600">Sharpe Ratio</div>
+              <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
+                <div className="text-3xl font-bold text-[#42A5F5] mb-2 font-mono">Docker</div>
+                <div className="text-sm text-gray-400">Containerized Deployment</div>
               </div>
-              <div className="metric-card bg-purple-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">-15.23%</div>
-                <div className="text-sm text-gray-600">Max Drawdown</div>
+              <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
+                <div className="text-3xl font-bold text-[#8B5CF6] mb-2 font-mono">Risk</div>
+                <div className="text-sm text-gray-400">Controls Built-In</div>
               </div>
             </m.div>
 
@@ -92,9 +92,9 @@ export default function MovingAverageBot() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center bg-green-100 text-green-700 px-6 py-3 rounded-full font-semibold">
+              <div className="inline-flex items-center bg-[#00E5A0]/10 border border-[#00E5A0]/30 text-[#00E5A0] px-6 py-3 rounded-full font-semibold">
                 <i className="fas fa-check-circle mr-2 text-xl"></i>
-                Live & Operating Profitably
+                Live-Tested & Risk-Controlled
               </div>
             </m.div>
 
@@ -109,7 +109,7 @@ export default function MovingAverageBot() {
                 <i className="fas fa-bullseye text-green-500 mr-3"></i>
                 Objective
               </h2>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed">
                   To develop an automated trading bot based on the moving average crossover strategy that can operate autonomously in live markets with minimal human intervention.
                 </p>
@@ -127,7 +127,7 @@ export default function MovingAverageBot() {
                 <i className="fas fa-cogs text-blue-500 mr-3"></i>
                 Methodology
               </h2>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
                   The bot continuously monitors the price of a given asset and executes trades when the short-term moving average crosses the long-term moving average.
                 </p>
@@ -167,27 +167,27 @@ export default function MovingAverageBot() {
                 <i className="fas fa-chart-line text-purple-500 mr-3"></i>
                 Results
               </h2>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
-                  The trading bot has been deployed and is operating profitably in live markets.
+                  The trading bot has been deployed and operates autonomously in live markets with risk controls in place.
                 </p>
                 <div className="space-y-4">
-                  <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-                    <p className="text-lg font-semibold text-green-700">
+                  <div className="bg-[#00E5A0]/10 p-4 rounded-lg border-l-4 border-[#00E5A0]">
+                    <p className="text-lg font-semibold text-[#00E5A0]">
                       <i className="fas fa-trophy mr-2"></i>
-                      Demonstrated effectiveness of moving average strategy in various market conditions
+                      Crossover logic validated across multiple market regimes
                     </p>
                   </div>
-                  <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                    <p className="text-lg font-semibold text-blue-700">
+                  <div className="bg-[#42A5F5]/10 p-4 rounded-lg border-l-4 border-[#42A5F5]">
+                    <p className="text-lg font-semibold text-[#42A5F5]">
                       <i className="fas fa-robot mr-2"></i>
-                      24/7 autonomous operation with consistent performance
+                      24/7 autonomous operation without manual intervention
                     </p>
                   </div>
-                  <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
-                    <p className="text-lg font-semibold text-purple-700">
+                  <div className="bg-[#8B5CF6]/10 p-4 rounded-lg border-l-4 border-[#8B5CF6]">
+                    <p className="text-lg font-semibold text-[#8B5CF6]">
                       <i className="fas fa-shield-alt mr-2"></i>
-                      Robust fault-tolerance and error handling mechanisms
+                      Fault-tolerance, graceful API failure handling, and monitoring
                     </p>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export default function MovingAverageBot() {
                 <i className="fas fa-exclamation-triangle text-orange-500 mr-3"></i>
                 Challenges
               </h2>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
                   Key challenges overcome during development and deployment:
                 </p>
@@ -245,12 +245,12 @@ export default function MovingAverageBot() {
                 <i className="fas fa-code text-blue-500 mr-3"></i>
                 Technologies Used
               </h2>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <div className="flex flex-wrap gap-3">
                   {['Python', 'Pandas', 'Backtrader', 'REST API', 'Docker'].map((tech, index) => (
                     <span
                       key={index}
-                      className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full font-medium text-sm"
+                      className="px-4 py-2 bg-white/5 border border-[#1E2D45] text-gray-300 rounded-full font-medium text-sm"
                     >
                       {tech}
                     </span>
@@ -270,14 +270,14 @@ export default function MovingAverageBot() {
                 href="https://github.com/thedatawithjose/Algorithmic-Trading-Bot-Moving-Average-Crossover-Strategy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center"
+                className="bg-[#0A1526] border border-[#1E2D45] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1E2D45] transition-colors flex items-center justify-center"
               >
                 <i className="fab fa-github text-2xl mr-3"></i>
                 View on GitHub
               </a>
               <Link
                 href="/portfolio"
-                className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center"
+                className="bg-[#00E5A0] text-[#050B14] px-8 py-4 rounded-lg font-bold hover:bg-[#00FFB3] transition-colors flex items-center justify-center"
               >
                 <i className="fas fa-arrow-left mr-2"></i>
                 Back to Portfolio

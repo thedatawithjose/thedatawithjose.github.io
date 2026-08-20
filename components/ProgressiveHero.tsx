@@ -214,12 +214,12 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
         {/* Primary CTA - More prominent */}
         <m.a
           href="/contact"
-          className="group relative px-6 sm:px-8 py-4 min-h-[48px] bg-gradient-to-r from-[#00BFA5] via-[#42A5F5] to-[#005A9C] text-white font-bold text-base sm:text-lg rounded-xl shadow-2xl hover:shadow-[#00BFA5]/25 transition-all duration-300 overflow-hidden"
+          className="group relative px-6 sm:px-8 py-4 min-h-[48px] bg-gradient-to-r from-[#00E5A0] via-[#00C98C] to-[#42A5F5] text-[#050B14] font-bold text-base sm:text-lg rounded-xl shadow-2xl hover:shadow-[#00E5A0]/25 transition-all duration-300 overflow-hidden"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.98 }}
         >
           {/* Animated background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#00D4B4] via-[#2196F3] to-[#0066CC] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#00FFB3] via-[#2196F3] to-[#42A5F5] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
           {/* Shine effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>

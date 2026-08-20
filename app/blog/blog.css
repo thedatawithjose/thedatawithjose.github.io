@@ -53,7 +53,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #005A9C, #00BFA5);
+  background: linear-gradient(90deg, #005A9C, #00E5A0);
   border-radius: 2px;
 }
 
@@ -70,7 +70,7 @@
   transform: translateY(-50%);
   width: 4px;
   height: 24px;
-  background: linear-gradient(180deg, #00BFA5, #005A9C);
+  background: linear-gradient(180deg, #00E5A0, #005A9C);
   border-radius: 2px;
 }
 
@@ -82,7 +82,7 @@
 
 .prose ul li::marker {
   content: '▶';
-  color: #00BFA5;
+  color: #00E5A0;
   font-size: 0.8em;
 }
 
@@ -105,7 +105,7 @@
   top: -10px;
   left: 20px;
   font-size: 4em;
-  color: #00BFA5;
+  color: #00E5A0;
   opacity: 0.3;
   font-family: serif;
 }
@@ -114,23 +114,23 @@
 .prose table {
   border-collapse: separate;
   border-spacing: 0;
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: #0D1B30;
+  border: 1px solid #1E2D45;
 }
 
 .prose th {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  background: linear-gradient(135deg, #0A1526 0%, #071020 100%);
   font-weight: 600;
   text-align: left;
-  border-bottom: 2px solid #00BFA5;
+  border-bottom: 2px solid #00E5A0;
 }
 
 .prose td {
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #1E2D45;
 }
 
 .prose tr:hover td {
-  background-color: #f8fafc;
+  background-color: #0A1526;
 }
 
 /* Images with captions */
@@ -219,12 +219,12 @@ html {
 
 /* Selection styling */
 .prose ::selection {
-  background-color: #00BFA5;
+  background-color: #00E5A0;
   color: white;
 }
 
 .prose ::-moz-selection {
-  background-color: #00BFA5;
+  background-color: #00E5A0;
   color: white;
 }
 /* H
@@ -290,7 +290,7 @@ esign Trends */
 
 /* 2026 Color Palette Variables */
 :root {
-  --primary-gradient: linear-gradient(135deg, #00BFA5 0%, #42A5F5 50%, #8B5CF6 100%);
+  --primary-gradient: linear-gradient(135deg, #00E5A0 0%, #42A5F5 50%, #8B5CF6 100%);
   --glass-bg: rgba(255, 255, 255, 0.08);
   --glass-border: rgba(255, 255, 255, 0.12);
   --accent-glow: 0 0 20px rgba(0, 191, 165, 0.3);

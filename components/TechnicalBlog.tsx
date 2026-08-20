@@ -7,33 +7,33 @@ import { useState } from 'react';
 const blogPosts = [
   {
     id: 1,
-    title: "The 'Quantification' of Data Engineering: What Modern DE Teams Must Learn from a Wall Street Trading Desk",
-    excerpt: "In 2026, 'good enough' data is bankrupt. It's time to stop building data libraries and start building data trading floors. Here's why the future belongs to teams that think like quant traders.",
-    category: "Data Engineering",
+    title: "Robustness Lessons from a Trading Desk: Why Validation Beats Hope",
+    excerpt: "A strategy is not robust simply because it produces an attractive backtest. What systematic trading teaches us about testing honestly and engineering for the real world.",
+    category: "Trading",
     readTime: "12 min read",
     publishDate: "Dec 4, 2024",
     image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=250&fit=crop&crop=center",
-    tags: ["Trading", "Data Engineering", "Real-time", "Performance", "Leadership"],
+    tags: ["Trading", "Validation", "Real-time", "Robustness", "Methodology"],
     featured: true,
     url: "/blog/quantification-data-engineering"
   },
   {
     id: 2,
-    title: "AI-Powered Data Engineering: Transforming ETL Pipelines in 2025",
-    excerpt: "How AI and LLMs are revolutionizing data engineering workflows, from automated schema detection to intelligent data quality monitoring.",
-    category: "Data Engineering",
+    title: "AI-Assisted Research Pipelines: From Idea to Backtest Faster",
+    excerpt: "How AI and LLMs are changing quant research workflows, from automated signal documentation to intelligent data quality monitoring.",
+    category: "Research & Data",
     readTime: "14 min read",
     publishDate: "Nov 10, 2025",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop&crop=center",
-    tags: ["AI", "LLM", "Data Engineering", "Automation", "ETL"],
+    tags: ["AI", "LLM", "Research", "Automation", "Backtesting"],
     featured: true,
     url: "/blog/ai-powered-data-engineering"
   },
   {
     id: 3,
-    title: "The Future of Data Engineering: Predictions and Trends for 2026",
-    excerpt: "Exploring emerging trends in data engineering including real-time ML, edge computing, and the evolving role of data engineers in an AI-first world.",
-    category: "Data Engineering", 
+    title: "The Future of Systematic Trading: Predictions and Trends for 2026",
+    excerpt: "Exploring emerging trends in systematic trading including real-time ML, edge execution, and the evolving role of quant developers in an AI-first world.",
+    category: "Research & Data", 
     readTime: "11 min read",
     publishDate: "Jul 20, 2025",
     image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop&crop=center",
@@ -55,9 +55,9 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: "Data Pipeline Optimization: Achieving Better Performance",
-    excerpt: "How we redesigned our ETL pipeline architecture using Apache Spark and Kubernetes to achieve significant performance improvement.",
-    category: "Data Engineering",
+    title: "Market Data Pipelines: Engineering for Speed and Integrity",
+    excerpt: "How we redesigned market data ingestion using Python, TimescaleDB, and Docker to achieve significant performance gains with strict data integrity.",
+    category: "Research & Data",
     readTime: "8 min read",
     publishDate: "Feb 20, 2024",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center",
@@ -115,7 +115,7 @@ const blogPosts = [
   }
 ];
 
-const categories = ["All", "Trading", "Data Engineering", "Machine Learning", "Backend Development", "Cloud"];
+const categories = ["All", "Trading", "Research & Data", "Machine Learning", "Backend Development", "Cloud"];
 
 export default function TechnicalBlog() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -128,29 +128,29 @@ export default function TechnicalBlog() {
   const regularPosts = filteredPosts.filter(post => !post.featured);
 
   return (
-    <section className="technical-blog py-24 bg-white">
+    <section className="technical-blog py-24 bg-[#0A1526]">
       <div className="container mx-auto px-4">
         <m.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h2 className="text-4xl font-bold mb-4 text-[#0097A7]">
+          <h2 className="text-4xl font-bold mb-4 text-[#00E5A0]">
             Technical Articles & Insights
           </h2>
-          <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto">
-            Deep dives into data engineering, algorithmic trading, and production ML systems
+          <p className="text-lg md:text-xl font-semibold text-gray-400 max-w-3xl mx-auto">
+            Deep dives into algorithmic trading, backtesting, and building systems that survive real money
           </p>
         </m.div>
 
         {/* Featured Articles */}
         <div className="mb-20">
-          <h3 className="text-2xl font-bold mb-12 text-gray-900">Featured Articles</h3>
+          <h3 className="text-2xl font-bold mb-12 text-white">Featured Articles</h3>
           <div className="grid md:grid-cols-2 gap-10">
             {featuredPosts.map((post, index) => (
               <Link href={post.url} key={post.id} className="block">
                 <m.article
-                  className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                  className="group bg-[#0D1B30] border border-[#1E2D45] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -167,7 +167,7 @@ export default function TechnicalBlog() {
                     }}
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 text-xs font-semibold bg-[#00BFA5] text-white rounded-full">
+                    <span className="px-3 py-1 text-xs font-semibold bg-[#00E5A0] text-[#050B14] rounded-full">
                       FEATURED
                     </span>
                   </div>
@@ -185,7 +185,7 @@ export default function TechnicalBlog() {
                     <span>{post.readTime}</span>
                   </div>
 
-                  <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-[#005A9C] transition-colors">
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#42A5F5] transition-colors">
                     {post.title}
                   </h3>
                   
@@ -197,7 +197,7 @@ export default function TechnicalBlog() {
                     {post.tags.map((tag) => (
                       <span 
                         key={tag}
-                        className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                        className="px-2 py-1 bg-white/5 text-gray-400 text-xs rounded-full"
                       >
                         {tag}
                       </span>
@@ -205,7 +205,7 @@ export default function TechnicalBlog() {
                   </div>
 
                   <div className="flex items-center">
-                    <span className="inline-flex items-center text-[#005A9C] group-hover:text-[#00BFA5] font-medium group-hover:translate-x-1 transition-all">
+                    <span className="inline-flex items-center text-[#42A5F5] group-hover:text-[#00E5A0] font-medium group-hover:translate-x-1 transition-all">
                       Read Full Article
                       <i className="fas fa-arrow-right ml-2 text-sm"></i>
                     </span>
@@ -226,8 +226,8 @@ export default function TechnicalBlog() {
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category
-                  ? 'bg-[#005A9C] text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-[#00E5A0] text-[#050B14] shadow-lg'
+                  : 'bg-[#0D1B30] text-gray-300 hover:bg-[#1E2D45] border border-[#1E2D45]'
               }`}
             >
               {category}
@@ -248,7 +248,7 @@ export default function TechnicalBlog() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group bg-[#0D1B30] border border-[#1E2D45] rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer"
                 whileHover={{ y: -3 }}
               >
                 <div className="relative h-44 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
@@ -275,11 +275,11 @@ export default function TechnicalBlog() {
                   <span>{post.readTime}</span>
                 </div>
 
-                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-[#005A9C] transition-colors line-clamp-2">
+                <h3 className="text-lg font-bold mb-2 text-white group-hover:text-[#42A5F5] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
                 
-                <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                <p className="text-gray-400 text-sm mb-3 line-clamp-2">
                   {post.excerpt}
                 </p>
 
@@ -287,7 +287,7 @@ export default function TechnicalBlog() {
                   {post.tags.slice(0, 3).map((tag) => (
                     <span 
                       key={tag}
-                      className="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs rounded"
+                      className="px-2 py-0.5 bg-white/5 text-gray-400 text-xs rounded"
                     >
                       {tag}
                     </span>
@@ -295,7 +295,7 @@ export default function TechnicalBlog() {
                 </div>
 
                 <div className="flex items-center">
-                  <span className="inline-flex items-center text-[#005A9C] group-hover:text-[#00BFA5] font-medium text-sm">
+                  <span className="inline-flex items-center text-[#42A5F5] group-hover:text-[#00E5A0] font-medium text-sm">
                     Read More
                     <i className="fas fa-arrow-right ml-1 text-xs"></i>
                   </span>
@@ -315,7 +315,7 @@ export default function TechnicalBlog() {
         >
           <Link 
             href="/blog" 
-            className="bg-[#005A9C] hover:bg-[#003D7A] text-white px-8 py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl text-lg font-semibold"
+            className="bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] hover:from-[#00FFB3] hover:to-[#5AB3F5] text-[#050B14] px-8 py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl text-lg font-bold"
           >
             View All Articles
           </Link>

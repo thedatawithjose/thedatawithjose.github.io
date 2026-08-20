@@ -18,7 +18,7 @@ export default function Portfolio() {
     totalProjects: '12+',
     linesOfCode: '25K+',
     clientsSatisfied: '8+',
-    averageROI: '120%'
+    marketExperience: '8+'
   };
 
   // Enhanced project data with more details
@@ -29,28 +29,28 @@ export default function Portfolio() {
       category: 'trading',
       type: 'Algorithmic Trading',
       description: 'Ornstein-Uhlenbeck process-based mean reversion strategy with machine learning optimization. Features real-time execution, risk management, and performance analytics.',
-      detailedDescription: 'This trading system implements the Ornstein-Uhlenbeck stochastic process to identify mean-reverting assets and execute profitable trades. The system includes risk management protocols, real-time market data processing, and automated parameter optimization using machine learning techniques.',
+      detailedDescription: 'This trading system implements the Ornstein-Uhlenbeck stochastic process to identify mean-reverting assets and execute trades systematically. The system includes risk management protocols, real-time market data processing, and automated parameter optimization — validated out-of-sample and with walk-forward analysis.',
       technologies: ['Python', 'Pandas', 'NumPy', 'SciPy', 'Matplotlib', 'yfinance', 'Docker', 'Redis'],
       results: {
-        cagr: '15%',
-        sharpe: '1.8',
-        maxDrawdown: '-15%',
-        winRate: '67%'
+        validation: 'Walk-Forward',
+        testing: 'Out-of-Sample',
+        sizing: 'Dynamic',
+        operation: '24/7'
       },
       metrics: {
-        'Annual Return': '15%',
-        'Sharpe Ratio': '1.8',
-        'Max Drawdown': '-15%',
-        'Win Rate': '67%',
-        'Total Trades': '1,247',
-        'Avg Trade Duration': '3 days'
+        'Validation': 'Walk-Forward',
+        'Testing': 'Out-of-Sample',
+        'Position Sizing': 'Dynamic',
+        'Execution': 'Automated',
+        'Deployment': 'Containerized',
+        'Monitoring': '24/7'
       },
       image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop',
       link: '/portfolio/mean-reversion-ou',
       featured: true,
-      clientTestimonial: "The trading bot delivered solid performance with good risk management.",
+      clientTestimonial: "The trading bot delivered disciplined, automated execution with solid risk management.",
       clientName: "TradeFlow Capital",
-      impact: "Delivered consistent trading performance with good risk controls",
+      impact: "Systematic execution with validation-first development and risk controls",
       challenges: ['Real-time data processing', 'Risk management optimization', 'Market regime detection'],
       solutions: ['Implemented streaming data pipeline', 'Developed dynamic position sizing', 'Created regime classification model']
     },
@@ -58,7 +58,7 @@ export default function Portfolio() {
       id: 2,
       title: 'Edgar SEC Parser',
       category: 'data-engineering',
-      type: 'Data Engineering',
+      type: 'Research & Data',
       description: 'High-performance SEC filing extraction system with SGML and XBRL parsing. Processes complex regulatory documents with intelligent content detection.',
       detailedDescription: 'A comprehensive system designed to parse and extract structured data from SEC EDGAR filings. Handles multiple document formats including 10-K, 10-Q, and 8-K forms with robust error handling and data validation.',
       technologies: ['Python', 'SQLAlchemy', 'PostgreSQL', 'Docker', 'Apache Airflow', 'Redis'],
@@ -89,7 +89,7 @@ export default function Portfolio() {
       id: 3,
       title: 'Financial Data Pipeline',
       category: 'data-engineering',
-      type: 'Data Engineering',
+      type: 'Research & Data',
       description: 'Scalable ETL pipeline for real-time market data ingestion, transformation, and analysis. Handles multiple data sources with automated quality checks.',
       detailedDescription: 'A robust data pipeline architecture that processes real-time market data from multiple sources, performs complex transformations, and delivers clean, analysis-ready data to downstream systems.',
       technologies: ['Python', 'Apache Spark', 'Kafka', 'PostgreSQL', 'TimescaleDB', 'Docker', 'Kubernetes'],
@@ -125,25 +125,25 @@ export default function Portfolio() {
       detailedDescription: 'A trading system that implements dual moving average crossover strategies enhanced with dynamic position sizing, stop-loss management, and market volatility adjustments.',
       technologies: ['Python', 'Pandas', 'Backtrader', 'REST API', 'Docker', 'PostgreSQL'],
       results: {
-        cagr: '12%',
-        sharpe: '1.5',
-        maxDrawdown: '-18%',
-        winRate: '62%'
+        validation: 'Backtested',
+        operation: '24/7',
+        deployment: 'Dockerized',
+        risk: 'Controls Built-In'
       },
       metrics: {
-        'Annual Return': '12%',
-        'Sharpe Ratio': '1.5',
-        'Max Drawdown': '-18%',
-        'Win Rate': '62%',
-        'Total Trades': '892',
-        'Profit Factor': '1.4'
+        'Validation': 'Backtested',
+        'Operation': '24/7 Autonomous',
+        'Deployment': 'Dockerized',
+        'Risk Controls': 'Built-In',
+        'Position Sizing': 'Dynamic',
+        'Monitoring': 'Automated'
       },
       image: 'https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&h=600&fit=crop',
       link: '/portfolio/moving-average-bot',
       featured: false,
-      clientTestimonial: "Consistent performance with excellent risk-adjusted returns.",
+      clientTestimonial: "Reliable autonomous operation with disciplined risk management.",
       clientName: "Algo Capital",
-      impact: "Generated steady trading returns",
+      impact: "Automated 24/7 operation with built-in risk controls",
       challenges: ['Market noise filtering', 'Position sizing optimization', 'Risk management'],
       solutions: ['Implemented adaptive filtering', 'Developed dynamic sizing', 'Created comprehensive risk controls']
     },
@@ -213,9 +213,9 @@ export default function Portfolio() {
 
   const categories = [
     { id: 'all', name: 'All Projects', count: projects.length, color: 'gray' },
-    { id: 'data-engineering', name: 'Data Engineering', count: projects.filter(p => p.category === 'data-engineering').length, color: 'green' },
+    { id: 'data-engineering', name: 'Research & Data', count: projects.filter(p => p.category === 'data-engineering').length, color: 'green' },
     { id: 'trading', name: 'Algorithmic Trading', count: projects.filter(p => p.category === 'trading').length, color: 'purple' },
-    { id: 'data-science', name: 'Data Science & ML', count: projects.filter(p => p.category === 'data-science').length, color: 'blue' }
+    { id: 'data-science', name: 'Quant Research', count: projects.filter(p => p.category === 'data-science').length, color: 'blue' }
   ];
 
   const featuredProjects = projects.filter(project => project.featured);
@@ -242,9 +242,9 @@ export default function Portfolio() {
   return (
     <>
       <StructuredData data={generatePortfolioSchema()} />
-      <div className="min-h-screen bg-white text-gray-900">
+      <div className="min-h-screen bg-[#050B14] text-[#E6EDF3]">
         {/* Preloader */}
-        <div id="preloader" className="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div id="preloader" className="fixed inset-0 bg-[#050B14] z-50 flex items-center justify-center">
           <div className="jumper flex space-x-2">
             <div className="w-4 h-4 bg-green-500 rounded-full animate-bounce"></div>
             <div className="w-4 h-4 bg-green-500 rounded-full animate-bounce"></div>
@@ -303,12 +303,12 @@ export default function Portfolio() {
                 transition={{ delay: 0.4, duration: 0.6 }}
               >
                 <p className="text-xl text-gray-200 mb-4 leading-relaxed">
-                  Real-world data engineering and trading systems that solve actual business problems
+                  Trading systems and research infrastructure — engineered from research to execution
                 </p>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 inline-block">
                   <p className="text-gray-200 text-sm leading-relaxed italic">
-                    "From high-frequency trading systems to enterprise data pipelines —
-                    each project represents production-grade solutions with measurable impact."
+                    "From systematic trading systems to market data infrastructure —
+                    each project is researched rigorously, tested honestly, and engineered for the real world."
                   </p>
                 </div>
               </m.div>
@@ -324,10 +324,10 @@ export default function Portfolio() {
                   <i className="fas fa-chart-line mr-2"></i>Trading Systems
                 </span>
                 <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-500/30">
-                  <i className="fas fa-database mr-2"></i>Data Engineering
+                  <i className="fas fa-database mr-2"></i>Research & Data
                 </span>
                 <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30">
-                  <i className="fas fa-robot mr-2"></i>ML Systems
+                  <i className="fas fa-robot mr-2"></i>Quant Research
                 </span>
               </m.div>
             </div>
@@ -355,9 +355,9 @@ export default function Portfolio() {
                 <div className="text-xs text-gray-400 mt-1">Global Projects</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-orange-400 mb-2">{portfolioStats.averageROI}</div>
-                <div className="text-gray-300 text-sm">Average ROI</div>
-                <div className="text-xs text-gray-400 mt-1">Measured Impact</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">{portfolioStats.marketExperience}</div>
+                <div className="text-gray-300 text-sm">Years Market Experience</div>
+                <div className="text-xs text-gray-400 mt-1">Futures · FX · Crypto · Equities</div>
               </div>
             </m.div>
 
@@ -371,7 +371,7 @@ export default function Portfolio() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center"
+                  className="group bg-gradient-to-r from-[#00E5A0] to-[#00C98C] hover:from-[#00FFB3] hover:to-[#00E5A0] text-[#050B14] px-8 py-4 rounded-xl font-bold transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center"
                 >
                   <i className="fas fa-comments mr-2"></i>
                   Discuss Your Project
@@ -391,7 +391,7 @@ export default function Portfolio() {
         </m.div>
 
         {/* Enhanced Featured Projects Section */}
-        <div id="featured-projects" className="py-20 bg-gray-50">
+        <div id="featured-projects" className="py-20 bg-[#0A1526]">
           <div className="container mx-auto px-4">
             <m.div
               className="text-center mb-16"
@@ -399,29 +399,29 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0097A7] mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#00E5A0] mb-4">
                 Featured Production Systems
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
                 Real-world implementations that demonstrate expertise in high-stakes environments
-                where reliability, performance, and business impact are non-negotiable.
+                where robustness, validation, and capital protection are non-negotiable.
               </p>
 
               {/* Project Categories */}
               <div className="flex flex-wrap justify-center gap-4">
-                <div className="px-4 py-2 bg-green-100 text-green-800 rounded-lg text-sm font-medium">
+                <div className="px-4 py-2 bg-[#00E5A0]/15 text-[#00E5A0] rounded-lg text-sm font-medium border border-[#00E5A0]/30">
                   <i className="fas fa-chart-line mr-2"></i>
-                  High-Frequency Trading
+                  Trading Systems
                 </div>
-                <div className="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg text-sm font-medium">
+                <div className="px-4 py-2 bg-blue-500/15 text-blue-300 rounded-lg text-sm font-medium border border-blue-500/30">
                   <i className="fas fa-stream mr-2"></i>
-                  Real-time Data Pipelines
+                  Market Data Pipelines
                 </div>
-                <div className="px-4 py-2 bg-purple-100 text-purple-800 rounded-lg text-sm font-medium">
+                <div className="px-4 py-2 bg-purple-500/15 text-purple-300 rounded-lg text-sm font-medium border border-purple-500/30">
                   <i className="fas fa-robot mr-2"></i>
-                  ML in Production
+                  Quant Research
                 </div>
-                <div className="px-4 py-2 bg-orange-100 text-orange-800 rounded-lg text-sm font-medium">
+                <div className="px-4 py-2 bg-orange-500/15 text-orange-300 rounded-lg text-sm font-medium border border-orange-500/30">
                   <i className="fas fa-shield-alt mr-2"></i>
                   Risk Management
                 </div>
@@ -432,7 +432,7 @@ export default function Portfolio() {
               {featuredProjects.map((project, index) => (
                 <m.div
                   key={project.id}
-                  className="bg-white rounded-2xl shadow-xl overflow-hidden"
+                  className="bg-[#0D1B30] border border-[#1E2D45] rounded-2xl shadow-xl overflow-hidden"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
@@ -461,15 +461,15 @@ export default function Portfolio() {
                   </div>
 
                   <div className="p-6">
-                    <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                    <h3 className="text-2xl font-bold mb-3 text-white">{project.title}</h3>
+                    <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
 
                     {/* Key Metrics */}
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       {Object.entries(project.metrics).slice(0, 4).map(([key, value]) => (
-                        <div key={key} className="text-center p-3 bg-gray-50 rounded-lg">
-                          <div className="text-lg font-bold text-green-500">{value}</div>
-                          <div className="text-xs text-gray-600">{key}</div>
+                        <div key={key} className="text-center p-3 bg-[#0A1526] rounded-lg">
+                          <div className="text-lg font-bold text-[#00E5A0] font-mono">{value}</div>
+                          <div className="text-xs text-gray-400">{key}</div>
                         </div>
                       ))}
                     </div>
@@ -480,13 +480,13 @@ export default function Portfolio() {
                         {project.technologies.slice(0, 4).map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-medium"
+                            className="px-2 py-1 bg-white/5 border border-[#1E2D45] text-gray-300 rounded text-xs font-medium"
                           >
                             {tech}
                           </span>
                         ))}
                         {project.technologies.length > 4 && (
-                          <span className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs">
+                          <span className="px-2 py-1 bg-white/5 text-gray-500 rounded text-xs">
                             +{project.technologies.length - 4} more
                           </span>
                         )}
@@ -494,14 +494,14 @@ export default function Portfolio() {
                     </div>
 
                     {/* Client Impact */}
-                    <div className="mb-4 p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
-                      <div className="text-sm text-green-700 font-semibold mb-1">Impact</div>
-                      <div className="text-sm text-green-600">{project.impact}</div>
+                    <div className="mb-4 p-3 bg-[#00E5A0]/10 rounded-lg border-l-4 border-[#00E5A0]">
+                      <div className="text-sm text-[#00E5A0] font-semibold mb-1">Impact</div>
+                      <div className="text-sm text-gray-300">{project.impact}</div>
                     </div>
 
                     <Link
                       href={project.link}
-                      className="block text-center bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-colors"
+                      className="block text-center bg-[#00E5A0] text-[#050B14] py-3 px-6 rounded-lg font-bold hover:bg-[#00FFB3] transition-colors"
                     >
                       Explore Project →
                     </Link>
@@ -521,9 +521,9 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-5xl font-bold mb-6 text-[#0097A7]">All Projects</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-                Browse through my complete portfolio of data engineering, trading, and machine learning solutions.
+              <h2 className="text-5xl font-bold mb-6 text-[#00E5A0]">All Projects</h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+                Browse my complete portfolio of trading systems, research infrastructure, and data solutions.
               </p>
 
               {/* Search Bar */}
@@ -535,7 +535,7 @@ export default function Portfolio() {
                     placeholder="Search projects, technologies..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white shadow-sm"
+                    className="w-full pl-12 pr-4 py-3 bg-[#0D1B30] border border-[#1E2D45] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:border-transparent text-white placeholder-gray-500 shadow-sm"
                     aria-label="Search projects"
                   />
                   {searchTerm && (
@@ -568,7 +568,7 @@ export default function Portfolio() {
                           : category.color === 'purple'
                             ? 'bg-purple-500 text-white shadow-lg'
                             : 'bg-blue-500 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md hover:shadow-lg'
+                      : 'bg-[#0D1B30] text-gray-300 hover:bg-[#1E2D45] shadow-md hover:shadow-lg border border-[#1E2D45]'
                     }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -576,7 +576,7 @@ export default function Portfolio() {
                   {category.name}
                   <span className={`ml-2 px-2 py-1 rounded-full text-xs ${filter === category.id
                       ? 'bg-white/20 text-white'
-                      : 'bg-gray-100 text-gray-600'
+                      : 'bg-white/5 text-gray-400'
                     }`}>
                     {category.count}
                   </span>
@@ -587,7 +587,7 @@ export default function Portfolio() {
             {/* Results Counter */}
             {filteredProjects.length > 0 && (
               <div className="text-center mb-8">
-                <p className="text-gray-600">
+                <p className="text-gray-400">
                   Showing {filteredProjects.length} of {projects.length} projects
                   {searchTerm && <span> for "{searchTerm}"</span>}
                 </p>
@@ -604,7 +604,7 @@ export default function Portfolio() {
               {filteredProjects.map((project, index) => (
                 <m.div
                   key={project.id}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden group"
+                  className="bg-[#0D1B30] border border-[#1E2D45] rounded-xl shadow-lg overflow-hidden group"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   whileHover={{ y: -8, scale: 1.02 }}
@@ -637,19 +637,19 @@ export default function Portfolio() {
                   </div>
 
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-[#42A5F5] transition-colors duration-300 line-clamp-2 text-white">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">
+                    <p className="text-gray-400 text-sm leading-relaxed line-clamp-3 mb-4">
                       {project.description}
                     </p>
 
                     {/* Key Metrics with better visual hierarchy */}
                     <div className="grid grid-cols-2 gap-3 mb-4">
                       {Object.entries(project.metrics).slice(0, 4).map(([key, value]) => (
-                        <div key={key} className="bg-gradient-to-br from-gray-50 to-gray-100 p-3 rounded-lg text-center border border-gray-100 hover:border-blue-200 transition-colors">
-                          <div className="text-base font-bold text-blue-600 mb-1">{value}</div>
-                          <div className="text-xs text-gray-500 font-medium leading-tight">{key}</div>
+                        <div key={key} className="bg-gradient-to-br from-[#0A1526] to-[#071020] p-3 rounded-lg text-center border border-[#1E2D45] hover:border-[#00E5A0]/40 transition-colors">
+                          <div className="text-base font-bold text-[#00E5A0] mb-1 font-mono">{value}</div>
+                          <div className="text-xs text-gray-400 font-medium leading-tight">{key}</div>
                         </div>
                       ))}
                     </div>
@@ -660,13 +660,13 @@ export default function Portfolio() {
                         {project.technologies.slice(0, 3).map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium border border-blue-100 hover:bg-blue-100 transition-colors"
+                            className="px-3 py-1 bg-white/5 text-gray-300 rounded-full text-xs font-medium border border-[#1E2D45] hover:bg-white/10 transition-colors"
                           >
                             {tech}
                           </span>
                         ))}
                         {project.technologies.length > 3 && (
-                          <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium border border-gray-200">
+                          <span className="px-3 py-1 bg-white/5 text-gray-500 rounded-full text-xs font-medium border border-[#1E2D45]">
                             +{project.technologies.length - 3} more
                           </span>
                         )}
@@ -675,11 +675,11 @@ export default function Portfolio() {
 
                     {/* Client Testimonial */}
                     {project.clientTestimonial && (
-                      <div className="mb-4 p-3 bg-blue-50 rounded-lg border-l-3 border-blue-500">
-                        <div className="text-xs text-blue-600 italic mb-1">
+                      <div className="mb-4 p-3 bg-[#42A5F5]/10 rounded-lg border-l-4 border-[#42A5F5]">
+                        <div className="text-xs text-gray-300 italic mb-1">
                           "{project.clientTestimonial}"
                         </div>
-                        <div className="text-xs text-blue-500 font-semibold">
+                        <div className="text-xs text-[#42A5F5] font-semibold">
                           — {project.clientName}
                         </div>
                       </div>
@@ -687,7 +687,7 @@ export default function Portfolio() {
 
                     <Link
                       href={project.link}
-                      className="block text-center bg-gray-900 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-500 transition-colors text-sm"
+                      className="block text-center bg-[#0A1526] border border-[#1E2D45] text-gray-200 py-2 px-4 rounded-lg font-semibold hover:bg-[#00E5A0] hover:text-[#050B14] hover:border-[#00E5A0] transition-colors text-sm"
                     >
                       View Details →
                     </Link>
@@ -704,11 +704,11 @@ export default function Portfolio() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <i className="fas fa-search text-3xl text-gray-400" aria-hidden="true"></i>
+                <div className="w-24 h-24 bg-[#0D1B30] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <i className="fas fa-search text-3xl text-gray-500" aria-hidden="true"></i>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-700 mb-2">No projects found</h3>
-                <p className="text-gray-500 mb-6 max-w-md mx-auto">
+                <h3 className="text-2xl font-bold text-gray-200 mb-2">No projects found</h3>
+                <p className="text-gray-400 mb-6 max-w-md mx-auto">
                   {searchTerm
                     ? `No projects match "${searchTerm}". Try adjusting your search terms.`
                     : `No projects found in the ${filter} category.`
@@ -718,7 +718,7 @@ export default function Portfolio() {
                   {searchTerm && (
                     <button
                       onClick={() => setSearchTerm('')}
-                      className="px-6 py-3 bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-colors font-semibold"
+                      className="px-6 py-3 bg-[#42A5F5] text-[#050B14] rounded-xl hover:bg-[#5AB3F5] transition-colors font-semibold"
                     >
                       Clear Search
                     </button>
@@ -728,7 +728,7 @@ export default function Portfolio() {
                       setFilter('all');
                       setSearchTerm('');
                     }}
-                    className="px-6 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors font-semibold"
+                    className="px-6 py-3 border border-[#1E2D45] text-gray-300 rounded-xl hover:bg-white/5 transition-colors font-semibold"
                   >
                     Show All Projects
                   </button>
@@ -739,7 +739,7 @@ export default function Portfolio() {
         </div>
 
         {/* Technical Expertise Section */}
-        <div className="py-20 bg-gray-50">
+        <div className="py-20 bg-[#0A1526]">
           <div className="container mx-auto px-4">
             <m.div
               className="text-center mb-16"
@@ -747,54 +747,54 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold mb-6 text-[#0097A7]">Technical Expertise</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Technologies and methodologies that power these innovative solutions.
+              <h2 className="text-4xl font-bold mb-6 text-[#00E5A0]">Technical Expertise</h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                Technologies and methodologies that power these systems.
               </p>
             </m.div>
 
             <div className="grid md:grid-cols-4 gap-8">
               {[
                 {
-                  category: 'Data Engineering',
-                  technologies: ['Python', 'SQL', 'Apache Spark', 'PostgreSQL', 'Docker', 'Kubernetes', 'Airflow'],
+                  category: 'Research & Data',
+                  technologies: ['Python', 'SQL', 'PostgreSQL', 'TimescaleDB', 'Docker', 'Airflow'],
                   icon: 'fas fa-database',
                   color: 'green'
                 },
                 {
-                  category: 'Machine Learning',
-                  technologies: ['TensorFlow', 'XGBoost', 'Scikit-learn', 'MLflow', 'PyTorch', 'Pandas'],
+                  category: 'Validation & ML',
+                  technologies: ['Scikit-learn', 'NumPy', 'SciPy', 'Pandas', 'Statsmodels', 'SARIMA'],
                   icon: 'fas fa-brain',
                   color: 'blue'
                 },
                 {
                   category: 'Trading Systems',
-                  technologies: ['Backtrader', 'QuantLib', 'NumPy', 'SciPy', 'Redis', 'WebSocket'],
+                  technologies: ['Backtrader', 'NinjaScript', 'Pine Script', 'Redis', 'WebSocket'],
                   icon: 'fas fa-chart-line',
                   color: 'purple'
                 },
                 {
-                  category: 'Cloud & DevOps',
-                  technologies: ['AWS', 'Azure', 'Git', 'CI/CD', 'Terraform', 'Monitoring'],
+                  category: 'Delivery & Infra',
+                  technologies: ['AWS', 'Git', 'CI/CD', 'Docker', 'Monitoring', 'REST APIs'],
                   icon: 'fas fa-cloud',
                   color: 'orange'
                 }
               ].map((expertise, index) => (
                 <m.div
                   key={index}
-                  className="bg-white p-6 rounded-xl shadow-lg text-center"
+                  className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-xl shadow-lg text-center"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   whileHover={{ y: -5 }}
                 >
-                  <div className={`w-16 h-16 bg-${expertise.color}-500 rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <i className={`${expertise.icon} text-2xl text-white`}></i>
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#00E5A0] to-[#42A5F5] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className={`${expertise.icon} text-2xl text-[#050B14]`}></i>
                   </div>
-                  <h3 className="text-xl font-bold mb-4">{expertise.category}</h3>
+                  <h3 className="text-xl font-bold mb-4 text-white">{expertise.category}</h3>
                   <div className="space-y-2">
                     {expertise.technologies.map((tech, techIndex) => (
-                      <div key={techIndex} className="px-3 py-1 bg-gray-100 rounded-full text-sm">
+                      <div key={techIndex} className="px-3 py-1 bg-white/5 border border-[#1E2D45] rounded-full text-sm text-gray-300">
                         {tech}
                       </div>
                     ))}
@@ -814,32 +814,32 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold mb-6 text-[#0097A7]">Measurable Impact</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Real results delivered across multiple projects and industries.
+              <h2 className="text-4xl font-bold mb-6 text-[#00E5A0]">What Matters Most</h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                The engineering standards behind every system I build.
               </p>
             </m.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { metric: 'Revenue', description: 'Generated for Clients', icon: 'fas fa-dollar-sign', color: 'green' },
-                { metric: 'Cost-Optimized', description: 'Infrastructure Design', icon: 'fas fa-chart-down', color: 'blue' },
-                { metric: 'High-Availability', description: 'System Architecture', icon: 'fas fa-shield-alt', color: 'purple' },
-                { metric: 'Performance', description: 'Optimized Systems', icon: 'fas fa-rocket', color: 'orange' }
+                { metric: 'Validated', description: 'Walk-Forward & Out-of-Sample', icon: 'fas fa-check-double', color: 'green' },
+                { metric: 'High-Availability', description: 'Fault-Tolerant Design', icon: 'fas fa-shield-alt', color: 'purple' },
+                { metric: 'Risk-Controlled', description: 'Capital Protection First', icon: 'fas fa-balance-scale', color: 'blue' },
+                { metric: 'Observable', description: 'Monitored & Instrumented', icon: 'fas fa-eye', color: 'orange' }
               ].map((impact, index) => (
                 <m.div
                   key={index}
-                  className="text-center p-6 bg-white rounded-xl shadow-lg"
+                  className="text-center p-6 bg-[#0D1B30] border border-[#1E2D45] rounded-xl shadow-lg"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className={`w-16 h-16 bg-${impact.color}-500 rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <i className={`${impact.icon} text-2xl text-white`}></i>
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#00E5A0] to-[#42A5F5] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className={`${impact.icon} text-2xl text-[#050B14]`}></i>
                   </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{impact.metric}</div>
-                  <div className="text-gray-600">{impact.description}</div>
+                  <div className="text-3xl font-bold text-white mb-2">{impact.metric}</div>
+                  <div className="text-gray-400">{impact.description}</div>
                 </m.div>
               ))}
             </div>
@@ -847,7 +847,7 @@ export default function Portfolio() {
         </div>
 
         {/* Call to Action */}
-        <div className="py-20 bg-gradient-to-br from-green-500 to-blue-600 text-white">
+        <div className="py-20 bg-gradient-to-br from-[#0D1B30] to-[#071020] text-white border-t border-[#1E2D45]">
           <div className="container mx-auto px-4 text-center">
             <m.h2
               className="text-5xl font-bold mb-6"
@@ -855,15 +855,15 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              Ready to Build Something Amazing?
+              Ready to Build Something Robust?
             </m.h2>
             <m.p
-              className="text-xl mb-8 max-w-2xl mx-auto"
+              className="text-xl mb-8 max-w-2xl mx-auto text-gray-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              Let's discuss your project requirements and create data solutions that drive real business value.
+              Let's discuss your strategy — and build a system that can be researched rigorously, tested honestly, and executed reliably.
             </m.p>
             <m.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -875,7 +875,7 @@ export default function Portfolio() {
                 href="https://calendly.com/datawithjose/consultation"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-green-500 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg inline-flex items-center justify-center"
+                className="bg-[#00E5A0] text-[#050B14] px-8 py-4 rounded-lg font-bold hover:bg-[#00FFB3] transition-colors text-lg inline-flex items-center justify-center"
               >
                 <i className="fas fa-calendar-check mr-2"></i>
                 Get a Free Quote
@@ -883,7 +883,7 @@ export default function Portfolio() {
               </a>
               <Link
                 href="/services"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-500 transition-colors text-lg"
+                className="border-2 border-[#1E2D45] text-gray-200 px-8 py-4 rounded-lg font-semibold hover:bg-white/5 hover:text-[#00E5A0] transition-colors text-lg"
               >
                 View Services
               </Link>
@@ -892,7 +892,7 @@ export default function Portfolio() {
         </div>
 
         {/* Enhanced CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white">
+        <section className="py-20 bg-gradient-to-br from-[#050B14] via-[#0A1526] to-[#0D1B30] text-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <m.div
@@ -900,11 +900,11 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0097A7]">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#00E5A0]">
                   Ready to Build Something Production-Ready?
                 </h2>
-                <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Whether you need real-time data pipelines, trading systems, or ML in production —
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                  Whether you need systematic strategy development, backtesting infrastructure, or automated execution —
                   let's discuss how these approaches can solve your specific challenges.
                 </p>
               </m.div>
@@ -917,16 +917,16 @@ export default function Portfolio() {
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
                 <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-comments text-2xl text-white"></i>
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#00E5A0] to-[#00C98C] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-comments text-2xl text-[#050B14]"></i>
                   </div>
                   <h3 className="text-xl font-bold mb-3">Discuss Your Project</h3>
                   <p className="text-gray-300 mb-4 text-sm">
-                    Have a specific data engineering or trading system challenge? Let's explore how these proven approaches apply to your situation.
+                    Have a specific strategy or trading infrastructure challenge? Let's explore how a validation-first approach applies to your situation.
                   </p>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                    className="inline-flex items-center bg-[#00E5A0] hover:bg-[#00FFB3] text-[#050B14] px-6 py-3 rounded-lg font-bold transition-colors"
                   >
                     <i className="fas fa-arrow-right mr-2"></i>
                     Start Conversation
@@ -934,7 +934,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="fas fa-file-alt text-2xl text-white"></i>
                   </div>
                   <h3 className="text-xl font-bold mb-3">Technical Deep-Dives</h3>
@@ -966,11 +966,11 @@ export default function Portfolio() {
                   </div>
                   <div className="flex items-center justify-center">
                     <i className="fas fa-chart-line text-blue-400 mr-2"></i>
-                    <span>Real trading experience</span>
+                    <span>8 years market experience</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <i className="fas fa-clock text-purple-400 mr-2"></i>
-                    <span>Fast response times</span>
+                    <span>Validation-first methodology</span>
                   </div>
                 </div>
               </m.div>
@@ -985,7 +985,7 @@ export default function Portfolio() {
                 <p className="text-gray-300 mb-4 text-sm">Connect with me:</p>
                 <div className="flex justify-center gap-4">
                   <a
-                    href="https://linkedin.com/in/joseacostar"
+                    href="https://www.linkedin.com/in/datawithjose"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Follow on LinkedIn"

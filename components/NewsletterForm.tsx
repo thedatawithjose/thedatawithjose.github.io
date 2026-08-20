@@ -93,7 +93,7 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          You'll receive valuable data engineering insights weekly.
+          You'll receive quantitative trading insights weekly.
         </m.p>
       </m.div>
     );
@@ -104,7 +104,7 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`bg-gradient-to-br from-[#0A192F] to-[#1A3A52] rounded-lg p-10 text-white ${className}`}
+      className={`bg-gradient-to-br from-[#0A1526] to-[#0D1B30] rounded-lg p-10 text-white border border-[#1E2D45] ${className}`}
     >
       <div className="text-center mb-10">
         <m.div
@@ -112,11 +112,11 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 bg-gradient-to-r from-white via-gray-100 to-[#00BFA5] bg-clip-text text-transparent leading-tight">
-            Stay Ahead in Data Engineering
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 bg-gradient-to-r from-white via-gray-100 to-[#00E5A0] bg-clip-text text-transparent leading-tight">
+            Stay Ahead in Quantitative Trading
           </h3>
           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 font-medium leading-relaxed max-w-2xl mx-auto">
-            Get weekly insights, case studies, and industry trends delivered to your inbox
+            Get weekly insights on algorithmic trading systems, backtesting, and market structure delivered to your inbox
           </p>
         </m.div>
         
@@ -127,20 +127,20 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
           transition={{ delay: 0.4 }}
         >
           <div className="flex items-center bg-white/5 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] flex items-center justify-center mr-3">
-              <i className="fas fa-chart-line text-white text-xs"></i>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] flex items-center justify-center mr-3">
+              <i className="fas fa-chart-line text-[#050B14] text-xs"></i>
             </div>
-            <span className="text-gray-200 font-medium">Industry Insights</span>
+            <span className="text-gray-200 font-medium">Strategy Insights</span>
           </div>
           <div className="flex items-center bg-white/5 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#42A5F5] to-[#2196F3] flex items-center justify-center mr-3">
               <i className="fas fa-code text-white text-xs"></i>
             </div>
-            <span className="text-gray-200 font-medium">Technical Tips</span>
+            <span className="text-gray-200 font-medium">Technical Deep Dives</span>
           </div>
           <div className="flex items-center bg-white/5 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#005A9C] to-[#00BFA5] flex items-center justify-center mr-3">
-              <i className="fas fa-briefcase text-white text-xs"></i>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#00C98C] to-[#00E5A0] flex items-center justify-center mr-3">
+              <i className="fas fa-briefcase text-[#050B14] text-xs"></i>
             </div>
             <span className="text-gray-200 font-medium">Case Studies</span>
           </div>

@@ -11,7 +11,7 @@ type Message = {
 export default function KalyptoChat() {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
-        { role: 'model', content: "Hi! I'm Cami. Ask me anything about Jose's data engineering experience!" }
+        { role: 'model', content: "Hi! I'm Cami. Ask me anything about Jose's quantitative development experience — algorithmic trading systems, from research to execution." }
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isLoading, setIsLoading] = useState(false);

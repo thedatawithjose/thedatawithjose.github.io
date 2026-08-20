@@ -40,14 +40,14 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
 
   const ctaVariants = {
     primary: {
-      title: "Ready to Build Reliable Data Systems?",
-      subtitle: "Let's discuss your specific needs and create a custom solution",
+      title: "Ready to Build Robust Trading Systems?",
+      subtitle: "Let's discuss your strategy and create a system that survives real money",
       urgency: null,
       mainCTA: {
         text: "Start Your Project",
-        href: "mailto:datawithjose@outlook.com?subject=Data Engineering Project Discussion&body=Hi Jose,%0D%0A%0D%0AI'm interested in discussing a data engineering project.%0D%0A%0D%0AProject type:%0D%0A☐ Real-time data pipelines%0D%0A☐ ML in production%0D%0A☐ Data infrastructure optimization%0D%0A☐ Trading algorithms%0D%0A☐ Other: _________%0D%0A%0D%0ATimeline: _________%0D%0ABudget range: _________%0D%0A%0D%0AProject details:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0ABest regards",
+        href: "mailto:datawithjose@outlook.com?subject=Quantitative Development Project Discussion&body=Hi Jose,%0D%0A%0D%0AI'm interested in discussing a quantitative development project.%0D%0A%0D%0AProject type:%0D%0A☐ Strategy research & signal development%0D%0A☐ Backtesting infrastructure%0D%0A☐ Live execution & risk systems%0D%0A☐ Market data pipelines%0D%0A☐ Other: _________%0D%0A%0D%0ATimeline: _________%0D%0ABudget range: _________%0D%0A%0D%0AProject details:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0ABest regards",
         icon: "fas fa-rocket",
-        color: "from-[#00BFA5] to-[#42A5F5]"
+        color: "from-[#00E5A0] to-[#42A5F5]"
       },
       secondaryCTA: {
         text: "View Case Studies",
@@ -56,14 +56,14 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
       }
     },
     secondary: {
-      title: "Questions About Your Data Infrastructure?",
+      title: "Questions About Your Trading Infrastructure?",
       subtitle: "Get expert advice on your specific challenges - no commitment required",
       urgency: null,
       mainCTA: {
         text: "Free 30-Min Consultation",
         href: "mailto:datawithjose@outlook.com?subject=Free Consultation Request&body=Hi Jose,%0D%0A%0D%0AI'd like to schedule a free 30-minute consultation to discuss:%0D%0A%0D%0ACurrent challenges:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0AWhat I'm hoping to achieve:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0APreferred time slots:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0ABest regards",
         icon: "fas fa-comments",
-        color: "from-[#005A9C] to-[#00BFA5]"
+        color: "from-[#42A5F5] to-[#00E5A0]"
       },
       secondaryCTA: {
         text: "Download Resources",
@@ -73,20 +73,20 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
     },
     urgent: {
       title: "Limited Availability This Month",
-      subtitle: "Only 2 project slots remaining for December 2024 - secure yours now",
+      subtitle: "Only 2 project slots remaining - secure yours now",
       urgency: {
         text: "Booking deadline:",
         timeLeft: timeLeft
       },
       mainCTA: {
         text: "Reserve Your Slot Now",
-        href: "mailto:datawithjose@outlook.com?subject=URGENT: Reserve December Project Slot&body=Hi Jose,%0D%0A%0D%0AI want to reserve one of the remaining December project slots.%0D%0A%0D%0AProject urgency: HIGH%0D%0A%0D%0AProject type:%0D%0A☐ Real-time data pipelines%0D%0A☐ ML in production%0D%0A☐ Data infrastructure optimization%0D%0A☐ Trading algorithms%0D%0A☐ Other: _________%0D%0A%0D%0ADesired start date: _________%0D%0ABudget: _________%0D%0A%0D%0AProject overview:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0APlease confirm availability ASAP.%0D%0A%0D%0ABest regards",
+        href: "mailto:datawithjose@outlook.com?subject=URGENT: Reserve Project Slot&body=Hi Jose,%0D%0A%0D%0AI want to reserve one of the remaining project slots.%0D%0A%0D%0AProject urgency: HIGH%0D%0A%0D%0AProject type:%0D%0A☐ Strategy research & signal development%0D%0A☐ Backtesting infrastructure%0D%0A☐ Live execution & risk systems%0D%0A☐ Market data pipelines%0D%0A☐ Other: _________%0D%0A%0D%0ADesired start date: _________%0D%0ABudget: _________%0D%0A%0D%0AProject overview:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0APlease confirm availability ASAP.%0D%0A%0D%0ABest regards",
         icon: "fas fa-bolt",
-        color: "from-[#FF6B35] to-[#FF8E53]"
+        color: "from-[#F5B544] to-[#FF8E53]"
       },
       secondaryCTA: {
         text: "Join Waitlist",
-        href: "mailto:datawithjose@outlook.com?subject=January 2025 Waitlist&body=Hi Jose,%0D%0A%0D%0APlease add me to the January 2025 waitlist.%0D%0A%0D%0AProject details:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0ABest regards",
+        href: "mailto:datawithjose@outlook.com?subject=Waitlist Request&body=Hi Jose,%0D%0A%0D%0APlease add me to the waitlist.%0D%0A%0D%0AProject details:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0ABest regards",
         icon: "fas fa-clock"
       }
     }
@@ -95,7 +95,7 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
   const currentVariant = ctaVariants[variant];
 
   return (
-    <section className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white relative overflow-hidden ${className}`}>
+    <section className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#050B14] via-[#0A1526] to-[#0D1B30] text-white relative overflow-hidden ${className}`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12"></div>
@@ -160,17 +160,17 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
             transition={{ delay: 0.5 }}
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <i className="fas fa-tachometer-alt text-3xl text-[#00BFA5] mb-4"></i>
+              <i className="fas fa-tachometer-alt text-3xl text-[#00E5A0] mb-4"></i>
               <h3 className="font-bold mb-2">Efficient Delivery</h3>
               <p className="text-sm text-gray-300">Most projects completed in 6-10 weeks</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <i className="fas fa-shield-alt text-3xl text-[#42A5F5] mb-4"></i>
-              <h3 className="font-bold mb-2">Quality Focus</h3>
-              <p className="text-sm text-gray-300">High uptime and reliable systems</p>
+              <h3 className="font-bold mb-2">Robustness Focus</h3>
+              <p className="text-sm text-gray-300">Systems built to survive real markets</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <i className="fas fa-handshake text-3xl text-[#005A9C] mb-4"></i>
+              <i className="fas fa-handshake text-3xl text-[#F5B544] mb-4"></i>
               <h3 className="font-bold mb-2">Ongoing Support</h3>
               <p className="text-sm text-gray-300">Post-launch support and documentation</p>
             </div>
@@ -185,7 +185,7 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
           >
             <m.a
               href={currentVariant.mainCTA.href}
-              className={`group bg-gradient-to-r ${currentVariant.mainCTA.color} text-white px-6 sm:px-8 py-4 min-h-[48px] rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center justify-center`}
+              className={`group bg-gradient-to-r ${currentVariant.mainCTA.color} text-[#050B14] px-6 sm:px-8 py-4 min-h-[48px] rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center justify-center`}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >

@@ -15,9 +15,9 @@ export default function MeanReversionOU() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[#050B14] text-[#E6EDF3]">
         {/* Preloader */}
-        <div id="preloader" className="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div id="preloader" className="fixed inset-0 bg-[#050B14] z-50 flex items-center justify-center">
           <div className="jumper flex space-x-2">
             <div className="w-4 h-4 bg-green-500 rounded-full animate-bounce"></div>
             <div className="w-4 h-4 bg-green-500 rounded-full animate-bounce"></div>
@@ -29,7 +29,7 @@ export default function MeanReversionOU() {
 
         {/* Hero Section */}
         <m.div
-          className="page-heading header-text bg-gradient-to-r from-purple-500 to-blue-500 text-white py-32"
+          className="page-heading header-text bg-gradient-to-r from-[#0D1B30] via-[#0A1526] to-[#071020] text-white py-32 border-b border-[#1E2D45]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -71,17 +71,17 @@ export default function MeanReversionOU() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="metric-card bg-green-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">17.89%</div>
-                <div className="text-sm text-gray-600">CAGR</div>
+              <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
+                <div className="text-3xl font-bold text-[#00E5A0] mb-2 font-mono">Walk-Forward</div>
+                <div className="text-sm text-gray-400">Validation</div>
               </div>
-              <div className="metric-card bg-blue-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">2.34</div>
-                <div className="text-sm text-gray-600">Sharpe Ratio</div>
+              <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
+                <div className="text-3xl font-bold text-[#42A5F5] mb-2 font-mono">Out-of-Sample</div>
+                <div className="text-sm text-gray-400">Testing</div>
               </div>
-              <div className="metric-card bg-purple-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">-12.45%</div>
-                <div className="text-sm text-gray-600">Max Drawdown</div>
+              <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
+                <div className="text-3xl font-bold text-[#8B5CF6] mb-2 font-mono">Dynamic</div>
+                <div className="text-sm text-gray-400">Position Sizing</div>
               </div>
             </m.div>
 
@@ -96,7 +96,7 @@ export default function MeanReversionOU() {
                 <i className="fas fa-bullseye text-green-500 mr-3"></i>
                 Objective
               </h2>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed">
                   Develop an automated trading bot that identifies and exploits mean-reversion opportunities in financial markets using the Ornstein-Uhlenbeck (OU) process.
                 </p>
@@ -114,7 +114,7 @@ export default function MeanReversionOU() {
                 <i className="fas fa-cogs text-blue-500 mr-3"></i>
                 Methodology
               </h2>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
                   The bot continuously ingests real-time price data, estimates OU process parameters, and generates trading signals when prices deviate significantly from the modeled mean.
                 </p>
@@ -146,14 +146,14 @@ export default function MeanReversionOU() {
                 <i className="fas fa-chart-line text-purple-500 mr-3"></i>
                 Results
               </h2>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
-                  The strategy consistently delivered positive results in backtesting, demonstrating robust performance across multiple assets.
+                  The strategy was validated out-of-sample and with walk-forward analysis across multiple assets — testing how performance behaves when assumptions change, with realistic transaction costs and execution constraints.
                 </p>
-                <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-                  <p className="text-lg font-semibold text-green-700">
+                <div className="bg-[#00E5A0]/10 p-4 rounded-lg border-l-4 border-[#00E5A0]">
+                  <p className="text-lg font-semibold text-[#00E5A0]">
                     <i className="fas fa-trophy mr-2"></i>
-                    Achieved a Sharpe ratio of 2.34, indicating strong risk-adjusted returns
+                    Validated beyond the backtest: out-of-sample, walk-forward, and sensitivity-tested
                   </p>
                 </div>
               </div>
@@ -170,7 +170,7 @@ export default function MeanReversionOU() {
                 <i className="fas fa-exclamation-triangle text-orange-500 mr-3"></i>
                 Challenges
               </h2>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
                   Key challenges encountered during development and deployment:
                 </p>
@@ -202,12 +202,12 @@ export default function MeanReversionOU() {
                 <i className="fas fa-code text-blue-500 mr-3"></i>
                 Technologies Used
               </h2>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <div className="flex flex-wrap gap-3">
                   {['Python', 'Pandas', 'NumPy', 'SciPy', 'Matplotlib', 'yfinance', 'Docker', 'Jupyter/Binder/Colab'].map((tech, index) => (
                     <span
                       key={index}
-                      className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full font-medium text-sm"
+                      className="px-4 py-2 bg-white/5 border border-[#1E2D45] text-gray-300 rounded-full font-medium text-sm"
                     >
                       {tech}
                     </span>
@@ -227,14 +227,14 @@ export default function MeanReversionOU() {
                 href="https://github.com/thedatawithjose/Mean_Reversion_OU"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center"
+                className="bg-[#0A1526] border border-[#1E2D45] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1E2D45] transition-colors flex items-center justify-center"
               >
                 <i className="fab fa-github text-2xl mr-3"></i>
                 View on GitHub
               </a>
               <Link
                 href="/portfolio"
-                className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center"
+                className="bg-[#00E5A0] text-[#050B14] px-8 py-4 rounded-lg font-bold hover:bg-[#00FFB3] transition-colors flex items-center justify-center"
               >
                 <i className="fas fa-arrow-left mr-2"></i>
                 Back to Portfolio

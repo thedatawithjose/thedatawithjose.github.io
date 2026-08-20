@@ -7,7 +7,7 @@ import Footer from '../../../components/Footer';
 
 export default function EdgarSecParser() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[#050B14] text-[#E6EDF3]">
         <Header />
 
         {/* Hero Section */}
@@ -31,7 +31,7 @@ export default function EdgarSecParser() {
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                <span className="text-sm font-semibold">Data Engineering</span>
+                <span className="text-sm font-semibold">Research & Data</span>
               </m.div>
               <m.h1
                 className="text-5xl font-bold mb-6"
@@ -244,35 +244,35 @@ export default function EdgarSecParser() {
                 <div className="space-y-4">
                   <div className="border-l-4 border-blue-500 pl-4 py-2">
                     <h3 className="font-semibold mb-1">Multi-Format Document Parsing</h3>
-                    <p className="text-gray-700">
+                    <p className="text-gray-300">
                       Implemented hybrid parser architecture to handle SGML, XBRL, and legacy formats seamlessly 
                       with intelligent format detection and automatic parser selection.
                     </p>
                   </div>
                   <div className="border-l-4 border-purple-500 pl-4 py-2">
                     <h3 className="font-semibold mb-1">Error Handling at Scale</h3>
-                    <p className="text-gray-700">
+                    <p className="text-gray-300">
                       Designed comprehensive error recovery system with graceful fallbacks to handle malformed 
                       documents, missing metadata, and parser failures without data loss.
                     </p>
                   </div>
                   <div className="border-l-4 border-green-500 pl-4 py-2">
                     <h3 className="font-semibold mb-1">Performance Optimization</h3>
-                    <p className="text-gray-700">
+                    <p className="text-gray-300">
                       Achieved 16.5 MB/s peak throughput through memory-efficient parsing, batch database operations, 
                       and optimized content detection algorithms.
                     </p>
                   </div>
                   <div className="border-l-4 border-orange-500 pl-4 py-2">
                     <h3 className="font-semibold mb-1">Database Schema Design</h3>
-                    <p className="text-gray-700">
+                    <p className="text-gray-300">
                       Created flexible schema to store diverse filing metadata, financial facts, and document 
                       relationships while maintaining query performance and data integrity.
                     </p>
                   </div>
                   <div className="border-l-4 border-red-500 pl-4 py-2">
                     <h3 className="font-semibold mb-1">Production Deployment</h3>
-                    <p className="text-gray-700">
+                    <p className="text-gray-300">
                       Built production-ready infrastructure with Docker containerization, comprehensive testing, 
                       and deployment automation for reliable operation at scale.
                     </p>
@@ -330,7 +330,7 @@ export default function EdgarSecParser() {
                       href="https://github.com/josetraderx/edgar-sec-parser"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+                      className="bg-[#0A1526] border border-[#1E2D45] text-[#42A5F5] px-8 py-3 rounded-lg font-semibold hover:bg-[#1E2D45] transition-colors inline-flex items-center justify-center"
                     >
                       <i className="fab fa-github mr-2"></i>
                       View on GitHub

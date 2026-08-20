@@ -12,17 +12,17 @@ export default function Header() {
 
   // Helper function for navigation link classes
   const getNavLinkClasses = (href: string, isActive: boolean) => {
-    return `relative px-4 py-2 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:ring-offset-2 ${
+    return `relative px-4 py-2 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:ring-offset-2 focus:ring-offset-[#050B14] ${
       isActive 
-        ? 'text-[#0097A7] font-semibold' 
-        : 'text-gray-600 font-medium hover:text-[#0097A7]'
+        ? 'text-[#00E5A0] font-semibold' 
+        : 'text-gray-300 font-medium hover:text-[#00E5A0]'
     }`;
   };
 
   // Helper function for mobile navigation link classes
   const getMobileNavLinkClasses = (isActive: boolean) => {
-    return `relative text-gray-700 hover:text-[#00BFA5] transition-all duration-300 font-medium py-3 px-4 rounded-lg hover:bg-[#00BFA5]/5 focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:ring-offset-2 ${
-      isActive ? 'text-[#00BFA5] bg-[#00BFA5]/8' : ''
+    return `relative text-gray-300 hover:text-[#00E5A0] transition-all duration-300 font-medium py-3 px-4 rounded-lg hover:bg-[#00E5A0]/10 focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:ring-offset-2 focus:ring-offset-[#0A1526] ${
+      isActive ? 'text-[#00E5A0] bg-[#00E5A0]/10' : ''
     }`;
   };
 
@@ -105,7 +105,7 @@ export default function Header() {
   return (
     <>
       {/* Sub-header */}
-      <div className="sub-header bg-gradient-to-r from-slate-100 via-blue-50 to-teal-50 py-3 border-b border-gray-200/50">
+      <div className="sub-header bg-[#0A1526] py-3 border-b border-[#1E2D45]">
         <div className="container mx-auto px-4">
           <div className="flex justify-end items-center">
             <ul className="right-icons flex space-x-4 md:space-x-6">
@@ -115,9 +115,9 @@ export default function Header() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   aria-label="Visit Jose Acosta's LinkedIn profile (opens in new tab)"
-                  className="group relative p-2 rounded-lg hover:bg-blue-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  className="group relative p-2 rounded-lg hover:bg-blue-500/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0A1526]"
                 >
-                  <i className="fab fa-linkedin text-lg md:text-xl text-blue-600 group-hover:text-blue-700 group-hover:scale-110 transition-all duration-300" aria-hidden="true"></i>
+                  <i className="fab fa-linkedin text-lg md:text-xl text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-all duration-300" aria-hidden="true"></i>
                   <div className="absolute inset-0 rounded-lg bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               </li>
@@ -127,9 +127,9 @@ export default function Header() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   aria-label="Visit Jose Acosta's Instagram profile (opens in new tab)"
-                  className="group relative p-2 rounded-lg hover:bg-pink-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                  className="group relative p-2 rounded-lg hover:bg-pink-500/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-[#0A1526]"
                 >
-                  <i className="fab fa-instagram text-lg md:text-xl text-pink-600 group-hover:text-pink-700 group-hover:scale-110 transition-all duration-300" aria-hidden="true"></i>
+                  <i className="fab fa-instagram text-lg md:text-xl text-pink-400 group-hover:text-pink-300 group-hover:scale-110 transition-all duration-300" aria-hidden="true"></i>
                   <div className="absolute inset-0 rounded-lg bg-pink-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               </li>
@@ -139,10 +139,10 @@ export default function Header() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   aria-label="Visit Jose Acosta's GitHub profile (opens in new tab)"
-                  className="group relative p-2 rounded-lg hover:bg-gray-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                  className="group relative p-2 rounded-lg hover:bg-white/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-[#0A1526]"
                 >
-                  <i className="fab fa-github text-lg md:text-xl text-gray-700 group-hover:text-gray-900 group-hover:scale-110 transition-all duration-300" aria-hidden="true"></i>
-                  <div className="absolute inset-0 rounded-lg bg-gray-700/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <i className="fab fa-github text-lg md:text-xl text-gray-300 group-hover:text-white group-hover:scale-110 transition-all duration-300" aria-hidden="true"></i>
+                  <div className="absolute inset-0 rounded-lg bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               </li>
             </ul>
@@ -151,7 +151,7 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <header className="bg-white shadow-lg border-b border-gray-200 sticky top-0 w-full z-40 transition-all duration-300">
+      <header className="bg-[#050B14]/95 backdrop-blur-md shadow-lg border-b border-[#1E2D45] sticky top-0 w-full z-40 transition-all duration-300">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             {/* Logo + Navigation Group */}
@@ -159,14 +159,14 @@ export default function Header() {
               {/* Logo */}
               <Link 
                 href="/" 
-                className="flex items-center group focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:ring-offset-2 rounded-lg"
-                aria-label="Jose Acosta Data Engineer - Go to homepage"
+                className="flex items-center group focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:ring-offset-2 focus:ring-offset-[#050B14] rounded-lg"
+                aria-label="Jose Acosta Quantitative Developer - Go to homepage"
               >
                 <div className="relative flex-shrink-0">
                   <div className="w-20 h-10 md:w-28 md:h-12 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
                     <Image 
                       src="/images/logo jsoe (1).svg" 
-                      alt="Jose Acosta Data Engineer Logo"
+                      alt="Jose Acosta Quantitative Developer Logo"
                       width={112}
                       height={48}
                       className="w-full h-full object-cover object-left scale-110 group-hover:brightness-110 transition-all duration-300"
@@ -185,7 +185,7 @@ export default function Header() {
                 aria-current={pathname === '/' ? 'page' : undefined}
               >
                 <span className="relative z-10">Home</span>
-                <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#00BFA5] transition-all duration-300 ${
+                <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#00E5A0] transition-all duration-300 ${
                   pathname === '/' ? 'w-full' : 'w-0 group-hover:w-full'
                 }`} aria-hidden="true"></span>
               </Link>
@@ -196,7 +196,7 @@ export default function Header() {
                 aria-current={pathname === '/about' ? 'page' : undefined}
               >
                 <span className="relative z-10 whitespace-nowrap">About Me</span>
-                <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#00BFA5] transition-all duration-300 ${
+                <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#00E5A0] transition-all duration-300 ${
                   pathname === '/about' ? 'w-full' : 'w-0 group-hover:w-full'
                 }`} aria-hidden="true"></span>
               </Link>
@@ -207,7 +207,7 @@ export default function Header() {
                 aria-current={pathname === '/services' ? 'page' : undefined}
               >
                 <span className="relative z-10">Services</span>
-                <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#00BFA5] transition-all duration-300 ${
+                <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#00E5A0] transition-all duration-300 ${
                   pathname === '/services' ? 'w-full' : 'w-0 group-hover:w-full'
                 }`} aria-hidden="true"></span>
               </Link>
@@ -218,7 +218,7 @@ export default function Header() {
                 aria-current={pathname === '/portfolio' ? 'page' : undefined}
               >
                 <span className="relative z-10">Portfolio</span>
-                <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#00BFA5] transition-all duration-300 ${
+                <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#00E5A0] transition-all duration-300 ${
                   pathname === '/portfolio' ? 'w-full' : 'w-0 group-hover:w-full'
                 }`} aria-hidden="true"></span>
               </Link>
@@ -229,7 +229,7 @@ export default function Header() {
                 aria-current={pathname.startsWith('/blog') ? 'page' : undefined}
               >
                 <span className="relative z-10">Blog</span>
-                <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#00BFA5] transition-all duration-300 ${
+                <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#00E5A0] transition-all duration-300 ${
                   pathname.startsWith('/blog') ? 'w-full' : 'w-0 group-hover:w-full'
                 }`} aria-hidden="true"></span>
               </Link>
@@ -241,7 +241,7 @@ export default function Header() {
               <a 
                 href="/Jose_Acosta_Resume.pdf" 
                 download
-                className="relative bg-white text-[#005A9C] px-5 py-2.5 rounded-xl hover:bg-gray-50 hover:shadow-lg transition-all duration-300 font-semibold group overflow-hidden border-2 border-[#005A9C]/20"
+                className="relative bg-transparent text-gray-200 px-5 py-2.5 rounded-xl hover:bg-white/5 hover:shadow-lg transition-all duration-300 font-semibold group overflow-hidden border-2 border-[#00E5A0]/30 hover:border-[#00E5A0]/60"
               >
                 <span className="relative z-10 flex items-center">
                   <i className="fas fa-download mr-2 text-sm"></i>
@@ -250,7 +250,7 @@ export default function Header() {
               </a>
               <Link 
                 href="/contact" 
-                className="relative bg-gradient-to-r from-[#00BFA5] via-[#00D4B4] to-[#005A9C] text-white px-6 py-2.5 rounded-xl hover:from-[#00D4B4] hover:via-[#00BFA5] hover:to-[#0066CC] hover:shadow-xl hover:shadow-[#00BFA5]/25 hover:scale-105 transition-all duration-300 font-semibold group overflow-hidden border border-white/20"
+                className="relative bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] text-[#050B14] px-6 py-2.5 rounded-xl hover:from-[#00FFB3] hover:to-[#5AB3F5] hover:shadow-xl hover:shadow-[#00E5A0]/25 hover:scale-105 transition-all duration-300 font-semibold group overflow-hidden border border-white/20"
               >
                 <span className="relative z-10 flex items-center">
                   Let's Talk
@@ -265,7 +265,7 @@ export default function Header() {
               <button
                 type="button"
                 onClick={toggleMenu}
-                className="text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:ring-offset-2 rounded-lg p-2 hover:bg-gray-100 transition-colors duration-200"
+                className="text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:ring-offset-2 focus:ring-offset-[#050B14] rounded-lg p-2 hover:bg-white/10 transition-colors duration-200"
                 aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                 aria-expanded={isMenuOpen ? "true" : "false"}
                 aria-controls="mobile-menu"
@@ -287,7 +287,7 @@ export default function Header() {
               initial={{ opacity: 0, y: -20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              className="lg:hidden mt-4 pb-4 bg-gradient-to-b from-white to-gray-50 rounded-xl shadow-lg border border-gray-100 mx-2"
+              className="lg:hidden mt-4 pb-4 bg-gradient-to-b from-[#0A1526] to-[#050B14] rounded-xl shadow-lg border border-[#1E2D45] mx-2"
               role="navigation"
               aria-label="Mobile navigation menu"
             >
@@ -345,7 +345,7 @@ export default function Header() {
                 <a 
                   href="/Jose_Acosta_Resume.pdf" 
                   download
-                  className="bg-white text-[#005A9C] border-2 border-[#005A9C] px-6 py-3 rounded-lg hover:bg-gray-50 hover:shadow-lg transition-all duration-300 font-semibold text-center mt-2 focus:outline-none focus:ring-2 focus:ring-[#005A9C] focus:ring-offset-2"
+                  className="bg-transparent text-gray-200 border-2 border-[#00E5A0]/30 px-6 py-3 rounded-lg hover:bg-white/5 hover:shadow-lg transition-all duration-300 font-semibold text-center mt-2 focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:ring-offset-2 focus:ring-offset-[#0A1526]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <i className="fas fa-download mr-2" aria-hidden="true"></i>
@@ -354,7 +354,7 @@ export default function Header() {
                 <Link 
                   href="/contact" 
                   prefetch={false}
-                  className="bg-gradient-to-r from-[#00BFA5] to-[#005A9C] text-white px-6 py-3 rounded-lg hover:from-[#00D4B4] hover:to-[#00BFA5] hover:shadow-lg transition-all duration-300 font-semibold text-center mt-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#00BFA5]"
+                  className="bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] text-[#050B14] px-6 py-3 rounded-lg hover:from-[#00FFB3] hover:to-[#5AB3F5] hover:shadow-lg transition-all duration-300 font-semibold text-center mt-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#00E5A0]"
                   onClick={() => setIsMenuOpen(false)}
                   aria-current={pathname === '/contact' ? 'page' : undefined}
                 >

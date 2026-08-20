@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function ServicesSection() {
     return (
-        <section className="services py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <section className="services py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#0A1526] to-[#050B14]">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <m.div
                     className="text-center mb-20"
@@ -13,15 +13,15 @@ export default function ServicesSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#0097A7] leading-tight py-2">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#00E5A0] leading-tight py-2">
                         What I Build
                     </h2>
-                    <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                        Data infrastructure engineered for real-world conditions—not just the happy path. I specialize in building systems that handle failures gracefully, recover automatically, and provide the observability needed to debug issues when they inevitably occur.
+                    <p className="text-lg md:text-xl font-semibold text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        Robust algorithmic trading systems — engineered from research to execution. Not just strategies: the full infrastructure that takes an idea from hypothesis to live trading with real capital.
                     </p>
                 </m.div>
 
-                {/* Hero Project Card - Trading Data Infrastructure */}
+                {/* Hero Project Card - Mean Reversion OU Trading System */}
                 <m.div
                     className="mb-12"
                     initial={{ opacity: 0, y: 30 }}
@@ -29,14 +29,14 @@ export default function ServicesSection() {
                     transition={{ duration: 0.6 }}
                     whileHover={{ y: -8 }}
                 >
-                    <Link href="/portfolio/edgar-sec-parser">
-                        <div className="group relative bg-gradient-to-br from-white via-blue-50/40 to-green-50/40 backdrop-blur-xl p-4 sm:p-6 md:p-8 lg:p-12 rounded-xl sm:rounded-2xl md:rounded-[2rem] shadow-2xl hover:shadow-[0_20px_60px_-15px_rgba(0,191,165,0.3)] transition-all duration-500 border-2 border-white/60 hover:border-[#00BFA5]/30 overflow-hidden cursor-pointer">
+                    <Link href="/portfolio/mean-reversion-ou">
+                        <div className="group relative bg-gradient-to-br from-[#0D1B30] via-[#0A1526] to-[#071020] backdrop-blur-xl p-4 sm:p-6 md:p-8 lg:p-12 rounded-xl sm:rounded-2xl md:rounded-[2rem] shadow-2xl hover:shadow-[0_20px_60px_-15px_rgba(0,229,160,0.3)] transition-all duration-500 border-2 border-[#1E2D45] hover:border-[#00E5A0]/40 overflow-hidden cursor-pointer">
                             {/* Animated Background Gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#005A9C]/10 via-[#00BFA5]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-[#42A5F5]/10 via-[#00E5A0]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                             {/* Floating Orbs Effect */}
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#00BFA5]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 group-hover:animate-pulse"></div>
-                            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-[#005A9C]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 group-hover:animate-pulse"></div>
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#00E5A0]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 group-hover:animate-pulse"></div>
+                            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-[#42A5F5]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 group-hover:animate-pulse"></div>
 
                             {/* Content Grid */}
                             <div className="relative z-10 grid gap-4 sm:gap-6 md:gap-8 md:grid-cols-3">
@@ -44,61 +44,61 @@ export default function ServicesSection() {
                                 <div className="md:col-span-2">
                                     <div className="flex items-start justify-between mb-6">
                                         <div>
-                                            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#42A5F5]/15 via-[#2196F3]/10 to-[#1976D2]/15 rounded-full border border-[#42A5F5]/30 mb-5 group-hover:border-[#42A5F5]/50 transition-all duration-300 shadow-sm">
-                                                <div className="w-2 h-2 bg-[#42A5F5] rounded-full animate-pulse"></div>
-                                                <span className="text-xs font-bold bg-gradient-to-r from-[#42A5F5] to-[#2196F3] bg-clip-text text-transparent tracking-wide uppercase">16.5 MB/s Peak Throughput | Production-Grade</span>
+                                            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#00E5A0]/15 via-[#00C98C]/10 to-[#42A5F5]/15 rounded-full border border-[#00E5A0]/30 mb-5 group-hover:border-[#00E5A0]/50 transition-all duration-300 shadow-sm">
+                                                <div className="w-2 h-2 bg-[#00E5A0] rounded-full animate-pulse"></div>
+                                                <span className="text-xs font-bold bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] bg-clip-text text-transparent tracking-wide uppercase terminal-badge">Live-Tested | Walk-Forward Validated | Risk-Controlled</span>
                                             </div>
-                                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-[#42A5F5] group-hover:to-[#2196F3] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
-                                                SEC Financial Data Platform
+                                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#00E5A0] group-hover:to-[#42A5F5] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
+                                                Mean Reversion OU Trading System
                                             </h3>
-                                            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 max-w-3xl">
-                                                Production-grade parser processing SEC filings with automatic recovery when parsing fails mid-document. In financial data, partial results are worse than no results—built with fault-tolerant design and data quality validation.
+                                            <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 max-w-3xl">
+                                                Ornstein-Uhlenbeck mean reversion strategy with ML-driven parameter optimization — taken from research to live trading with real capital. In trading, a strategy is only as good as the system executing it.
                                             </p>
                                         </div>
                                     </div>
 
                                     {/* Architecture & Impact */}
                                     <div className="mb-8">
-                                        <h4 className="text-xl md:text-2xl font-bold text-gray-800 mb-5 flex items-center gap-3">
-                                            <div className="w-10 h-10 bg-gradient-to-br from-[#005A9C] to-[#00BFA5] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                                <i className="fas fa-project-diagram text-white text-sm"></i>
+                                        <h4 className="text-xl md:text-2xl font-bold text-white mb-5 flex items-center gap-3">
+                                            <div className="w-10 h-10 bg-gradient-to-br from-[#00E5A0] to-[#42A5F5] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                                <i className="fas fa-project-diagram text-[#050B14] text-sm"></i>
                                             </div>
-                                            Architecture & Impact
+                                            Research → Backtest → Execution
                                         </h4>
                                         <div className="space-y-4">
                                             <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
-                                                <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
-                                                    <i className="fas fa-bolt text-white text-xs"></i>
+                                                <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#00C98C] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
+                                                    <i className="fas fa-flask text-[#050B14] text-xs"></i>
                                                 </div>
-                                                <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">Multi-engine parsing:</strong> 3 parsing engines (SGML, XBRL, HTML) with automatic fallback for maximum coverage</p>
+                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Research pipeline:</strong> Regime classification + OU parameter estimation on validated market data</p>
                                             </div>
                                             <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
-                                                <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
-                                                    <i className="fas fa-rocket text-white text-xs"></i>
+                                                <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#00C98C] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
+                                                    <i className="fas fa-rocket text-[#050B14] text-xs"></i>
                                                 </div>
-                                                <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">High throughput:</strong> 16.5 MB/s peak processing speed with parallel document handling</p>
+                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Backtesting:</strong> Overfit-resistant validation with realistic execution modeling</p>
                                             </div>
                                             <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
-                                                <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
-                                                    <i className="fas fa-shield-alt text-white text-xs"></i>
+                                                <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#00C98C] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
+                                                    <i className="fas fa-shield-alt text-[#050B14] text-xs"></i>
                                                 </div>
-                                                <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">Fault-tolerant parsing:</strong> Automatic recovery from mid-document failures with comprehensive error handling</p>
+                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Execution & risk:</strong> Automated trading with position sizing, stop-loss management, and drawdown controls</p>
                                             </div>
                                             <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
-                                                <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
-                                                    <i className="fas fa-check-circle text-white text-xs"></i>
+                                                <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#00C98C] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
+                                                    <i className="fas fa-chart-line text-[#050B14] text-xs"></i>
                                                 </div>
-                                                <p className="text-gray-700 leading-relaxed"><strong className="text-gray-900">Data quality validation:</strong> Built-in validation ensuring financial data accuracy and completeness</p>
+                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Monitoring:</strong> Performance analytics and risk dashboards watching every position in production</p>
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* Tech Stack */}
                                     <div className="flex flex-wrap gap-3 mb-4">
-                                        {['Python', 'PostgreSQL', 'SQLAlchemy', 'Docker', 'Apache Airflow', 'Redis'].map((tech, index) => (
+                                        {['Python', 'NumPy', 'pandas', 'SciPy', 'TimescaleDB', 'Redis', 'Docker'].map((tech, index) => (
                                             <m.span
                                                 key={tech}
-                                                className="px-4 py-2 bg-gradient-to-r from-[#005A9C]/10 to-[#00BFA5]/10 hover:from-[#005A9C]/20 hover:to-[#00BFA5]/20 text-[#005A9C] rounded-full text-sm font-semibold border border-[#005A9C]/20 hover:border-[#00BFA5]/40 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-default"
+                                                className="px-4 py-2 bg-gradient-to-r from-[#00E5A0]/10 to-[#42A5F5]/10 hover:from-[#00E5A0]/20 hover:to-[#42A5F5]/20 text-[#00E5A0] rounded-full text-sm font-semibold border border-[#00E5A0]/20 hover:border-[#00E5A0]/40 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-default"
                                                 initial={{ opacity: 0, scale: 0.8 }}
                                                 whileInView={{ opacity: 1, scale: 1 }}
                                                 transition={{ delay: index * 0.05, duration: 0.3 }}
@@ -111,50 +111,50 @@ export default function ServicesSection() {
 
                                 {/* Right Column - Key Features */}
                                 <div className="md:col-span-1">
-                                    <div className="relative bg-white/70 backdrop-blur-md rounded-3xl p-8 border-2 border-white/60 shadow-xl group-hover:shadow-2xl group-hover:border-[#00BFA5]/30 transition-all duration-500 overflow-hidden">
+                                    <div className="relative bg-[#0A1526]/70 backdrop-blur-md rounded-3xl p-8 border-2 border-[#1E2D45]/60 shadow-xl group-hover:shadow-2xl group-hover:border-[#00E5A0]/40 transition-all duration-500 overflow-hidden">
                                         {/* Subtle gradient overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-br from-[#005A9C]/5 via-transparent to-[#00BFA5]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-br from-[#42A5F5]/5 via-transparent to-[#00E5A0]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                                         <div className="relative z-10">
-                                            <div className="w-20 h-20 bg-gradient-to-br from-[#42A5F5] via-[#2196F3] to-[#1976D2] rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-[#42A5F5]/30">
-                                                <i className="fas fa-file-invoice-dollar text-3xl text-white"></i>
+                                            <div className="w-20 h-20 bg-gradient-to-br from-[#00E5A0] via-[#00C98C] to-[#42A5F5] rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-[#00E5A0]/30">
+                                                <i className="fas fa-chart-line text-3xl text-[#050B14]"></i>
                                             </div>
 
-                                            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center group-hover:bg-gradient-to-r group-hover:from-[#42A5F5] group-hover:to-[#2196F3] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
+                                            <h3 className="text-xl md:text-2xl font-bold text-white mb-6 text-center group-hover:bg-gradient-to-r group-hover:from-[#00E5A0] group-hover:to-[#42A5F5] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
                                                 Key Features
                                             </h3>
 
                                             <div className="space-y-4 mb-8">
                                                 <div className="flex items-start group/feature hover:translate-x-1 transition-transform duration-300">
-                                                    <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm">
-                                                        <i className="fas fa-check text-white text-xs"></i>
+                                                    <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm">
+                                                        <i className="fas fa-check text-[#050B14] text-xs"></i>
                                                     </div>
-                                                    <span className="text-sm text-gray-700 leading-relaxed font-medium">Python, PostgreSQL, 3 parsing engines</span>
+                                                    <span className="text-sm text-gray-300 leading-relaxed font-medium">Mean reversion on OU process</span>
                                                 </div>
                                                 <div className="flex items-start group/feature hover:translate-x-1 transition-transform duration-300">
                                                     <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm">
-                                                        <i className="fas fa-check text-white text-xs"></i>
+                                                        <i className="fas fa-check text-[#050B14] text-xs"></i>
                                                     </div>
-                                                    <span className="text-sm text-gray-700 leading-relaxed font-medium">Fault-tolerant parsing with auto-recovery</span>
+                                                    <span className="text-sm text-gray-300 leading-relaxed font-medium">ML parameter optimization</span>
                                                 </div>
                                                 <div className="flex items-start group/feature hover:translate-x-1 transition-transform duration-300">
                                                     <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm">
-                                                        <i className="fas fa-check text-white text-xs"></i>
+                                                        <i className="fas fa-check text-[#050B14] text-xs"></i>
                                                     </div>
-                                                    <span className="text-sm text-gray-700 leading-relaxed font-medium">Data quality validation & monitoring</span>
+                                                    <span className="text-sm text-gray-300 leading-relaxed font-medium">Real-time execution & risk management</span>
                                                 </div>
                                             </div>
 
                                             {/* Metrics */}
-                                            <div className="mt-8 pt-6 border-t-2 border-gray-200/50">
+                                            <div className="mt-8 pt-6 border-t-2 border-[#1E2D45]/50">
                                                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                                                    <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-[#005A9C]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                                                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#005A9C] to-[#0077CC] bg-clip-text text-transparent mb-2">16.5</div>
-                                                        <div className="text-xs font-semibold text-gray-600 uppercase tracking-wide">MB/s Speed</div>
+                                                    <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-[#00E5A0]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
+                                                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#00E5A0] to-[#00C98C] bg-clip-text text-transparent mb-2 font-mono">Walk-Forward</div>
+                                                        <div className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Validation</div>
                                                     </div>
-                                                    <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-[#00BFA5]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                                                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#00BFA5] to-[#26C6DA] bg-clip-text text-transparent mb-2">Prod</div>
-                                                        <div className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Grade</div>
+                                                    <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-[#42A5F5]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
+                                                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#42A5F5] to-[#2196F3] bg-clip-text text-transparent mb-2 font-mono">Out-of-Sample</div>
+                                                        <div className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Tested</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -166,9 +166,9 @@ export default function ServicesSection() {
                             {/* Arrow indicator with glow effect */}
                             <div className="absolute bottom-8 right-8">
                                 <div className="relative">
-                                    <div className="absolute inset-0 bg-gradient-to-r from-[#005A9C] to-[#00BFA5] rounded-full blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
-                                    <div className="relative w-14 h-14 bg-gradient-to-br from-[#005A9C] to-[#00BFA5] rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-45 transition-all duration-500 shadow-lg">
-                                        <i className="fas fa-arrow-right text-white text-lg group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    <div className="absolute inset-0 bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] rounded-full blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
+                                    <div className="relative w-14 h-14 bg-gradient-to-br from-[#00E5A0] to-[#42A5F5] rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-45 transition-all duration-500 shadow-lg">
+                                        <i className="fas fa-arrow-right text-[#050B14] text-lg group-hover:translate-x-1 transition-transform duration-300"></i>
                                     </div>
                                 </div>
                             </div>
@@ -178,70 +178,70 @@ export default function ServicesSection() {
 
                 {/* Two Medium Cards Side by Side */}
                 <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-1 md:grid-cols-2 mb-12 sm:mb-16">
-                    {/* Card 1 - Data Architecture Principles */}
+                    {/* Card 1 - Research & Backtesting Infrastructure */}
                     <m.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1, duration: 0.6 }}
                         whileHover={{ y: -8, scale: 1.02 }}
                     >
-                        <Link href="/services">
-                            <div className="group relative bg-white/80 backdrop-blur-xl p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-[2rem] shadow-xl hover:shadow-[0_20px_50px_-15px_rgba(0,90,156,0.3)] transition-all duration-500 border-2 border-white/60 hover:border-[#005A9C]/30 overflow-hidden cursor-pointer h-full">
+                        <Link href="/portfolio/financial-data-pipeline">
+                            <div className="group relative bg-[#0D1B30]/80 backdrop-blur-xl p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-[2rem] shadow-xl hover:shadow-[0_20px_50px_-15px_rgba(66,165,245,0.3)] transition-all duration-500 border-2 border-[#1E2D45] hover:border-[#42A5F5]/40 overflow-hidden cursor-pointer h-full">
                                 {/* Animated Background */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#005A9C]/10 via-transparent to-[#0066CC]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#42A5F5]/10 via-transparent to-[#00E5A0]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                                 {/* Floating Orb */}
-                                <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-[#005A9C]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-[#42A5F5]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                                 {/* Icon */}
                                 <div className="relative mb-6">
-                                    <div className="w-20 h-20 bg-gradient-to-br from-[#005A9C] via-[#0066CC] to-[#1976D2] rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-[#005A9C]/40 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
-                                        <i className="fas fa-drafting-compass text-3xl text-white"></i>
+                                    <div className="w-20 h-20 bg-gradient-to-br from-[#42A5F5] via-[#2196F3] to-[#1976D2] rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-[#42A5F5]/40 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
+                                        <i className="fas fa-flask text-3xl text-white"></i>
                                     </div>
                                 </div>
 
                                 {/* Content */}
                                 <div className="relative z-10">
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#005A9C]/15 to-[#0066CC]/10 rounded-full border border-[#005A9C]/30 mb-4 group-hover:border-[#005A9C]/50 transition-all duration-300">
-                                        <div className="w-2 h-2 bg-[#005A9C] rounded-full animate-pulse"></div>
-                                        <span className="text-xs font-bold bg-gradient-to-r from-[#005A9C] to-[#0066CC] bg-clip-text text-transparent tracking-wide uppercase">From Construction to Cloud</span>
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#42A5F5]/15 to-[#2196F3]/10 rounded-full border border-[#42A5F5]/30 mb-4 group-hover:border-[#42A5F5]/50 transition-all duration-300">
+                                        <div className="w-2 h-2 bg-[#42A5F5] rounded-full animate-pulse"></div>
+                                        <span className="text-xs font-bold bg-gradient-to-r from-[#42A5F5] to-[#2196F3] bg-clip-text text-transparent tracking-wide uppercase terminal-badge">Clean Data → Valid Backtests</span>
                                     </div>
 
-                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-[#005A9C] group-hover:to-[#0066CC] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
-                                        Data Architecture Principles
+                                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#42A5F5] group-hover:to-[#2196F3] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
+                                        Research & Backtesting Infrastructure
                                     </h3>
 
-                                    <p className="text-gray-700 mb-6 leading-relaxed">
-                                        Four years managing construction projects taught me: bad architecture is expensive to fix later. I design data systems the same way—thinking about failure modes, maintenance costs, and what happens at 3x scale.
+                                    <p className="text-gray-300 mb-6 leading-relaxed">
+                                        Backtests are only as good as the data behind them. I build market data pipelines and validation frameworks that make research trustworthy — and fast enough to iterate on ideas daily.
                                     </p>
 
                                     {/* Features */}
                                     <div className="space-y-3 mb-6">
                                         <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
-                                            <div className="w-6 h-6 bg-gradient-to-br from-[#005A9C] to-[#0066CC] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
+                                            <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
                                                 <i className="fas fa-check text-white text-xs"></i>
                                             </div>
-                                            <span className="text-sm text-gray-700 font-medium">Modern stack (dbt, Snowflake)</span>
+                                            <span className="text-sm text-gray-300 font-medium">Python, PostgreSQL, Airflow</span>
                                         </div>
                                         <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
-                                            <div className="w-6 h-6 bg-gradient-to-br from-[#005A9C] to-[#0066CC] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
+                                            <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
                                                 <i className="fas fa-check text-white text-xs"></i>
                                             </div>
-                                            <span className="text-sm text-gray-700 font-medium">Cost-optimization strategies</span>
+                                            <span className="text-sm text-gray-300 font-medium">Reproducible research workflows</span>
                                         </div>
                                         <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
-                                            <div className="w-6 h-6 bg-gradient-to-br from-[#005A9C] to-[#0066CC] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
+                                            <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
                                                 <i className="fas fa-check text-white text-xs"></i>
                                             </div>
-                                            <span className="text-sm text-gray-700 font-medium">Reliability by design</span>
+                                            <span className="text-sm text-gray-300 font-medium">Data quality gates & validation</span>
                                         </div>
                                     </div>
 
                                     {/* Arrow */}
-                                    <div className="flex items-center justify-end pt-4 border-t-2 border-gray-100">
+                                    <div className="flex items-center justify-end pt-4 border-t-2 border-[#1E2D45]/60">
                                         <div className="relative">
-                                            <div className="absolute inset-0 bg-gradient-to-r from-[#005A9C] to-[#0066CC] rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
-                                            <div className="relative w-12 h-12 bg-gradient-to-br from-[#005A9C] to-[#0066CC] rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-45 transition-all duration-500 shadow-md">
+                                            <div className="absolute inset-0 bg-gradient-to-r from-[#42A5F5] to-[#2196F3] rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+                                            <div className="relative w-12 h-12 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-45 transition-all duration-500 shadow-md">
                                                 <i className="fas fa-arrow-right text-white group-hover:translate-x-1 transition-transform duration-300"></i>
                                             </div>
                                         </div>
@@ -251,71 +251,71 @@ export default function ServicesSection() {
                         </Link>
                     </m.div>
 
-                    {/* Card 2 - Trading Data Infrastructure */}
+                    {/* Card 2 - Live Execution & Risk Systems */}
                     <m.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
                         whileHover={{ y: -8, scale: 1.02 }}
                     >
-                        <Link href="/portfolio/mean-reversion-ou">
-                            <div className="group relative bg-white/80 backdrop-blur-xl p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-[2rem] shadow-xl hover:shadow-[0_20px_50px_-15px_rgba(0,191,165,0.3)] transition-all duration-500 border-2 border-white/60 hover:border-[#00BFA5]/30 overflow-hidden cursor-pointer h-full">
+                        <Link href="/portfolio/moving-average-bot">
+                            <div className="group relative bg-[#0D1B30]/80 backdrop-blur-xl p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-[2rem] shadow-xl hover:shadow-[0_20px_50px_-15px_rgba(0,229,160,0.3)] transition-all duration-500 border-2 border-[#1E2D45] hover:border-[#00E5A0]/40 overflow-hidden cursor-pointer h-full">
                                 {/* Animated Background */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#00BFA5]/10 via-transparent to-[#26C6DA]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#00E5A0]/10 via-transparent to-[#26C6DA]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                                 {/* Floating Orb */}
-                                <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-[#00BFA5]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-[#00E5A0]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                                 {/* Icon */}
                                 <div className="relative mb-6">
-                                    <div className="w-20 h-20 bg-gradient-to-br from-[#00BFA5] via-[#26C6DA] to-[#00ACC1] rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-[#00BFA5]/40 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                                        <i className="fas fa-chart-line text-3xl text-white"></i>
+                                    <div className="w-20 h-20 bg-gradient-to-br from-[#00E5A0] via-[#26C6DA] to-[#00ACC1] rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-[#00E5A0]/40 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                                        <i className="fas fa-bolt text-3xl text-[#050B14]"></i>
                                     </div>
                                 </div>
 
                                 {/* Content */}
                                 <div className="relative z-10">
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00BFA5]/15 to-[#26C6DA]/10 rounded-full border border-[#00BFA5]/30 mb-4 group-hover:border-[#00BFA5]/50 transition-all duration-300">
-                                        <div className="w-2 h-2 bg-[#00BFA5] rounded-full animate-pulse"></div>
-                                        <span className="text-xs font-bold bg-gradient-to-r from-[#00BFA5] to-[#26C6DA] bg-clip-text text-transparent tracking-wide uppercase">Real-Money Trading Systems</span>
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00E5A0]/15 to-[#26C6DA]/10 rounded-full border border-[#00E5A0]/30 mb-4 group-hover:border-[#00E5A0]/50 transition-all duration-300">
+                                        <div className="w-2 h-2 bg-[#00E5A0] rounded-full animate-pulse"></div>
+                                        <span className="text-xs font-bold bg-gradient-to-r from-[#00E5A0] to-[#26C6DA] bg-clip-text text-transparent tracking-wide uppercase terminal-badge">Real-Money Trading Systems</span>
                                     </div>
 
-                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r group-hover:from-[#00BFA5] group-hover:to-[#26C6DA] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
-                                        Trading Data Infrastructure
+                                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#00E5A0] group-hover:to-[#26C6DA] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
+                                        Live Execution & Risk Systems
                                     </h3>
 
-                                    <p className="text-gray-700 mb-6 leading-relaxed">
-                                        Built end-to-end data platform powering algorithmic trading with real capital. When your pipeline fails at market open, you lose money every second—taught me to build systems that stay up.
+                                    <p className="text-gray-300 mb-6 leading-relaxed">
+                                        Built end-to-end systems powering algorithmic trading with real capital. When your pipeline fails at market open, you lose money every second — that taught me to build systems that stay up.
                                     </p>
 
                                     {/* Features */}
                                     <div className="space-y-3 mb-6">
                                         <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
-                                            <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
-                                                <i className="fas fa-check text-white text-xs"></i>
+                                            <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
+                                                <i className="fas fa-check text-[#050B14] text-xs"></i>
                                             </div>
-                                            <span className="text-sm text-gray-700 font-medium">WebSocket, Kafka, TimeScaleDB</span>
+                                            <span className="text-sm text-gray-300 font-medium">WebSockets, Kafka, TimescaleDB</span>
                                         </div>
                                         <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
-                                            <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
-                                                <i className="fas fa-check text-white text-xs"></i>
+                                            <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
+                                                <i className="fas fa-check text-[#050B14] text-xs"></i>
                                             </div>
-                                            <span className="text-sm text-gray-700 font-medium">Low-latency data ingestion</span>
+                                            <span className="text-sm text-gray-300 font-medium">Low-latency market data ingestion</span>
                                         </div>
                                         <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
-                                            <div className="w-6 h-6 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
-                                                <i className="fas fa-check text-white text-xs"></i>
+                                            <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
+                                                <i className="fas fa-check text-[#050B14] text-xs"></i>
                                             </div>
-                                            <span className="text-sm text-gray-700 font-medium">Production-tested with real capital</span>
+                                            <span className="text-sm text-gray-300 font-medium">Production-tested with real capital</span>
                                         </div>
                                     </div>
 
                                     {/* Arrow */}
-                                    <div className="flex items-center justify-end pt-4 border-t-2 border-gray-100">
+                                    <div className="flex items-center justify-end pt-4 border-t-2 border-[#1E2D45]/60">
                                         <div className="relative">
-                                            <div className="absolute inset-0 bg-gradient-to-r from-[#00BFA5] to-[#26C6DA] rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
-                                            <div className="relative w-12 h-12 bg-gradient-to-br from-[#00BFA5] to-[#26C6DA] rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-45 transition-all duration-500 shadow-md">
-                                                <i className="fas fa-arrow-right text-white group-hover:translate-x-1 transition-transform duration-300"></i>
+                                            <div className="absolute inset-0 bg-gradient-to-r from-[#00E5A0] to-[#26C6DA] rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+                                            <div className="relative w-12 h-12 bg-gradient-to-br from-[#00E5A0] to-[#26C6DA] rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-45 transition-all duration-500 shadow-md">
+                                                <i className="fas fa-arrow-right text-[#050B14] group-hover:translate-x-1 transition-transform duration-300"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -327,48 +327,48 @@ export default function ServicesSection() {
 
                 {/* Value Proposition */}
                 <m.div
-                    className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+                    className="bg-[#0A1526] rounded-2xl p-8 shadow-lg border border-[#1E2D45]"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                 >
                     <div className="max-w-3xl mx-auto">
-                        <h3 className="text-3xl font-bold text-[#0097A7] mb-6 text-center">Why Work With Me?</h3>
-                        <p className="text-lg text-gray-700 mb-8 leading-relaxed text-center font-semibold">
-                            I build data systems where failure has consequences:
+                        <h3 className="text-3xl font-bold text-[#00E5A0] mb-6 text-center">Why Work With Me?</h3>
+                        <p className="text-lg text-gray-300 mb-8 leading-relaxed text-center font-semibold">
+                            I build trading systems where failure has real consequences:
                         </p>
                         <div className="space-y-6">
                             <div className="flex items-start">
-                                <div className="w-10 h-10 bg-[#42A5F5] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                                    <i className="fas fa-shield-alt text-white"></i>
+                                <div className="w-10 h-10 bg-[#00E5A0] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                    <i className="fas fa-shield-alt text-[#050B14]"></i>
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-800 mb-2 text-lg">Reliability First</h4>
-                                    <p className="text-gray-600 font-medium">Systems that recover automatically, not manually</p>
+                                    <h4 className="font-bold text-white mb-2 text-lg">Robustness First</h4>
+                                    <p className="text-gray-400 font-medium">Systems designed to survive the market — with failover, quality gates, and monitoring from day one</p>
                                 </div>
                             </div>
                             <div className="flex items-start">
-                                <div className="w-10 h-10 bg-[#00BFA5] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <div className="w-10 h-10 bg-[#42A5F5] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                                     <i className="fas fa-bullseye text-white"></i>
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-800 mb-2 text-lg">Business-Aligned</h4>
-                                    <p className="text-gray-600 font-medium">Data quality tied to actual business impact</p>
+                                    <h4 className="font-bold text-white mb-2 text-lg">Research-to-Execution Focus</h4>
+                                    <p className="text-gray-400 font-medium">Ideas validated rigorously before a single dollar is at risk — then executed with discipline</p>
                                 </div>
                             </div>
                             <div className="flex items-start">
-                                <div className="w-10 h-10 bg-[#005A9C] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                                    <i className="fas fa-dollar-sign text-white"></i>
+                                <div className="w-10 h-10 bg-[#F5B544] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                    <i className="fas fa-dollar-sign text-[#050B14]"></i>
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-800 mb-2 text-lg">Cost-Conscious</h4>
-                                    <p className="text-gray-600 font-medium">Right-sizing and optimization from day one</p>
+                                    <h4 className="font-bold text-white mb-2 text-lg">Validation-First Perspective</h4>
+                                    <p className="text-gray-400 font-medium">8 years of active market experience — walk-forward, out-of-sample, and sensitivity testing before anything goes live</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl border-l-4 border-[#00BFA5]">
-                            <p className="text-gray-800 font-semibold text-lg italic">
-                                The difference: I've lost real money to bad pipelines. Now I build so you don't have to.
+                        <div className="mt-8 p-6 bg-gradient-to-r from-[#00E5A0]/10 to-[#42A5F5]/10 rounded-xl border-l-4 border-[#00E5A0]">
+                            <p className="text-gray-200 font-semibold text-lg italic">
+                                The difference: an attractive backtest is cheap. I build systems that stay honest when assumptions change — and survive live markets.
                             </p>
                         </div>
                     </div>
@@ -381,23 +381,23 @@ export default function ServicesSection() {
                 >
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <Link
-                            href="/services"
-                            className="group bg-gradient-to-r from-[#005A9C] to-[#00BFA5] hover:from-[#0066CC] hover:to-[#00D4B4] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center"
+                            href="/portfolio"
+                            className="group bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] hover:from-[#00FFB3] hover:to-[#5AB3F5] text-[#050B14] px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center"
                         >
-                            <i className="fas fa-database mr-2"></i>
-                            Explore Data Solutions
+                            <i className="fas fa-code mr-2"></i>
+                            Explore Trading Systems
                             <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
                         </Link>
                         <a
                             href="mailto:datawithjose@outlook.com?subject=Introduction Call&body=Hi Jose, I'd like to schedule an introduction call..."
-                            className="group border-2 border-[#005A9C] text-[#005A9C] hover:bg-[#005A9C] hover:text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center"
+                            className="group border-2 border-[#00E5A0] text-[#00E5A0] hover:bg-[#00E5A0] hover:text-[#050B14] px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center"
                         >
                             <i className="fas fa-calendar mr-2"></i>
                             Schedule Introduction Call
                         </a>
                     </div>
-                    <p className="text-gray-600 mt-4 text-sm">
-                        Ready to build data systems that work when business decisions depend on them?
+                    <p className="text-gray-400 mt-4 text-sm">
+                        Ready to build trading systems that work when real money is on the line?
                     </p>
                 </m.div>
             </div>

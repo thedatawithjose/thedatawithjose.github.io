@@ -294,7 +294,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
       return `${baseClass} border-green-500 focus:border-green-500 focus:ring-green-200 bg-green-50`;
     }
     
-    return `${baseClass} border-gray-300 focus:border-blue-500 focus:ring-blue-200`;
+    return `${baseClass} border-[#1E2D45] focus:border-[#00E5A0] focus:ring-[#00E5A0]/20`;
   };
 
   return (
@@ -309,14 +309,14 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
         <m.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg"
+          className="mb-6 p-4 bg-[#42A5F5]/10 border border-[#42A5F5]/30 rounded-lg"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <i className="fas fa-save text-blue-500 mr-2"></i>
               <div>
-                <h4 className="font-medium text-blue-800">Draft Found!</h4>
-                <p className="text-sm text-blue-600">
+                <h4 className="font-medium text-[#42A5F5]">Draft Found!</h4>
+                <p className="text-sm text-gray-300">
                   {autoSave.lastSavedText} - Would you like to continue where you left off?
                 </p>
               </div>
@@ -324,7 +324,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
             <div className="flex gap-2">
               <button
                 onClick={handleRestoreDraft}
-                className="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 transition-colors"
+                className="px-3 py-1 bg-[#42A5F5] text-[#050B14] rounded text-sm hover:bg-[#5AB3F5] transition-colors font-semibold"
               >
                 Restore
               </button>
@@ -333,7 +333,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
                   autoSave.clearDraft();
                   setShowDraftPrompt(false);
                 }}
-                className="px-3 py-1 bg-gray-300 text-gray-700 rounded text-sm hover:bg-gray-400 transition-colors"
+                className="px-3 py-1 bg-[#1E2D45] text-gray-300 rounded text-sm hover:bg-[#2A3D5C] transition-colors"
               >
                 Start Fresh
               </button>
@@ -421,7 +421,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
         {/* Primera fila: Nombre y Email */}
         <div className="grid md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
               Full Name *
               <span className="text-xs text-gray-500 font-normal ml-1">(Required)</span>
             </label>
@@ -465,7 +465,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
               Email Address *
               <span className="text-xs text-gray-500 font-normal ml-1">(Required)</span>
             </label>
@@ -506,7 +506,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
         {/* Segunda fila: Asunto */}
         <div>
-          <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
             Subject *
             <span className="text-xs text-gray-500 font-normal ml-1">(Required)</span>
           </label>
@@ -538,7 +538,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
         {/* Tercera fila: Presupuesto y Timeline (opcionales) */}
         <div className="grid md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
               Approximate Budget
               <span className="text-xs text-gray-500 font-normal ml-1">(Optional)</span>
             </label>
@@ -563,7 +563,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           </div>
 
           <div>
-            <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
               Project Timeline
               <span className="text-xs text-gray-500 font-normal ml-1">(Optional)</span>
             </label>
@@ -591,7 +591,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
         {/* Mensaje */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
             Message *
             <span className="text-xs text-gray-500 font-normal ml-1">(Required)</span>
             <span className="text-xs text-gray-500 ml-2">

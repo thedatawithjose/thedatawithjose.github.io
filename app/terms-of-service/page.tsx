@@ -55,7 +55,7 @@ export default function TermsOfService() {
           <section className="mb-12">
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-8">
               <p className="text-gray-700 leading-relaxed">
-                These Terms of Service ("Terms") govern your use of data engineering consulting services 
+                These Terms of Service ("Terms") govern your use of quantitative development consulting services 
                 provided by Jose Acosta ("Service Provider", "we", "us", or "our") through datawithjose.tech 
                 ("Website"). By engaging our services, you ("Client", "you", or "your") agree to be bound by these Terms.
               </p>
@@ -68,7 +68,7 @@ export default function TermsOfService() {
             
             <h3 className="text-xl font-semibold mb-3 text-gray-700">1.1 Scope of Services</h3>
             <p className="mb-4 text-gray-600 leading-relaxed">
-              We provide data engineering consulting services including but not limited to:
+              We provide quantitative development consulting services including but not limited to:
             </p>
             <ul className="list-disc pl-6 mb-4 text-gray-600 space-y-2">
               <li>Real-time data pipeline development and optimization</li>

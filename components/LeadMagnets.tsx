@@ -16,46 +16,46 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
   const leadMagnets = [
     {
       id: 'data-engineering-checklist',
-      title: 'Data Engineering Production Checklist',
-      description: 'Complete 47-point checklist to ensure your data pipelines are production-ready',
+      title: 'Algorithmic Trading System Checklist',
+      description: 'Complete 47-point checklist to ensure your trading systems are production-ready before real capital is at risk',
       benefits: [
-        'Avoid common pipeline failures',
-        'Reduce deployment time significantly',
-        'Improve system reliability',
-        'Save debugging time and costs'
+        'Avoid common system failures',
+        'Reduce time from research to execution',
+        'Improve system robustness',
+        'Save debugging time and losses'
       ],
       icon: 'fas fa-clipboard-check',
-      color: 'from-[#00BFA5] to-[#42A5F5]',
+      color: 'from-[#00E5A0] to-[#42A5F5]',
       downloadUrl: '/downloads/data-engineering-checklist.pdf',
       fileSize: '2.1 MB PDF'
     },
     {
       id: 'roi-calculator',
-      title: 'Data Pipeline ROI Calculator',
-      description: 'Calculate the exact ROI of your data engineering investments in minutes',
+      title: 'Trading Infrastructure ROI Calculator',
+      description: 'Calculate the exact ROI of your quant infrastructure investments in minutes',
       benefits: [
         'Estimate cost savings potential',
-        'Help justify data engineering budget',
-        'Compare different solution approaches',
+        'Justify infrastructure budget',
+        'Compare research vs execution priorities',
         'Support stakeholder presentations'
       ],
       icon: 'fas fa-calculator',
-      color: 'from-[#005A9C] to-[#00BFA5]',
+      color: 'from-[#42A5F5] to-[#00E5A0]',
       downloadUrl: '/downloads/data-pipeline-roi-calculator.xlsx',
       fileSize: '1.8 MB Excel'
     },
     {
       id: 'architecture-templates',
-      title: 'Modern Data Stack Templates',
-      description: '5 proven architecture templates for different use cases and scales',
+      title: 'Trading System Architecture Templates',
+      description: '5 proven architecture templates for research, backtesting, and live execution stacks',
       benefits: [
         'Accelerate architecture planning',
-        'Proven patterns and approaches',
+        'Proven research-to-execution patterns',
         'Cost-conscious configurations',
         'Implementation guidance included'
       ],
       icon: 'fas fa-sitemap',
-      color: 'from-[#42A5F5] to-[#005A9C]',
+      color: 'from-[#00E5A0] to-[#00C98C]',
       downloadUrl: '/downloads/data-stack-templates.zip',
       fileSize: '3.2 MB ZIP'
     }
@@ -124,18 +124,18 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
   }
 
   return (
-    <section className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50 ${className}`}>
+    <section className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#0A1526] to-[#050B14] ${className}`}>
       <div className="container mx-auto px-4">
         <m.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#0097A7]">
-            Free Data Engineering Resources
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#00E5A0]">
+            Free Quant Development Resources
           </h2>
-          <p className="text-lg md:text-xl font-semibold text-gray-700 max-w-3xl mx-auto">
-            Get battle-tested tools and templates that have saved companies $100K+ in development costs
+          <p className="text-lg md:text-xl font-semibold text-gray-400 max-w-3xl mx-auto">
+            Get battle-tested tools and templates for building robust algorithmic trading systems
           </p>
         </m.div>
 
@@ -143,7 +143,7 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
           {leadMagnets.map((magnet, index) => (
             <m.div
               key={magnet.id}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+              className="bg-[#0D1B30] rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-[#1E2D45]"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
@@ -153,21 +153,21 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
               
               <div className="p-8">
                 <div className={`w-16 h-16 bg-gradient-to-r ${magnet.color} rounded-xl flex items-center justify-center mb-6`}>
-                  <i className={`${magnet.icon} text-2xl text-white`}></i>
+                  <i className={`${magnet.icon} text-2xl text-[#050B14]`}></i>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {magnet.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-400 mb-6">
                   {magnet.description}
                 </p>
                 
                 <ul className="space-y-2 mb-8">
                   {magnet.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-700">
-                      <i className="fas fa-check text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                    <li key={idx} className="flex items-start text-sm text-gray-300">
+                      <i className="fas fa-check text-[#00E5A0] mr-2 mt-1 flex-shrink-0"></i>
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -180,17 +180,17 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email address"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00BFA5] focus:border-transparent"
+                      className="w-full px-4 py-3 bg-[#0A1526] border border-[#1E2D45] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:border-transparent"
                     />
                     <div className="flex gap-2">
                       <button
                         onClick={() => handleDownload(magnet.id)}
                         disabled={!email || isSubmitting}
-                        className={`flex-1 bg-gradient-to-r ${magnet.color} text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 disabled:opacity-50 hover:scale-105`}
+                        className={`flex-1 bg-gradient-to-r ${magnet.color} text-[#050B14] px-6 py-3 rounded-lg font-bold transition-all duration-300 disabled:opacity-50 hover:scale-105`}
                       >
                         {isSubmitting ? (
                           <div className="flex items-center justify-center">
-                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                            <div className="w-4 h-4 border-2 border-[#050B14] border-t-transparent rounded-full animate-spin mr-2"></div>
                             Sending...
                           </div>
                         ) : (
@@ -202,7 +202,7 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
                       </button>
                       <button
                         onClick={() => setSelectedMagnet(null)}
-                        className="px-4 py-3 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50"
+                        className="px-4 py-3 border border-[#1E2D45] rounded-lg text-gray-400 hover:bg-white/5"
                       >
                         Cancel
                       </button>
@@ -214,7 +214,7 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
                 ) : (
                   <button
                     onClick={() => setSelectedMagnet(magnet.id)}
-                    className={`w-full bg-gradient-to-r ${magnet.color} text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl`}
+                    className={`w-full bg-gradient-to-r ${magnet.color} text-[#050B14] px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl`}
                   >
                     <i className="fas fa-download mr-2"></i>
                     Get Free Resource
@@ -234,15 +234,15 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
         >
           <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-gray-500">
             <div className="flex items-center">
-              <i className="fas fa-download text-[#00BFA5] mr-2"></i>
+              <i className="fas fa-download text-[#00E5A0] mr-2"></i>
               <span>Popular resources</span>
             </div>
             <div className="flex items-center">
               <i className="fas fa-users text-yellow-400 mr-2"></i>
-              <span>Used by data teams</span>
+              <span>Used by quant teams</span>
             </div>
             <div className="flex items-center">
-              <i className="fas fa-shield-alt text-[#005A9C] mr-2"></i>
+              <i className="fas fa-shield-alt text-[#00E5A0] mr-2"></i>
               <span>No spam guarantee</span>
             </div>
           </div>

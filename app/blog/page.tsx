@@ -8,8 +8,8 @@ import BlogClientFeatures from '../../components/BlogClientFeatures';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Technical Blog | Jose Acosta - Data Engineer',
-  description: 'Insights on data engineering, algorithmic trading, and high-performance systems by Jose Acosta.',
+  title: 'Technical Blog | Jose Acosta - Quantitative Developer',
+  description: 'Insights on algorithmic trading systems, backtesting and validation, and automated execution by Jose Acosta.',
 };
 
 export default function Blog() {
@@ -22,7 +22,7 @@ export default function Blog() {
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Jose Acosta Technical Blog",
-    "description": "Insights on data engineering, algorithmic trading, and high-performance systems",
+    "description": "Insights on algorithmic trading systems, backtesting and validation, and automated execution",
     "url": "https://joseacosta.dev/blog",
     "author": {
       "@type": "Person",
@@ -43,7 +43,7 @@ export default function Blog() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#050B14]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -51,7 +51,7 @@ export default function Blog() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white py-16 md:py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#050B14] via-[#0A1526] to-[#0D1B30] text-white py-16 md:py-24 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           {/* Floating geometric shapes */}
@@ -106,7 +106,7 @@ export default function Blog() {
           </div>
           <div className="mb-12">
             <p className="text-xl md:text-2xl text-gray-200 mb-6 leading-relaxed max-w-4xl mx-auto">
-              Deep dives into data engineering, algorithmic trading, and production ML systems.
+              Deep dives into algorithmic trading, validation, and building systems that survive real markets.
             </p>
             <div className="bg-gradient-to-r from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 inline-block relative overflow-hidden">
               {/* Quote decoration */}
@@ -115,7 +115,7 @@ export default function Blog() {
               
               <p className="text-gray-200 leading-relaxed italic relative z-10 max-w-2xl">
                 Learn from real-world implementations, production challenges, and lessons learned 
-                from <span className="text-green-400 font-semibold">4 years</span> of putting capital behind time-series models.
+                from <span className="text-green-400 font-semibold">8 years</span> of active market experience.
               </p>
               
               {/* Subtle glow effect */}
@@ -136,8 +136,8 @@ export default function Blog() {
             <div className="group text-center p-6 bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-blue-400/40 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden tactile-feedback mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
-                <div className="text-3xl font-black text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">10+</div>
-                <div className="text-gray-300 font-medium">Years Experience</div>
+                <div className="text-3xl font-black text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">8+</div>
+                <div className="text-gray-300 font-medium">Years Market Experience</div>
                 <div className="w-8 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function Blog() {
             <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-green-500/20 to-green-600/20 text-green-300 rounded-full text-sm md:text-sm font-semibold border border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center badge-tactile mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
-                <i className="fas fa-stream mr-2 group-hover:animate-pulse"></i>Real-time Pipelines
+                <i className="fas fa-stream mr-2 group-hover:animate-pulse"></i>Market Data Systems
               </span>
             </span>
             <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-500/20 to-blue-600/20 text-blue-300 rounded-full text-sm md:text-sm font-semibold border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center badge-tactile mobile-touch-feedback cursor-pointer">
@@ -168,13 +168,13 @@ export default function Blog() {
             <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-300 rounded-full text-sm md:text-sm font-semibold border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center badge-tactile mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
-                <i className="fas fa-robot mr-2 group-hover:animate-pulse"></i>ML in Production
+                <i className="fas fa-flask mr-2 group-hover:animate-pulse"></i>Backtesting & Validation
               </span>
             </span>
             <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-orange-500/20 to-orange-600/20 text-orange-300 rounded-full text-sm md:text-sm font-semibold border border-orange-500/30 hover:border-orange-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center badge-tactile mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
-                <i className="fas fa-database mr-2 group-hover:animate-pulse"></i>Data Architecture
+                <i className="fas fa-shield-alt mr-2 group-hover:animate-pulse"></i>Risk & Execution
               </span>
             </span>
           </div>
@@ -188,7 +188,7 @@ export default function Blog() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {allArticles.map(({ id, date, title, excerpt, image, author }) => (
                 <Link href={`/blog/${id}`} key={id} className="group">
-                  <article className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 border border-gray-100 card-tactile ripple-effect mobile-focus">
+                  <article className="bg-[#0D1B30] rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 border border-[#1E2D45] card-tactile ripple-effect mobile-focus">
                     <div className="relative h-56 overflow-hidden">
                       <Image
                         src={image}
@@ -203,25 +203,25 @@ export default function Blog() {
                     </div>
                     
                     <div className="p-6">
-                      <div className="flex items-center gap-4 text-sm text-gray-900 mb-3">
+                      <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
                         <span>{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                         <span>•</span>
                         <span>{author}</span>
                       </div>
 
-                      <h2 className="text-xl font-bold text-gray-900 group-hover:text-[#005A9C] transition-colors duration-300 mb-3 line-clamp-2">
+                      <h2 className="text-xl font-bold text-white group-hover:text-[#42A5F5] transition-colors duration-300 mb-3 line-clamp-2">
                         {title}
                       </h2>
                       
-                      <p className="text-gray-900 leading-relaxed mb-4 line-clamp-3">
+                      <p className="text-gray-400 leading-relaxed mb-4 line-clamp-3">
                         {excerpt}
                       </p>
 
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-semibold text-[#00BFA5] group-hover:text-[#005A9C] transition-colors">
+                        <span className="text-sm font-semibold text-[#00E5A0] group-hover:text-[#42A5F5] transition-colors">
                           Read Article
                         </span>
-                        <i className="fas fa-arrow-right text-[#00BFA5] group-hover:text-[#005A9C] group-hover:translate-x-1 transition-all"></i>
+                        <i className="fas fa-arrow-right text-[#00E5A0] group-hover:text-[#42A5F5] group-hover:translate-x-1 transition-all"></i>
                       </div>
                     </div>
                   </article>
@@ -233,7 +233,7 @@ export default function Blog() {
       </main>
 
       {/* Enhanced Newsletter & Contact CTA */}
-      <section className="py-20 bg-gradient-to-br from-[#0A192F] via-[#1A3A52] to-[#005A9C] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#050B14] via-[#0A1526] to-[#0D1B30] text-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -252,11 +252,11 @@ export default function Blog() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Discuss Your Project</h3>
                 <p className="text-gray-300 mb-4 text-sm">
-                  Have a specific data engineering challenge? Let's talk about how these approaches might apply to your situation.
+                  Have a specific strategy or infrastructure challenge? Let's talk about how these approaches might apply to your situation.
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors button-tactile ripple-effect mobile-focus"
+                  className="inline-flex items-center bg-[#00E5A0] hover:bg-[#00FFB3] text-[#050B14] px-6 py-3 rounded-lg font-bold transition-colors button-tactile ripple-effect mobile-focus"
                 >
                   <i className="fas fa-arrow-right mr-2"></i>
                   Start Conversation
@@ -296,7 +296,7 @@ export default function Blog() {
               <p className="text-gray-300 mb-4">Follow for more insights:</p>
               <div className="flex justify-center gap-4">
                 <a
-                  href="https://linkedin.com/in/joseacostar"
+                  href="https://www.linkedin.com/in/datawithjose"
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Follow on LinkedIn"
