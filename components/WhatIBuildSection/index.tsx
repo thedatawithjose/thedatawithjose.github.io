@@ -42,9 +42,9 @@ export default function WhatIBuildSection() {
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Why Choose My Data Engineering?</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Why Choose My Quantitative Development?</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                <strong>12+ years of professional experience across high-stakes environments:</strong> Four years managing construction projects taught me to plan for failure modes and deliver under constraints. Four years as quantitative trader taught me that data quality isn't optional—it's survival. Now, three years as Data Engineer, I build infrastructure combining both disciplines—engineered for reliability, tested under pressure.
+                <strong>12+ years of professional experience across high-stakes environments:</strong> 8+ years in markets taught me that data quality, validation, and risk controls are non-negotiable. For 7+ years, I have built quantitative systems from research through live execution, using data engineering as the infrastructure that makes them reliable under pressure.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg">

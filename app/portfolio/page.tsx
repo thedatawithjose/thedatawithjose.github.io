@@ -15,9 +15,9 @@ export default function Portfolio() {
 
   // Portfolio statistics
   const portfolioStats = {
-    totalProjects: '12+',
+    totalProjects: '6',
     linesOfCode: '25K+',
-    clientsSatisfied: '8+',
+    clientsSatisfied: '6',
     marketExperience: '8+'
   };
 
@@ -170,7 +170,7 @@ export default function Portfolio() {
         'User Satisfaction': '85%'
       },
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-      link: '#',
+      link: '/contact',
       featured: false,
       clientTestimonial: "Essential tool for our daily risk management operations.",
       clientName: "RiskPro Holdings",
@@ -201,7 +201,7 @@ export default function Portfolio() {
         'Training Time': '4 hours'
       },
       image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop',
-      link: '#',
+      link: '/contact',
       featured: false,
       clientTestimonial: "The prediction accuracy met our expectations with solid performance.",
       clientName: "Alpha Strategies",
@@ -513,7 +513,7 @@ export default function Portfolio() {
         </div>
 
         {/* All Projects Section */}
-        <div className="py-20">
+        <div className="hidden py-20">
           <div className="container mx-auto px-4">
             <m.div
               className="text-center mb-16"
@@ -756,27 +756,27 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-4 gap-8">
               {[
                 {
-                  category: 'Research & Data',
-                  technologies: ['Python', 'SQL', 'PostgreSQL', 'TimescaleDB', 'Docker', 'Airflow'],
-                  icon: 'fas fa-database',
+                  category: 'Quantitative Research',
+                  technologies: ['Python', 'C#', 'NumPy', 'Pandas', 'SciPy', 'Statsmodels', 'SARIMA'],
+                  icon: 'fas fa-chart-line',
                   color: 'green'
                 },
                 {
-                  category: 'Validation & ML',
-                  technologies: ['Scikit-learn', 'NumPy', 'SciPy', 'Pandas', 'Statsmodels', 'SARIMA'],
-                  icon: 'fas fa-brain',
+                  category: 'Strategy Development',
+                  technologies: ['Backtrader', 'NinjaScript', 'Pine Script', 'Scikit-learn', 'Walk-Forward', 'OOS Testing'],
+                  icon: 'fas fa-flask',
                   color: 'blue'
                 },
                 {
-                  category: 'Trading Systems',
-                  technologies: ['Backtrader', 'NinjaScript', 'Pine Script', 'Redis', 'WebSocket'],
-                  icon: 'fas fa-chart-line',
+                  category: 'Execution & Market Data',
+                  technologies: ['WebSockets', 'REST APIs', 'Redis', 'PostgreSQL', 'TimescaleDB', 'Risk Controls'],
+                  icon: 'fas fa-bolt',
                   color: 'purple'
                 },
                 {
-                  category: 'Delivery & Infra',
-                  technologies: ['AWS', 'Git', 'CI/CD', 'Docker', 'Monitoring', 'REST APIs'],
-                  icon: 'fas fa-cloud',
+                  category: 'Production Quant Systems',
+                  technologies: ['Python', 'Docker', 'AWS', 'CI/CD', 'Monitoring', 'Fault Tolerance'],
+                  icon: 'fas fa-cogs',
                   color: 'orange'
                 }
               ].map((expertise, index) => (
@@ -871,16 +871,14 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <a
-                href="https://calendly.com/datawithjose/consultation"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/contact"
                 className="bg-[#00E5A0] text-[#050B14] px-8 py-4 rounded-lg font-bold hover:bg-[#00FFB3] transition-colors text-lg inline-flex items-center justify-center"
               >
                 <i className="fas fa-calendar-check mr-2"></i>
-                Get a Free Quote
-                <i className="fas fa-external-link-alt ml-2 text-sm"></i>
-              </a>
+                Discuss Your Project
+                <i className="fas fa-arrow-right ml-2 text-sm"></i>
+              </Link>
               <Link
                 href="/services"
                 className="border-2 border-[#1E2D45] text-gray-200 px-8 py-4 rounded-lg font-semibold hover:bg-white/5 hover:text-[#00E5A0] transition-colors text-lg"
@@ -892,7 +890,7 @@ export default function Portfolio() {
         </div>
 
         {/* Enhanced CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-[#050B14] via-[#0A1526] to-[#0D1B30] text-white">
+        <section className="hidden py-20 bg-gradient-to-br from-[#050B14] via-[#0A1526] to-[#0D1B30] text-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <m.div

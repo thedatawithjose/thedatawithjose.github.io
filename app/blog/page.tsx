@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import BlogClientFeatures from '../../components/BlogClientFeatures';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -23,11 +22,11 @@ export default function Blog() {
     "@type": "Blog",
     "name": "Jose Acosta Technical Blog",
     "description": "Insights on algorithmic trading systems, backtesting and validation, and automated execution",
-    "url": "https://joseacosta.dev/blog",
+    "url": "https://datawithjose.tech/blog",
     "author": {
       "@type": "Person",
       "name": "Jose Acosta",
-      "url": "https://joseacosta.dev"
+      "url": "https://datawithjose.tech"
     },
     "blogPost": allArticles.map(article => ({
       "@type": "BlogPosting",
@@ -38,7 +37,7 @@ export default function Blog() {
         "@type": "Person",
         "name": article.author
       },
-      "url": `https://joseacosta.dev/blog/${article.id}`
+      "url": `https://datawithjose.tech/blog/${article.id}`
     }))
   };
 
@@ -91,12 +90,12 @@ export default function Blog() {
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight relative">
               <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent drop-shadow-2xl relative inline-block transform hover:scale-105 transition-transform duration-300">
-                Technical Articles &
+                Quantitative Development
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/40 to-white/20 blur-xl opacity-50"></div>
               </span>
               <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl mt-2 relative inline-block transform hover:scale-105 transition-transform duration-300">
-                Real-World Insights
+                Notes & Insights
                 {/* Animated shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 animate-pulse opacity-40"></div>
                 {/* Glow effect */}
@@ -108,7 +107,7 @@ export default function Blog() {
             <p className="text-xl md:text-2xl text-gray-200 mb-6 leading-relaxed max-w-4xl mx-auto">
               Deep dives into algorithmic trading, validation, and building systems that survive real markets.
             </p>
-            <div className="bg-gradient-to-r from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 inline-block relative overflow-hidden">
+            <div className="hidden bg-gradient-to-r from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 inline-block relative overflow-hidden">
               {/* Quote decoration */}
               <div className="absolute top-2 left-4 text-4xl text-green-400/30 font-serif">"</div>
               <div className="absolute bottom-2 right-4 text-4xl text-green-400/30 font-serif">"</div>
@@ -124,7 +123,7 @@ export default function Blog() {
           </div>
           
           {/* Blog Stats */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+          <div className="hidden grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
             <div className="group text-center p-6 bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden tactile-feedback mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-br from-green-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
@@ -156,7 +155,7 @@ export default function Blog() {
             <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-green-500/20 to-green-600/20 text-green-300 rounded-full text-sm md:text-sm font-semibold border border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center badge-tactile mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
-                <i className="fas fa-stream mr-2 group-hover:animate-pulse"></i>Market Data Systems
+                <i className="fas fa-stream mr-2 group-hover:animate-pulse"></i>Quant Research
               </span>
             </span>
             <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-500/20 to-blue-600/20 text-blue-300 rounded-full text-sm md:text-sm font-semibold border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center badge-tactile mobile-touch-feedback cursor-pointer">
@@ -174,7 +173,7 @@ export default function Blog() {
             <span className="group px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-orange-500/20 to-orange-600/20 text-orange-300 rounded-full text-sm md:text-sm font-semibold border border-orange-500/30 hover:border-orange-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20 backdrop-blur-sm relative overflow-hidden min-h-[44px] flex items-center badge-tactile mobile-touch-feedback cursor-pointer">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
-                <i className="fas fa-shield-alt mr-2 group-hover:animate-pulse"></i>Risk & Execution
+                <i className="fas fa-shield-alt mr-2 group-hover:animate-pulse"></i>Risk & Execution Systems
               </span>
             </span>
           </div>
@@ -184,8 +183,7 @@ export default function Blog() {
       {/* Articles Grid */}
       <main className="py-20">
         <div className="container mx-auto px-6 lg:px-8">
-          <BlogClientFeatures allArticles={allArticles}>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {allArticles.map(({ id, date, title, excerpt, image, author }) => (
                 <Link href={`/blog/${id}`} key={id} className="group">
                   <article className="bg-[#0D1B30] rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 border border-[#1E2D45] card-tactile ripple-effect mobile-focus">
@@ -227,8 +225,7 @@ export default function Blog() {
                   </article>
                 </Link>
               ))}
-            </div>
-          </BlogClientFeatures>
+          </div>
         </div>
       </main>
 
@@ -237,16 +234,16 @@ export default function Blog() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Want to Discuss These Topics?
+              Build Better Trading Systems
             </h2>
             <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Whether you have questions about implementation details or want to explore how these concepts 
-              apply to your specific use case — let's connect.
+              Have a question about quantitative research, validation, or execution? Let's discuss how these ideas
+              apply to a real trading system.
             </p>
 
             {/* Action Options */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+            <div className="flex justify-center mb-12">
+              <div className="max-w-md p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <i className="fas fa-comments text-2xl text-white"></i>
                 </div>
@@ -263,7 +260,7 @@ export default function Blog() {
                 </Link>
               </div>
 
-              <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+              <div className="hidden p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <i className="fas fa-bell text-2xl text-white"></i>
                 </div>
@@ -292,7 +289,7 @@ export default function Blog() {
             </div>
 
             {/* Social Links */}
-            <div className="border-t border-white/20 pt-8">
+            <div className="hidden border-t border-white/20 pt-8">
               <p className="text-gray-300 mb-4">Follow for more insights:</p>
               <div className="flex justify-center gap-4">
                 <a

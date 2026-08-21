@@ -18,7 +18,7 @@ const cloudSkills = [
 ];
 
 const tradingSkills = [
-  "Algorithmic Trading (4+ years with real capital)",
+  "Algorithmic Trading (8+ years with real market experience)",
   "Risk Management & Position Sizing",
   "Mean Reversion & Momentum Strategies",
   "Time-series modeling at scale (OU processes, regime detection)"

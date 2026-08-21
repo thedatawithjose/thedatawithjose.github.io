@@ -14,9 +14,9 @@ export default function About() {
 
   // Personal metrics and achievements
   const metrics = {
-    experience: '10+',
-    projects: '12+',
-    clients: '8+',
+    experience: '12+',
+    projects: '6',
+    clients: '6',
     countries: '4+'
   };
 
@@ -169,7 +169,7 @@ export default function About() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-6">
                   <a
-                    href="mailto:datawithjose@outlook.com?subject=Quantitative Development - Let's Work Together&body=Hi Jose,%0D%0A%0D%0AI'm interested in discussing a quantitative development project with you.%0D%0A%0D%0AProject type:%0D%0A☐ Strategy research & validation%0D%0A☐ Backtesting infrastructure%0D%0A☐ Automated execution systems%0D%0A☐ Risk management%0D%0A☐ Other: _________%0D%0A%0D%0ATimeline: _________%0D%0ABudget range: _________%0D%0A%0D%0AProject details:%0D%0A- %0D%0A- %0D%0A- %0D%0A%0D%0ABest regards"
+                    href="mailto:datawithjose@outlook.com?subject=Quantitative%20Development%20-%20Let%27s%20Work%20Together&body=Hi%20Jose%2C%0D%0A%0D%0AI%27m%20interested%20in%20discussing%20a%20quantitative%20development%20project%20with%20you.%0D%0A%0D%0AProject%20type%3A%0D%0A%E2%98%90%20Strategy%20research%20%26%20validation%0D%0A%E2%98%90%20Backtesting%20infrastructure%0D%0A%E2%98%90%20Automated%20execution%20systems%0D%0A%E2%98%90%20Risk%20management%0D%0A%E2%98%90%20Other%3A%20_________%0D%0A%0D%0ATimeline%3A%20_________%0D%0ABudget%20range%3A%20_________%0D%0A%0D%0AProject%20details%3A%0D%0A-%20%0D%0A-%20%0D%0A-%20%0D%0A%0D%0ABest%20regards"
                     className="group bg-gradient-to-r from-[#00E5A0] to-[#00C98C] hover:from-[#00FFB3] hover:to-[#00E5A0] text-[#050B14] px-8 py-4 rounded-xl font-bold transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center"
                   >
                     <i className="fas fa-envelope mr-2"></i>
@@ -257,21 +257,21 @@ export default function About() {
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-2xl font-bold text-blue-400 mb-2">Cost-Optimized</div>
-                <div className="text-gray-300 text-sm">Infrastructure Design</div>
+                <div className="text-gray-300 text-sm">Trading Infrastructure</div>
               </m.div>
               <m.div
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-2xl font-bold text-purple-400 mb-2">Production-Scale</div>
-                <div className="text-gray-300 text-sm">Data Processing</div>
+                <div className="text-gray-300 text-sm">Market Data Systems</div>
               </m.div>
               <m.div
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-2xl font-bold text-orange-400 mb-2">Low-Latency</div>
-                <div className="text-gray-300 text-sm">Real-Time Processing</div>
+                <div className="text-gray-300 text-sm">Low-Latency Execution</div>
               </m.div>
             </m.div>
           </div>
@@ -313,7 +313,7 @@ export default function About() {
             >
               {/* Overview Tab */}
               {activeTab === 'overview' && (
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="max-w-4xl mx-auto">
                   <div>
                     <h2 className="text-4xl font-bold mb-6 text-white">Quantitative Developer with Real-World Context</h2>
                     <p className="text-lg mb-4 leading-relaxed text-gray-300">
@@ -321,6 +321,11 @@ export default function About() {
                       into systematic, validated, and executable systems — from research to live execution.
                       I work at the intersection of trading and software engineering: translating market ideas into explicit rules,
                       developing research and backtesting workflows, and engineering the execution layer that operates them live.
+                    </p>
+                    <p className="text-lg mb-4 leading-relaxed text-gray-300">
+                      Data Engineering is a supporting capability I use to build reliable market-data pipelines, research infrastructure,
+                      and production execution systems. The goal is always quantitative: improve the quality of research and the reliability
+                      of trading decisions in live markets.
                     </p>
                     <p className="text-lg mb-4 leading-relaxed text-gray-300">
                       My approach is deliberately practical: a strategy is not considered robust simply because it produces an
@@ -333,7 +338,7 @@ export default function About() {
                     </p>
 
                     {/* How I Build Section */}
-                    <div className="bg-gradient-to-br from-[#0A1526] to-[#0D1B30] p-6 rounded-xl border-l-4 border-[#00E5A0] mb-6">
+                    <div className="hidden bg-gradient-to-br from-[#0A1526] to-[#0D1B30] p-6 rounded-xl border-l-4 border-[#00E5A0] mb-6">
                       <h3 className="text-xl font-semibold mb-4 text-white">How I Build</h3>
                       <ul className="space-y-2 text-gray-300">
                         <li className="flex items-start">
@@ -379,7 +384,7 @@ export default function About() {
                     </div>
 
                     {/* Core Tech */}
-                    <div className="mb-8">
+                    <div className="hidden mb-8">
                       <h3 className="text-xl font-semibold mb-4 text-white">Core Tech:</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <div>
@@ -429,9 +434,9 @@ export default function About() {
                     </div>
                   </div>
 
-                  <div className="space-y-6">
-                    <h3 className="text-2xl font-bold mb-6 text-white">Earlier Career</h3>
-                    <div className="bg-gradient-to-br from-[#0A1526] to-[#0D1B30] p-6 rounded-xl border-l-4 border-[#42A5F5] mb-8">
+                  <div className="hidden space-y-6">
+                    <h3 className="hidden text-2xl font-bold mb-6 text-white">Earlier Career</h3>
+                    <div className="hidden bg-gradient-to-br from-[#0A1526] to-[#0D1B30] p-6 rounded-xl border-l-4 border-[#42A5F5] mb-8">
                       <h4 className="font-semibold text-white mb-2">Earlier Career Context</h4>
                       <p className="text-gray-300 leading-relaxed">
                         Before the markets, I managed civil-engineering projects—valuations, resource flows, construction metrics.
@@ -445,10 +450,10 @@ export default function About() {
                       </p>
                     </div>
 
-                    <h3 className="text-2xl font-bold mb-6 text-white">What I'm Looking For</h3>
+                    <h3 className="hidden text-2xl font-bold mb-6 text-white">What I'm Looking For</h3>
 
                     {/* Currently Statement */}
-                    <div className="bg-gradient-to-r from-[#0A1526] to-[#0D1B30] p-6 rounded-xl border-l-4 border-[#42A5F5] mb-6">
+                    <div className="hidden bg-gradient-to-r from-[#0A1526] to-[#0D1B30] p-6 rounded-xl border-l-4 border-[#42A5F5] mb-6">
                       <p className="text-lg text-gray-300 leading-relaxed">
                         <strong className="text-[#42A5F5]">Currently:</strong> I'm seeking full-time Quantitative Developer roles with
                         proprietary trading firms, systematic trading teams, algorithmic trading groups, and trading technology companies.
@@ -457,7 +462,7 @@ export default function About() {
                     </div>
 
                     {/* Full-Time Opportunities */}
-                    <div className="bg-gradient-to-br from-[#0A1526] to-[#0D1B30] p-6 rounded-xl border-l-4 border-[#00E5A0] mb-6">
+                    <div className="hidden bg-gradient-to-br from-[#0A1526] to-[#0D1B30] p-6 rounded-xl border-l-4 border-[#00E5A0] mb-6">
                       <h4 className="text-xl font-bold text-[#00E5A0] mb-3">
                         <i className="fas fa-briefcase mr-2"></i>
                         Full-Time Quantitative Developer Roles
@@ -495,7 +500,7 @@ export default function About() {
                     </div>
 
                     {/* Consulting & Project Work */}
-                    <div className="bg-gradient-to-br from-[#0A1526] to-[#0D1B30] p-6 rounded-xl border-l-4 border-[#8B5CF6] mb-6">
+                    <div className="hidden bg-gradient-to-br from-[#0A1526] to-[#0D1B30] p-6 rounded-xl border-l-4 border-[#8B5CF6] mb-6">
                       <h4 className="text-xl font-bold text-purple-400 mb-3">
                         <i className="fas fa-handshake mr-2"></i>
                         Consulting & Project Work
@@ -510,14 +515,14 @@ export default function About() {
                     </div>
 
                     {/* Footer */}
-                    <div className="bg-[#0A1526] p-6 rounded-xl border border-[#1E2D45]">
+                    <div className="hidden bg-[#0A1526] p-6 rounded-xl border border-[#1E2D45]">
                       <p className="text-gray-400 leading-relaxed">
                         Happy to share repos, architectural diagrams, or walk through design decisions and trade-offs.
                         I believe in building systems and cultures defined by clarity, rigor, and accountability.
                       </p>
                     </div>
 
-                    <h3 className="text-xl font-semibold mb-4 text-white">Production Metrics in Detail</h3>
+                    <h3 className="hidden text-xl font-semibold mb-4 text-white">Production Metrics in Detail</h3>
                     <m.div
                       className="bg-[#0D1B30] p-4 rounded-lg shadow-md border-l-4 border-[#00E5A0] mb-4"
                       initial={{ opacity: 0, x: 30 }}
@@ -817,8 +822,8 @@ export default function About() {
                   <span className="block text-green-400 mt-2">Together?</span>
                 </h2>
                 <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Let's discuss your data challenges and create solutions that drive real business value
-                  with production-grade reliability.
+                  Let's discuss your quantitative research, trading systems, or execution challenges and build production-grade solutions
+                  with reliable market data and disciplined engineering.
                 </p>
               </m.div>
 

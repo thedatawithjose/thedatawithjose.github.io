@@ -105,7 +105,7 @@ export default function Header() {
   return (
     <>
       {/* Sub-header */}
-      <div className="sub-header bg-[#0A1526] py-3 border-b border-[#1E2D45]">
+      <div className="sub-header bg-[#050B14] py-3 border-b border-[#1E2D45]">
         <div className="container mx-auto px-4">
           <div className="flex justify-end items-center">
             <ul className="right-icons flex space-x-4 md:space-x-6">
@@ -151,33 +151,32 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <header className="bg-[#050B14]/95 backdrop-blur-md shadow-lg border-b border-[#1E2D45] sticky top-0 w-full z-40 transition-all duration-300">
-        <nav className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            {/* Logo + Navigation Group */}
-            <div className="flex items-center space-x-8">
-              {/* Logo */}
+      <header className="bg-[#050B14] shadow-lg border-b border-[#1E2D45] sticky top-0 w-full z-40 transition-all duration-300">
+        <nav className="container mx-auto px-4 py-3">
+          <div className="relative flex items-center">
+            {/* Logo */}
+            <div className="flex items-center">
               <Link 
                 href="/" 
-                className="flex items-center group focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:ring-offset-2 focus:ring-offset-[#050B14] rounded-lg"
+                className="relative -left-4 flex items-center group focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:ring-offset-2 focus:ring-offset-[#050B14] rounded-lg"
                 aria-label="Jose Acosta Quantitative Developer - Go to homepage"
               >
                 <div className="relative flex-shrink-0">
-                  <div className="w-20 h-10 md:w-28 md:h-12 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <div className="w-20 h-12 md:w-28 md:h-14 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
                     <Image 
-                      src="/images/logo jsoe (1).svg" 
+                      src="/images/New-IMAGE.png"
                       alt="Jose Acosta Quantitative Developer Logo"
-                      width={112}
-                      height={48}
-                      className="w-full h-full object-cover object-left scale-110 group-hover:brightness-110 transition-all duration-300"
-                      priority
+                      width={136}
+                      height={65}
+                      className="w-full h-full object-contain group-hover:brightness-110 transition-all duration-300"
                     />
                   </div>
                 </div>
               </Link>
+            </div>
 
               {/* Desktop Menu */}
-              <nav className="hidden lg:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
+              <nav className="absolute left-1/2 hidden -translate-x-1/2 lg:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
               <Link 
                 href="/" 
                 prefetch={false}
@@ -234,12 +233,11 @@ export default function Header() {
                 }`} aria-hidden="true"></span>
               </Link>
               </nav>
-            </div>
 
             {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="ml-auto hidden lg:flex items-center gap-3">
               <a 
-                href="/Jose_Acosta_Resume.pdf" 
+                href="/downloads/quant_cv.pdf"
                 download
                 className="relative bg-transparent text-gray-200 px-5 py-2.5 rounded-xl hover:bg-white/5 hover:shadow-lg transition-all duration-300 font-semibold group overflow-hidden border-2 border-[#00E5A0]/30 hover:border-[#00E5A0]/60"
               >
@@ -261,7 +259,7 @@ export default function Header() {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden flex items-center space-x-4">
+            <div className="ml-auto lg:hidden flex items-center space-x-4">
               <button
                 type="button"
                 onClick={toggleMenu}
@@ -343,7 +341,7 @@ export default function Header() {
                   Blog
                 </Link>
                 <a 
-                  href="/Jose_Acosta_Resume.pdf" 
+                  href="/downloads/quant_cv.pdf"
                   download
                   className="bg-transparent text-gray-200 border-2 border-[#00E5A0]/30 px-6 py-3 rounded-lg hover:bg-white/5 hover:shadow-lg transition-all duration-300 font-semibold text-center mt-2 focus:outline-none focus:ring-2 focus:ring-[#00E5A0] focus:ring-offset-2 focus:ring-offset-[#0A1526]"
                   onClick={() => setIsMenuOpen(false)}

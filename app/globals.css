@@ -549,6 +549,13 @@ body {
   will-change: transform;
 }
 
+.hero-subtitle-relief {
+  font-family: 'Avenir Next', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.9), 2px 2px 0 rgba(0, 0, 0, 0.55), 0 0 8px rgba(0, 0, 0, 0.45);
+}
+
 /* Optimized Will-Change */
 .will-change-opacity {
   will-change: opacity;

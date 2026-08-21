@@ -8,7 +8,6 @@ import Footer from '../../components/Footer';
 import StructuredData from '../../components/StructuredData';
 import { generateFAQSchema } from '../../lib/structured-data';
 import CalendlyBooking from '../../components/CalendlyBooking';
-import EnhancedCTAs from '../../components/EnhancedCTAs';
 
 // Type definitions for service packages
 interface AddOn {
@@ -282,7 +281,7 @@ export default function Services() {
 
         {/* Open to Full-Time & Consulting Disclaimer */}
         <m.div
-          className="relative bg-gradient-to-br from-[#0A1526] via-[#0D1B30] to-[#0A1526] border-l-4 border-[#00E5A0] py-10 overflow-hidden"
+          className="hidden relative bg-gradient-to-br from-[#0A1526] via-[#0D1B30] to-[#0A1526] border-l-4 border-[#00E5A0] py-10 overflow-hidden"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -435,8 +434,8 @@ export default function Services() {
                 <div className="text-xs text-gray-400 mt-1">Futures · FX · Crypto · Equities</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-blue-400 mb-2">12+</div>
-                <div className="text-gray-300 text-sm">Projects Delivered</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">6</div>
+                <div className="text-gray-300 text-sm">Selected Projects</div>
                 <div className="text-xs text-gray-400 mt-1">Production Systems</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
@@ -464,7 +463,7 @@ export default function Services() {
                   className="group bg-gradient-to-r from-[#00E5A0] to-[#00C98C] hover:from-[#00FFB3] hover:to-[#00E5A0] text-[#050B14] px-8 py-4 rounded-xl font-bold transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center"
                 >
                   <i className="fas fa-calendar-check mr-2"></i>
-                  Book Free 30-Min Strategy Call
+                  Discuss Your Project
                   <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
                 </Link>
                 <a
@@ -816,7 +815,7 @@ export default function Services() {
 
             {/* Comparison Table */}
             <m.div
-              className="mt-20 max-w-6xl mx-auto"
+              className="hidden mt-20 max-w-6xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -918,7 +917,7 @@ export default function Services() {
         </div>
 
         {/* How It Works Process */}
-        <div className="py-20 bg-gradient-to-br from-[#0A1526] to-[#050B14]">
+        <div className="hidden py-20 bg-gradient-to-br from-[#0A1526] to-[#050B14]">
           <div className="container mx-auto px-4">
             <m.div
               className="text-center mb-16"
@@ -1044,7 +1043,7 @@ export default function Services() {
         </div>
 
         {/* Client Results */}
-        <div className="py-20 bg-[#0A1526] text-white">
+        <div className="hidden py-20 bg-[#0A1526] text-white">
           <div className="container mx-auto px-4">
             <m.div
               className="text-center mb-16"
@@ -1080,7 +1079,7 @@ export default function Services() {
         </div>
 
         {/* Process Timeline */}
-        <div className="py-20">
+        <div className="hidden py-20">
           <div className="container mx-auto px-4">
             <m.div
               className="text-center mb-16"
@@ -1194,7 +1193,7 @@ export default function Services() {
         </div>
 
         {/* Service Guarantees Section */}
-        <section className="py-20 bg-gradient-to-br from-[#050B14] via-[#0A1526] to-[#0D1B30] text-white">
+        <section className="hidden py-20 bg-gradient-to-br from-[#050B14] via-[#0A1526] to-[#0D1B30] text-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <m.div
@@ -1264,9 +1263,6 @@ export default function Services() {
 
         {/* Calendly Booking Section */}
         <CalendlyBooking variant="cta" />
-
-        {/* Enhanced CTA */}
-        <EnhancedCTAs variant="urgent" />
 
         <Footer />
       </div>

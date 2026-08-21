@@ -105,7 +105,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/datawithjose" target="_blank" rel="noopener noreferrer" className="group flex items-center text-gray-300 hover:text-[#00E5A0] transition-all duration-300">
+                <a href="https://www.linkedin.com/in/datawithjose/" target="_blank" rel="noopener noreferrer" className="group flex items-center text-gray-300 hover:text-[#00E5A0] transition-all duration-300">
                   <div className="w-1.5 h-1.5 bg-[#00E5A0] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <span className="group-hover:translate-x-1 transition-transform duration-300">LinkedIn</span>
                 </a>
@@ -136,9 +136,9 @@ export default function Footer() {
             </h4>
             <ul className="menu-list space-y-3">
               <li>
-                <Link href="/trading-strategies" className="group flex items-center text-gray-300 hover:text-[#42A5F5] transition-all duration-300">
+                <Link href="/services" className="group flex items-center text-gray-300 hover:text-[#42A5F5] transition-all duration-300">
                   <div className="w-1.5 h-1.5 bg-[#42A5F5] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <span className="group-hover:translate-x-1 transition-transform duration-300">Trading Strategies</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">Trading Services</span>
                 </Link>
               </li>
               <li>
@@ -179,40 +179,6 @@ export default function Footer() {
             </div>
           </m.div>
         </div>
-        
-        {/* Ready to Connect CTA Section */}
-        <m.div 
-          className="relative mt-16 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
-        >
-          <div className="text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#00E5A0] via-[#42A5F5] to-[#8B5CF6] bg-clip-text text-transparent">
-              Ready to Connect?
-            </h3>
-            <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
-              For full-time Quantitative Developer opportunities or consulting engagements, let's discuss building robust algorithmic trading systems — from research to execution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center justify-center bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] hover:from-[#00FFB3] hover:to-[#5AB3F5] text-[#050B14] px-6 py-3 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                <i className="fas fa-calendar-check mr-2"></i>
-                Schedule Call
-                <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-              </Link>
-              <Link
-                href="/services"
-                className="group inline-flex items-center justify-center border-2 border-white/30 hover:border-white/60 text-white hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm"
-              >
-                <i className="fas fa-briefcase mr-2"></i>
-                View Services
-              </Link>
-            </div>
-          </div>
-        </m.div>
         
         {/* Enhanced Copyright Section */}
         <m.div 

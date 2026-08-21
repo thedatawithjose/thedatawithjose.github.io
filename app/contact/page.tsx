@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ContactForm from '../../components/ContactForm';
-import { LazyLogosScroll } from '../../components/LazyComponents';
 import StructuredData from '../../components/StructuredData';
 import { generateFAQSchema } from '../../lib/structured-data';
 import { ToastProvider } from '../../components/ToastNotification';
@@ -336,21 +335,6 @@ export default function Contact() {
           >
             <ContactForm />
           </m.div>
-        </div>
-      </div>
-
-      {/* Partners Section */}
-      <div className="partners py-16 bg-[#0A1526]">
-        <div className="container mx-auto px-4">
-          <m.h2
-            className="text-3xl font-bold text-center mb-8 text-white"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            Tools & Platforms
-          </m.h2>
-          <LazyLogosScroll />
         </div>
       </div>
 

@@ -302,11 +302,11 @@ export default function CertificationsSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-[#0097A7]">
-              Professional Certifications
+              Supporting Credentials for Quantitative Development
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Continuous learning and professional development through industry-recognized certifications
+            Continuous learning in quantitative methods, programming, and the data engineering foundations that support trading systems
           </p>
         </m.div>
 

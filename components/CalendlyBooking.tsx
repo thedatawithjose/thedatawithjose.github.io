@@ -122,7 +122,7 @@ export default function CalendlyBooking({
               </button>
 
               <a
-                href="mailto:datawithjose@outlook.com?subject=Quick Question About Quantitative Development Services&body=Hi Jose,%0D%0A%0D%0AI have a quick question about your quantitative development services:%0D%0A%0D%0A[Your question here]%0D%0A%0D%0ABest regards"
+                href="mailto:datawithjose@outlook.com?subject=Quick%20Question%20About%20Quantitative%20Development%20Services&body=Hi%20Jose%2C%0D%0A%0D%0AI%20have%20a%20quick%20question%20about%20your%20quantitative%20development%20services%3A%0D%0A%0D%0A%5BYour%20question%20here%5D%0D%0A%0D%0ABest%20regards"
                 className="group border-2 border-white/60 hover:border-white text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 backdrop-blur-sm flex items-center"
               >
                 <i className="fas fa-envelope mr-3"></i>

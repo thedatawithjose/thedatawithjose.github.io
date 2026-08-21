@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { LazyLogosScroll } from '../components/LazyComponents';
 import OptimizedVideoBackground from '../components/OptimizedVideoBackground';
 
 import dynamic from 'next/dynamic';
@@ -22,6 +21,8 @@ const ServicesSection = dynamic(() => import('../components/ServicesSection'), {
 const AboutSection = dynamic(() => import('../components/AboutSection'), {
   loading: () => <div className="h-96 bg-white animate-pulse"></div>
 });
+
+const TestimonialsSection = dynamic(() => import('../components/TestimonialsSection'));
 import StructuredData from '../components/StructuredData';
 import { generateReviewSchema } from '../lib/structured-data';
 import ProgressiveHero from '../components/ProgressiveHero';
@@ -47,8 +48,8 @@ export default function Home() {
   const heroSlides = [
     {
       title: "Quantitative Developer",
-      subtitle: "8 years of active market experience, focused on turning trading logic into systematic, validated, and executable systems — from research to live execution.",
-      mobileSubtitle: "8 years of market experience. Trading systems from research to live execution.",
+      subtitle: "8 years turning market ideas into systematic trading systems. Research, validation, and execution in one workflow. Built for live markets.",
+      mobileSubtitle: "8 years turning market ideas into trading systems. Research, validation, and execution. Built for live markets.",
       gradient: "from-[#050B14] via-[#0A1526] to-[#0D1B30]",
       cta: "Let's Talk",
       secondaryCta: "View Portfolio",
@@ -70,8 +71,8 @@ export default function Home() {
     },
     {
       title: "From Research to Execution",
-      subtitle: "A strategy is only as good as the system that executes it. I build research workflows and execution layers that survive when assumptions change — realistic costs, slippage, and constraints included.",
-      mobileSubtitle: "Research workflows + execution layers that survive when assumptions change.",
+      subtitle: "A strategy is only as good as its execution system. I build research workflows and execution layers. Realistic costs, slippage, and constraints included.",
+      mobileSubtitle: "A strategy needs a reliable execution system. Research workflows and execution layers. Realistic costs and constraints included.",
       gradient: "from-[#0D1B30] via-[#0A1526] to-[#050B14]",
       cta: "Hire Me",
       secondaryCta: "Explore Systems",
@@ -93,8 +94,8 @@ export default function Home() {
     },
     {
       title: "Systems That Survive Real Markets",
-      subtitle: "Robustness isn't a backtest metric — it's engineering. Position sizing, drawdown controls, execution safeguards, and failure conditions built directly into the system.",
-      mobileSubtitle: "Position sizing, drawdown controls, and failure conditions built into the system.",
+      subtitle: "Robustness is engineering, not just a backtest metric. Position sizing and drawdown controls protect the system. Safeguards handle real market failure conditions.",
+      mobileSubtitle: "Robustness is engineering, not just backtesting. Position sizing and drawdown controls. Safeguards for real market conditions.",
       gradient: "from-[#050B14] via-[#0D1B30] to-[#0A1526]",
       cta: "Hire Me",
       secondaryCta: "View Portfolio",
@@ -144,7 +145,7 @@ export default function Home() {
           >
             {/* Optimized Video Background - Solo carga en desktop con buena conexión */}
             <OptimizedVideoBackground
-              videoSrc="/videos/data-flow.mp4"
+              videoSrc="/videos/Create_a_premium_bit_pixel_a.mp4"
               gradient={heroSlides[currentIndex].gradient}
               slideIndex={currentIndex}
             />
@@ -268,7 +269,7 @@ export default function Home() {
 
                 <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12">
                   <m.div
-                    className="group relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border-2 border-white/10 hover:border-[#42A5F5]/50 transition-all duration-500 overflow-hidden"
+                    className="order-3 group relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border-2 border-white/10 hover:border-[#42A5F5]/50 transition-all duration-500 overflow-hidden"
                     whileHover={{ y: -8, scale: 1.02 }}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -322,7 +323,7 @@ export default function Home() {
                   </m.div>
 
                   <m.div
-                    className="group relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border-2 border-white/10 hover:border-[#00E5A0]/50 transition-all duration-500 overflow-hidden"
+                    className="order-2 group relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border-2 border-white/10 hover:border-[#00E5A0]/50 transition-all duration-500 overflow-hidden"
                     whileHover={{ y: -8, scale: 1.02 }}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -380,7 +381,7 @@ export default function Home() {
                   </m.div>
 
                   <m.div
-                    className="group relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border-2 border-white/10 hover:border-[#00E5A0]/50 transition-all duration-500 overflow-hidden"
+                    className="order-1 group relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border-2 border-white/10 hover:border-[#00E5A0]/50 transition-all duration-500 overflow-hidden"
                     whileHover={{ y: -8, scale: 1.02 }}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -397,7 +398,7 @@ export default function Home() {
                         <div className="flex-1">
                           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00E5A0]/20 rounded-full border border-[#00E5A0]/30 mb-3">
                             <div className="w-2 h-2 bg-[#00E5A0] rounded-full animate-pulse"></div>
-                            <span className="text-xs font-bold text-[#00E5A0]">7+ YEARS • CURRENT</span>
+                            <span className="text-xs font-bold text-[#00E5A0]">7+ YEARS BUILDING SYSTEMS • CURRENT</span>
                           </div>
                           <h4 className="text-lg md:text-xl font-bold text-white leading-tight group-hover:text-[#00E5A0] transition-colors duration-300">
                             Quant Developer & Educator
@@ -461,38 +462,35 @@ export default function Home() {
             </div>
           </section>
 
+          {/* Client Testimonials */}
+          <TestimonialsSection />
+
           {/* Lazy loaded sections */}
-          <LazyLoadedSections />
+          <div className="hidden">
+            <LazyLoadedSections />
+          </div>
 
           {/* Lead Magnets Section */}
-          <LeadMagnets />
+          <div className="hidden">
+            <LeadMagnets />
+          </div>
 
           {/* ROI Calculator */}
-          <ROICalculator />
+          <div className="hidden">
+            <ROICalculator />
+          </div>
 
           {/* Enhanced CTAs */}
-          <EnhancedCTAs variant="primary" />
+          <div className="hidden">
+            <EnhancedCTAs variant="primary" />
+          </div>
 
           {/* Newsletter Section */}
-          <section className="newsletter py-24 bg-[#050B14]">
+          <section className="hidden newsletter py-24 bg-[#050B14]">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <NewsletterForm />
               </div>
-            </div>
-          </section>
-
-          {/* Tech Stack Carousel */}
-          <section className="tech-stack py-24 bg-[#0A1526]">
-            <div className="container mx-auto px-4">
-              <m.h2
-                className="text-4xl font-bold text-center mb-12 text-white"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-              >
-                Technologies I Work With
-              </m.h2>
-              <LazyLogosScroll />
             </div>
           </section>
 

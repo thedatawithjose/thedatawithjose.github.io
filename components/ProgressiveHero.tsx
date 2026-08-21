@@ -64,7 +64,7 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
 
   return (
     <m.div
-      className="text-center relative z-10"
+      className="relative -top-6 z-10 text-center"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -100,7 +100,7 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
         className="mb-8 max-w-4xl mx-auto"
         variants={itemVariants}
       >
-        <div className="text-sm md:text-lg lg:text-xl leading-relaxed text-gray-100 drop-shadow-md">
+        <div className="hero-subtitle-relief text-base md:text-xl lg:text-2xl font-semibold leading-relaxed text-gray-100 drop-shadow-md">
           {/* Use mobile subtitle on small screens, regular subtitle on larger screens */}
           <div className="block md:hidden">
             {(currentSlide.mobileSubtitle || currentSlide.subtitle).split('.').map((sentence, index) => {
@@ -123,27 +123,27 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
                         {sentence.trim().split(' ').map((word, wordIndex) => {
                           if (/\d+%|\d+ms|\d+TB|\d+GB|<\d+ms/.test(word)) {
                             return (
-                              <span key={wordIndex} className="text-green-400 font-bold mx-1">
-                                {word}
+                              <span key={wordIndex} className="text-green-400 font-bold">
+                                {word}{' '}
                               </span>
                             );
                           }
-                          return <span key={wordIndex} className="mx-1">{word}</span>;
+                          return <span key={wordIndex}>{word}{' '}</span>;
                         })}
                       </span>
                     </div>
                   ) : (
-                    <span className="block text-sm">
+                    <span className="block text-base">
                       {sentence.trim().split(' ').map((word, wordIndex) => {
                         // Highlight key terms
                         if (['ex-Quant', 'Trader', 'high-availability', 'reliability', 'real-time', 'infrastructure'].includes(word.replace(/[,.:]/g, ''))) {
                           return (
-                            <span key={wordIndex} className="text-white font-semibold mx-1">
-                              {word}
+                            <span key={wordIndex} className="text-white font-semibold">
+                              {word}{' '}
                             </span>
                           );
                         }
-                        return <span key={wordIndex} className="mx-1">{word}</span>;
+                        return <span key={wordIndex}>{word}{' '}</span>;
                       })}
                       {index < (currentSlide.mobileSubtitle || currentSlide.subtitle).split('.').length - 2 && '.'}
                     </span>
@@ -174,12 +174,12 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
                         {sentence.trim().split(' ').map((word, wordIndex) => {
                           if (/\d+%|\d+ms|\d+TB|\d+GB|<\d+ms/.test(word)) {
                             return (
-                              <span key={wordIndex} className="text-green-400 font-bold text-lg mx-1">
-                                {word}
+                              <span key={wordIndex} className="text-green-400 font-bold text-lg">
+                                {word}{' '}
                               </span>
                             );
                           }
-                          return <span key={wordIndex} className="mx-1">{word}</span>;
+                          return <span key={wordIndex}>{word}{' '}</span>;
                         })}
                       </span>
                     </div>
@@ -189,12 +189,12 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
                         // Highlight key terms
                         if (['ex-Quant', 'Trader', 'high-availability', 'reliability', 'real-time', 'infrastructure'].includes(word.replace(/[,.:]/g, ''))) {
                           return (
-                            <span key={wordIndex} className="text-white font-semibold mx-1">
-                              {word}
+                            <span key={wordIndex} className="text-white font-semibold">
+                              {word}{' '}
                             </span>
                           );
                         }
-                        return <span key={wordIndex} className="mx-1">{word}</span>;
+                        return <span key={wordIndex}>{word}{' '}</span>;
                       })}
                       {index < currentSlide.subtitle.split('.').length - 2 && '.'}
                     </span>
@@ -208,7 +208,7 @@ export default function ProgressiveHero({ slides, currentIndex, onSlideChange }:
 
       {/* Enhanced Action Buttons */}
       <m.div
-        className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
+        className="relative top-6 mt-28 flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
         variants={itemVariants}
       >
         {/* Primary CTA - More prominent */}
