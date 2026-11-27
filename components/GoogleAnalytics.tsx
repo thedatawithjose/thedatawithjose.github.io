@@ -1,6 +1,7 @@
 'use client';
 
 import Script from 'next/script';
+import { trackEvent, trackPageView } from '../lib/analytics';
 
 interface GoogleAnalyticsProps {
   measurementId: string;
@@ -44,20 +45,6 @@ export default function GoogleAnalytics({ measurementId, hasConsent = false }: G
 
 // Hook para tracking de eventos personalizados
 export function useGoogleAnalytics() {
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
-    }
-  };
-
-  const trackPageView = (url: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
-        page_path: url,
-      });
-    }
-  };
-
   return { trackEvent, trackPageView };
 }
 

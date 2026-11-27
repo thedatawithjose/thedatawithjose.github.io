@@ -1,3 +1,4 @@
+import { trackEvent } from './analytics';
 import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 
 export interface WebVitalsMetric {
@@ -45,7 +46,7 @@ let metricsStore: Partial<WebVitalsReport> = {};
 function handleMetric(metric: WebVitalsMetric) {
   // Store the metric
   const metricName = metric.name.toLowerCase() as keyof WebVitalsReport;
-  if (metricName in metricsStore) {
+  if (['lcp', 'cls', 'inp', 'fcp', 'ttfb'].includes(metricName)) {
     (metricsStore as any)[metricName] = metric.value;
   }
   
@@ -67,88 +68,20 @@ function handleMetric(metric: WebVitalsMetric) {
   sendToAnalytics(metric);
   
   // Check if we have all core metrics to send a complete report
-  if (metricsStore.lcp && metricsStore.cls && metricsStore.inp) {
+  if (metricsStore.lcp !== undefined && metricsStore.cls !== undefined && metricsStore.inp !== undefined) {
     sendCompleteReport();
   }
 }
 
 function sendToAnalytics(metric: WebVitalsMetric) {
-  // Send to Vercel Analytics if available
-  if (typeof window !== 'undefined' && 'va' in window) {
-    (window as any).va('event', {
-      name: 'Web Vitals',
-      data: {
-        metric: metric.name,
-        value: metric.value,
-        rating: metric.rating,
-        id: metric.id,
-      },
-    });
-  }
-
-  // Send to Google Analytics if available
-  if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('event', metric.name, {
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true,
-    });
-  }
-
-  // Send to custom analytics endpoint
-  if (typeof window !== 'undefined') {
-    fetch('/api/analytics/web-vitals', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: metric.name,
-        value: metric.value,
-        rating: metric.rating,
-        id: metric.id,
-        url: window.location.href,
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-      }),
-    }).catch((error) => {
-      console.warn('Failed to send web vitals to analytics:', error);
-    });
-  }
+  trackEvent('web_vital', { metric_name: metric.name, metric_rating: metric.rating, value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value) });
 }
+function sendCompleteReport() { metricsStore = {}; }
 
-function sendCompleteReport() {
-  const report: WebVitalsReport = {
-    ...metricsStore,
-    timestamp: Date.now(),
-    url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof window !== 'undefined' ? navigator.userAgent : '',
-  };
-
-  if (process.env.NODE_ENV === 'development') {
-    console.log('[Web Vitals] Complete Report:', report);
-  }
-
-  // Send complete report to analytics
-  if (typeof window !== 'undefined') {
-    fetch('/api/analytics/web-vitals-report', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(report),
-    }).catch((error) => {
-      console.warn('Failed to send complete web vitals report:', error);
-    });
-  }
-
-  // Reset store for next page
-  metricsStore = {};
-}
-
+let initialized = false;
 export function initWebVitals() {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || initialized) return;
+  initialized = true;
 
   try {
     // Get Core Web Vitals

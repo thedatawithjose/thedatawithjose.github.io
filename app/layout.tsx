@@ -10,6 +10,8 @@ import dynamic from "next/dynamic";
 
 import ErrorBoundary from "../components/ErrorBoundary";
 import ConsentManager from "../components/ConsentManager";
+import CommercialTracking from "../components/CommercialTracking";
+import WebVitalsTracker from "../components/WebVitalsTracker";
 import CookieConsent from "../components/CookieConsent";
 import PageTransition from "../components/PageTransition";
 import NavigationHandler from "../components/NavigationHandler";
@@ -118,6 +120,8 @@ export default function RootLayout({
 
         {/* Consent Manager - Handles cookie consent and GA loading */}
         <ConsentManager>
+          <CommercialTracking />
+          <WebVitalsTracker />
           <LazyMotionProvider>
             {/* Error Boundary Wrapper */}
             <ErrorBoundary>

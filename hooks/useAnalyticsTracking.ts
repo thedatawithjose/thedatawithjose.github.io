@@ -44,7 +44,7 @@ export const useScrollTracking = (page: string) => {
 
 // Hook for tracking user journey through the site
 export const useJourneyTracking = () => {
-  const pathname = usePathname();
+  const pathname = usePathname().replace(/\/+$/, '') || '/';
   const previousPageRef = useRef<string>('');
 
   useEffect(() => {
