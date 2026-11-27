@@ -14,12 +14,6 @@ export default function Portfolio() {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Portfolio statistics
-  const portfolioStats = {
-    totalProjects: '6',
-    linesOfCode: '25K+',
-    clientsSatisfied: '6',
-    marketExperience: '8+'
-  };
 
   // Enhanced project data with more details
   const projects = [
@@ -253,8 +247,8 @@ export default function Portfolio() {
                 <div className="text-xs text-gray-400 mt-1">Research & Engineering</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-blue-400 mb-2">{portfolioStats.linesOfCode}</div>
-                <div className="text-gray-300 text-sm">Lines of Code</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">Open source</div>
+                <div className="text-gray-300 text-sm">Public repositories</div>
                 <div className="text-xs text-gray-400 mt-1">Python, SQL, Scala</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
@@ -263,7 +257,7 @@ export default function Portfolio() {
                 <div className="text-xs text-gray-400 mt-1">Global Projects</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-orange-400 mb-2">{portfolioStats.marketExperience}</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">8</div>
                 <div className="text-gray-300 text-sm">Years Market Experience</div>
                 <div className="text-xs text-gray-400 mt-1">Futures · FX · Crypto · Equities</div>
               </div>
@@ -401,9 +395,9 @@ export default function Portfolio() {
                       </div>
                     </div>
 
-                    {/* Client Impact */}
+                    {/* Project purpose */}
                     <div className="mb-4 p-3 bg-[#00E5A0]/10 rounded-lg border-l-4 border-[#00E5A0]">
-                      <div className="text-sm text-[#00E5A0] font-semibold mb-1">Impact</div>
+                      <div className="text-sm text-[#00E5A0] font-semibold mb-1">What this demonstrates</div>
                       <div className="text-sm text-gray-300">{project.impact}</div>
                     </div>
 
@@ -670,7 +664,7 @@ export default function Portfolio() {
                   color: 'purple'
                 },
                 {
-                  category: 'Production Quant Systems',
+                  category: 'Trading System Engineering',
                   technologies: ['Python', 'Docker', 'AWS', 'CI/CD', 'Monitoring', 'Fault Tolerance'],
                   icon: 'fas fa-cogs',
                   color: 'orange'

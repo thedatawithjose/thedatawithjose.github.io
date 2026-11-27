@@ -11,7 +11,6 @@ import dynamic from "next/dynamic";
 
 import ErrorBoundary from "../components/ErrorBoundary";
 import ConsentManager from "../components/ConsentManager";
-import WhatsAppButton from "../components/WhatsAppButton";
 import CookieConsent from "../components/CookieConsent";
 import PageTransition from "../components/PageTransition";
 import NavigationHandler from "../components/NavigationHandler";
@@ -138,8 +137,6 @@ export default function RootLayout({
             </ErrorBoundary>
 
 
-            {/* WhatsApp Floating Button */}
-            <WhatsAppButton />
 
 
             {/* Cookie Consent Banner */}

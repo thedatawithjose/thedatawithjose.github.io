@@ -71,12 +71,11 @@ export default function TermsOfService() {
               We provide quantitative development consulting services including but not limited to:
             </p>
             <ul className="list-disc pl-6 mb-4 text-gray-600 space-y-2">
-              <li>Real-time data pipeline development and optimization</li>
-              <li>Time-series analytics and modeling</li>
-              <li>Data architecture design and implementation</li>
-              <li>Cloud infrastructure setup and optimization (AWS, Snowflake, etc.)</li>
-              <li>Data quality frameworks and monitoring</li>
-              <li>Technical consulting and advisory services</li>
+              <li>Systematic strategy formalization and development</li>
+              <li>Quantitative research, backtesting, and robustness analysis</li>
+              <li>Market data pipelines and automated execution engineering</li>
+              <li>Risk controls, monitoring, and technical consulting</li>
+              <li>Technical services only; no guarantee of trading profitability</li>
             </ul>
 
             <h3 className="text-xl font-semibold mb-3 text-gray-700">1.2 Service Delivery</h3>

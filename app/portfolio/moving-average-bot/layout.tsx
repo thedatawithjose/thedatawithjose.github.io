@@ -2,8 +2,8 @@ import type { ReactNode } from 'react';
 import { generateMetadata } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: "Moving Average Trading Bot",
-  description: "Automated moving-average trading strategy project.",
+  title: "Moving Average Crossover Backtest",
+  description: "Historical research project evaluating a moving-average crossover strategy.",
   canonical: "/portfolio/moving-average-bot/",
 });
 
