@@ -22,11 +22,11 @@ export default function Blog() {
     "@type": "Blog",
     "name": "Jose Acosta Technical Blog",
     "description": "Insights on algorithmic trading systems, backtesting and validation, and automated execution",
-    "url": "https://datawithjose.tech/blog",
+    "url": "https://ajtradingsystems.com/blog",
     "author": {
       "@type": "Person",
       "name": "Jose Acosta",
-      "url": "https://datawithjose.tech"
+      "url": "https://ajtradingsystems.com"
     },
     "blogPost": allArticles.map(article => ({
       "@type": "BlogPosting",
@@ -37,7 +37,7 @@ export default function Blog() {
         "@type": "Person",
         "name": article.author
       },
-      "url": `https://datawithjose.tech/blog/${article.id}`
+      "url": `https://ajtradingsystems.com/blog/${article.id}`
     }))
   };
 

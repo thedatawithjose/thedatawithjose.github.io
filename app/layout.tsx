@@ -43,7 +43,7 @@ export const metadata: Metadata = generateMetadata({
     "Quantitative Research"
   ],
   ogType: "profile",
-  canonical: "https://datawithjose.tech"
+  canonical: "https://ajtradingsystems.com"
 });
 
 export const viewport = {

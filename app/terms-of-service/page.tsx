@@ -56,7 +56,7 @@ export default function TermsOfService() {
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-8">
               <p className="text-gray-700 leading-relaxed">
                 These Terms of Service ("Terms") govern your use of quantitative development consulting services 
-                provided by Jose Acosta ("Service Provider", "we", "us", or "our") through datawithjose.tech 
+                provided by Jose Acosta ("Service Provider", "we", "us", or "our") through ajtradingsystems.com 
                 ("Website"). By engaging our services, you ("Client", "you", or "your") agree to be bound by these Terms.
               </p>
             </div>
@@ -356,7 +356,7 @@ export default function TermsOfService() {
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="mb-2"><strong>Jose Acosta</strong></p>
               <p className="mb-2"><strong>Email:</strong> datawithjose@outlook.com</p>
-              <p className="mb-2"><strong>Website:</strong> datawithjose.tech</p>
+              <p className="mb-2"><strong>Website:</strong> ajtradingsystems.com</p>
             </div>
           </section>
 

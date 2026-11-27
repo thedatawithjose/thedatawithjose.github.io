@@ -13,7 +13,7 @@ Disallow: /admin/
 Disallow: /private/
 
 # Host
-Host: https://datawithjose.tech
+Host: https://ajtradingsystems.com
 
 # Sitemaps
-Sitemap: https://datawithjose.tech/sitemap.xml
+Sitemap: https://ajtradingsystems.com/sitemap.xml
