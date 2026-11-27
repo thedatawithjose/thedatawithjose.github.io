@@ -5,7 +5,7 @@ export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G
 
 // Initialize Google Analytics
 export const initGA = () => {
-  if (typeof window !== 'undefined' && GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
+  if (typeof window !== 'undefined' && privacyAnalytics.hasConsent() && GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
     // Load gtag script
     const script = document.createElement('script');
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
@@ -29,9 +29,9 @@ export const initGA = () => {
 
 // Track page views
 export const trackPageView = (url: string, title?: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', GA_MEASUREMENT_ID, {
-      page_path: url,
+  if (typeof window !== 'undefined' && privacyAnalytics.hasConsent() && window.gtag) {
+    window.gtag('event', 'page_view', {
+      page_location: new URL(url, window.location.origin).href,
       page_title: title || document.title,
     });
   }
@@ -47,7 +47,7 @@ export const trackEvent = (
     [key: string]: any;
   } = {}
 ) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== 'undefined' && privacyAnalytics.hasConsent() && window.gtag) {
     window.gtag('event', eventName, {
       event_category: parameters.event_category || 'engagement',
       event_label: parameters.event_label,
@@ -83,7 +83,7 @@ export const portfolioAnalytics = {
       event_category: 'form',
       event_label: formName,
       success: success,
-      error_message: errorMessage || null,
+      error_message: success ? null : 'submission_failed',
       form_type: 'contact'
     });
   },
@@ -150,8 +150,7 @@ export const portfolioAnalytics = {
       event_category: 'business',
       event_label: source,
       lead_quality: quality,
-      currency: 'USD',
-      value: quality === 'high' ? 1000 : quality === 'medium' ? 500 : 100
+
     });
   },
 
@@ -161,8 +160,7 @@ export const portfolioAnalytics = {
       event_label: serviceType,
       service_type: serviceType,
       budget_range: budget,
-      currency: 'USD',
-      value: 2000 // Estimated consultation value
+
     });
   }
 };
@@ -171,7 +169,7 @@ export const portfolioAnalytics = {
 export const ecommerceAnalytics = {
   // Track "purchase" of services (when someone submits contact form)
   trackServiceInquiry: (serviceName: string, estimatedValue: number) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined' && privacyAnalytics.hasConsent() && window.gtag) {
       window.gtag('event', 'purchase', {
         transaction_id: `inquiry_${Date.now()}`,
         value: estimatedValue,
@@ -189,7 +187,7 @@ export const ecommerceAnalytics = {
 
   // Track service page views as "product views"
   trackServiceView: (serviceName: string, serviceCategory: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined' && privacyAnalytics.hasConsent() && window.gtag) {
       window.gtag('event', 'view_item', {
         currency: 'USD',
         value: 1000, // Estimated service value

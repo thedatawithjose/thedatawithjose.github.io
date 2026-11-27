@@ -14,9 +14,9 @@ export default function About() {
 
   const achievements = [
     { metric: 'Fault-Tolerant Design', description: 'Failure-aware system design' },
-    { metric: 'Cost-Optimized', description: 'Infrastructure through strategic optimization' },
+    { metric: 'Cost-Aware', description: 'Infrastructure cost considerations' },
     { metric: 'Execution-Aware', description: 'Real-time pipeline processing' },
-    { metric: 'Production-Scale', description: 'Data processing capacity' }
+    { metric: 'Market Data', description: 'Financial data processing' }
   ];
 
   const coreValues = [
@@ -224,14 +224,14 @@ export default function About() {
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="text-2xl font-bold text-blue-400 mb-2">Cost-Optimized</div>
+                <div className="text-2xl font-bold text-blue-400 mb-2">Cost-Aware</div>
                 <div className="text-gray-300 text-sm">Trading Infrastructure</div>
               </m.div>
               <m.div
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="text-2xl font-bold text-purple-400 mb-2">Production-Scale</div>
+                <div className="text-2xl font-bold text-purple-400 mb-2">Market Data</div>
                 <div className="text-gray-300 text-sm">Market Data Systems</div>
               </m.div>
               <m.div
@@ -323,7 +323,7 @@ export default function About() {
                         </li>
                         <li className="flex items-start">
                           <i className="fas fa-cogs text-[#00E5A0] mr-3 mt-1 flex-shrink-0"></i>
-                          <span><strong>Engineering discipline:</strong> High-availability, observability, and failure conditions — not bolted on, designed in</span>
+                          <span><strong>Engineering discipline:</strong> Reliability requirements, observability, and failure conditions — not bolted on, designed in</span>
                         </li>
                       </ul>
                     </div>
@@ -338,11 +338,11 @@ export default function About() {
                         </li>
                         <li className="flex items-start">
                           <i className="fas fa-check-circle text-[#00E5A0] mr-3 mt-1 flex-shrink-0"></i>
-                          <span><strong>Resilient market data pipelines:</strong> Low-latency ingestion from multiple broker APIs (e.g., Binance, Tradovate) with strict data integrity and real-time alerting</span>
+                          <span><strong>Resilient market data pipelines:</strong> Market data ingestion from multiple broker APIs (e.g., Binance, Tradovate) with strict data integrity and real-time alerting</span>
                         </li>
                         <li className="flex items-start">
                           <i className="fas fa-check-circle text-[#00E5A0] mr-3 mt-1 flex-shrink-0"></i>
-                          <span><strong>Custom bot solutions:</strong> Automated client strategies in Python, C# (NinjaScript), and Pine Script — containerized for high availability</span>
+                          <span><strong>Custom bot solutions:</strong> Automated client strategies in Python, C# (NinjaScript), and Pine Script — with containerized deployment where appropriate</span>
                         </li>
                         <li className="flex items-start">
                           <i className="fas fa-check-circle text-[#00E5A0] mr-3 mt-1 flex-shrink-0"></i>
@@ -512,7 +512,7 @@ export default function About() {
                     >
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-2xl font-bold text-blue-500 mb-1">Cost-Optimized Infrastructure</div>
+                          <div className="text-2xl font-bold text-blue-500 mb-1">Cost-Aware Infrastructure</div>
                           <div className="text-gray-400 text-sm">Achieved through strategic partitioning, query optimization, compute right-sizing, and orchestration improvements without sacrificing performance</div>
                         </div>
                         <i className="fas fa-dollar-sign text-xl text-blue-500"></i>
@@ -540,7 +540,7 @@ export default function About() {
                     >
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-2xl font-bold text-orange-500 mb-1">Production-Scale Processing</div>
+                          <div className="text-2xl font-bold text-orange-500 mb-1">Financial Data Processing</div>
                           <div className="text-gray-400 text-sm">Sustained throughput across batch and streaming workloads with data quality checks, lineage tracking, and automated alerting</div>
                         </div>
                         <i className="fas fa-database text-xl text-orange-500"></i>
@@ -564,22 +564,22 @@ export default function About() {
                         title: 'Quant Developer & Algorithmic Trading Educator',
                         company: 'DataWithJose / AJ Trading Systems · Self-employed · Remote',
                         description: 'Productized and commercialized proprietary trading algorithms, managing the end-to-end lifecycle from API data ingestion and signal generation to automated execution and dynamic risk management. Built custom bot solutions for private clients and directed systematic trading training programs.',
-                        achievements: ['End-to-end algorithm lifecycle', 'Custom bots: Python, C#, Pine Script', 'Containerized high-availability systems', 'Systematic trading education programs'],
+                        achievements: ['End-to-end algorithm lifecycle', 'Custom bots: Python, C#, Pine Script', 'Containerized system design', 'Systematic trading education programs'],
                         color: 'green'
                       },
                       {
                         period: 'Aug 2024 - Dec 2025',
                         title: 'Quant Developer & Trading Infrastructure Consultant',
                         company: 'TraderDaddy · Remote',
-                        description: 'Architected resilient, low-latency pipelines to ingest and stabilize high-volatility market data from multiple broker APIs (e.g., Binance, Tradovate). Developed automated execution frameworks with error-handling, payload validation, and real-time alerting to prevent silent failures.',
-                        achievements: ['Low-latency multi-broker ingestion', 'Strict data integrity controls', 'Error-handling & validation layers', 'Manual → automated transitions'],
+                        description: 'Designed market data pipelines to ingest and stabilize high-volatility market data from multiple broker APIs (e.g., Binance, Tradovate). Developed automated execution frameworks with error-handling, payload validation, and real-time alerting to detect and handle failures.',
+                        achievements: ['Multi-broker data ingestion', 'Strict data integrity controls', 'Error-handling & validation layers', 'Manual → automated transitions'],
                         color: 'blue'
                       },
                       {
                         period: 'Feb 2018 - Nov 2022',
                         title: 'Head of Trading & Quantitative Data Systems',
                         company: 'Fintech Alca Group, SA · Caracas, VE',
-                        description: "Architected the firm's data infrastructure from the ground up, migrating legacy workflows into a governed warehouse with real-time WebSocket ingestion. Engineered high-availability decision-support systems on PostgreSQL and TimescaleDB for compliance-sensitive operations.",
+                        description: "Architected the firm's data infrastructure from the ground up, migrating legacy workflows into a governed warehouse with real-time WebSocket ingestion. Engineered decision-support systems on PostgreSQL and TimescaleDB for compliance-sensitive operations.",
                         achievements: ['Real-time WebSocket ingestion', 'Governed warehouse migration', 'PostgreSQL + TimescaleDB systems', 'Compliance-grade auditability'],
                         color: 'purple'
                       },

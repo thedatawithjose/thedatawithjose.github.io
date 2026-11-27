@@ -21,7 +21,7 @@ export default function ServicesSection() {
                     </p>
                 </m.div>
 
-                {/* Hero Project Card - Mean Reversion OU Trading System */}
+                {/* Hero Project Card - Mean Reversion OU Research */}
                 <m.div
                     className="mb-12"
                     initial={{ opacity: 0, y: 30 }}
@@ -46,13 +46,13 @@ export default function ServicesSection() {
                                         <div>
                                             <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#00E5A0]/15 via-[#00C98C]/10 to-[#42A5F5]/15 rounded-full border border-[#00E5A0]/30 mb-5 group-hover:border-[#00E5A0]/50 transition-all duration-300 shadow-sm">
                                                 <div className="w-2 h-2 bg-[#00E5A0] rounded-full animate-pulse"></div>
-                                                <span className="text-xs font-bold bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] bg-clip-text text-transparent tracking-wide uppercase terminal-badge">Live-Tested | Walk-Forward Validated | Risk-Controlled</span>
+                                                <span className="text-xs font-bold bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] bg-clip-text text-transparent tracking-wide uppercase terminal-badge">Research Prototype | Historical Backtesting</span>
                                             </div>
                                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#00E5A0] group-hover:to-[#42A5F5] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
-                                                Mean Reversion OU Trading System
+                                                Mean Reversion OU Research
                                             </h3>
                                             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 max-w-3xl">
-                                                Ornstein-Uhlenbeck mean reversion strategy with ML-driven parameter optimization — taken from research to live trading with real capital. In trading, a strategy is only as good as the system executing it.
+                                                Statistical mean-reversion research using the Ornstein-Uhlenbeck process, historical prices and simulated trading signals. The public repository illustrates research rather than verified live execution.
                                             </p>
                                         </div>
                                     </div>
@@ -63,39 +63,39 @@ export default function ServicesSection() {
                                             <div className="w-10 h-10 bg-gradient-to-br from-[#00E5A0] to-[#42A5F5] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                                                 <i className="fas fa-project-diagram text-[#050B14] text-sm"></i>
                                             </div>
-                                            Research → Backtest → Execution
+                                            Model → Signals → Backtest
                                         </h4>
                                         <div className="space-y-4">
                                             <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
                                                 <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#00C98C] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
                                                     <i className="fas fa-flask text-[#050B14] text-xs"></i>
                                                 </div>
-                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Research pipeline:</strong> Regime classification + OU parameter estimation on validated market data</p>
+                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Research pipeline:</strong> OU parameter estimation on historical market data</p>
                                             </div>
                                             <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
                                                 <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#00C98C] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
                                                     <i className="fas fa-rocket text-[#050B14] text-xs"></i>
                                                 </div>
-                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Backtesting:</strong> Overfit-resistant validation with realistic execution modeling</p>
+                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Backtesting:</strong> Historical simulation with transaction-cost assumptions</p>
                                             </div>
                                             <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
                                                 <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#00C98C] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
                                                     <i className="fas fa-shield-alt text-[#050B14] text-xs"></i>
                                                 </div>
-                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Execution & risk:</strong> Automated trading with position sizing, stop-loss management, and drawdown controls</p>
+                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Execution & risk:</strong> Simulated position sizing and risk evaluation</p>
                                             </div>
                                             <div className="flex items-start group/item hover:translate-x-2 transition-transform duration-300">
                                                 <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#00C98C] rounded-lg flex items-center justify-center mt-0.5 mr-4 flex-shrink-0 shadow-md group-hover/item:shadow-lg group-hover/item:scale-110 transition-all duration-300">
                                                     <i className="fas fa-chart-line text-[#050B14] text-xs"></i>
                                                 </div>
-                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Monitoring:</strong> Performance analytics and risk dashboards watching every position in production</p>
+                                                <p className="text-gray-300 leading-relaxed"><strong className="text-white">Monitoring:</strong> Performance visualizations for reviewing simulated trades</p>
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* Tech Stack */}
                                     <div className="flex flex-wrap gap-3 mb-4">
-                                        {['Python', 'NumPy', 'pandas', 'SciPy', 'TimescaleDB', 'Redis', 'Docker'].map((tech, index) => (
+                                        {['Python', 'NumPy', 'pandas', 'SciPy', 'Matplotlib'].map((tech, index) => (
                                             <m.span
                                                 key={tech}
                                                 className="px-4 py-2 bg-gradient-to-r from-[#00E5A0]/10 to-[#42A5F5]/10 hover:from-[#00E5A0]/20 hover:to-[#42A5F5]/20 text-[#00E5A0] rounded-full text-sm font-semibold border border-[#00E5A0]/20 hover:border-[#00E5A0]/40 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-default"
@@ -135,13 +135,13 @@ export default function ServicesSection() {
                                                     <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm">
                                                         <i className="fas fa-check text-[#050B14] text-xs"></i>
                                                     </div>
-                                                    <span className="text-sm text-gray-300 leading-relaxed font-medium">ML parameter optimization</span>
+                                                    <span className="text-sm text-gray-300 leading-relaxed font-medium">Maximum likelihood estimation</span>
                                                 </div>
                                                 <div className="flex items-start group/feature hover:translate-x-1 transition-transform duration-300">
                                                     <div className="w-6 h-6 bg-gradient-to-br from-[#42A5F5] to-[#2196F3] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm">
                                                         <i className="fas fa-check text-[#050B14] text-xs"></i>
                                                     </div>
-                                                    <span className="text-sm text-gray-300 leading-relaxed font-medium">Real-time execution & risk management</span>
+                                                    <span className="text-sm text-gray-300 leading-relaxed font-medium">Simulated trades and position sizing</span>
                                                 </div>
                                             </div>
 
@@ -149,12 +149,12 @@ export default function ServicesSection() {
                                             <div className="mt-8 pt-6 border-t-2 border-[#1E2D45]/50">
                                                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
                                                     <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-[#00E5A0]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                                                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#00E5A0] to-[#00C98C] bg-clip-text text-transparent mb-2 font-mono">Walk-Forward</div>
-                                                        <div className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Validation</div>
+                                                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#00E5A0] to-[#00C98C] bg-clip-text text-transparent mb-2 font-mono">Historical</div>
+                                                        <div className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Backtest</div>
                                                     </div>
                                                     <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-[#42A5F5]/10 to-transparent rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                                                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#42A5F5] to-[#2196F3] bg-clip-text text-transparent mb-2 font-mono">Out-of-Sample</div>
-                                                        <div className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Tested</div>
+                                                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#42A5F5] to-[#2196F3] bg-clip-text text-transparent mb-2 font-mono">Costs</div>
+                                                        <div className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Modeled</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -251,7 +251,7 @@ export default function ServicesSection() {
                         </Link>
                     </m.div>
 
-                    {/* Card 2 - Live Execution & Risk Systems */}
+                    {/* Card 2 - Moving Average Crossover Backtest */}
                     <m.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -277,15 +277,15 @@ export default function ServicesSection() {
                                 <div className="relative z-10">
                                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00E5A0]/15 to-[#26C6DA]/10 rounded-full border border-[#00E5A0]/30 mb-4 group-hover:border-[#00E5A0]/50 transition-all duration-300">
                                         <div className="w-2 h-2 bg-[#00E5A0] rounded-full animate-pulse"></div>
-                                        <span className="text-xs font-bold bg-gradient-to-r from-[#00E5A0] to-[#26C6DA] bg-clip-text text-transparent tracking-wide uppercase terminal-badge">Real-Money Trading Systems</span>
+                                        <span className="text-xs font-bold bg-gradient-to-r from-[#00E5A0] to-[#26C6DA] bg-clip-text text-transparent tracking-wide uppercase terminal-badge">Historical Strategy Research</span>
                                     </div>
 
                                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#00E5A0] group-hover:to-[#26C6DA] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 leading-tight">
-                                        Live Execution & Risk Systems
+                                        Moving Average Crossover Backtest
                                     </h3>
 
                                     <p className="text-gray-300 mb-6 leading-relaxed">
-                                        Built end-to-end systems powering algorithmic trading with real capital. When your pipeline fails at market open, you lose money every second — that taught me to build systems that stay up.
+                                        A baseline strategy research project demonstrating explicit crossover rules, simulated trading and historical risk-return evaluation.
                                     </p>
 
                                     {/* Features */}
@@ -294,19 +294,19 @@ export default function ServicesSection() {
                                             <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
                                                 <i className="fas fa-check text-[#050B14] text-xs"></i>
                                             </div>
-                                            <span className="text-sm text-gray-300 font-medium">WebSockets, Kafka, TimescaleDB</span>
+                                            <span className="text-sm text-gray-300 font-medium">Python, pandas, historical data</span>
                                         </div>
                                         <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
                                             <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
                                                 <i className="fas fa-check text-[#050B14] text-xs"></i>
                                             </div>
-                                            <span className="text-sm text-gray-300 font-medium">Low-latency market data ingestion</span>
+                                            <span className="text-sm text-gray-300 font-medium">7- and 20-period moving averages</span>
                                         </div>
                                         <div className="flex items-start group/item hover:translate-x-1 transition-transform duration-300">
                                             <div className="w-6 h-6 bg-gradient-to-br from-[#00E5A0] to-[#26C6DA] rounded-lg flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-sm group-hover/item:shadow-md group-hover/item:scale-110 transition-all duration-300">
                                                 <i className="fas fa-check text-[#050B14] text-xs"></i>
                                             </div>
-                                            <span className="text-sm text-gray-300 font-medium">Production-tested with real capital</span>
+                                            <span className="text-sm text-gray-300 font-medium">Return, volatility and drawdown metrics</span>
                                         </div>
                                     </div>
 
@@ -353,7 +353,7 @@ export default function ServicesSection() {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-white mb-2 text-lg">Research-to-Execution Focus</h4>
-                                    <p className="text-gray-400 font-medium">Ideas validated rigorously before a single dollar is at risk — then executed with discipline</p>
+                                    <p className="text-gray-400 font-medium">A validation-first approach to evaluating trading ideas before considering live execution</p>
                                 </div>
                             </div>
                             <div className="flex items-start">
@@ -362,13 +362,13 @@ export default function ServicesSection() {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-white mb-2 text-lg">Validation-First Perspective</h4>
-                                    <p className="text-gray-400 font-medium">8 years of active market experience — walk-forward, out-of-sample, and sensitivity testing before anything goes live</p>
+                                    <p className="text-gray-400 font-medium">8 years of active market experience — with a focus on walk-forward, out-of-sample and sensitivity testing</p>
                                 </div>
                             </div>
                         </div>
                         <div className="mt-8 p-6 bg-gradient-to-r from-[#00E5A0]/10 to-[#42A5F5]/10 rounded-xl border-l-4 border-[#00E5A0]">
                             <p className="text-gray-200 font-semibold text-lg italic">
-                                The difference: an attractive backtest is cheap. I build systems that stay honest when assumptions change — and survive live markets.
+                                The difference: an attractive backtest is cheap. I evaluate how systems behave when assumptions change and design for real execution constraints.
                             </p>
                         </div>
                     </div>
@@ -389,7 +389,7 @@ export default function ServicesSection() {
                             <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
                         </Link>
                         <a
-                            href="mailto:datawithjose@outlook.com?subject=Introduction Call&body=Hi Jose, I'd like to schedule an introduction call..."
+                            href="https://calendly.com/ajtradingsystems/30min"
                             className="group border-2 border-[#00E5A0] text-[#00E5A0] hover:bg-[#00E5A0] hover:text-[#050B14] px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center"
                         >
                             <i className="fas fa-calendar mr-2"></i>

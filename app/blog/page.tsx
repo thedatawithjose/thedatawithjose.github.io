@@ -262,32 +262,7 @@ export default function Blog() {
                 </Link>
               </div>
 
-              <div className="hidden p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-bell text-2xl text-white"></i>
-                </div>
-                <h3 className="text-xl font-bold mb-3">Stay Updated</h3>
-                <p className="text-gray-300 mb-4 text-sm">
-                  Get notified when I publish new deep-dives into production systems and real-world implementations.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <label htmlFor="newsletter-email" className="sr-only">Email address for newsletter</label>
-                  <input 
-                    id="newsletter-email"
-                    type="email" 
-                    placeholder="your@email.com"
-                    aria-label="Enter your email address"
-                    className="flex-1 px-4 py-3 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder:text-gray-400"
-                  />
-                  <button 
-                    type="button"
-                    aria-label="Subscribe to newsletter"
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 button-tactile ripple-effect mobile-focus"
-                  >
-                    Subscribe
-                  </button>
-                </div>
-              </div>
+
             </div>
 
             {/* Social Links */}

@@ -6,11 +6,12 @@ import Script from "next/script";
 import { generateMetadata } from "../lib/seo";
 import { generatePersonSchema, generateWebsiteSchema } from "../lib/structured-data";
 import StructuredData from "../components/StructuredData";
-import WebVitalsTracker from "../components/WebVitalsTracker";
 import dynamic from "next/dynamic";
 
 import ErrorBoundary from "../components/ErrorBoundary";
 import ConsentManager from "../components/ConsentManager";
+import CommercialTracking from "../components/CommercialTracking";
+import WebVitalsTracker from "../components/WebVitalsTracker";
 import CookieConsent from "../components/CookieConsent";
 import PageTransition from "../components/PageTransition";
 import NavigationHandler from "../components/NavigationHandler";
@@ -107,19 +108,10 @@ export default function RootLayout({
 
         {/* Google Analytics - Now loaded by ConsentManager after user consent */}
 
-        {/* Vercel Analytics */}
-        {process.env.NODE_ENV === 'production' && (
-          <Script
-            src="https://va.vercel-scripts.com/v1/script.js"
-            strategy="afterInteractive"
-          />
-        )}
       </head>
       <body
         className={`${inter.variable} antialiased`}
       >
-        {/* Web Vitals Tracking */}
-        <WebVitalsTracker debug={process.env.NODE_ENV === 'development'} />
 
         {/* Navigation Handler */}
         <NavigationHandler />
@@ -128,6 +120,8 @@ export default function RootLayout({
 
         {/* Consent Manager - Handles cookie consent and GA loading */}
         <ConsentManager>
+          <CommercialTracking />
+          <WebVitalsTracker />
           <LazyMotionProvider>
             {/* Error Boundary Wrapper */}
             <ErrorBoundary>
@@ -144,27 +138,23 @@ export default function RootLayout({
           </LazyMotionProvider>
         </ConsentManager>
 
-        {/* Service Worker Registration */}
-        <Script
-          id="sw-registration"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `
-              if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js')
-                    .then(function(registration) {
-                      console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                      console.log('SW registration failed: ', registrationError);
-                    });
-                });
+        <Script id="retire-legacy-sw" strategy="afterInteractive" dangerouslySetInnerHTML={{__html: `
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(async registrations => {
+              for (const registration of registrations) {
+                const worker = registration.active || registration.waiting || registration.installing;
+                if (worker && new URL(worker.scriptURL).pathname === '/sw.js') {
+                  await registration.unregister();
+                }
               }
-            `,
-          }}
-        />
-
+              if ('caches' in window) {
+                for (const key of await caches.keys()) {
+                  if (/^(portfolio|static|dynamic|pages)-v[0-9]+$/.test(key) || key === 'analytics-queue') await caches.delete(key);
+                }
+              }
+            }).catch(() => {});
+          }
+        `}} />
       </body>
     </html>
   );

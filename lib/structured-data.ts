@@ -20,13 +20,6 @@ export function generatePersonSchema() {
       '@type': 'Organization',
       name: 'Independent Quantitative Development & Consulting'
     },
-    alumniOf: [
-      {
-        '@type': 'EducationalOrganization',
-        name: 'University of Michigan',
-        url: 'https://www.umich.edu'
-      }
-    ],
     knowsAbout: [
       'Quantitative Development',
       'Algorithmic Trading Systems',
@@ -41,26 +34,6 @@ export function generatePersonSchema() {
       'Financial Engineering',
       'Systematic Trading'
     ],
-    hasCredential: [
-      {
-        '@type': 'EducationalOccupationalCredential',
-        name: 'IBM Data Engineering Professional Certificate',
-        credentialCategory: 'Professional Certificate',
-        recognizedBy: {
-          '@type': 'Organization',
-          name: 'IBM'
-        }
-      },
-      {
-        '@type': 'EducationalOccupationalCredential',
-        name: 'Python 3 Programming Specialization',
-        credentialCategory: 'Specialization',
-        recognizedBy: {
-          '@type': 'Organization',
-          name: 'University of Michigan'
-        }
-      }
-    ]
   };
 }
 
@@ -97,7 +70,7 @@ export function generateWebsiteSchema() {
         {
           '@type': 'Offer',
           name: 'Live Execution & Risk Systems',
-          description: 'Production trading infrastructure with real-time execution, position management, risk controls, and 24/7 monitoring.'
+          description: 'Execution engineering, position management, risk controls and monitoring according to agreed requirements.'
         },
         {
           '@type': 'Offer',
@@ -112,80 +85,6 @@ export function generateWebsiteSchema() {
       email: siteConfig.social.email,
       availableLanguage: ['English', 'Spanish']
     }
-  };
-}
-
-// Esquema para testimoniales/reviews
-export function generateReviewSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: siteConfig.name,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '4',
-      bestRating: '5',
-      worstRating: '5'
-    },
-    review: [
-      {
-        '@type': 'Review',
-        author: {
-          '@type': 'Person',
-          name: 'Paul Reina'
-        },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5'
-        },
-        reviewBody: 'Jose revolutionized our real-time streaming architecture. We were struggling with event ordering and backpressure in our Kafka streams processing financial market data.',
-        datePublished: '2024-10-15'
-      },
-      {
-        '@type': 'Review',
-        author: {
-          '@type': 'Person',
-          name: 'Daniel Graham'
-        },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5'
-        },
-        reviewBody: 'Jose developed our proprietary scalping algorithm for crypto markets with good execution speed and reliable performance.',
-        datePublished: '2024-09-28'
-      },
-      {
-        '@type': 'Review',
-        author: {
-          '@type': 'Person',
-          name: 'Caterina Abanoni'
-        },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5'
-        },
-        reviewBody: 'Working with Jose on our EdTech data platform was extraordinary. He architected a Lambda architecture using Apache Spark and Delta Lake.',
-        datePublished: '2024-08-12'
-      },
-      {
-        '@type': 'Review',
-        author: {
-          '@type': 'Person',
-          name: 'Roberto Carrillo'
-        },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5'
-        },
-        reviewBody: 'Jose built our multi-asset momentum strategy that combines traditional technical indicators with alternative data sources.',
-        datePublished: '2024-07-22'
-      }
-    ]
   };
 }
 
@@ -205,7 +104,7 @@ export function generatePortfolioSchema() {
       {
         '@type': 'SoftwareApplication',
         name: 'Algorithmic Trading System',
-        description: 'Real-time trading system processing market data with low latency for systematic strategies.',
+        description: 'Historical strategy research and systematic signal evaluation.',
         applicationCategory: 'Financial Technology',
         operatingSystem: 'Linux',
         programmingLanguage: 'Python'
@@ -213,7 +112,7 @@ export function generatePortfolioSchema() {
       {
         '@type': 'SoftwareApplication',
         name: 'Backtesting & Research Infrastructure',
-        description: 'Scalable backtesting and research platform using Python, Kafka, and time-series databases for financial market data.',
+        description: 'Market data preparation and historical strategy evaluation using Python and financial data infrastructure.',
         applicationCategory: 'Financial Technology',
         operatingSystem: 'Cloud',
         programmingLanguage: ['Python', 'SQL']
@@ -295,7 +194,7 @@ export function generateFAQSchema() {
         name: 'What is your typical project timeline?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Project timelines vary based on complexity, ranging from 2-4 weeks for a research/backtesting engagement to 3-6 months for complete live trading infrastructure. I provide detailed estimates during initial consultations.'
+          text: 'Project timelines depend on scope, data availability and technical constraints. Estimates are agreed after discovery.'
         }
       }
     ]

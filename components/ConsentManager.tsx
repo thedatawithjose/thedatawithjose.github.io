@@ -242,8 +242,10 @@ export default function ConsentManager({ children }: ConsentManagerProps) {
           window.gtag('config', measurementId, {
             page_title: document.title,
             page_location: window.location.href,
+            send_page_view: false,
           });
           
+          window.gtag('event', 'page_view', { page_location: window.location.href, page_title: document.title });
           console.log('[ConsentManager] Google Analytics loaded successfully');
         }
       };

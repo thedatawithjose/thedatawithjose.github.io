@@ -243,18 +243,18 @@ export default function Portfolio() {
             >
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="text-3xl font-bold text-green-400 mb-2">{projects.length}</div>
-                <div className="text-gray-300 text-sm">Projects Completed</div>
+                <div className="text-gray-300 text-sm">Featured & Selected Projects</div>
                 <div className="text-xs text-gray-400 mt-1">Research & Engineering</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="text-3xl font-bold text-blue-400 mb-2">Open source</div>
                 <div className="text-gray-300 text-sm">Public repositories</div>
-                <div className="text-xs text-gray-400 mt-1">Python, SQL, Scala</div>
+                <div className="text-xs text-gray-400 mt-1">Python · SQL</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="text-3xl font-bold text-purple-400 mb-2">4 markets</div>
                 <div className="text-gray-300 text-sm">Market Focus</div>
-                <div className="text-xs text-gray-400 mt-1">Global Projects</div>
+                <div className="text-xs text-gray-400 mt-1">Futures · FX · Crypto · Equities</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="text-3xl font-bold text-orange-400 mb-2">8</div>

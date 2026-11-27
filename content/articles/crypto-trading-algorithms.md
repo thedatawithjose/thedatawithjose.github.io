@@ -10,11 +10,13 @@ image: "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?w=800&h=400
 
 The cryptocurrency market presents unique opportunities and challenges for algorithmic trading. This article explores the design and implementation of automated trading strategies, combining technical analysis, machine learning, and real-time data processing.
 
+**Research note:** The code and risk percentages below are illustrative, not verified trading results or universal risk recommendations. The example reports an unannualized return-to-volatility ratio; a calendar-daily crypto series may use 365 periods per year under appropriate assumptions, but intraday and irregular observations require separate treatment.
+
 ### Understanding the Crypto Trading Landscape
 
 Cryptocurrency markets operate 24/7 with high volatility and liquidity. Key characteristics include:
 
-- **High volatility**: Price swings of 10-20% in a single day are common
+- **High volatility**: Volatility varies widely by asset, market regime and sampling period
 - **24/7 operation**: No market hours or closures
 - **Global liquidity**: Trading across multiple exchanges
 - **Low latency requirements**: Opportunities disappear in seconds
@@ -998,14 +1000,15 @@ class BacktestingEngine:
         final_value = self.portfolio_values[-1]
         total_return = (final_value - self.initial_capital) / self.initial_capital
 
-        # Daily returns
-        daily_returns = pd.Series(self.portfolio_values).pct_change().dropna()
+        # Per-observation returns; observations may be intraday or irregular.
+        returns = pd.Series(self.portfolio_values).pct_change().dropna()
 
-        # Sharpe ratio (assuming 252 trading days)
-        if len(daily_returns) > 0:
-            sharpe_ratio = np.sqrt(252) * (daily_returns.mean() / daily_returns.std())
-        else:
-            sharpe_ratio = 0
+        # Unannualized return-to-volatility ratio (zero risk-free rate).
+        # Annualize only after establishing observation frequency and assumptions.
+        volatility = returns.std()
+        sharpe_ratio = (returns.mean() / volatility
+                        if len(returns) > 1 and np.isfinite(volatility) and volatility > 0
+                        else None)
 
         # Maximum drawdown
         cumulative = pd.Series(self.portfolio_values)
