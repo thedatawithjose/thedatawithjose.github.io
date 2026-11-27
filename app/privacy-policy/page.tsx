@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
           >
             <h1 className="text-4xl font-bold mb-8 text-center">Privacy Policy</h1>
             <p className="text-gray-600 text-center mb-12">
-              Last updated: {new Date().toLocaleDateString()}
+              Last updated: November 27, 2026
             </p>
 
             <div className="prose prose-lg max-w-none">
@@ -49,13 +49,17 @@ export default function PrivacyPolicy() {
                 <ul className="list-disc pl-6 mb-4">
                   <li><strong>Necessary Cookies:</strong> Essential for website functionality</li>
                   <li><strong>Analytics Cookies:</strong> Help us understand website usage (Google Analytics)</li>
-                  <li><strong>Marketing Cookies:</strong> Used for advertising and remarketing</li>
+                  <li><strong>Marketing preferences:</strong> No advertising or remarketing integration is enabled by this website.</li>
                 </ul>
                 <p className="mb-4">
                   You can manage your cookie preferences using our cookie settings tool.
                 </p>
               </section>
 
+              <section className="mb-8">
+                <h2 className="text-2xl font-bold mb-4">External service providers</h2>
+                <p className="mb-4">Contact messages are submitted to FormSubmit for forwarding by email. If you choose to book a call, Calendly processes the booking information under its own privacy policy. GitHub Pages hosts the website. Google Analytics is configured to load only after analytics consent, if a measurement ID has been configured. External images and other hosted resources may receive ordinary browser request information.</p>
+              </section>
               <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">Data Security</h2>
                 <p className="mb-4">

@@ -17,8 +17,8 @@ import FormProgressIndicator from './FormProgressIndicator';
 import SmartFieldHelper from './SmartFieldHelper';
 import FormSuccessAnimation from './FormSuccessAnimation';
 import { useFormAutoSave } from '../hooks/useFormAutoSave';
-import { useFormTracking, useBusinessTracking } from '../hooks/useAnalyticsTracking';
-import { useGoogleAnalytics } from './GoogleAnalytics';
+import { useFormTracking } from '../hooks/useAnalyticsTracking';
+import { submitContact } from '../lib/contact-transport';
 
 // Enhanced security schema with Zod
 const contactSchema = z.object({
@@ -74,9 +74,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
-  const [formStartTime] = useState(Date.now());
   const [interactionCount, setInteractionCount] = useState(0);
-  const [csrfToken] = useState(() => SecurityValidator.generateCSRFToken());
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
   const [showDraftPrompt, setShowDraftPrompt] = useState(false);
@@ -93,8 +91,6 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
   
   // Analytics tracking
   const formTracking = useFormTracking('ContactForm');
-  const businessTracking = useBusinessTracking();
-  const { trackEvent } = useGoogleAnalytics();
 
   const {
     register,
@@ -114,7 +110,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
     setValue,
     formId: 'contact-form',
     delay: 3000,
-    enabled: true
+    enabled: false
   });
 
   // Watch form values for security indicator
@@ -141,7 +137,6 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
       };
       
       // Advanced bot detection
-      const formFillTime = Date.now() - formStartTime;
       
       // Check honeypot fields
       if (!SecurityValidator.validateHoneypot(data.honeypot || '') ||
@@ -150,70 +145,16 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
         throw new Error('Bot detected: Honeypot field filled');
       }
       
-      // Check form fill time (too fast = bot)
-      if (formFillTime < 3000) { // Less than 3 seconds
-        throw new Error('Bot detected: Form filled too quickly');
-      }
-      
-      // Check interaction count (too few interactions = bot)
-      if (interactionCount < 5) {
-        throw new Error('Bot detected: Insufficient user interactions');
-      }
-      
-      // Validate CSRF token
-      if (!csrfToken || csrfToken.length < 10) {
-        throw new Error('Security validation failed');
-      }
-      
-      // Generate security token
-      const securityToken = SecurityValidator.generateCSRFToken();
-      
-      const formData = new FormData();
-      formData.append('name', sanitizedData.name);
-      formData.append('email', sanitizedData.email);
-      formData.append('subject', sanitizedData.subject);
-      formData.append('message', sanitizedData.message);
-      if (sanitizedData.budget) formData.append('budget', sanitizedData.budget);
-      if (sanitizedData.timeline) formData.append('timeline', sanitizedData.timeline);
-      formData.append('_captcha', 'false');
-      formData.append('_token', securityToken);
-      formData.append('_csrf', csrfToken);
-      formData.append('_form_time', formFillTime.toString());
-      formData.append('_interactions', interactionCount.toString());
+      await submitContact(sanitizedData);
 
-      const response = await fetch('https://formsubmit.co/datawithjose@outlook.com', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
+      {
         setSubmitStatus('success');
         
         // Enhanced analytics tracking
         formTracking.trackFormSubmit(true);
         trackFormSubmit(true); // Track successful submission
         
-        // Google Analytics tracking
-        trackEvent('form_submit', {
-          form_name: 'contact_form',
-          success: true,
-          has_budget: !!sanitizedData.budget,
-          has_timeline: !!sanitizedData.timeline,
-          message_length: sanitizedData.message.length,
-          form_fill_time: formFillTime
-        });
         
-        // Track lead quality
-        businessTracking.trackLeadQuality('contact_form', {
-          hasEmail: !!sanitizedData.email,
-          hasPhone: false, // No phone field in current form
-          hasBudget: !!sanitizedData.budget,
-          hasTimeline: !!sanitizedData.timeline,
-          messageLength: sanitizedData.message.length
-        });
         
         // Show success animation instead of toast
         setShowSuccessAnimation(true);
@@ -228,13 +169,11 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           setSubmitStatus('idle');
           setShowSuccessAnimation(false);
         }, 8000);
-      } else {
-        throw new Error('Error sending form');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
-      const errorMsg = 'There was an error sending the message. Please try again.';
+      const errorMsg = 'The message could not be confirmed. Please try again or use the email or booking link on the contact page.';
       setErrorMessage(errorMsg);
       
       // Show error toast
@@ -248,12 +187,6 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
       formTracking.trackFormSubmit(false, errorMessage);
       trackFormSubmit(false, errorMessage); // Track failed submission
       
-      // Google Analytics error tracking
-      trackEvent('form_submit', {
-        form_name: 'contact_form',
-        success: false,
-        error_message: errorMessage
-      });
     } finally {
       setIsSubmitting(false);
     }

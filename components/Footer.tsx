@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { m } from 'framer-motion';
-import FooterContactForm from './FooterContactForm';
 import CookieSettings from './CookieSettings';
 
 export default function Footer() {
@@ -174,7 +173,7 @@ export default function Footer() {
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#00E5A0]/20 to-[#42A5F5]/20 rounded-2xl blur opacity-30"></div>
               <div className="relative bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-1">
-                <FooterContactForm />
+                <div className="p-5 text-center space-y-4"><p className="text-gray-300">Discuss a project or a quantitative development role.</p><Link href="/contact/" className="block font-semibold text-[#00E5A0]">Contact me</Link><a href="https://calendly.com/ajtradingsystems/30min" target="_blank" rel="noopener noreferrer" className="block font-semibold text-white">Book a discovery call</a></div>
               </div>
             </div>
           </m.div>
