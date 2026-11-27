@@ -25,16 +25,20 @@ vi.mock('next/image', () => ({
   },
 }));
 
-// Mock Framer Motion
-vi.mock('framer-motion', () => ({
-  motion: {
-    div: (props: any) => React.createElement('div', props, props.children),
-    button: (props: any) => React.createElement('button', props, props.children),
-    section: (props: any) => React.createElement('section', props, props.children),
-    p: (props: any) => React.createElement('p', props, props.children),
-  },
-  AnimatePresence: (props: any) => props.children,
-}));
+// Mock motion elements without leaking animation props into the DOM.
+vi.mock('framer-motion', () => {
+  const components = new Map<string, React.ComponentType<any>>();
+  const motion = new Proxy({}, { get: (_, tag: string) => {
+    if (!components.has(tag)) {
+      components.set(tag, React.forwardRef((props: any, ref: any) => {
+        const { children, initial, animate, exit, transition, whileHover, whileTap, whileInView, viewport, variants, layout, layoutId, ...rest } = props;
+        return React.createElement(tag, { ...rest, ref }, children);
+      }));
+    }
+    return components.get(tag);
+  }});
+  return { m: motion, motion, AnimatePresence: ({children}: any) => children, LazyMotion: ({children}: any) => children, domAnimation: {} };
+});
 
 // Mock IntersectionObserver
 global.IntersectionObserver = vi.fn().mockImplementation(() => ({

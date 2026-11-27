@@ -2,6 +2,7 @@
 
 import { m } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { trackEvent } from '../lib/analytics';
 
 interface CalendlyBookingProps {
   className?: string;
@@ -34,6 +35,7 @@ export default function CalendlyBooking({
   }, []);
 
   const openCalendlyPopup = () => {
+    trackEvent('booking_click', { page_path: window.location.pathname });
     if (typeof window !== 'undefined' && (window as any).Calendly) {
       (window as any).Calendly.initPopupWidget({ url });
     } else {

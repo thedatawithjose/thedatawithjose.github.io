@@ -165,6 +165,7 @@ export function isSuspiciousRequest(userAgent: string, referer?: string): boolea
     /crawler/i,
     /spider/i,
     /scraper/i,
+    /scrapy/i,
     /curl/i,
     /wget/i,
     /python/i,
@@ -177,8 +178,10 @@ export function isSuspiciousRequest(userAgent: string, referer?: string): boolea
   }
   
   // Check for missing or suspicious referer
-  if (referer && !referer.includes(process.env.NEXT_PUBLIC_SITE_URL || 'localhost')) {
-    return true;
+  if (referer) {
+    try {
+      if (new URL(referer).origin !== new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ajtradingsystems.com').origin) return true;
+    } catch { return true; }
   }
   
   return false;
@@ -241,6 +244,9 @@ export function validateEmail(email: string): { isValid: boolean; reason?: strin
   // Domain part checks
   const [localPart, domainPart] = trimmedEmail.split('@');
   
+  if (localPart.endsWith('.') || localPart.startsWith('.')) {
+    return { isValid: false, reason: 'Invalid email local part' };
+  }
   if (localPart.length > 64) {
     return { isValid: false, reason: 'Email local part too long' };
   }

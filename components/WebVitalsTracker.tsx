@@ -7,7 +7,7 @@ export default function WebVitalsTracker({ debug = false }: { debug?: boolean })
   return null;
 }
 export function useWebVitals() {
-  const trackCustomMetric = useCallback((name: string, value: number) => {
+  const trackCustomMetric = useCallback((name: string, value: number, _additionalData?: unknown) => {
     if (Number.isFinite(value)) trackEvent('performance_metric', { metric_name: name, value });
   }, []);
   return { trackCustomMetric };

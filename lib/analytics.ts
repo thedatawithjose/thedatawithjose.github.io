@@ -83,7 +83,7 @@ export const portfolioAnalytics = {
       event_category: 'form',
       event_label: formName,
       success: success,
-      error_message: errorMessage || null,
+      error_message: success ? null : 'submission_failed',
       form_type: 'contact'
     });
   },
@@ -150,8 +150,7 @@ export const portfolioAnalytics = {
       event_category: 'business',
       event_label: source,
       lead_quality: quality,
-      currency: 'USD',
-      value: quality === 'high' ? 1000 : quality === 'medium' ? 500 : 100
+
     });
   },
 
@@ -161,8 +160,7 @@ export const portfolioAnalytics = {
       event_label: serviceType,
       service_type: serviceType,
       budget_range: budget,
-      currency: 'USD',
-      value: 2000 // Estimated consultation value
+
     });
   }
 };

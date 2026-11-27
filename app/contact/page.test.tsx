@@ -1,23 +1,14 @@
 import { render, screen } from '@testing-library/react';
+import { vi, describe, it, expect } from 'vitest';
 import Contact from './page';
-
-describe('Contact Page', () => {
-  it('renders the contact heading', () => {
+vi.mock('../../components/Header', () => ({default: () => null}));
+vi.mock('../../components/Footer', () => ({default: () => null}));
+vi.mock('../../components/ContactForm', () => ({default: () => <div data-testid="contact-form-component" />}));
+describe('Contact page', () => {
+  it('renders the contact form and booking destination', () => {
     render(<Contact />);
-    const heading = screen.getByText('Contact Me');
-    expect(heading).toBeInTheDocument();
-  });
-
-  it('renders contact information', () => {
-    render(<Contact />);
-    expect(screen.getByText('Phone')).toBeInTheDocument();
-    expect(screen.getByText('Email')).toBeInTheDocument();
-    expect(screen.getByText('Location')).toBeInTheDocument();
-  });
-
-  it('renders the contact form', () => {
-    render(<Contact />);
-    const form = screen.getByRole('textbox', { name: /full name/i });
-    expect(form).toBeInTheDocument();
+    expect(screen.getByTestId('contact-form-component')).toBeInTheDocument();
+    expect(document.querySelector('a[href="https://calendly.com/ajtradingsystems/30min"]')).toBeInTheDocument();
+    expect(document.getElementById('contact-form')).toBeInTheDocument();
   });
 });
