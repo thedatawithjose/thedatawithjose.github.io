@@ -4,7 +4,7 @@ const testArticle = {
   slug: 'quantification-data-engineering',
   title: "The 'Quantification' of Data Engineering: What Modern DE Teams Must Learn from a Wall Street Trading Desk",
   excerpt: "In 2026, 'good enough' data is bankrupt. It's time to stop building data libraries and start building data trading floors. Here's why the future belongs to teams that think like quant traders.",
-  url: 'https://thedatawithjose.github.io/blog/quantification-data-engineering'
+  url: 'https://ajtradingsystems.com/blog/quantification-data-engineering'
 };
 
 // Construir URLs de compartir

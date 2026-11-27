@@ -74,7 +74,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
-  const [interactionCount, setInteractionCount] = useState(0);
+  const [, setInteractionCount] = useState(0);
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
   const [showDraftPrompt, setShowDraftPrompt] = useState(false);
@@ -196,6 +196,8 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
   const handleInteraction = () => {
     setInteractionCount(prev => prev + 1);
   };
+
+  useEffect(() => { try { localStorage.removeItem('form_draft_contact-form'); } catch {} }, []);
 
   // Check for draft on mount
   useEffect(() => {

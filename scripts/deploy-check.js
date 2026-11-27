@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 
 const CONFIG = {
-  SITE_URL: process.env.SITE_URL || 'https://thedatawithjose.github.io',
+  SITE_URL: process.env.SITE_URL || 'https://ajtradingsystems.com',
   TIMEOUT: 30000,
   RETRY_COUNT: 3,
   RETRY_DELAY: 5000
@@ -193,7 +193,7 @@ class DeploymentChecker {
   }
 
   async checkHealthEndpoint() {
-    const healthUrl = `${CONFIG.SITE_URL}/health`;
+    const healthUrl = `${CONFIG.SITE_URL}/`;
     console.log(`🏥 Checking health endpoint: ${healthUrl}`);
     
     try {
