@@ -16,7 +16,7 @@ export interface SEOConfig {
 const siteConfig = {
   name: 'Jose Acosta - Quantitative Developer',
   description: 'Quantitative Developer building robust algorithmic trading systems — from research to execution. Python, backtesting infrastructure, live trading systems, and risk management with real-market experience.',
-  url: 'https://datawithjose.tech',
+  url: 'https://ajtradingsystems.com',
   ogImage: '/images/jose.png',
   author: 'Jose Acosta',
   keywords: [
@@ -37,9 +37,9 @@ const siteConfig = {
     'Python Developer'
   ],
   social: {
-    linkedin: 'https://www.linkedin.com/in/datawithjose',
+    linkedin: 'https://www.linkedin.com/in/jacosta-ve/',
     github: 'https://github.com/thedatawithjose',
-    instagram: 'https://www.instagram.com/datawithjose',
+    instagram: 'https://www.instagram.com/ajtradingsystems/',
     email: 'datawithjose@outlook.com'
   }
 };
@@ -59,11 +59,12 @@ export function generateMetadata(config: SEOConfig): Metadata {
   } = config;
 
   const fullTitle = title === siteConfig.name ? title : `${title} | ${siteConfig.name}`;
-  const canonicalUrl = canonical ? `${siteConfig.url}${canonical}` : siteConfig.url;
+  const canonicalUrl = canonical ? new URL(canonical, siteConfig.url).href : siteConfig.url;
   const imageUrl = ogImage.startsWith('http') ? ogImage : `${siteConfig.url}${ogImage}`;
   const allKeywords = [...new Set([...siteConfig.keywords, ...keywords])];
 
   return {
+    metadataBase: new URL(siteConfig.url),
     title: fullTitle,
     description,
     keywords: allKeywords.join(', '),

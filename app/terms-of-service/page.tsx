@@ -56,7 +56,7 @@ export default function TermsOfService() {
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-8">
               <p className="text-gray-700 leading-relaxed">
                 These Terms of Service ("Terms") govern your use of quantitative development consulting services 
-                provided by Jose Acosta ("Service Provider", "we", "us", or "our") through datawithjose.tech 
+                provided by Jose Acosta ("Service Provider", "we", "us", or "our") through ajtradingsystems.com 
                 ("Website"). By engaging our services, you ("Client", "you", or "your") agree to be bound by these Terms.
               </p>
             </div>
@@ -71,12 +71,11 @@ export default function TermsOfService() {
               We provide quantitative development consulting services including but not limited to:
             </p>
             <ul className="list-disc pl-6 mb-4 text-gray-600 space-y-2">
-              <li>Real-time data pipeline development and optimization</li>
-              <li>Time-series analytics and modeling</li>
-              <li>Data architecture design and implementation</li>
-              <li>Cloud infrastructure setup and optimization (AWS, Snowflake, etc.)</li>
-              <li>Data quality frameworks and monitoring</li>
-              <li>Technical consulting and advisory services</li>
+              <li>Systematic strategy formalization and development</li>
+              <li>Quantitative research, backtesting, and robustness analysis</li>
+              <li>Market data pipelines and automated execution engineering</li>
+              <li>Risk controls, monitoring, and technical consulting</li>
+              <li>Technical services only; no guarantee of trading profitability</li>
             </ul>
 
             <h3 className="text-xl font-semibold mb-3 text-gray-700">1.2 Service Delivery</h3>
@@ -356,7 +355,7 @@ export default function TermsOfService() {
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="mb-2"><strong>Jose Acosta</strong></p>
               <p className="mb-2"><strong>Email:</strong> datawithjose@outlook.com</p>
-              <p className="mb-2"><strong>Website:</strong> datawithjose.tech</p>
+              <p className="mb-2"><strong>Website:</strong> ajtradingsystems.com</p>
             </div>
           </section>
 

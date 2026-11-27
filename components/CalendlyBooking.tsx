@@ -12,7 +12,7 @@ interface CalendlyBookingProps {
 export default function CalendlyBooking({ 
   className = '', 
   variant = 'inline',
-  url = 'https://calendly.com/datawithjose/consultation' 
+  url = 'https://calendly.com/ajtradingsystems/30min' 
 }: CalendlyBookingProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -36,6 +36,8 @@ export default function CalendlyBooking({
   const openCalendlyPopup = () => {
     if (typeof window !== 'undefined' && (window as any).Calendly) {
       (window as any).Calendly.initPopupWidget({ url });
+    } else {
+      window.open(url, '_blank', 'noopener,noreferrer');
     }
   };
 
@@ -46,7 +48,7 @@ export default function CalendlyBooking({
         className={`group bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] hover:from-[#00D4B4] hover:to-[#2196F3] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center ${className}`}
         whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.95 }}
-        disabled={!isLoaded}
+
       >
         <i className="fas fa-calendar-alt mr-3"></i>
         Schedule Free Consultation
@@ -113,11 +115,11 @@ export default function CalendlyBooking({
             >
               <button
                 onClick={openCalendlyPopup}
-                disabled={!isLoaded}
+
                 className="group bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] hover:from-[#00D4B4] hover:to-[#2196F3] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center disabled:opacity-50"
               >
                 <i className="fas fa-calendar-alt mr-3"></i>
-                {isLoaded ? 'Book Free Consultation' : 'Loading Calendar...'}
+                Book Free Consultation
                 <i className="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
               </button>
 
@@ -212,6 +214,7 @@ export default function CalendlyBooking({
           <div className="text-center">
             <div className="w-8 h-8 border-4 border-[#00BFA5] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="text-gray-600">Loading calendar...</p>
+            <a href={url} target="_blank" rel="noopener noreferrer" className="underline text-gray-700">Open booking page</a>
           </div>
         </div>
       )}

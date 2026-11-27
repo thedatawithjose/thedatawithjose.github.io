@@ -7,6 +7,8 @@ import Footer from '../../components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://ajtradingsystems.com/blog/' },
+  openGraph: { url: 'https://ajtradingsystems.com/blog/', title: 'Technical Blog | Jose Acosta - Quantitative Developer', description: 'Insights on algorithmic trading systems, backtesting and validation, and automated execution by Jose Acosta.' },
   title: 'Technical Blog | Jose Acosta - Quantitative Developer',
   description: 'Insights on algorithmic trading systems, backtesting and validation, and automated execution by Jose Acosta.',
 };
@@ -22,11 +24,11 @@ export default function Blog() {
     "@type": "Blog",
     "name": "Jose Acosta Technical Blog",
     "description": "Insights on algorithmic trading systems, backtesting and validation, and automated execution",
-    "url": "https://datawithjose.tech/blog",
+    "url": "https://ajtradingsystems.com/blog",
     "author": {
       "@type": "Person",
       "name": "Jose Acosta",
-      "url": "https://datawithjose.tech"
+      "url": "https://ajtradingsystems.com"
     },
     "blogPost": allArticles.map(article => ({
       "@type": "BlogPosting",
@@ -37,7 +39,7 @@ export default function Blog() {
         "@type": "Person",
         "name": article.author
       },
-      "url": `https://datawithjose.tech/blog/${article.id}`
+      "url": `https://ajtradingsystems.com/blog/${article.id}`
     }))
   };
 
@@ -293,7 +295,7 @@ export default function Blog() {
               <p className="text-gray-300 mb-4">Follow for more insights:</p>
               <div className="flex justify-center gap-4">
                 <a
-                  href="https://www.linkedin.com/in/datawithjose"
+                  href="https://www.linkedin.com/in/jacosta-ve/"
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Follow on LinkedIn"
@@ -313,7 +315,7 @@ export default function Blog() {
                   <i className="fab fa-github text-xl"></i>
                 </a>
                 <a
-                  href="https://instagram.com/datawithjose"
+                  href="https://www.instagram.com/ajtradingsystems/"
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Follow on Instagram"

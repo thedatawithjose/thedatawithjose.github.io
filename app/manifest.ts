@@ -27,14 +27,5 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/x-icon',
       },
     ],
-    screenshots: [
-      {
-        src: '/images/portfolio-screenshot.png',
-        sizes: '1280x720',
-        type: 'image/png',
-        form_factor: 'wide',
-        label: 'Portfolio Homepage',
-      },
-    ],
   }
 }

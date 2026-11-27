@@ -89,11 +89,11 @@ export default function Contact() {
               transition={{ delay: 0.6, duration: 0.6 }}
             >
               <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                <div className="text-2xl font-bold text-green-400 mb-1">&lt; 24hrs</div>
-                <div className="text-gray-300 text-sm">Response Time</div>
+                <div className="text-2xl font-bold text-green-400 mb-1">30 min</div>
+                <div className="text-gray-300 text-sm">Free Discovery Call</div>
               </div>
               <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                <div className="text-2xl font-bold text-blue-400 mb-1">8+ Years</div>
+                <div className="text-2xl font-bold text-blue-400 mb-1">8 Years</div>
                 <div className="text-gray-300 text-sm">Market Experience</div>
               </div>
               <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
@@ -110,13 +110,13 @@ export default function Contact() {
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               <a
-                href="https://wa.me/584123020280?text=Hi%20Jose,%20I'm%20interested%20in%20discussing%20a%20quantitative%20development%20project"
+                href="https://calendly.com/ajtradingsystems/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-gradient-to-r from-[#00E5A0] to-[#00C98C] hover:from-[#00FFB3] hover:to-[#00E5A0] text-[#050B14] px-8 py-4 rounded-xl font-bold transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center"
               >
-                <i className="fab fa-whatsapp mr-2 text-xl"></i>
-                Quick WhatsApp Chat
+                <i className="fas fa-calendar-check mr-2 text-xl"></i>
+                Book a Discovery Call
                 <i className="fas fa-external-link-alt ml-2 text-sm group-hover:translate-x-1 transition-transform duration-300"></i>
               </a>
               <a
@@ -160,25 +160,25 @@ export default function Contact() {
             >
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#00E5A0] to-[#00C98C] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <i className="fab fa-whatsapp text-2xl text-[#050B14]"></i>
+                  <i className="fas fa-calendar-check text-2xl text-[#050B14]"></i>
                 </div>
-                <h4 className="text-2xl font-bold text-white mb-3">WhatsApp</h4>
+                <h4 className="text-2xl font-bold text-white mb-3">Discovery Call</h4>
                 <p className="text-gray-400 mb-6 leading-relaxed">
-                  For urgent projects or quick questions. Available during business hours (UTC-4)
+                  Discuss a trading research or engineering project and clarify the next steps.
                 </p>
                 <div className="space-y-3">
                   <a 
-                    href="https://wa.me/584123020280?text=Hi%20Jose,%20I'm%20interested%20in%20discussing%20a%20quantitative%20development%20project"
+                    href="https://calendly.com/ajtradingsystems/30min"
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="inline-flex items-center text-[#00E5A0] hover:text-[#00FFB3] font-semibold transition-colors group"
                   >
-                    <span>+58 412 3020280</span>
+                    <span>Schedule a free call</span>
                     <i className="fas fa-external-link-alt ml-2 text-sm group-hover:translate-x-1 transition-transform duration-300"></i>
                   </a>
                   <div className="text-sm text-gray-500">
                     <i className="fas fa-clock mr-1"></i>
-                    Response: Usually within 2-4 hours
+                    Choose an available time
                   </div>
                 </div>
               </div>
@@ -210,7 +210,7 @@ export default function Contact() {
                   </a>
                   <div className="text-sm text-gray-500">
                     <i className="fas fa-clock mr-1"></i>
-                    Response: Within 24 hours
+                    For project and employment inquiries
                   </div>
                 </div>
               </div>
@@ -261,7 +261,7 @@ export default function Contact() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="https://www.linkedin.com/in/datawithjose"
+                  href="https://www.linkedin.com/in/jacosta-ve/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-[#42A5F5] hover:bg-[#5AB3F5] text-[#050B14] rounded-lg font-bold transition-colors"

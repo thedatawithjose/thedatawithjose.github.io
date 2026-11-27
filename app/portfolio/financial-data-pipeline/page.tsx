@@ -72,12 +72,12 @@ export default function FinancialDataPipeline() {
               transition={{ duration: 0.6 }}
             >
               <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
-                <div className="text-2xl font-bold text-[#00E5A0] mb-2 font-mono">Production-Scale</div>
+                <div className="text-2xl font-bold text-[#00E5A0] mb-2 font-mono">Modular ETL</div>
                 <div className="text-sm text-gray-400">Records Processing</div>
               </div>
               <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
-                <div className="text-2xl font-bold text-[#00E5A0] mb-2 font-mono">High-Availability</div>
-                <div className="text-sm text-gray-400">System Reliability</div>
+                <div className="text-2xl font-bold text-[#00E5A0] mb-2 font-mono">Validation</div>
+                <div className="text-sm text-gray-400">Data quality</div>
               </div>
               <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
                 <div className="text-2xl font-bold text-[#00E5A0] mb-2 font-mono">Multiple</div>
@@ -98,7 +98,7 @@ export default function FinancialDataPipeline() {
               </h2>
               <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed">
-                  Build a modular, production-ready ETL pipeline for financial market data that supports extraction, transformation, validation, and storage from multiple sources (crypto, equities, derivatives) with analytics and database integration.
+                  Build a modular, modular ETL pipeline for financial market data that supports extraction, transformation, validation, and storage from multiple sources (crypto, equities, derivatives) with analytics and database integration.
                 </p>
               </div>
             </m.section>
@@ -185,7 +185,7 @@ export default function FinancialDataPipeline() {
                   <div className="bg-[42A5F5]/10 p-4 rounded-lg border-l-4 border-[42A5F5]">
                     <p className="text-lg font-semibold text-[42A5F5]">
                       <i className="fas fa-tachometer-alt mr-2"></i>
-                      Production-scale processing with high-availability architecture
+                      Modular extraction, validation, transformation and storage
                     </p>
                   </div>
                   <div className="bg-[00E5A0]/10 p-4 rounded-lg border-l-4 border-[00E5A0]">
@@ -225,11 +225,11 @@ export default function FinancialDataPipeline() {
                 <ul className="space-y-3 text-lg">
                   <li className="flex items-start">
                     <i className="fas fa-chevron-right text-orange-500 mr-3 mt-1"></i>
-                    <span>Maintaining estimator robustness during market regime shifts</span>
+                    <span>Preserving consistent schemas across providers</span>
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-chevron-right text-orange-500 mr-3 mt-1"></i>
-                    <span>Ensuring fault tolerance for continuous 24/7 operation</span>
+                    <span>Handling provider failures and missing observations</span>
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-chevron-right text-orange-500 mr-3 mt-1"></i>
@@ -327,10 +327,10 @@ export default function FinancialDataPipeline() {
                       Monitoring
                     </h4>
                     <ul className="space-y-2 text-sm">
-                      <li>• Real-time quality metrics</li>
+                      <li>• Data quality metrics</li>
                       <li>• Performance monitoring</li>
                       <li>• Comprehensive logging system</li>
-                      <li>• Data quality dashboards</li>
+                      <li>• Data quality reporting</li>
                     </ul>
                   </div>
                 </div>
@@ -345,7 +345,7 @@ export default function FinancialDataPipeline() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <a
-                href="https://github.com/josetraderx/Financial-Data-Pipeline"
+                href="https://github.com/thedatawithjose/Financial-Data-Pipeline"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#0A1526] border border-[#1E2D45] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1E2D45] transition-colors flex items-center justify-center"

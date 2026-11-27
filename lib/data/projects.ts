@@ -46,7 +46,7 @@ export const heroProject: HeroProjectCardProps = {
     'Automatic parser fallback and error recovery',
     'Comprehensive data quality validation and monitoring'
   ],
-  link: '/portfolio#sec-parser'
+  link: '/portfolio/edgar-sec-parser/'
 };
 
 export const supportingProjects: SupportingProjectCardProps[] = [

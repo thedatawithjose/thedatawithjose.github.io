@@ -111,7 +111,7 @@ export default function Header() {
             <ul className="right-icons flex space-x-4 md:space-x-6">
               <li>
                 <a 
-                  href="https://www.linkedin.com/in/datawithjose" 
+                  href="https://www.linkedin.com/in/jacosta-ve/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   aria-label="Visit Jose Acosta's LinkedIn profile (opens in new tab)"
@@ -123,7 +123,7 @@ export default function Header() {
               </li>
               <li>
                 <a 
-                  href="https://www.instagram.com/datawithjose" 
+                  href="https://www.instagram.com/ajtradingsystems/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   aria-label="Visit Jose Acosta's Instagram profile (opens in new tab)"

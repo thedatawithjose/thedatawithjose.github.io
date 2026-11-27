@@ -12,18 +12,10 @@ import { generatePersonSchema } from '../../lib/structured-data';
 export default function About() {
   const [activeTab, setActiveTab] = useState('overview');
 
-  // Personal metrics and achievements
-  const metrics = {
-    experience: '12+',
-    projects: '6',
-    clients: '6',
-    countries: '4+'
-  };
-
   const achievements = [
-    { metric: 'High-Availability', description: 'Fault-tolerant systems in production' },
+    { metric: 'Fault-Tolerant Design', description: 'Failure-aware system design' },
     { metric: 'Cost-Optimized', description: 'Infrastructure through strategic optimization' },
-    { metric: 'Low-Latency', description: 'Real-time pipeline processing' },
+    { metric: 'Execution-Aware', description: 'Real-time pipeline processing' },
     { metric: 'Production-Scale', description: 'Data processing capacity' }
   ];
 
@@ -31,7 +23,7 @@ export default function About() {
     {
       icon: 'fas fa-shield-alt',
       title: 'Reliability First',
-      description: 'Systems that work when capital is at stake. Design for failure, instrument everything, monitor 24/7.'
+      description: 'Systems that work when capital is at stake. Design for failure, instrument everything, define monitoring and recovery requirements.'
     },
     {
       icon: 'fas fa-bullseye',
@@ -46,31 +38,7 @@ export default function About() {
     {
       icon: 'fas fa-chart-line',
       title: 'Capital Protection',
-      description: 'Technical rigor that creates real leverage. Robustness measured by the losses a system prevents.'
-    }
-  ];
-
-  const testimonials = [
-    {
-      quote: "Jose delivered excellent engineering work on our trading infrastructure. His background in algorithmic trading was valuable for our systematic execution needs.",
-      author: "Michael Chen",
-      position: "CTO, TraderDaddy",
-      image: "/images/testimonials/michael.jpg",
-      impact: "Improved research efficiency"
-    },
-    {
-      quote: "Solid engineering skills and reliable delivery. Jose built key components of our research platform with strong, well-tested performance.",
-      author: "Sarah Williams",
-      position: "Head of Data, FinTech Startup",
-      image: "/images/testimonials/sarah.jpg",
-      impact: "Enhanced data throughput"
-    },
-    {
-      quote: "Professional and skilled developer. Jose delivered our AWS data pipeline on time with good documentation and testing.",
-      author: "Carlos Rodriguez",
-      position: "Data Director, E-commerce",
-      image: "/images/testimonials/carlos.jpg",
-      impact: "Reliable data pipeline"
+      description: 'Technical rigor that creates real leverage. Risk controls designed around explicit exposure limits and failure scenarios.'
     }
   ];
 
@@ -249,7 +217,7 @@ export default function About() {
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="text-2xl font-bold text-green-400 mb-2">High-Availability</div>
+                <div className="text-2xl font-bold text-green-400 mb-2">Fault-Tolerant Design</div>
                 <div className="text-gray-300 text-sm">Fault-Tolerant Systems</div>
               </m.div>
               <m.div
@@ -270,8 +238,8 @@ export default function About() {
                 className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="text-2xl font-bold text-orange-400 mb-2">Low-Latency</div>
-                <div className="text-gray-300 text-sm">Low-Latency Execution</div>
+                <div className="text-2xl font-bold text-orange-400 mb-2">Execution-Aware</div>
+                <div className="text-gray-300 text-sm">Execution Design</div>
               </m.div>
             </m.div>
           </div>
@@ -530,7 +498,7 @@ export default function About() {
                     >
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-2xl font-bold text-green-500 mb-1">High-Availability Systems</div>
+                          <div className="text-2xl font-bold text-green-500 mb-1">Fault-Tolerant Design Systems</div>
                           <div className="text-gray-400 text-sm">Built fault-tolerant production pipelines with automatic failover, processing production-scale data with real-time and batch workloads, including on-call coverage and incident response</div>
                         </div>
                         <i className="fas fa-chart-line text-xl text-green-500"></i>
@@ -558,7 +526,7 @@ export default function About() {
                     >
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-2xl font-bold text-purple-500 mb-1">Low-Latency Processing</div>
+                          <div className="text-2xl font-bold text-purple-500 mb-1">Data Processing</div>
                           <div className="text-gray-400 text-sm">Optimized end-to-end latency for real-time ingestion pipelines, enabling rapid decision-making for time-sensitive use cases</div>
                         </div>
                         <i className="fas fa-tachometer-alt text-xl text-purple-500"></i>
@@ -594,7 +562,7 @@ export default function About() {
                       {
                         period: 'Apr 2019 - Present',
                         title: 'Quant Developer & Algorithmic Trading Educator',
-                        company: 'DataWithJose · Self-employed · Remote',
+                        company: 'DataWithJose / AJ Trading Systems · Self-employed · Remote',
                         description: 'Productized and commercialized proprietary trading algorithms, managing the end-to-end lifecycle from API data ingestion and signal generation to automated execution and dynamic risk management. Built custom bot solutions for private clients and directed systematic trading training programs.',
                         achievements: ['End-to-end algorithm lifecycle', 'Custom bots: Python, C#, Pine Script', 'Containerized high-availability systems', 'Systematic trading education programs'],
                         color: 'green'
@@ -742,7 +710,7 @@ export default function About() {
                       <h3 className="text-xl font-bold mb-4 text-white">Reliability</h3>
                       <div className="space-y-3">
                         <div>
-                          <div className="text-lg font-bold text-[#42A5F5]">High-Availability</div>
+                          <div className="text-lg font-bold text-[#42A5F5]">Fault-Tolerant Design</div>
                           <div className="text-sm text-gray-400">Fault-Tolerant Design</div>
                         </div>
                         <div>
@@ -761,44 +729,20 @@ export default function About() {
                       <div className="w-24 h-24 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i className="fas fa-globe text-3xl text-white"></i>
                       </div>
-                      <h3 className="text-xl font-bold mb-4 text-white">Global Reach</h3>
+                      <h3 className="text-xl font-bold mb-4 text-white">Market Focus</h3>
                       <div className="space-y-3">
                         <div>
-                          <div className="text-2xl font-bold text-purple-500">{metrics.countries}</div>
-                          <div className="text-sm text-gray-400">Countries Served</div>
+                          <div className="text-2xl font-bold text-purple-500">Futures · FX</div>
+                          <div className="text-sm text-gray-400">Market Coverage</div>
                         </div>
                         <div>
-                          <div className="text-2xl font-bold text-purple-500">{metrics.clients}</div>
-                          <div className="text-sm text-gray-400">Satisfied Clients</div>
+                          <div className="text-2xl font-bold text-purple-500">Crypto · Equities</div>
+                          <div className="text-sm text-gray-400">Market Coverage</div>
                         </div>
                       </div>
                     </m.div>
                   </div>
 
-                  {/* Client Testimonials */}
-                  <div>
-                    <h3 className="text-2xl font-bold text-center mb-8 text-white">What Clients Say</h3>
-                    <div className="grid md:grid-cols-3 gap-8">
-                      {testimonials.map((testimonial, index) => (
-                        <m.div
-                          key={index}
-                          className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-2xl shadow-lg"
-                          initial={{ opacity: 0, y: 50 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ delay: index * 0.2, duration: 0.6 }}
-                        >
-                          <div className="mb-4">
-                            <div className="text-[#00E5A0] font-semibold text-sm mb-2">{testimonial.impact}</div>
-                            <blockquote className="text-gray-300 italic mb-4">"{testimonial.quote}"</blockquote>
-                          </div>
-                          <div className="border-t border-[#1E2D45] pt-4">
-                            <div className="font-semibold text-white">{testimonial.author}</div>
-                            <div className="text-sm text-gray-400">{testimonial.position}</div>
-                          </div>
-                        </m.div>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               )}
             </m.div>
@@ -880,7 +824,7 @@ export default function About() {
                 <div className="grid md:grid-cols-3 gap-6 text-sm">
                   <div className="flex items-center justify-center">
                     <i className="fas fa-chart-line text-green-400 mr-2"></i>
-                    <span>8+ years active market experience</span>
+                    <span>8 years active market experience</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <i className="fas fa-shield-alt text-blue-400 mr-2"></i>
@@ -903,7 +847,7 @@ export default function About() {
                 <p className="text-gray-300 mb-4 text-sm">Connect with me:</p>
                 <div className="flex justify-center gap-4">
                   <a
-                    href="https://www.linkedin.com/in/datawithjose"
+                    href="https://www.linkedin.com/in/jacosta-ve/"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Follow on LinkedIn"
@@ -921,7 +865,7 @@ export default function About() {
                     <i className="fab fa-github text-xl"></i>
                   </a>
                   <a
-                    href="https://instagram.com/datawithjose"
+                    href="https://www.instagram.com/ajtradingsystems/"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Follow on Instagram"

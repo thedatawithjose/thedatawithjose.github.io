@@ -124,7 +124,7 @@ export default function LeadMagnets({ className = '' }: LeadMagnetProps) {
   }
 
   return (
-    <section className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#0A1526] to-[#050B14] ${className}`}>
+    <section id="lead-magnets" className={`py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#0A1526] to-[#050B14] ${className}`}>
       <div className="container mx-auto px-4">
         <m.div
           className="text-center mb-16"

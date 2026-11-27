@@ -12,12 +12,13 @@ import '../blog.css';
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const articleData = await getArticleData(slug);
-  const fullUrl = `https://datawithjose.tech/blog/${slug}`;
-  const imageUrl = articleData.image?.startsWith('http') ? articleData.image : `https://datawithjose.tech${articleData.image}`;
+  const fullUrl = `https://ajtradingsystems.com/blog/${slug}/`;
+  const imageUrl = articleData.image?.startsWith('http') ? articleData.image : `https://ajtradingsystems.com${articleData.image}`;
   
   return {
     title: `${articleData.title} | Jose Acosta - Quantitative Developer`,
     description: articleData.excerpt,
+    alternates: { canonical: fullUrl },
     openGraph: {
       title: articleData.title,
       description: articleData.excerpt,
@@ -273,7 +274,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     <h3 className="font-bold text-white mb-4">Connect with Me</h3>
                     <div className="flex space-x-3">
                       <a 
-                        href="https://www.linkedin.com/in/datawithjose" 
+                        href="https://www.linkedin.com/in/jacosta-ve/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex-1 bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors text-center"
@@ -282,7 +283,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                         <i className="fab fa-linkedin text-lg"></i>
                       </a>
                       <a 
-                        href="https://www.instagram.com/datawithjose" 
+                        href="https://www.instagram.com/ajtradingsystems/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex-1 bg-pink-500 text-white p-3 rounded-lg hover:bg-pink-600 transition-colors text-center"

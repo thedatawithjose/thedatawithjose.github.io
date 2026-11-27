@@ -42,7 +42,7 @@ export default function Footer() {
             {/* Modern Social Icons */}
             <div className="flex space-x-4">
               <m.a 
-                href="https://www.linkedin.com/in/datawithjose/" 
+                href="https://www.linkedin.com/in/jacosta-ve/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="LinkedIn"
@@ -68,7 +68,7 @@ export default function Footer() {
               </m.a>
               
               <m.a 
-                href="https://www.instagram.com/datawithjose/" 
+                href="https://www.instagram.com/ajtradingsystems/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="Instagram"
@@ -105,7 +105,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/datawithjose/" target="_blank" rel="noopener noreferrer" className="group flex items-center text-gray-300 hover:text-[#00E5A0] transition-all duration-300">
+                <a href="https://www.linkedin.com/in/jacosta-ve/" target="_blank" rel="noopener noreferrer" className="group flex items-center text-gray-300 hover:text-[#00E5A0] transition-all duration-300">
                   <div className="w-1.5 h-1.5 bg-[#00E5A0] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <span className="group-hover:translate-x-1 transition-transform duration-300">LinkedIn</span>
                 </a>

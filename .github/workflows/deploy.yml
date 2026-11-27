@@ -119,12 +119,12 @@ jobs:
     - name: Check site availability
       run: |
         echo "Checking site availability..."
-        curl -f -s -o /dev/null https://datawithjose.tech || exit 1
+        curl -f -s -o /dev/null https://ajtradingsystems.com/ || exit 1
         echo "Site is available"
         
     - name: Performance check
       run: |
         echo "Basic performance check..."
-        time curl -s -o /dev/null https://datawithjose.tech
+        time curl -s -o /dev/null https://ajtradingsystems.com/
         echo "Performance check completed"
       continue-on-error: true

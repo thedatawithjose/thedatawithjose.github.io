@@ -219,7 +219,7 @@ export default function NewsletterForm({ className = '' }: NewsletterFormProps) 
           <i className="fas fa-shield-alt text-[#00BFA5]"></i>
           <span>No spam, unsubscribe at any time.</span>
           <span className="text-gray-500">•</span>
-          <a href="/privacy" className="text-[#00BFA5] hover:text-[#00D4B4] transition-colors duration-200 font-semibold hover:underline">
+          <a href="/privacy-policy" className="text-[#00BFA5] hover:text-[#00D4B4] transition-colors duration-200 font-semibold hover:underline">
             Privacy Policy
           </a>
         </p>

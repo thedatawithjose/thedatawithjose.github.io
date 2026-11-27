@@ -15,13 +15,13 @@ export default function SocialMetaTags({
   title,
   description,
   image = '/images/profile-jose.png',
-  url = 'https://thedatawithjose.github.io',
+  url = 'https://ajtradingsystems.com',
   type = 'article',
   author = 'Jose Acosta',
   publishedTime,
   tags = []
 }: SocialMetaTagsProps) {
-  const fullImageUrl = image.startsWith('http') ? image : `https://thedatawithjose.github.io${image}`;
+  const fullImageUrl = image.startsWith('http') ? image : `https://ajtradingsystems.com${image}`;
   
   return (
     <Head>
