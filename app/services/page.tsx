@@ -408,19 +408,19 @@ export default function Services() {
               transition={{ delay: 0.8, duration: 0.8 }}
             >
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-green-400 mb-2">8+</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">8</div>
                 <div className="text-gray-300 text-sm">Years Market Experience</div>
                 <div className="text-xs text-gray-400 mt-1">Futures · FX · Crypto · Equities</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-blue-400 mb-2">6</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">4</div>
                 <div className="text-gray-300 text-sm">Selected Projects</div>
-                <div className="text-xs text-gray-400 mt-1">Production Systems</div>
+                <div className="text-xs text-gray-400 mt-1">Public Research & Engineering</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="text-3xl font-bold text-purple-400 mb-2">Walk-Forward</div>
                 <div className="text-gray-300 text-sm">Validation Standard</div>
-                <div className="text-xs text-gray-400 mt-1">Out-of-Sample Tested</div>
+                <div className="text-xs text-gray-400 mt-1">Out-of-Sample Testing</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="text-3xl font-bold text-orange-400 mb-2">Risk-aware</div>

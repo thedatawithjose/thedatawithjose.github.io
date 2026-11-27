@@ -9,11 +9,6 @@ import OptimizedVideoBackground from '../components/OptimizedVideoBackground';
 
 import dynamic from 'next/dynamic';
 
-// Lazy load all heavy sections with intersection observer
-const LazyLoadedSections = dynamic(() => import('../components/LazyLoadedSections'), {
-  loading: () => <div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>,
-});
-
 const ServicesSection = dynamic(() => import('../components/ServicesSection'), {
   loading: () => <div className="h-96 bg-gray-50 animate-pulse"></div>
 });
@@ -28,10 +23,7 @@ import { ToastProvider } from '../components/ToastNotification';
 
 import { useScrollTracking, useJourneyTracking } from '../hooks/useAnalyticsTracking';
 
-import NewsletterForm from '../components/NewsletterForm';
 import ContactTeaser from '../components/ContactTeaser';
-import ROICalculator from '../components/ROICalculator';
-import EnhancedCTAs from '../components/EnhancedCTAs';
 
 export default function Home() {
   // Analytics tracking
@@ -83,7 +75,7 @@ export default function Home() {
         metrics: [
           { value: "OOS", label: "Out-of-Sample Testing" },
           { value: "Walk-Forward", label: "Validation" },
-          { value: "Realistic", label: "Costs & Slippage Modeled" },
+          { value: "Costs", label: "Slippage & Execution Assumptions" },
           { value: "Risk", label: "Execution Constraints" }
         ]
       }
@@ -107,7 +99,7 @@ export default function Home() {
           { value: "Futures", label: "FX · Crypto · Equities" },
           { value: "Risk-Aware", label: "Design Approach" },
           { value: "Strict", label: "Data Integrity" },
-          { value: "Prod", label: "Grade Systems" }
+          { value: "Systematic", label: "Research & Engineering" }
         ]
       }
     }
@@ -356,7 +348,7 @@ export default function Home() {
                       </div>
 
                       <p className="text-gray-300 mb-6 leading-relaxed">
-                        Built and governed the firm's data infrastructure from scratch: real-time WebSocket ingestion, performance-critical pipelines with full auditability, and high-availability decision-support systems on PostgreSQL and TimescaleDB — for futures, FX, crypto, and equities.
+                        Built and governed the firm's data infrastructure from scratch: real-time WebSocket ingestion, performance-critical pipelines with full auditability, and decision-support systems on PostgreSQL and TimescaleDB — for futures, FX, crypto, and equities.
                       </p>
 
                       <div className="space-y-3">
@@ -410,7 +402,7 @@ export default function Home() {
                       </div>
 
                       <p className="text-gray-300 mb-6 leading-relaxed">
-                        Productized proprietary trading algorithms end-to-end: API data ingestion → signal generation → automated execution with dynamic risk management. Custom bot solutions for private clients across futures, FX, crypto, and equities — engineered for high availability and observability.
+                        Productized proprietary trading algorithms end-to-end: API data ingestion → signal generation → automated execution with dynamic risk management. Custom bot solutions for private clients across futures, FX, crypto, and equities — designed with reliability and observability in mind.
                       </p>
 
                       <div className="space-y-3">
@@ -458,31 +450,6 @@ export default function Home() {
             </div>
           </section>
 
-
-          {/* Lazy loaded sections */}
-          <div className="hidden">
-            <LazyLoadedSections />
-          </div>
-
-
-          {/* ROI Calculator */}
-          <div className="hidden">
-            <ROICalculator />
-          </div>
-
-          {/* Enhanced CTAs */}
-          <div className="hidden">
-            <EnhancedCTAs variant="primary" />
-          </div>
-
-          {/* Newsletter Section */}
-          <section className="hidden newsletter py-24 bg-[#050B14]">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <NewsletterForm />
-              </div>
-            </div>
-          </section>
 
           <section className="bg-[#0D1B30] px-6 py-14 border-y border-[#1E2D45]">
             <div className="max-w-4xl mx-auto text-center">

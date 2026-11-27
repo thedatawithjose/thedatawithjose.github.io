@@ -77,8 +77,7 @@ const certifications = [
     date: "May 2025", 
     status: "IN_PROGRESS",
     badge: "ibm", 
-    verified: true,
-    credentialUrl: "https://www.coursera.org/professional-certificates/ibm-data-engineer",
+        credentialUrl: "https://www.coursera.org/professional-certificates/ibm-data-engineer",
     skills: ["Apache Kafka", "Apache Spark", "ETL Pipelines", "Cloud Computing", "SQL", "Python", "NoSQL", "Docker", "Kubernetes"],
     description: "Comprehensive professional certificate covering data engineering fundamentals, ETL processes, and cloud-based data solutions.",
     level: "Professional Certificate",
@@ -91,8 +90,7 @@ const certifications = [
     date: "Nov 2024", 
     credentialId: "R7LPZ5VW13NJ",
     badge: "umich", 
-    verified: true,
-    credentialUrl: "https://www.coursera.org/learn/inferential-statistical-analysis-python",
+        credentialUrl: "https://www.coursera.org/learn/inferential-statistical-analysis-python",
     skills: ["Python", "Statistical Analysis", "Hypothesis Testing", "Confidence Intervals", "Statistical Inference"],
     description: "Statistical analysis techniques using Python for data-driven decision making.",
     level: "Specialization Course",
@@ -104,8 +102,7 @@ const certifications = [
     date: "Nov 2024", 
     credentialId: "OHX0446VDLS8",
     badge: "umich", 
-    verified: true,
-    credentialUrl: "https://www.coursera.org/learn/understanding-visualization-data",
+        credentialUrl: "https://www.coursera.org/learn/understanding-visualization-data",
     skills: ["Data Visualization", "Python", "Pandas", "Matplotlib", "Seaborn", "Statistical Analysis"],
     description: "Comprehensive course on data analysis and visualization techniques using Python libraries.",
     level: "Specialization Course", 
@@ -116,8 +113,7 @@ const certifications = [
     organization: "Coursera", 
     date: "May 2025", 
     badge: "coursera", 
-    verified: true,
-    credentialUrl: "https://www.coursera.org/learn/data-science-course",
+        credentialUrl: "https://www.coursera.org/learn/data-science-course",
     skills: ["Data Science Fundamentals", "Career Development"],
     description: "Introduction to data science career paths and industry overview.",
     level: "Course",
@@ -128,8 +124,7 @@ const certifications = [
     organization: "Código Facilito", 
     date: "Jun 2023", 
     badge: "codigo", 
-    verified: true,
-    credentialUrl: "#",
+        credentialUrl: "#",
     description: "Curso profesional de Python para el uso en la ciencia de datos",
     skills: ["Python Programming", "Algorithms", "Data Structures", "Object-Oriented Programming"],
     level: "Professional Course",
@@ -140,8 +135,7 @@ const certifications = [
     organization: "IBM", 
     credentialId: "8O4B21RURLGO",
     badge: "ibm", 
-    verified: true,
-    credentialUrl: "https://www.coursera.org/learn/what-is-datascience",
+        credentialUrl: "https://www.coursera.org/learn/what-is-datascience",
     skills: ["Data Science Fundamentals", "Industry Overview"],
     description: "Introduction to data science methodologies and applications across industries.",
     level: "Course",
@@ -151,8 +145,7 @@ const certifications = [
     name: "Consultor Internacional Certificado", 
     organization: "Espabílate Consulting Group", 
     badge: "consulting", 
-    verified: true,
-    credentialUrl: "#",
+        credentialUrl: "#",
     skills: ["International Consulting", "Business Strategy", "Project Management"],
     description: "Certification in international consulting practices and methodologies.",
     level: "Professional Certification",
@@ -162,8 +155,7 @@ const certifications = [
     name: "Inglés Avanzado", 
     organization: "Kaplan UK", 
     badge: "kaplan", 
-    verified: true,
-    credentialUrl: "#",
+        credentialUrl: "#",
     skills: ["English Proficiency", "Business Communication", "Technical Writing"],
     description: "English proficiency certification for professional environments.",
     level: "Language Certification",
@@ -343,13 +335,13 @@ export default function CertificationsSection() {
         >
           <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
             <div className="text-3xl font-bold text-[#005A9C] mb-2">{certifications.length}</div>
-            <div className="text-gray-600">Total Certifications</div>
+            <div className="text-gray-600">Listed Learning Records</div>
           </div>
           <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
             <div className="text-3xl font-bold text-[#00BFA5] mb-2">
-              {certifications.filter(cert => cert.verified).length}
+              {certifications.filter(cert => Boolean(cert.credentialId)).length}
             </div>
-            <div className="text-gray-600">Verified</div>
+            <div className="text-gray-600">Credential IDs Listed</div>
           </div>
           <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
             <div className="text-3xl font-bold text-purple-600 mb-2">
@@ -389,13 +381,6 @@ export default function CertificationsSection() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between mb-2">
                       <h3 className="font-bold text-lg text-gray-800 leading-tight pr-2">{cert.name}</h3>
-                      {cert.verified && (
-                        <div className="flex-shrink-0 ml-2">
-                          <div className="bg-green-100 rounded-full p-1">
-                            <i className="fas fa-check-circle text-green-600 text-sm"></i>
-                          </div>
-                        </div>
-                      )}
                     </div>
                     <p className="text-[#005A9C] font-semibold text-sm mb-3">{cert.organization}</p>
                     
@@ -421,7 +406,7 @@ export default function CertificationsSection() {
                   {cert.date && (
                     <p className="text-gray-500 text-sm mb-1">
                       <i className="fas fa-calendar-alt mr-2"></i>
-                      Issued {cert.date}
+                      {cert.status === 'IN_PROGRESS' ? 'Listed' : 'Reported date'} {cert.date}
                     </p>
                   )}
                   {cert.credentialId && (
@@ -448,7 +433,7 @@ export default function CertificationsSection() {
                 {/* Skills */}
                 {cert.skills && (
                   <div className="mb-4">
-                    <p className="text-xs text-gray-500 mb-2 font-semibold">Skills Acquired:</p>
+                    <p className="text-xs text-gray-500 mb-2 font-semibold">Topics Covered:</p>
                     <div className="flex flex-wrap gap-1">
                       {cert.skills.slice(0, hoveredCert === index ? cert.skills.length : 4).map((skill, skillIndex) => (
                         <span 
@@ -476,7 +461,7 @@ export default function CertificationsSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <span>View Credential</span>
+                      <span>View Course Information</span>
                       <i className="fas fa-external-link-alt group-hover:translate-x-1 transition-transform"></i>
                     </a>
                   </div>
