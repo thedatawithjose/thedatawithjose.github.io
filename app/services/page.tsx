@@ -65,8 +65,8 @@ export default function Services() {
         'Cross-market applicability: futures, FX, crypto, equities'
       ],
       metrics: {
-        validation: 'Out-of-sample tested',
-        robustness: 'Walk-forward validated',
+        validation: 'Out-of-sample testing',
+        robustness: 'Walk-forward analysis',
         clarity: 'Explicit rules'
       }
     },
@@ -95,19 +95,19 @@ export default function Services() {
       icon: 'fas fa-bolt',
       title: 'Automated Execution Systems',
       subtitle: 'From validated logic to reliable live execution',
-      description: 'Trading systems designed to translate validated strategy logic into reliable live execution — resilient, low-latency, and engineered to prevent silent failures.',
+      description: 'Trading systems designed to translate validated strategy logic into reliable live execution — with error handling, monitoring, and explicit failure conditions.',
       technologies: ['Python', 'WebSockets', 'REST APIs', 'Redis', 'Docker'],
       benefits: [
         'Robust error handling and payload validation layers',
         'Real-time alerting to prevent silent failures',
-        'Containerized, high-availability deployments',
+        'Containerized deployment where appropriate',
         'Broker API integration (e.g., Binance, Tradovate)',
         'Observability and operational best practices'
       ],
       metrics: {
-        availability: 'High-availability',
-        latency: 'Low-latency',
-        monitoring: '24/7 alerting'
+        availability: 'Fault-aware design',
+        latency: 'Measured constraints',
+        monitoring: 'Monitoring and alerts'
       }
     },
     {
@@ -118,7 +118,7 @@ export default function Services() {
       description: 'Position sizing, drawdown controls, execution safeguards, and failure conditions integrated directly into the system — because robustness is engineering, not a feature.',
       technologies: ['Python', 'NumPy', 'Pandas', 'PostgreSQL', 'TimescaleDB'],
       benefits: [
-        'Dynamic position sizing (e.g., signal-strength, Kelly-based)',
+        'Position sizing based on agreed risk constraints',
         'Drawdown limits and stop-loss automation',
         'Execution safeguards and kill-switch conditions',
         'Real-time risk dashboards and alerts',
@@ -136,7 +136,7 @@ export default function Services() {
     strategy: {
       name: 'Strategy Research Sprint',
       price: 'Custom Quote',
-      duration: '2-3 weeks',
+      duration: 'Scope dependent',
       description: 'For traders with an idea that needs rigorous validation before anything gets built. Turns your hypothesis into an honest verdict: worth building, or not.',
       subtitle: 'Validate Before You Build',
       features: [
@@ -147,7 +147,7 @@ export default function Services() {
         'Sensitivity analysis: how performance changes when assumptions do',
         'Written verdict with next-step recommendations'
       ],
-      note: 'The cheapest insurance you can buy: a rigorous no before you commit capital to a build.',
+      note: 'Evaluate the evidence before committing to system development.',
       popular: false,
       guarantees: [
         "Honest results - even when they say 'don't build it'",
@@ -168,7 +168,7 @@ export default function Services() {
     implementation: {
       name: 'Backtest-to-Execution Build',
       price: 'Custom Quote',
-      duration: '4-6 weeks',
+      duration: 'Scope dependent',
       description: 'For teams with a validated strategy ready to become a system. The full pipeline from research and backtesting through automated execution.',
       subtitle: 'Build & Deploy',
       features: [
@@ -176,15 +176,15 @@ export default function Services() {
         'Automated execution system with broker API integration',
         'Error handling, payload validation, and real-time alerting',
         'Risk controls: position sizing, drawdown limits, safeguards',
-        'Containerized deployment for high availability',
-        'Complete documentation and 2 weeks post-launch support'
+        'Containerized deployment with agreed reliability requirements',
+        'Documentation and agreed post-launch support'
       ],
-      note: 'Most popular option. Takes a validated strategy and engineers it into a system that survives live markets.',
-      popular: true,
+      note: 'Translate validated strategy logic into a system designed for agreed execution and risk requirements.',
+      popular: false,
       guarantees: [
-        '30-Day Bug-Fix Guarantee',
+        'Bug-fix scope agreed in writing',
         'Code quality assurance',
-        'Fixed scope - no surprises'
+        'Scope agreed before kickoff'
       ],
       paymentOptions: [
         'Milestone-based billing',
@@ -205,7 +205,7 @@ export default function Services() {
     complete: {
       name: 'Complete Trading System',
       price: 'Custom Quote',
-      duration: '8-12 weeks',
+      duration: 'Scope dependent',
       description: 'End-to-end engagement: research, validation, execution, and risk — the entire journey from trading idea to live system.',
       subtitle: 'Research → Execution',
       features: [
@@ -214,17 +214,17 @@ export default function Services() {
         'Automated execution system with broker integration',
         'Integrated risk management and capital protection controls',
         'Monitoring, alerting, and observability from day one',
-        '3 weeks of post-launch support and tuning',
+        'Post-launch support and tuning as agreed',
         'Hands-on walkthrough session (1.5 hours)',
-        'Email/Slack support with 24-hour response time'
+        'Communication and response expectations agreed in scope'
       ],
       note: 'Comprehensive engagement. From hypothesis to live trading with risk controls — the complete research-to-execution lifecycle.',
       popular: false,
-      savings: 'Best Value',
+      
       guarantees: [
-        '3-Week Bug-Fix Guarantee',
-        'Priority Support Included',
-        'Fixed scope - no surprises'
+        'Bug-fix scope agreed in writing',
+        'Support terms agreed in scope',
+        'Scope agreed before kickoff'
       ],
       paymentOptions: [
         'Milestone-based billing',
@@ -242,27 +242,6 @@ export default function Services() {
       ]
     }
   };
-
-  const testimonials = [
-    {
-      service: 'Trading Infrastructure',
-      client: 'Daniel Graham, CEO TheTraderDaddy',
-      quote: 'Jose built our real-time market data pipeline processing WebSocket feeds from multiple exchanges. The system maintains high availability with low-latency ingestion while handling millions of daily updates. His integration of market data, social sentiment, and on-chain metrics into a unified platform powers our entire research infrastructure.',
-      result: 'High availability, low-latency ingestion, millions of daily updates'
-    },
-    {
-      service: 'Automated Execution',
-      client: 'Paul Reina, Sales Manager at GrowMyClinic',
-      quote: 'Jose integrated our CRM, call tracking, and scheduling systems into a unified analytics dashboard. The real-time visibility into marketing attribution and conversion funnels helped us identify high-value referral sources and optimize our spend. Patient conversion improved from 28% to 35%, with a 15% increase in average appointment value.',
-      result: '25% conversion improvement, 15% higher revenue per patient'
-    },
-    {
-      service: 'ML Systems',
-      client: 'Caterina Abanoni, Data Science Lead',
-      quote: 'Jose architected our MLOps pipeline with automated feature engineering processing 2,500+ daily student interactions. The A/B testing framework and model monitoring reduced deployment time from 3 weeks to 3 days, while improving course completion rates by 15%. His GDPR-compliant framework was critical for our European expansion.',
-      result: '85% faster deployment, 15% better course completion'
-    }
-  ];
 
   return (
     <>
@@ -444,7 +423,7 @@ export default function Services() {
                 <div className="text-xs text-gray-400 mt-1">Out-of-Sample Tested</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">Risk-aware</div>
                 <div className="text-gray-300 text-sm">System Operation</div>
                 <div className="text-xs text-gray-400 mt-1">Monitoring & Alerting</div>
               </div>
@@ -504,7 +483,7 @@ export default function Services() {
                 </div>
                 <div className="px-4 py-2 bg-blue-500/15 text-blue-300 rounded-lg text-sm font-medium border border-blue-500/30">
                   <i className="fas fa-clock mr-2"></i>
-                  Low-Latency Execution
+                  Execution Engineering
                 </div>
                 <div className="px-4 py-2 bg-purple-500/15 text-purple-300 rounded-lg text-sm font-medium border border-purple-500/30">
                   <i className="fas fa-chart-line mr-2"></i>
@@ -1042,42 +1021,6 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Client Results */}
-        <div className="hidden py-20 bg-[#0A1526] text-white">
-          <div className="container mx-auto px-4">
-            <m.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-5xl font-bold mb-6 text-[#00E5A0]">Client Success Stories</h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Real feedback from teams I've worked with.
-              </p>
-            </m.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <m.div
-                  key={index}
-                  className="bg-[#0D1B30] border border-[#1E2D45] p-8 rounded-2xl"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2, duration: 0.6 }}
-                >
-                  <div className="text-green-400 font-semibold mb-4">{testimonial.service}</div>
-                  <blockquote className="text-lg italic mb-6">"{testimonial.quote}"</blockquote>
-                  <div className="border-t border-gray-700 pt-4">
-                    <div className="font-semibold">{testimonial.client}</div>
-                    <div className="text-green-400 text-sm mt-2">{testimonial.result}</div>
-                  </div>
-                </m.div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* Process Timeline */}
         <div className="hidden py-20">
           <div className="container mx-auto px-4">
@@ -1206,7 +1149,7 @@ export default function Services() {
                 <div className="grid md:grid-cols-3 gap-6 text-sm">
                   <div className="flex items-center justify-center">
                     <i className="fas fa-clock text-green-400 mr-2"></i>
-                    <span>Same-day response (business hours)</span>
+                    <span>Response during agreed business hours</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <i className="fas fa-shield-alt text-blue-400 mr-2"></i>

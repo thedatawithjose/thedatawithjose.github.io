@@ -16,7 +16,6 @@ import CookieConsent from "../components/CookieConsent";
 import PageTransition from "../components/PageTransition";
 import NavigationHandler from "../components/NavigationHandler";
 import LazyMotionProvider from "../components/LazyMotionProvider";
-import KalyptoChat from "../components/KalyptoChat";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -142,8 +141,6 @@ export default function RootLayout({
             {/* WhatsApp Floating Button */}
             <WhatsAppButton />
 
-            {/* Cami AI Chatbot - Virtual Assistant */}
-            <KalyptoChat />
 
             {/* Cookie Consent Banner */}
             <CookieConsent />
@@ -171,11 +168,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* Intersection Observer polyfill for older browsers */}
-        <Script
-          src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"
-          strategy="lazyOnload"
-        />
       </body>
     </html>
   );

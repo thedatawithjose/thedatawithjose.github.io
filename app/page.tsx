@@ -22,9 +22,6 @@ const AboutSection = dynamic(() => import('../components/AboutSection'), {
   loading: () => <div className="h-96 bg-white animate-pulse"></div>
 });
 
-const TestimonialsSection = dynamic(() => import('../components/TestimonialsSection'));
-import StructuredData from '../components/StructuredData';
-import { generateReviewSchema } from '../lib/structured-data';
 import ProgressiveHero from '../components/ProgressiveHero';
 import { ToastProvider } from '../components/ToastNotification';
 
@@ -47,8 +44,8 @@ export default function Home() {
   const heroSlides = [
     {
       title: "Quantitative Developer",
-      subtitle: "8 years turning market ideas into systematic trading systems. Research, validation, and execution in one workflow. Built for live markets.",
-      mobileSubtitle: "8 years turning market ideas into trading systems. Research, validation, and execution. Built for live markets.",
+      subtitle: "8 years of active market experience. Turning trading logic into systematic, testable strategies and execution systems.",
+      mobileSubtitle: "8 years of active market experience. Research, validation, and execution.",
       gradient: "from-[#050B14] via-[#0A1526] to-[#0D1B30]",
       cta: "Let's Talk",
       secondaryCta: "View Portfolio",
@@ -61,9 +58,9 @@ export default function Home() {
           "Risk & Capital Protection"
         ],
         metrics: [
-          { value: "8+", label: "Years Market Experience" },
+          { value: "8", label: "Years Active Market Experience" },
           { value: "4", label: "Asset Classes" },
-          { value: "7+", label: "Years Building Systems" },
+          { value: "Python", label: "System Development" },
           { value: "End-to-End", label: "Research → Live" }
         ]
       }
@@ -84,22 +81,22 @@ export default function Home() {
           "Realistic Execution Modeling"
         ],
         metrics: [
-          { value: "OOS", label: "Out-of-Sample Tested" },
+          { value: "OOS", label: "Out-of-Sample Testing" },
           { value: "Walk-Forward", label: "Validation" },
           { value: "Realistic", label: "Costs & Slippage Modeled" },
-          { value: "24/7", label: "System Monitoring" }
+          { value: "Risk", label: "Execution Constraints" }
         ]
       }
     },
     {
-      title: "Systems That Survive Real Markets",
+      title: "Engineering for Real Markets",
       subtitle: "Robustness is engineering, not just a backtest metric. Position sizing and drawdown controls protect the system. Safeguards handle real market failure conditions.",
       mobileSubtitle: "Robustness is engineering, not just backtesting. Position sizing and drawdown controls. Safeguards for real market conditions.",
       gradient: "from-[#050B14] via-[#0D1B30] to-[#0A1526]",
       cta: "Hire Me",
       secondaryCta: "View Portfolio",
       details: {
-        description: "Available for full-time Quantitative Developer roles and select consulting engagements. I work with prop trading firms, systematic trading teams, and trading technology companies — across futures, FX, crypto, and equities.",
+        description: "Available for full-time Quantitative Developer roles and select consulting engagements. I am interested in working with prop trading firms, systematic trading teams, and trading technology companies — across futures, FX, crypto, and equities.",
         features: [
           "Position Sizing",
           "Drawdown Controls",
@@ -108,7 +105,7 @@ export default function Home() {
         ],
         metrics: [
           { value: "Futures", label: "FX · Crypto · Equities" },
-          { value: "High-Avail", label: "Design Standard" },
+          { value: "Risk-Aware", label: "Design Approach" },
           { value: "Strict", label: "Data Integrity" },
           { value: "Prod", label: "Grade Systems" }
         ]
@@ -130,7 +127,7 @@ export default function Home() {
 
   return (
     <>
-      <StructuredData data={generateReviewSchema()} />
+      
       <ToastProvider>
         <div className="min-h-screen bg-[#050B14] text-[#E6EDF3]">
           <Header />
@@ -224,7 +221,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
                 >
-                  My quant development expertise comes from <span className="text-[#00E5A0] font-semibold">8+ years of active market experience</span> and a track record across high-stakes environments. Each role taught me critical skills I now apply to building robust algorithmic trading systems.
+                  My quant development expertise comes from <span className="text-[#00E5A0] font-semibold">8 years of active market experience</span> and a track record across high-stakes environments. Each role taught me critical skills I now apply to building robust algorithmic trading systems.
                 </m.p>
               </m.div>
 
@@ -349,7 +346,7 @@ export default function Home() {
                             <span className="text-base md:text-lg font-semibold text-gray-300">Fintech Alca Group</span>
                           </div>
                           <div className="flex gap-3 items-center flex-wrap">
-                            <div className="text-base font-semibold text-[#00E5A0]">8+ Years</div>
+                            <div className="text-base font-semibold text-[#00E5A0]">8 Years</div>
                             <div className="text-base text-gray-400">Market Experience</div>
                           </div>
                         </div>
@@ -397,14 +394,14 @@ export default function Home() {
                         <div className="flex-1">
                           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00E5A0]/20 rounded-full border border-[#00E5A0]/30 mb-3">
                             <div className="w-2 h-2 bg-[#00E5A0] rounded-full animate-pulse"></div>
-                            <span className="text-xs font-bold text-[#00E5A0]">7+ YEARS BUILDING SYSTEMS • CURRENT</span>
+                            <span className="text-xs font-bold text-[#00E5A0]">SYSTEMATIC TRADING • CURRENT</span>
                           </div>
                           <h4 className="text-lg md:text-xl font-bold text-white leading-tight group-hover:text-[#00E5A0] transition-colors duration-300">
                             Quant Developer & Educator
                           </h4>
                           <div className="flex items-center gap-2 mt-2 mb-3">
                             <i className="fas fa-arrow-right text-[#00E5A0] text-sm"></i>
-                            <span className="text-base md:text-lg font-semibold text-gray-300">DataWithJose · Self-employed</span>
+                            <span className="text-base md:text-lg font-semibold text-gray-300">AJ Trading Systems · Self-employed</span>
                           </div>
                         </div>
                         <div className="w-14 h-14 bg-gradient-to-br from-[#00E5A0] to-[#42A5F5] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex-shrink-0">
@@ -443,7 +440,7 @@ export default function Home() {
                 >
                   <div className="max-w-3xl mx-auto mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
                     <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                      <strong className="text-white text-2xl">Bottom line:</strong> <span className="text-[#00E5A0] font-semibold">8+ years</span> of market experience building systems where failure isn't an option — from research to execution.
+                      <strong className="text-white text-2xl">Bottom line:</strong> <span className="text-[#00E5A0] font-semibold">8 years</span> of active market experience, with a focus on honest research and practical execution engineering.
                     </p>
                   </div>
 
@@ -461,8 +458,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Client Testimonials */}
-          <TestimonialsSection />
 
           {/* Lazy loaded sections */}
           <div className="hidden">

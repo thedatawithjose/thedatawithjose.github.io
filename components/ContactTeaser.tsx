@@ -13,7 +13,7 @@ export default function ContactTeaser({ className = '' }: ContactTeaserProps) {
       icon: 'fas fa-calendar-check',
       label: 'Schedule Call',
       description: 'Free 30-min consultation',
-      href: 'mailto:datawithjose@outlook.com?subject=Schedule Consultation&body=Hi Jose,%0D%0A%0D%0AI\'d like to schedule a consultation to discuss:%0D%0A%0D%0A- %0D%0A- %0D%0A%0D%0APreferred times:%0D%0A- %0D%0A- %0D%0A%0D%0ABest regards',
+      href: 'https://calendly.com/ajtradingsystems/30min',
       color: 'from-[#00E5A0] to-[#42A5F5]'
     },
     {
