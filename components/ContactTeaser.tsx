@@ -27,7 +27,7 @@ export default function ContactTeaser({ className = '' }: ContactTeaserProps) {
       icon: 'fab fa-linkedin',
       label: 'Connect on LinkedIn',
       description: 'Professional network',
-      href: 'https://www.linkedin.com/in/datawithjose/',
+      href: 'https://www.linkedin.com/in/jacosta-ve/',
       color: 'from-[#00E5A0] to-[#42A5F5]'
     }
   ];

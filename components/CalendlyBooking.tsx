@@ -1,7 +1,6 @@
 'use client';
 
 import { m } from 'framer-motion';
-import { useEffect, useState } from 'react';
 
 interface CalendlyBookingProps {
   className?: string;
@@ -12,46 +11,19 @@ interface CalendlyBookingProps {
 export default function CalendlyBooking({ 
   className = '', 
   variant = 'inline',
-  url = 'https://calendly.com/datawithjose/consultation' 
 }: CalendlyBookingProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    // Load Calendly script
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    script.onload = () => setIsLoaded(true);
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup
-      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
-      if (existingScript) {
-        document.head.removeChild(existingScript);
-      }
-    };
-  }, []);
-
-  const openCalendlyPopup = () => {
-    if (typeof window !== 'undefined' && (window as any).Calendly) {
-      (window as any).Calendly.initPopupWidget({ url });
-    }
-  };
-
   if (variant === 'popup') {
     return (
-      <m.button
-        onClick={openCalendlyPopup}
+      <m.a
+        href="/contact/#contact-form"
         className={`group bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] hover:from-[#00D4B4] hover:to-[#2196F3] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center ${className}`}
         whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.95 }}
-        disabled={!isLoaded}
       >
         <i className="fas fa-calendar-alt mr-3"></i>
-        Schedule Free Consultation
+        Request a Free Consultation
         <i className="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
-      </m.button>
+      </m.a>
     );
   }
 
@@ -68,7 +40,7 @@ export default function CalendlyBooking({
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-              Book a free 30-minute consultation to discuss your strategy or trading infrastructure
+              Request a free 30-minute consultation to discuss your strategy or trading infrastructure
             </p>
 
             {/* Benefits */}
@@ -111,15 +83,14 @@ export default function CalendlyBooking({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <button
-                onClick={openCalendlyPopup}
-                disabled={!isLoaded}
+              <a
+                href="/contact/#contact-form"
                 className="group bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] hover:from-[#00D4B4] hover:to-[#2196F3] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center disabled:opacity-50"
               >
                 <i className="fas fa-calendar-alt mr-3"></i>
-                {isLoaded ? 'Book Free Consultation' : 'Loading Calendar...'}
+                Request a Free Consultation
                 <i className="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
-              </button>
+              </a>
 
               <a
                 href="mailto:datawithjose@outlook.com?subject=Quick%20Question%20About%20Quantitative%20Development%20Services&body=Hi%20Jose%2C%0D%0A%0D%0AI%20have%20a%20quick%20question%20about%20your%20quantitative%20development%20services%3A%0D%0A%0D%0A%5BYour%20question%20here%5D%0D%0A%0D%0ABest%20regards"
@@ -198,23 +169,12 @@ export default function CalendlyBooking({
     >
       <div className="p-6 bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] text-white text-center">
         <h3 className="text-2xl font-bold mb-2">Schedule Your Consultation</h3>
-        <p className="text-blue-100">Pick a time that works for you</p>
+        <p className="text-blue-100">Contact us to arrange a suitable time</p>
       </div>
       
-      {isLoaded ? (
-        <div 
-          className="calendly-inline-widget" 
-          data-url={url}
-          style={{ minWidth: '320px', height: '630px' }}
-        ></div>
-      ) : (
-        <div className="h-96 flex items-center justify-center bg-gray-50">
-          <div className="text-center">
-            <div className="w-8 h-8 border-4 border-[#00BFA5] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-gray-600">Loading calendar...</p>
-          </div>
-        </div>
-      )}
+      <div className="p-8 text-center">
+        <a href="/contact/#contact-form" className="inline-flex bg-[#00BFA5] text-white px-6 py-3 rounded-xl font-semibold">Request a Free Consultation</a>
+      </div>
     </m.div>
   );
 }

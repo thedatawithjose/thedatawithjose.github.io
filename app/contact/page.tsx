@@ -261,7 +261,7 @@ export default function Contact() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="https://www.linkedin.com/in/datawithjose"
+                  href="https://www.linkedin.com/in/jacosta-ve/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-[#42A5F5] hover:bg-[#5AB3F5] text-[#050B14] rounded-lg font-bold transition-colors"

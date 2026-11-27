@@ -37,9 +37,9 @@ const siteConfig = {
     'Python Developer'
   ],
   social: {
-    linkedin: 'https://www.linkedin.com/in/datawithjose',
+    linkedin: 'https://www.linkedin.com/in/jacosta-ve/',
     github: 'https://github.com/thedatawithjose',
-    instagram: 'https://www.instagram.com/datawithjose',
+    instagram: 'https://www.instagram.com/ajtradingsystems/',
     email: 'datawithjose@outlook.com'
   }
 };

@@ -165,7 +165,7 @@ export default function BlogPostTemplate({
               </p>
               <div className="flex gap-4 mt-3">
                 <a
-                  href="https://www.linkedin.com/in/datawithjose"
+                  href="https://www.linkedin.com/in/jacosta-ve/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#0077B5] hover:text-[#005885] transition-colors"

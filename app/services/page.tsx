@@ -317,13 +317,11 @@ export default function Services() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a 
-                    href="https://calendly.com/datawithjose/consultation"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/contact/#contact-form"
                     className="group inline-flex items-center justify-center bg-gradient-to-r from-[#00E5A0] to-[#42A5F5] hover:from-[#00FFB3] hover:to-[#5AB3F5] text-[#050B14] px-6 py-3 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                   >
                     <i className="fas fa-calendar-check mr-2"></i>
-                    Schedule Free Call
+                    Request a Free Call
                     <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
                   </a>
                   <a 
@@ -806,7 +804,7 @@ export default function Services() {
                       }`}
                     >
                       <i className="fas fa-calendar-check mr-2"></i>
-                      Schedule Free Consultation
+                      Request a Free Consultation
                     </Link>
                   </div>
                 </m.div>
@@ -902,13 +900,11 @@ export default function Services() {
               <div className="text-center mt-8">
                 <p className="text-gray-400 mb-4">Not sure which engagement fits your idea?</p>
                 <a
-                  href="https://calendly.com/datawithjose/consultation"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/contact/#contact-form"
                   className="inline-flex items-center bg-gradient-to-r from-[#00E5A0] to-[#00C98C] hover:from-[#00FFB3] hover:to-[#00E5A0] text-[#050B14] px-6 py-3 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <i className="fas fa-calendar-check mr-2"></i>
-                  Schedule Free Consultation
+                  Request a Free Consultation
                   <i className="fas fa-external-link-alt ml-2 text-sm"></i>
                 </a>
               </div>
@@ -1229,7 +1225,7 @@ export default function Services() {
                 <p className="text-gray-300 mb-4 text-sm">Connect with me:</p>
                 <div className="flex justify-center gap-4">
                   <a
-                    href="https://www.linkedin.com/in/datawithjose"
+                    href="https://www.linkedin.com/in/jacosta-ve/"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Follow on LinkedIn"
@@ -1247,7 +1243,7 @@ export default function Services() {
                     <i className="fab fa-github text-xl"></i>
                   </a>
                   <a
-                    href="https://instagram.com/datawithjose"
+                    href="https://www.instagram.com/ajtradingsystems/"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Follow on Instagram"

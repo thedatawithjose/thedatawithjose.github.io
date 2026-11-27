@@ -42,7 +42,7 @@ export default function FloatingActionButton({ className = '' }: FloatingActionB
     {
       icon: 'fab fa-linkedin',
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/datawithjose/',
+      href: 'https://www.linkedin.com/in/jacosta-ve/',
       color: 'bg-[#005A9C] hover:bg-[#0066CC]'
     }
   ];

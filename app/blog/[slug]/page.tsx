@@ -274,7 +274,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     <h3 className="font-bold text-white mb-4">Connect with Me</h3>
                     <div className="flex space-x-3">
                       <a 
-                        href="https://www.linkedin.com/in/datawithjose" 
+                        href="https://www.linkedin.com/in/jacosta-ve/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex-1 bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors text-center"
@@ -283,7 +283,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                         <i className="fab fa-linkedin text-lg"></i>
                       </a>
                       <a 
-                        href="https://www.instagram.com/datawithjose" 
+                        href="https://www.instagram.com/ajtradingsystems/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex-1 bg-pink-500 text-white p-3 rounded-lg hover:bg-pink-600 transition-colors text-center"

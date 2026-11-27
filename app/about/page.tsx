@@ -903,7 +903,7 @@ export default function About() {
                 <p className="text-gray-300 mb-4 text-sm">Connect with me:</p>
                 <div className="flex justify-center gap-4">
                   <a
-                    href="https://www.linkedin.com/in/datawithjose"
+                    href="https://www.linkedin.com/in/jacosta-ve/"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Follow on LinkedIn"
@@ -921,7 +921,7 @@ export default function About() {
                     <i className="fab fa-github text-xl"></i>
                   </a>
                   <a
-                    href="https://instagram.com/datawithjose"
+                    href="https://www.instagram.com/ajtradingsystems/"
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Follow on Instagram"
