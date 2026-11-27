@@ -51,7 +51,7 @@ export default function CalendlyBooking({
 
       >
         <i className="fas fa-calendar-alt mr-3"></i>
-        Schedule Free Consultation
+        Schedule a Discovery Call
         <i className="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
       </m.button>
     );
@@ -82,8 +82,8 @@ export default function CalendlyBooking({
                 transition={{ delay: 0.2 }}
               >
                 <i className="fas fa-comments text-3xl text-[#00BFA5] mb-4"></i>
-                <h3 className="font-bold mb-2">Free Consultation</h3>
-                <p className="text-sm text-gray-300">30 minutes of expert advice at no cost</p>
+                <h3 className="font-bold mb-2">Discovery Call</h3>
+                <p className="text-sm text-gray-300">30 minutes to discuss your goals, scope and next steps</p>
               </m.div>
               <m.div
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
@@ -119,7 +119,7 @@ export default function CalendlyBooking({
                 className="group bg-gradient-to-r from-[#00BFA5] to-[#42A5F5] hover:from-[#00D4B4] hover:to-[#2196F3] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center disabled:opacity-50"
               >
                 <i className="fas fa-calendar-alt mr-3"></i>
-                Book Free Consultation
+                Book a Discovery Call
                 <i className="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
               </button>
 

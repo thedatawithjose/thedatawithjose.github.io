@@ -97,7 +97,7 @@ export function generateWebsiteSchema() {
         {
           '@type': 'Offer',
           name: 'Live Execution & Risk Systems',
-          description: 'Production trading infrastructure with real-time execution, position management, risk controls, and 24/7 monitoring.'
+          description: 'Execution engineering, position management, risk controls and monitoring according to agreed requirements.'
         },
         {
           '@type': 'Offer',
@@ -205,7 +205,7 @@ export function generatePortfolioSchema() {
       {
         '@type': 'SoftwareApplication',
         name: 'Algorithmic Trading System',
-        description: 'Real-time trading system processing market data with low latency for systematic strategies.',
+        description: 'Historical strategy research and systematic signal evaluation.',
         applicationCategory: 'Financial Technology',
         operatingSystem: 'Linux',
         programmingLanguage: 'Python'
@@ -213,7 +213,7 @@ export function generatePortfolioSchema() {
       {
         '@type': 'SoftwareApplication',
         name: 'Backtesting & Research Infrastructure',
-        description: 'Scalable backtesting and research platform using Python, Kafka, and time-series databases for financial market data.',
+        description: 'Market data preparation and historical strategy evaluation using Python and financial data infrastructure.',
         applicationCategory: 'Financial Technology',
         operatingSystem: 'Cloud',
         programmingLanguage: ['Python', 'SQL']
@@ -295,7 +295,7 @@ export function generateFAQSchema() {
         name: 'What is your typical project timeline?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Project timelines vary based on complexity, ranging from 2-4 weeks for a research/backtesting engagement to 3-6 months for complete live trading infrastructure. I provide detailed estimates during initial consultations.'
+          text: 'Project timelines depend on scope, data availability and technical constraints. Estimates are agreed after discovery.'
         }
       }
     ]

@@ -2,13 +2,13 @@
 title: "Data Pipeline Optimization: Achieving Better Performance"
 date: "2025-05-12"
 author: "Jose Acosta"
-excerpt: "How we redesigned our ETL pipeline architecture using Apache Spark and Kubernetes to achieve significant performance improvement."
+excerpt: "An illustrative approach to identifying and addressing ETL bottlenecks using Apache Spark and Kubernetes."
 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&crop=center"
 ---
 
 ## Data Pipeline Optimization: Achieving Better Performance
 
-In the world of data engineering, pipeline performance is often the difference between success and failure. Slow pipelines lead to delayed insights, frustrated users, and missed business opportunities. This article details a comprehensive approach to optimizing ETL pipelines, drawing from real-world experience with Apache Spark and Kubernetes.
+In the world of data engineering, pipeline performance is often the difference between success and failure. Slow pipelines lead to delayed insights, frustrated users, and missed business opportunities. This article details a comprehensive approach to optimizing ETL pipelines, using illustrative Apache Spark and Kubernetes examples.
 
 ### Understanding Pipeline Performance Bottlenecks
 
@@ -22,7 +22,7 @@ Before diving into optimizations, it's crucial to identify where bottlenecks occ
 
 ### The Optimization Framework
 
-We developed a systematic approach to pipeline optimization that combines monitoring, profiling, and iterative improvements:
+A systematic approach to pipeline optimization that combines monitoring, profiling, and iterative improvements:
 
 ```python
 from dataclasses import dataclass
@@ -543,11 +543,6 @@ class PipelineBenchmarker:
 
 ### Conclusion
 
-Pipeline optimization is an ongoing process that requires systematic monitoring, analysis, and iterative improvements. By implementing the techniques described above, we achieved:
-
-- **60% reduction** in pipeline execution time
-- **3x improvement** in data processing throughput
-- **80% reduction** in infrastructure costs
-- **99.9% reliability** in production deployments
+Pipeline optimization is an ongoing process that requires systematic monitoring, analysis, and iterative improvements. The examples above are illustrative, not measured client or production results. Evaluate execution time, throughput, infrastructure cost and reliability against a defined baseline before claiming improvements.
 
 The key to successful optimization lies in understanding your specific use case, measuring performance comprehensively, and applying the right techniques for your particular bottlenecks. Remember that optimization is not a one-time effort but a continuous process of monitoring and improvement.
