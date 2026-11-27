@@ -489,6 +489,15 @@ export default function Home() {
             </div>
           </section>
 
+          <section className="bg-[#0D1B30] px-6 py-14 border-y border-[#1E2D45]">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-[#00E5A0] font-semibold mb-2">Free quantitative research tool</p>
+              <h2 className="text-3xl font-bold text-white mb-4">Is your trading strategy ready for the next research stage?</h2>
+              <p className="text-gray-300 mb-6">Identify gaps in your backtesting, data quality, execution assumptions and risk controls with a free self-assessment.</p>
+              <Link href="/tools/strategy-validation/" className="inline-block bg-[#00E5A0] text-[#050B14] font-bold px-6 py-3 rounded-xl">Assess your strategy</Link>
+            </div>
+          </section>
+
           {/* Contact Teaser */}
           <ContactTeaser />
 
