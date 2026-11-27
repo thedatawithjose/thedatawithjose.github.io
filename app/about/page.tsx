@@ -55,21 +55,18 @@ export default function About() {
       quote: "Jose delivered excellent engineering work on our trading infrastructure. His background in algorithmic trading was valuable for our systematic execution needs.",
       author: "Michael Chen",
       position: "CTO, TraderDaddy",
-      image: "/images/testimonials/michael.jpg",
       impact: "Improved research efficiency"
     },
     {
       quote: "Solid engineering skills and reliable delivery. Jose built key components of our research platform with strong, well-tested performance.",
       author: "Sarah Williams",
       position: "Head of Data, FinTech Startup",
-      image: "/images/testimonials/sarah.jpg",
       impact: "Enhanced data throughput"
     },
     {
       quote: "Professional and skilled developer. Jose delivered our AWS data pipeline on time with good documentation and testing.",
       author: "Carlos Rodriguez",
       position: "Data Director, E-commerce",
-      image: "/images/testimonials/carlos.jpg",
       impact: "Reliable data pipeline"
     }
   ];

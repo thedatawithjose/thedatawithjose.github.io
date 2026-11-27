@@ -66,9 +66,9 @@ export default function EnhancedCTAs({ className = '', variant = 'primary' }: En
         color: "from-[#42A5F5] to-[#00E5A0]"
       },
       secondaryCTA: {
-        text: "Download Resources",
-        href: "#lead-magnets",
-        icon: "fas fa-download"
+        text: "Read Technical Articles",
+        href: "/blog/",
+        icon: "fas fa-book-open"
       }
     },
     urgent: {

@@ -33,7 +33,6 @@ import { useScrollTracking, useJourneyTracking } from '../hooks/useAnalyticsTrac
 
 import NewsletterForm from '../components/NewsletterForm';
 import ContactTeaser from '../components/ContactTeaser';
-import LeadMagnets from '../components/LeadMagnets';
 import ROICalculator from '../components/ROICalculator';
 import EnhancedCTAs from '../components/EnhancedCTAs';
 
@@ -470,10 +469,6 @@ export default function Home() {
             <LazyLoadedSections />
           </div>
 
-          {/* Lead Magnets Section */}
-          <div className="hidden">
-            <LeadMagnets />
-          </div>
 
           {/* ROI Calculator */}
           <div className="hidden">
