@@ -53,9 +53,9 @@ export default function MovingAverageBot() {
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                Moving Average Trading Bot
+                Moving Average Crossover Backtest
               </m.h1>
-              <span className="text-xl">Algorithmic Trading • Automated Systems • Crossover Strategy</span>
+              <span className="text-xl">Algorithmic Trading • Historical Backtesting • Crossover Strategy</span>
             </div>
           </div>
         </m.div>
@@ -72,16 +72,16 @@ export default function MovingAverageBot() {
               transition={{ duration: 0.6 }}
             >
               <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-[#00E5A0] mb-2 font-mono">24/7</div>
-                <div className="text-sm text-gray-400">Autonomous Operation</div>
+                <div className="text-3xl font-bold text-[#00E5A0] mb-2 font-mono">7 / 20</div>
+                <div className="text-sm text-gray-400">SMA periods</div>
               </div>
               <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-[#42A5F5] mb-2 font-mono">Docker</div>
-                <div className="text-sm text-gray-400">Containerized Deployment</div>
+                <div className="text-3xl font-bold text-[#42A5F5] mb-2 font-mono">Historical</div>
+                <div className="text-sm text-gray-400">Market Data</div>
               </div>
               <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-[#8B5CF6] mb-2 font-mono">Risk</div>
-                <div className="text-sm text-gray-400">Controls Built-In</div>
+                <div className="text-3xl font-bold text-[#8B5CF6] mb-2 font-mono">Drawdown</div>
+                <div className="text-sm text-gray-400">Risk Metric</div>
               </div>
             </m.div>
 
@@ -94,7 +94,7 @@ export default function MovingAverageBot() {
             >
               <div className="inline-flex items-center bg-[#00E5A0]/10 border border-[#00E5A0]/30 text-[#00E5A0] px-6 py-3 rounded-full font-semibold">
                 <i className="fas fa-check-circle mr-2 text-xl"></i>
-                Live-Tested & Risk-Controlled
+                Research Prototype · Historical Simulation
               </div>
             </m.div>
 
@@ -111,7 +111,7 @@ export default function MovingAverageBot() {
               </h2>
               <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed">
-                  To develop an automated trading bot based on the moving average crossover strategy that can operate autonomously in live markets with minimal human intervention.
+                  Implement a moving average crossover strategy and evaluate its behavior using historical market data.
                 </p>
               </div>
             </m.section>
@@ -129,28 +129,28 @@ export default function MovingAverageBot() {
               </h2>
               <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
-                  The bot continuously monitors the price of a given asset and executes trades when the short-term moving average crosses the long-term moving average.
+                  The strategy generates simulated trade signals when the 7-period and 20-period simple moving averages cross.
                 </p>
                 <ul className="space-y-3 text-lg">
                   <li className="flex items-start">
                     <i className="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Real-time price monitoring with moving average calculations</span>
+                    <span>Historical price data and moving average calculations</span>
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Automated trade execution on crossover signals</span>
+                    <span>Simulated trades based on crossover signals</span>
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Backtrader library for backtesting and live trading</span>
+                    <span>Modular Python backtesting implementation</span>
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>REST API integration for market data and order management</span>
+                    <span>Historical market data loaded from Yahoo Finance</span>
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Docker containerization for consistent deployment</span>
+                    <span>Separate modules for data, strategy, evaluation and visualization</span>
                   </li>
                 </ul>
               </div>
@@ -169,25 +169,25 @@ export default function MovingAverageBot() {
               </h2>
               <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
-                  The trading bot has been deployed and operates autonomously in live markets with risk controls in place.
+                  The public implementation reports historical return, volatility, Sharpe ratio and maximum drawdown. Live execution and profitability are not demonstrated.
                 </p>
                 <div className="space-y-4">
                   <div className="bg-[#00E5A0]/10 p-4 rounded-lg border-l-4 border-[#00E5A0]">
                     <p className="text-lg font-semibold text-[#00E5A0]">
                       <i className="fas fa-trophy mr-2"></i>
-                      Crossover logic validated across multiple market regimes
+                      Explicit and repeatable crossover rules
                     </p>
                   </div>
                   <div className="bg-[#42A5F5]/10 p-4 rounded-lg border-l-4 border-[#42A5F5]">
                     <p className="text-lg font-semibold text-[#42A5F5]">
                       <i className="fas fa-robot mr-2"></i>
-                      24/7 autonomous operation without manual intervention
+                      Historical simulation with performance charts
                     </p>
                   </div>
                   <div className="bg-[#8B5CF6]/10 p-4 rounded-lg border-l-4 border-[#8B5CF6]">
                     <p className="text-lg font-semibold text-[#8B5CF6]">
                       <i className="fas fa-shield-alt mr-2"></i>
-                      Fault-tolerance, graceful API failure handling, and monitoring
+                      Risk-return metrics for evaluating the simulated strategy
                     </p>
                   </div>
                 </div>
@@ -207,28 +207,28 @@ export default function MovingAverageBot() {
               </h2>
               <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
-                  Key challenges overcome during development and deployment:
+                  Research considerations and next steps:
                 </p>
                 <ul className="space-y-3 text-lg">
                   <li className="flex items-start">
                     <i className="fas fa-chevron-right text-orange-500 mr-3 mt-1"></i>
-                    <span>Implementing a reliable and fault-tolerant system for 24/7 operation</span>
+                    <span>Evaluating realistic transaction costs</span>
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-chevron-right text-orange-500 mr-3 mt-1"></i>
-                    <span>Ensuring system stability without manual intervention</span>
+                    <span>Separating research and test data</span>
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-chevron-right text-orange-500 mr-3 mt-1"></i>
-                    <span>Handling network issues and API connection failures gracefully</span>
+                    <span>Handling missing or inconsistent historical observations</span>
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-chevron-right text-orange-500 mr-3 mt-1"></i>
-                    <span>Optimizing parameters for different market regimes</span>
+                    <span>Checking sensitivity to moving-average periods</span>
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-chevron-right text-orange-500 mr-3 mt-1"></i>
-                    <span>Implementing proper logging and monitoring for production environment</span>
+                    <span>Comparing against a simple benchmark</span>
                   </li>
                 </ul>
               </div>
@@ -247,7 +247,7 @@ export default function MovingAverageBot() {
               </h2>
               <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <div className="flex flex-wrap gap-3">
-                  {['Python', 'Pandas', 'Backtrader', 'REST API', 'Docker'].map((tech, index) => (
+                  {['Python', 'Pandas', 'yfinance', 'Matplotlib'].map((tech, index) => (
                     <span
                       key={index}
                       className="px-4 py-2 bg-white/5 border border-[#1E2D45] text-gray-300 rounded-full font-medium text-sm"

@@ -23,199 +23,107 @@ export default function Portfolio() {
 
   // Enhanced project data with more details
   const projects = [
-    {
-      id: 1,
-      title: 'Mean Reversion OU Trading Bot',
-      category: 'trading',
-      type: 'Algorithmic Trading',
-      description: 'Ornstein-Uhlenbeck process-based mean reversion strategy with machine learning optimization. Features real-time execution, risk management, and performance analytics.',
-      detailedDescription: 'This trading system implements the Ornstein-Uhlenbeck stochastic process to identify mean-reverting assets and execute trades systematically. The system includes risk management protocols, real-time market data processing, and automated parameter optimization — validated out-of-sample and with walk-forward analysis.',
-      technologies: ['Python', 'Pandas', 'NumPy', 'SciPy', 'Matplotlib', 'yfinance', 'Docker', 'Redis'],
-      results: {
-        validation: 'Walk-Forward',
-        testing: 'Out-of-Sample',
-        sizing: 'Dynamic',
-        operation: '24/7'
-      },
-      metrics: {
-        'Validation': 'Walk-Forward',
-        'Testing': 'Out-of-Sample',
-        'Position Sizing': 'Dynamic',
-        'Execution': 'Automated',
-        'Deployment': 'Containerized',
-        'Monitoring': '24/7'
-      },
-      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop',
-      link: '/portfolio/mean-reversion-ou',
-      featured: true,
-      clientTestimonial: "The trading bot delivered disciplined, automated execution with solid risk management.",
-      clientName: "TradeFlow Capital",
-      impact: "Systematic execution with validation-first development and risk controls",
-      challenges: ['Real-time data processing', 'Risk management optimization', 'Market regime detection'],
-      solutions: ['Implemented streaming data pipeline', 'Developed dynamic position sizing', 'Created regime classification model']
+  {
+    "id": 1,
+    "title": "Mean Reversion OU Research",
+    "category": "trading",
+    "type": "Quantitative Research",
+    "description": "Ornstein–Uhlenbeck parameter estimation, rule-based signals, simulated position sizing and historical backtesting.",
+    "technologies": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "SciPy",
+      "Matplotlib",
+      "yfinance"
+    ],
+    "metrics": {
+      "Model": "Ornstein–Uhlenbeck",
+      "Estimation": "Maximum likelihood",
+      "Evaluation": "Historical backtest",
+      "Costs": "Modeled"
     },
-    {
-      id: 2,
-      title: 'Edgar SEC Parser',
-      category: 'data-engineering',
-      type: 'Research & Data',
-      description: 'High-performance SEC filing extraction system with SGML and XBRL parsing. Processes complex regulatory documents with intelligent content detection.',
-      detailedDescription: 'A comprehensive system designed to parse and extract structured data from SEC EDGAR filings. Handles multiple document formats including 10-K, 10-Q, and 8-K forms with robust error handling and data validation.',
-      technologies: ['Python', 'SQLAlchemy', 'PostgreSQL', 'Docker', 'Apache Airflow', 'Redis'],
-      results: {
-        throughput: 'High throughput',
-        accuracy: 'Validated',
-        errorRecovery: 'Excellent',
-        documentsProcessed: 'Production-scale'
-      },
-      metrics: {
-        'Processing Speed': 'High throughput',
-        'Accuracy Rate': 'Validated',
-        'Error Recovery': 'Excellent',
-        'Documents Processed': 'Production-scale',
-        'Data Points Extracted': 'Large-scale',
-        'Uptime': 'High-availability'
-      },
-      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop',
-      link: '/portfolio/edgar-sec-parser',
-      featured: true,
-      clientTestimonial: "This parser significantly improved our regulatory compliance workflow.",
-      clientName: "FinData Analytics",
-      impact: "Improved compliance processing efficiency",
-      challenges: ['Complex document formats', 'Large-scale data processing', 'Error handling'],
-      solutions: ['Built adaptive parsing engine', 'Implemented parallel processing', 'Created comprehensive error recovery']
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop",
+    "link": "/portfolio/mean-reversion-ou/",
+    "featured": true,
+    "impact": "Demonstrates statistical modeling and reproducible strategy research."
+  },
+  {
+    "id": 2,
+    "title": "EDGAR SEC Parser",
+    "category": "data-engineering",
+    "type": "Research & Data",
+    "description": "Batch ingestion and normalization of SEC filings with specialized SGML and XBRL parsers, failure isolation and PostgreSQL storage.",
+    "technologies": [
+      "Python",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "pytest"
+    ],
+    "metrics": {
+      "Formats": "SGML / XBRL",
+      "Processing": "Batch",
+      "Storage": "PostgreSQL",
+      "Design": "Failure isolation"
     },
-    {
-      id: 3,
-      title: 'Financial Data Pipeline',
-      category: 'data-engineering',
-      type: 'Research & Data',
-      description: 'Scalable ETL pipeline for real-time market data ingestion, transformation, and analysis. Handles multiple data sources with automated quality checks.',
-      detailedDescription: 'A robust data pipeline architecture that processes real-time market data from multiple sources, performs complex transformations, and delivers clean, analysis-ready data to downstream systems.',
-      technologies: ['Python', 'Apache Spark', 'Kafka', 'PostgreSQL', 'TimescaleDB', 'Docker', 'Kubernetes'],
-      results: {
-        recordsDaily: 'Production-scale',
-        uptime: 'High-availability',
-        latency: 'Low-latency',
-        dataSources: '8+'
-      },
-      metrics: {
-        'Daily Records': 'Production-scale',
-        'System Uptime': 'High-availability',
-        'Processing Latency': 'Low-latency',
-        'Data Sources': '8+',
-        'Data Quality': 'Validated',
-        'Cost Reduction': 'Optimized'
-      },
-      image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&h=600&fit=crop',
-      link: '/portfolio/financial-data-pipeline',
-      featured: true,
-      clientTestimonial: "The pipeline enhanced our data infrastructure capabilities.",
-      clientName: "MarketScope Inc",
-      impact: "Enabled real-time analytics for investment portfolio",
-      challenges: ['Real-time processing', 'Data quality assurance', 'Scalability requirements'],
-      solutions: ['Implemented stream processing', 'Built automated QA checks', 'Designed auto-scaling architecture']
+    "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop",
+    "link": "/portfolio/edgar-sec-parser/",
+    "featured": true,
+    "impact": "Demonstrates traceable data ingestion and handling of malformed financial documents."
+  },
+  {
+    "id": 3,
+    "title": "Financial Data Pipeline",
+    "category": "data-engineering",
+    "type": "Research & Data",
+    "description": "Modular ETL for market data with multiple providers, OHLCV validation, data splitting and optional database storage.",
+    "technologies": [
+      "Python",
+      "Pandas",
+      "PostgreSQL",
+      "TimescaleDB",
+      "pytest"
+    ],
+    "metrics": {
+      "Workflow": "ETL",
+      "Data": "OHLCV",
+      "Storage": "PostgreSQL / files",
+      "Quality": "Validation checks"
     },
-    {
-      id: 4,
-      title: 'Moving Average Trading Bot',
-      category: 'trading',
-      type: 'Algorithmic Trading',
-      description: 'Dual moving average crossover strategy with dynamic position sizing and comprehensive risk management protocols.',
-      detailedDescription: 'A trading system that implements dual moving average crossover strategies enhanced with dynamic position sizing, stop-loss management, and market volatility adjustments.',
-      technologies: ['Python', 'Pandas', 'Backtrader', 'REST API', 'Docker', 'PostgreSQL'],
-      results: {
-        validation: 'Backtested',
-        operation: '24/7',
-        deployment: 'Dockerized',
-        risk: 'Controls Built-In'
-      },
-      metrics: {
-        'Validation': 'Backtested',
-        'Operation': '24/7 Autonomous',
-        'Deployment': 'Dockerized',
-        'Risk Controls': 'Built-In',
-        'Position Sizing': 'Dynamic',
-        'Monitoring': 'Automated'
-      },
-      image: 'https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&h=600&fit=crop',
-      link: '/portfolio/moving-average-bot',
-      featured: false,
-      clientTestimonial: "Reliable autonomous operation with disciplined risk management.",
-      clientName: "Algo Capital",
-      impact: "Automated 24/7 operation with built-in risk controls",
-      challenges: ['Market noise filtering', 'Position sizing optimization', 'Risk management'],
-      solutions: ['Implemented adaptive filtering', 'Developed dynamic sizing', 'Created comprehensive risk controls']
+    "image": "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&h=600&fit=crop",
+    "link": "/portfolio/financial-data-pipeline/",
+    "featured": true,
+    "impact": "Demonstrates data quality controls and repeatable research data workflows."
+  },
+  {
+    "id": 4,
+    "title": "Moving Average Crossover Backtest",
+    "category": "trading",
+    "type": "Strategy Research",
+    "description": "A Python research project implementing 7- and 20-period moving averages with historical data, simulated trades and risk-return metrics.",
+    "technologies": [
+      "Python",
+      "Pandas",
+      "yfinance",
+      "Matplotlib"
+    ],
+    "metrics": {
+      "Signals": "SMA 7 / 20",
+      "Data": "Historical",
+      "Evaluation": "Backtest",
+      "Metrics": "Return / drawdown"
     },
-    {
-      id: 5,
-      title: 'Risk Management Dashboard',
-      category: 'data-science',
-      type: 'Data Science',
-      description: 'Real-time risk monitoring system with VaR calculations, position tracking, and automated alert mechanisms.',
-      detailedDescription: 'A comprehensive risk management platform that provides real-time monitoring of portfolio risk metrics, automated alerts, and analytics for institutional trading operations.',
-      technologies: ['Python', 'Vue.js', 'Redis', 'Kubernetes', 'WebSocket', 'D3.js'],
-      results: {
-        riskMetrics: '15+',
-        responseTime: '<100ms',
-        alertAccuracy: '90%',
-        portfoliosMonitored: '15+'
-      },
-      metrics: {
-        'Risk Metrics': '15+',
-        'Response Time': '<100ms',
-        'Alert Accuracy': '90%',
-        'Portfolios Monitored': '15+',
-        'Data Points/Second': '2K+',
-        'User Satisfaction': '85%'
-      },
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-      link: '/contact',
-      featured: false,
-      clientTestimonial: "Essential tool for our daily risk management operations.",
-      clientName: "RiskPro Holdings",
-      impact: "Enhanced risk monitoring and loss prevention",
-      challenges: ['Real-time calculations', 'User interface design', 'Alert optimization'],
-      solutions: ['Built streaming analytics', 'Created intuitive dashboards', 'Implemented smart alerting']
-    },
-    {
-      id: 6,
-      title: 'ML Prediction Engine',
-      category: 'data-science',
-      type: 'Machine Learning',
-      description: 'Machine learning system for market prediction using ensemble methods, feature engineering, and real-time inference.',
-      detailedDescription: 'An ML pipeline that combines multiple algorithms including XGBoost, LSTM networks, and Random Forests to predict market movements with feature engineering and real-time deployment capabilities.',
-      technologies: ['Python', 'TensorFlow', 'XGBoost', 'Scikit-learn', 'MLflow', 'Kubernetes'],
-      results: {
-        accuracy: '68%',
-        precision: '66%',
-        recall: '70%',
-        f1Score: '68%'
-      },
-      metrics: {
-        'Prediction Accuracy': '68%',
-        'Precision': '66%',
-        'Recall': '70%',
-        'F1 Score': '68%',
-        'Models Deployed': '8+',
-        'Training Time': '4 hours'
-      },
-      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop',
-      link: '/contact',
-      featured: false,
-      clientTestimonial: "The prediction accuracy met our expectations with solid performance.",
-      clientName: "Alpha Strategies",
-      impact: "Enhanced trading strategy performance",
-      challenges: ['Feature engineering', 'Model deployment', 'Real-time inference'],
-      solutions: ['Automated feature pipeline', 'Containerized deployment', 'Built streaming inference']
-    }
-  ];
+    "image": "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&h=600&fit=crop",
+    "link": "/portfolio/moving-average-bot/",
+    "featured": false,
+    "impact": "Demonstrates a modular baseline for testing systematic rules."
+  }
+];
 
   const categories = [
     { id: 'all', name: 'All Projects', count: projects.length, color: 'gray' },
     { id: 'data-engineering', name: 'Research & Data', count: projects.filter(p => p.category === 'data-engineering').length, color: 'green' },
-    { id: 'trading', name: 'Algorithmic Trading', count: projects.filter(p => p.category === 'trading').length, color: 'purple' },
-    { id: 'data-science', name: 'Quant Research', count: projects.filter(p => p.category === 'data-science').length, color: 'blue' }
+    { id: 'trading', name: 'Algorithmic Trading', count: projects.filter(p => p.category === 'trading').length, color: 'purple' }
   ];
 
   const featuredProjects = projects.filter(project => project.featured);
@@ -340,9 +248,9 @@ export default function Portfolio() {
               transition={{ delay: 0.8, duration: 0.8 }}
             >
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-green-400 mb-2">{portfolioStats.totalProjects}</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">{projects.length}</div>
                 <div className="text-gray-300 text-sm">Projects Completed</div>
-                <div className="text-xs text-gray-400 mt-1">Production Systems</div>
+                <div className="text-xs text-gray-400 mt-1">Research & Engineering</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="text-3xl font-bold text-blue-400 mb-2">{portfolioStats.linesOfCode}</div>
@@ -350,8 +258,8 @@ export default function Portfolio() {
                 <div className="text-xs text-gray-400 mt-1">Python, SQL, Scala</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="text-3xl font-bold text-purple-400 mb-2">{portfolioStats.clientsSatisfied}</div>
-                <div className="text-gray-300 text-sm">Clients Satisfied</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">4 markets</div>
+                <div className="text-gray-300 text-sm">Market Focus</div>
                 <div className="text-xs text-gray-400 mt-1">Global Projects</div>
               </div>
               <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
@@ -400,7 +308,7 @@ export default function Portfolio() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-[#00E5A0] mb-4">
-                Featured Production Systems
+                Featured Technical Projects
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
                 Real-world implementations that demonstrate expertise in high-stakes environments
@@ -673,18 +581,6 @@ export default function Portfolio() {
                       </div>
                     </div>
 
-                    {/* Client Testimonial */}
-                    {project.clientTestimonial && (
-                      <div className="mb-4 p-3 bg-[#42A5F5]/10 rounded-lg border-l-4 border-[#42A5F5]">
-                        <div className="text-xs text-gray-300 italic mb-1">
-                          "{project.clientTestimonial}"
-                        </div>
-                        <div className="text-xs text-[#42A5F5] font-semibold">
-                          — {project.clientName}
-                        </div>
-                      </div>
-                    )}
-
                     <Link
                       href={project.link}
                       className="block text-center bg-[#0A1526] border border-[#1E2D45] text-gray-200 py-2 px-4 rounded-lg font-semibold hover:bg-[#00E5A0] hover:text-[#050B14] hover:border-[#00E5A0] transition-colors text-sm"
@@ -823,7 +719,7 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 { metric: 'Validated', description: 'Walk-Forward & Out-of-Sample', icon: 'fas fa-check-double', color: 'green' },
-                { metric: 'High-Availability', description: 'Fault-Tolerant Design', icon: 'fas fa-shield-alt', color: 'purple' },
+                { metric: 'Failure-aware', description: 'Fault-Tolerant Design', icon: 'fas fa-shield-alt', color: 'purple' },
                 { metric: 'Risk-Controlled', description: 'Capital Protection First', icon: 'fas fa-balance-scale', color: 'blue' },
                 { metric: 'Observable', description: 'Monitored & Instrumented', icon: 'fas fa-eye', color: 'orange' }
               ].map((impact, index) => (
@@ -899,7 +795,7 @@ export default function Portfolio() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#00E5A0]">
-                  Ready to Build Something Production-Ready?
+                  Ready to Discuss Your Trading System?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
                   Whether you need systematic strategy development, backtesting infrastructure, or automated execution —
@@ -960,7 +856,7 @@ export default function Portfolio() {
                 <div className="grid md:grid-cols-3 gap-6 text-sm">
                   <div className="flex items-center justify-center">
                     <i className="fas fa-shield-alt text-green-400 mr-2"></i>
-                    <span>Production-tested reliability</span>
+                    <span>Failure-aware engineering</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <i className="fas fa-chart-line text-blue-400 mr-2"></i>

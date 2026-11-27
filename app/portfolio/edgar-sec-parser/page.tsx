@@ -58,12 +58,12 @@ export default function EdgarSecParser() {
                 transition={{ delay: 0.6 }}
               >
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-3xl font-bold">16.5 MB/s</div>
-                  <div className="text-sm">Peak Throughput</div>
+                  <div className="text-3xl font-bold">Batch</div>
+                  <div className="text-sm">Processing Mode</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <div className="text-3xl font-bold">100%</div>
-                  <div className="text-sm">Error Recovery Rate</div>
+                  <div className="text-3xl font-bold">Fallbacks</div>
+                  <div className="text-sm">Error Handling</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <div className="text-3xl font-bold">3 Engines</div>
@@ -88,7 +88,7 @@ export default function EdgarSecParser() {
               >
                 <h2 className="text-3xl font-bold mb-4">Project Objective</h2>
                 <p className="text-lg leading-relaxed">
-                  Edgar is a production-ready SEC filing extraction and parsing system that intelligently processes 
+                  Edgar is a batch-oriented SEC filing extraction and parsing system that intelligently processes 
                   regulatory documents using advanced parser integration. Built with specialized SEC parsing libraries 
                   (<code className="bg-gray-200 px-2 py-1 rounded">secsgml</code> v0.3.1 and{' '}
                   <code className="bg-gray-200 px-2 py-1 rounded">secxbrl</code> v0.5.0), Edgar provides 
@@ -150,11 +150,11 @@ export default function EdgarSecParser() {
                   <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
                     <h3 className="text-xl font-semibold mb-3 flex items-center">
                       <i className="fas fa-rocket text-blue-600 mr-2"></i>
-                      High-Performance Processing
+                      Batch Processing
                     </h3>
                     <ul className="space-y-2 ml-6">
-                      <li>• Peak throughput of 16.5 MB/s with intelligent content detection</li>
-                      <li>• Realistic performance of 1.77 MB/s with actual SEC documents</li>
+                      <li>• Batch ingestion with document format detection</li>
+                      <li>• Performance tests designed to detect regressions</li>
                       <li>• Memory-efficient parsing for large-scale document processing</li>
                       <li>• Optimized database operations with batch inserts</li>
                     </ul>
@@ -163,13 +163,13 @@ export default function EdgarSecParser() {
                   <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">
                     <h3 className="text-xl font-semibold mb-3 flex items-center">
                       <i className="fas fa-shield-alt text-purple-600 mr-2"></i>
-                      Production-Ready Reliability
+                      Failure-Aware Design
                     </h3>
                     <ul className="space-y-2 ml-6">
-                      <li>• 100% error case handling with graceful fallback mechanisms</li>
+                      <li>• Parser failures logged for targeted reprocessing</li>
                       <li>• Comprehensive testing with unit and integration test suites</li>
                       <li>• Performance validation and benchmarking tools included</li>
-                      <li>• Production-ready deployment with Docker support</li>
+                      <li>• Reproducible ingestion and reprocessing workflows</li>
                     </ul>
                   </div>
 
@@ -208,17 +208,17 @@ export default function EdgarSecParser() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold mb-6">Performance Results</h2>
+                <h2 className="text-3xl font-bold mb-6">Documented Capabilities</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-2">Processing Speed</h3>
-                    <p className="text-3xl font-bold mb-2">16.5 MB/s</p>
-                    <p className="text-sm opacity-90">Peak document throughput achieved</p>
+                    <h3 className="text-xl font-semibold mb-2">Processing Mode</h3>
+                    <p className="text-3xl font-bold mb-2">Batch</p>
+                    <p className="text-sm opacity-90">Batch-oriented for reproducibility</p>
                   </div>
                   <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-lg">
                     <h3 className="text-xl font-semibold mb-2">Error Recovery</h3>
-                    <p className="text-3xl font-bold mb-2">100%</p>
-                    <p className="text-sm opacity-90">Successful malformed document handling</p>
+                    <p className="text-3xl font-bold mb-2">Fallbacks</p>
+                    <p className="text-sm opacity-90">Fallback parsing where possible</p>
                   </div>
                   <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-lg">
                     <h3 className="text-xl font-semibold mb-2">Parser Coverage</h3>
@@ -227,8 +227,8 @@ export default function EdgarSecParser() {
                   </div>
                   <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-6 rounded-lg">
                     <h3 className="text-xl font-semibold mb-2">Database Integration</h3>
-                    <p className="text-3xl font-bold mb-2">Complete</p>
-                    <p className="text-sm opacity-90">Full metadata and facts storage</p>
+                    <p className="text-3xl font-bold mb-2">Relational</p>
+                    <p className="text-sm opacity-90">Structured metadata and facts storage</p>
                   </div>
                 </div>
               </m.section>
@@ -253,14 +253,14 @@ export default function EdgarSecParser() {
                     <h3 className="font-semibold mb-1">Error Handling at Scale</h3>
                     <p className="text-gray-300">
                       Designed comprehensive error recovery system with graceful fallbacks to handle malformed 
-                      documents, missing metadata, and parser failures without data loss.
+                      documents, missing metadata, and parser failures with logged recovery paths.
                     </p>
                   </div>
                   <div className="border-l-4 border-green-500 pl-4 py-2">
                     <h3 className="font-semibold mb-1">Performance Optimization</h3>
                     <p className="text-gray-300">
-                      Achieved 16.5 MB/s peak throughput through memory-efficient parsing, batch database operations, 
-                      and optimized content detection algorithms.
+                      Uses batch processing to prioritize traceability and reproducibility, 
+                      with format-specific parsing and normalization.
                     </p>
                   </div>
                   <div className="border-l-4 border-orange-500 pl-4 py-2">
@@ -273,8 +273,8 @@ export default function EdgarSecParser() {
                   <div className="border-l-4 border-red-500 pl-4 py-2">
                     <h3 className="font-semibold mb-1">Production Deployment</h3>
                     <p className="text-gray-300">
-                      Built production-ready infrastructure with Docker containerization, comprehensive testing, 
-                      and deployment automation for reliable operation at scale.
+                      Includes unit, integration and basic performance tests, 
+                      with correctness and failure isolation as design priorities.
                     </p>
                   </div>
                 </div>
@@ -327,7 +327,7 @@ export default function EdgarSecParser() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a
-                      href="https://github.com/josetraderx/edgar-sec-parser"
+                      href="https://github.com/thedatawithjose/edgar-sec-parser"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-[#0A1526] border border-[#1E2D45] text-[#42A5F5] px-8 py-3 rounded-lg font-semibold hover:bg-[#1E2D45] transition-colors inline-flex items-center justify-center"

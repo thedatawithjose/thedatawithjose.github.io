@@ -53,9 +53,9 @@ export default function MeanReversionOU() {
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                Mean Reversion OU Trading Bot
+                Mean Reversion OU Research
               </m.h1>
-              <span className="text-xl">Algorithmic Trading • Quantitative Finance • Automated Systems</span>
+              <span className="text-xl">Algorithmic Trading • Quantitative Finance • Statistical Modeling</span>
             </div>
           </div>
         </m.div>
@@ -72,12 +72,12 @@ export default function MeanReversionOU() {
               transition={{ duration: 0.6 }}
             >
               <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-[#00E5A0] mb-2 font-mono">Walk-Forward</div>
-                <div className="text-sm text-gray-400">Validation</div>
+                <div className="text-3xl font-bold text-[#00E5A0] mb-2 font-mono">OU Process</div>
+                <div className="text-sm text-gray-400">Model</div>
               </div>
               <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-[#42A5F5] mb-2 font-mono">Out-of-Sample</div>
-                <div className="text-sm text-gray-400">Testing</div>
+                <div className="text-3xl font-bold text-[#42A5F5] mb-2 font-mono">Historical</div>
+                <div className="text-sm text-gray-400">Backtest</div>
               </div>
               <div className="metric-card bg-[#0A1526] border border-[#1E2D45] p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-[#8B5CF6] mb-2 font-mono">Dynamic</div>
@@ -98,7 +98,7 @@ export default function MeanReversionOU() {
               </h2>
               <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed">
-                  Develop an automated trading bot that identifies and exploits mean-reversion opportunities in financial markets using the Ornstein-Uhlenbeck (OU) process.
+                  Research mean-reversion signals using the Ornstein-Uhlenbeck (OU) process and evaluate them on historical market data.
                 </p>
               </div>
             </m.section>
@@ -116,7 +116,7 @@ export default function MeanReversionOU() {
               </h2>
               <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
-                  The bot continuously ingests real-time price data, estimates OU process parameters, and generates trading signals when prices deviate significantly from the modeled mean.
+                  The research workflow loads historical market prices, estimates OU parameters and generates simulated signals when prices deviate from the modeled mean.
                 </p>
                 <ul className="space-y-3 text-lg">
                   <li className="flex items-start">
@@ -129,7 +129,7 @@ export default function MeanReversionOU() {
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                    <span>Entire pipeline is containerized for robust, 24/7 operation</span>
+                    <span>The notebook and command-line workflow support repeatable historical experiments</span>
                   </li>
                 </ul>
               </div>
@@ -148,12 +148,12 @@ export default function MeanReversionOU() {
               </h2>
               <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
-                  The strategy was validated out-of-sample and with walk-forward analysis across multiple assets — testing how performance behaves when assumptions change, with realistic transaction costs and execution constraints.
+                  The repository provides historical backtesting, transaction-cost modeling and performance visualizations. Out-of-sample robustness and live execution are not demonstrated by this public implementation.
                 </p>
                 <div className="bg-[#00E5A0]/10 p-4 rounded-lg border-l-4 border-[#00E5A0]">
                   <p className="text-lg font-semibold text-[#00E5A0]">
                     <i className="fas fa-trophy mr-2"></i>
-                    Validated beyond the backtest: out-of-sample, walk-forward, and sensitivity-tested
+                    Research prototype — no claim of verified profitability or live operation
                   </p>
                 </div>
               </div>
@@ -172,7 +172,7 @@ export default function MeanReversionOU() {
               </h2>
               <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <p className="text-lg leading-relaxed mb-4">
-                  Key challenges encountered during development and deployment:
+                  Research questions and limitations:
                 </p>
                 <ul className="space-y-3 text-lg">
                   <li className="flex items-start">
@@ -181,11 +181,11 @@ export default function MeanReversionOU() {
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-chevron-right text-orange-500 mr-3 mt-1"></i>
-                    <span>Ensuring fault tolerance for continuous operation</span>
+                    <span>Testing sensitivity to parameter estimates</span>
                   </li>
                   <li className="flex items-start">
                     <i className="fas fa-chevron-right text-orange-500 mr-3 mt-1"></i>
-                    <span>Balancing execution speed with statistical confidence</span>
+                    <span>Assessing realistic costs and execution assumptions</span>
                   </li>
                 </ul>
               </div>
@@ -204,7 +204,7 @@ export default function MeanReversionOU() {
               </h2>
               <div className="bg-[#0D1B30] border border-[#1E2D45] p-6 rounded-lg shadow-lg">
                 <div className="flex flex-wrap gap-3">
-                  {['Python', 'Pandas', 'NumPy', 'SciPy', 'Matplotlib', 'yfinance', 'Docker', 'Jupyter/Binder/Colab'].map((tech, index) => (
+                  {['Python', 'Pandas', 'NumPy', 'SciPy', 'Matplotlib', 'yfinance', 'Jupyter/Binder/Colab'].map((tech, index) => (
                     <span
                       key={index}
                       className="px-4 py-2 bg-white/5 border border-[#1E2D45] text-gray-300 rounded-full font-medium text-sm"
