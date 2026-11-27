@@ -7,6 +7,8 @@ import Footer from '../../components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://ajtradingsystems.com/blog/' },
+  openGraph: { url: 'https://ajtradingsystems.com/blog/', title: 'Technical Blog | Jose Acosta - Quantitative Developer', description: 'Insights on algorithmic trading systems, backtesting and validation, and automated execution by Jose Acosta.' },
   title: 'Technical Blog | Jose Acosta - Quantitative Developer',
   description: 'Insights on algorithmic trading systems, backtesting and validation, and automated execution by Jose Acosta.',
 };

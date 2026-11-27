@@ -12,12 +12,13 @@ import '../blog.css';
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const articleData = await getArticleData(slug);
-  const fullUrl = `https://ajtradingsystems.com/blog/${slug}`;
+  const fullUrl = `https://ajtradingsystems.com/blog/${slug}/`;
   const imageUrl = articleData.image?.startsWith('http') ? articleData.image : `https://ajtradingsystems.com${articleData.image}`;
   
   return {
     title: `${articleData.title} | Jose Acosta - Quantitative Developer`,
     description: articleData.excerpt,
+    alternates: { canonical: fullUrl },
     openGraph: {
       title: articleData.title,
       description: articleData.excerpt,

@@ -19,7 +19,7 @@ export default function SocialShareButtons({
   const [copied, setCopied] = useState(false);
 
   // Construir URLs completas
-  const fullUrl = url.startsWith('http') ? url : `https://thedatawithjose.github.io${url}`;
+  const fullUrl = url.startsWith('http') ? url : `https://ajtradingsystems.com${url}`;
   const encodedUrl = encodeURIComponent(fullUrl);
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description);
