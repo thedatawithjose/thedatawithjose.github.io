@@ -9,7 +9,6 @@
     "build:production": "set NODE_ENV=production && npm run build",
     "export": "next build && next export",
     "start": "next start",
-    "postbuild": "next-sitemap",
     "lint": "eslint",
     "analyze": "set ANALYZE=true && npm run build",
     "analyze:server": "BUNDLE_ANALYZE=server npm run build",
